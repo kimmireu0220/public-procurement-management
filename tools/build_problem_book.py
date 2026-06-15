@@ -218,7 +218,7 @@ def augment_sources(chapter: int, text: str) -> str:
    ④ 민간 플랫폼과의 경쟁
 <!-- source: Chapter 3/page_0008.jpg -->
 
-8. 전자역매(E-Reverse Auction)는 어떤 경우에 적합한가?
+8. 전자역경매(E-Reverse Auction)는 어떤 경우에 적합한가?
    ① 기술적 평가가 중요한 복잡한 입찰
    ② 가격 외 고려사항이 중요한 입찰
    ③ 상용화·표준화된 범용적 상품 조달
@@ -535,7 +535,7 @@ def augment_sources(chapter: int, text: str) -> str:
         ("### Chapter 02 최종점검 OX 퀴즈", "<!-- source: Chapter 6/page_0026.jpg ~ page_0029.jpg -->"),
         ("### Chapter 03 최종점검 OX 퀴즈", "<!-- source: Chapter 6/page_0038.jpg ~ page_0042.jpg -->"),
         ("### Chapter 04 최종점검 OX 퀴즈", "<!-- source: Chapter 6/page_0047.jpg ~ page_0049.jpg -->"),
-        ("### Chapter 05 최종점검 OX 퀴즈", "<!-- source: Chapter 6/page_0056.jpg ~ page_0057.jpg -->"),
+        ("### Chapter 05 최종점검 OX 퀴즈", "<!-- source: Chapter 6/page_0054.jpg ~ page_0057.jpg -->"),
         ("### Chapter 06 최종점검 OX 퀴즈", "<!-- source: Chapter 6/page_0065.jpg -->"),
     ]
     for heading, note in additions:

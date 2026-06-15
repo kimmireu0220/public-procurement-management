@@ -3,3 +3,6 @@
 __pycache__/
 *.pyc
 .env
+output/agent_extract/_crops/
+output/agent_extract/_tmp/
+output/final/
