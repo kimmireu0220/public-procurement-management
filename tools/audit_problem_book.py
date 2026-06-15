@@ -1,14 +1,27 @@
 from __future__ import annotations
 
 import re
+import sys
 from pathlib import Path
 
+TOOLS_DIR = Path(__file__).resolve().parent
+if str(TOOLS_DIR) not in sys.path:
+    sys.path.insert(0, str(TOOLS_DIR))
 
-ROOT = Path("/Users/kimmireu/Desktop/Storage/Test")
-OCR_ROOT = ROOT / "output" / "ocr" / "공공조달의_이해"
-FINAL_ROOT = ROOT / "output" / "problem_book_final"
-FINAL_MD = FINAL_ROOT / "공공조달의_이해_문제집.md"
-REPORT = FINAL_ROOT / "누락_후보_대조.md"
+from config import (  # noqa: E402
+    AUDIT_REPORT,
+    CHAPTERS_CLEAN_DIR,
+    OCR_DIR,
+    PROBLEM_BOOK_FINAL_DIR,
+    PROBLEM_BOOK_MD,
+    get_project_root,
+)
+
+ROOT = get_project_root()
+OCR_ROOT = OCR_DIR
+FINAL_ROOT = PROBLEM_BOOK_FINAL_DIR
+FINAL_MD = PROBLEM_BOOK_MD
+REPORT = AUDIT_REPORT
 
 PROBLEM_MARKER_RE = re.compile(r"Check|Q&A|O&A|출제예상|최종점검|OX 퀴즈|0X 퀴즈")
 SOURCE_COMMENT_RE = re.compile(r"<!--\s*source:\s*(.*?)\s*-->")
@@ -91,7 +104,7 @@ def main() -> None:
         missing = [source for source in candidates if source not in used_sources]
         total_missing.extend(missing)
 
-        chapter_clean = FINAL_ROOT / "chapters_clean" / f"chapter{chapter}.md"
+        chapter_clean = CHAPTERS_CLEAN_DIR / f"chapter{chapter}.md"
         q_count = len(QUESTION_RE.findall(chapter_clean.read_text(encoding="utf-8")))
         total_questions += q_count
         lines.append(f"| Chapter {chapter} | {len(candidates)} | {len(used)} | {len(missing)} | {q_count} |")

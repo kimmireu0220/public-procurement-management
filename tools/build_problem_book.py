@@ -2,13 +2,24 @@ from __future__ import annotations
 
 import html
 import re
+import sys
 from pathlib import Path
 
+TOOLS_DIR = Path(__file__).resolve().parent
+if str(TOOLS_DIR) not in sys.path:
+    sys.path.insert(0, str(TOOLS_DIR))
 
-ROOT = Path("/Users/kimmireu/Desktop/Storage/Test")
-SOURCE_DIR = ROOT / "output" / "agent_extract"
-FINAL_DIR = ROOT / "output" / "problem_book_final"
-CHAPTERS_DIR = FINAL_DIR / "chapters_clean"
+from config import (  # noqa: E402
+    AGENT_EXTRACT_DIR,
+    BUILD_REPORT,
+    CHAPTERS_CLEAN_DIR,
+    PROBLEM_BOOK_FINAL_DIR,
+    PROBLEM_BOOK_MD,
+)
+
+SOURCE_DIR = AGENT_EXTRACT_DIR
+FINAL_DIR = PROBLEM_BOOK_FINAL_DIR
+CHAPTERS_DIR = CHAPTERS_CLEAN_DIR
 
 ANSWER_HEADING_RE = re.compile(r"^#{1,3}\s+.*정답")
 QUESTION_RE = re.compile(r"^\s*\d+\.\s+\S")
@@ -667,7 +678,7 @@ def main() -> None:
     combined = "\n".join(combined_parts).rstrip() + "\n"
     md_path = FINAL_DIR / "공공조달의_이해_문제집.md"
     html_path = FINAL_DIR / "공공조달의_이해_문제집.html"
-    report_path = FINAL_DIR / "검토_요약.md"
+    report_path = BUILD_REPORT
 
     md_path.write_text(combined, encoding="utf-8")
     html_path.write_text(make_html(combined), encoding="utf-8")
