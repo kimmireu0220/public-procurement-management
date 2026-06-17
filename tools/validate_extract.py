@@ -40,11 +40,13 @@ def count_answers(answer: str) -> int:
         sections = [answer]
     total = 0
     for section in sections:
+        lines = [line for line in section.splitlines() if ANSWER_LINE_RE.match(line)]
+        if lines:
+            total += len(lines)
+            continue
         nums = [int(m.group(1)) for m in ANSWER_NUM_RE.finditer(section)]
         if nums:
             total += max(nums)
-        else:
-            total += len(ANSWER_LINE_RE.findall(section))
     return total
 
 
