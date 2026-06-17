@@ -31,6 +31,24 @@ def split_body_answer(text: str) -> tuple[str, str, int | None]:
     return text[: match.start()], text[match.start() :], match.start()
 
 
+COMPRESSED_ANSWER_RE = re.compile(
+    r"(?:^|\s)(\d+)\.\s+(?:[①②③④⑤⑥⑦⑧⑨⑩]|[OX]\b)"
+)
+
+
+def count_answers_in_section(section: str) -> int:
+    total = 0
+    for line in section.splitlines():
+        if not ANSWER_LINE_RE.match(line):
+            continue
+        matches = COMPRESSED_ANSWER_RE.findall(line)
+        total += len(matches) if matches else 1
+    if total:
+        return total
+    nums = [int(m.group(1)) for m in ANSWER_NUM_RE.finditer(section)]
+    return max(nums) if nums else 0
+
+
 def count_answers(answer: str) -> int:
     if not answer.strip():
         return 0
@@ -38,16 +56,7 @@ def count_answers(answer: str) -> int:
     sections = [p for p in parts if p.strip()]
     if not sections:
         sections = [answer]
-    total = 0
-    for section in sections:
-        lines = [line for line in section.splitlines() if ANSWER_LINE_RE.match(line)]
-        if lines:
-            total += len(lines)
-            continue
-        nums = [int(m.group(1)) for m in ANSWER_NUM_RE.finditer(section)]
-        if nums:
-            total += max(nums)
-    return total
+    return sum(count_answers_in_section(section) for section in sections)
 
 
 def validate_chapter(path: Path) -> dict:
