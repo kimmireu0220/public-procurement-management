@@ -321,14 +321,23 @@
 ### Chapter 01 최종점검 OX 퀴즈
 
 1. 공공조달의 재원은 국민의 세금이 핵심이다. (O/X)
+<!-- source: Chapter 1/page_0018.jpg -->
 2. 민간구매와 공공조달은 목적과 절차에서 동일하다. (O/X)
+<!-- source: Chapter 1/page_0018.jpg -->
 3. 전근대 사회의 공공조달은 법과 제도에 기반한 경쟁 체계가 중심이었다. (O/X)
+<!-- source: Chapter 1/page_0018.jpg -->
 4. 공공조달의 제도화는 예산 집행의 통제와 책임성 강화를 목적으로 한다. (O/X)
+<!-- source: Chapter 1/page_0018.jpg -->
 5. 공공조달의 중요성은 단순히 예산 규모에 의해서만 결정된다. (O/X)
+<!-- source: Chapter 1/page_0018.jpg -->
 6. 공공조달은 건강복지와 환경보호, 공공질서, 경제 문제에 이르기까지 정부의 모든 주요 기능에 걸쳐 활용되고 있으며, OECD 회원국의 정부 총지출 중 공공조달 지출 비중은 약 30%이다. (O/X)
+<!-- source: Chapter 1/page_0018.jpg -->
 7. 공공조달을 통해 환경적·사회적 정책 목표를 실현할 수 있다. (O/X)
+<!-- source: Chapter 1/page_0018.jpg -->
 8. 운영적 측면의 공공조달 목표는 최저가, 공정성(Fairness), 투명성(Transparency), 책임성(Accountability), 효율성(Efficiency), 경쟁성(Competition) 등이 있다. (O/X)
+<!-- source: Chapter 1/page_0018.jpg -->
 9. 개인의 사적 구매도 공공기관 소속이면 공공조달에 해당한다. (O/X)
+<!-- source: Chapter 1/page_0018.jpg -->
 10. 공공조달의 대상에 무형 서비스는 포함되지 않는다. (O/X)
 <!-- source: Chapter 1/page_0018.jpg -->
 
@@ -604,14 +613,23 @@
 ### Chapter 02 최종점검 OX 퀴즈
 
 1. 국회와 감사원은 공공조달에 직접 계약당사자로 참여한다. (O/X)
+<!-- source: Chapter 1/page_0031.jpg -->
 2. 공공조달 이해관계자 간 갈등이 조정되지 않으면 공공조달 시스템의 실패로 이어질 수 있다. (O/X)
+<!-- source: Chapter 1/page_0031.jpg -->
 3. 공공조달 이해관계자는 계약당사자만을 의미한다. (O/X)
+<!-- source: Chapter 1/page_0031.jpg -->
 4. 공공조달 수요자에는 민간기업도 포함한다. (O/X)
+<!-- source: Chapter 1/page_0031.jpg -->
 5. 수요 정의의 정확성은 공공조달 성과에 큰 영향을 미친다. (O/X)
+<!-- source: Chapter 1/page_0031.jpg -->
 6. 공공조달 공급자는 공공조달을 통해 재화·서비스를 제공하는 주체이다. (O/X)
+<!-- source: Chapter 1/page_0031.jpg -->
 7. 공공조달 공급자는 공익보다 기업 이윤을 우선해야 한다. (O/X)
+<!-- source: Chapter 1/page_0031.jpg -->
 8. 공공조달 대상물은 전통적으로 물품·용역·공사로 구분된다. (O/X)
+<!-- source: Chapter 1/page_0031.jpg -->
 9. 공공조달에서 용역은 항상 유형의 결과물을 가진다. (O/X)
+<!-- source: Chapter 1/page_0031.jpg -->
 10. 공공조달 대상물은 계약 체결 이후에 정의해도 된다. (O/X)
 <!-- source: Chapter 1/page_0031.jpg -->
 
@@ -789,10 +807,15 @@
 ### Chapter 03 최종점검 OX 퀴즈
 
 1. 공공조달은 민간조달과 동일하게 법적·제도적 고려사항이 거의 없다. (O/X)
+<!-- source: Chapter 1/page_0039.jpg -->
 2. 공공조달 재원은 주로 공공기관의 자체 수익으로 구성된다. (O/X)
+<!-- source: Chapter 1/page_0039.jpg -->
 3. 상업적 구매행위는 기업의 이익 창출을 목적으로 한다. (O/X)
+<!-- source: Chapter 1/page_0039.jpg -->
 4. 구매(Purchasing)는 공공조달보다 상위 개념이다. (O/X)
+<!-- source: Chapter 1/page_0039.jpg -->
 5. 민간구매는 7R과 같은 단기적·경제적 목표 달성에 집중한다. (O/X)
+<!-- source: Chapter 1/page_0039.jpg -->
 6. 구매행위와 조달행위는 목적과 관리 범위에서 차이가 없다. (O/X)
 <!-- source: Chapter 1/page_0039.jpg -->
 
@@ -1047,13 +1070,21 @@
 ### Chapter 04 최종점검 OX 퀴즈
 
 1. 중앙조달은 규모의 경제와 전문성 확보에 유리하다. (O/X)
+<!-- source: Chapter 1/page_0054.jpg -->
 2. 분산조달은 모든 경우에 중앙조달보다 효율적이다. (O/X)
+<!-- source: Chapter 1/page_0054.jpg -->
 3. 구성체계가 미흡해도 공공서비스 성과에는 큰 영향이 없다. (O/X)
+<!-- source: Chapter 1/page_0054.jpg -->
 4. 공공조달 구성체계는 계약 체결 이후에는 중요하지 않다. (O/X)
+<!-- source: Chapter 1/page_0054.jpg -->
 5. 공공조달의 구성체계는 법·조직·절차가 상호 연계된 구조이다. (O/X)
+<!-- source: Chapter 1/page_0054.jpg -->
 6. 감사는 사후 처벌만을 목적으로 한다. (O/X)
+<!-- source: Chapter 1/page_0054.jpg -->
 7. 감독이 강화될수록 항상 조달 효율성도 함께 증가한다. (O/X)
+<!-- source: Chapter 1/page_0054.jpg -->
 8. 성과감사는 계약의 법적 적합성만 평가한다. (O/X)
+<!-- source: Chapter 1/page_0054.jpg -->
 9. 공공조달 감사는 계약 체결 이후에만 수행된다. (O/X)
 <!-- source: Chapter 1/page_0054.jpg -->
 

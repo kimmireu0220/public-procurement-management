@@ -249,14 +249,23 @@
 ### Chapter 01 최종점검 OX 퀴즈
 
 1. 비용 대비 가치(VFM)는 최저가 낙찰과 동일한 개념이다. (O/X)
+<!-- source: Chapter 2/page_0018.jpg -->
 2. 경쟁성은 공공조달의 효율성을 높이는 핵심 원칙이다. (O/X)
+<!-- source: Chapter 2/page_0018.jpg -->
 3. 차별 금지 원칙은 국제 정부조달 규범에서도 중요하게 다뤄진다. (O/X)
+<!-- source: Chapter 2/page_0018.jpg -->
 4. 공공조달에서 투명성은 공정성과 경쟁성 확보의 선행조건이다. (O/X)
+<!-- source: Chapter 2/page_0018.jpg -->
 5. 균형성은 공공조달의 효율성과 정책 지원 기능을 동시에 고려하는 원칙이다. (O/X)
+<!-- source: Chapter 2/page_0018.jpg -->
 6. 참여 원칙은 접근성과 투명성 원칙과 밀접하게 연계된다. (O/X)
+<!-- source: Chapter 2/page_0018.jpg -->
 7. 효율성 원칙은 공공조달의 비용 대비 가치 실현과 직결된다. (O/X)
+<!-- source: Chapter 2/page_0018.jpg -->
 8. 전자조달은 투명성과 접근성을 동시에 강화하는 실행원칙이다. (O/X)
+<!-- source: Chapter 2/page_0018.jpg -->
 9. 평가는 공공조달의 지속적 개선을 위한 핵심 수단이다. (O/X)
+<!-- source: Chapter 2/page_0018.jpg -->
 10. 위험관리는 조달 완료 이후 감사 단계에서만 필요하다. (O/X)
 <!-- source: Chapter 2/page_0018.jpg -->
 
@@ -456,13 +465,21 @@
 ### Chapter 02 최종점검 OX 퀴즈
 
 1. 경쟁적 조달은 원칙적으로 모든 이해관계자에게 절차와 기준을 공개한다. (O/X)
+<!-- source: Chapter 2/page_0030.jpg -->
 2. 경쟁적 조달에서는 항상 최저가 입찰자가 선정된다. (O/X)
+<!-- source: Chapter 2/page_0030.jpg -->
 3. 제안요청(RFP) 방식은 기술과 가격을 종합적으로 평가하는 경쟁적 조달 실행방식이다. (O/X)
+<!-- source: Chapter 2/page_0030.jpg -->
 4. 2단계 입찰에서는 1단계에서 가격 평가가 이루어진다. (O/X)
+<!-- source: Chapter 2/page_0030.jpg -->
 5. 경쟁적 대화 방식은 조달기관이 요구사항을 명확히 정의하기 어려운 경우에 적합하다. (O/X)
+<!-- source: Chapter 2/page_0030.jpg -->
 6. 전자적 역경매는 주로 기술 경쟁을 강화하기 위한 제도이다. (O/X)
+<!-- source: Chapter 2/page_0030.jpg -->
 7. 경쟁적 조달 실행방식의 선택은 조달 대상물의 특성과 시장상황을 고려해 이루어져야 한다. (O/X)
+<!-- source: Chapter 2/page_0030.jpg -->
 8. 비경쟁적 조달은 경쟁적 조달이 곤란한 경우에 한해 예외적으로 허용된다. (O/X)
+<!-- source: Chapter 2/page_0030.jpg -->
 9. 경쟁적 조달과 비경쟁적 조달은 조달 목적 달성을 위한 상호 보완적 수단이다. (O/X)
 <!-- source: Chapter 2/page_0030.jpg -->
 
@@ -619,10 +636,15 @@
 ### Chapter 03 최종점검 OX 퀴즈
 
 1. 경쟁적 조달은 투명성과 공정성 확보에 유리하다. (O/X)
+<!-- source: Chapter 2/page_0037.jpg -->
 2. 비경쟁적 조달은 경쟁적 조달을 대체하는 일반적 방식이다. (O/X)
+<!-- source: Chapter 2/page_0037.jpg -->
 3. 비경쟁적 조달은 공공조달 감사에서 고위험 영역으로 분류된다. (O/X)
+<!-- source: Chapter 2/page_0037.jpg -->
 4. 비경쟁적 조달이라 하더라도 절차·기준·근거는 명확히 남겨야 한다. (O/X)
+<!-- source: Chapter 2/page_0037.jpg -->
 5. 수의계약은 대표적인 비경쟁적 공공조달 방법이다. (O/X)
+<!-- source: Chapter 2/page_0037.jpg -->
 6. 비경쟁적 공공조달 방법은 공공조달의 기본원칙을 전혀 적용받지 않는다. (O/X)
 <!-- source: Chapter 2/page_0037.jpg -->
 
