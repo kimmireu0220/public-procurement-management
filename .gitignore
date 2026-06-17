@@ -3,6 +3,12 @@
 __pycache__/
 *.pyc
 .env
+
+# Local-only textbook assets (large; keep on disk, not in remote)
+교재/**/*.jpg
+표준 교재/**/*.pdf
+
 output/agent_extract/_crops/
 output/agent_extract/_tmp/
+output/_crops/
 output/final/

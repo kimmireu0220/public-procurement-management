@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import argparse
 import html
 import re
 import sys
@@ -10,16 +11,10 @@ if str(TOOLS_DIR) not in sys.path:
     sys.path.insert(0, str(TOOLS_DIR))
 
 from config import (  # noqa: E402
-    AGENT_EXTRACT_DIR,
-    BUILD_REPORT,
-    CHAPTERS_CLEAN_DIR,
-    PROBLEM_BOOK_FINAL_DIR,
-    PROBLEM_BOOK_MD,
+    SUBJECT_CATALOG,
+    subject_extract_dir,
+    subject_problem_book_dir,
 )
-
-SOURCE_DIR = AGENT_EXTRACT_DIR
-FINAL_DIR = PROBLEM_BOOK_FINAL_DIR
-CHAPTERS_DIR = CHAPTERS_CLEAN_DIR
 
 ANSWER_HEADING_RE = re.compile(r"^#{1,3}\s+.*정답")
 QUESTION_RE = re.compile(r"^\s*\d+\.\s+\S")
@@ -543,7 +538,7 @@ def augment_sources(chapter: int, text: str) -> str:
     return text
 
 
-def make_html(markdown_text: str) -> str:
+def make_html(markdown_text: str, title: str) -> str:
     body_lines: list[str] = []
     in_list = False
     for raw in markdown_text.splitlines():
@@ -607,7 +602,7 @@ def make_html(markdown_text: str) -> str:
 <html lang="ko">
 <head>
 <meta charset="utf-8">
-<title>공공조달의 이해 문제집</title>
+<title>{html.escape(title)}</title>
 <style>
 @page { margin: 18mm 16mm; }
 body {
@@ -642,30 +637,43 @@ hr { border: none; border-top: 1px solid #ddd; margin: 24px 0; }
 """
 
 
-def main() -> None:
-    FINAL_DIR.mkdir(parents=True, exist_ok=True)
-    CHAPTERS_DIR.mkdir(parents=True, exist_ok=True)
+def build_subject(subject_no: str) -> tuple[Path, Path, Path]:
+    meta = SUBJECT_CATALOG[subject_no]
+    source_dir = subject_extract_dir(subject_no)
+    final_dir = subject_problem_book_dir(subject_no)
+    chapters_dir = final_dir / "chapters_clean"
+    chapter_count = int(meta["chapters"])
 
+    final_dir.mkdir(parents=True, exist_ok=True)
+    chapters_dir.mkdir(parents=True, exist_ok=True)
+
+    book_title = f"{subject_no}과목 {meta['textbook_name']} 문제집"
     combined_parts = [
-        "# 공공조달의 이해 문제집",
+        f"# {book_title}",
         "",
-        "> 교재 폴더의 문제 유형(Check Q&A, 단원별 출제예상문제, 최종점검 OX 퀴즈)만 모은 학습용 합본입니다.",
+        f"> {meta['exam_type']} {subject_no}과목({meta['exam_name']}) · 교재 「{meta['textbook_name']}」",
+        "> 문제 유형(Check Q&A, 단원별 출제예상문제, 최종점검 OX 퀴즈)만 모은 학습용 합본입니다.",
         "",
     ]
     report_lines = [
         "# 문제집 생성 검토 요약",
         "",
+        f"- 과목: {subject_no}과목 ({meta['exam_name']})",
+        f"- 입력: `{source_dir}`",
+        f"- 출력: `{final_dir}`",
+        "",
         "| 챕터 파일 | 정답 섹션 제거 시작 줄 | 문제 수 | 출처 주석 수 |",
         "|---|---:|---:|---:|",
     ]
 
-    for n in range(1, 8):
-        source = SOURCE_DIR / f"chapter{n}.md"
+    for n in range(1, chapter_count + 1):
+        source = source_dir / f"chapter{n}.md"
         text = source.read_text(encoding="utf-8")
         stripped, cut_line = strip_answer_section(text)
         clean = demote_headings(stripped)
-        clean = augment_sources(n, clean)
-        clean_path = CHAPTERS_DIR / f"chapter{n}.md"
+        if subject_no == "1":
+            clean = augment_sources(n, clean)
+        clean_path = chapters_dir / f"chapter{n}.md"
         clean_path.write_text(clean, encoding="utf-8")
 
         question_count = sum(1 for line in clean.splitlines() if QUESTION_RE.match(line))
@@ -676,14 +684,27 @@ def main() -> None:
         combined_parts.append("")
 
     combined = "\n".join(combined_parts).rstrip() + "\n"
-    md_path = FINAL_DIR / "공공조달의_이해_문제집.md"
-    html_path = FINAL_DIR / "공공조달의_이해_문제집.html"
-    report_path = BUILD_REPORT
+    md_path = final_dir / f"{subject_no}과목_문제집.md"
+    html_path = final_dir / f"{subject_no}과목_문제집.html"
+    report_path = final_dir / "검토_요약.md"
 
     md_path.write_text(combined, encoding="utf-8")
-    html_path.write_text(make_html(combined), encoding="utf-8")
+    html_path.write_text(make_html(combined, book_title), encoding="utf-8")
     report_path.write_text("\n".join(report_lines) + "\n", encoding="utf-8")
+    return md_path, html_path, report_path
 
+
+def main() -> None:
+    parser = argparse.ArgumentParser(description="에이전트 추출본에서 문제집(정답 제거)을 생성합니다.")
+    parser.add_argument(
+        "--subject",
+        default="1",
+        choices=sorted(SUBJECT_CATALOG),
+        help="과목 번호 (기본값: 1)",
+    )
+    args = parser.parse_args()
+
+    md_path, html_path, report_path = build_subject(args.subject)
     print(md_path)
     print(html_path)
     print(report_path)

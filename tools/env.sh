@@ -13,8 +13,8 @@ if [[ -f "$DEFAULT_ROOT/.env" ]]; then
 fi
 
 export PROJECT_ROOT="${PROJECT_ROOT:-$DEFAULT_ROOT}"
-export TEXTBOOK_IMAGES_DIR="${TEXTBOOK_IMAGES_DIR:-교재/공공조달의 이해}"
-export OCR_DIR="${OCR_DIR:-output/ocr/공공조달의_이해}"
+export TEXTBOOK_IMAGES_DIR="${TEXTBOOK_IMAGES_DIR:-교재/1과목_공공조달의 이해}"
+export OCR_DIR="${OCR_DIR:-output/ocr/1과목_공공조달의_이해}"
 export AGENT_EXTRACT_DIR="${AGENT_EXTRACT_DIR:-output/agent_extract}"
 export PROBLEM_BOOK_FINAL_DIR="${PROBLEM_BOOK_FINAL_DIR:-output/problem_book_final}"
 

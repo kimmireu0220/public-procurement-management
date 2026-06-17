@@ -44,11 +44,64 @@ def get_path(name: str, default: str) -> Path:
 
 
 ROOT = get_project_root()
-TEXTBOOK_IMAGES_DIR = get_path("TEXTBOOK_IMAGES_DIR", "교재/공공조달의 이해")
-OCR_DIR = get_path("OCR_DIR", "output/ocr/공공조달의_이해")
+
+# 시험 과목 번호 ↔ 교재 폴더명 (필기 1~3, 실기 4)
+SUBJECT_CATALOG: dict[str, dict[str, str | int]] = {
+    "1": {
+        "slug": "1과목_공공조달의 이해",
+        "exam_name": "공공조달과 법제도 이해",
+        "textbook_name": "공공조달의 이해",
+        "exam_type": "필기",
+        "chapters": 7,
+    },
+    "2": {
+        "slug": "2과목_공공조달 계획분석",
+        "exam_name": "공공조달계획 수립 및 분석",
+        "textbook_name": "공공조달 계획분석",
+        "exam_type": "필기",
+        "chapters": 4,
+    },
+    "3": {
+        "slug": "3과목_공공계약관리",
+        "exam_name": "공공계약관리",
+        "textbook_name": "공공계약관리",
+        "exam_type": "필기",
+        "chapters": 4,
+    },
+    "4": {
+        "slug": "4과목_공공조달 관리실무",
+        "exam_name": "공공조달관리 실무",
+        "textbook_name": "공공조달 관리실무",
+        "exam_type": "실기",
+        "chapters": 8,
+    },
+}
+
+TEXTBOOK_DIR = get_path("TEXTBOOK_DIR", "교재")
+TEXTBOOK_IMAGES_DIR = get_path(
+    "TEXTBOOK_IMAGES_DIR",
+    f"교재/{SUBJECT_CATALOG['1']['slug']}",
+)
+OCR_DIR = get_path("OCR_DIR", "output/ocr/1과목_공공조달의_이해")
 AGENT_EXTRACT_DIR = get_path("AGENT_EXTRACT_DIR", "output/agent_extract")
 PROBLEM_BOOK_FINAL_DIR = get_path("PROBLEM_BOOK_FINAL_DIR", "output/problem_book_final")
-CHAPTERS_CLEAN_DIR = PROBLEM_BOOK_FINAL_DIR / "chapters_clean"
-PROBLEM_BOOK_MD = PROBLEM_BOOK_FINAL_DIR / "공공조달의_이해_문제집.md"
-AUDIT_REPORT = PROBLEM_BOOK_FINAL_DIR / "누락_후보_대조.md"
-BUILD_REPORT = PROBLEM_BOOK_FINAL_DIR / "검토_요약.md"
+
+SUBJECT1_SLUG = str(SUBJECT_CATALOG["1"]["slug"])
+SUBJECT1_EXTRACT_DIR = AGENT_EXTRACT_DIR / SUBJECT1_SLUG
+SUBJECT1_PROBLEM_BOOK_DIR = PROBLEM_BOOK_FINAL_DIR / SUBJECT1_SLUG
+CHAPTERS_CLEAN_DIR = SUBJECT1_PROBLEM_BOOK_DIR / "chapters_clean"
+PROBLEM_BOOK_MD = SUBJECT1_PROBLEM_BOOK_DIR / "1과목_문제집.md"
+AUDIT_REPORT = SUBJECT1_PROBLEM_BOOK_DIR / "누락_후보_대조.md"
+BUILD_REPORT = SUBJECT1_PROBLEM_BOOK_DIR / "검토_요약.md"
+
+
+def subject_textbook_dir(subject_no: str) -> Path:
+    return TEXTBOOK_DIR / str(SUBJECT_CATALOG[subject_no]["slug"])
+
+
+def subject_extract_dir(subject_no: str) -> Path:
+    return AGENT_EXTRACT_DIR / str(SUBJECT_CATALOG[subject_no]["slug"])
+
+
+def subject_problem_book_dir(subject_no: str) -> Path:
+    return PROBLEM_BOOK_FINAL_DIR / str(SUBJECT_CATALOG[subject_no]["slug"])
