@@ -14,8 +14,8 @@
 ## 대상
 
 - `교재/<slug>/Chapter N/page_*.jpg` 원본 이미지
-- OCR 보조: **1·3과목만** (`output/ocr/1과목_공공조달의_이해`, `output/ocr/3과목_공공계약관리`)
-- 2·4과목: JPG vision 직접 판독
+- OCR 보조: 4과목 전체 (`output/ocr/<slug_with_underscore>/`, 예: `2과목_공공조달_계획분석`)
+- 정확도 기준은 항상 원본 JPG. OCR은 보조·감사용
 - 1과목 `Chapter 0` = 출제기준·목차 (문제 추출 제외)
 
 ## 포함할 문제 유형
