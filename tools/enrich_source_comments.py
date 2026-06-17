@@ -94,7 +94,9 @@ def enrich_chapter(path: Path, dry_run: bool = False) -> int:
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser()
+    parser = argparse.ArgumentParser(
+        description="블록 단위 출처 주석을 개별 문항에 전파합니다.",
+    )
     parser.add_argument("--subject", default="all", help="1~4 or all")
     parser.add_argument("--chapter", type=int, default=0, help="특정 챕터만 (0=전체)")
     parser.add_argument("--dry-run", action="store_true")

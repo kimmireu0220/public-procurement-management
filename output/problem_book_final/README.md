@@ -1,0 +1,37 @@
+# problem_book_final
+
+4과목 최종 **문제만** 모은 학습용 산출물. 정답·해설은 `agent_extract/`에만 있다.
+
+## 과목별 파일
+
+| 파일 | 용도 |
+|---|---|
+| `{N}과목_문제집.html` | **학습 권장** — 브라우저·인쇄용 |
+| `{N}과목_문제집.md` | 전체 합본 (검색·diff용) |
+| `chapters_clean/chapterN.md` | 챕터 단위 분할 |
+| `추출_검증.md` | 문항=정답 자동 검증 (`validate_extract.py`) |
+| `검토_요약.md` | 빌드 집계 (줄 패턴 기준, 검증과 수치가 다를 수 있음) |
+| `누락_후보_대조.md` | OCR 누락 후보 (`audit_problem_book.py`) |
+| `독립검수_리포트.md` | 2~4과목 수동 검수 기록 (1과목 없음) |
+
+## 문항 수 기준
+
+**공식 합계는 `validate_extract.py` 결과**이다 (README 표와 동일).
+
+`검토_요약.md`·`누락_후보_대조.md`의 문항 수는 빌드/audit 줄 패턴 집계로, 1과목 등에서 소폭 차이날 수 있다.
+
+## 학습 방법
+
+1. 강의·이론: `output/학습_프롬프트/` (문제 출제 없음)
+2. 문제 풀이: 본 폴더 `{N}과목_문제집.html`
+3. 정답 확인: `output/agent_extract/{slug}/chapterN.md` 정답 섹션
+
+## 재생성
+
+```bash
+python3 tools/build_problem_book.py --subject N
+python3 tools/validate_extract.py --subject N
+python3 tools/audit_problem_book.py --subject N
+```
+
+규칙·에이전트 프롬프트: `output/extraction_guide.md`, `output/문제집_제작_프롬프트.md`

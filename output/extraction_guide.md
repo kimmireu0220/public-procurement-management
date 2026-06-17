@@ -52,3 +52,14 @@
 
 - 교재 폴더: `교재/1과목_공공조달의 이해/`
 - OCR: `output/ocr/1과목_공공조달의_이해/`
+
+## OCR 경로 (4과목, slug 공백 → `_`)
+
+| 과목 | OCR 폴더 |
+|---|---|
+| 1 | `output/ocr/1과목_공공조달의_이해` |
+| 2 | `output/ocr/2과목_공공조달_계획분석` |
+| 3 | `output/ocr/3과목_공공계약관리` |
+| 4 | `output/ocr/4과목_공공조달_관리실무` |
+
+생성: `tools/run_ocr_pages.sh` (macOS Vision). 상세는 `tools/README.md`.

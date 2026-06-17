@@ -151,7 +151,9 @@ def validate_subject(subject_no: str) -> tuple[list[dict], Path]:
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser()
+    parser = argparse.ArgumentParser(
+        description="agent_extract 문항·정답 일치 여부를 검증하고 추출_검증.md를 생성합니다.",
+    )
     parser.add_argument("--subject", default="all", help="1~4 or all")
     args = parser.parse_args()
     subjects = list(SUBJECT_CATALOG) if args.subject == "all" else [args.subject]

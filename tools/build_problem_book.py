@@ -11,6 +11,7 @@ if str(TOOLS_DIR) not in sys.path:
     sys.path.insert(0, str(TOOLS_DIR))
 
 from config import (  # noqa: E402
+    ROOT,
     SUBJECT_CATALOG,
     subject_extract_dir,
     subject_problem_book_dir,
@@ -655,12 +656,16 @@ def build_subject(subject_no: str) -> tuple[Path, Path, Path]:
         "> 문제 유형(Check Q&A, 단원별 출제예상문제, 최종점검 OX 퀴즈)만 모은 학습용 합본입니다.",
         "",
     ]
+    source_rel = source_dir.relative_to(ROOT) if source_dir.is_relative_to(ROOT) else source_dir
+    final_rel = final_dir.relative_to(ROOT) if final_dir.is_relative_to(ROOT) else final_dir
     report_lines = [
         "# 문제집 생성 검토 요약",
         "",
         f"- 과목: {subject_no}과목 ({meta['exam_name']})",
-        f"- 입력: `{source_dir}`",
-        f"- 출력: `{final_dir}`",
+        f"- 입력: `{source_rel}`",
+        f"- 출력: `{final_rel}`",
+        "",
+        "> 문항 수는 본 스크립트 줄 패턴 기준입니다. 공식 검증은 `validate_extract.py`를 사용하세요.",
         "",
         "| 챕터 파일 | 정답 섹션 제거 시작 줄 | 문제 수 | 출처 주석 수 |",
         "|---|---:|---:|---:|",
