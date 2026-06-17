@@ -36,13 +36,35 @@ COMPRESSED_ANSWER_RE = re.compile(
 )
 
 
+def count_answer_entries_in_line(line: str) -> int:
+    if not ANSWER_LINE_RE.match(line):
+        return 0
+    m = re.match(r"^\s*(\d+)\.\s+", line)
+    if not m:
+        return 0
+    first = int(m.group(1))
+    choice_entries = COMPRESSED_ANSWER_RE.findall(line)
+    if len(choice_entries) >= 2:
+        return len(choice_entries)
+    if first == 1:
+        nums = [first]
+        for em in re.finditer(r"\s(\d+)\.\s+", line[m.end() :]):
+            n = int(em.group(1))
+            if n == nums[-1] + 1:
+                nums.append(n)
+            else:
+                break
+        if len(nums) > 1:
+            return len(nums)
+    if choice_entries:
+        return 1
+    return 1
+
+
 def count_answers_in_section(section: str) -> int:
     total = 0
     for line in section.splitlines():
-        if not ANSWER_LINE_RE.match(line):
-            continue
-        matches = COMPRESSED_ANSWER_RE.findall(line)
-        total += len(matches) if matches else 1
+        total += count_answer_entries_in_line(line)
     if total:
         return total
     nums = [int(m.group(1)) for m in ANSWER_NUM_RE.finditer(section)]
