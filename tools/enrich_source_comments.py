@@ -84,7 +84,7 @@ def enrich_body(body: str) -> tuple[str, int]:
     return "\n".join(result).rstrip() + "\n", added
 
 
-def enrich_chapter(path: Path, dry_run: bool = False) -> int:
+def enrich_part(path: Path, dry_run: bool = False) -> int:
     text = path.read_text(encoding="utf-8")
     body, answer = split_body_answer(text)
     enriched, added = enrich_body(body)
@@ -98,7 +98,7 @@ def main() -> None:
         description="블록 단위 출처 주석을 개별 문항에 전파합니다.",
     )
     parser.add_argument("--subject", default="all", help="1~4 or all")
-    parser.add_argument("--chapter", type=int, default=0, help="특정 챕터만 (0=전체)")
+    parser.add_argument("--part", type=int, default=0, help="특정 Part만 (0=전체)")
     parser.add_argument("--dry-run", action="store_true")
     args = parser.parse_args()
 
@@ -106,13 +106,13 @@ def main() -> None:
     total = 0
     for subject_no in subjects:
         extract_dir = subject_extract_dir(subject_no)
-        files = sorted(extract_dir.glob("chapter*.md"))
-        if args.chapter:
-            files = [extract_dir / f"chapter{args.chapter}.md"]
+        files = sorted(extract_dir.glob("part*.md"))
+        if args.part:
+            files = [extract_dir / f"part{args.part}.md"]
         for path in files:
             if not path.is_file():
                 continue
-            added = enrich_chapter(path, dry_run=args.dry_run)
+            added = enrich_part(path, dry_run=args.dry_run)
             total += added
             if added:
                 print(f"{path.name}: +{added} 출처 주석")

@@ -13,10 +13,11 @@
 
 ## 대상
 
-- `교재/<slug>/Chapter N/page_*.jpg` 원본 이미지
+- `교재/<slug>/Part N/page_*.jpg` 원본 이미지
 - OCR 보조: 4과목 전체 (`output/ocr/<slug_with_underscore>/`, 예: `2과목_공공조달_계획분석`)
 - 정확도 기준은 항상 원본 JPG. OCR은 보조·감사용
-- 1과목 `Chapter 0` = 출제기준·목차 (문제 추출 제외)
+- 교재 내부 `CHAPTER 01`, `CHAPTER 02` 등은 Part 안의 소단원이다.
+- 1과목 `Intro` = 출제기준·목차 (문제 추출 제외)
 
 ## 포함할 문제 유형
 
@@ -38,17 +39,17 @@
   `   ① 보기` … `④ 보기`
 - OX: `1. 문제문 (O/X)`
 - OCR이 애매하면 원본 이미지 기준 보정
-- 각 문제 묶음 아래: `<!-- source: Chapter N/page_XXXX.jpg -->`
+- 각 문제 묶음 아래: `<!-- source: Part N/page_XXXX.jpg -->`
 
 ## 산출 경로
 
 | 단계 | 경로 | 비고 |
 |---|---|---|
-| 추출본 | `output/agent_extract/<slug>/chapterN.md` | 문제+정답 |
+| 추출본 | `output/agent_extract/<slug>/partN.md` | Part 단위 문제+정답 |
 | 최종 문제집 | `output/problem_book_final/<slug>/` | 정답 제거, MD+HTML |
 | 검증 | `…/추출_검증.md`, `검토_요약.md`, `누락_후보_대조.md` | `tools/` 스크립트 생성 |
 
-## 1과목 참고 (Chapter 1~7)
+## 1과목 참고 (Part 1~7)
 
 - 교재 폴더: `교재/1과목_공공조달의 이해/`
 - OCR: `output/ocr/1과목_공공조달의_이해/`

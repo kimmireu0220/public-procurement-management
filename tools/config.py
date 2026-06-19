@@ -52,28 +52,28 @@ SUBJECT_CATALOG: dict[str, dict[str, str | int]] = {
         "exam_name": "공공조달과 법제도 이해",
         "textbook_name": "공공조달의 이해",
         "exam_type": "필기",
-        "chapters": 7,
+        "parts": 7,
     },
     "2": {
         "slug": "2과목_공공조달 계획분석",
         "exam_name": "공공조달계획 수립 및 분석",
         "textbook_name": "공공조달 계획분석",
         "exam_type": "필기",
-        "chapters": 4,
+        "parts": 4,
     },
     "3": {
         "slug": "3과목_공공계약관리",
         "exam_name": "공공계약관리",
         "textbook_name": "공공계약관리",
         "exam_type": "필기",
-        "chapters": 4,
+        "parts": 4,
     },
     "4": {
         "slug": "4과목_공공조달 관리실무",
         "exam_name": "공공조달관리 실무",
         "textbook_name": "공공조달 관리실무",
         "exam_type": "실기",
-        "chapters": 8,
+        "parts": 8,
     },
 }
 
@@ -89,7 +89,7 @@ PROBLEM_BOOK_FINAL_DIR = get_path("PROBLEM_BOOK_FINAL_DIR", "output/problem_book
 SUBJECT1_SLUG = str(SUBJECT_CATALOG["1"]["slug"])
 SUBJECT1_EXTRACT_DIR = AGENT_EXTRACT_DIR / SUBJECT1_SLUG
 SUBJECT1_PROBLEM_BOOK_DIR = PROBLEM_BOOK_FINAL_DIR / SUBJECT1_SLUG
-CHAPTERS_CLEAN_DIR = SUBJECT1_PROBLEM_BOOK_DIR / "chapters_clean"
+PARTS_CLEAN_DIR = SUBJECT1_PROBLEM_BOOK_DIR / "parts_clean"
 PROBLEM_BOOK_MD = SUBJECT1_PROBLEM_BOOK_DIR / "1과목_문제집.md"
 AUDIT_REPORT = SUBJECT1_PROBLEM_BOOK_DIR / "누락_후보_대조.md"
 BUILD_REPORT = SUBJECT1_PROBLEM_BOOK_DIR / "검토_요약.md"

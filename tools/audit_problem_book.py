@@ -18,7 +18,7 @@ from config import (  # noqa: E402
 
 PROBLEM_MARKER_RE = re.compile(r"Check|Q&A|O&A|출제예상|최종점검|OX 퀴즈|0X 퀴즈")
 SOURCE_COMMENT_RE = re.compile(r"<!--\s*source:\s*(.*?)\s*-->")
-SOURCE_TOKEN_RE = re.compile(r"(Chapter [0-9]+/)?page_(\d{4})\.jpg")
+SOURCE_TOKEN_RE = re.compile(r"(Part [0-9]+/)?page_(\d{4})\.jpg")
 ANSWER_RE = re.compile(r"^#{1,4}\s+.*정답|정답 및 해설|^\s*정답\b|^\s*해설\b", re.MULTILINE)
 ANSWER_TRACE_RE = re.compile(
     r"본문 정답표|정답표|정답은|답은|해설상|[①②③④⑤⑥⑦⑧⑨⑩]\s*[-—–]|[OX]\s*[-—–]"
@@ -32,7 +32,7 @@ QUESTION_RE = re.compile(r"^\s*\d+\.\s+\S", re.MULTILINE)
 
 def expand_source_comment(comment: str) -> set[str]:
     sources: set[str] = set()
-    current_chapter: str | None = None
+    current_part: str | None = None
 
     parts = [part.strip() for part in comment.split(",")]
     for part in parts:
@@ -41,20 +41,20 @@ def expand_source_comment(comment: str) -> set[str]:
             continue
         first = tokens[0]
         if first.group(1):
-            current_chapter = first.group(1).rstrip("/")
-        if current_chapter is None:
+            current_part = first.group(1).rstrip("/")
+        if current_part is None:
             continue
 
         if "~" in part and len(tokens) >= 2:
             start = int(tokens[0].group(2))
             end = int(tokens[-1].group(2))
             for page in range(min(start, end), max(start, end) + 1):
-                sources.add(f"{current_chapter}/page_{page:04d}.jpg")
+                sources.add(f"{current_part}/page_{page:04d}.jpg")
         else:
             for token in tokens:
                 if token.group(1):
-                    current_chapter = token.group(1).rstrip("/")
-                sources.add(f"{current_chapter}/page_{int(token.group(2)):04d}.jpg")
+                    current_part = token.group(1).rstrip("/")
+                sources.add(f"{current_part}/page_{int(token.group(2)):04d}.jpg")
 
     return sources
 
@@ -69,10 +69,10 @@ def extract_used_sources(final_text: str) -> set[str]:
 def audit_subject(subject_no: str) -> Path:
     meta = SUBJECT_CATALOG[subject_no]
     slug = str(meta["slug"])
-    chapter_count = int(meta["chapters"])
+    part_count = int(meta["parts"])
     final_dir = subject_problem_book_dir(subject_no)
     final_md = final_dir / f"{subject_no}과목_문제집.md"
-    chapters_clean_dir = final_dir / "chapters_clean"
+    parts_clean_dir = final_dir / "parts_clean"
     report = final_dir / "누락_후보_대조.md"
     ocr_root = ROOT / "output" / "ocr" / slug.replace(" ", "_")
 
@@ -93,10 +93,9 @@ def audit_subject(subject_no: str) -> Path:
         "# 누락 후보 대조",
         "",
         f"- 과목: {subject_no}과목 ({meta['exam_name']})",
+        "OCR에서 문제 표식이 감지된 페이지와 최종 문제집의 출처 주석을 Part 기준으로 대조한 결과입니다.",
         "",
-        "OCR에서 문제 표식이 감지된 페이지와 최종 문제집의 출처 주석을 대조한 결과입니다.",
-        "",
-        "| 챕터 | OCR 후보 페이지 | 최종 사용 페이지 | 후보 중 미사용 | 최종 문제 수 |",
+        "| Part | OCR 후보 페이지 | 최종 사용 페이지 | 후보 중 미사용 | 최종 문제 수 |",
         "|---|---:|---:|---:|---:|",
     ]
 
@@ -104,41 +103,41 @@ def audit_subject(subject_no: str) -> Path:
     total_questions = 0
     has_ocr = ocr_root.is_dir()
     summary_rows: list[tuple[int, str, int, str, int]] = []
-    missing_by_chapter: list[tuple[int, list[str]]] = []
+    missing_by_part: list[tuple[int, list[str]]] = []
 
-    for chapter in range(1, chapter_count + 1):
+    for part_no in range(1, part_count + 1):
         candidates: list[str] = []
         if has_ocr:
-            chapter_dir = ocr_root / f"Chapter {chapter}"
-            if chapter_dir.is_dir():
-                for page in sorted(chapter_dir.glob("*.txt")):
+            part_dir = ocr_root / f"Part {part_no}"
+            if part_dir.is_dir():
+                for page in sorted(part_dir.glob("*.txt")):
                     text = page.read_text(encoding="utf-8", errors="ignore")
                     if PROBLEM_MARKER_RE.search(text):
-                        candidates.append(f"Chapter {chapter}/{page.stem}.jpg")
+                        candidates.append(f"Part {part_no}/{page.stem}.jpg")
 
-        used = sorted(source for source in used_sources if source.startswith(f"Chapter {chapter}/"))
+        used = sorted(source for source in used_sources if source.startswith(f"Part {part_no}/"))
         missing = [source for source in candidates if source not in used_sources]
         total_missing.extend(missing)
 
-        chapter_clean = chapters_clean_dir / f"chapter{chapter}.md"
+        part_clean = parts_clean_dir / f"part{part_no}.md"
         q_count = 0
-        if chapter_clean.is_file():
-            q_count = len(QUESTION_RE.findall(chapter_clean.read_text(encoding="utf-8")))
+        if part_clean.is_file():
+            q_count = len(QUESTION_RE.findall(part_clean.read_text(encoding="utf-8")))
         total_questions += q_count
 
         ocr_col = str(len(candidates)) if has_ocr else "—"
         missing_col = str(len(missing)) if has_ocr else "—"
-        summary_rows.append((chapter, ocr_col, len(used), missing_col, q_count))
+        summary_rows.append((part_no, ocr_col, len(used), missing_col, q_count))
         if missing:
-            missing_by_chapter.append((chapter, missing))
+            missing_by_part.append((part_no, missing))
 
-    for chapter, ocr_col, used_count, missing_col, q_count in summary_rows:
-        lines.append(f"| Chapter {chapter} | {ocr_col} | {used_count} | {missing_col} | {q_count} |")
+    for part_no, ocr_col, used_count, missing_col, q_count in summary_rows:
+        lines.append(f"| Part {part_no} | {ocr_col} | {used_count} | {missing_col} | {q_count} |")
 
-    if missing_by_chapter:
+    if missing_by_part:
         lines.append("")
-        for chapter, missing in missing_by_chapter:
-            lines.append(f"## Chapter {chapter} 후보 중 미사용 페이지")
+        for part_no, missing in missing_by_part:
+            lines.append(f"## Part {part_no:02d} 후보 중 미사용 페이지")
             for source in missing:
                 lines.append(f"- {source}")
             lines.append("")

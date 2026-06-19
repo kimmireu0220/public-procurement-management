@@ -1,4 +1,4 @@
-"""agent_extract 챕터별 형식·정답 일치 검증."""
+"""agent_extract Part별 형식·정답 일치 검증."""
 
 from __future__ import annotations
 
@@ -81,7 +81,7 @@ def count_answers(answer: str) -> int:
     return sum(count_answers_in_section(section) for section in sections)
 
 
-def validate_chapter(path: Path) -> dict:
+def validate_part(path: Path) -> dict:
     text = path.read_text(encoding="utf-8")
     body, answer, cut = split_body_answer(text)
     q_body = len(QUESTION_RE.findall(body))
@@ -108,8 +108,8 @@ def validate_subject(subject_no: str) -> tuple[list[dict], Path]:
     report_path = final_dir / "추출_검증.md"
 
     rows: list[dict] = []
-    for chapter_file in sorted(extract_dir.glob("chapter*.md")):
-        rows.append(validate_chapter(chapter_file))
+    for part_file in sorted(extract_dir.glob("part*.md")):
+        rows.append(validate_part(part_file))
 
     total_q = sum(r["questions"] for r in rows)
     total_a = sum(r["answers"] for r in rows)
@@ -121,7 +121,7 @@ def validate_subject(subject_no: str) -> tuple[list[dict], Path]:
         f"- 과목: {subject_no}과목 ({SUBJECT_CATALOG[subject_no]['exam_name']})",
         f"- 입력: `{extract_dir}`",
         "",
-        "| 챕터 | 문항 | 정답 | 출처 주석 | 본문 답안 흔적 | 이상 문자 | 일치 |",
+        "| Part 파일 | 문항 | 정답 | 출처 주석 | 본문 답안 흔적 | 이상 문자 | 일치 |",
         "|---|---:|---:|---:|---:|---:|:---:|",
     ]
     for r in rows:
@@ -139,7 +139,7 @@ def validate_subject(subject_no: str) -> tuple[list[dict], Path]:
         ]
     )
     if issues:
-        lines.extend(["", "## 미일치 챕터", ""])
+        lines.extend(["", "## 미일치 Part 파일", ""])
         for r in issues:
             lines.append(
                 f"- {r['file']}: 문항 {r['questions']} / 정답 {r['answers']} "

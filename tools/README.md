@@ -2,11 +2,13 @@
 
 문제집 파이프라인 스크립트. 저장소 루트에서 실행한다.
 
+경로의 큰 단원은 `Part N`으로 정리되어 있다. 교재 내부 `CHAPTER 01`, `CHAPTER 02` 등은 해당 Part 안의 소단원이다.
+
 ## 스크립트
 
 | 스크립트 | 용도 | 출력 |
 |---|---|---|
-| `build_problem_book.py` | 추출본에서 정답 제거·합본 MD/HTML 생성 | `problem_book_final/{slug}/` |
+| `build_problem_book.py` | Part 단위 추출본에서 정답 제거·합본 MD/HTML 생성 | `problem_book_final/{slug}/` |
 | `validate_extract.py` | 문항=정답 검증 (**공식 문항 수**) | `추출_검증.md` |
 | `audit_problem_book.py` | OCR 표식 vs 출처 주석 대조 | `누락_후보_대조.md` |
 | `enrich_source_comments.py` | 블록 `<!-- source: -->` → 문항별 전파 | `agent_extract` 수정 |

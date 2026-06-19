@@ -1,0 +1,11 @@
+# Part 6 / page_0033.jpg
+source: /Users/kimmireu/Desktop/Storage/public-procurement-management/교재/4과목_공공조달 관리실무/Part 6/page_0033.jpg
+
+핵심 포인트
+• 발생확률과 영향도를 결합하여 중요도 산정
+• 위험 허용수준(Risk Tolerance)과 비교하여 대응 필요성 판단
+• 조직 내 • 외부 상황을 고려하여 중요도 재평가
+•통제 가능성과 책임 주체를 고려하여 우선순위 결정
+• 자원 배분 및 대응 전략 수립과 연계하여 우선순위 활용
+PART : 06
+Chapter 02 위험도 평가 • 319

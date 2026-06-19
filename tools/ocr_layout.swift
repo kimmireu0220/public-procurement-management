@@ -26,8 +26,8 @@ func isImage(_ url: URL) -> Bool {
     return ext == "jpg" || ext == "jpeg" || ext == "png"
 }
 
-func chapterName(for url: URL) -> String? {
-    url.pathComponents.first { $0.hasPrefix("Chapter ") }
+func partName(for url: URL) -> String? {
+    url.pathComponents.first { $0 == "Intro" || $0.hasPrefix("Part ") }
 }
 
 func sortTopToBottom(_ lines: [Line]) -> [Line] {
@@ -53,12 +53,12 @@ request.recognitionLanguages = ["ko-KR", "en-US"]
 request.usesLanguageCorrection = true
 
 for (i, imageURL) in imageURLs.enumerated() {
-    guard let chapter = chapterName(for: imageURL) else { continue }
-    let chapterOutput = outputRoot.appendingPathComponent(chapter, isDirectory: true)
-    try fm.createDirectory(at: chapterOutput, withIntermediateDirectories: true)
+    guard let part = partName(for: imageURL) else { continue }
+    let partOutput = outputRoot.appendingPathComponent(part, isDirectory: true)
+    try fm.createDirectory(at: partOutput, withIntermediateDirectories: true)
     let baseName = imageURL.deletingPathExtension().lastPathComponent
-    let pageOutput = chapterOutput.appendingPathComponent(baseName).appendingPathExtension("layout.txt")
-    let tsvOutput = chapterOutput.appendingPathComponent(baseName).appendingPathExtension("tsv")
+    let pageOutput = partOutput.appendingPathComponent(baseName).appendingPathExtension("layout.txt")
+    let tsvOutput = partOutput.appendingPathComponent(baseName).appendingPathExtension("tsv")
 
     guard let imageSource = CGImageSourceCreateWithURL(imageURL as CFURL, nil),
           let cgImage = CGImageSourceCreateImageAtIndex(imageSource, 0, nil) else {
@@ -95,7 +95,7 @@ for (i, imageURL) in imageURLs.enumerated() {
     let full = sortTopToBottom(lines)
 
     var layout = """
-    # \(chapter) / \(imageURL.lastPathComponent)
+    # \(part) / \(imageURL.lastPathComponent)
     source: \(imageURL.path)
 
     ## Left column (midX < 0.50)
@@ -122,7 +122,7 @@ for (i, imageURL) in imageURLs.enumerated() {
     try tsv.write(to: tsvOutput, atomically: true, encoding: .utf8)
 
     if i % 10 == 0 || i + 1 == imageURLs.count {
-        print("LAYOUT OCR \(i + 1)/\(imageURLs.count): \(chapter) \(imageURL.lastPathComponent)")
+        print("LAYOUT OCR \(i + 1)/\(imageURLs.count): \(part) \(imageURL.lastPathComponent)")
         fflush(stdout)
     }
 }

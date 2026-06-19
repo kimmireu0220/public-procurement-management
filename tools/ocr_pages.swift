@@ -16,9 +16,9 @@ func isImage(_ url: URL) -> Bool {
     return ext == "jpg" || ext == "jpeg" || ext == "png"
 }
 
-func chapterName(for url: URL) -> String? {
+func partName(for url: URL) -> String? {
     let comps = url.pathComponents
-    return comps.first { $0.hasPrefix("Chapter ") }
+    return comps.first { $0 == "Intro" || $0.hasPrefix("Part ") }
 }
 
 let enumerator = fm.enumerator(at: inputRoot, includingPropertiesForKeys: nil)!
@@ -38,12 +38,12 @@ request.usesLanguageCorrection = true
 var indexLines: [String] = []
 
 for (i, imageURL) in imageURLs.enumerated() {
-    guard let chapter = chapterName(for: imageURL) else {
+    guard let part = partName(for: imageURL) else {
         continue
     }
-    let chapterOutput = outputRoot.appendingPathComponent(chapter, isDirectory: true)
-    try fm.createDirectory(at: chapterOutput, withIntermediateDirectories: true)
-    let pageOutput = chapterOutput
+    let partOutput = outputRoot.appendingPathComponent(part, isDirectory: true)
+    try fm.createDirectory(at: partOutput, withIntermediateDirectories: true)
+    let pageOutput = partOutput
         .appendingPathComponent(imageURL.deletingPathExtension().lastPathComponent)
         .appendingPathExtension("txt")
 
@@ -74,16 +74,16 @@ for (i, imageURL) in imageURLs.enumerated() {
         .filter { !$0.isEmpty }
 
     let body = """
-    # \(chapter) / \(imageURL.lastPathComponent)
+    # \(part) / \(imageURL.lastPathComponent)
     source: \(imageURL.path)
 
     \(lines.joined(separator: "\n"))
     """
     try body.write(to: pageOutput, atomically: true, encoding: .utf8)
-    indexLines.append("\(chapter)/\(pageOutput.lastPathComponent)\t\(imageURL.path)")
+    indexLines.append("\(part)/\(pageOutput.lastPathComponent)\t\(imageURL.path)")
 
     if i % 10 == 0 || i + 1 == imageURLs.count {
-        print("OCR \(i + 1)/\(imageURLs.count): \(chapter) \(imageURL.lastPathComponent)")
+        print("OCR \(i + 1)/\(imageURLs.count): \(part) \(imageURL.lastPathComponent)")
         fflush(stdout)
     }
 }

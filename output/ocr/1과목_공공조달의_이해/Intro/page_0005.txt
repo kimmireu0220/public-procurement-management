@@ -1,0 +1,47 @@
+# Intro / page_0005.jpg
+source: /Users/kimmireu/Desktop/Storage/Test/교재/공공조달의 이해/Intro/page_0005.jpg
+
+PART
+01
+공공조달의
+CHAPTER 01 공공조달의 정의 및 목적
+••• 10
+개요
+CHAPTER 02 공공조달 참여자 및 이해관계자
+••• 27
+CHAPTER 03 공공조달의 특성
+••• 40
+CHAPTER 04 공공조달의 구성체계
+•• 48
+PART02
+공공조달
+CHAPTER 01 공공조달 원칙
+.. 64
+원칙 및 방법
+CHAPTER 02 경쟁적 공공조달 방법
+••· 82
+CHAPTER 03 비경쟁적 공공조달 방법
+••· 94
+PART 03
+전자조달시스템
+CHAPTER 01 전자조달시스템 개요
+••· 102
+CHAPTER 02 국가종합전자조달시스템(나라장터)
+• 118
+CHAPTER 03 나라장터 연계 계약관리 지원시스템 개요
+••• 133
+CHAPTER 04 목록정보시스템 개요
+•• 145
+PART
+04
+전략적 공공조달
+CHAPTER 01 전략적 공공조달
+•• 158
+CHAPTER 02 중소기업 조달
+•• 164
+CHAPTER 03 녹색공공조달
+••• 172
+CHAPTER 04 혁신을 위한 공공조달
+•• 177
+CHAPTER 05 사회적 책임 조달
+••• 182
