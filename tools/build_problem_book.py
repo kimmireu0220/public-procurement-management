@@ -652,7 +652,7 @@ def build_subject(subject_no: str) -> tuple[Path, Path, Path]:
     combined_parts = [
         f"# {book_title}",
         "",
-        f"> {meta['exam_type']} {subject_no}과목({meta['exam_name']}) · 교재 「{meta['textbook_name']}」",
+        f"> {meta['exam_type']} {subject_no}과목({meta['exam_name']}) · 박문각 수험서 「{meta['textbook_name']}」",
         "> 문제 유형(Check Q&A, 단원별 출제예상문제, 최종점검 OX 퀴즈)만 모은 학습용 합본입니다.",
         "",
     ]

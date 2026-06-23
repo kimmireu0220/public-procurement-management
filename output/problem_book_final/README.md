@@ -4,7 +4,7 @@
 
 ## 용어
 
-파일명·출처는 `partN` / `Part N`을 사용한다. 교재 내부 `CHAPTER 01`, `CHAPTER 02` 등은 Part 안의 소단원이다.
+파일명·출처는 `partN` / `Part N`을 사용한다. 수험서 내부 `CHAPTER 01`, `CHAPTER 02` 등은 Part 안의 소단원이다.
 
 ## 과목별 파일
 

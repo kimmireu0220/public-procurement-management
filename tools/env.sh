@@ -13,10 +13,16 @@ if [[ -f "$DEFAULT_ROOT/.env" ]]; then
 fi
 
 export PROJECT_ROOT="${PROJECT_ROOT:-$DEFAULT_ROOT}"
-export TEXTBOOK_IMAGES_DIR="${TEXTBOOK_IMAGES_DIR:-교재/1과목_공공조달의 이해}"
+export PARKMUNGak_SCAN_DIR="${PARKMUNGak_SCAN_DIR:-${TEXTBOOK_DIR:-sources/민간_박문각_수험서_jpg}}"
+export TEXTBOOK_IMAGES_DIR="${TEXTBOOK_IMAGES_DIR:-$PARKMUNGak_SCAN_DIR/1과목_공공조달의 이해}"
 export OCR_DIR="${OCR_DIR:-output/ocr/1과목_공공조달의_이해}"
 export AGENT_EXTRACT_DIR="${AGENT_EXTRACT_DIR:-output/agent_extract}"
 export PROBLEM_BOOK_FINAL_DIR="${PROBLEM_BOOK_FINAL_DIR:-output/problem_book_final}"
+export STANDARD_TEXTBOOK_DIR="${STANDARD_TEXTBOOK_DIR:-sources/공식_조달청_표준교재_pdf}"
+export QNET_SAMPLE_DIR="${QNET_SAMPLE_DIR:-sources/공식_qnet_예제문제}"
+
+# 하위 호환
+export TEXTBOOK_DIR="$PARKMUNGak_SCAN_DIR"
 
 resolve_path() {
   local value="$1"

@@ -1596,7 +1596,7 @@
 
 ### 비고
 
-- 입력: `교재/3과목_공공계약관리/Part 4/page_0001.jpg` ~ `page_0105.jpg` (105페이지)
+- 입력: `sources/민간_박문각_수험서_jpg/3과목_공공계약관리/Part 4/page_0001.jpg` ~ `page_0105.jpg` (105페이지)
 - 출력: `output/agent_extract/3과목_공공계약관리/part4.md`
 - p1은 Part 04 표지(목차)로 문항 없음
 - CHAPTER 03 최종점검 OX는 p104~105 교재 원문 기준으로 정답·해설 정렬 완료

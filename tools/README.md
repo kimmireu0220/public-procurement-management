@@ -2,7 +2,7 @@
 
 문제집 파이프라인 스크립트. 저장소 루트에서 실행한다.
 
-경로의 큰 단원은 `Part N`으로 정리되어 있다. 교재 내부 `CHAPTER 01`, `CHAPTER 02` 등은 해당 Part 안의 소단원이다.
+경로의 큰 단원은 `Part N`으로 정리되어 있다. 수험서 내부 `CHAPTER 01`, `CHAPTER 02` 등은 해당 Part 안의 소단원이다.
 
 ## 스크립트
 
@@ -12,7 +12,7 @@
 | `validate_extract.py` | 문항=정답 검증 (**공식 문항 수**) | `추출_검증.md` |
 | `audit_problem_book.py` | OCR 표식 vs 출처 주석 대조 | `누락_후보_대조.md` |
 | `enrich_source_comments.py` | 블록 `<!-- source: -->` → 문항별 전파 | `agent_extract` 수정 |
-| `run_ocr_pages.sh` | 교재 JPG 일괄 OCR (macOS Vision) | `output/ocr/` |
+| `run_ocr_pages.sh` | 박문각 수험서 JPG 일괄 OCR (macOS Vision) | `output/ocr/` |
 
 ## 일반 실행 순서
 
@@ -35,7 +35,7 @@ python3 tools/enrich_source_comments.py --subject 1 --dry-run
 Swift + Vision 프레임워크 사용. Linux/Windows에서는 OCR 스크립트를 실행할 수 없다.
 
 ```bash
-TEXTBOOK_IMAGES_DIR="교재/2과목_공공조달 계획분석" \
+TEXTBOOK_IMAGES_DIR="sources/민간_박문각_수험서_jpg/2과목_공공조달 계획분석" \
 OCR_DIR="output/ocr/2과목_공공조달_계획분석" \
 tools/run_ocr_pages.sh
 ```
@@ -49,7 +49,10 @@ slug의 공백은 OCR 폴더명에서 `_`로 치환한다 (`2과목_공공조달
 | 변수 | 기본값 | 설명 |
 |---|---|---|
 | `PROJECT_ROOT` | 저장소 루트 | 절대 경로 (다른 기기 클론 시) |
-| `TEXTBOOK_IMAGES_DIR` | `교재/1과목_...` | OCR 대상 JPG 루트 |
+| `PARKMUNGak_SCAN_DIR` | `sources/민간_박문각_수험서_jpg` | 박문각 스캔 루트 (`TEXTBOOK_DIR` 구명 호환) |
+| `TEXTBOOK_IMAGES_DIR` | `…/1과목_공공조달의 이해` | OCR 대상 JPG 과목 폴더 |
+| `STANDARD_TEXTBOOK_DIR` | `sources/공식_조달청_표준교재_pdf` | 조달청 표준교재 PDF |
+| `QNET_SAMPLE_DIR` | `sources/공식_qnet_예제문제` | Q-Net 예제문제 |
 | `OCR_DIR` | `output/ocr/1과목_...` | OCR 출력 루트 |
 
 ## 의존성

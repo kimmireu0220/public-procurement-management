@@ -45,7 +45,7 @@ def get_path(name: str, default: str) -> Path:
 
 ROOT = get_project_root()
 
-# 시험 과목 번호 ↔ 교재 폴더명 (필기 1~3, 실기 4)
+# 시험 과목 번호 ↔ 과목 slug (필기 1~3, 실기 4)
 SUBJECT_CATALOG: dict[str, dict[str, str | int]] = {
     "1": {
         "slug": "1과목_공공조달의 이해",
@@ -77,11 +77,23 @@ SUBJECT_CATALOG: dict[str, dict[str, str | int]] = {
     },
 }
 
-TEXTBOOK_DIR = get_path("TEXTBOOK_DIR", "교재")
-TEXTBOOK_IMAGES_DIR = get_path(
-    "TEXTBOOK_IMAGES_DIR",
-    f"교재/{SUBJECT_CATALOG['1']['slug']}",
+SOURCES_DIR = get_path("SOURCES_DIR", "sources")
+_scan_default = "sources/민간_박문각_수험서_jpg"
+if os.environ.get("TEXTBOOK_DIR") and not os.environ.get("PARKMUNGak_SCAN_DIR"):
+    PARKMUNGak_SCAN_DIR = get_path("TEXTBOOK_DIR", _scan_default)
+else:
+    PARKMUNGak_SCAN_DIR = get_path("PARKMUNGak_SCAN_DIR", _scan_default)
+STANDARD_TEXTBOOK_DIR = get_path(
+    "STANDARD_TEXTBOOK_DIR",
+    "sources/공식_조달청_표준교재_pdf",
 )
+QNET_SAMPLE_DIR = get_path("QNET_SAMPLE_DIR", "sources/공식_qnet_예제문제")
+QNET_SAMPLE_PDF = QNET_SAMPLE_DIR / "필기_예제문제.pdf"
+
+# 하위 호환 (구 env: TEXTBOOK_DIR, TEXTBOOK_IMAGES_DIR)
+TEXTBOOK_DIR = PARKMUNGak_SCAN_DIR
+_default_scan_subject = f"sources/민간_박문각_수험서_jpg/{SUBJECT_CATALOG['1']['slug']}"
+TEXTBOOK_IMAGES_DIR = get_path("TEXTBOOK_IMAGES_DIR", _default_scan_subject)
 OCR_DIR = get_path("OCR_DIR", "output/ocr/1과목_공공조달의_이해")
 AGENT_EXTRACT_DIR = get_path("AGENT_EXTRACT_DIR", "output/agent_extract")
 PROBLEM_BOOK_FINAL_DIR = get_path("PROBLEM_BOOK_FINAL_DIR", "output/problem_book_final")
@@ -96,7 +108,11 @@ BUILD_REPORT = SUBJECT1_PROBLEM_BOOK_DIR / "검토_요약.md"
 
 
 def subject_textbook_dir(subject_no: str) -> Path:
-    return TEXTBOOK_DIR / str(SUBJECT_CATALOG[subject_no]["slug"])
+    return PARKMUNGak_SCAN_DIR / str(SUBJECT_CATALOG[subject_no]["slug"])
+
+
+def subject_standard_textbook_dir(subject_no: str) -> Path:
+    return STANDARD_TEXTBOOK_DIR / str(SUBJECT_CATALOG[subject_no]["slug"])
 
 
 def subject_extract_dir(subject_no: str) -> Path:
