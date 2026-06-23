@@ -14,7 +14,6 @@
 | `enrich_source_comments.py` | 블록 `<!-- source: -->` → 문항별 전파 | `agent_extract` 수정 |
 | `annotate_source_ranges.py` | 출처 주석에 `(문항 N~M)` 범위 보강 (1과목 Part 6) | `agent_extract` 수정 |
 | `fix_choice_lines.py` | 문항 줄의 `①②③④`를 각각 한 줄로 분리 | `agent_extract` 수정 |
-| `add_memo_tips.py` | 4과목 문항에 키워드 기반 암기팁 추가 | `agent_extract` 수정 |
 | `run_ocr_pages.sh` | 박문각 수험서 JPG 일괄 OCR (macOS Vision) | `output/ocr/` |
 
 ## 일반 실행 순서
@@ -33,9 +32,8 @@ python3 tools/audit_problem_book.py --subject all
 python3 tools/enrich_source_comments.py --subject 1 --dry-run
 python3 tools/annotate_source_ranges.py --part6
 
-# 5. (선택) 형식·암기팁 일괄 보정
+# 5. (선택) 형식 보정
 python3 tools/fix_choice_lines.py --subject N --dry-run
-python3 tools/add_memo_tips.py --dry-run   # 4과목 전용
 ```
 
 ## OCR 생성 (macOS)
