@@ -36,5 +36,3 @@ resolve_path() {
 
 TEXTBOOK_IMAGES_PATH="$(resolve_path "$TEXTBOOK_IMAGES_DIR")"
 OCR_OUTPUT_PATH="$(resolve_path "$OCR_DIR")"
-AGENT_EXTRACT_PATH="$(resolve_path "$AGENT_EXTRACT_DIR")"
-PROBLEM_BOOK_FINAL_PATH="$(resolve_path "$PROBLEM_BOOK_FINAL_DIR")"

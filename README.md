@@ -90,7 +90,7 @@ python3 tools/annotate_source_ranges.py --part6  # 1과목 Part 06 출처 범위
 
 ## 제거된 산출물
 
-핵심요약집, 요약노트, 모의고사, `output/_crops/` — 삭제됨.
+핵심요약집, 요약노트, 모의고사, `output/agent_extract/_crops/` — 삭제됨.
 
 ## 설정
 
