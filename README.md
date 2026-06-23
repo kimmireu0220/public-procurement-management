@@ -86,5 +86,5 @@ python3 tools/enrich_source_comments.py --subject 1  # 블록 출처 → 문항�
 ## 설정
 
 ```bash
-cp .env.example .env   # PROJECT_ROOT 등 수정
+cp .env.example .env   # PROJECT_ROOT만 기기 경로에 맞게 수정
 ```
