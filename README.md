@@ -68,6 +68,7 @@
 | `output/ocr/` | 1~4과목 OCR 텍스트 (Vision, macOS) |
 | `output/agent_extract/` | Part별 추출본 (`partN.md`, 문제+정답, 검수 반영) |
 | `output/problem_book_final/` | 최종 문제집 (문제만, MD+HTML) — [`README`](output/problem_book_final/README.md) |
+| `output/mock_exam/` | 필기 모의시험 (회차별 80문항) · 오답노트 — [`README`](output/mock_exam/README.md) |
 | `docs/` | 학습·문제집 프롬프트 · 추출 규칙 · [**시험 안내**](docs/시험_안내.md) — [`README`](docs/README.md) |
 | `tools/` | 빌드 · 검증 · 감사 · 출처 보강 — [`README`](tools/README.md) |
 
@@ -90,7 +91,7 @@ python3 tools/annotate_source_ranges.py --part6  # 1과목 Part 06 출처 범위
 
 ## 제거된 산출물
 
-핵심요약집, 요약노트, 모의고사, `output/agent_extract/_crops/` — 삭제됨.
+핵심요약집, 요약노트, `output/agent_extract/_crops/` — 삭제됨. (모의고사는 `output/mock_exam/` 사용)
 
 ## 설정
 
