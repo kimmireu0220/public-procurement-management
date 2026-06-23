@@ -38,4 +38,4 @@ python3 tools/validate_extract.py --subject N
 python3 tools/audit_problem_book.py --subject N
 ```
 
-규칙·에이전트 프롬프트: `docs/extraction_guide.md`, `docs/문제집_제작_프롬프트.md`
+규칙·에이전트 프롬프트: `docs/extraction_guide.md`, `docs/문제집_프롬프트/`
