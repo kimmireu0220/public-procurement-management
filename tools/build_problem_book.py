@@ -711,15 +711,22 @@ def main() -> None:
     parser.add_argument(
         "--subject",
         default="1",
-        choices=sorted(SUBJECT_CATALOG),
-        help="과목 번호 (기본값: 1)",
+        help="과목 번호 1~4, 또는 all",
     )
     args = parser.parse_args()
 
-    md_path, html_path, report_path = build_subject(args.subject)
-    print(md_path)
-    print(html_path)
-    print(report_path)
+    if args.subject == "all":
+        subjects = sorted(SUBJECT_CATALOG)
+    elif args.subject in SUBJECT_CATALOG:
+        subjects = [args.subject]
+    else:
+        parser.error(f"알 수 없는 과목: {args.subject!r} (1~4 또는 all)")
+
+    for subject_no in subjects:
+        md_path, html_path, report_path = build_subject(subject_no)
+        print(md_path)
+        print(html_path)
+        print(report_path)
 
 
 if __name__ == "__main__":

@@ -21,7 +21,7 @@
 
 ```bash
 # 1. 추출본 수정 후 문제집 재빌드
-python3 tools/build_problem_book.py --subject 1
+python3 tools/build_problem_book.py --subject all   # 또는 --subject 1
 
 # 2. 문항·정답 검증 (README 문항 수 기준)
 python3 tools/validate_extract.py --subject all

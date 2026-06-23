@@ -34,7 +34,7 @@
 
 - 추출본: `output/agent_extract/<slug>/partN.md`
 - 최종 문제집: `output/problem_book_final/<slug>/`
-- 재빌드: `python3 tools/build_problem_book.py --subject N`
+- 재빌드: `python3 tools/build_problem_book.py --subject N` (또는 `--subject all`)
 
 ## 알려진 품질 이슈
 

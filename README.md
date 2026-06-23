@@ -11,6 +11,7 @@
 | `sources/민간_박문각_수험서_jpg/` | ㈜박문각 민간 수험서 | OCR · 문제집 추출 **주 입력** |
 | `sources/공식_조달청_표준교재_pdf/` | 조달청 · 공공조달역량개발원 | 공식 표준교재 PDF (대조·참고) |
 | `sources/공식_qnet_예제문제/` | 한국산업인력공단 Q-Net | 필기 예제 6문항 (기출 아님) |
+| `sources/공식_qnet_시행공고/` | Q-Net 수시검정 시행공고 | **일정·CBT/필답** (문항 수는 [`docs/시험_안내.md`](docs/시험_안내.md)) |
 
 박문각 수험서는 조달청 표준교재가 **아닙니다.**
 
@@ -67,7 +68,7 @@
 | `output/ocr/` | 1~4과목 OCR 텍스트 (Vision, macOS) |
 | `output/agent_extract/` | Part별 추출본 (`partN.md`, 문제+정답, 검수 반영) |
 | `output/problem_book_final/` | 최종 문제집 (문제만, MD+HTML) — [`README`](output/problem_book_final/README.md) |
-| `docs/` | 학습·문제집 프롬프트 · 추출 규칙 — [`README`](docs/README.md) |
+| `docs/` | 학습·문제집 프롬프트 · 추출 규칙 · [**시험 안내**](docs/시험_안내.md) — [`README`](docs/README.md) |
 | `tools/` | 빌드 · 검증 · 감사 · 출처 보강 — [`README`](tools/README.md) |
 
 ## 품질 검증
@@ -75,7 +76,8 @@
 ```bash
 python3 tools/validate_extract.py --subject all    # 문항·정답 일치
 python3 tools/audit_problem_book.py --subject all  # OCR·출처 대조
-python3 tools/build_problem_book.py --subject 1    # 문제집 재빌드 (1~4 각각 실행)
+python3 tools/build_problem_book.py --subject all  # 1~4 일괄 재빌드
+python3 tools/build_problem_book.py --subject 1    # 단일 과목 재빌드
 python3 tools/annotate_source_ranges.py --part6  # 1과목 Part 06 출처 범위 보강
 ```
 
