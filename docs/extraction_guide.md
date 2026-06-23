@@ -133,15 +133,7 @@
 | 최종 문제집 | `output/problem_book_final/<slug>/` | 정답 제거 MD+HTML, `parts_clean/` |
 | 검증 | `…/추출_검증.md`, `검토_요약.md`, `누락_후보_대조.md` | `tools/` 스크립트 생성 |
 
-### 1과목 빌드 시 주의 (`augment_sources`)
-
-`build_problem_book.py --subject 1`은 정답 제거 외에 **`augment_sources()`** 로 일부 Part 본문·출처를 하드코딩 패치한다. 따라서:
-
-- **문항 수·정답 일치 검증** → `agent_extract` + `validate_extract.py`
-- **학습용 문제집 HTML/MD** → `problem_book_final` (패치 반영본)
-- `검토_요약.md` 문항 수는 validate와 **소폭 다를 수 있음** (줄 패턴 + 패치 영향)
-
-장기적으로 패치 내용은 `agent_extract`로 이전하는 것이 권장된다.
+`build_problem_book.py`의 `검토_요약.md` 문항 수는 `validate_extract.py`와 **동일 로직**이다. `agent_extract`가 단일 원본이다.
 
 ## OCR 경로 (slug 공백 → `_`)
 

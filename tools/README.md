@@ -11,10 +11,12 @@
 | `build_problem_book.py` | Part 단위 추출본에서 정답 제거·합본 MD/HTML 생성 | `problem_book_final/{slug}/` |
 | `validate_extract.py` | 문항=정답 검증 (**공식 문항 수**) | `추출_검증.md` |
 | `audit_problem_book.py` | OCR 표식 vs 출처 주석 대조 | `누락_후보_대조.md` |
-| `enrich_source_comments.py` | 블록 `<!-- source: -->` → 문항별 전파 | `agent_extract` 수정 |
+| `enrich_source_comments.py` | 블록 `<!-- source: -->` → 문항별 전파 | `agent_extract` 수정 (2과목 등) |
 | `annotate_source_ranges.py` | 출처 주석에 `(문항 N~M)` 범위 보강 (1과목 Part 6) | `agent_extract` 수정 |
 | `fix_choice_lines.py` | 문항 줄의 `①②③④`를 각각 한 줄로 분리 | `agent_extract` 수정 |
 | `run_ocr_pages.sh` | 박문각 수험서 JPG 일괄 OCR (macOS Vision) | `output/ocr/` |
+| `run_ocr_layout.sh` | 레이아웃 OCR (대안) | **deprecated** — `run_ocr_pages.sh` 사용 |
+| `run_vision_ocr.sh` | 단일 이미지 OCR (디버그) | **deprecated** — 개발·표본 확인용 |
 
 ## 일반 실행 순서
 
