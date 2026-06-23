@@ -25,7 +25,7 @@
 
 | 도구 | 집계 방식 | 용도 |
 |---|---|---|
-| `validate_extract.py` | 정답 섹션 번호 기준 | **공식 문항 수** (README·문제집_제작_프롬프트) |
+| `validate_extract.py` | 정답 섹션 번호 기준 | **공식 문항 수** (README·`docs/문제집_제작_프롬프트.md`) |
 | `build_problem_book.py` | 문제 본문 `N.` 줄 패턴 | 빌드·`검토_요약.md` |
 | `audit_problem_book.py` | `parts_clean` Part 파일 줄 패턴 | `누락_후보_대조.md` |
 
@@ -50,9 +50,7 @@
 | `output/ocr/` | 4과목 OCR 텍스트 (Vision, macOS) |
 | `output/agent_extract/` | Part별 추출본 (`partN.md`, 문제+정답, 검수 반영) |
 | `output/problem_book_final/` | 최종 문제집 (문제만, MD+HTML) — [`README`](output/problem_book_final/README.md) |
-| `output/학습_프롬프트/` | 과목별 강의(설명) 프롬프트 |
-| `output/extraction_guide.md` | 추출 규칙 |
-| `output/문제집_제작_프롬프트.md` | 재추출·재검수 playbook |
+| `docs/` | 학습 프롬프트 · 추출 규칙 · 재검수 playbook — [`README`](docs/README.md) |
 | `tools/` | 빌드 · 검증 · 감사 · 출처 보강 — [`README`](tools/README.md) |
 
 ## 품질 검증

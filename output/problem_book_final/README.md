@@ -26,7 +26,7 @@
 
 ## 학습 방법
 
-1. 강의·이론: `output/학습_프롬프트/` (문제 출제 없음)
+1. 강의·이론: `docs/학습_프롬프트/` (문제 출제 없음)
 2. 문제 풀이: 본 폴더 `{N}과목_문제집.html`
 3. 정답 확인: `output/agent_extract/{slug}/partN.md` 정답 섹션
 
@@ -38,4 +38,4 @@ python3 tools/validate_extract.py --subject N
 python3 tools/audit_problem_book.py --subject N
 ```
 
-규칙·에이전트 프롬프트: `output/extraction_guide.md`, `output/문제집_제작_프롬프트.md`
+규칙·에이전트 프롬프트: `docs/extraction_guide.md`, `docs/문제집_제작_프롬프트.md`
