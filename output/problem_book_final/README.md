@@ -1,6 +1,9 @@
 # problem_book_final
 
-4과목 최종 **문제만** 모은 학습용 산출물. 정답·해설은 `agent_extract/`에만 있다.
+전 과목(1~4) 최종 **문제만** 모은 학습용 산출물.
+
+- **정답·해설:** `output/agent_extract/<slug>/partN.md` 정답 섹션
+- **1과목 주의:** 빌드 시 `augment_sources()` 패치가 들어가 `parts_clean`이 `agent_extract`와 **일부 다름** — [`extraction_guide.md`](../docs/extraction_guide.md)
 
 ## 용어
 

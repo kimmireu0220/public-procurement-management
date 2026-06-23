@@ -61,6 +61,7 @@ slug의 공백은 OCR 폴더명에서 `_`로 치환한다 (`2과목_공공조달
 | `TEXTBOOK_IMAGES_DIR` | `…/1과목_공공조달의 이해` | OCR 대상 JPG 과목 폴더 |
 | `STANDARD_TEXTBOOK_DIR` | `sources/공식_조달청_표준교재_pdf` | 조달청 표준교재 PDF |
 | `QNET_SAMPLE_DIR` | `sources/공식_qnet_예제문제` | Q-Net 예제문제 |
+| `QNET_EXAM_NOTICE_DIR` | `sources/공식_qnet_시행공고` | Q-Net 시행공고 PDF |
 | `OCR_DIR` | `output/ocr/1과목_...` | OCR 출력 루트 |
 
 ## 의존성

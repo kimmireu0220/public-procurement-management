@@ -41,7 +41,14 @@
 | `build_problem_book.py` | 문제 본문 `N.` 줄 패턴 | 빌드·`검토_요약.md` |
 | `audit_problem_book.py` | `parts_clean` Part 파일 줄 패턴 | `누락_후보_대조.md` |
 
-1과목은 validate 1,050 vs build/audit 1,062 — **누락이 아니라 집계 차이** (서술형·압축 형식 등).
+1과목은 validate 1,050 vs build/audit 1,062 — **누락이 아니라 집계·빌드 패치 차이** (`build_problem_book.py`의 `augment_sources()`가 1과목 `parts_clean` 일부를 하드코딩 보정).
+
+### 데이터 원본 구분
+
+| 용도 | 기준 파일 |
+|------|-----------|
+| 정답·문항 수 검증 | `output/agent_extract/<slug>/partN.md` |
+| 학습용 문제집 (HTML/MD) | `output/problem_book_final/<slug>/` — 1과목은 빌드 시 패치 반영 |
 
 ## sources 과목별 경로 (Git 포함)
 
@@ -57,7 +64,7 @@
 | 경로 | 내용 |
 |---|---|
 | [`sources/`](sources/README.md) | 외부 학습 자료 (민간 스캔 · 공식 PDF · Q-Net 예제) |
-| `output/ocr/` | 4과목 OCR 텍스트 (Vision, macOS) |
+| `output/ocr/` | 1~4과목 OCR 텍스트 (Vision, macOS) |
 | `output/agent_extract/` | Part별 추출본 (`partN.md`, 문제+정답, 검수 반영) |
 | `output/problem_book_final/` | 최종 문제집 (문제만, MD+HTML) — [`README`](output/problem_book_final/README.md) |
 | `docs/` | 학습·문제집 프롬프트 · 추출 규칙 — [`README`](docs/README.md) |
@@ -68,13 +75,14 @@
 ```bash
 python3 tools/validate_extract.py --subject all    # 문항·정답 일치
 python3 tools/audit_problem_book.py --subject all  # OCR·출처 대조
-python3 tools/build_problem_book.py --subject 1    # 문제집 재빌드
-python3 tools/enrich_source_comments.py --subject 1  # 블록 출처 → 문항별 전파
+python3 tools/build_problem_book.py --subject 1    # 문제집 재빌드 (1~4 각각 실행)
+python3 tools/annotate_source_ranges.py --part6  # 1과목 Part 06 출처 범위 보강
 ```
 
 ## 참고 (잔여·오탐)
 
-- **1과목 Part 05·06:** 출처 주석 밀도 낮음 (part5 167/162, part6 201/73) — part6은 블록 출처 없어 `enrich_source_comments` 불가
+- **1과목 Part 06:** 단원별·OX 구간 `(문항 N~M)` 범위 source — `annotate_source_ranges.py --part6` (페이지 범위는 인접 섹션 추정)
+- **1과목 빌드:** `augment_sources()` 패치로 `parts_clean`이 `agent_extract`와 일부 상이 — 상세는 `docs/extraction_guide.md`
 - **3과목 Part 04:** OCR 미사용 4페이지 — 부록·표·해설 **오탐** (`누락_후보_대조.md` 분류표)
 - **2·4과목:** OCR 미사용 후보 다수 — 대부분 해설·표 **오탐** (`누락_후보_대조.md`)
 - **2·3과목 일부 Part:** `본문 답안 흔적` 표식은 감점 보기(`① -10점`) 등 **검증 오탐**

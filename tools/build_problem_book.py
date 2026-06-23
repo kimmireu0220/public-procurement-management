@@ -21,6 +21,14 @@ ANSWER_HEADING_RE = re.compile(r"^#{1,3}\s+.*정답")
 QUESTION_RE = re.compile(r"^\s*\d+\.\s+\S")
 SOURCE_RE = re.compile(r"<!--\s*source:\s*([^>]+?)\s*-->")
 
+# 과목별 문제 유형 안내 (합본 blockquote)
+PROBLEM_TYPE_BLURB: dict[str, str] = {
+    "1": "Check Q&A, 단원별 출제예상문제, 최종점검 OX 퀴즈",
+    "2": "Check Q&A, 단원별 출제예상문제, 최종점검 OX 퀴즈",
+    "3": "Check Q&A, 단원별 출제예상문제, 최종점검 OX 퀴즈",
+    "4": "바로 Check, 핵심 최종점검, 서술형·Check Q&A (OX 퀴즈 없음)",
+}
+
 
 def strip_answer_section(text: str) -> tuple[str, int | None]:
     lines = text.splitlines()
@@ -653,7 +661,7 @@ def build_subject(subject_no: str) -> tuple[Path, Path, Path]:
         f"# {book_title}",
         "",
         f"> {meta['exam_type']} {subject_no}과목({meta['exam_name']}) · 박문각 수험서 「{meta['textbook_name']}」",
-        "> 문제 유형(Check Q&A, 단원별 출제예상문제, 최종점검 OX 퀴즈)만 모은 학습용 합본입니다.",
+        f"> 문제 유형({PROBLEM_TYPE_BLURB[subject_no]})만 모은 학습용 합본입니다.",
         "",
     ]
     source_rel = source_dir.relative_to(ROOT) if source_dir.is_relative_to(ROOT) else source_dir

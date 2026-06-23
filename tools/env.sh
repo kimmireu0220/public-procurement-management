@@ -20,6 +20,7 @@ export AGENT_EXTRACT_DIR="${AGENT_EXTRACT_DIR:-output/agent_extract}"
 export PROBLEM_BOOK_FINAL_DIR="${PROBLEM_BOOK_FINAL_DIR:-output/problem_book_final}"
 export STANDARD_TEXTBOOK_DIR="${STANDARD_TEXTBOOK_DIR:-sources/공식_조달청_표준교재_pdf}"
 export QNET_SAMPLE_DIR="${QNET_SAMPLE_DIR:-sources/공식_qnet_예제문제}"
+export QNET_EXAM_NOTICE_DIR="${QNET_EXAM_NOTICE_DIR:-sources/공식_qnet_시행공고}"
 
 # 하위 호환
 export TEXTBOOK_DIR="$PARKMUNGak_SCAN_DIR"
