@@ -210,14 +210,33 @@ def load_used_stems(round_dir: Path) -> set[str]:
     return stems
 
 
-def select(pool: list[Question], count: int, used_stems: set[str]) -> list[Question]:
-    max_check = max(1, int(count * 0.2))
+def _complexity(q: Question) -> int:
+    stem = q.stem
+    score = len(stem)
+    if any(x in stem for x in ("㉠", "빈칸", "( )", "ㄱ", "ㄴ", "조합", "복수")):
+        score += 80
+    if any(x in stem for x in ("설명으로", "비교", "차이", "절차", "순서", "적용")):
+        score += 30
+    return score
+
+
+def _sort_key(q: Question, harder: bool) -> tuple:
+    if harder:
+        type_rank = {"multi": 4, "exam": 3, "other": 2, "check": 0}.get(q.stype, 1)
+        return (-type_rank, -_complexity(q), q.part, q.chapter, q.qn)
+    return (-q.pri, q.chapter, q.qn)
+
+
+def select(
+    pool: list[Question], count: int, used_stems: set[str], *, harder: bool = False
+) -> list[Question]:
+    max_check = 0 if harder else max(1, int(count * 0.2))
     elig = [q for q in pool if q.ans and q.stem not in used_stems]
     by_part: dict[int, list[Question]] = defaultdict(list)
     for q in elig:
         by_part[q.part].append(q)
     for p in by_part:
-        by_part[p].sort(key=lambda x: (-x.pri, x.chapter, x.qn))
+        by_part[p].sort(key=lambda x: _sort_key(x, harder))
     selected: list[Question] = []
     check_n = 0
     idx = {p: 0 for p in by_part}
@@ -282,6 +301,8 @@ def collect_prior_stems(mock_root: Path, exclude_round: int) -> set[str]:
 def build_round(
     round_num: int,
     mock_root: Path | None = None,
+    *,
+    harder: bool = False,
 ) -> tuple[dict[str, list[Question]], dict[str, dict]]:
     mock_root = mock_root or ROOT / "output/mock_exam"
     used_stems = collect_prior_stems(mock_root, round_num)
@@ -304,7 +325,7 @@ def build_round(
         pool: list[Question] = []
         for cf in sorted(clean_dir.glob("part*.md")):
             pool.extend(parse_questions_from_clean(cf, all_answers))
-        sel = select(pool, cnt, used_stems)
+        sel = select(pool, cnt, used_stems, harder=harder)
         if len(sel) < cnt:
             raise RuntimeError(
                 f"{sn}과목: {len(sel)}/{cnt}문항만 선별됨 (풀 {len(pool)}, "
@@ -320,7 +341,13 @@ def build_round(
     return selected, stats
 
 
-def write_round(round_num: int, selected: dict[str, list[Question]], mock_root: Path | None = None) -> Path:
+def write_round(
+    round_num: int,
+    selected: dict[str, list[Question]],
+    mock_root: Path | None = None,
+    *,
+    harder: bool = False,
+) -> Path:
     mock_root = mock_root or ROOT / "output/mock_exam"
     out = mock_root / f"{round_num}회차"
     out.mkdir(parents=True, exist_ok=True)
@@ -333,7 +360,12 @@ def write_round(round_num: int, selected: dict[str, list[Question]], mock_root: 
         "",
         "> 출제 기준: docs/시험_안내.md, docs/문제집_프롬프트/시험모의_선별.md",
         "",
-        f"> 선별 기준: OX 제외, 단원별 출제예상문제 중심, {round_num - 1}회차 이전 미출제 지문 우선",
+        (
+            f"> 선별 기준: OX 제외, ㉠㉡·빈칸·복수선택 우선, "
+            f"{round_num - 1}회차 이전 미출제 지문"
+            if harder
+            else f"> 선별 기준: OX 제외, 단원별 출제예상문제 중심, {round_num - 1}회차 이전 미출제 지문 우선"
+        ),
         "",
     ]
     ans = [
@@ -371,9 +403,14 @@ def main() -> None:
         default=ROOT / "output/mock_exam",
         help="Mock exam root directory (default: output/mock_exam)",
     )
+    parser.add_argument(
+        "--harder",
+        action="store_true",
+        help="Raise difficulty: prefer ㉠㉡·빈칸형, exclude Check Q&A",
+    )
     args = parser.parse_args()
-    selected, stats = build_round(args.round, mock_root=args.mock_root)
-    out = write_round(args.round, selected, mock_root=args.mock_root)
+    selected, stats = build_round(args.round, mock_root=args.mock_root, harder=args.harder)
+    out = write_round(args.round, selected, mock_root=args.mock_root, harder=args.harder)
     for sn, st in stats.items():
         print(
             f"{sn}과목: pool={st['pool']} parts={st['parts']} types={st['types']}"
