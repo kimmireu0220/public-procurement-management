@@ -365,9 +365,15 @@ def write_round(round_num: int, selected: dict[str, list[Question]], mock_root: 
 def main() -> None:
     parser = argparse.ArgumentParser(description="Select mock exam from problem bank")
     parser.add_argument("round", type=int, help="Mock round number (e.g. 2)")
+    parser.add_argument(
+        "--mock-root",
+        type=Path,
+        default=ROOT / "output/mock_exam",
+        help="Mock exam root directory (default: output/mock_exam)",
+    )
     args = parser.parse_args()
-    selected, stats = build_round(args.round)
-    out = write_round(args.round, selected)
+    selected, stats = build_round(args.round, mock_root=args.mock_root)
+    out = write_round(args.round, selected, mock_root=args.mock_root)
     for sn, st in stats.items():
         print(
             f"{sn}과목: pool={st['pool']} parts={st['parts']} types={st['types']}"
