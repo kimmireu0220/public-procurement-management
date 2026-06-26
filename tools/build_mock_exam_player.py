@@ -523,6 +523,13 @@ function selectChoice(label) {{
   }});
 }}
 
+function selectChoiceAndAdvance(label) {{
+  const q = QUESTIONS[index];
+  answers[q.num] = label;
+  saveState();
+  goNext();
+}}
+
 function moveChoice(delta) {{
   const q = QUESTIONS[index];
   const labels = q.choices.map(c => c.label);
@@ -548,7 +555,7 @@ function render() {{
     <div class="choices">${{choicesHtml}}</div>`;
 
   card.querySelectorAll(".choice").forEach(btn => {{
-    btn.addEventListener("click", () => selectChoice(btn.dataset.label));
+    btn.addEventListener("click", () => selectChoiceAndAdvance(btn.dataset.label));
   }});
 
   const total = QUESTIONS.length;
@@ -721,7 +728,7 @@ document.addEventListener("keydown", (e) => {{
     const q = QUESTIONS[index];
     if (q.choices.some(c => c.label === numLabel)) {{
       e.preventDefault();
-      selectChoice(numLabel);
+      selectChoiceAndAdvance(numLabel);
     }}
     return;
   }}
