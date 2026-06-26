@@ -33,6 +33,7 @@ SECTION_RE = re.compile(r"^#{2,3}\s+(?:\[)?CHAPTER?\s+(\d+)\s+(.+)$", re.I)
 PART_HEAD = re.compile(r"^## Part (\d+)", re.M)
 ANSWER_HEAD = re.compile(r"^## Part \d+ 정답", re.M)
 CHOICE_LINE = re.compile(r"^\s*[①②③④⑤]")
+CHOICE_FULL = re.compile(r"^\s*([①②③④⑤])\s*(.+)$")
 
 TOPIC_MAX: dict[str, int] = {
     "pareto": 1,
@@ -623,10 +624,18 @@ def format_question(num: int, q: Question) -> str:
     return "\n".join(out)
 
 
+def correct_choice_text(q: Question) -> str:
+    for ln in q.lines:
+        m = CHOICE_FULL.match(ln)
+        if m and m.group(1) == q.ans:
+            return m.group(2).strip()
+    return ""
+
+
 def keyword_line(q: Question) -> str:
     if q.kw:
         return q.kw.strip()
-    return q.stem.strip()
+    return correct_choice_text(q)
 
 
 def coverage_report(selected: dict[str, list[Question]]) -> str:
