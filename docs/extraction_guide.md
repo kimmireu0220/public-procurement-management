@@ -126,6 +126,17 @@
 - OCR이 애매하면 원본 이미지 기준 보정
 - 각 문항 묶음 맨 아래: `<!-- source: Part N/page_XXXX.jpg -->`
 
+### 정답·kw 형식 (`agent_extract` 정답 섹션)
+
+- 헤더: `## Part 〈N〉 정답 및 해설` (`#` 1개도 허용하나 `##` 권장)
+- 소단원: `## CHAPTER 01 … — Check Q&A` / `단원별 출제예상문제` / `최종점검 OX 퀴즈`
+  - 중첩: `### Chapter 01` + `#### Check Q&A` (3과목 Part 4 등)
+  - 대괄호: `### [Chapter 01] 단원별 출제예상문제` (2과목 Part 3 등)
+- **각 줄:** `번호. ① — 해설 한 줄` (근거·핵심 개념)
+- **금지:** `21. ④  22. ③ …` compact 다중 정답 줄 · `— 정답 키 기준.` placeholder
+- OX: `번호. O — 판단 근거` (또는 지문 요약)
+- 보강·검증: [`문제집_프롬프트/정답_kw_보강.md`](문제집_프롬프트/정답_kw_보강.md) · `tools/enrich_answer_kw.py` · `tools/audit_kw_coverage.py`
+
 ## 산출 경로
 
 | 단계 | 경로 | 비고 |

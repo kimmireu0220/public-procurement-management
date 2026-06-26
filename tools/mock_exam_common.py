@@ -28,12 +28,19 @@ SUBJECT_NAMES = {
 SOURCE_RE = re.compile(r"<!--\s*source:\s*(.+?)\s*-->")
 ID_RE = re.compile(r"<!--\s*id:\s*([^\s>]+)\s*-->")
 QUESTION_START = re.compile(r"^(\d+)\.\s+(.+)")
-ANSWER_SECTION_RE = re.compile(r"^#{2,3}\s+(?:\[)?CHAPTER?\s+(\d+)", re.I)
-SECTION_RE = re.compile(r"^#{2,3}\s+(?:\[)?CHAPTER?\s+(\d+)\s+(.+)$", re.I)
-PART_HEAD = re.compile(r"^## Part (\d+)", re.M)
-ANSWER_HEAD = re.compile(r"^## Part \d+ 정답", re.M)
+ANSWER_SECTION_RE = re.compile(r"^#{2,4}\s+(?:\[)?CHAPTER?\s+(\d+)", re.I)
+SECTION_RE = re.compile(r"^#{2,4}\s+(?:\[)?CHAPTER?\s+(\d+)\s+(.+)$", re.I)
+PART_HEAD = re.compile(r"^#{1,2}\s+Part (\d+)", re.M)
+ANSWER_HEAD = re.compile(r"^#{1,2}\s+Part \d+ 정답", re.M)
 CHOICE_LINE = re.compile(r"^\s*[①②③④⑤]")
 CHOICE_FULL = re.compile(r"^\s*([①②③④⑤])\s*(.+)$")
+CHAPTER_NUM_RE = re.compile(r"(?:\[)?CHAPTER?\s+(\d+)", re.I)
+HEADER_LINE_RE = re.compile(r"^#{2,4}\s+")
+FULL_ANSWER_LINE_RE = re.compile(
+    r"^(\d+)\.\s+([①②③④⑤]|O|X)\s+—\s*(.+)$"
+)
+COMPACT_ANSWER_TOKEN_RE = re.compile(r"(\d+)\.\s+([①②③④⑤]|O|X)\b")
+PLACEHOLDER_KW = "정답 키 기준."
 
 TOPIC_MAX: dict[str, int] = {
     "pareto": 1,
@@ -154,6 +161,34 @@ def parse_stable_id(sid: str) -> tuple[str, int, int, str, int]:
     return parts[0], int(parts[1]), int(parts[2]), parts[3], int(parts[4])
 
 
+def parse_section_header(line: str) -> tuple[int, str] | None:
+    """`## CHAPTER 01 …` / `### [Chapter 01] …` 등에서 (chapter, title) 추출."""
+    stripped = line.strip()
+    if not HEADER_LINE_RE.match(stripped):
+        return None
+    cm = CHAPTER_NUM_RE.search(stripped)
+    if not cm:
+        return None
+    chapter = int(cm.group(1))
+    title = CHAPTER_NUM_RE.sub("", stripped)
+    title = HEADER_LINE_RE.sub("", title).strip("[] ").strip()
+    title = re.sub(r"^[-–—]\s*", "", title).strip()
+    return chapter, title
+
+
+def stype_from_section_title(title: str) -> str:
+    stype, _ = classify_section(title)
+    if stype != "other":
+        return stype
+    if "단원별" in title:
+        return "exam"
+    if "Check" in title or "Q&A" in title or "O&A" in title:
+        return "check"
+    if "OX" in title.upper() or "O/X" in title:
+        return "ox"
+    return "other"
+
+
 def parse_answers_from_extract(text: str, part_num: int) -> dict[tuple[int, int, str, int], tuple[str, str]]:
     acut = ANSWER_HEAD.search(text)
     if not acut:
@@ -161,23 +196,48 @@ def parse_answers_from_extract(text: str, part_num: int) -> dict[tuple[int, int,
     out: dict[tuple[int, int, str, int], tuple[str, str]] = {}
     chapter = 0
     stype = ""
-    for line in text[acut.start() :].splitlines():
-        sm = ANSWER_SECTION_RE.match(line.strip())
-        if sm:
-            chapter = int(sm.group(1))
-            stype, _ = classify_section(line)
+    for raw in text[acut.start() :].splitlines():
+        line = raw.strip()
+        if not line or ANSWER_HEAD.match(line):
             continue
-        if not chapter or stype == "ox":
+        header = parse_section_header(raw)
+        if header:
+            chapter, title = header
+            new_stype = stype_from_section_title(title)
+            if new_stype != "other":
+                stype = new_stype
             continue
-        m = re.match(r"^(\d+)\.\s+([①②③④])\s*(?:—\s*(.+))?$", line.strip())
-        if m:
-            out[(part_num, chapter, stype, int(m.group(1)))] = (
-                m.group(2),
-                (m.group(3) or "").strip(),
+        if HEADER_LINE_RE.match(line) and not CHAPTER_NUM_RE.search(line):
+            title = HEADER_LINE_RE.sub("", line).strip()
+            if title and not re.match(r"Part\s+\d+", title, re.I):
+                new_stype = stype_from_section_title(title)
+                if new_stype != "other":
+                    stype = new_stype
+            continue
+        if not chapter:
+            continue
+        if stype == "ox":
+            fm = FULL_ANSWER_LINE_RE.match(line)
+            if fm:
+                out[(part_num, chapter, stype, int(fm.group(1)))] = (
+                    fm.group(2),
+                    fm.group(3).strip(),
+                )
+            else:
+                for im in COMPACT_ANSWER_TOKEN_RE.finditer(line):
+                    out[(part_num, chapter, stype, int(im.group(1)))] = (im.group(2), "")
+            continue
+        fm = FULL_ANSWER_LINE_RE.match(line)
+        if fm:
+            out[(part_num, chapter, stype, int(fm.group(1)))] = (
+                fm.group(2),
+                fm.group(3).strip(),
             )
             continue
-        for im in re.finditer(r"(\d+)\.\s+([①②③④])", line):
-            out[(part_num, chapter, stype, int(im.group(1)))] = (im.group(2), "")
+        tokens = COMPACT_ANSWER_TOKEN_RE.findall(line)
+        if len(tokens) >= 2:
+            for num_s, ans in tokens:
+                out[(part_num, chapter, stype, int(num_s))] = (ans, "")
     return out
 
 
@@ -231,11 +291,24 @@ def parse_questions_from_clean(
 
     while i < len(lines):
         line = lines[i]
-        sm = SECTION_RE.match(line)
+        sm = parse_section_header(line)
         if sm:
             flush_batch(trailing_source=trailing_source_before(i))
-            chapter = int(sm.group(1))
-            stype, pri = classify_section(sm.group(2))
+            chapter, title = sm
+            new_stype = stype_from_section_title(title)
+            if new_stype != "other":
+                stype = new_stype
+            _, pri = classify_section(title)
+            i += 1
+            continue
+        if HEADER_LINE_RE.match(line) and not CHAPTER_NUM_RE.search(line):
+            title = HEADER_LINE_RE.sub("", line.strip()).strip()
+            if title and not re.match(r"Part\s+\d+", title, re.I):
+                flush_batch(trailing_source=trailing_source_before(i))
+                new_stype = stype_from_section_title(title)
+                if new_stype != "other":
+                    stype = new_stype
+                    _, pri = classify_section(title)
             i += 1
             continue
         if SOURCE_RE.search(line) and not QUESTION_START.match(line):
@@ -255,6 +328,8 @@ def parse_questions_from_clean(
             source = ""
             while i < len(lines):
                 if SECTION_RE.match(lines[i]) or QUESTION_START.match(lines[i]):
+                    break
+                if parse_section_header(lines[i]):
                     break
                 if SOURCE_RE.search(lines[i]):
                     source = SOURCE_RE.search(lines[i]).group(1).strip()
