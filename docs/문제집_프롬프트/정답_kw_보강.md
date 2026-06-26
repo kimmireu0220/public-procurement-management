@@ -17,6 +17,8 @@ python3 tools/audit_kw_coverage.py
 | `정답 키 기준.` placeholder | 0 |
 | kw == 지문 | 0 |
 
+**2차(품질):** 선지 복사·짧은 kw → 교재 해설 승격 — [`정답_kw_품질_2차.md`](정답_kw_품질_2차.md)
+
 ## 자동 보강 (권장)
 
 ```bash

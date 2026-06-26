@@ -16,7 +16,8 @@
 | `annotate_source_ranges.py` | 출처 주석에 `(문항 N~M)` 범위 보강 (1과목 Part 6) | `agent_extract` 수정 |
 | `fix_choice_lines.py` | 문항 줄의 `①②③④`를 각각 한 줄로 분리 | `agent_extract` 수정 |
 | `enrich_answer_kw.py` | compact 정답표 전개·`정답 키 기준.` placeholder 교체 | `agent_extract` 정답 섹션 |
-| `audit_kw_coverage.py` | 문제 풀 kw·모의 출제 커버리지 리포트 | `output/kw_커버리지.md` |
+| `enrich_kw_quality.py` | 2차: `kw==선지` → 해설형 문장 교체 | `agent_extract` 정답 섹션 |
+| `audit_kw_coverage.py` | kw 커버리지·`--quality` 품질 리포트 | stdout 또는 `output/kw_*.md` |
 | `run_ocr_pages.sh` | 박문각 수험서 JPG 일괄 OCR (macOS Vision) | `output/ocr/` |
 
 ## 모의고사 (필기 80문항)
