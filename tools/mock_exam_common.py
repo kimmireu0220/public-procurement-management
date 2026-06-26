@@ -625,9 +625,8 @@ def format_question(num: int, q: Question) -> str:
 
 def keyword_line(q: Question) -> str:
     if q.kw:
-        t = q.kw.strip()
-        return t[:50] + ("…" if len(t) > 50 else "")
-    return q.stem[:35] + ("…" if len(q.stem) > 35 else "")
+        return q.kw.strip()
+    return q.stem.strip()
 
 
 def coverage_report(selected: dict[str, list[Question]]) -> str:
