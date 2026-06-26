@@ -137,9 +137,57 @@ def build_explain(q) -> str:
 
 
 MECHANICAL_MARK = "혼동한 함정이다"
+MECHANICAL_PATTERNS = (
+    "을(를) 핵심으로",
+    "혼동한 오답이다",
+    "은(는) 개념·요건을 혼동",
+    "은(는) 법령상 효과나 적용 주체",
+    "은(는) 절차·요건을 뒤바꾼",
+)
 
 
-def needs_replace(kw: str) -> bool:
+def is_mechanical_kw(kw: str) -> bool:
+    return any(p in kw for p in MECHANICAL_PATTERNS) or TEMPLATE_MARK in kw
+
+
+def build_explain_clean(q) -> str:
+    """기계적 패턴 없이 교재형 해설."""
+    sid = q.stable_id()
+    db = load_kw_db()
+    if sid in MANUAL_KW:
+        return MANUAL_KW[sid]
+    if sid in db:
+        return db[sid]
+
+    stem = re.sub(r"^\d+\.\s+", "", q.stem.split("\n")[0]).strip().rstrip("?")
+    choices = choice_map(q)
+    correct = choices.get(q.ans) or correct_choice_text(q) or ""
+    core = explain_key(correct, 58)
+    trap = first_wrong_label(choices, q.ans)
+
+    if NEGATIVE_STEM.search(stem):
+        if trap:
+            return (
+                f"「{stem[:45]}…」에서 정답 {q.ans}는 보기와 거리가 있다. "
+                f"{trap[0]}의 '{explain_key(trap[1], 28)}' 등은 관련 개념에 해당한다."
+            )
+        return f"「{stem[:50]}」에서 정답 {q.ans}는 틀리거나 해당 주제와 맞지 않는 설명이다."
+
+    if SEQUENCE_STEM.search(stem):
+        return f"「{stem[:45]}…」의 올바른 절차·순서로, {q.ans}({core})가 교재상 흐름과 일치한다."
+
+    if trap:
+        trap_core = explain_key(trap[1], 26)
+        return (
+            f"{core}이(가) 정답이다. "
+            f"{trap[0]}의 '{trap_core}' 등은 요건·효과·주체를 혼동한 오답이다."
+        )
+    return f"{core}이(가) 법령·교재상 옳은 설명이다."
+
+
+def needs_replace(kw: str, *, mechanical: bool = False) -> bool:
+    if mechanical:
+        return is_mechanical_kw(kw)
     return TEMPLATE_MARK in kw or MECHANICAL_MARK in kw
 
 
@@ -151,7 +199,7 @@ def pool_by_key() -> dict[tuple, object]:
     return by_key
 
 
-def replace_in_file(path: Path, subject_no: str, *, dry_run: bool) -> int:
+def replace_in_file(path: Path, subject_no: str, *, dry_run: bool, mechanical: bool = False) -> int:
     text = path.read_text(encoding="utf-8")
     pm = PART_HEAD.search(text)
     part = int(pm.group(1)) if pm else 0
@@ -191,11 +239,11 @@ def replace_in_file(path: Path, subject_no: str, *, dry_run: bool) -> int:
             continue
 
         fm = FULL_ANSWER_LINE_RE.match(stripped)
-        if fm and chapter and stype and needs_replace(fm.group(3)):
+        if fm and chapter and stype and needs_replace(fm.group(3), mechanical=mechanical):
             n, ans = int(fm.group(1)), fm.group(2)
             q = by_key.get((subject_no, part, chapter, stype, n))
             if q:
-                new_kw = build_explain(q)
+                new_kw = build_explain_clean(q) if mechanical else build_explain(q)
                 ct = correct_choice_text(q)
                 if new_kw and new_kw != fm.group(3).strip() and new_kw != ct:
                     indent = line[: len(line) - len(line.lstrip())]
@@ -241,6 +289,11 @@ def main() -> None:
     parser.add_argument("--file", type=Path, help="단일 part*.md")
     parser.add_argument("--dry-run", action="store_true")
     parser.add_argument(
+        "--mechanical",
+        action="store_true",
+        help="을(를) 핵심으로 등 기계적 해설만 교체",
+    )
+    parser.add_argument(
         "--export-template",
         type=Path,
         nargs="?",
@@ -264,7 +317,7 @@ def main() -> None:
                     break
         if not sn:
             raise SystemExit("--file 사용 시 --subject 필요")
-        n = replace_in_file(args.file, sn, dry_run=args.dry_run)
+        n = replace_in_file(args.file, sn, dry_run=args.dry_run, mechanical=args.mechanical)
         print(f"{'[dry] ' if args.dry_run else ''}{args.file.name}: {n} lines")
         total = n
     else:
@@ -272,7 +325,7 @@ def main() -> None:
         for sn in subjects:
             slug = str(SUBJECT_CATALOG[sn]["slug"])
             for path in sorted((EXTRACT / slug).glob("part*.md")):
-                n = replace_in_file(path, sn, dry_run=args.dry_run)
+                n = replace_in_file(path, sn, dry_run=args.dry_run, mechanical=args.mechanical)
                 if n:
                     print(f"{'[dry] ' if args.dry_run else ''}{path.name}: {n} lines")
                 total += n
