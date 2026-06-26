@@ -15,14 +15,15 @@ from config import (  # noqa: E402
     subject_extract_dir,
     subject_problem_book_dir,
 )
+from quality_common import (  # noqa: E402
+    count_answer_traces,
+    is_known_ocr_false_positive,
+    ocr_page_is_problem_candidate,
+)
 
-PROBLEM_MARKER_RE = re.compile(r"Check|Q&A|O&A|출제예상|최종점검|OX 퀴즈|0X 퀴즈")
 SOURCE_COMMENT_RE = re.compile(r"<!--\s*source:\s*(.*?)\s*-->")
 SOURCE_TOKEN_RE = re.compile(r"(Part [0-9]+/)?page_(\d{4})\.jpg")
 ANSWER_RE = re.compile(r"^#{1,4}\s+.*정답|정답 및 해설|^\s*정답\b|^\s*해설\b", re.MULTILINE)
-ANSWER_TRACE_RE = re.compile(
-    r"본문 정답표|정답표|정답은|답은|해설상|[①②③④⑤⑥⑦⑧⑨⑩]\s*[-—–]|[OX]\s*[-—–]"
-)
 MANUAL_SECTION_RE = re.compile(
     r"(^## .+수동 분류[^\n]*\n(?:.*\n)*?)(?=^## |\Z)",
     re.MULTILINE,
@@ -94,6 +95,7 @@ def audit_subject(subject_no: str) -> Path:
         "",
         f"- 과목: {subject_no}과목 ({meta['exam_name']})",
         "OCR에서 문제 표식이 감지된 페이지와 최종 문제집의 출처 주석을 Part 기준으로 대조한 결과입니다.",
+        "OCR 후보는 `quality_common.ocr_page_is_problem_candidate()`로 필터링합니다 (해설·표·이론 인라인 Check·학습 안내 제외).",
         "",
         "| Part | OCR 후보 페이지 | 최종 사용 페이지 | 후보 중 미사용 | 최종 문제 수 |",
         "|---|---:|---:|---:|---:|",
@@ -112,11 +114,15 @@ def audit_subject(subject_no: str) -> Path:
             if part_dir.is_dir():
                 for page in sorted(part_dir.glob("*.txt")):
                     text = page.read_text(encoding="utf-8", errors="ignore")
-                    if PROBLEM_MARKER_RE.search(text):
+                    if ocr_page_is_problem_candidate(text):
                         candidates.append(f"Part {part_no}/{page.stem}.jpg")
 
         used = sorted(source for source in used_sources if source.startswith(f"Part {part_no}/"))
-        missing = [source for source in candidates if source not in used_sources]
+        missing = [
+            source
+            for source in candidates
+            if source not in used_sources and not is_known_ocr_false_positive(slug, source)
+        ]
         total_missing.extend(missing)
 
         part_clean = parts_clean_dir / f"part{part_no}.md"
@@ -147,14 +153,14 @@ def audit_subject(subject_no: str) -> Path:
         lines.append("")
 
     answer_markers = ANSWER_RE.findall(final_text)
-    answer_traces = ANSWER_TRACE_RE.findall(final_text)
+    answer_traces = count_answer_traces(final_text)
 
     lines.extend(
         [
             "",
             "## 잔류 답안 표식 검사",
             f"- 정답/해설 제목형 표식: {len(answer_markers)}건",
-            f"- 인라인 답안 흔적 의심 표식: {len(answer_traces)}건",
+            f"- 인라인 답안 흔적 의심 표식: {answer_traces}건",
             f"- 총 문제 수: {total_questions}",
         ]
     )

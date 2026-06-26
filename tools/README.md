@@ -11,10 +11,41 @@
 | `build_problem_book.py` | Part 단위 추출본에서 정답 제거·합본 MD/HTML 생성 | `problem_book_final/{slug}/` |
 | `validate_extract.py` | 문항=정답 검증 (**공식 문항 수**) | `추출_검증.md` |
 | `audit_problem_book.py` | OCR 표식 vs 출처 주석 대조 | `누락_후보_대조.md` |
+| `quality_common.py` | 답안 흔적·OCR 후보 공통 필터 (validate/audit 공유) | — |
 | `enrich_source_comments.py` | 블록 `<!-- source: -->` → 문항별 전파 | `agent_extract` 수정 (2과목 등) |
 | `annotate_source_ranges.py` | 출처 주석에 `(문항 N~M)` 범위 보강 (1과목 Part 6) | `agent_extract` 수정 |
 | `fix_choice_lines.py` | 문항 줄의 `①②③④`를 각각 한 줄로 분리 | `agent_extract` 수정 |
 | `run_ocr_pages.sh` | 박문각 수험서 JPG 일괄 OCR (macOS Vision) | `output/ocr/` |
+
+## 모의고사 (필기 80문항)
+
+**기본 경로 = 에이전트 출제.** 스크립트는 준비·검증·초안용.
+
+| 스크립트 | 용도 |
+|---|---|
+| `prepare_mock_round.py` | K회차 브리핑·`_candidates/` shortlist 생성 |
+| `merge_mock_draft.py` | `_draft/` → 최종 MD · `manifest.json` · **HTML + 브라우저 자동 열기** |
+| `validate_mock_exam.py` | 형식·중복·상한 검증 (**생성 없음**) |
+| `build_mock_exam_player.py` | `필기_응시.html` 생성 · **기본 브라우저 자동 열기** (`--no-open` 생략) |
+| `select_mock_exam.py` | 자동 초안만 (에이전트 검수 권장) |
+| `mock_exam_common.py` | 공통 모듈 (stable ID, `TOPIC_MAX`, 클러스터 상한) |
+
+```bash
+# 1. 준비 (에이전트용 후보·브리핑)
+python3 tools/prepare_mock_round.py 1
+
+# 2. 에이전트: _candidates/ 에서 선별 → _draft/manifest.json 또는 {N}과목_선별.md
+#    (프롬프트: docs/문제집_프롬프트/시험모의_선별.md)
+
+# 3. 병합·검증·HTML
+python3 tools/merge_mock_draft.py 1
+python3 tools/validate_mock_exam.py 1
+
+# 급할 때 초안만 (HTML 자동 열기 포함)
+python3 tools/select_mock_exam.py 1 --importance
+```
+
+이전 회차 manifest 소급: `prepare_mock_round.py K --backfill-prior`
 
 ## 일반 실행 순서
 
@@ -50,11 +81,11 @@ slug의 공백은 OCR 폴더명에서 `_`로 치환한다 (`2과목_공공조달
 
 ## 환경 변수
 
-`.env` 또는 셸에서 설정. 기본값은 `tools/env.sh` 참고.
+OCR 등 셸 스크립트용. 기본값은 `tools/env.sh` 참고.
 
 | 변수 | 기본값 | 설명 |
 |---|---|---|
-| `PROJECT_ROOT` | 저장소 루트 | 절대 경로 (다른 기기 클론 시) |
+| `PROJECT_ROOT` | 저장소 루트 (자동) | `tools/env.sh` 기준 상위 디렉터리 |
 | `PARKMUNGak_SCAN_DIR` | `sources/민간_박문각_수험서_jpg` | 박문각 스캔 루트 (`TEXTBOOK_DIR` 구명 호환) |
 | `TEXTBOOK_IMAGES_DIR` | `…/1과목_공공조달의 이해` | OCR 대상 JPG 과목 폴더 |
 | `STANDARD_TEXTBOOK_DIR` | `sources/공식_조달청_표준교재_pdf` | 조달청 표준교재 PDF |
@@ -65,6 +96,5 @@ slug의 공백은 OCR 폴더명에서 `_`로 치환한다 (`2과목_공공조달
 ## 의존성
 
 - Python 3.9+
-- `python-dotenv` (선택, 없으면 `.env` 수동 파싱)
 - OCR: macOS, Swift (`ocr_pages.swift`)
 - 재추출 시: ImageMagick `convert` (크롭·확대, 선택)

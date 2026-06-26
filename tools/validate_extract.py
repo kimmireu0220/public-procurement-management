@@ -12,15 +12,13 @@ if str(TOOLS_DIR) not in sys.path:
     sys.path.insert(0, str(TOOLS_DIR))
 
 from config import SUBJECT_CATALOG, subject_extract_dir, subject_problem_book_dir  # noqa: E402
+from quality_common import count_answer_traces  # noqa: E402
 
 ANSWER_HEADING_RE = re.compile(r"^#{1,3}\s+.*정답", re.MULTILINE)
 QUESTION_RE = re.compile(r"^\s*\d+\.\s+\S", re.MULTILINE)
 ANSWER_LINE_RE = re.compile(r"^\s*\d+\.\s+", re.MULTILINE)
 ANSWER_NUM_RE = re.compile(r"(?:^|\s)(\d+)\.")
 SOURCE_COMMENT_RE = re.compile(r"<!--\s*source:")
-ANSWER_TRACE_RE = re.compile(
-    r"본문 정답표|정답표|정답은|답은|해설상|[①②③④⑤⑥⑦⑧⑨⑩]\s*[-—–]|\b[OX]\s*[-—–]"
-)
 BROKEN_CHAR_RE = re.compile(r"(?<=\s)[l@](?=\s)|\uff00")
 
 
@@ -87,7 +85,7 @@ def validate_part(path: Path) -> dict:
     q_body = len(QUESTION_RE.findall(body))
     q_answer = count_answers(answer) if answer else 0
     sources = len(SOURCE_COMMENT_RE.findall(body))
-    traces = len(ANSWER_TRACE_RE.findall(body))
+    traces = count_answer_traces(body)
     broken = len(BROKEN_CHAR_RE.findall(body))
     return {
         "file": path.name,

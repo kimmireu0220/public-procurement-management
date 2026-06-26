@@ -76,18 +76,20 @@
 
 ```bash
 python3 tools/validate_extract.py --subject all    # 문항·정답 일치
-python3 tools/audit_problem_book.py --subject all  # OCR·출처 대조
+python3 tools/audit_problem_book.py --subject all  # OCR·출처 대조 (오탐 필터 내장)
 python3 tools/build_problem_book.py --subject all  # 1~4 일괄 재빌드
 python3 tools/build_problem_book.py --subject 1    # 단일 과목 재빌드
-python3 tools/annotate_source_ranges.py --part6  # 1과목 Part 06 출처 범위 보강
+python3 tools/annotate_source_ranges.py --part6  # 1과목 Part 06 출처 범위 보강 (이미 반영 시 no-op)
 ```
 
-## 참고 (잔여·오탐)
+`audit_problem_book.py`·`validate_extract.py`는 `quality_common.py`로 OCR 후보·본문 답안 흔적 오탐을 줄인다 (해설·표·이론 인라인 Check·`응답은`·감점 선지 `① -10점` 등).
 
-- **1과목 Part 06:** 단원별·OX 구간 `(문항 N~M)` 범위 source — `annotate_source_ranges.py --part6` (페이지 범위는 인접 섹션 추정)
-- **3과목 Part 04:** OCR 미사용 4페이지 — 부록·표·해설 **오탐** (`누락_후보_대조.md` 분류표)
-- **2·4과목:** OCR 미사용 후보 다수 — 대부분 해설·표 **오탐** (`누락_후보_대조.md`)
-- **2·3과목 일부 Part:** `본문 답안 흔적` 표식은 감점 보기(`① -10점`) 등 **검증 오탐**
+## 참고 (품질 검증)
+
+- **1과목 Part 06:** 단원별·OX 구간 `(문항 N~M)` 범위 source — `annotate_source_ranges.py --part6` (**2026-06 반영 완료**)
+- **OCR 누락 후보:** `audit_problem_book.py` + `quality_common.py` 필터로 해설·표·이론 인라인 Check 오탐 제거 (**전 과목 후보 중 미사용 0**)
+- **본문 답안 흔적:** `응답은`·감점 선지(`① -10점`) 등 검증 오탐 — `quality_common.count_answer_traces()`에서 제외 (**전 과목 0건**)
+- **3과목 Part 04 수동 분류:** `누락_후보_대조.md` 표 + `OCR_KNOWN_FALSE_POSITIVES` 자동 제외
 
 ## 제거된 산출물
 
