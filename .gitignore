@@ -3,3 +3,5 @@
 __pycache__/
 *.pyc
 .env
+output/kw_*.json
+output/kw_*.md

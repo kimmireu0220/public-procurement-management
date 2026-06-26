@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
-"""2차 kw 품질 보강 — 선지 복사 kw를 해설형 문장으로 교체."""
+"""2차 kw 품질 보강 — 선지 복사 kw를 해설형 문장으로 교체.
+
+주의: 3차 보강(템플릿→실해설) 완료 후 일괄 재실행 금지.
+      craft_kw()는 선지 복사 kw만 대상으로 하며, 실해설·템플릿 줄은 건너뜀.
+"""
 
 from __future__ import annotations
 
@@ -27,6 +31,26 @@ from mock_exam_common import (  # noqa: E402
     parse_section_header,
     stype_from_section_title,
 )
+
+# Q1 + 수동 검수 우선 (stable_id → 해설)
+TEMPLATE_MARK = "오답 선지는 요건·효과·주체를 혼동하거나 반대로 서술했다."
+KW_DB_PATH = TOOLS_DIR / "kw_db.json"
+
+
+def load_kw_db() -> dict[str, str]:
+    if KW_DB_PATH.is_file():
+        return json.loads(KW_DB_PATH.read_text(encoding="utf-8"))
+    return {}
+
+
+def is_real_kw(kw: str, choice: str) -> bool:
+    """선지 복사·템플릿이 아닌 실해설이면 True."""
+    if not kw or (choice and kw == choice):
+        return False
+    if TEMPLATE_MARK in kw:
+        return False
+    return len(kw) >= 12
+
 
 # Q1 + 수동 검수 우선 (stable_id → 해설)
 MANUAL_KW: dict[str, str] = {
@@ -92,13 +116,17 @@ def pool_maps() -> tuple[dict[str, object], dict[tuple, object]]:
 def kw_for_question(q, by_id: dict) -> str | None:
     choice = correct_choice_text(q)
     kw = (q.kw or "").strip()
-    if not choice or kw != choice:
-        if q.stable_id() in MANUAL_KW and kw == choice:
-            return MANUAL_KW[q.stable_id()]
-        return None
     sid = q.stable_id()
+    db = load_kw_db()
+
+    if is_real_kw(kw, choice or ""):
+        return None
     if sid in MANUAL_KW:
         return MANUAL_KW[sid]
+    if sid in db:
+        return db[sid]
+    if not choice or kw != choice:
+        return None
     return craft_kw(q)
 
 
@@ -159,6 +187,12 @@ def enrich_extract_file(path: Path, subject_no: str, *, dry_run: bool) -> int:
     return changed
 
 
+def export_template_targets(out: Path) -> None:
+    from replace_template_kw import export_template_targets as _export
+
+    _export(out)
+
+
 def export_targets(out: Path) -> None:
     by_id, _ = pool_maps()
     choice_only: list[dict] = []
@@ -215,7 +249,19 @@ def main() -> None:
         nargs="?",
         const=ROOT / "output/kw_품질_대상.json",
     )
+    parser.add_argument(
+        "--export-template",
+        type=Path,
+        help="템플릿 대상 JSON (기본: output/kw_템플릿_대상.json)",
+        nargs="?",
+        const=ROOT / "output/kw_템플릿_대상.json",
+    )
     args = parser.parse_args()
+
+    if args.export_template is not None:
+        export_template_targets(args.export_template)
+        print(f"Wrote {args.export_template}")
+        return
 
     if args.export_targets is not None:
         export_targets(args.export_targets)

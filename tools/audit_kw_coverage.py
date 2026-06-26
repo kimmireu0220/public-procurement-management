@@ -23,14 +23,18 @@ from mock_exam_common import (  # noqa: E402
     MOCK_ROOT_DEFAULT,
 )
 
+TEMPLATE_MARK = "오답 선지는 요건·효과·주체를 혼동하거나 반대로 서술했다."
+
 
 def collect_stats(mock_root: Path) -> dict:
     pools = load_all_pools()
     total = sum(len(p) for p in pools.values())
-    no_kw = no_ans = placeholder = stem_dup = short_kw = choice_only = 0
+    no_kw = no_ans = placeholder = stem_dup = short_kw = choice_only = template_kw = 0
     choice_items: list[str] = []
     short_items: list[str] = []
+    template_items: list[str] = []
     mock_choice: list[str] = []
+    mock_template: list[str] = []
 
     for sn, pool in pools.items():
         for qid, q in pool.items():
@@ -47,6 +51,9 @@ def collect_stats(mock_root: Path) -> dict:
             elif ct and kw == ct:
                 choice_only += 1
                 choice_items.append(qid)
+            elif TEMPLATE_MARK in kw:
+                template_kw += 1
+                template_items.append(qid)
             elif len(kw) < 12 and q.stype != "ox":
                 short_kw += 1
                 short_items.append(f"{qid}: {kw!r}")
@@ -57,12 +64,15 @@ def collect_stats(mock_root: Path) -> dict:
             continue
         for item in m.get("items", []):
             q = pools[item["subject"]][item["id"]]
-            if not (q.kw or "").strip():
+            kw = (q.kw or "").strip()
+            if not kw:
                 mock_choice.append(f"{d.name} #{item['exam_num']} kw없음")
             else:
                 ct = correct_choice_text(q)
-                if ct and (q.kw or "").strip() == ct:
+                if ct and kw == ct:
                     mock_choice.append(f"{d.name} #{item['exam_num']} {item['id']}")
+                elif TEMPLATE_MARK in kw:
+                    mock_template.append(f"{d.name} #{item['exam_num']} {item['id']}")
 
     return {
         "total": total,
@@ -72,9 +82,12 @@ def collect_stats(mock_root: Path) -> dict:
         "stem_dup": stem_dup,
         "short_kw": short_kw,
         "choice_only": choice_only,
+        "template_kw": template_kw,
         "choice_items": choice_items,
+        "template_items": template_items,
         "short_items": short_items,
         "mock_issues": mock_choice,
+        "mock_template": mock_template,
         "pools": pools,
     }
 
@@ -94,8 +107,10 @@ def audit_basic(stats: dict) -> str:
         f"| placeholder | {stats['placeholder']} |",
         f"| kw==지문 | {stats['stem_dup']} |",
         f"| kw==정답선지 | {stats['choice_only']} |",
+        f"| craft_kw 템플릿 | {stats['template_kw']} |",
         f"| kw 12자 미만 (OX 제외) | {stats['short_kw']} |",
         f"| 모의 kw 이슈 | {len(stats['mock_issues'])} |",
+        f"| 모의 템플릿 | {len(stats['mock_template'])} |",
         "",
         "## 과목별 kw 없음",
         "",
@@ -115,10 +130,16 @@ def audit_quality(stats: dict) -> str:
         f"| 항목 | 문항 수 |",
         f"|------|--------:|",
         f"| kw==정답선지 | {stats['choice_only']} |",
+        f"| craft_kw 템플릿 | {stats['template_kw']} |",
         f"| kw 12자 미만 | {stats['short_kw']} |",
         f"| 모의 이슈 | {len(stats['mock_issues'])} |",
+        f"| 모의 템플릿 | {len(stats['mock_template'])} |",
         "",
     ]
+    if stats["template_items"][:30]:
+        lines += ["## 템플릿 kw 샘플 (30)", ""]
+        for qid in stats["template_items"][:30]:
+            lines.append(f"- `{qid}`")
     if stats["mock_issues"]:
         lines += ["## 모의 출제 (kw==선지 또는 없음)", ""]
         for row in stats["mock_issues"]:

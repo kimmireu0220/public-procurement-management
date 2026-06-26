@@ -209,6 +209,8 @@ python3 tools/build_mock_exam_player.py --round 1 --no-open
 3. ~~**Q2~Q5:** Part별 337건~~ ✅ (2026-06-27 `enrich_kw_quality.py` 일괄)
 4. **Q6:** 모의 HTML·정답지 재생성 후 `audit_kw_coverage.py --quality`로 DoD 확인
 
+**3차(템플릿→교재 해설):** [`정답_kw_품질_3차.md`](정답_kw_품질_3차.md) — 잔여 **328건**
+
 ```bash
 python3 tools/enrich_kw_quality.py          # 선지복사 kw 교체
 python3 tools/audit_kw_coverage.py --quality
