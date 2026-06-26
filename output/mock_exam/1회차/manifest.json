@@ -1,0 +1,812 @@
+{
+  "round": 1,
+  "method": "agent",
+  "counts": {
+    "1": 30,
+    "2": 20,
+    "3": 30
+  },
+  "total": 80,
+  "items": [
+    {
+      "exam_num": 1,
+      "subject": "1",
+      "id": "1:1:1:check:3",
+      "part": 1,
+      "chapter": 1,
+      "stype": "check",
+      "source": "Part 1/page_0004.jpg",
+      "stem_preview": "공공조달이 역사적으로 가장 먼저 수행된 주요 목적은?"
+    },
+    {
+      "exam_num": 2,
+      "subject": "1",
+      "id": "1:2:2:exam:5",
+      "part": 2,
+      "chapter": 2,
+      "stype": "exam",
+      "source": "Part 2/page_0026.jpg",
+      "stem_preview": "우리나라에서 채택하고 있는 경쟁입찰 방식의 조합으로 옳은 것은?"
+    },
+    {
+      "exam_num": 3,
+      "subject": "1",
+      "id": "1:3:3:exam:10",
+      "part": 3,
+      "chapter": 3,
+      "stype": "exam",
+      "source": "Part 3/page_0043.jpg",
+      "stem_preview": "혁신제품 공급 시 활용 가능한 계약 방식으로 옳은 것은?"
+    },
+    {
+      "exam_num": 4,
+      "subject": "1",
+      "id": "1:6:4:exam:14",
+      "part": 6,
+      "chapter": 4,
+      "stype": "exam",
+      "source": "Part 6/page_0047.jpg ~ page_0049.jpg (문항 1~16)",
+      "stem_preview": "다음 중 전자공개 수의계약에 대한 설명으로 옳은 것은?"
+    },
+    {
+      "exam_num": 5,
+      "subject": "1",
+      "id": "1:7:2:check:7",
+      "part": 7,
+      "chapter": 2,
+      "stype": "check",
+      "source": "Part 7/page_0024.jpg",
+      "stem_preview": "다음 중 부당이득금 산정기준에 대한 설명으로 옳지 않은 것은?"
+    },
+    {
+      "exam_num": 6,
+      "subject": "1",
+      "id": "1:1:1:check:4",
+      "part": 1,
+      "chapter": 1,
+      "stype": "check",
+      "source": "Part 1/page_0006.jpg",
+      "stem_preview": "다음 중 조선시대 공공조달 제도의 변화에 대한 설명으로 옳은 것은?"
+    },
+    {
+      "exam_num": 7,
+      "subject": "1",
+      "id": "1:2:3:exam:13",
+      "part": 2,
+      "chapter": 3,
+      "stype": "exam",
+      "source": "Part 2/page_0036.jpg",
+      "stem_preview": "특허권, 저작권 등으로 인해 대체 공급자가 없는 경우 적용 가능한 조달방식은?"
+    },
+    {
+      "exam_num": 8,
+      "subject": "1",
+      "id": "1:3:3:exam:26",
+      "part": 3,
+      "chapter": 3,
+      "stype": "exam",
+      "source": "Part 3/page_0043.jpg",
+      "stem_preview": "이음장터에서 주로 활용되는 계약 방식은?"
+    },
+    {
+      "exam_num": 9,
+      "subject": "1",
+      "id": "1:6:4:exam:11",
+      "part": 6,
+      "chapter": 4,
+      "stype": "exam",
+      "source": "Part 6/page_0047.jpg ~ page_0049.jpg (문항 1~16)",
+      "stem_preview": "다음 중 전자적 공고에 대한 설명으로 옳지 않은 것은?"
+    },
+    {
+      "exam_num": 10,
+      "subject": "1",
+      "id": "1:7:1:check:10",
+      "part": 7,
+      "chapter": 1,
+      "stype": "check",
+      "source": "Part 7/page_0009.jpg",
+      "stem_preview": "다음 중 부정당업자 제재 처분 대상에 해당하는 경우로 옳은 것은?"
+    },
+    {
+      "exam_num": 11,
+      "subject": "1",
+      "id": "1:1:1:check:2",
+      "part": 1,
+      "chapter": 1,
+      "stype": "check",
+      "source": "Part 1/page_0003.jpg",
+      "stem_preview": "공공조달에서 투명성이 요구되는 이유로 가장 적절한 것은?"
+    },
+    {
+      "exam_num": 12,
+      "subject": "1",
+      "id": "1:2:3:exam:5",
+      "part": 2,
+      "chapter": 3,
+      "stype": "exam",
+      "source": "Part 2/page_0034.jpg",
+      "stem_preview": "다음 중 비경쟁적 공공조달 방법의 대표적인 형태는?"
+    },
+    {
+      "exam_num": 13,
+      "subject": "1",
+      "id": "1:3:2:exam:12",
+      "part": 3,
+      "chapter": 2,
+      "stype": "exam",
+      "source": "Part 3/page_0028.jpg",
+      "stem_preview": "발주 절차 설계 시 중앙조달 여부를 고려해야 하는 이유로 가장 적절한 것은?"
+    },
+    {
+      "exam_num": 14,
+      "subject": "1",
+      "id": "1:6:2:exam:14",
+      "part": 6,
+      "chapter": 2,
+      "stype": "exam",
+      "source": "Part 6/page_0025.jpg ~ page_0030.jpg (문항 1~28)",
+      "stem_preview": "국가계약에서 계약보증금 귀속 시 조치로 옳은 것은?"
+    },
+    {
+      "exam_num": 15,
+      "subject": "1",
+      "id": "1:7:2:check:6",
+      "part": 7,
+      "chapter": 2,
+      "stype": "check",
+      "source": "Part 7/page_0023.jpg",
+      "stem_preview": "부당이득금 환수에 대한 설명으로 가장 적절한 것은?"
+    },
+    {
+      "exam_num": 16,
+      "subject": "1",
+      "id": "1:1:4:exam:13",
+      "part": 1,
+      "chapter": 4,
+      "stype": "exam",
+      "source": "Part 1/page_0051.jpg",
+      "stem_preview": "「국가계약법」과 「지방계약법」의 구분 기준으로 가장 적절한 것은?"
+    },
+    {
+      "exam_num": 17,
+      "subject": "1",
+      "id": "1:2:2:exam:10",
+      "part": 2,
+      "chapter": 2,
+      "stype": "exam",
+      "source": "Part 2/page_0027.jpg",
+      "stem_preview": "다음 중 경쟁적 조달 실행방식과 주된 평가 초점의 연결로 가장 적절한 것은?"
+    },
+    {
+      "exam_num": 18,
+      "subject": "1",
+      "id": "1:3:1:exam:9",
+      "part": 3,
+      "chapter": 1,
+      "stype": "exam",
+      "source": "Part 3/page_0015.jpg",
+      "stem_preview": "다음 중 레버리지 지출과 전략적 지출의 가장 큰 차이점은?"
+    },
+    {
+      "exam_num": 19,
+      "subject": "1",
+      "id": "1:6:1:exam:23",
+      "part": 6,
+      "chapter": 1,
+      "stype": "exam",
+      "source": "Part 6/page_0012.jpg ~ page_0018.jpg (문항 1~28)",
+      "stem_preview": "다음 중 입찰과 낙찰 절차에 대한 설명으로 옳지 않은 것은?"
+    },
+    {
+      "exam_num": 20,
+      "subject": "1",
+      "id": "1:7:1:exam:38",
+      "part": 7,
+      "chapter": 1,
+      "stype": "exam",
+      "source": "Part 7/page_0015.jpg",
+      "stem_preview": "협상에 따른 계약방법에서 수의계약을 체결할 때 반드시 필요한 것은?"
+    },
+    {
+      "exam_num": 21,
+      "subject": "1",
+      "id": "1:1:2:exam:14",
+      "part": 1,
+      "chapter": 2,
+      "stype": "exam",
+      "source": "Part 1/page_0028.jpg",
+      "stem_preview": "공공조달 수요자를 '전략적 행위자'로 보는 관점에 대한 설명으로 가장 적절한 것은?"
+    },
+    {
+      "exam_num": 22,
+      "subject": "1",
+      "id": "1:2:2:exam:17",
+      "part": 2,
+      "chapter": 2,
+      "stype": "exam",
+      "source": "Part 2/page_0028.jpg",
+      "stem_preview": "경쟁적 조달 방법의 적용이 부적절할 수 있는 예외적 상황으로 옳은 것은?"
+    },
+    {
+      "exam_num": 23,
+      "subject": "1",
+      "id": "1:3:2:exam:9",
+      "part": 3,
+      "chapter": 2,
+      "stype": "exam",
+      "source": "Part 3/page_0031.jpg",
+      "stem_preview": "전자조달시스템이 중앙조달 운영에 기여하는 방식으로 가장 적절한 것은?"
+    },
+    {
+      "exam_num": 24,
+      "subject": "1",
+      "id": "1:6:3:exam:21",
+      "part": 6,
+      "chapter": 3,
+      "stype": "exam",
+      "source": "Part 6/page_0037.jpg ~ page_0042.jpg (문항 1~28)",
+      "stem_preview": "혁신제품 지원센터의 역할로 옳은 것은?"
+    },
+    {
+      "exam_num": 25,
+      "subject": "1",
+      "id": "1:7:1:exam:33",
+      "part": 7,
+      "chapter": 1,
+      "stype": "exam",
+      "source": "Part 7/page_0014.jpg",
+      "stem_preview": "전자조달시스템과 붙임 공고문 내용이 다를 경우 우선 적용되는 것은?"
+    },
+    {
+      "exam_num": 26,
+      "subject": "1",
+      "id": "1:1:1:exam:10",
+      "part": 1,
+      "chapter": 1,
+      "stype": "exam",
+      "source": "Part 1/page_0014.jpg",
+      "stem_preview": "공공조달의 역사적 발전 단계를 순서대로 바르게 나열한 것은?"
+    },
+    {
+      "exam_num": 27,
+      "subject": "1",
+      "id": "1:2:2:exam:12",
+      "part": 2,
+      "chapter": 2,
+      "stype": "exam",
+      "source": "Part 2/page_0027.jpg",
+      "stem_preview": "RFP 방식에서 평가기준을 사전에 명확히 제시해야 하는 이유로 가장 타당한 것은?"
+    },
+    {
+      "exam_num": 28,
+      "subject": "1",
+      "id": "1:3:3:exam:14",
+      "part": 3,
+      "chapter": 3,
+      "stype": "exam",
+      "source": "Part 3/page_0043.jpg",
+      "stem_preview": "혁신제품의 수의계약 허용이 정당화되는 이유로 가장 적절한 것은?"
+    },
+    {
+      "exam_num": 29,
+      "subject": "1",
+      "id": "1:6:3:exam:18",
+      "part": 6,
+      "chapter": 3,
+      "stype": "exam",
+      "source": "Part 6/page_0037.jpg ~ page_0042.jpg (문항 1~28)",
+      "stem_preview": "조달수수료 감면 사유로 옳지 않은 것은?"
+    },
+    {
+      "exam_num": 30,
+      "subject": "1",
+      "id": "1:7:1:exam:36",
+      "part": 7,
+      "chapter": 1,
+      "stype": "exam",
+      "source": "Part 7/page_0015.jpg",
+      "stem_preview": "부정당업자 제재 사유가 발생했으나 처분이 확정되지 않은 경우 적격심사 제외 여부는?"
+    },
+    {
+      "exam_num": 31,
+      "subject": "2",
+      "id": "2:1:2:exam:20",
+      "part": 1,
+      "chapter": 2,
+      "stype": "exam",
+      "source": "Part 1/page_0022.jpg",
+      "stem_preview": "다음 중 수요기관이 불확실성을 관리하기 위해 선호하는 계약유형과 그 이유의 연결로 가장 적절한 것은?"
+    },
+    {
+      "exam_num": 32,
+      "subject": "2",
+      "id": "2:2:2:exam:4",
+      "part": 2,
+      "chapter": 2,
+      "stype": "exam",
+      "source": "Part 2/page_0015.jpg",
+      "stem_preview": "기술적 적정성 분석에 대한 설명으로 가장 적절한 것은 무엇인가?"
+    },
+    {
+      "exam_num": 33,
+      "subject": "2",
+      "id": "2:1:2:exam:32",
+      "part": 1,
+      "chapter": 2,
+      "stype": "exam",
+      "source": "Part 1/page_0024.jpg",
+      "stem_preview": "다음 중 가장 잘못 설명하고 있는 것은?"
+    },
+    {
+      "exam_num": 34,
+      "subject": "2",
+      "id": "2:2:1:exam:2",
+      "part": 2,
+      "chapter": 1,
+      "stype": "exam",
+      "source": "Part 2/page_0005.jpg",
+      "stem_preview": "다음 중 공공조달에서 선제적 수요 정보 수집의 주요 목적에 가장 부합하는 것은 무엇인가?"
+    },
+    {
+      "exam_num": 35,
+      "subject": "2",
+      "id": "2:1:2:exam:22",
+      "part": 1,
+      "chapter": 2,
+      "stype": "exam",
+      "source": "Part 1/page_0022.jpg",
+      "stem_preview": "다음 중 연구개발(R&D), 시제품 제작, 신기술 적용 사업에 가장 적합한 계약유형과 그 이유의 연결로 옳은"
+    },
+    {
+      "exam_num": 36,
+      "subject": "2",
+      "id": "2:2:2:exam:2",
+      "part": 2,
+      "chapter": 2,
+      "stype": "exam",
+      "source": "Part 2/page_0015.jpg",
+      "stem_preview": "입찰공고 문서의 법적 적정성 검토 절차 중 '사전 분석 및 준비' 단계의 주요 내용으로 가장 적절한 것은 무"
+    },
+    {
+      "exam_num": 37,
+      "subject": "2",
+      "id": "2:1:2:exam:10",
+      "part": 1,
+      "chapter": 2,
+      "stype": "exam",
+      "source": "Part 1/page_0020.jpg",
+      "stem_preview": "공공조달에서 발주기관의 예상 비용 추정에 대한 설명으로 가장 옳은 것은?"
+    },
+    {
+      "exam_num": 38,
+      "subject": "2",
+      "id": "2:2:2:exam:1",
+      "part": 2,
+      "chapter": 2,
+      "stype": "exam",
+      "source": "Part 2/page_0015.jpg",
+      "stem_preview": "입찰공고 내용이 일부 공공계약 관련 법령에 위배되는 경우에 대한 설명으로 가장 타당한 것은 무엇인가?"
+    },
+    {
+      "exam_num": 39,
+      "subject": "2",
+      "id": "2:1:2:exam:1",
+      "part": 1,
+      "chapter": 2,
+      "stype": "exam",
+      "source": "Part 1/page_0019.jpg",
+      "stem_preview": "다음 중 '시장조사'의 정의로 가장 옳은 것은?"
+    },
+    {
+      "exam_num": 40,
+      "subject": "2",
+      "id": "2:2:2:exam:3",
+      "part": 2,
+      "chapter": 2,
+      "stype": "exam",
+      "source": "Part 2/page_0015.jpg",
+      "stem_preview": "입찰공고 문서의 법적 적정성 검토 과정 중 '위험성·담합 검토' 단계에 대한 설명으로 가장 타당한 것은 무엇"
+    },
+    {
+      "exam_num": 41,
+      "subject": "2",
+      "id": "2:1:2:check:3",
+      "part": 1,
+      "chapter": 2,
+      "stype": "check",
+      "source": "Part 1/page_0013.jpg",
+      "stem_preview": "다음 중 가장 타당한 입찰금액 추정 방식으로 옳은 것은?"
+    },
+    {
+      "exam_num": 42,
+      "subject": "2",
+      "id": "2:2:2:exam:9",
+      "part": 2,
+      "chapter": 2,
+      "stype": "exam",
+      "source": "Part 2/page_0017.jpg",
+      "stem_preview": "다음 중 기술적 적정성 분석 과정에서 기술적 증빙 문서와 자료의 신뢰성 분석에 해당하는 내용으로 가장 적절한"
+    },
+    {
+      "exam_num": 43,
+      "subject": "2",
+      "id": "2:1:2:exam:13",
+      "part": 1,
+      "chapter": 2,
+      "stype": "exam",
+      "source": "Part 1/page_0021.jpg",
+      "stem_preview": "수요기관이 불확실성이 높은 조달사업에서 사후 정산 방식을 선호하는 주된 이유로 옳은 것은?"
+    },
+    {
+      "exam_num": 44,
+      "subject": "2",
+      "id": "2:2:1:exam:7",
+      "part": 2,
+      "chapter": 1,
+      "stype": "exam",
+      "source": "Part 2/page_0006.jpg",
+      "stem_preview": "다음 중 공급역량 분석과 적정성 분석을 소홀히 할 경우 발생할 수 있는 위험으로 가장 적절한 것은?"
+    },
+    {
+      "exam_num": 45,
+      "subject": "2",
+      "id": "2:1:1:check:1",
+      "part": 1,
+      "chapter": 1,
+      "stype": "check",
+      "source": "Part 1/page_0002.jpg",
+      "stem_preview": "다음 중 조달사업 발주 절차의 올바른 순서는?"
+    },
+    {
+      "exam_num": 46,
+      "subject": "2",
+      "id": "2:2:3:exam:1",
+      "part": 2,
+      "chapter": 3,
+      "stype": "exam",
+      "source": "Part 2/page_0028.jpg",
+      "stem_preview": "경제적 적정성 분석의 필요성 및 당위성에 대한 설명으로 가장 적절한 것은 무엇인가?"
+    },
+    {
+      "exam_num": 47,
+      "subject": "2",
+      "id": "2:1:2:exam:28",
+      "part": 1,
+      "chapter": 2,
+      "stype": "exam",
+      "source": "Part 1/page_0023.jpg",
+      "stem_preview": "다음 중 제안서 평가 프로세스의 일반적인 순서로 옳은 것은?"
+    },
+    {
+      "exam_num": 48,
+      "subject": "2",
+      "id": "2:2:2:exam:12",
+      "part": 2,
+      "chapter": 2,
+      "stype": "exam",
+      "source": "Part 2/page_0017.jpg",
+      "stem_preview": "입찰공고 기술적 적정성 분석에 대한 설명으로 가장 적절하지 않은 것은?"
+    },
+    {
+      "exam_num": 49,
+      "subject": "2",
+      "id": "2:1:2:check:2",
+      "part": 1,
+      "chapter": 2,
+      "stype": "check",
+      "source": "Part 1/page_0011.jpg",
+      "stem_preview": "다음 중 시장조사 수행 시 핵심 확인 사항으로 가장 거리가 먼 것은?"
+    },
+    {
+      "exam_num": 50,
+      "subject": "2",
+      "id": "2:2:1:exam:5",
+      "part": 2,
+      "chapter": 1,
+      "stype": "exam",
+      "source": "Part 2/page_0006.jpg",
+      "stem_preview": "다음 중 공급계획 수립 절차의 올바른 순서로 가장 적절한 것은?"
+    },
+    {
+      "exam_num": 51,
+      "subject": "3",
+      "id": "3:1:4:exam:8",
+      "part": 1,
+      "chapter": 4,
+      "stype": "exam",
+      "source": "Part 1/page_0073.jpg",
+      "stem_preview": "다음 중 계약종결 절차에 대한 설명으로 옳은 것은?"
+    },
+    {
+      "exam_num": 52,
+      "subject": "3",
+      "id": "3:2:2:exam:40",
+      "part": 2,
+      "chapter": 2,
+      "stype": "exam",
+      "source": "Part 2/page_0079.jpg",
+      "stem_preview": "다음 중 공사이행기간 변경에 따른 계약금액 조정에 관한 설명으로 옳지 않은 것은?"
+    },
+    {
+      "exam_num": 53,
+      "subject": "3",
+      "id": "3:3:2:exam:4",
+      "part": 3,
+      "chapter": 2,
+      "stype": "exam",
+      "source": "Part 3/page_0074.jpg",
+      "stem_preview": "다음 중 MAS 계약과 관련한 납품기한 및 MAS 2단계 경쟁 가능 시점에 대한 설명으로 옳은 것은?"
+    },
+    {
+      "exam_num": 54,
+      "subject": "3",
+      "id": "3:1:4:exam:4",
+      "part": 1,
+      "chapter": 4,
+      "stype": "exam",
+      "source": "Part 1/page_0072.jpg",
+      "stem_preview": "다음 중 검사·검수가 완료된 후 계약상대자가 납품대가를 청구한 경우, 원칙적인 대금 지급 기한은?"
+    },
+    {
+      "exam_num": 55,
+      "subject": "3",
+      "id": "3:2:2:exam:13",
+      "part": 2,
+      "chapter": 2,
+      "stype": "exam",
+      "source": "Part 2/page_0073.jpg",
+      "stem_preview": "다음 중 물가변동 조정요건 중 90일 산정 기준에 대한 설명으로 옳은 것은?"
+    },
+    {
+      "exam_num": 56,
+      "subject": "3",
+      "id": "3:3:1:check:5",
+      "part": 3,
+      "chapter": 1,
+      "stype": "check",
+      "source": "Part 3/page_0007.jpg",
+      "stem_preview": "다음 중 조달청 「협상에 의한 계약 제안서 평가 세부기준」의 활용 목적에 대한 설명으로 가장 적절한 것은?"
+    },
+    {
+      "exam_num": 57,
+      "subject": "3",
+      "id": "3:1:4:exam:26",
+      "part": 1,
+      "chapter": 4,
+      "stype": "exam",
+      "source": "Part 1/page_0076.jpg",
+      "stem_preview": "다음 중 공사이행보증서에 따른 보증채무 이행청구 기간으로 옳은 것은?"
+    },
+    {
+      "exam_num": 58,
+      "subject": "3",
+      "id": "3:2:2:exam:36",
+      "part": 2,
+      "chapter": 2,
+      "stype": "exam",
+      "source": "Part 2/page_0078.jpg",
+      "stem_preview": "다음 중 발주기관이 계약금액을 조정해야 하는 경우, 조정 기한으로 옳은 것은?"
+    },
+    {
+      "exam_num": 59,
+      "subject": "3",
+      "id": "3:3:2:exam:13",
+      "part": 3,
+      "chapter": 2,
+      "stype": "exam",
+      "source": "Part 3/page_0076.jpg",
+      "stem_preview": "다음 중 계약담당공무원이 시험성적서 제출을 면제할 수 있는 경우에 해당하지 않는 것은?"
+    },
+    {
+      "exam_num": 60,
+      "subject": "3",
+      "id": "3:1:1:exam:24",
+      "part": 1,
+      "chapter": 1,
+      "stype": "exam",
+      "source": "Part 1/page_0015.jpg",
+      "stem_preview": "다음 중 하도급 시 공사감독자가 검토하여 발주청에 제출해야 할 사항으로 옳지 않은 것은?"
+    },
+    {
+      "exam_num": 61,
+      "subject": "3",
+      "id": "3:2:1:check:11",
+      "part": 2,
+      "chapter": 1,
+      "stype": "check",
+      "source": "Part 2/page_0011.jpg",
+      "stem_preview": "다음 중 낙찰자 결격제도에 대한 설명으로 가장 옳은 것은?"
+    },
+    {
+      "exam_num": 62,
+      "subject": "3",
+      "id": "3:3:2:exam:5",
+      "part": 3,
+      "chapter": 2,
+      "stype": "exam",
+      "source": "Part 3/page_0074.jpg",
+      "stem_preview": "다음 중 물품에 대해 다수공급자계약(MAS)을 추진하기 위한 요건으로 옳은 것은?"
+    },
+    {
+      "exam_num": 63,
+      "subject": "3",
+      "id": "3:1:4:exam:7",
+      "part": 1,
+      "chapter": 4,
+      "stype": "exam",
+      "source": "Part 1/page_0073.jpg",
+      "stem_preview": "다음 중 시운전 조건부 계약에서 납품대가 지급과 관련한 설명으로 옳은 것은?"
+    },
+    {
+      "exam_num": 64,
+      "subject": "3",
+      "id": "3:2:1:check:8",
+      "part": 2,
+      "chapter": 1,
+      "stype": "check",
+      "source": "Part 2/page_0008.jpg",
+      "stem_preview": "다음 중 계약이행능력 심사 항목에 포함되는 것으로 가장 거리가 먼 것은?"
+    },
+    {
+      "exam_num": 65,
+      "subject": "3",
+      "id": "3:3:2:exam:29",
+      "part": 3,
+      "chapter": 2,
+      "stype": "exam",
+      "source": "Part 3/page_0079.jpg",
+      "stem_preview": "다음 중 다수공급자계약 계약이행실적 평가의 이의제기 처리 절차에 대한 설명으로 옳은 것은?"
+    },
+    {
+      "exam_num": 66,
+      "subject": "3",
+      "id": "3:1:4:exam:3",
+      "part": 1,
+      "chapter": 4,
+      "stype": "exam",
+      "source": "Part 1/page_0072.jpg",
+      "stem_preview": "다음 중 시운전 조건부 납품 검사에 대한 설명으로 옳은 것은?"
+    },
+    {
+      "exam_num": 67,
+      "subject": "3",
+      "id": "3:2:1:check:6",
+      "part": 2,
+      "chapter": 1,
+      "stype": "check",
+      "source": "Part 2/page_0006.jpg",
+      "stem_preview": "다음 중 적격심사낙찰제에 대한 설명으로 옳은 것은?"
+    },
+    {
+      "exam_num": 68,
+      "subject": "3",
+      "id": "3:3:2:exam:16",
+      "part": 3,
+      "chapter": 2,
+      "stype": "exam",
+      "source": "Part 3/page_0076.jpg",
+      "stem_preview": "다음 중 가격협상 대상 품목의 납품실적 요건에 대한 설명으로 옳은 것은?"
+    },
+    {
+      "exam_num": 69,
+      "subject": "3",
+      "id": "3:1:4:exam:25",
+      "part": 1,
+      "chapter": 4,
+      "stype": "exam",
+      "source": "Part 1/page_0076.jpg",
+      "stem_preview": "다음 중 계약담당공무원이 공사이행보증서 제출 방식으로만 이행보증을 하도록 제한할 수 있는 경우로 옳은 것은?"
+    },
+    {
+      "exam_num": 70,
+      "subject": "3",
+      "id": "3:2:1:check:1",
+      "part": 2,
+      "chapter": 1,
+      "stype": "check",
+      "source": "Part 2/page_0002.jpg",
+      "stem_preview": "다음 중 입찰참가자격 등록의 법적 효과로 가장 적절한 것은?"
+    },
+    {
+      "exam_num": 71,
+      "subject": "3",
+      "id": "3:3:2:exam:32",
+      "part": 3,
+      "chapter": 2,
+      "stype": "exam",
+      "source": "Part 3/page_0079.jpg",
+      "stem_preview": "다음 중 카탈로그계약과 디지털서비스 카탈로그계약의 차이에 대한 설명으로 가장 옳은 것은?"
+    },
+    {
+      "exam_num": 72,
+      "subject": "3",
+      "id": "3:1:1:check:2",
+      "part": 1,
+      "chapter": 1,
+      "stype": "check",
+      "source": "Part 1/page_0004.jpg",
+      "stem_preview": "다음 중 계약에 대한 설명으로 가장 적절한 것은?"
+    },
+    {
+      "exam_num": 73,
+      "subject": "3",
+      "id": "3:2:2:exam:30",
+      "part": 2,
+      "chapter": 2,
+      "stype": "exam",
+      "source": "Part 2/page_0076.jpg",
+      "stem_preview": "다음 중 설계·시공 일괄입찰방식(Turn-Key 계약)에서 설계변경과 계약금액 조정에 대한 설명으로 옳은 것"
+    },
+    {
+      "exam_num": 74,
+      "subject": "3",
+      "id": "3:3:1:exam:7",
+      "part": 3,
+      "chapter": 1,
+      "stype": "exam",
+      "source": "Part 3/page_0039.jpg",
+      "stem_preview": "다음 중 제안서의 중요성에 대한 설명으로 옳지 않은 것은?"
+    },
+    {
+      "exam_num": 75,
+      "subject": "3",
+      "id": "3:1:4:exam:24",
+      "part": 1,
+      "chapter": 4,
+      "stype": "exam",
+      "source": "Part 1/page_0076.jpg",
+      "stem_preview": "다음 중 공사이행보증서상의 보증채무 범위에 대한 설명으로 옳은 것은?"
+    },
+    {
+      "exam_num": 76,
+      "subject": "3",
+      "id": "3:2:2:exam:33",
+      "part": 2,
+      "chapter": 2,
+      "stype": "exam",
+      "source": "Part 2/page_0077.jpg",
+      "stem_preview": "다음 중 설계변경 사유 및 절차에 대한 설명으로 가장 적절한 것은?"
+    },
+    {
+      "exam_num": 77,
+      "subject": "3",
+      "id": "3:3:2:exam:19",
+      "part": 3,
+      "chapter": 2,
+      "stype": "exam",
+      "source": "Part 3/page_0077.jpg",
+      "stem_preview": "다음 중 2단계 경쟁 회피 금지 규정에 대한 설명으로 옳은 것은?"
+    },
+    {
+      "exam_num": 78,
+      "subject": "3",
+      "id": "3:1:4:exam:39",
+      "part": 1,
+      "chapter": 4,
+      "stype": "exam",
+      "source": "Part 1/page_0078.jpg",
+      "stem_preview": "다음 중 공사 손해보험의 가입 시기와 보험기간에 대한 설명으로 옳은 것은?"
+    },
+    {
+      "exam_num": 79,
+      "subject": "3",
+      "id": "3:2:2:exam:32",
+      "part": 2,
+      "chapter": 2,
+      "stype": "exam",
+      "source": "Part 2/page_0077.jpg",
+      "stem_preview": "다음 중 설계서의 내용이 불분명·누락·오류 또는 상호 모순되는 경우의 처리로 옳지 않은 것은?"
+    },
+    {
+      "exam_num": 80,
+      "subject": "3",
+      "id": "3:3:1:exam:9",
+      "part": 3,
+      "chapter": 1,
+      "stype": "exam",
+      "source": "Part 3/page_0039.jpg",
+      "stem_preview": "다음 중 일반용역에서 적격심사 제도의 목적으로 가장 적절한 것은?"
+    }
+  ]
+}

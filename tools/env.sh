@@ -3,16 +3,7 @@
 set -euo pipefail
 
 TOOLS_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-DEFAULT_ROOT="$(cd "$TOOLS_DIR/.." && pwd)"
-
-if [[ -f "$DEFAULT_ROOT/.env" ]]; then
-  set -a
-  # shellcheck source=/dev/null
-  source "$DEFAULT_ROOT/.env"
-  set +a
-fi
-
-export PROJECT_ROOT="${PROJECT_ROOT:-$DEFAULT_ROOT}"
+export PROJECT_ROOT="$(cd "$TOOLS_DIR/.." && pwd)"
 export PARKMUNGak_SCAN_DIR="${PARKMUNGak_SCAN_DIR:-${TEXTBOOK_DIR:-sources/민간_박문각_수험서_jpg}}"
 export TEXTBOOK_IMAGES_DIR="${TEXTBOOK_IMAGES_DIR:-$PARKMUNGak_SCAN_DIR/1과목_공공조달의 이해}"
 export OCR_DIR="${OCR_DIR:-output/ocr/1과목_공공조달의_이해}"
