@@ -33,4 +33,4 @@ open http://localhost:8765/
 ```
 
 - `merge_mock_draft.py` — 과목별 `_draft/*_선별.md`를 1~80 연번으로 합침 (선별은 에이전트, 병합만 기계)
-- `build_cbt_viewer.py` — CBT UI (키보드·과목별 문항판·답안 초기화 등은 스크립트 내 템플릿)
+- `build_cbt_viewer.py` — CLI 진입점; 파싱 `tools/cbt/parser.py`, UI `tools/cbt/assets/`(shell·css·exam.js·ui.js) → HTML 3종 인라인 빌드

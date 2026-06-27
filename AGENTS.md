@@ -121,6 +121,8 @@ cd output/mock_exam/〈K〉회차 && python3 -m http.server 8765
 
 회차별 `localStorage` 키: `mock_exam_K_answers` (HTML 빌드 시 자동 주입).
 
+소스 구조: `tools/build_cbt_viewer.py`(CLI) · `tools/cbt/parser.py`(문제지 파싱) · `tools/cbt/builder.py`(조립) · `tools/cbt/assets/`(HTML/CSS/JS — 비즈니스 `exam.js` · UI `ui.js` 분리). 빌드 결과는 회차 폴더에 **단일 HTML** 3종.
+
 CBT 기능: 1문항씩 표시, ①~④·키보드(1~4) 선택, 답 선택 시 다음 문항, ↑↓ 선지·←→·Enter 문항 이동, 120분 타이머, 과목별 구분 문항판(1~80), localStorage 답안 저장, **처음부터** 답안 초기화, 종료 시 답안 문자열 복사.
 
 ### 채팅 응시·채점 흐름
