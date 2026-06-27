@@ -30,9 +30,17 @@
 ```bash
 python3 tools/merge_mock_draft.py K          # _draft/3과목 선별본 → 문제·정답·manifest
 python3 tools/build_cbt_viewer.py --round K   # 필기_모의_문제.md → HTML 3종
+python3 tools/publish_cbt_pages.py          # 최신 회차 CBT → docs/index.html (GitHub Pages)
+# 또는 한 번에: python3 tools/build_cbt_viewer.py --round K --pages
 cd output/mock_exam/〈K〉회차 && python3 -m http.server 8765
 open http://localhost:8765/
 ```
 
 - `merge_mock_draft.py` — 과목별 `_draft/*_선별.md`를 1~80 연번으로 합침 (선별은 에이전트, 병합만 기계)
 - `build_cbt_viewer.py` — CLI 진입점; 파싱 `tools/cbt/parser.py`, UI `tools/cbt/assets/`(shell·css·exam.js·ui.js) → HTML 3종 인라인 빌드
+- `publish_cbt_pages.py` — **최신** `〈K〉회차/index.html`만 `docs/`에 복사 (정답 md 제외). 3회차 생기면 재실행 시 자동으로 3회차
+
+### GitHub Pages (온라인 CBT)
+
+저장소 **Settings → Pages → Build from branch `main` / folder `/docs`**.  
+배포 URL 루트(`…/public-procurement-management/`) = **가장 최신 회차** 필기 모의. 현재 메타: [`docs/cbt-meta.json`](../../docs/cbt-meta.json).
