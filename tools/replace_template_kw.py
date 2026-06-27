@@ -140,9 +140,14 @@ MECHANICAL_MARK = "혼동한 함정이다"
 MECHANICAL_PATTERNS = (
     "을(를) 핵심으로",
     "혼동한 오답이다",
+    "요건·효과·주체를 혼동",
     "은(는) 개념·요건을 혼동",
     "은(는) 법령상 효과나 적용 주체",
     "은(는) 절차·요건을 뒤바꾼",
+    "이(가) 정답이다.",
+    "해당 주제와 맞지 않는 설명이다",
+    "교재상 제시된 흐름과 일치",
+    "오히려 관련 개념에 해당",
 )
 
 
@@ -176,11 +181,18 @@ def build_explain_clean(q) -> str:
     if SEQUENCE_STEM.search(stem):
         return f"「{stem[:45]}…」의 올바른 절차·순서로, {q.ans}({core})가 교재상 흐름과 일치한다."
 
+    if COMBO_STEM.search(stem):
+        return (
+            f"보기 조합 문제로 {q.ans}가 요건·개념을 올바르게 결합한다. "
+            f"핵심 근거는 {core}이다."
+        )
+
     if trap:
-        trap_core = explain_key(trap[1], 26)
+        trap_core = explain_key(trap[1], 28)
+        trap_tail = TRAP_PHRASES[q.qn % len(TRAP_PHRASES)]
         return (
             f"{core}이(가) 정답이다. "
-            f"{trap[0]}의 '{trap_core}' 등은 요건·효과·주체를 혼동한 오답이다."
+            f"{trap[0]}의 '{trap_core}'{trap_tail}."
         )
     return f"{core}이(가) 법령·교재상 옳은 설명이다."
 
