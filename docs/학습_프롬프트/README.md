@@ -17,4 +17,4 @@
 - 2~4과목: `Part 1`부터
 - 문제 풀이: `output/problem_book_final/<과목>/〈N〉과목_문제집.html`
 - 정답: `output/agent_extract/<과목>/partN.md`
-- 모의고사: [`시험모의_풀이.md`](../시험모의_풀이.md) + `output/mock_exam/`
+- 모의고사: [`시험모의/`](../시험모의/) · [`풀이.md`](../시험모의/풀이.md) + `output/mock_exam/`

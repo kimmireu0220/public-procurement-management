@@ -13,7 +13,7 @@
 | 1. 이론 | [`docs/학습_프롬프트/`](docs/학습_프롬프트/) | 과목별 Cursor 강의 프롬프트 |
 | 2. 문제 풀이 | `output/problem_book_final/<과목>/〈N〉과목_문제집.html` | 문제만 (정답 없음) |
 | 3. 정답·해설 | `output/agent_extract/<과목>/partN.md` | 정답 섹션 |
-| 4. 모의시험 | [`output/mock_exam/`](output/mock_exam/README.md) | 필기 80문항 · 풀이 · 오답노트 |
+| 4. 모의시험 | [`docs/시험모의/`](docs/시험모의/) · [`output/mock_exam/`](output/mock_exam/README.md) | 출제·채점 프롬프트 · 필기 80문항 · 풀이 · 오답노트 |
 
 ## 원본 자료 (`sources/`)
 
@@ -35,7 +35,6 @@
 
 ## 모의고사
 
-- 선별: [`docs/시험모의_선별.md`](docs/시험모의_선별.md)
-- 풀이·채점: [`docs/시험모의_풀이.md`](docs/시험모의_풀이.md)
+- 프롬프트: [`docs/시험모의/`](docs/시험모의/) — [`선별.md`](docs/시험모의/선별.md) · [`풀이.md`](docs/시험모의/풀이.md)
 
 에이전트 역할: [`AGENTS.md`](AGENTS.md)
