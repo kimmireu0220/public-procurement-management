@@ -1,8 +1,0 @@
-# Part 8 / page_0001.jpg
-source: /Users/kimmireu/Desktop/Storage/public-procurement-management/교재/4과목_공공조달 관리실무/Part 8/page_0001.jpg
-
-PART
-08
-전자조달시스템 활용
-CHAPTER 01 전자조달시스템 이용
-CHAPTER 02 조달데이터 활용

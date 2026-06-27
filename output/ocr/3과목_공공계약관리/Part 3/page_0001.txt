@@ -1,8 +1,0 @@
-# Part 3 / page_0001.jpg
-source: /Users/kimmireu/Desktop/Storage/public-procurement-management/교재/3과목_공공계약관리/Part 3/page_0001.jpg
-
-PART
-03
-용역•다수공급자계약 관리
-CHAPTER 01 용역계약 절차 및 이행관리
-CHAPTER 02 다수공급자계약(MAS) 절차 및 이행관리
