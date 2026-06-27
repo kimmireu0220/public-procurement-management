@@ -3,13 +3,12 @@
 
 from __future__ import annotations
 
+import argparse
 import json
 import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-MD = ROOT / "output/mock_exam/1회차/필기_모의_문제.md"
-OUT_DIR = ROOT / "output/mock_exam/1회차"
 
 Q_START = re.compile(r"^(\d+)\.\s+(.+)$")
 CHOICE = re.compile(r"^\s*([①②③④])\s+(.+)$")
@@ -84,7 +83,7 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>공공조달관리사 필기 모의 1회차 — CBT</title>
+<title>공공조달관리사 필기 모의 __ROUND__회차 — CBT</title>
 <style>
 :root {
   --bg: #e8ecf1;
@@ -184,7 +183,7 @@ body { font-family: "Apple SD Gothic Neo", "Malgun Gothic", sans-serif; backgrou
 
 <div id="screen-start">
   <div class="start-card">
-    <h1>공공조달관리사 필기 모의 1회차</h1>
+    <h1>공공조달관리사 필기 모의 __ROUND__회차</h1>
     <p class="sub">Computer Based Test (CBT) 모의 응시</p>
     <ul>
       <li>총 <strong>80문항</strong> · 제한시간 <strong>120분</strong></li>
@@ -198,7 +197,7 @@ body { font-family: "Apple SD Gothic Neo", "Malgun Gothic", sans-serif; backgrou
 
 <div id="screen-exam">
   <div class="topbar">
-    <span class="exam-title">공공조달관리사 1회 필기 모의 1회차</span>
+    <span class="exam-title">공공조달관리사 1회 필기 모의 __ROUND__회차</span>
     <span class="timer" id="timer">02:00:00</span>
   </div>
   <div class="subbar">
@@ -245,7 +244,7 @@ body { font-family: "Apple SD Gothic Neo", "Malgun Gothic", sans-serif; backgrou
 
 <script>
 const QUESTIONS = __QUESTIONS_JSON__;
-const STORAGE_KEY = 'mock_exam_1_answers';
+const STORAGE_KEY = '__STORAGE_KEY__';
 const DURATION_SEC = 120 * 60;
 
 let current = 0;
@@ -514,15 +513,45 @@ document.getElementById('btn-restart').addEventListener('click', () => {
 """
 
 
+def round_paths(round_no: int) -> tuple[Path, Path]:
+    out_dir = ROOT / f"output/mock_exam/{round_no}회차"
+    md = out_dir / "필기_모의_문제.md"
+    if not md.is_file():
+        raise SystemExit(f"not found: {md}")
+    return md, out_dir
+
+
+def render_html(questions: list[dict], round_no: int) -> str:
+    storage_key = f"mock_exam_{round_no}_answers"
+    html = HTML_TEMPLATE.replace("__QUESTIONS_JSON__", json.dumps(questions, ensure_ascii=False))
+    html = html.replace("__ROUND__", str(round_no))
+    html = html.replace("__STORAGE_KEY__", storage_key)
+    return html
+
+
 def main() -> None:
-    text = MD.read_text(encoding="utf-8")
+    parser = argparse.ArgumentParser(description="필기_모의_문제.md → CBT HTML")
+    parser.add_argument(
+        "--round",
+        "-r",
+        type=int,
+        default=1,
+        metavar="K",
+        help="모의 회차 번호 (기본 1 → output/mock_exam/K회차/)",
+    )
+    args = parser.parse_args()
+    if args.round < 1:
+        raise SystemExit("--round must be >= 1")
+
+    md_path, out_dir = round_paths(args.round)
+    text = md_path.read_text(encoding="utf-8")
     questions = parse_questions(text)
     if len(questions) != 80:
         raise SystemExit(f"expected 80 questions, got {len(questions)}")
-    html = HTML_TEMPLATE.replace("__QUESTIONS_JSON__", json.dumps(questions, ensure_ascii=False))
+    html = render_html(questions, args.round)
     for name in ("index.html", "필기_응시.html", "필기_모의_응시.html"):
-        (OUT_DIR / name).write_text(html, encoding="utf-8")
-    print(f"CBT viewer: {len(questions)} questions → {OUT_DIR}")
+        (out_dir / name).write_text(html, encoding="utf-8")
+    print(f"CBT viewer: round {args.round}, {len(questions)} questions → {out_dir}")
 
 
 if __name__ == "__main__":

@@ -11,7 +11,8 @@
 | `index.html` | CBT 응시 UI |
 | `필기_응시.html` | `index.html`과 동일 |
 | `필기_모의_응시.html` | `index.html`과 동일 |
-| `필기_풀이.md` | 채점·해설 |
+| `필기_풀이.md` | 채점·해설 (미응시 시 템플릿) |
+| `교차검수.md` | 3단계 교차 검수 기록 |
 | `manifest.json` | 문항 ID (중복 방지) |
 | [`오답노트.md`](오답노트.md) | 틀린 문항 누적 |
 
@@ -25,7 +26,7 @@
 ### CBT 로컬 실행
 
 ```bash
-python3 tools/build_cbt_viewer.py   # 문제지 수정 후
+python3 tools/build_cbt_viewer.py --round K   # 기본 K=1, 문제지 수정 후
 cd output/mock_exam/〈K〉회차 && python3 -m http.server 8765
 open http://localhost:8765/
 ```
