@@ -38,6 +38,6 @@
 ## 모의고사
 
 - 프롬프트: [`docs/시험모의/`](docs/시험모의/) — [`선별.md`](docs/시험모의/선별.md) · [`풀이.md`](docs/시험모의/풀이.md)
-- **온라인 CBT (GitHub Pages):** `main` / `docs` 배포 후 [저장소 Pages URL](https://kimmireu0220.github.io/public-procurement-management/) — 최신 회차 자동 (`python3 tools/publish_cbt_pages.py`)
+- **온라인 CBT:** [GitHub Pages](https://kimmireu0220.github.io/public-procurement-management/) — 출제 후 `build_cbt_viewer.py --round K --pages` → **`main` 커밋·푸시** 필수 ([`선별.md` §A-5](docs/시험모의/선별.md))
 
 에이전트 역할: [`AGENTS.md`](AGENTS.md)
