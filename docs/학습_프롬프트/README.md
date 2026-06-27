@@ -15,6 +15,7 @@
 
 - 1과목: `Intro`부터, 이후 `Part 1~7`
 - 2~4과목: `Part 1`부터
-- 문제 풀이: `output/problem_book_final/<과목>/〈N〉과목_문제집.html`
+- 문제 풀이(사람): `output/problem_book_final/<과목>/〈N〉과목_문제집.html`
+- 출제·선별(에이전트): 동일 경로 `〈N〉과목_문제집.md`
 - 정답: `output/agent_extract/<과목>/partN.md`
 - 모의고사: [`시험모의/`](../시험모의/) · [`풀이.md`](../시험모의/풀이.md) + `output/mock_exam/`
