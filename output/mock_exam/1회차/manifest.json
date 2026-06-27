@@ -1,0 +1,238 @@
+{
+  "회차": "1",
+  "과목": "2과목",
+  "과목명": "공공조달계획 수립 및 분석",
+  "exam_range": [31, 50],
+  "generated": "2026-06-27",
+  "check_qa_count": 3,
+  "cluster_기술적적정성_count": 2,
+  "part_chapter_distribution": {
+    "Part1": {"Ch01": 2, "Ch02": 3},
+    "Part2": {"Ch01": 2, "Ch02": 2, "Ch03": 1},
+    "Part3": {"Ch01": 2, "Ch02": 2, "Ch03": 1},
+    "Part4": {"Ch01": 2, "Ch03": 1, "Ch04": 1, "Ch06": 1}
+  },
+  "items": [
+    {
+      "id": "2:1:1:exam:7",
+      "exam_no": 31,
+      "part": 1,
+      "chapter": 1,
+      "stype": "exam",
+      "qn": 7,
+      "source": "Part 1/page_0008.jpg",
+      "answer": 2,
+      "keyword": "나라장터 예정가격 산정 방식"
+    },
+    {
+      "id": "2:1:1:cqa:1",
+      "exam_no": 32,
+      "part": 1,
+      "chapter": 1,
+      "stype": "cqa",
+      "qn": 1,
+      "source": "Part 1/page_0002.jpg",
+      "answer": 2,
+      "keyword": "조달사업 발주 절차 순서"
+    },
+    {
+      "id": "2:1:2:exam:11",
+      "exam_no": 33,
+      "part": 1,
+      "chapter": 2,
+      "stype": "exam",
+      "qn": 11,
+      "source": "Part 1/page_0021.jpg",
+      "answer": 3,
+      "keyword": "계약유형 선택 핵심 고려 요소"
+    },
+    {
+      "id": "2:1:2:exam:19",
+      "exam_no": 34,
+      "part": 1,
+      "chapter": 2,
+      "stype": "exam",
+      "qn": 19,
+      "source": "Part 1/page_0022.jpg",
+      "answer": 4,
+      "keyword": "계약상대자 위험 부담 최고·원가절감 동기"
+    },
+    {
+      "id": "2:1:2:exam:22",
+      "exam_no": 35,
+      "part": 1,
+      "chapter": 2,
+      "stype": "exam",
+      "qn": 22,
+      "source": "Part 1/page_0022.jpg",
+      "answer": 4,
+      "keyword": "R&D·시제품 제작 적합 계약유형"
+    },
+    {
+      "id": "2:2:1:exam:5",
+      "exam_no": 36,
+      "part": 2,
+      "chapter": 1,
+      "stype": "exam",
+      "qn": 5,
+      "source": "Part 2/page_0006.jpg",
+      "answer": 2,
+      "keyword": "공급계획 수립 절차 순서"
+    },
+    {
+      "id": "2:2:1:exam:3",
+      "exam_no": 37,
+      "part": 2,
+      "chapter": 1,
+      "stype": "exam",
+      "qn": 3,
+      "source": "Part 2/page_0005.jpg",
+      "answer": 4,
+      "keyword": "조달청 조달데이터허브 기능"
+    },
+    {
+      "id": "2:2:2:cqa:3",
+      "exam_no": 38,
+      "part": 2,
+      "chapter": 2,
+      "stype": "cqa",
+      "qn": 3,
+      "source": "Part 2/page_0012.jpg",
+      "answer": 2,
+      "keyword": "입찰요청 방법과 계약방법 연결(ITB)"
+    },
+    {
+      "id": "2:2:2:exam:4",
+      "exam_no": 39,
+      "part": 2,
+      "chapter": 2,
+      "stype": "exam",
+      "qn": 4,
+      "source": "Part 2/page_0015.jpg",
+      "answer": 1,
+      "keyword": "기술적 적정성 분석 정의",
+      "cluster": "기술적_적정성"
+    },
+    {
+      "id": "2:2:3:exam:7",
+      "exam_no": 40,
+      "part": 2,
+      "chapter": 3,
+      "stype": "exam",
+      "qn": 7,
+      "source": "Part 2/page_0029.jpg",
+      "answer": 3,
+      "keyword": "직접재료비 vs 간접재료비 구분"
+    },
+    {
+      "id": "2:3:1:exam:4",
+      "exam_no": 41,
+      "part": 3,
+      "chapter": 1,
+      "stype": "exam",
+      "qn": 4,
+      "source": "Part 3/page_0019.jpg",
+      "answer": 1,
+      "keyword": "RFP 방식 적합 조달 상황"
+    },
+    {
+      "id": "2:3:1:exam:23",
+      "exam_no": 42,
+      "part": 3,
+      "chapter": 1,
+      "stype": "exam",
+      "qn": 23,
+      "source": "Part 3/page_0019.jpg",
+      "answer": 2,
+      "keyword": "견적요청서(RFQ) 정의"
+    },
+    {
+      "id": "2:3:2:exam:6",
+      "exam_no": 43,
+      "part": 3,
+      "chapter": 2,
+      "stype": "exam",
+      "qn": 6,
+      "source": "Part 3/page_0024.jpg",
+      "answer": 2,
+      "keyword": "사전규격공개 기간(일반·긴급·SW)"
+    },
+    {
+      "id": "2:3:2:exam:5",
+      "exam_no": 44,
+      "part": 3,
+      "chapter": 2,
+      "stype": "exam",
+      "qn": 5,
+      "source": "Part 3/page_0025.jpg",
+      "answer": 2,
+      "keyword": "사전규격공개 제도 도입 배경"
+    },
+    {
+      "id": "2:3:3:exam:15",
+      "exam_no": 45,
+      "part": 3,
+      "chapter": 3,
+      "stype": "exam",
+      "qn": 15,
+      "source": "Part 3/page_0034.jpg",
+      "answer": 4,
+      "keyword": "입찰무효 사유 비해당(예정가격 초과 투찰)"
+    },
+    {
+      "id": "2:4:1:cqa:3",
+      "exam_no": 46,
+      "part": 4,
+      "chapter": 1,
+      "stype": "cqa",
+      "qn": 3,
+      "source": "Part 4/page_0004.jpg",
+      "answer": 2,
+      "keyword": "지방계약법 제안서 평가 기본 비중"
+    },
+    {
+      "id": "2:4:1:exam:2",
+      "exam_no": 47,
+      "part": 4,
+      "chapter": 1,
+      "stype": "exam",
+      "qn": 2,
+      "source": "Part 4/page_0007.jpg",
+      "answer": 1,
+      "keyword": "협상에 의한 계약 절차 순서"
+    },
+    {
+      "id": "2:4:3:exam:22",
+      "exam_no": 48,
+      "part": 4,
+      "chapter": 3,
+      "stype": "exam",
+      "qn": 22,
+      "source": "Part 4/page_0030.jpg",
+      "answer": 1,
+      "keyword": "협상계약 가격협상 원칙"
+    },
+    {
+      "id": "2:4:4:exam:5",
+      "exam_no": 49,
+      "part": 4,
+      "chapter": 4,
+      "stype": "exam",
+      "qn": 5,
+      "source": "Part 4/page_0039.jpg",
+      "answer": 3,
+      "keyword": "적격심사(계약이행능력심사) 정의"
+    },
+    {
+      "id": "2:4:6:exam:6",
+      "exam_no": 50,
+      "part": 4,
+      "chapter": 6,
+      "stype": "exam",
+      "qn": 6,
+      "source": "Part 4/page_0059.jpg",
+      "answer": 3,
+      "keyword": "물가변동 계약금액 조정 요건(90일)"
+    }
+  ]
+}
