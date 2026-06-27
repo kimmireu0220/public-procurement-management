@@ -1,3 +1,6 @@
 .DS_Store
 __pycache__/
 *.pyc
+# 모의 출제 작업용 (manifest로 충분 — 커밋 금지)
+**/used_stable_ids.txt
+**/_draft/
