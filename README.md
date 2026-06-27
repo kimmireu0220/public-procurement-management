@@ -38,9 +38,9 @@
 
 | 도구 | 집계 방식 | 용도 |
 |---|---|---|
-| `validate_extract.py` | 정답 섹션 번호 기준 | **공식 문항 수** (README·`docs/문제집_프롬프트/`) |
-| `build_problem_book.py` | 문제 본문 `N.` 줄 패턴 | 빌드·`검토_요약.md` |
-| `audit_problem_book.py` | `parts_clean` Part 파일 줄 패턴 | `누락_후보_대조.md` |
+| `validate_extract.py` | 정답 섹션 번호 기준 | **공식 문항 수** · `추출_검증.md` |
+| `build_problem_book.py` | 문제 본문 `N.` 줄 패턴 | 문제집 MD/HTML |
+| `audit_problem_book.py` | OCR 표식 vs 출처 주석 대조 | (선택) `누락_후보_대조.md` |
 
 1과목은 validate 1,050 = build 1,050 — **`augment_sources()` 빌드 패치 제거** (2026-06-23, agent_extract 단일 원본).
 
@@ -89,7 +89,7 @@ python3 tools/annotate_source_ranges.py --part6  # 1과목 Part 06 출처 범위
 - **1과목 Part 06:** 단원별·OX 구간 `(문항 N~M)` 범위 source — `annotate_source_ranges.py --part6` (**2026-06 반영 완료**)
 - **OCR 누락 후보:** `audit_problem_book.py` + `quality_common.py` 필터로 해설·표·이론 인라인 Check 오탐 제거 (**전 과목 후보 중 미사용 0**)
 - **본문 답안 흔적:** `응답은`·감점 선지(`① -10점`) 등 검증 오탐 — `quality_common.count_answer_traces()`에서 제외 (**전 과목 0건**)
-- **3과목 Part 04 수동 분류:** `누락_후보_대조.md` 표 + `OCR_KNOWN_FALSE_POSITIVES` 자동 제외
+- **3과목 Part 04:** OCR 미사용 4페이지 — 부록·표·해설 오탐 (`audit_problem_book.py` + `OCR_KNOWN_FALSE_POSITIVES`)
 
 ## 제거된 산출물
 

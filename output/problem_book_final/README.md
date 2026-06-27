@@ -17,13 +17,12 @@
 | `{N}과목_문제집.md` | 전체 합본 (검색·diff용) |
 | `parts_clean/partN.md` | Part 단위 분할 |
 | `추출_검증.md` | 문항=정답 자동 검증 (`validate_extract.py`) |
-| `검토_요약.md` | 빌드 집계 (`validate_extract.py`와 동일 문항 수) |
-| `누락_후보_대조.md` | OCR 누락 후보 (`audit_problem_book.py`) |
-| `독립검수_리포트.md` | 1~4과목 수동 검수 기록 |
+
+정답·해설 품질 전수조사 요약: [`output/전수조사/종합보고.md`](../전수조사/종합보고.md)
 
 ## 문항 수 기준
 
-**공식 합계는 `validate_extract.py` 결과**이다 (README 표와 동일). `검토_요약.md`도 동일 로직을 사용한다.
+**공식 합계는 `validate_extract.py` 결과**이다.
 
 ## 학습 방법
 
@@ -36,7 +35,6 @@
 ```bash
 python3 tools/build_problem_book.py --subject all
 python3 tools/validate_extract.py --subject all
-python3 tools/audit_problem_book.py --subject all
 ```
 
 규칙·에이전트 프롬프트: `docs/extraction_guide.md`, `docs/문제집_프롬프트/`

@@ -143,9 +143,10 @@
 |---|---|---|
 | 추출본 | `output/agent_extract/<slug>/partN.md` | Part 단위 문제+정답 (**정답·검증 기준**) |
 | 최종 문제집 | `output/problem_book_final/<slug>/` | 정답 제거 MD+HTML, `parts_clean/` |
-| 검증 | `…/추출_검증.md`, `검토_요약.md`, `누락_후보_대조.md` | `tools/` 스크립트 생성 |
+| 검증 | `…/추출_검증.md` | `validate_extract.py` |
+| 품질 요약 | `output/전수조사/종합보고.md` | 5차 전수조사 (2026-06) |
 
-`build_problem_book.py`의 `검토_요약.md` 문항 수는 `validate_extract.py`와 **동일 로직**이다. `agent_extract`가 단일 원본이다.
+`agent_extract`가 단일 원본이다. 구조 검증은 `validate_extract.py` → `추출_검증.md`.
 
 ## OCR 경로 (slug 공백 → `_`)
 

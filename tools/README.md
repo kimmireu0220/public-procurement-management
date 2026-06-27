@@ -10,7 +10,7 @@
 |---|---|---|
 | `build_problem_book.py` | Part 단위 추출본에서 정답 제거·합본 MD/HTML 생성 | `problem_book_final/{slug}/` |
 | `validate_extract.py` | 문항=정답 검증 (**공식 문항 수**) | `추출_검증.md` |
-| `audit_problem_book.py` | OCR 표식 vs 출처 주석 대조 | `누락_후보_대조.md` |
+| `audit_problem_book.py` | OCR 표식 vs 출처 주석 대조 (선택) | `누락_후보_대조.md` (미보관 시 생략 가능) |
 | `quality_common.py` | 답안 흔적·OCR 후보 공통 필터 (validate/audit 공유) | — |
 | `enrich_source_comments.py` | 블록 `<!-- source: -->` → 문항별 전파 | `agent_extract` 수정 (2과목 등) |
 | `annotate_source_ranges.py` | 출처 주석에 `(문항 N~M)` 범위 보강 (1과목 Part 6) | `agent_extract` 수정 |
