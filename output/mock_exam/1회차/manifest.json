@@ -1,238 +1,406 @@
 {
-  "회차": "1",
-  "과목": "2과목",
-  "과목명": "공공조달계획 수립 및 분석",
-  "exam_range": [31, 50],
-  "generated": "2026-06-27",
-  "check_qa_count": 3,
-  "cluster_기술적적정성_count": 2,
-  "part_chapter_distribution": {
-    "Part1": {"Ch01": 2, "Ch02": 3},
-    "Part2": {"Ch01": 2, "Ch02": 2, "Ch03": 1},
-    "Part3": {"Ch01": 2, "Ch02": 2, "Ch03": 1},
-    "Part4": {"Ch01": 2, "Ch03": 1, "Ch04": 1, "Ch06": 1}
-  },
+  "round": 1,
+  "total": 80,
   "items": [
     {
-      "id": "2:1:1:exam:7",
+      "exam_no": 1,
+      "stable_id": "1:1:1:exam:10",
+      "answer": "②"
+    },
+    {
+      "exam_no": 2,
+      "stable_id": "1:1:2:exam:22",
+      "answer": "④"
+    },
+    {
+      "exam_no": 3,
+      "stable_id": "1:1:3:exam:2",
+      "answer": "④"
+    },
+    {
+      "exam_no": 4,
+      "stable_id": "1:1:4:exam:13",
+      "answer": "④"
+    },
+    {
+      "exam_no": 5,
+      "stable_id": "1:2:1:exam:2",
+      "answer": "④"
+    },
+    {
+      "exam_no": 6,
+      "stable_id": "1:2:1:exam:6",
+      "answer": "③"
+    },
+    {
+      "exam_no": 7,
+      "stable_id": "1:2:2:exam:10",
+      "answer": "④"
+    },
+    {
+      "exam_no": 8,
+      "stable_id": "1:2:3:exam:8",
+      "answer": "②"
+    },
+    {
+      "exam_no": 9,
+      "stable_id": "1:3:1:exam:1",
+      "answer": "④"
+    },
+    {
+      "exam_no": 10,
+      "stable_id": "1:3:2:exam:8",
+      "answer": "③"
+    },
+    {
+      "exam_no": 11,
+      "stable_id": "1:3:3:exam:3",
+      "answer": "①"
+    },
+    {
+      "exam_no": 12,
+      "stable_id": "1:3:4:check:3",
+      "answer": "①"
+    },
+    {
+      "exam_no": 13,
+      "stable_id": "1:4:1:exam:7",
+      "answer": "④"
+    },
+    {
+      "exam_no": 14,
+      "stable_id": "1:4:2:exam:2",
+      "answer": "④"
+    },
+    {
+      "exam_no": 15,
+      "stable_id": "1:4:3:exam:4",
+      "answer": "③"
+    },
+    {
+      "exam_no": 16,
+      "stable_id": "1:4:4:check:2",
+      "answer": "④"
+    },
+    {
+      "exam_no": 17,
+      "stable_id": "1:4:5:exam:3",
+      "answer": "②"
+    },
+    {
+      "exam_no": 18,
+      "stable_id": "1:5:1:check:2",
+      "answer": "③"
+    },
+    {
+      "exam_no": 19,
+      "stable_id": "1:5:1:exam:6",
+      "answer": "④"
+    },
+    {
+      "exam_no": 20,
+      "stable_id": "1:5:2:exam:11",
+      "answer": "④"
+    },
+    {
+      "exam_no": 21,
+      "stable_id": "1:5:3:exam:11",
+      "answer": "①"
+    },
+    {
+      "exam_no": 22,
+      "stable_id": "1:5:4:check:3",
+      "answer": "③"
+    },
+    {
+      "exam_no": 23,
+      "stable_id": "1:6:1:check:2",
+      "answer": "③"
+    },
+    {
+      "exam_no": 24,
+      "stable_id": "1:6:1:exam:13",
+      "answer": "②"
+    },
+    {
+      "exam_no": 25,
+      "stable_id": "1:6:2:exam:12",
+      "answer": "②"
+    },
+    {
+      "exam_no": 26,
+      "stable_id": "1:6:3:exam:6",
+      "answer": "②"
+    },
+    {
+      "exam_no": 27,
+      "stable_id": "1:6:4:check:5",
+      "answer": "④"
+    },
+    {
+      "exam_no": 28,
+      "stable_id": "1:7:1:exam:6",
+      "answer": "②"
+    },
+    {
+      "exam_no": 29,
+      "stable_id": "1:7:1:exam:13",
+      "answer": "④"
+    },
+    {
+      "exam_no": 30,
+      "stable_id": "1:7:2:exam:9",
+      "answer": "③"
+    },
+    {
       "exam_no": 31,
-      "part": 1,
-      "chapter": 1,
-      "stype": "exam",
-      "qn": 7,
-      "source": "Part 1/page_0008.jpg",
-      "answer": 2,
-      "keyword": "나라장터 예정가격 산정 방식"
+      "stable_id": "2:1:1:exam:7",
+      "answer": "②"
     },
     {
-      "id": "2:1:1:cqa:1",
       "exam_no": 32,
-      "part": 1,
-      "chapter": 1,
-      "stype": "cqa",
-      "qn": 1,
-      "source": "Part 1/page_0002.jpg",
-      "answer": 2,
-      "keyword": "조달사업 발주 절차 순서"
+      "stable_id": "2:1:1:cqa:1",
+      "answer": "②"
     },
     {
-      "id": "2:1:2:exam:11",
       "exam_no": 33,
-      "part": 1,
-      "chapter": 2,
-      "stype": "exam",
-      "qn": 11,
-      "source": "Part 1/page_0021.jpg",
-      "answer": 3,
-      "keyword": "계약유형 선택 핵심 고려 요소"
+      "stable_id": "2:1:2:exam:11",
+      "answer": "③"
     },
     {
-      "id": "2:1:2:exam:19",
       "exam_no": 34,
-      "part": 1,
-      "chapter": 2,
-      "stype": "exam",
-      "qn": 19,
-      "source": "Part 1/page_0022.jpg",
-      "answer": 4,
-      "keyword": "계약상대자 위험 부담 최고·원가절감 동기"
+      "stable_id": "2:1:2:exam:19",
+      "answer": "④"
     },
     {
-      "id": "2:1:2:exam:22",
       "exam_no": 35,
-      "part": 1,
-      "chapter": 2,
-      "stype": "exam",
-      "qn": 22,
-      "source": "Part 1/page_0022.jpg",
-      "answer": 4,
-      "keyword": "R&D·시제품 제작 적합 계약유형"
+      "stable_id": "2:1:2:exam:22",
+      "answer": "④"
     },
     {
-      "id": "2:2:1:exam:5",
       "exam_no": 36,
-      "part": 2,
-      "chapter": 1,
-      "stype": "exam",
-      "qn": 5,
-      "source": "Part 2/page_0006.jpg",
-      "answer": 2,
-      "keyword": "공급계획 수립 절차 순서"
+      "stable_id": "2:2:1:exam:5",
+      "answer": "②"
     },
     {
-      "id": "2:2:1:exam:3",
       "exam_no": 37,
-      "part": 2,
-      "chapter": 1,
-      "stype": "exam",
-      "qn": 3,
-      "source": "Part 2/page_0005.jpg",
-      "answer": 4,
-      "keyword": "조달청 조달데이터허브 기능"
+      "stable_id": "2:2:1:exam:3",
+      "answer": "④"
     },
     {
-      "id": "2:2:2:cqa:3",
       "exam_no": 38,
-      "part": 2,
-      "chapter": 2,
-      "stype": "cqa",
-      "qn": 3,
-      "source": "Part 2/page_0012.jpg",
-      "answer": 2,
-      "keyword": "입찰요청 방법과 계약방법 연결(ITB)"
+      "stable_id": "2:2:2:cqa:3",
+      "answer": "②"
     },
     {
-      "id": "2:2:2:exam:4",
       "exam_no": 39,
-      "part": 2,
-      "chapter": 2,
-      "stype": "exam",
-      "qn": 4,
-      "source": "Part 2/page_0015.jpg",
-      "answer": 1,
-      "keyword": "기술적 적정성 분석 정의",
-      "cluster": "기술적_적정성"
+      "stable_id": "2:2:2:exam:4",
+      "answer": "①"
     },
     {
-      "id": "2:2:3:exam:7",
       "exam_no": 40,
-      "part": 2,
-      "chapter": 3,
-      "stype": "exam",
-      "qn": 7,
-      "source": "Part 2/page_0029.jpg",
-      "answer": 3,
-      "keyword": "직접재료비 vs 간접재료비 구분"
+      "stable_id": "2:2:3:exam:7",
+      "answer": "③"
     },
     {
-      "id": "2:3:1:exam:4",
       "exam_no": 41,
-      "part": 3,
-      "chapter": 1,
-      "stype": "exam",
-      "qn": 4,
-      "source": "Part 3/page_0019.jpg",
-      "answer": 1,
-      "keyword": "RFP 방식 적합 조달 상황"
+      "stable_id": "2:3:1:exam:4",
+      "answer": "①"
     },
     {
-      "id": "2:3:1:exam:23",
       "exam_no": 42,
-      "part": 3,
-      "chapter": 1,
-      "stype": "exam",
-      "qn": 23,
-      "source": "Part 3/page_0019.jpg",
-      "answer": 2,
-      "keyword": "견적요청서(RFQ) 정의"
+      "stable_id": "2:3:1:exam:23",
+      "answer": "②"
     },
     {
-      "id": "2:3:2:exam:6",
       "exam_no": 43,
-      "part": 3,
-      "chapter": 2,
-      "stype": "exam",
-      "qn": 6,
-      "source": "Part 3/page_0024.jpg",
-      "answer": 2,
-      "keyword": "사전규격공개 기간(일반·긴급·SW)"
+      "stable_id": "2:3:2:exam:6",
+      "answer": "②"
     },
     {
-      "id": "2:3:2:exam:5",
       "exam_no": 44,
-      "part": 3,
-      "chapter": 2,
-      "stype": "exam",
-      "qn": 5,
-      "source": "Part 3/page_0025.jpg",
-      "answer": 2,
-      "keyword": "사전규격공개 제도 도입 배경"
+      "stable_id": "2:3:2:exam:5",
+      "answer": "②"
     },
     {
-      "id": "2:3:3:exam:15",
       "exam_no": 45,
-      "part": 3,
-      "chapter": 3,
-      "stype": "exam",
-      "qn": 15,
-      "source": "Part 3/page_0034.jpg",
-      "answer": 4,
-      "keyword": "입찰무효 사유 비해당(예정가격 초과 투찰)"
+      "stable_id": "2:3:3:exam:15",
+      "answer": "④"
     },
     {
-      "id": "2:4:1:cqa:3",
       "exam_no": 46,
-      "part": 4,
-      "chapter": 1,
-      "stype": "cqa",
-      "qn": 3,
-      "source": "Part 4/page_0004.jpg",
-      "answer": 2,
-      "keyword": "지방계약법 제안서 평가 기본 비중"
+      "stable_id": "2:4:1:cqa:3",
+      "answer": "②"
     },
     {
-      "id": "2:4:1:exam:2",
       "exam_no": 47,
-      "part": 4,
-      "chapter": 1,
-      "stype": "exam",
-      "qn": 2,
-      "source": "Part 4/page_0007.jpg",
-      "answer": 1,
-      "keyword": "협상에 의한 계약 절차 순서"
+      "stable_id": "2:4:1:exam:2",
+      "answer": "①"
     },
     {
-      "id": "2:4:3:exam:22",
       "exam_no": 48,
-      "part": 4,
-      "chapter": 3,
-      "stype": "exam",
-      "qn": 22,
-      "source": "Part 4/page_0030.jpg",
-      "answer": 1,
-      "keyword": "협상계약 가격협상 원칙"
+      "stable_id": "2:4:3:exam:22",
+      "answer": "①"
     },
     {
-      "id": "2:4:4:exam:5",
       "exam_no": 49,
-      "part": 4,
-      "chapter": 4,
-      "stype": "exam",
-      "qn": 5,
-      "source": "Part 4/page_0039.jpg",
-      "answer": 3,
-      "keyword": "적격심사(계약이행능력심사) 정의"
+      "stable_id": "2:4:4:exam:5",
+      "answer": "③"
     },
     {
-      "id": "2:4:6:exam:6",
       "exam_no": 50,
-      "part": 4,
-      "chapter": 6,
-      "stype": "exam",
-      "qn": 6,
-      "source": "Part 4/page_0059.jpg",
-      "answer": 3,
-      "keyword": "물가변동 계약금액 조정 요건(90일)"
+      "stable_id": "2:4:6:exam:6",
+      "answer": "③"
+    },
+    {
+      "exam_no": 51,
+      "stable_id": "3:1:1:exam:13",
+      "answer": "①"
+    },
+    {
+      "exam_no": 52,
+      "stable_id": "3:1:1:exam:17",
+      "answer": "③"
+    },
+    {
+      "exam_no": 53,
+      "stable_id": "3:1:2:exam:4",
+      "answer": "④"
+    },
+    {
+      "exam_no": 54,
+      "stable_id": "3:1:2:exam:6",
+      "answer": "①"
+    },
+    {
+      "exam_no": 55,
+      "stable_id": "3:1:2:exam:19",
+      "answer": "②"
+    },
+    {
+      "exam_no": 56,
+      "stable_id": "3:1:4:exam:1",
+      "answer": "①"
+    },
+    {
+      "exam_no": 57,
+      "stable_id": "3:1:3:exam:5",
+      "answer": "③"
+    },
+    {
+      "exam_no": 58,
+      "stable_id": "3:1:4:exam:14",
+      "answer": "③"
+    },
+    {
+      "exam_no": 59,
+      "stable_id": "3:2:1:exam:8",
+      "answer": "④"
+    },
+    {
+      "exam_no": 60,
+      "stable_id": "3:2:1:exam:28",
+      "answer": "④"
+    },
+    {
+      "exam_no": 61,
+      "stable_id": "3:2:1:cqa:17",
+      "answer": "③"
+    },
+    {
+      "exam_no": 62,
+      "stable_id": "3:2:2:cqa:16",
+      "answer": "③"
+    },
+    {
+      "exam_no": 63,
+      "stable_id": "3:2:2:exam:28",
+      "answer": "④"
+    },
+    {
+      "exam_no": 64,
+      "stable_id": "3:2:2:exam:34",
+      "answer": "②"
+    },
+    {
+      "exam_no": 65,
+      "stable_id": "3:2:2:exam:20",
+      "answer": "③"
+    },
+    {
+      "exam_no": 66,
+      "stable_id": "3:3:1:exam:13",
+      "answer": "②"
+    },
+    {
+      "exam_no": 67,
+      "stable_id": "3:3:1:exam:3",
+      "answer": "②"
+    },
+    {
+      "exam_no": 68,
+      "stable_id": "3:3:1:exam:24",
+      "answer": "④"
+    },
+    {
+      "exam_no": 69,
+      "stable_id": "3:3:1:exam:27",
+      "answer": "①"
+    },
+    {
+      "exam_no": 70,
+      "stable_id": "3:3:2:cqa:13",
+      "answer": "③"
+    },
+    {
+      "exam_no": 71,
+      "stable_id": "3:3:2:exam:7",
+      "answer": "③"
+    },
+    {
+      "exam_no": 72,
+      "stable_id": "3:3:2:exam:28",
+      "answer": "②"
+    },
+    {
+      "exam_no": 73,
+      "stable_id": "3:3:2:exam:29",
+      "answer": "③"
+    },
+    {
+      "exam_no": 74,
+      "stable_id": "3:4:1:cqa:13",
+      "answer": "③"
+    },
+    {
+      "exam_no": 75,
+      "stable_id": "3:4:1:exam:17",
+      "answer": "④"
+    },
+    {
+      "exam_no": 76,
+      "stable_id": "3:4:2:cqa:2",
+      "answer": "③"
+    },
+    {
+      "exam_no": 77,
+      "stable_id": "3:4:2:cqa:10",
+      "answer": "②"
+    },
+    {
+      "exam_no": 78,
+      "stable_id": "3:4:2:exam:9",
+      "answer": "②"
+    },
+    {
+      "exam_no": 79,
+      "stable_id": "3:4:1:exam:21",
+      "answer": "④"
+    },
+    {
+      "exam_no": 80,
+      "stable_id": "3:4:2:exam:7",
+      "answer": "①"
     }
   ]
 }

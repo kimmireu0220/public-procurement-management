@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>필기 모의 1회차</title>
+  <style>
+    body { font-family: "Apple SD Gothic Neo", "Malgun Gothic", sans-serif; max-width: 820px; margin: 2rem auto; padding: 0 1rem; line-height: 1.65; color: #222; }
+    h1 { font-size: 1.35rem; }
+    h2 { font-size: 1.05rem; margin-top: 2rem; padding-bottom: .35rem; border-bottom: 1px solid #ccc; }
+    blockquote { color: #555; font-size: .92rem; border-left: 3px solid #ddd; margin-left: 0; padding-left: 1rem; }
+    ol { padding-left: 1.2rem; }
+    li { margin: .9rem 0; }
+    .note { color: #666; font-size: .9rem; }
+  </style>
+</head>
+<body>
+  <h1>공공조달관리사 필기 모의 1회차</h1>
+  <p class="note">80문항 · 2시간 · 답안은 채팅에 1~30 / 31~50 / 51~80 구간별로 제출</p>
+  <div id="content">불러오는 중…</div>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script>
+    fetch('필기_모의_문제.md')
+      .then(r => r.text())
+      .then(t => { document.getElementById('content').innerHTML = marked.parse(t); })
+      .catch(() => { document.getElementById('content').textContent = '필기_모의_문제.md를 같은 폴더에서 열어 주세요.'; });
+  </script>
+</body>
+</html>
