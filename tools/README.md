@@ -52,5 +52,5 @@ python3 tools/build_cbt_viewer.py --profile subject3 --round K --pages
 | 구분 | 경로 |
 |------|------|
 | 필기 통합 80문항 | `output/mock_exam/필기/통합/{K}회차/` |
-| 필기 3과목 단독 | `output/mock_exam/필기/3과목/{K}회차/` |
+| 필기 3과목 단독 | `output/mock_exam/필기/3과목/{K}회차/` · Pages `docs/3과목/` — [`선별.md`](../docs/시험모의/선별.md) §A-6 |
 | 실기 | `output/mock_exam/실기/{K}회차/` |

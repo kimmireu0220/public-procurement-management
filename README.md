@@ -15,7 +15,7 @@
 | 2. 문제 풀이 | `output/problem_book_final/<과목>/〈N〉과목_문제집.html` | 사람 학습용 (정답 없음) |
 | 2b. 출제·선별 | `…/〈N〉과목_문제집.md` | 에이전트·모의 출제용 (html과 동일 내용) |
 | 3. 정답·해설 | `output/agent_extract/<과목>/partN.md` | 정답 섹션 |
-| 4. 모의시험 | [`docs/시험모의/`](docs/시험모의/) · [`output/mock_exam/`](output/mock_exam/README.md) | 출제·채점 프롬프트 · 필기 80문항 · 풀이 · 오답노트 |
+| 4. 모의시험 | [`docs/시험모의/`](docs/시험모의/) · [`output/mock_exam/`](output/mock_exam/README.md) | 통합 필기 80 · 3과목 단독 30 · 풀이 · 오답노트 |
 
 ## 원본 자료 (`sources/`)
 
@@ -38,6 +38,7 @@
 ## 모의고사
 
 - 프롬프트: [`docs/시험모의/`](docs/시험모의/) — [`선별.md`](docs/시험모의/선별.md) · [`풀이.md`](docs/시험모의/풀이.md)
-- **온라인 CBT:** [GitHub Pages](https://kimmireu0220.github.io/public-procurement-management/) — 출제 후 `build_cbt_viewer.py --round K --pages` → **`main` 커밋·푸시** 필수 ([`선별.md` §A-5](docs/시험모의/선별.md))
+- **온라인 CBT (통합 80문항):** [GitHub Pages](https://kimmireu0220.github.io/public-procurement-management/) — `python3 tools/build_cbt_viewer.py --round K --pages` → **`main` 커밋·푸시** ([`선별.md` §A-5](docs/시험모의/선별.md))
+- **온라인 CBT (3과목 30문항):** [GitHub Pages `/3과목/`](https://kimmireu0220.github.io/public-procurement-management/3%EA%B3%BC%EB%AA%A9/) — `python3 tools/build_cbt_viewer.py --profile subject3 --round K --pages` → **`main` push** ([`선별.md` §A-6](docs/시험모의/선별.md))
 
 에이전트 역할: [`AGENTS.md`](AGENTS.md)

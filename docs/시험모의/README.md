@@ -10,8 +10,8 @@
 
 | 파일 | 용도 |
 |------|------|
-| [`선별.md`](선별.md) | 필기·실기 선별 · `_draft` 병합 · 교차검수 · 〈K+1〉 반영(§A-0) |
-| [`풀이.md`](풀이.md) | 채점·해설·오답노트·보강(§D)·부록(요청 예시) |
+| [`선별.md`](선별.md) | 필기·실기 선별 · `_draft` 병합 · 교차검수 · 3과목 단독(§A-6) · 〈K+1〉 반영(§A-0) |
+| [`풀이.md`](풀이.md) | 통합 채점(§A) · 3과목 단독(§C) · 오답노트 · 보강(§D) |
 
 산출물: [`output/mock_exam/`](../../output/mock_exam/README.md)
 
@@ -23,8 +23,10 @@
 | 1~3 | 선별 §A-1~A-2 | `_draft` 선별 → `merge_mock_draft.py` (초안 병합) |
 | 4 | 선별 §A-3 | 교차검수 → 필요 시 재병합 |
 | 5 | 선별 §A-4 | `build_cbt_viewer.py` (검수·재병합 **후**) |
-| 6 | 선별 §A-5 | `build_cbt_viewer.py --pages` 또는 `publish_cbt_pages.py` → **`main` push** |
-| 7~8 | 풀이 §A·§D | 채점·보강 |
+| 6 | 선별 §A-5 | 통합 — `build_cbt_viewer.py --round K --pages` → **`main` push** |
+| 6b | 선별 §A-6 | 3과목 단독 — `build_cbt_viewer.py --profile subject3 --round K --pages` → **`main` push** |
+| 7~8 | 풀이 §A·§D | 통합 채점·보강 |
+| 7b | 풀이 §C | 3과목 단독 채점 |
 | 실기 | 선별 §B | 20 내외 · 유형 비중 에이전트 판단 |
 
 ## 역할 분리

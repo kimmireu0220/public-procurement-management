@@ -30,7 +30,18 @@ python3 tools/build_cbt_viewer.py --round K --pages
 
 ## 필기 3과목 단독 (30문항)
 
-[`필기/3과목/README.md`](필기/3과목/README.md) 참고.
+| 항목 | 경로 |
+|------|------|
+| 회차 산출 | `필기/3과목/〈K〉회차/` |
+| 온라인 CBT | [GitHub Pages `/3과목/`](https://kimmireu0220.github.io/public-procurement-management/3%EA%B3%BC%EB%AA%A9/) |
+| 출제·풀이 | [`선별.md` §A-6](../../docs/시험모의/선별.md) · [`풀이.md` §C](../../docs/시험모의/풀이.md) |
+
+```bash
+python3 tools/merge_mock_draft_subject3.py K
+python3 tools/build_cbt_viewer.py --profile subject3 --round K --pages
+```
+
+상세: [`필기/3과목/README.md`](필기/3과목/README.md)
 
 ## 실기
 
@@ -47,4 +58,4 @@ python3 tools/build_cbt_viewer.py --round K --pages
 | `교차검수.md` | 출제 검수 |
 | `필기_풀이.md` | 채점·해설 |
 
-출제 완료 시 `docs/` 갱신 후 `main` push — [`선별.md`](../../docs/시험모의/선별.md) §A-5.
+출제 완료 시 `docs/` 갱신 후 `main` push — 통합 [`선별.md`](../../docs/시험모의/선별.md) §A-5 · 3과목 단독 §A-6.
