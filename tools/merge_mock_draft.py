@@ -1,14 +1,24 @@
 #!/usr/bin/env python3
-"""과목별 _draft 선별본 → 필기_모의_문제.md · 필기_모의_정답.md · manifest.json 병합."""
+"""과목별 _draft 선별본 → 필기_모의_문제.md · 필기_모의_정답.md · manifest.json 병합 (통합 80문항)."""
 
 from __future__ import annotations
 
 import argparse
-import json
-import re
+import sys
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[1]
+TOOLS_DIR = Path(__file__).resolve().parent
+if str(TOOLS_DIR) not in sys.path:
+    sys.path.insert(0, str(TOOLS_DIR))
+
+from cbt.draft_merge import (  # noqa: E402
+    fix_stable_id,
+    format_question,
+    parse_answer_table,
+    parse_questions,
+    write_outputs,
+)
+from cbt.profiles import FULL_MOCK  # noqa: E402
 
 SUBJECTS = [
     (1, "1과목_선별.md", "공공조달과 법제도 이해", 1, 30),
@@ -16,133 +26,9 @@ SUBJECTS = [
     (3, "3과목_선별.md", "공공계약관리", 51, 80),
 ]
 
-SOURCE_RE = re.compile(r"<!--\s*source:\s*([^>]+?)\s*-->")
-ID_RE = re.compile(r"<!--\s*id:\s*([^>]+?)\s*-->")
-CHOICE_RE = re.compile(r"^\s*([①②③④])\s+(.+)$")
-HEADER_ONLY = re.compile(r"^###\s*(\d+)\.\s*$")
-Q_LINE = re.compile(r"^(?:###\s*)?(\d+)\.\s+(.+)$")
-ANS_ROW = re.compile(r"^\|\s*(\d+)\s*\|\s*([^|]+?)\s*\|\s*([①②③④])\s*\|")
-
-
-def fix_stable_id(sid: str, subject: int) -> str:
-    parts = sid.strip().split(":")
-    if len(parts) != 5:
-        return sid.strip()
-    if subject == 1 and parts[0] != "1":
-        parts[0] = "1"
-    return ":".join(parts)
-
-
-def parse_answer_table(text: str) -> dict[int, tuple[str, str]]:
-    out: dict[int, tuple[str, str]] = {}
-    in_table = False
-    for line in text.splitlines():
-        if line.strip().startswith("## 정답"):
-            in_table = True
-            continue
-        if in_table:
-            if line.startswith("## ") and "정답" not in line:
-                break
-            m = ANS_ROW.match(line.strip())
-            if m:
-                out[int(m.group(1))] = (m.group(2).strip(), m.group(3))
-    return out
-
-
-def is_question_start(line: str) -> bool:
-    if line.startswith("## Part") or line.startswith("### Part"):
-        return False
-    if HEADER_ONLY.match(line):
-        return True
-    m = Q_LINE.match(line)
-    if not m:
-        return False
-    if re.match(r"^[①②③④]", m.group(2).strip()):
-        return False
-    return True
-
-
-def parse_questions(text: str, subject: int) -> list[dict]:
-    m = re.search(r"^## 정답", text, re.M)
-    body = text[: m.start()] if m else text
-    lines = body.splitlines()
-    questions: list[dict] = []
-    i = 0
-    while i < len(lines):
-        line = lines[i]
-        local_no = None
-        stem = ""
-        ho = HEADER_ONLY.match(line)
-        if ho:
-            local_no = int(ho.group(1))
-            i += 1
-        elif is_question_start(line):
-            qm = Q_LINE.match(line)
-            local_no = int(qm.group(1))
-            stem = qm.group(2).strip()
-            i += 1
-        else:
-            i += 1
-            continue
-
-        choices: list[tuple[str, str]] = []
-        source = ""
-        sid = ""
-        while i < len(lines):
-            ln = lines[i]
-            if is_question_start(ln):
-                break
-            if ln.startswith("## ") and not ln.startswith("## Part"):
-                break
-            if ln.strip() == "---" and choices:
-                break
-            sm = SOURCE_RE.search(ln)
-            if sm:
-                source = sm.group(1).strip()
-                i += 1
-                continue
-            im = ID_RE.search(ln)
-            if im:
-                sid = fix_stable_id(im.group(1), subject)
-                i += 1
-                continue
-            if ln.strip().startswith("<!--"):
-                i += 1
-                continue
-            cm = CHOICE_RE.match(ln)
-            if cm:
-                choices.append((cm.group(1), cm.group(2).strip()))
-                i += 1
-                continue
-            if ln.strip() and not ln.startswith("#"):
-                stem = (stem + " " + ln.strip()).strip() if stem else ln.strip()
-            i += 1
-        if len(choices) >= 4 and stem and local_no is not None:
-            questions.append(
-                {
-                    "local_no": local_no,
-                    "stem": stem,
-                    "choices": choices[:4],
-                    "source": source,
-                    "stable_id": sid,
-                }
-            )
-    questions.sort(key=lambda q: q["local_no"])
-    return questions
-
-
-def format_question(exam_no: int, q: dict) -> str:
-    lines = [f"{exam_no}. {q['stem']}"]
-    for label, text in q["choices"]:
-        lines.append(f"   {label} {text}")
-    lines.append(f"<!-- source: {q['source']} -->")
-    lines.append(f"<!-- id: {q['stable_id']} -->")
-    lines.append("")
-    return "\n".join(lines)
-
 
 def merge_round(round_no: int) -> int:
-    out = ROOT / "output/mock_exam" / f"{round_no}회차"
+    out = FULL_MOCK.round_dir(round_no)
     draft = out / "_draft"
     if not draft.is_dir():
         raise SystemExit(f"missing draft dir: {draft}")
@@ -162,12 +48,14 @@ def merge_round(round_no: int) -> int:
 
     for subject, fname, name, start, end in SUBJECTS:
         text = (draft / fname).read_text(encoding="utf-8")
-        qs = parse_questions(text, subject)
+        qs = parse_questions(text, subject=subject)
         ans_table = parse_answer_table(text)
         expected = end - start + 1
         if len(qs) != expected:
             nums = [q["local_no"] for q in qs]
-            raise SystemExit(f"{fname}: parsed {len(qs)} questions, expected {expected}, nos={nums}")
+            raise SystemExit(
+                f"{fname}: parsed {len(qs)} questions, expected {expected}, nos={nums}"
+            )
         problem_parts.append(f"\n## {subject}과목 {name} ({start}~{end})\n\n")
         answer_parts.append(f"\n## {subject}과목 ({start}~{end})\n")
         for idx, q in enumerate(qs):
@@ -184,21 +72,22 @@ def merge_round(round_no: int) -> int:
                 {"exam_no": exam_no, "stable_id": q["stable_id"], "answer": q["answer"]}
             )
 
-    manifest = {"round": round_no, "total": 80, "items": all_items}
-    (out / "필기_모의_문제.md").write_text("".join(problem_parts), encoding="utf-8")
-    (out / "필기_모의_정답.md").write_text("".join(answer_parts), encoding="utf-8")
-    (out / "manifest.json").write_text(
-        json.dumps(manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
+    manifest = {"round": round_no, "total": FULL_MOCK.question_count, "items": all_items}
+    return write_outputs(
+        out,
+        round_no=round_no,
+        problem_parts=problem_parts,
+        answer_parts=answer_parts,
+        manifest=manifest,
     )
-    return len(all_items)
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description="모의고사 draft 병합")
+    parser = argparse.ArgumentParser(description="통합 필기 모의 draft 병합 (80문항)")
     parser.add_argument("round", type=int, nargs="?", default=1, help="회차 번호")
     args = parser.parse_args()
     n = merge_round(args.round)
-    print(f"merged {n} questions → output/mock_exam/{args.round}회차/")
+    print(f"merged {n} questions → output/mock_exam/필기/통합/{args.round}회차/")
 
 
 if __name__ == "__main__":

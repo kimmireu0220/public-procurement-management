@@ -12,7 +12,6 @@ ID_TAG = re.compile(r"<!--\s*id:\s*([^>]+)\s*-->")
 CHOICE_KEYS = {"①": "1", "②": "2", "③": "3", "④": "4"}
 
 EXPECTED_QUESTION_COUNT = 80
-SUBJECT3_QUESTION_COUNT = 30
 
 
 def parse_questions(text: str) -> list[dict]:

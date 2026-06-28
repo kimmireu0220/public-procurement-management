@@ -1,12 +1,14 @@
 # 3과목 전용 필기 모의
 
-3과목(공공계약관리) **30문항만** 응시하는 CBT 모의고사입니다. 통합 80문항 모의(`1회차`~`N회차`)와 별도로 운영합니다.
+3과목(공공계약관리) **30문항만** 응시하는 CBT 모의고사입니다. 통합 80문항(`필기/통합/`)과 별도로 운영합니다.
+
+**경로:** `output/mock_exam/필기/3과목/〈K〉회차/`
 
 ## 회차
 
 | 회차 | 경로 | CBT |
 |------|------|-----|
-| 1 | [1회차/](1회차/) | [온라인 CBT](../../docs/3과목/index.html) |
+| 1 | [1회차/](1회차/) | [온라인 CBT](../../../docs/3과목/index.html) |
 
 ## 워크플로
 
@@ -18,7 +20,8 @@ python3 tools/build_subject3_draft.py 1
 python3 tools/merge_mock_draft_subject3.py 1
 
 # 3. 교차검수 후 CBT + Pages
-python3 tools/build_cbt_viewer.py --subject3 --round 1 --pages
+python3 tools/build_cbt_viewer.py --profile subject3 --round 1 --pages
+# (--subject3 도 동일)
 ```
 
 - 선별: `problem_book_final` + `agent_extract` 대조 (자동 추첨 없음)

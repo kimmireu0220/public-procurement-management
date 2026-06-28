@@ -1,12 +1,11 @@
-#!/usr/bin/env python3
-"""3과목 문제 은행에서 stable_id로 지문·정답 추출 (선별 draft 생성용)."""
+"""3과목 문제 은행에서 stable_id로 지문·정답 추출."""
 
 from __future__ import annotations
 
 import re
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]
 PROBLEM_MD = ROOT / "output/problem_book_final/3과목_공공계약관리/3과목_문제집.md"
 EXTRACT_DIR = ROOT / "output/agent_extract/3과목_공공계약관리"
 
@@ -14,6 +13,7 @@ CHOICE_RE = re.compile(r"^\s*([①②③④])\s+(.+)$")
 Q_LINE = re.compile(r"^(\d+)\.\s+(.+)$")
 SOURCE_RE = re.compile(r"<!--\s*source:\s*([^>]+?)\s*-->")
 ANS_LINE = re.compile(r"^(\d+)\.\s+([①②③④OX]+)\s*[—–-]")
+CHAPTER_HDR = re.compile(r"^#+\s*(?:CHAPTER|Chapter)\s+(\d+)", re.I)
 
 
 def parse_stable_id(sid: str) -> tuple[int, int, str, int]:
@@ -21,9 +21,6 @@ def parse_stable_id(sid: str) -> tuple[int, int, str, int]:
     if len(parts) != 5 or parts[0] != "3":
         raise ValueError(f"invalid stable_id: {sid}")
     return int(parts[1]), int(parts[2]), parts[3], int(parts[4])
-
-
-CHAPTER_HDR = re.compile(r"^#+\s*(?:CHAPTER|Chapter)\s+(\d+)", re.I)
 
 
 def load_answer_index(part: int) -> dict[tuple[int, str, int], str]:

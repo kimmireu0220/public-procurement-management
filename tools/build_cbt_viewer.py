@@ -11,7 +11,18 @@ TOOLS_DIR = Path(__file__).resolve().parent
 if str(TOOLS_DIR) not in sys.path:
     sys.path.insert(0, str(TOOLS_DIR))
 
-from cbt.builder import build_round, build_subject3_round  # noqa: E402
+from cbt.builder import build_for_profile  # noqa: E402
+from cbt.profiles import FULL_MOCK, PROFILES, SUBJECT3  # noqa: E402
+
+
+def resolve_profile(args: argparse.Namespace):
+    if args.profile:
+        if args.profile not in PROFILES:
+            raise SystemExit(f"unknown profile: {args.profile} (choose: {', '.join(PROFILES)})")
+        return PROFILES[args.profile]
+    if args.subject3:
+        return SUBJECT3
+    return FULL_MOCK
 
 
 def main() -> None:
@@ -22,12 +33,18 @@ def main() -> None:
         type=int,
         default=1,
         metavar="K",
-        help="회차 번호 (기본 1 → output/mock_exam/K회차/ 또는 3과목/K회차/)",
+        help="회차 번호",
+    )
+    parser.add_argument(
+        "--profile",
+        choices=tuple(PROFILES.keys()),
+        default=None,
+        help="CBT 프로필 (full=통합 80문항, subject3=3과목 30문항)",
     )
     parser.add_argument(
         "--subject3",
         action="store_true",
-        help="3과목 전용 30문항 (output/mock_exam/3과목/K회차/)",
+        help="(호환) --profile subject3 와 동일",
     )
     parser.add_argument(
         "--pages",
@@ -38,24 +55,20 @@ def main() -> None:
     if args.round < 1:
         raise SystemExit("--round must be >= 1")
 
-    if args.subject3:
-        out_dir, count = build_subject3_round(args.round)
-        label = f"3과목/{args.round}회차"
-    else:
-        out_dir, count = build_round(args.round)
-        label = f"{args.round}회차"
-    print(f"CBT viewer: {label}, {count} questions → {out_dir}")
+    profile = resolve_profile(args)
+    out_dir, count = build_for_profile(args.round, profile)
+    print(f"CBT viewer: {profile.id} round {args.round}, {count} questions → {out_dir}")
 
     if args.pages:
-        if args.subject3:
-            from publish_cbt_pages import publish_subject3  # noqa: E402
+        if profile.id == "subject3":
+            from subject3.publish import publish  # noqa: E402
 
-            k = publish_subject3(args.round)
+            k = publish(args.round)
             print(f"GitHub Pages: docs/3과목/index.html ← 3과목 round {k}")
         else:
             from publish_cbt_pages import publish  # noqa: E402
 
-            k = publish()
+            k = publish(args.round)
             print(f"GitHub Pages: docs/index.html ← round {k}")
 
 
