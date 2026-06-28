@@ -36,8 +36,43 @@ ROUND1_SELECTED: list[str] = [
     "3:4:3:exam:20",
 ]
 
+# 2회차 — 통합·1회차 3과목 manifest의 3:* 미사용 · 1회차 약점(하도급·적격심사·MAS·PQ·종합심사) 보강
+ROUND2_SELECTED: list[str] = [
+    "3:1:1:exam:4",
+    "3:1:1:exam:14",
+    "3:1:1:exam:24",
+    "3:1:2:exam:12",
+    "3:1:2:exam:15",
+    "3:1:2:cqa:1",
+    "3:1:4:exam:11",
+    "3:1:4:exam:18",
+    "3:2:1:exam:23",
+    "3:2:1:exam:18",
+    "3:2:1:exam:15",
+    "3:2:1:exam:27",
+    "3:2:2:exam:19",
+    "3:2:2:exam:21",
+    "3:2:2:exam:27",
+    "3:3:1:exam:12",
+    "3:3:2:exam:7",
+    "3:3:2:exam:16",
+    "3:3:2:exam:17",
+    "3:3:2:exam:2",
+    "3:3:2:cqa:11",
+    "3:3:2:exam:14",
+    "3:3:2:exam:13",
+    "3:4:1:exam:17",
+    "3:4:1:exam:29",
+    "3:4:1:cqa:20",
+    "3:4:2:cqa:3",
+    "3:4:3:cqa:1",
+    "3:4:3:exam:5",
+    "3:4:3:exam:1",
+]
+
 SELECTIONS: dict[int, list[str]] = {
     1: ROUND1_SELECTED,
+    2: ROUND2_SELECTED,
 }
 
 QUESTION_COUNT = 30

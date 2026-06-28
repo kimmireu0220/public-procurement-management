@@ -9,7 +9,8 @@
 
 | 회차 | 경로 | CBT |
 |------|------|-----|
-| 1 | [1회차/](1회차/) | [온라인 CBT](../../../docs/3과목/index.html) |
+| 1 | [1회차/](1회차/) | (로컬 `index.html`) |
+| 2 | [2회차/](2회차/) | [온라인 CBT](../../../docs/3과목/index.html) |
 
 ## 워크플로
 
@@ -27,7 +28,7 @@ python3 tools/build_cbt_viewer.py --profile subject3 --round 1 --pages
 
 - 선별: `problem_book_final` + `agent_extract` 대조 (자동 추첨 없음)
 - 통합 모의 manifest의 `3:*` stable_id **재사용 금지**
-- 제한시간 **45분** · localStorage `mock_exam_3s1_answers`
+- 제한시간 **45분** · localStorage `mock_exam_3sK_answers` (K=회차)
 
 ## 답안 제출
 
