@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>공공조달관리사 3과목 전용 모의 __ROUND__회차 — CBT</title>
+<style>
+__STYLES__
+</style>
+</head>
+<body>
+
+<div id="screen-start">
+  <div class="start-card">
+    <h1>공공조달관리사 3과목 전용 모의 __ROUND__회차</h1>
+    <p class="sub">공공계약관리 · Computer Based Test (CBT)</p>
+    <ul>
+      <li>총 <strong>30문항</strong> · 제한시간 <strong>45분</strong></li>
+      <li>3과목 공공계약관리 단독</li>
+      <li>4지 선다형 — 문항당 하나만 선택</li>
+      <li>답안은 자동 저장됩니다 (브라우저)</li>
+    </ul>
+    <button class="btn-start" id="btn-start">시험 시작</button>
+  </div>
+</div>
+
+<div id="screen-exam">
+  <div class="topbar">
+    <span class="exam-title">3과목 전용 필기 모의 __ROUND__회차</span>
+    <span class="timer" id="timer">00:45:00</span>
+  </div>
+  <div class="subbar">
+    <span id="subject-label">3과목 공공계약관리</span>
+    <span>
+      <span id="progress-label">1 / 30</span>
+    </span>
+  </div>
+  <div class="main">
+    <div class="question-panel" id="question-panel"></div>
+    <aside class="nav-panel">
+      <div class="nav-title">문항 이동</div>
+      <div class="nav-scroll" id="nav-scroll"></div>
+      <div class="nav-legend">
+        <span><span class="legend-dot" style="background:var(--unanswered)"></span>미답</span>
+        <span><span class="legend-dot" style="background:#b8d4f0"></span>답변</span>
+        <span><span class="legend-dot" style="background:var(--current)"></span>현재</span>
+      </div>
+    </aside>
+  </div>
+  <div class="bottombar">
+    <div class="bottombar-left">
+      <button id="btn-prev">◀ 이전</button>
+      <button class="reset" id="btn-reset" type="button">처음부터</button>
+    </div>
+    <span class="progress-text" id="answered-count">답변 0 / 30</span>
+    <div class="bottombar-right">
+      <button id="btn-next">다음 ▶</button>
+      <button class="primary" id="btn-submit">시험 종료</button>
+    </div>
+  </div>
+</div>
+
+<div id="screen-end">
+  <div class="end-card">
+    <h2>시험 종료</h2>
+    <p class="hint">아래 답안 문자열을 복사해 채팅에 붙여넣으면 채점합니다.<br>형식: <code>1③ 2④ 3④ …</code></p>
+    <textarea id="answer-export" readonly></textarea>
+    <button class="primary" id="btn-copy">답안 복사</button>
+    <button id="btn-restart">다시 응시</button>
+    <p class="hint" style="margin-top:1rem">※ 정답·해설은 채점 후 제공됩니다.</p>
+  </div>
+</div>
+
+<script>
+const QUESTIONS = __QUESTIONS_JSON__;
+const STORAGE_KEY = '__STORAGE_KEY__';
+const EXAM_DURATION_SEC = __DURATION_SEC__;
+</script>
+<script>
+__EXAM_JS__
+</script>
+<script>
+__UI_JS__
+</script>
+<script>
+CBTUI.init(CBTExam.createSession(QUESTIONS, STORAGE_KEY, EXAM_DURATION_SEC));
+</script>
+</body>
+</html>

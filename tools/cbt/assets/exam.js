@@ -14,10 +14,11 @@
     return [h, m, s].map(v => String(v).padStart(2, '0')).join(':').replace(/^00:/, '');
   }
 
-  function createSession(questions, storageKey) {
+  function createSession(questions, storageKey, durationSec) {
+    const duration = durationSec || DURATION_SEC;
     let current = 0;
     let answers = {};
-    let timerSec = DURATION_SEC;
+    let timerSec = duration;
     let timerId = null;
     let choiceFocus = 0;
     let examActive = false;
@@ -185,7 +186,7 @@
 
     return {
       CHOICE_SYM,
-      DURATION_SEC,
+      DURATION_SEC: duration,
       subjectLabel,
       formatTime,
       loadAnswers,

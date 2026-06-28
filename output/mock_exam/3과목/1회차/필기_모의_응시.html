@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>공공조달관리사 3과목 전용 모의 1회차 — CBT</title>
+<style>
+:root {
+  --bg: #e8ecf1;
+  --panel: #fff;
+  --primary: #1a4d8f;
+  --primary-dark: #0f3460;
+  --accent: #2e7dd1;
+  --border: #c5d0de;
+  --text: #1a1a1a;
+  --muted: #5c6b7a;
+  --answered: #2e7dd1;
+  --current: #1a4d8f;
+  --unanswered: #d0d7e2;
+  --warn: #c0392b;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: "Apple SD Gothic Neo", "Malgun Gothic", sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; }
+
+#screen-start { display: flex; align-items: center; justify-content: center; min-height: 100vh; padding: 1.5rem; }
+.start-card { background: var(--panel); max-width: 520px; width: 100%; border-radius: 8px; box-shadow: 0 4px 24px rgba(0,0,0,.12); padding: 2.5rem 2rem; text-align: center; border-top: 4px solid var(--primary); }
+.start-card h1 { font-size: 1.65rem; color: var(--primary-dark); margin-bottom: .5rem; }
+.start-card .sub { color: var(--muted); font-size: 1.05rem; margin-bottom: 1.5rem; }
+.start-card ul { text-align: left; margin: 0 auto 1.75rem; max-width: 340px; font-size: .92rem; line-height: 1.8; color: #333; }
+.start-card .btn-start { background: var(--primary); color: #fff; border: none; padding: .85rem 2.5rem; font-size: 1.05rem; border-radius: 4px; cursor: pointer; font-weight: 600; }
+.start-card .btn-start:hover { background: var(--primary-dark); }
+
+#screen-exam { display: none; flex-direction: column; height: 100vh; }
+.topbar { background: var(--primary-dark); color: #fff; display: flex; align-items: center; justify-content: space-between; padding: 1rem 1.5rem; font-size: 1.1rem; flex-shrink: 0; min-height: 3.75rem; }
+.topbar .exam-title { font-weight: 700; font-size: 1.3rem; }
+.topbar .timer { font-size: 1.65rem; font-weight: 700; font-variant-numeric: tabular-nums; letter-spacing: .05em; }
+.topbar .timer.warn { color: #ffcc00; animation: pulse 1s infinite; }
+@keyframes pulse { 50% { opacity: .7; } }
+.subbar { background: var(--primary); color: #fff; padding: .9rem 1.5rem; font-size: 1.1rem; display: flex; justify-content: space-between; align-items: center; min-height: 3.25rem; }
+.subbar #subject-label { font-size: 1.15rem; font-weight: 600; }
+.subbar #progress-label { font-size: 1.1rem; font-weight: 600; }
+
+.main { display: flex; flex: 1; overflow: hidden; }
+.question-panel { flex: 1; overflow-y: auto; padding: 1.5rem 2rem 2rem; background: var(--panel); }
+.q-header { display: flex; align-items: center; gap: .75rem; margin-bottom: 1.25rem; }
+.q-badge { background: var(--primary); color: #fff; font-weight: 700; font-size: 1.35rem; min-width: 3.25rem; text-align: center; padding: .45rem .7rem; border-radius: 4px; }
+.q-subject { color: var(--muted); font-size: 1rem; font-weight: 600; }
+.q-stem { font-size: 1.2rem; line-height: 1.75; margin-bottom: 1.5rem; font-weight: 600; }
+.q-stem strong { color: var(--primary-dark); }
+
+.choices { display: flex; flex-direction: column; gap: .65rem; }
+.choice { display: flex; align-items: flex-start; gap: .75rem; padding: .85rem 1rem; border: 2px solid var(--border); border-radius: 6px; cursor: pointer; transition: border-color .15s, background .15s; background: #fafbfc; }
+.choice:hover { border-color: var(--accent); background: #f0f6fc; }
+.choice.selected { border-color: var(--primary); background: #e8f0fa; box-shadow: 0 0 0 1px var(--primary); }
+.choice.focused { outline: 2px solid var(--accent); outline-offset: 2px; }
+.choice .num { font-weight: 700; color: var(--primary); min-width: 1.75rem; font-size: 1.15rem; }
+.choice .text { flex: 1; line-height: 1.6; font-size: 1.12rem; }
+.choice input { display: none; }
+
+.nav-panel { width: 280px; background: #f4f6f9; border-left: 1px solid var(--border); display: flex; flex-direction: column; flex-shrink: 0; }
+.nav-title { padding: .85rem 1rem; font-size: 1rem; font-weight: 700; color: var(--primary-dark); border-bottom: 1px solid var(--border); }
+.nav-scroll { overflow-y: auto; flex: 1; padding: .75rem; }
+.nav-section { margin-bottom: .9rem; }
+.nav-section:last-child { margin-bottom: 0; }
+.nav-section-title { font-size: .95rem; font-weight: 700; color: var(--primary-dark); margin-bottom: .45rem; padding-bottom: .3rem; border-bottom: 1px solid var(--border); line-height: 1.4; }
+.nav-section-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; }
+.nav-btn { min-height: 2.35rem; border: 1px solid var(--border); background: var(--unanswered); border-radius: 4px; font-size: .85rem; font-weight: 600; cursor: pointer; color: #444; }
+.nav-btn.answered { background: #b8d4f0; border-color: var(--answered); color: var(--primary-dark); }
+.nav-btn.current { background: var(--current); color: #fff; border-color: var(--current); }
+.nav-btn:hover { filter: brightness(.95); }
+.nav-legend { padding: .5rem .75rem; font-size: .72rem; color: var(--muted); border-top: 1px solid var(--border); display: flex; gap: .75rem; flex-wrap: wrap; }
+.legend-dot { display: inline-block; width: 10px; height: 10px; border-radius: 2px; margin-right: 2px; vertical-align: middle; }
+
+.bottombar { background: var(--panel); border-top: 1px solid var(--border); padding: .65rem 1.25rem; display: flex; justify-content: space-between; align-items: center; flex-shrink: 0; gap: .75rem; }
+.bottombar-left, .bottombar-right { display: flex; align-items: center; gap: .5rem; }
+.bottombar button { padding: .55rem 1.4rem; font-size: .92rem; border-radius: 4px; cursor: pointer; border: 1px solid var(--border); background: #fff; }
+.bottombar button.reset { color: var(--warn); border-color: #e8c4c0; background: #fff8f7; }
+.bottombar button.reset:hover { background: #fdecea; }
+.bottombar button.primary { background: var(--primary); color: #fff; border-color: var(--primary); font-weight: 600; }
+.bottombar button:disabled { opacity: .4; cursor: not-allowed; }
+.progress-text { font-size: 1rem; font-weight: 600; color: var(--text); }
+
+#screen-end { display: none; min-height: 100vh; padding: 2rem; }
+.end-card { max-width: 640px; margin: 0 auto; background: var(--panel); border-radius: 8px; padding: 2rem; box-shadow: 0 4px 20px rgba(0,0,0,.1); }
+.end-card h2 { color: var(--primary-dark); margin-bottom: 1rem; font-size: 1.55rem; }
+.end-card textarea { width: 100%; height: 160px; font-family: monospace; font-size: .85rem; padding: .75rem; border: 1px solid var(--border); border-radius: 4px; margin: 1rem 0; }
+.end-card .hint { font-size: .88rem; color: var(--muted); line-height: 1.6; }
+.end-card button { margin-right: .5rem; margin-top: .5rem; padding: .55rem 1.2rem; border-radius: 4px; cursor: pointer; border: 1px solid var(--border); background: #fff; }
+.end-card button.primary { background: var(--primary); color: #fff; border-color: var(--primary); }
+
+@media (max-width: 768px) {
+  .main { flex-direction: column; }
+  .nav-panel { width: 100%; border-left: none; border-top: 1px solid var(--border); max-height: 200px; }
+  .nav-section-grid { grid-template-columns: repeat(8, 1fr); }
+  .question-panel { padding: 1rem; }
+}
+
+</style>
+</head>
+<body>
+
+<div id="screen-start">
+  <div class="start-card">
+    <h1>공공조달관리사 3과목 전용 모의 1회차</h1>
+    <p class="sub">공공계약관리 · Computer Based Test (CBT)</p>
+    <ul>
+      <li>총 <strong>30문항</strong> · 제한시간 <strong>45분</strong></li>
+      <li>3과목 공공계약관리 단독</li>
+      <li>4지 선다형 — 문항당 하나만 선택</li>
+      <li>답안은 자동 저장됩니다 (브라우저)</li>
+    </ul>
+    <button class="btn-start" id="btn-start">시험 시작</button>
+  </div>
+</div>
+
+<div id="screen-exam">
+  <div class="topbar">
+    <span class="exam-title">3과목 전용 필기 모의 1회차</span>
+    <span class="timer" id="timer">00:45:00</span>
+  </div>
+  <div class="subbar">
+    <span id="subject-label">3과목 공공계약관리</span>
+    <span>
+      <span id="progress-label">1 / 30</span>
+    </span>
+  </div>
+  <div class="main">
+    <div class="question-panel" id="question-panel"></div>
+    <aside class="nav-panel">
+      <div class="nav-title">문항 이동</div>
+      <div class="nav-scroll" id="nav-scroll"></div>
+      <div class="nav-legend">
+        <span><span class="legend-dot" style="background:var(--unanswered)"></span>미답</span>
+        <span><span class="legend-dot" style="background:#b8d4f0"></span>답변</span>
+        <span><span class="legend-dot" style="background:var(--current)"></span>현재</span>
+      </div>
+    </aside>
+  </div>
+  <div class="bottombar">
+    <div class="bottombar-left">
+      <button id="btn-prev">◀ 이전</button>
+      <button class="reset" id="btn-reset" type="button">처음부터</button>
+    </div>
+    <span class="progress-text" id="answered-count">답변 0 / 30</span>
+    <div class="bottombar-right">
+      <button id="btn-next">다음 ▶</button>
+      <button class="primary" id="btn-submit">시험 종료</button>
+    </div>
+  </div>
+</div>
+
+<div id="screen-end">
+  <div class="end-card">
+    <h2>시험 종료</h2>
+    <p class="hint">아래 답안 문자열을 복사해 채팅에 붙여넣으면 채점합니다.<br>형식: <code>1③ 2④ 3④ …</code></p>
+    <textarea id="answer-export" readonly></textarea>
+    <button class="primary" id="btn-copy">답안 복사</button>
+    <button id="btn-restart">다시 응시</button>
+    <p class="hint" style="margin-top:1rem">※ 정답·해설은 채점 후 제공됩니다.</p>
+  </div>
+</div>
+
+<script>
+const QUESTIONS = [{"no": 1, "subject": 3, "subjectName": "공공계약관리", "stem": "다음 중 계약에 대한 설명으로 가장 적절한 것은?", "choices": [{"key": "1", "label": "①", "text": "계약은 입찰 공고 이전에 체결되는 행정적 행위이다."}, {"key": "2", "label": "②", "text": "계약은 구매절차상 협상이 완료되거나 낙찰자가 결정된 후에 이루어지는 법률적 행위이다."}, {"key": "3", "label": "③", "text": "계약은 반드시 서면으로만 성립한다."}, {"key": "4", "label": "④", "text": "계약은 관리적 접근만 허용되며 법률적 접근은 불가능하다."}], "id": "3:1:1:cqa:2"}, {"no": 2, "subject": 3, "subjectName": "공공계약관리", "stem": "다음 중 계약의 자유에 포함되지 않는 것은?", "choices": [{"key": "1", "label": "①", "text": "계약 체결의 자유"}, {"key": "2", "label": "②", "text": "계약 내용 결정의 자유"}, {"key": "3", "label": "③", "text": "계약 상대방 선택의 자유"}, {"key": "4", "label": "④", "text": "계약 이행 결과에 대한 일방적 변경의 자유"}], "id": "3:1:1:exam:3"}, {"no": 3, "subject": 3, "subjectName": "공공계약관리", "stem": "다음 중 계약의 이행가능성과 계약당사자의 능력 요건에 대한 설명으로 가장 옳은 것은?", "choices": [{"key": "1", "label": "①", "text": "의사능력이 없으면 계약은 무효가 된다."}, {"key": "2", "label": "②", "text": "행위능력이 없으면 계약은 항상 무효가 된다."}, {"key": "3", "label": "③", "text": "이행능력이 없으면 계약은 성립 자체가 불가능하다."}, {"key": "4", "label": "④", "text": "권리능력이 없는 경우에도 계약은 취소의 대상이 될 뿐이다."}], "id": "3:1:1:exam:11"}, {"no": 4, "subject": 3, "subjectName": "공공계약관리", "stem": "다음 중 하도급계약을 체결하거나 변경·해제한 경우, 하도급계약 통보 기한으로 옳은 것은?", "choices": [{"key": "1", "label": "①", "text": "계약 체결일로부터 7일 이내"}, {"key": "2", "label": "②", "text": "계약 체결일로부터 14일 이내"}, {"key": "3", "label": "③", "text": "승낙한 날부터 30일 이내"}, {"key": "4", "label": "④", "text": "발주청 승인 후 30일 이내"}], "id": "3:1:1:exam:23"}, {"no": 5, "subject": 3, "subjectName": "공공계약관리", "stem": "다음 중 건설도급계약에서 「민법」상 계약 해제 규정의 적용이 제한되는 이유로 가장 적절한 것은?", "choices": [{"key": "1", "label": "①", "text": "수급인의 책임이 경미하기 때문이다."}, {"key": "2", "label": "②", "text": "건설계약은 항상 해지가 허용되기 때문이다."}, {"key": "3", "label": "③", "text": "공사계약에는 원상회복 개념이 존재하지 않기 때문이다."}, {"key": "4", "label": "④", "text": "해제의 소급효가 사회·경제적으로 과도한 손실을 초래하기 때문이다."}], "id": "3:1:2:exam:5"}, {"no": 6, "subject": 3, "subjectName": "공공계약관리", "stem": "다음 중 「물품구매(제조)계약 일반조건」 제26조에 따라 계약상대자의 책임 있는 사유로 계약을 해제·해지할 수 있는 경우로 옳은 것은?", "choices": [{"key": "1", "label": "①", "text": "공공복리에 따른 사업 변경"}, {"key": "2", "label": "②", "text": "정부정책 변화로 사업이 취소된 경우"}, {"key": "3", "label": "③", "text": "관계 법령의 개정으로 사업이 중단된 경우"}, {"key": "4", "label": "④", "text": "납품기한 내에 계약된 규격의 물품 납품을 완료하지 못한 경우"}], "id": "3:1:2:exam:10"}, {"no": 7, "subject": 3, "subjectName": "공공계약관리", "stem": "다음 중 입찰보증금의 산출 방식에 대한 설명으로 옳은 것은?", "choices": [{"key": "1", "label": "①", "text": "총액계약의 경우 계약금액의 10% 이상을 입찰보증금으로 납부해야 한다."}, {"key": "2", "label": "②", "text": "장기계속계약의 경우 연차별 계약금액의 5% 이상을 납부해야 한다."}, {"key": "3", "label": "③", "text": "단가계약의 경우 입찰단가에 전체 이행예정량을 곱한 금액을 기준으로 산출한다."}, {"key": "4", "label": "④", "text": "단가입찰의 경우 입찰단가에 회차별 이행예정량 중 최대량을 곱한 금액의 5% 이상이다."}], "id": "3:1:4:exam:12"}, {"no": 8, "subject": 3, "subjectName": "공공계약관리", "stem": "다음 중 「물품계약 일반조건」상 지체상금이 면제될 수 있는 사유에 해당하지 않는 것은?", "choices": [{"key": "1", "label": "①", "text": "천재지변으로 계약 이행이 불가능한 경우"}, {"key": "2", "label": "②", "text": "대체 불가능한 관급재료의 공급이 지연된 경우"}, {"key": "3", "label": "③", "text": "발주기관 책임으로 설계도서 승인이 지연된 경우"}, {"key": "4", "label": "④", "text": "계약상대자의 자금 사정 악화로 제작이 지연된 경우"}], "id": "3:1:4:exam:43"}, {"no": 9, "subject": 3, "subjectName": "공공계약관리", "stem": "다음 중 물품이나 용역의 적격심사 항목과 배점한도액을 정함에 있어 옳은 설명은?", "choices": [{"key": "1", "label": "①", "text": "재정경제부장관이 고시한 적격심사기준에 따라 공사의 기준을 준용해 정한다."}, {"key": "2", "label": "②", "text": "공사의 적격심사 기준과 무관하게 발주기관이 자율적으로 정한다."}, {"key": "3", "label": "③", "text": "반드시 조달청장이 단독으로 심사기준을 정해야 한다."}, {"key": "4", "label": "④", "text": "지방자치단체의 계약집행기준만을 적용한다."}], "id": "3:2:1:exam:13"}, {"no": 10, "subject": 3, "subjectName": "공공계약관리", "stem": "다음 중 중기업 또는 대기업의 납품실적 평가 시 기본 점수로 옳은 것은?", "choices": [{"key": "1", "label": "①", "text": "0점"}, {"key": "2", "label": "②", "text": "1점"}, {"key": "3", "label": "③", "text": "2점"}, {"key": "4", "label": "④", "text": "3점"}], "id": "3:2:1:exam:24"}, {"no": 11, "subject": 3, "subjectName": "공공계약관리", "stem": "다음 중 추정가격이 10억원 이상인 물품 제조입찰의 신인도 평가 중 고용창출 항목에서 일자리창출우수기업에 대한 설명으로 옳은 것은?", "choices": [{"key": "1", "label": "①", "text": "기타 심사항목과 합산 시 총 +7점까지 가능하다."}, {"key": "2", "label": "②", "text": "신인도 총 배점한도는 +5점으로 제한된다."}, {"key": "3", "label": "③", "text": "입찰가격 점수에만 가산된다."}, {"key": "4", "label": "④", "text": "중기업 이상만 적용된다."}], "id": "3:2:1:exam:26"}, {"no": 12, "subject": 3, "subjectName": "공공계약관리", "stem": "다음 중 물가변동 조정률 산정 방법에 대한 설명으로 옳은 것은?", "choices": [{"key": "1", "label": "①", "text": "동일 계약에서 품목조정률과 지수조정률을 상황에 따라 병행 적용할 수 있다."}, {"key": "2", "label": "②", "text": "계약서에 조정방법을 명시하지 않은 경우 계약담당공무원이 일방적으로 결정한다."}, {"key": "3", "label": "③", "text": "계약 이행 도중 당사자 합의가 있다면 조정방법 변경이 가능하다."}, {"key": "4", "label": "④", "text": "계약서에 조정방법을 명시하지 않아 1회 조정 시 지수조정률을 적용했다면, 이후에도 동일한 방법을 적용해야 한다."}], "id": "3:2:2:exam:14"}, {"no": 13, "subject": 3, "subjectName": "공공계약관리", "stem": "다음 중 설계변경의 시기에 대한 설명으로 옳은 것은?", "choices": [{"key": "1", "label": "①", "text": "설계변경은 공사 완료 후에도 필요하면 언제든지 가능하다."}, {"key": "2", "label": "②", "text": "설계변경은 계약상대자의 요청이 있는 경우에만 가능하다."}, {"key": "3", "label": "③", "text": "설계변경은 변경 사유가 발생한 부분을 시공한 이후에 완료해야 한다."}, {"key": "4", "label": "④", "text": "설계변경은 원칙적으로 설계를 변경해야 할 필요성이 있는 부분을 시공하기 전에 완료해야 한다."}], "id": "3:2:2:exam:31"}, {"no": 14, "subject": 3, "subjectName": "공공계약관리", "stem": "다음 중 설계변경 사유 및 절차에 대한 설명으로 가장 적절한 것은?", "choices": [{"key": "1", "label": "①", "text": "새로운 기술·공법 사용으로 공사비 절감 효과가 현저한 경우, 계약상대자는 관련 서류를 첨부해 설계변경을 요청할 수 있다."}, {"key": "2", "label": "②", "text": "발주기관이 설계변경이 필요하다고 인정한 경우에도 계약상대자는 이에 대한 의견 제출이 불가능하다."}, {"key": "3", "label": "③", "text": "계약상대자가 설계서 변경 승인 없이 임의로 시공한 경우에도 계약금액 증액은 가능하다."}, {"key": "4", "label": "④", "text": "공사 현장의 지질·용수 상태가 설계서와 다른 경우에도 계약상대자는 별도 통지 의무가 없다."}], "id": "3:2:2:exam:33"}, {"no": 15, "subject": 3, "subjectName": "공공계약관리", "stem": "다음 중 「국가계약법 시행령」 제74조에 따른 지체상금 산정 및 적용에 대한 설명으로 옳은 것은?", "choices": [{"key": "1", "label": "①", "text": "계약이행이 지체된 경우 지체 사유와 관계없이 지체일수는 모두 산입한다."}, {"key": "2", "label": "②", "text": "기성부분을 검사·인수한 경우에도 전체 계약금액을 기준으로 지체상금을 산정한다."}, {"key": "3", "label": "③", "text": "계약상대자의 책임 없는 사유로 인한 지체일수는 지체일수에서 제외할 수 있다."}, {"key": "4", "label": "④", "text": "지체상금은 계약금액의 50%를 초과하여 부과할 수 있다."}], "id": "3:2:2:exam:2"}, {"no": 16, "subject": 3, "subjectName": "공공계약관리", "stem": "다음 중 건설사업관리(CM)용역 PQ 평가항목 중 배점이 가장 높은 항목은?", "choices": [{"key": "1", "label": "①", "text": "신용도"}, {"key": "2", "label": "②", "text": "참여기술자"}, {"key": "3", "label": "③", "text": "유사용역 수행실적"}, {"key": "4", "label": "④", "text": "기술개발 및 투자실적"}], "id": "3:3:1:cqa:11"}, {"no": 17, "subject": 3, "subjectName": "공공계약관리", "stem": "다음 중 종합심사낙찰제가 적용되는 실시설계 용역의 추정가격 기준은?", "choices": [{"key": "1", "label": "①", "text": "30억원 이상"}, {"key": "2", "label": "②", "text": "40억원 이상"}, {"key": "3", "label": "③", "text": "50억원 이상"}, {"key": "4", "label": "④", "text": "100억원 이상"}], "id": "3:3:1:exam:17"}, {"no": 18, "subject": 3, "subjectName": "공공계약관리", "stem": "다음 중 다수공급자계약(MAS)의 개념에 대한 설명으로 가장 적절한 것은?", "choices": [{"key": "1", "label": "①", "text": "단일 공급자 최저가 낙찰 방식"}, {"key": "2", "label": "②", "text": "수요 발생 시마다 개별 입찰"}, {"key": "3", "label": "③", "text": "품질·성능 등이 같거나 유사한 물품에 대해 2인 이상과 사전계약 후 나라장터에서 선택 구매"}, {"key": "4", "label": "④", "text": "조달청장이 특정 업체를 직접 지정하는 방식"}], "id": "3:3:2:cqa:4"}, {"no": 19, "subject": 3, "subjectName": "공공계약관리", "stem": "다음 중 물품에 대해 다수공급자계약(MAS)을 추진하기 위한 요건으로 옳은 것은?", "choices": [{"key": "1", "label": "①", "text": "세부품명 기준 연간 거래실적 3천만원 이상 업체가 3개사 이상이어야 하며, 업계 공통 상용규격이 있어야 한다."}, {"key": "2", "label": "②", "text": "신기술(NET)이 적용된 제품은 반드시 연간 거래실적 3천만원 이상이 필요하다."}, {"key": "3", "label": "③", "text": "업체 수와 관계없이 조달청장이 필요하다고 판단하면 가능하다."}, {"key": "4", "label": "④", "text": "시험기준이 없어도 업체 제시규격만으로 추진 가능하다."}], "id": "3:3:2:exam:5"}, {"no": 20, "subject": 3, "subjectName": "공공계약관리", "stem": "다음 중 MAS 적격성 평가 단계에서 결격사유에 해당하는 경우로 옳은 것은?", "choices": [{"key": "1", "label": "①", "text": "가격협상에 불참한 경우"}, {"key": "2", "label": "②", "text": "계약기간이 3년을 초과한 경우"}, {"key": "3", "label": "③", "text": "신용평가등급이 B- 미만인 경우"}, {"key": "4", "label": "④", "text": "최근 1년간 거래실적이 없는 경우"}], "id": "3:3:2:exam:8"}, {"no": 21, "subject": 3, "subjectName": "공공계약관리", "stem": "다음 중 적격성 평가 신청 시 필수 제출서류에 해당하지 않는 것은?", "choices": [{"key": "1", "label": "①", "text": "규격서"}, {"key": "2", "label": "②", "text": "적격성 평가 신청서"}, {"key": "3", "label": "③", "text": "사전심사 자기평가 및 심사표"}, {"key": "4", "label": "④", "text": "구매입찰공고에서 규정한 시험성적서"}], "id": "3:3:2:exam:12"}, {"no": 22, "subject": 3, "subjectName": "공공계약관리", "stem": "다음 중 다수공급자계약(MAS)의 법적 근거 체계에 대한 설명으로 가장 적절한 것은?", "choices": [{"key": "1", "label": "①", "text": "「국가계약법」과 「지방계약법」만을 근거로 운영된다."}, {"key": "2", "label": "②", "text": "조달청 내부지침만으로 운영되는 비법정 계약제도이다."}, {"key": "3", "label": "③", "text": "개별 계약마다 수요기관이 법적 근거를 자율적으로 정한다."}, {"key": "4", "label": "④", "text": "「조달사업법」과 그 시행령을 근거로 하며, 세부 절차는 조달청 행정규칙에서 정한다."}], "id": "3:3:2:exam:6"}, {"no": 23, "subject": 3, "subjectName": "공공계약관리", "stem": "다음 중 다수공급자계약의 '계약상대자'에 해당하는 자는?", "choices": [{"key": "1", "label": "①", "text": "수요기관의 추천을 받은 업체"}, {"key": "2", "label": "②", "text": "수요기관과 직접 계약한 모든 납품업체"}, {"key": "3", "label": "③", "text": "나라장터에 등록만 하면 자동으로 해당되는 자"}, {"key": "4", "label": "④", "text": "조달청과 다수공급자계약을 체결하고 종합쇼핑몰에 계약 물품을 등록한 자"}], "id": "3:3:2:exam:10"}, {"no": 24, "subject": 3, "subjectName": "공공계약관리", "stem": "PQ(입찰참가자격 사전심사) 제출서류로 일반적으로 요구되지 않는 것은?", "choices": [{"key": "1", "label": "①", "text": "기술인력 보유현황"}, {"key": "2", "label": "②", "text": "실적증명서 원본의 현장 즉시 제출 의무"}, {"key": "3", "label": "③", "text": "재무상태 관련 자료"}, {"key": "4", "label": "④", "text": "유사용역 수행실적"}], "id": "3:4:1:cqa:12"}, {"no": 25, "subject": 3, "subjectName": "공공계약관리", "stem": "공사계약에서 안전관리비의 성격으로 옳은 것은?", "choices": [{"key": "1", "label": "①", "text": "이익금"}, {"key": "2", "label": "②", "text": "벌과금"}, {"key": "3", "label": "③", "text": "안전확보를 위한 목적성 경비"}, {"key": "4", "label": "④", "text": "세금대체금"}], "id": "3:4:1:exam:30"}, {"no": 26, "subject": 3, "subjectName": "공공계약관리", "stem": "공사이행 중 안전사고 예방을 위한 관리항목으로 가장 적절한 것은?", "choices": [{"key": "1", "label": "①", "text": "입찰서류 재평가"}, {"key": "2", "label": "②", "text": "하도급단가 상향"}, {"key": "3", "label": "③", "text": "안전관리계획 이행점검"}, {"key": "4", "label": "④", "text": "낙찰자 변경"}], "id": "3:4:2:exam:15"}, {"no": 27, "subject": 3, "subjectName": "공공계약관리", "stem": "배치기술자 관리 원칙으로 옳은 것은?", "choices": [{"key": "1", "label": "①", "text": "무자격자 대체 가능"}, {"key": "2", "label": "②", "text": "업체 재량 우선"}, {"key": "3", "label": "③", "text": "발주자 통보 불필요"}, {"key": "4", "label": "④", "text": "승인절차와 동등 이상 자격 필요"}], "id": "3:4:3:exam:6"}, {"no": 28, "subject": 3, "subjectName": "공공계약관리", "stem": "재하도급 제한의 목적과 가장 가까운 것은?", "choices": [{"key": "1", "label": "①", "text": "경쟁제한"}, {"key": "2", "label": "②", "text": "품질·안전·책임체계 확보"}, {"key": "3", "label": "③", "text": "공사기간 연장"}, {"key": "4", "label": "④", "text": "계약금 증액"}], "id": "3:4:3:exam:12"}, {"no": 29, "subject": 3, "subjectName": "공공계약관리", "stem": "사회적책임 평가지표 예시로 적절한 것은?", "choices": [{"key": "1", "label": "①", "text": "낙찰률"}, {"key": "2", "label": "②", "text": "공사기간"}, {"key": "3", "label": "③", "text": "업체대표 연령"}, {"key": "4", "label": "④", "text": "안전·고용·상생 지표"}], "id": "3:4:3:exam:7"}, {"no": 30, "subject": 3, "subjectName": "공공계약관리", "stem": "기술형입찰에서 가격평가 반영의 의미로 옳은 것은?", "choices": [{"key": "1", "label": "①", "text": "기술평가 배제"}, {"key": "2", "label": "②", "text": "경제성 확보를 위한 균형요소"}, {"key": "3", "label": "③", "text": "최저가 고정"}, {"key": "4", "label": "④", "text": "예정가격 초과 허용"}], "id": "3:4:3:exam:20"}];
+const STORAGE_KEY = 'mock_exam_3s1_answers';
+const EXAM_DURATION_SEC = 2700;
+</script>
+<script>
+/* CBT 응시 — 시험 상태·답안·타이머 (비즈니스 로직) */
+(function (global) {
+  const CHOICE_SYM = { 1: '①', 2: '②', 3: '③', 4: '④' };
+  const DURATION_SEC = 120 * 60;
+
+  function subjectLabel(q) {
+    return q.subject + '과목 ' + q.subjectName;
+  }
+
+  function formatTime(sec) {
+    const h = Math.floor(sec / 3600);
+    const m = Math.floor((sec % 3600) / 60);
+    const s = sec % 60;
+    return [h, m, s].map(v => String(v).padStart(2, '0')).join(':').replace(/^00:/, '');
+  }
+
+  function createSession(questions, storageKey, durationSec) {
+    const duration = durationSec || DURATION_SEC;
+    let current = 0;
+    let answers = {};
+    let timerSec = duration;
+    let timerId = null;
+    let choiceFocus = 0;
+    let examActive = false;
+
+    function loadAnswers() {
+      try {
+        const s = localStorage.getItem(storageKey);
+        if (s) answers = JSON.parse(s);
+      } catch (e) {}
+    }
+
+    function saveAnswers() {
+      localStorage.setItem(storageKey, JSON.stringify(answers));
+    }
+
+    function clearStoredAnswers() {
+      localStorage.removeItem(storageKey);
+    }
+
+    function getQuestions() {
+      return questions;
+    }
+
+    function getCurrentIndex() {
+      return current;
+    }
+
+    function getCurrentQuestion() {
+      return questions[current];
+    }
+
+    function getChoiceFocus() {
+      return choiceFocus;
+    }
+
+    function setChoiceFocus(idx) {
+      choiceFocus = idx;
+    }
+
+    function moveChoiceFocus(delta) {
+      const n = getCurrentQuestion().choices.length;
+      choiceFocus = (choiceFocus + delta + n) % n;
+    }
+
+    function syncChoiceFocusFromAnswer() {
+      const q = getCurrentQuestion();
+      const selected = answers[q.no];
+      const selIdx = selected ? q.choices.findIndex(c => c.key === selected) : -1;
+      choiceFocus = selIdx >= 0 ? selIdx : 0;
+    }
+
+    function getAnswer(no) {
+      return answers[no];
+    }
+
+    function getAnsweredCount() {
+      return Object.keys(answers).length;
+    }
+
+    function getUnansweredCount() {
+      return questions.length - getAnsweredCount();
+    }
+
+    function canGoPrev() {
+      return current > 0;
+    }
+
+    function canGoNext() {
+      return current < questions.length - 1;
+    }
+
+    function goPrev() {
+      if (!canGoPrev()) return false;
+      current--;
+      return true;
+    }
+
+    function goNext() {
+      if (!canGoNext()) return false;
+      current++;
+      return true;
+    }
+
+    function goToIndex(index) {
+      if (index < 0 || index >= questions.length) return false;
+      current = index;
+      return true;
+    }
+
+    function selectAnswer(key) {
+      const q = getCurrentQuestion();
+      answers[q.no] = key;
+      saveAnswers();
+      const idx = q.choices.findIndex(c => c.key === key);
+      if (idx >= 0) choiceFocus = idx;
+
+      const advanced = current < questions.length - 1;
+      if (advanced) current++;
+      return { advanced };
+    }
+
+    function selectAnswerByIndex(choiceIndex) {
+      const q = getCurrentQuestion();
+      if (choiceIndex < 0 || choiceIndex >= q.choices.length) return null;
+      return selectAnswer(q.choices[choiceIndex].key);
+    }
+
+    function exportAnswers() {
+      return questions.map(q => {
+        const a = answers[q.no];
+        const sym = CHOICE_SYM[a] || '?';
+        return q.no + sym;
+      }).join(' ');
+    }
+
+    function resetSession() {
+      answers = {};
+      clearStoredAnswers();
+      current = 0;
+      choiceFocus = 0;
+    }
+
+    function resetConfirmMessage() {
+      const n = getAnsweredCount();
+      return n > 0
+        ? '선택한 답안 ' + n + '개를 모두 지우고 1번 문항부터 다시 시작합니다.'
+        : '1번 문항부터 다시 시작합니다.';
+    }
+
+    function finishConfirmMessage() {
+      const left = getUnansweredCount();
+      return '미답 ' + left + '문항이 있습니다. 시험을 종료하시겠습니까?';
+    }
+
+    function startExam() {
+      examActive = true;
+    }
+
+    function stopExam() {
+      examActive = false;
+      if (timerId !== null) {
+        clearInterval(timerId);
+        timerId = null;
+      }
+    }
+
+    function isExamActive() {
+      return examActive;
+    }
+
+    function getTimerSec() {
+      return timerSec;
+    }
+
+    function startTimer(onTick) {
+      timerId = setInterval(() => {
+        timerSec--;
+        onTick(timerSec);
+        if (timerSec <= 0) {
+          stopExam();
+          onTick(0, true);
+        }
+      }, 1000);
+    }
+
+    return {
+      CHOICE_SYM,
+      DURATION_SEC: duration,
+      subjectLabel,
+      formatTime,
+      loadAnswers,
+      saveAnswers,
+      clearStoredAnswers,
+      getQuestions,
+      getCurrentIndex,
+      getCurrentQuestion,
+      getChoiceFocus,
+      setChoiceFocus,
+      moveChoiceFocus,
+      syncChoiceFocusFromAnswer,
+      getAnswer,
+      getAnsweredCount,
+      getUnansweredCount,
+      canGoPrev,
+      canGoNext,
+      goPrev,
+      goNext,
+      goToIndex,
+      selectAnswer,
+      selectAnswerByIndex,
+      exportAnswers,
+      resetSession,
+      resetConfirmMessage,
+      finishConfirmMessage,
+      startExam,
+      stopExam,
+      isExamActive,
+      getTimerSec,
+      startTimer,
+    };
+  }
+
+  global.CBTExam = { createSession, DURATION_SEC, formatTime };
+})(window);
+
+</script>
+<script>
+/* CBT 응시 — DOM 렌더링·이벤트 (UI 로직) */
+(function (global) {
+  function escapeHtml(s) {
+    return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+  }
+
+  function init(session) {
+    const screenStart = document.getElementById('screen-start');
+    const screenExam = document.getElementById('screen-exam');
+    const screenEnd = document.getElementById('screen-end');
+    const questionPanel = document.getElementById('question-panel');
+    const navScroll = document.getElementById('nav-scroll');
+    const timerEl = document.getElementById('timer');
+    const subjectLabelEl = document.getElementById('subject-label');
+    const progressLabelEl = document.getElementById('progress-label');
+    const answeredCountEl = document.getElementById('answered-count');
+    const btnPrev = document.getElementById('btn-prev');
+    const btnNext = document.getElementById('btn-next');
+    const answerExportEl = document.getElementById('answer-export');
+
+    function updateChoiceFocus() {
+      if (!questionPanel) return;
+      questionPanel.querySelectorAll('.choice').forEach((el, i) => {
+        el.classList.toggle('focused', i === session.getChoiceFocus());
+      });
+      const focused = questionPanel.querySelector('.choice.focused');
+      if (focused) focused.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+    }
+
+    function updateNav() {
+      const questions = session.getQuestions();
+      const current = session.getCurrentIndex();
+      document.querySelectorAll('.nav-btn').forEach(btn => {
+        const i = parseInt(btn.dataset.index, 10);
+        const q = questions[i];
+        btn.classList.remove('current', 'answered');
+        if (i === current) {
+          btn.classList.add('current');
+          btn.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+        } else if (session.getAnswer(q.no)) {
+          btn.classList.add('answered');
+        }
+      });
+    }
+
+    function updateCount() {
+      const total = session.getQuestions().length;
+      answeredCountEl.textContent = '답변 ' + session.getAnsweredCount() + ' / ' + total;
+    }
+
+    function renderNavGrid() {
+      const questions = session.getQuestions();
+      navScroll.innerHTML = '';
+      let lastSubject = null;
+      let sectionGrid = null;
+
+      questions.forEach((q, i) => {
+        if (q.subject !== lastSubject) {
+          lastSubject = q.subject;
+          const section = document.createElement('div');
+          section.className = 'nav-section';
+          const title = document.createElement('div');
+          title.className = 'nav-section-title';
+          title.textContent = q.subject + '과목 ' + q.subjectName;
+          sectionGrid = document.createElement('div');
+          sectionGrid.className = 'nav-section-grid';
+          section.appendChild(title);
+          section.appendChild(sectionGrid);
+          navScroll.appendChild(section);
+        }
+        const btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = 'nav-btn';
+        btn.dataset.index = String(i);
+        btn.textContent = q.no;
+        btn.title = session.subjectLabel(q);
+        btn.addEventListener('click', () => {
+          session.goToIndex(i);
+          renderQuestion();
+        });
+        sectionGrid.appendChild(btn);
+      });
+    }
+
+    function renderQuestion() {
+      const q = session.getCurrentQuestion();
+      const selected = session.getAnswer(q.no);
+      session.syncChoiceFocusFromAnswer();
+
+      let html = '<div class="q-header"><span class="q-badge">' + q.no + '</span><span class="q-subject">' + session.subjectLabel(q) + '</span></div>';
+      html += '<div class="q-stem">' + q.stem.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>') + '</div>';
+      html += '<div class="choices" id="choices">';
+      q.choices.forEach((c, i) => {
+        const sel = selected === c.key ? ' selected' : '';
+        const foc = i === session.getChoiceFocus() ? ' focused' : '';
+        html += '<label class="choice' + sel + foc + '" data-key="' + c.key + '" data-idx="' + i + '"><span class="num">' + c.label + '</span><span class="text">' + escapeHtml(c.text) + '</span><input type="radio" name="q" value="' + c.key + '"' + (sel ? ' checked' : '') + '></label>';
+      });
+      html += '</div>';
+      questionPanel.innerHTML = html;
+
+      questionPanel.querySelectorAll('.choice').forEach(el => {
+        el.addEventListener('click', () => {
+          session.selectAnswer(el.dataset.key);
+          renderQuestion();
+        });
+      });
+
+      subjectLabelEl.textContent = session.subjectLabel(q);
+      progressLabelEl.textContent = (session.getCurrentIndex() + 1) + ' / ' + session.getQuestions().length;
+      btnPrev.disabled = !session.canGoPrev();
+      btnNext.disabled = !session.canGoNext();
+      updateNav();
+      updateCount();
+      updateChoiceFocus();
+    }
+
+    function startTimer() {
+      timerEl.textContent = session.formatTime(session.getTimerSec());
+      session.startTimer((sec, timedOut) => {
+        timerEl.textContent = session.formatTime(sec);
+        if (sec <= 600) timerEl.classList.add('warn');
+        if (timedOut) finishExam(true);
+      });
+    }
+
+    function finishExam(auto) {
+      if (!auto) {
+        const left = session.getUnansweredCount();
+        if (left > 0 && !confirm(session.finishConfirmMessage())) return;
+      }
+      session.stopExam();
+      screenExam.style.display = 'none';
+      screenEnd.style.display = 'block';
+      answerExportEl.value = session.exportAnswers();
+    }
+
+    function handleExamKeydown(e) {
+      if (!session.isExamActive()) return;
+      if (e.target.tagName === 'TEXTAREA' || e.target.tagName === 'INPUT') return;
+
+      const q = session.getCurrentQuestion();
+      const n = q.choices.length;
+
+      if (e.key === 'ArrowDown') {
+        e.preventDefault();
+        session.moveChoiceFocus(1);
+        updateChoiceFocus();
+      } else if (e.key === 'ArrowUp') {
+        e.preventDefault();
+        session.moveChoiceFocus(-1);
+        updateChoiceFocus();
+      } else if (e.key === 'ArrowLeft') {
+        e.preventDefault();
+        if (session.goPrev()) renderQuestion();
+      } else if (e.key === 'ArrowRight') {
+        e.preventDefault();
+        if (session.goNext()) renderQuestion();
+      } else if (e.key >= '1' && e.key <= '4') {
+        const idx = parseInt(e.key, 10) - 1;
+        if (idx < n) {
+          e.preventDefault();
+          session.selectAnswerByIndex(idx);
+          renderQuestion();
+        }
+      } else if (e.key === 'Enter') {
+        e.preventDefault();
+        if (session.goNext()) renderQuestion();
+      }
+    }
+
+    document.getElementById('btn-start').addEventListener('click', () => {
+      session.loadAnswers();
+      screenStart.style.display = 'none';
+      screenExam.style.display = 'flex';
+      session.startExam();
+      renderNavGrid();
+      renderQuestion();
+      startTimer();
+    });
+
+    document.addEventListener('keydown', handleExamKeydown);
+
+    btnPrev.addEventListener('click', () => {
+      if (session.goPrev()) renderQuestion();
+    });
+
+    document.getElementById('btn-reset').addEventListener('click', () => {
+      if (!confirm(session.resetConfirmMessage())) return;
+      session.resetSession();
+      renderNavGrid();
+      renderQuestion();
+    });
+
+    btnNext.addEventListener('click', () => {
+      if (session.goNext()) renderQuestion();
+    });
+
+    document.getElementById('btn-submit').addEventListener('click', () => finishExam(false));
+
+    document.getElementById('btn-copy').addEventListener('click', () => {
+      answerExportEl.select();
+      navigator.clipboard.writeText(answerExportEl.value).catch(() => {});
+    });
+
+    document.getElementById('btn-restart').addEventListener('click', () => {
+      if (confirm('저장된 답안을 지우고 처음부터 다시 시작합니다.')) {
+        session.clearStoredAnswers();
+        location.reload();
+      }
+    });
+  }
+
+  global.CBTUI = { init };
+})(window);
+
+</script>
+<script>
+CBTUI.init(CBTExam.createSession(QUESTIONS, STORAGE_KEY, EXAM_DURATION_SEC));
+</script>
+</body>
+</html>
