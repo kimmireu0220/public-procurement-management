@@ -138,11 +138,46 @@ ROUND4_SELECTED: list[str] = [
     "3:4:3:exam:10",
 ]
 
+# 5회차 — 4회차 약점(지급각서·평가위원)·숫자 퀴즈 약점 보강 · Part 8/7/8/7
+ROUND5_SELECTED: list[str] = [
+    "3:1:2:exam:11",
+    "3:1:1:exam:21",
+    "3:1:1:exam:18",
+    "3:1:3:exam:2",
+    "3:1:1:exam:9",
+    "3:1:3:exam:8",
+    "3:1:4:cqa:6",
+    "3:1:3:cqa:2",
+    "3:2:1:exam:17",
+    "3:2:2:exam:22",
+    "3:2:2:exam:32",
+    "3:2:2:exam:36",
+    "3:2:2:exam:24",
+    "3:2:2:exam:26",
+    "3:2:2:exam:38",
+    "3:3:1:exam:28",
+    "3:3:1:exam:4",
+    "3:3:2:exam:20",
+    "3:3:2:exam:22",
+    "3:3:2:exam:25",
+    "3:3:1:exam:38",
+    "3:3:2:cqa:6",
+    "3:3:2:exam:3",
+    "3:4:1:exam:14",
+    "3:4:2:exam:17",
+    "3:4:3:exam:2",
+    "3:4:2:exam:26",
+    "3:4:3:exam:3",
+    "3:4:1:exam:1",
+    "3:4:3:cqa:3",
+]
+
 SELECTIONS: dict[int, list[str]] = {
     1: ROUND1_SELECTED,
     2: ROUND2_SELECTED,
     3: ROUND3_SELECTED,
     4: ROUND4_SELECTED,
+    5: ROUND5_SELECTED,
 }
 
 QUESTION_COUNT = 30
