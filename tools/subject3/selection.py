@@ -172,12 +172,47 @@ ROUND5_SELECTED: list[str] = [
     "3:4:3:cqa:3",
 ]
 
+# 6회차 — 5회차 약점(입찰보증금·이행보증 구분)·숫자 퀴즈 보강 · Part 8/7/8/7
+ROUND6_SELECTED: list[str] = [
+    "3:1:1:exam:10",
+    "3:1:1:exam:5",
+    "3:1:2:exam:8",
+    "3:1:2:exam:13",
+    "3:1:3:exam:6",
+    "3:1:3:exam:7",
+    "3:1:4:exam:20",
+    "3:1:4:cqa:2",
+    "3:2:1:exam:3",
+    "3:2:1:exam:5",
+    "3:2:1:exam:8",
+    "3:2:1:exam:21",
+    "3:2:1:exam:32",
+    "3:2:2:exam:3",
+    "3:2:2:exam:23",
+    "3:3:1:exam:7",
+    "3:3:1:exam:9",
+    "3:3:1:exam:11",
+    "3:3:1:exam:21",
+    "3:3:1:exam:30",
+    "3:3:1:exam:35",
+    "3:3:2:exam:21",
+    "3:3:1:cqa:5",
+    "3:4:1:exam:5",
+    "3:4:1:exam:13",
+    "3:4:1:exam:22",
+    "3:4:2:exam:6",
+    "3:4:2:exam:18",
+    "3:4:3:exam:11",
+    "3:4:1:cqa:3",
+]
+
 SELECTIONS: dict[int, list[str]] = {
     1: ROUND1_SELECTED,
     2: ROUND2_SELECTED,
     3: ROUND3_SELECTED,
     4: ROUND4_SELECTED,
     5: ROUND5_SELECTED,
+    6: ROUND6_SELECTED,
 }
 
 QUESTION_COUNT = 30
