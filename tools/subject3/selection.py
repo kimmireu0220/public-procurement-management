@@ -206,6 +206,40 @@ ROUND6_SELECTED: list[str] = [
     "3:4:1:cqa:3",
 ]
 
+# 7회차 — 6회차 약점·응용퀴즈 보강 · Part 8/7/8/7
+ROUND7_SELECTED: list[str] = [
+    "3:1:1:exam:1",
+    "3:1:3:exam:14",
+    "3:1:2:exam:9",
+    "3:1:2:exam:18",
+    "3:1:3:exam:1",
+    "3:1:4:exam:15",
+    "3:1:4:exam:9",
+    "3:1:3:cqa:1",
+    "3:2:1:exam:1",
+    "3:2:1:exam:7",
+    "3:2:1:exam:16",
+    "3:2:1:exam:34",
+    "3:2:2:exam:4",
+    "3:2:1:exam:37",
+    "3:2:2:exam:25",
+    "3:3:1:exam:18",
+    "3:3:1:exam:31",
+    "3:3:1:exam:32",
+    "3:3:1:exam:40",
+    "3:3:2:exam:24",
+    "3:3:1:exam:36",
+    "3:3:2:exam:27",
+    "3:3:2:cqa:7",
+    "3:4:1:exam:7",
+    "3:4:1:exam:15",
+    "3:4:1:exam:21",
+    "3:4:2:exam:3",
+    "3:4:2:exam:19",
+    "3:4:3:exam:15",
+    "3:4:1:cqa:4",
+]
+
 SELECTIONS: dict[int, list[str]] = {
     1: ROUND1_SELECTED,
     2: ROUND2_SELECTED,
@@ -213,6 +247,7 @@ SELECTIONS: dict[int, list[str]] = {
     4: ROUND4_SELECTED,
     5: ROUND5_SELECTED,
     6: ROUND6_SELECTED,
+    7: ROUND7_SELECTED,
 }
 
 QUESTION_COUNT = 30
