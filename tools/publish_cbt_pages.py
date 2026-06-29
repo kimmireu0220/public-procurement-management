@@ -76,10 +76,17 @@ def main() -> None:
         action="store_true",
         help="(호환) --profile subject1 와 동일",
     )
+    parser.add_argument(
+        "--subject2",
+        action="store_true",
+        help="(호환) --profile subject2 와 동일",
+    )
     args = parser.parse_args()
 
     if args.subject3:
         profile_id = "subject3"
+    elif args.subject2:
+        profile_id = "subject2"
     elif args.subject1:
         profile_id = "subject1"
     else:
@@ -90,6 +97,11 @@ def main() -> None:
 
         k = publish_subject1(args.round)
         print(f"GitHub Pages: 1과목 round {k} → docs/1과목/index.html")
+    elif profile_id == "subject2":
+        from subject2.publish import publish as publish_subject2  # noqa: E402
+
+        k = publish_subject2(args.round)
+        print(f"GitHub Pages: 2과목 round {k} → docs/2과목/index.html")
     elif profile_id == "subject3":
         from subject3.publish import publish as publish_subject3  # noqa: E402
 

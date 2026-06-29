@@ -8,6 +8,7 @@ on:
       - "docs/cbt-meta.json"
       - "docs/.nojekyll"
       - "docs/1과목/**"
+      - "docs/2과목/**"
       - "docs/3과목/**"
       - ".github/workflows/deploy-cbt-pages.yml"
   workflow_dispatch:

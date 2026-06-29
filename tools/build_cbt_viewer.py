@@ -12,7 +12,7 @@ if str(TOOLS_DIR) not in sys.path:
     sys.path.insert(0, str(TOOLS_DIR))
 
 from cbt.builder import build_for_profile  # noqa: E402
-from cbt.profiles import FULL_MOCK, PROFILES, SUBJECT1, SUBJECT3  # noqa: E402
+from cbt.profiles import FULL_MOCK, PROFILES, SUBJECT1, SUBJECT2, SUBJECT3  # noqa: E402
 
 
 def resolve_profile(args: argparse.Namespace):
@@ -39,7 +39,7 @@ def main() -> None:
         "--profile",
         choices=tuple(PROFILES.keys()),
         default=None,
-        help="CBT 프로필 (full=통합 80문항, subject1=1과목 30문항, subject3=3과목 30문항)",
+        help="CBT 프로필 (full=통합 80문항, subject1=1과목 30, subject2=2과목 20, subject3=3과목 30)",
     )
     parser.add_argument(
         "--subject3",
@@ -65,6 +65,11 @@ def main() -> None:
 
             k = publish(args.round)
             print(f"GitHub Pages: docs/1과목/index.html ← 1과목 round {k}")
+        elif profile.id == "subject2":
+            from subject2.publish import publish  # noqa: E402
+
+            k = publish(args.round)
+            print(f"GitHub Pages: docs/2과목/index.html ← 2과목 round {k}")
         elif profile.id == "subject3":
             from subject3.publish import publish  # noqa: E402
 
