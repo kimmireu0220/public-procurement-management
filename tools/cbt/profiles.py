@@ -79,6 +79,24 @@ class Subject3Profile(CbtProfile):
         }
 
 
+@dataclass(frozen=True)
+class Subject1Profile(CbtProfile):
+    def round_dir(self, round_no: int) -> Path:
+        return subject_round_dir(1, round_no)
+
+    def docs_index(self) -> Path:
+        return DOCS / "1과목" / "index.html"
+
+    def publish_meta(self, round_no: int) -> dict:
+        return {
+            "round": round_no,
+            "subject": 1,
+            "total": self.question_count,
+            "source": f"output/{self.source_label(round_no)}",
+            "note": "GitHub Pages — 1과목 전용 필기 모의 CBT (정답 미포함)",
+        }
+
+
 FULL_MOCK = FullMockProfile(
     id="full",
     question_count=80,
@@ -97,7 +115,17 @@ SUBJECT3 = Subject3Profile(
     storage_key_template="mock_exam_3s{round}_answers",
 )
 
+SUBJECT1 = Subject1Profile(
+    id="subject1",
+    question_count=30,
+    duration_sec=45 * 60,
+    shell_html="subject1_shell.html",
+    inject_duration=True,
+    storage_key_template="mock_exam_1s{round}_answers",
+)
+
 PROFILES: dict[str, CbtProfile] = {
     FULL_MOCK.id: FULL_MOCK,
+    SUBJECT1.id: SUBJECT1,
     SUBJECT3.id: SUBJECT3,
 }
