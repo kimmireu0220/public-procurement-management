@@ -20,6 +20,7 @@ output/mock_exam/
 | 항목 | 경로 |
 |------|------|
 | 회차 산출 | `필기/통합/〈K〉회차/` |
+| 오답 누적 | [`필기/통합/오답노트.md`](필기/통합/오답노트.md) |
 | 온라인 CBT | [GitHub Pages](https://kimmireu0220.github.io/public-procurement-management/) |
 | 출제·풀이 | [`docs/시험모의/`](../../docs/시험모의/) |
 
@@ -28,11 +29,44 @@ python3 tools/merge_mock_draft.py K
 python3 tools/build_cbt_viewer.py --round K --pages
 ```
 
+## 필기 1과목 단독 (30문항)
+
+| 항목 | 경로 |
+|------|------|
+| 회차 산출 | `필기/1과목/〈K〉회차/` |
+| 오답 누적 | [`필기/1과목/오답노트.md`](필기/1과목/오답노트.md) |
+| 온라인 CBT | [GitHub Pages `/1과목/`](https://kimmireu0220.github.io/public-procurement-management/1%EA%B3%BC%EB%AA%A9/) |
+| 출제·풀이 | [`선별.md` §A-6](../../docs/시험모의/선별.md) · [`풀이.md` §C-1](../../docs/시험모의/풀이.md) |
+
+```bash
+python3 tools/merge_mock_draft_subject1.py K
+python3 tools/build_cbt_viewer.py --profile subject1 --round K --pages
+```
+
+상세: [`필기/1과목/README.md`](필기/1과목/README.md)
+
+## 필기 2과목 단독 (20문항)
+
+| 항목 | 경로 |
+|------|------|
+| 회차 산출 | `필기/2과목/〈K〉회차/` |
+| 오답 누적 | [`필기/2과목/오답노트.md`](필기/2과목/오답노트.md) |
+| 온라인 CBT | [GitHub Pages `/2과목/`](https://kimmireu0220.github.io/public-procurement-management/2%EA%B3%BC%EB%AA%A9/) |
+| 출제·풀이 | [`선별.md` §A-6](../../docs/시험모의/선별.md) · [`풀이.md` §C-2](../../docs/시험모의/풀이.md) |
+
+```bash
+python3 tools/merge_mock_draft_subject2.py K
+python3 tools/build_cbt_viewer.py --profile subject2 --round K --pages
+```
+
+상세: [`필기/2과목/README.md`](필기/2과목/README.md)
+
 ## 필기 3과목 단독 (30문항)
 
 | 항목 | 경로 |
 |------|------|
 | 회차 산출 | `필기/3과목/〈K〉회차/` |
+| 오답 누적 | [`필기/3과목/오답노트.md`](필기/3과목/오답노트.md) |
 | 온라인 CBT | [GitHub Pages `/3과목/`](https://kimmireu0220.github.io/public-procurement-management/3%EA%B3%BC%EB%AA%A9/) |
 | 출제·풀이 | [`선별.md` §A-6](../../docs/시험모의/선별.md) · [`풀이.md` §C](../../docs/시험모의/풀이.md) |
 
@@ -57,5 +91,6 @@ python3 tools/build_cbt_viewer.py --profile subject3 --round K --pages
 | `manifest.json` | stable_id (중복 방지) |
 | `교차검수.md` | 출제 검수 |
 | `필기_풀이.md` | 채점·해설 |
+| `../{N}과목/오답노트.md` | 과목 단독 오답 누적 (통합은 `통합/오답노트.md`) |
 
-출제 완료 시 `docs/` 갱신 후 `main` push — 통합 [`선별.md`](../../docs/시험모의/선별.md) §A-5 · 3과목 단독 §A-6.
+출제 완료 시 `docs/` 갱신 후 `main` push — 통합 [`선별.md`](../../docs/시험모의/선별.md) §A-5 · 과목 단독 §A-6.
