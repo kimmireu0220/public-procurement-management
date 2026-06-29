@@ -26,8 +26,33 @@ ROUND1_SELECTED: list[str] = [
     "2:4:4:exam:5",
 ]
 
+# 2회차 — 통합·2과목 1회차 manifest의 2:* 미사용 · 1회차 약점(RFI·RFQ·SW원가) 보강
+ROUND2_SELECTED: list[str] = [
+    "2:1:1:exam:7",
+    "2:1:2:exam:7",
+    "2:1:2:exam:2",
+    "2:1:2:exam:10",
+    "2:1:2:check:5",
+    "2:2:1:exam:6",
+    "2:2:2:exam:8",
+    "2:2:3:exam:4",
+    "2:2:3:exam:24",
+    "2:2:4:exam:5",
+    "2:3:1:exam:6",
+    "2:3:1:exam:26",
+    "2:3:2:exam:5",
+    "2:3:2:exam:10",
+    "2:3:3:exam:4",
+    "2:4:1:exam:12",
+    "2:4:2:exam:13",
+    "2:4:2:exam:12",
+    "2:4:4:exam:7",
+    "2:4:4:exam:13",
+]
+
 SELECTIONS: dict[int, list[str]] = {
     1: ROUND1_SELECTED,
+    2: ROUND2_SELECTED,
 }
 
 QUESTION_COUNT = 20
