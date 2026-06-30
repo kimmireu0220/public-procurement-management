@@ -24,7 +24,7 @@
 | 출제 상세 규칙 | `docs/시험모의/선별.md` |
 | 채점·해설 | `docs/시험모의/풀이.md` |
 | 오답 누적 | `필기/통합/오답노트.md` (통합) · `필기/{1,2,3}과목/오답노트.md` (과목 단독) |
-| 과목 단독 CBT | [허브](https://kimmireu0220.github.io/public-procurement-management/mock-exam/) · [1과목](https://kimmireu0220.github.io/public-procurement-management/1%EA%B3%BC%EB%AA%A9/) · [2과목](https://kimmireu0220.github.io/public-procurement-management/2%EA%B3%BC%EB%AA%A9/) · [3과목](https://kimmireu0220.github.io/public-procurement-management/3%EA%B3%BC%EB%AA%A9/) · 산출 `필기/{N}과목/〈K〉회차/` |
+| 과목 단독 CBT | [1과목](https://kimmireu0220.github.io/public-procurement-management/1%EA%B3%BC%EB%AA%A9/) · [2과목](https://kimmireu0220.github.io/public-procurement-management/2%EA%B3%BC%EB%AA%A9/) · [3과목](https://kimmireu0220.github.io/public-procurement-management/3%EA%B3%BC%EB%AA%A9/) · 산출 `필기/{N}과목/〈K〉회차/` |
 
 ---
 

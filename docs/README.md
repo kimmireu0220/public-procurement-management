@@ -5,7 +5,6 @@
 | [`시험_안내.md`](시험_안내.md) | 시험 일정·문항 수·합격 기준 (SSOT) |
 | [`학습_프롬프트/`](학습_프롬프트/) | 과목별 이론 학습 (Cursor) |
 | [`시험모의/`](시험모의/) | 모의 출제·채점 프롬프트 (출제 마무리 시 Pages 배포·push: 통합 [`선별.md` §A-5](시험모의/선별.md) · 과목 단독 §A-6) |
-| [`mock-exam/`](mock-exam/index.html) | **온라인 CBT 허브** — 통합·1·2·3과목 링크 (GitHub Pages) |
 | [`1과목/`](1과목/index.html) · [`2과목/`](2과목/index.html) · [`3과목/`](3과목/index.html) | 과목 단독 필기 CBT (GitHub Pages 배포본, 정답 미포함) |
 
 에이전트 허브: [`../AGENTS.md`](../AGENTS.md) · 원본 자료: [`../sources/README.md`](../sources/README.md)

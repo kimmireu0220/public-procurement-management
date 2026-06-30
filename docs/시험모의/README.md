@@ -32,8 +32,6 @@
 | 7b | 풀이 §C·§C-1·§C-2 | 과목 단독 채점 (`필기/{N}과목/오답노트.md`) |
 | 실기 | 선별 §B | 20 내외 · 유형 비중 에이전트 판단 |
 
-**온라인 CBT 허브:** [mock-exam/](https://kimmireu0220.github.io/public-procurement-management/mock-exam/) (통합·과목 단독 링크)
-
 ## 역할 분리
 
 | 단계 | 프롬프트 | 산출물 |
