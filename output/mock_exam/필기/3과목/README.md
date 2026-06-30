@@ -29,7 +29,7 @@ python3 tools/build_cbt_viewer.py --profile subject3 --round 1 --pages
 ```
 
 - 선별: `problem_book_final` + `agent_extract` 대조 (자동 추첨 없음)
-- 통합 모의 manifest의 `3:*` stable_id **재사용 금지**
+- 통합·이전 3과목 단독 manifest의 `3:*` stable_id **1차 lap 재사용 금지** · 1차 소진 후 §A-0b **2차 lap**
 - 제한시간 **45분** · localStorage `mock_exam_3sK_answers` (K=회차)
 
 ## 답안 제출
