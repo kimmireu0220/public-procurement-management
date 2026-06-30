@@ -240,6 +240,40 @@ ROUND7_SELECTED: list[str] = [
     "3:4:1:cqa:4",
 ]
 
+# 8회차 — 통합·3과목 1~7회차 manifest의 3:* 미사용 · 7회차 약점(보증금·MAS·해제/해지) 보강
+ROUND8_SELECTED: list[str] = [
+    "3:1:2:exam:19",
+    "3:1:2:exam:20",
+    "3:1:2:exam:22",
+    "3:1:3:exam:13",
+    "3:1:4:exam:13",
+    "3:1:4:exam:17",
+    "3:1:4:exam:19",
+    "3:1:2:cqa:4",
+    "3:2:1:exam:2",
+    "3:2:1:exam:11",
+    "3:2:1:exam:20",
+    "3:2:1:exam:30",
+    "3:2:2:exam:6",
+    "3:2:2:exam:7",
+    "3:2:1:exam:40",
+    "3:3:1:exam:33",
+    "3:3:1:exam:37",
+    "3:3:1:exam:39",
+    "3:3:1:exam:42",
+    "3:3:2:exam:28",
+    "3:3:2:exam:29",
+    "3:3:2:cqa:13",
+    "3:3:1:cqa:6",
+    "3:4:1:exam:10",
+    "3:4:2:exam:7",
+    "3:4:2:exam:23",
+    "3:4:2:exam:24",
+    "3:4:3:exam:16",
+    "3:4:3:exam:28",
+    "3:4:1:cqa:5",
+]
+
 SELECTIONS: dict[int, list[str]] = {
     1: ROUND1_SELECTED,
     2: ROUND2_SELECTED,
@@ -248,6 +282,7 @@ SELECTIONS: dict[int, list[str]] = {
     5: ROUND5_SELECTED,
     6: ROUND6_SELECTED,
     7: ROUND7_SELECTED,
+    8: ROUND8_SELECTED,
 }
 
 QUESTION_COUNT = 30
