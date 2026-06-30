@@ -2,6 +2,9 @@
 
 from __future__ import annotations
 
+# Check Q&A(cqa): 기본 배제. 단원별 출제예상(exam)·㉠㉡·빈칸으로 Part·주제를
+# 맞출 수 없을 때만 최소 투입. 상한 20%는 검수용(9회차 Part3 잔여 풀 부족 시 예외).
+
 # 1회차 — 통합 1~3회차 manifest의 3:* 미사용
 ROUND1_SELECTED: list[str] = [
     "3:1:1:cqa:2",
