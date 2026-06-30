@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>공공조달관리사 — 필기 모의 CBT</title>
+  <style>
+    :root { --bg: #f6f7f9; --card: #fff; --text: #1a1a1a; --muted: #5c6370; --link: #0969da; --border: #d8dee4; }
+    * { box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background: var(--bg); color: var(--text); margin: 0; line-height: 1.6; }
+    main { max-width: 720px; margin: 0 auto; padding: 2rem 1.25rem 3rem; }
+    h1 { font-size: 1.5rem; margin: 0 0 0.25rem; }
+    .sub { color: var(--muted); margin: 0 0 1.5rem; font-size: 0.95rem; }
+    section { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 1.25rem 1.35rem; margin-bottom: 1rem; }
+    h2 { font-size: 1.05rem; margin: 0 0 0.75rem; }
+    ul { margin: 0; padding-left: 1.2rem; }
+    li { margin: 0.45rem 0; }
+    a { color: var(--link); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .meta { color: var(--muted); font-size: 0.88rem; }
+    .note { font-size: 0.9rem; color: var(--muted); margin-top: 1.25rem; }
+    code { font-size: 0.88em; background: #eef1f4; padding: 0.1em 0.35em; border-radius: 4px; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>공공조달관리사 필기 모의 CBT</h1>
+    <p class="sub">정답 미포함 · 브라우저에서 바로 응시 · 답안은 기기에 저장</p>
+
+    <section>
+      <h2>통합 필기 (80문항 · 120분)</h2>
+      <ul>
+        <li><a href="../index.html">통합 모의 응시</a> <span class="meta">— 현재 <strong id="full-round">—</strong>회차</span></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>과목 단독</h2>
+      <ul>
+        <li><a href="../1%EA%B3%BC%EB%AA%A9/index.html">1과목</a> 공공조달과 법제도 <span class="meta">30문항 · 45분 · <strong id="s1-round">—</strong>회차</span></li>
+        <li><a href="../2%EA%B3%BC%EB%AA%A9/index.html">2과목</a> 공공조달계획 수립 및 분석 <span class="meta">20문항 · 30분 · <strong id="s2-round">—</strong>회차</span></li>
+        <li><a href="../3%EA%B3%BC%EB%AA%A9/index.html">3과목</a> 공공계약관리 <span class="meta">30문항 · 45분 · <strong id="s3-round">—</strong>회차</span></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>출제·학습 자료 (저장소)</h2>
+      <ul>
+        <li><a href="https://github.com/kimmireu0220/public-procurement-management/blob/main/docs/시험모의/선별.md">출제 워크플로</a> — 표준교재로 주제 설계 → 박문각 문제 은행 선별</li>
+        <li><a href="https://github.com/kimmireu0220/public-procurement-management/tree/main/output/standard_textbook">표준교재 핵심 정리</a></li>
+        <li><a href="https://github.com/kimmireu0220/public-procurement-management/blob/main/docs/시험_안내.md">시험 안내</a></li>
+      </ul>
+    </section>
+
+    <p class="note">산출·채점 기록: 저장소 <code>output/mock_exam/</code></p>
+  </main>
+  <script>
+    async function loadMeta(path, elId, fallback) {
+      try {
+        const r = await fetch(path);
+        if (!r.ok) return;
+        const j = await r.json();
+        const el = document.getElementById(elId);
+        if (el && j.round != null) el.textContent = j.round;
+      } catch (_) { /* offline / file:// */ }
+    }
+    loadMeta('../cbt-meta.json', 'full-round');
+    loadMeta('../1%EA%B3%BC%EB%AA%A9/cbt-meta.json', 's1-round');
+    loadMeta('../2%EA%B3%BC%EB%AA%A9/cbt-meta.json', 's2-round');
+    loadMeta('../3%EA%B3%BC%EB%AA%A9/cbt-meta.json', 's3-round');
+  </script>
+</body>
+</html>

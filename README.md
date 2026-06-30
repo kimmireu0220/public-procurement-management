@@ -38,6 +38,7 @@
 ## 모의고사
 
 - 프롬프트: [`docs/시험모의/`](docs/시험모의/) — [`선별.md`](docs/시험모의/선별.md) · [`풀이.md`](docs/시험모의/풀이.md)
+- **온라인 CBT 허브:** [mock-exam/](https://kimmireu0220.github.io/public-procurement-management/mock-exam/) — 통합·과목 단독 링크
 - **온라인 CBT (통합 80문항):** [GitHub Pages](https://kimmireu0220.github.io/public-procurement-management/) — `python3 tools/build_cbt_viewer.py --round K --pages` → **`main` 커밋·푸시** ([`선별.md` §A-5](docs/시험모의/선별.md))
 - **온라인 CBT (과목 단독):** [1과목](https://kimmireu0220.github.io/public-procurement-management/1%EA%B3%BC%EB%AA%A9/) · [2과목](https://kimmireu0220.github.io/public-procurement-management/2%EA%B3%BC%EB%AA%A9/) · [3과목](https://kimmireu0220.github.io/public-procurement-management/3%EA%B3%BC%EB%AA%A9/) — `build_cbt_viewer.py --profile subject{1,2,3} --round K --pages` → **`main` push** ([`선별.md` §A-6](docs/시험모의/선별.md))
 

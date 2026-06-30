@@ -15,7 +15,8 @@
 | 용도 | 경로 |
 |------|------|
 | 이론 | `docs/학습_프롬프트/` |
-| 문제 은행 | `output/problem_book_final/<과목>/` — **`.md`** 출제·선별 · **`.html`** 사람 학습용 |
+| **표준교재 핵심** (출제 **주제 설계** 1순위) | `output/standard_textbook/<과목>/` — `INDEX.md` · `ch0N_*.md` |
+| 문제 은행 (출제 **지문** — 박문각만) | `output/problem_book_final/<과목>/` — **`.md`** 출제·선별 · **`.html`** 사람 학습용 |
 | 정답·해설(대조 필수) | `output/agent_extract/<과목>/partN.md` |
 | 시험 일정·합격 기준 | `docs/시험_안내.md`, `sources/공식_qnet_시행공고/` |
 | 모의 프롬프트 | `docs/시험모의/` |
@@ -23,13 +24,22 @@
 | 출제 상세 규칙 | `docs/시험모의/선별.md` |
 | 채점·해설 | `docs/시험모의/풀이.md` |
 | 오답 누적 | `필기/통합/오답노트.md` (통합) · `필기/{1,2,3}과목/오답노트.md` (과목 단독) |
-| 과목 단독 CBT | [1과목](https://kimmireu0220.github.io/public-procurement-management/1%EA%B3%BC%EB%AA%A9/) · [2과목](https://kimmireu0220.github.io/public-procurement-management/2%EA%B3%BC%EB%AA%A9/) · [3과목](https://kimmireu0220.github.io/public-procurement-management/3%EA%B3%BC%EB%AA%A9/) · 산출 `필기/{N}과목/〈K〉회차/` |
+| 과목 단독 CBT | [허브](https://kimmireu0220.github.io/public-procurement-management/mock-exam/) · [1과목](https://kimmireu0220.github.io/public-procurement-management/1%EA%B3%BC%EB%AA%A9/) · [2과목](https://kimmireu0220.github.io/public-procurement-management/2%EA%B3%BC%EB%AA%A9/) · [3과목](https://kimmireu0220.github.io/public-procurement-management/3%EA%B3%BC%EB%AA%A9/) · 산출 `필기/{N}과목/〈K〉회차/` |
 
 ---
 
 ## 모의고사 출제 — 일관된 워크플로 (필기 통합 80문항)
 
-**원칙:** 문항 **선별은 에이전트가 수동으로** 한다. `problem_book_final`에서 지문을 고르고 `agent_extract`와 정답을 대조한다. **코드로 문항을 자동 추첨·선별하지 않는다.** (CBT HTML **빌드**만 `tools/build_cbt_viewer.py` 허용)
+**원칙:** 문항 **선별은 에이전트가 수동으로** 한다. **코드로 문항을 자동 추첨·선별하지 않는다.** (CBT HTML **빌드**만 `tools/build_cbt_viewer.py` 허용)
+
+**주제 설계 → 문항 선별 (2단계, 필기·실기 공통)**
+
+| 단계 | 자료 | 하는 일 |
+|------|------|---------|
+| **1. 주제·범위** | `output/standard_textbook/<과목>/` | 조달청 표준교재 핵심 정리(`INDEX.md`·`ch0N_*.md`)로 이번 회차 **장·절·클러스터·함정**을 먼저 잡는다 |
+| **2. 지문 선별** | `problem_book_final` + `agent_extract` | 1단계 주제에 맞는 박문각 문항만 고르고 정답을 대조한다 |
+
+지문 소스는 **박문각 문제 은행뿐**이지만, **무엇을 뽑을지는 표준교재 출제 범위가 먼저**다. (선택) `출제_방향.md`에 표준교재 기준 주제 요약을 남긴다. 상세: [`docs/시험모의/선별.md`](docs/시험모의/선별.md) 「주제 설계 → 문항 선별」.
 
 ### 규모 (고정)
 
@@ -57,14 +67,15 @@
 
 각 과목 에이전트는 다음만 수행한다.
 
-1. `problem_book_final/<slug>/〈N〉과목_문제집.md`에서 문항 **직접 선별** (학습용 `.html`과 동일 내용)
-2. 정답·해설은 **반드시** `agent_extract/<slug>/part*.md`와 대조 (번호·선지 불일치 시 해당 문항 제외)
-3. **제외:** O/X·최종점검 퀴즈 (실제 필기 없음)
-4. **우선:** `단원별 출제예상문제`(함정·비교형) > ㉠㉡·빈칸형 > `Check Q&A`(과목당 **20% 이하**, 사용자 「난이도 up」 시 **10% 내외**)
-5. **분배:** Part·Chapter 골고루 (1과목 Part1~7, 2·3과목 Part1~4). 한 Part에 과도하게 몰지 않음
-6. **중복 금지:** 동일 지문·유사 쌍둥이·동일 클러스터(아래) 회차당 1문항
-7. **이전 회차:** **모든** 이전 회차 `manifest.json`의 `stable_id`는 〈K〉회차에서 **재사용 금지**
-8. 문항마다 주석 유지:
+1. **`output/standard_textbook/<slug>/`** — `INDEX.md`·해당 `ch0N_*.md`로 이번 회차 **핵심 주제·클러스터**를 먼저 확정 (Intro 출제기준·(선택) A-0 오답 묶음과 병행)
+2. `problem_book_final/<slug>/〈N〉과목_문제집.md`에서 **1번 주제에 맞는** 문항만 **직접 선별** (학습용 `.html`과 동일 내용)
+3. 정답·해설은 **반드시** `agent_extract/<slug>/part*.md`와 대조 (번호·선지 불일치 시 해당 문항 제외)
+4. **제외:** O/X·최종점검 퀴즈 (실제 필기 없음)
+5. **우선:** `단원별 출제예상문제`(함정·비교형) > ㉠㉡·빈칸형 > `Check Q&A`(과목당 **20% 이하**, 사용자 「난이도 up」 시 **10% 내외**)
+6. **분배:** Part·Chapter 골고루 (1과목 Part1~7, 2·3과목 Part1~4). 한 Part에 과도하게 몰지 않음 — **표준교재 장(INDEX) 분산**과 맞출 것
+7. **중복 금지:** 동일 지문·유사 쌍둥이·동일 클러스터(아래) 회차당 1문항
+8. **이전 회차:** **모든** 이전 회차 `manifest.json`의 `stable_id`는 〈K〉회차에서 **재사용 금지**
+9. 문항마다 주석 유지:
    - `<!-- source: Part N/page_XXXX.jpg -->`
    - `<!-- id: 과목:part:chapter:stype:qn -->` (`stype` = `exam` | `check` | `cqa`)
 
@@ -197,6 +208,7 @@ python3 tools/build_cbt_viewer.py --profile subject2 --round K --pages
 
 **선별 시 공통**
 
+- **표준교재 핵심**(`output/standard_textbook/`)으로 주제 먼저 → `problem_book_final`에서 매칭 선별 (통합과 동일 2단계)
 - 통합·이전 과목 단독 **모든** `manifest.json`의 해당 `N:*` stable_id **재사용 금지**
 - Part 분산 · Check Q&A 20% 이하 · 빈출 클러스터 회차당 과다 금지
 - (선택) `필기/{N}과목/오답노트.md`·통합 오답노트에서 약점 반영 — `선별.md` §A-0와 동일 **판단 원칙**
@@ -244,14 +256,15 @@ python3 tools/build_cbt_viewer.py --profile subject3 --round K --pages
 ### 실기 모의 (별도)
 
 - 시험 규모 **20문항 내외**만 고정 — 유형·Part 비중·문항 수(20 내외 범위 안)는 **에이전트 판단** (`docs/시험모의/선별.md` §B)
-- `4과목_공공조달 관리실무` · 산출: `output/mock_exam/실기/〈K〉회차/실기_모의_문제.md`, `실기_모의_정답.md`
+- **주제:** `output/standard_textbook/4과목_공공조달 관리실무/`(8장)로 범위 먼저 → `problem_book_final/4과목_…`에서 선별
+- 산출: `output/mock_exam/실기/〈K〉회차/실기_모의_문제.md`, `실기_모의_정답.md`
 
 ### 출제 후 체크리스트 — 통합 필기 (에이전트 자가 점검)
 
 - [ ] 80문항 · 30/20/30 · O/X 0건
 - [ ] 모든 문항 `source` + `id` 주석
 - [ ] manifest 80건 · 이전 회차 stable_id 미중복
-- [ ] Part·Chapter 분포표 (완료 보고에 포함)
+- [ ] Part·Chapter 분포표 · **표준교재 장 대응** 요약 (완료 보고에 포함)
 - [ ] `교차검수.md` 작성 (3단계) — 예: `output/mock_exam/필기/통합/1회차/교차검수.md`
 - [ ] `merge_mock_draft.py K` → `build_cbt_viewer.py --round K` 실행 · `http://localhost:8765/` 표시 확인
 - [ ] **`publish_cbt_pages.py`** → `docs/index.html`·`cbt-meta.json` 갱신 · **`main` 커밋·푸시** (온라인 CBT 반영)
