@@ -311,6 +311,40 @@ ROUND9_SELECTED: list[str] = [
     "3:4:3:exam:32",
 ]
 
+# 10회차 — 9회차 약점(MAS·e-발주·품질·외자) · Part3 exam 고갈 → cqa 6 + MAS exam 2건 2차 lap 재출제 · Part 8/7/8/7
+ROUND10_SELECTED: list[str] = [
+    "3:1:3:exam:16",
+    "3:1:4:exam:1",
+    "3:1:4:exam:2",
+    "3:1:4:exam:6",
+    "3:1:4:exam:23",
+    "3:1:4:exam:28",
+    "3:1:4:exam:30",
+    "3:1:4:exam:32",
+    "3:2:1:exam:44",
+    "3:2:1:exam:45",
+    "3:2:1:exam:46",
+    "3:2:1:exam:49",
+    "3:2:1:exam:50",
+    "3:2:2:exam:41",
+    "3:2:2:exam:42",
+    "3:3:1:cqa:14",
+    "3:3:1:cqa:15",
+    "3:3:2:cqa:1",
+    "3:3:2:cqa:12",
+    "3:3:2:cqa:16",
+    "3:3:2:cqa:17",
+    "3:3:2:exam:21",
+    "3:3:2:exam:20",
+    "3:4:1:exam:31",
+    "3:4:1:exam:16",
+    "3:4:1:exam:27",
+    "3:4:2:exam:11",
+    "3:4:2:exam:20",
+    "3:4:3:exam:8",
+    "3:4:3:exam:25",
+]
+
 SELECTIONS: dict[int, list[str]] = {
     1: ROUND1_SELECTED,
     2: ROUND2_SELECTED,
@@ -321,6 +355,7 @@ SELECTIONS: dict[int, list[str]] = {
     7: ROUND7_SELECTED,
     8: ROUND8_SELECTED,
     9: ROUND9_SELECTED,
+    10: ROUND10_SELECTED,
 }
 
 QUESTION_COUNT = 30
