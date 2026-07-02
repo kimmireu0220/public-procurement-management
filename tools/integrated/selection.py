@@ -133,11 +133,123 @@ LAP2_REUSE_3: list[str] = [
     "3:3:2:exam:18",
 ]
 
+# Part 분포 5/4/5/4/5/4/3 · check 5건(≤6)
+SUBJECT1_ROUND5: list[str] = [
+    # Part1 (5) — 지방계약법 check 1
+    "1:1:1:exam:12",
+    "1:1:2:exam:5",
+    "1:1:3:exam:5",
+    "1:1:4:check:2",
+    "1:1:4:exam:8",
+    # Part2 (4) — 경쟁적 대화
+    "1:2:2:exam:11",
+    "1:2:2:exam:7",
+    "1:2:2:exam:15",
+    "1:2:1:exam:11",
+    # Part3 (5)
+    "1:3:1:exam:13",
+    "1:3:2:exam:5",
+    "1:3:2:exam:10",
+    "1:3:3:exam:8",
+    "1:3:3:exam:12",
+    # Part4 (4)
+    "1:4:3:exam:3",
+    "1:4:1:exam:12",
+    "1:4:2:exam:5",
+    "1:4:5:exam:10",
+    # Part5 (5)
+    "1:5:5:exam:16",
+    "1:5:1:exam:14",
+    "1:5:2:exam:8",
+    "1:5:3:exam:2",
+    "1:5:4:exam:2",
+    # Part6 (4) — check only (exam 풀 소진)
+    "1:6:6:check:1",
+    "1:6:1:check:4",
+    "1:6:3:check:1",
+    "1:6:4:check:3",
+    # Part7 (3) — 무효·부정당
+    "1:7:1:exam:37",
+    "1:7:1:exam:40",
+    "1:7:2:exam:25",
+]
+
+# Part 분포 5/5/5/5 · check 2건(≤4)
+SUBJECT2_ROUND5: list[str] = [
+    # Part1 (5)
+    "2:1:1:exam:12",
+    "2:1:2:exam:14",
+    "2:1:2:exam:20",
+    "2:1:2:exam:29",
+    "2:1:2:exam:33",
+    # Part2 (5) — 일반관리비
+    "2:2:3:exam:9",
+    "2:2:3:exam:19",
+    "2:2:2:exam:9",
+    "2:2:3:exam:12",
+    "2:2:3:exam:2",
+    # Part3 (5) — 사전규격
+    "2:3:2:exam:11",
+    "2:3:2:exam:2",
+    "2:3:1:exam:15",
+    "2:3:1:exam:20",
+    "2:3:4:exam:4",
+    # Part4 (5) — 지방 협상·평가·제안 후 협상
+    "2:4:1:exam:8",
+    "2:4:1:check:3",
+    "2:4:2:check:2",
+    "2:4:3:exam:9",
+    "2:4:2:exam:9",
+]
+
+# Part 분포 8/4/2/16 · cqa 6건(≤6) — Part2/3 exam 고갈
+SUBJECT3_ROUND5: list[str] = [
+    # Part1 (8) — 이행보증·손해보험 잔여 exam 전량
+    "3:1:4:exam:25",
+    "3:1:4:exam:26",
+    "3:1:4:exam:37",
+    "3:1:4:exam:38",
+    "3:1:4:exam:39",
+    "3:1:4:exam:40",
+    "3:1:4:exam:41",
+    "3:1:4:exam:42",
+    # Part2 (4) — cqa: 입찰공고·물가
+    "3:2:1:cqa:3",
+    "3:2:1:cqa:17",
+    "3:2:2:cqa:10",
+    "3:2:2:cqa:16",
+    # Part3 (2) — cqa: PQ·MAS
+    "3:3:1:cqa:22",
+    "3:3:2:cqa:19",
+    # Part4 (16) — 하도급·공사관리
+    "3:4:1:exam:2",
+    "3:4:1:exam:36",
+    "3:4:1:exam:23",
+    "3:4:1:exam:38",
+    "3:4:1:exam:40",
+    "3:4:1:exam:41",
+    "3:4:3:exam:27",
+    "3:4:3:exam:17",
+    "3:4:3:exam:19",
+    "3:4:3:exam:18",
+    "3:4:3:exam:26",
+    "3:4:3:exam:29",
+    "3:4:3:exam:35",
+    "3:4:3:exam:42",
+    "3:4:3:exam:44",
+    "3:4:2:exam:22",
+]
+
 INTEGRATED_SELECTIONS: dict[int, dict[str, list[str]]] = {
     4: {
         "1": SUBJECT1_ROUND4,
         "2": SUBJECT2_ROUND4,
         "3": SUBJECT3_ROUND4,
+    },
+    5: {
+        "1": SUBJECT1_ROUND5,
+        "2": SUBJECT2_ROUND5,
+        "3": SUBJECT3_ROUND5,
     },
 }
 
