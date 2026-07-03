@@ -10,6 +10,7 @@ on:
       - "docs/1과목/**"
       - "docs/2과목/**"
       - "docs/3과목/**"
+      - "docs/study/**"
       - ".github/workflows/deploy-cbt-pages.yml"
   workflow_dispatch:
 
