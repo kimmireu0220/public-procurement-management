@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>1과목 Part2 EXAM 학습</title>
+<style>
+:root {
+  --bg: #e8ecf1;
+  --panel: #fff;
+  --primary: #1a4d8f;
+  --primary-dark: #0f3460;
+  --accent: #2e7dd1;
+  --border: #c5d0de;
+  --text: #1a1a1a;
+  --muted: #5c6b7a;
+  --answered: #2e7dd1;
+  --current: #1a4d8f;
+  --unanswered: #d0d7e2;
+  --warn: #c0392b;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: "Apple SD Gothic Neo", "Malgun Gothic", sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; }
+
+#screen-start { display: flex; align-items: center; justify-content: center; min-height: 100vh; padding: 1.5rem; }
+.start-card { background: var(--panel); max-width: 520px; width: 100%; border-radius: 8px; box-shadow: 0 4px 24px rgba(0,0,0,.12); padding: 2.5rem 2rem; text-align: center; border-top: 4px solid var(--primary); }
+.start-card h1 { font-size: 1.65rem; color: var(--primary-dark); margin-bottom: .5rem; }
+.start-card .sub { color: var(--muted); font-size: 1.05rem; margin-bottom: 1.5rem; }
+.start-card ul { text-align: left; margin: 0 auto 1.75rem; max-width: 340px; font-size: .92rem; line-height: 1.8; color: #333; }
+.start-card .btn-start { background: var(--primary); color: #fff; border: none; padding: .85rem 2.5rem; font-size: 1.05rem; border-radius: 4px; cursor: pointer; font-weight: 600; }
+.start-card .btn-start:hover { background: var(--primary-dark); }
+
+#screen-exam { display: none; flex-direction: column; height: 100vh; }
+.topbar { background: var(--primary-dark); color: #fff; display: flex; align-items: center; justify-content: space-between; padding: 1rem 1.5rem; font-size: 1.1rem; flex-shrink: 0; min-height: 3.75rem; }
+.topbar .exam-title { font-weight: 700; font-size: 1.3rem; }
+.topbar .timer { font-size: 1.65rem; font-weight: 700; font-variant-numeric: tabular-nums; letter-spacing: .05em; }
+.topbar .timer.warn { color: #ffcc00; animation: pulse 1s infinite; }
+@keyframes pulse { 50% { opacity: .7; } }
+.subbar { background: var(--primary); color: #fff; padding: .9rem 1.5rem; font-size: 1.1rem; display: flex; justify-content: space-between; align-items: center; min-height: 3.25rem; }
+.subbar #subject-label { font-size: 1.15rem; font-weight: 600; }
+.subbar #progress-label { font-size: 1.1rem; font-weight: 600; }
+
+.main { display: flex; flex: 1; overflow: hidden; }
+.question-panel { flex: 1; overflow-y: auto; padding: 1.5rem 2rem 2rem; background: var(--panel); }
+.q-header { display: flex; align-items: center; gap: .75rem; margin-bottom: 1.25rem; }
+.q-badge { background: var(--primary); color: #fff; font-weight: 700; font-size: 1.35rem; min-width: 3.25rem; text-align: center; padding: .45rem .7rem; border-radius: 4px; }
+.q-subject { color: var(--muted); font-size: 1rem; font-weight: 600; }
+.q-stem { font-size: 1.2rem; line-height: 1.75; margin-bottom: 1.5rem; font-weight: 600; }
+.q-stem strong { color: var(--primary-dark); }
+
+.choices { display: flex; flex-direction: column; gap: .65rem; }
+.choice { display: flex; align-items: flex-start; gap: .75rem; padding: .85rem 1rem; border: 2px solid var(--border); border-radius: 6px; cursor: pointer; transition: border-color .15s, background .15s; background: #fafbfc; }
+.choice:hover { border-color: var(--accent); background: #f0f6fc; }
+.choice.selected { border-color: var(--primary); background: #e8f0fa; box-shadow: 0 0 0 1px var(--primary); }
+.choice.focused { outline: 2px solid var(--accent); outline-offset: 2px; }
+.choice .num { font-weight: 700; color: var(--primary); min-width: 1.75rem; font-size: 1.15rem; }
+.choice .text { flex: 1; line-height: 1.6; font-size: 1.12rem; }
+.choice input { display: none; }
+
+.nav-panel { width: 280px; background: #f4f6f9; border-left: 1px solid var(--border); display: flex; flex-direction: column; flex-shrink: 0; }
+.nav-title { padding: .85rem 1rem; font-size: 1rem; font-weight: 700; color: var(--primary-dark); border-bottom: 1px solid var(--border); }
+.nav-scroll { overflow-y: auto; flex: 1; padding: .75rem; }
+.nav-section { margin-bottom: .9rem; }
+.nav-section:last-child { margin-bottom: 0; }
+.nav-section-title { font-size: .95rem; font-weight: 700; color: var(--primary-dark); margin-bottom: .45rem; padding-bottom: .3rem; border-bottom: 1px solid var(--border); line-height: 1.4; }
+.nav-section-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; }
+.nav-btn { min-height: 2.35rem; border: 1px solid var(--border); background: var(--unanswered); border-radius: 4px; font-size: .85rem; font-weight: 600; cursor: pointer; color: #444; }
+.nav-btn.answered { background: #b8d4f0; border-color: var(--answered); color: var(--primary-dark); }
+.nav-btn.current { background: var(--current); color: #fff; border-color: var(--current); }
+.nav-btn:hover { filter: brightness(.95); }
+.nav-legend { padding: .5rem .75rem; font-size: .72rem; color: var(--muted); border-top: 1px solid var(--border); display: flex; gap: .75rem; flex-wrap: wrap; }
+.legend-dot { display: inline-block; width: 10px; height: 10px; border-radius: 2px; margin-right: 2px; vertical-align: middle; }
+
+.bottombar { background: var(--panel); border-top: 1px solid var(--border); padding: .65rem 1.25rem; display: flex; justify-content: space-between; align-items: center; flex-shrink: 0; gap: .75rem; }
+.bottombar-left, .bottombar-right { display: flex; align-items: center; gap: .5rem; }
+.bottombar button { padding: .55rem 1.4rem; font-size: .92rem; border-radius: 4px; cursor: pointer; border: 1px solid var(--border); background: #fff; }
+.bottombar button.reset { color: var(--warn); border-color: #e8c4c0; background: #fff8f7; }
+.bottombar button.reset:hover { background: #fdecea; }
+.bottombar button.primary { background: var(--primary); color: #fff; border-color: var(--primary); font-weight: 600; }
+.bottombar button:disabled { opacity: .4; cursor: not-allowed; }
+.progress-text { font-size: 1rem; font-weight: 600; color: var(--text); }
+
+#screen-end { display: none; min-height: 100vh; padding: 2rem; }
+.end-card { max-width: 640px; margin: 0 auto; background: var(--panel); border-radius: 8px; padding: 2rem; box-shadow: 0 4px 20px rgba(0,0,0,.1); }
+.end-card h2 { color: var(--primary-dark); margin-bottom: 1rem; font-size: 1.55rem; }
+.end-card textarea { width: 100%; height: 160px; font-family: monospace; font-size: .85rem; padding: .75rem; border: 1px solid var(--border); border-radius: 4px; margin: 1rem 0; }
+.end-card .hint { font-size: .88rem; color: var(--muted); line-height: 1.6; }
+.end-card button { margin-right: .5rem; margin-top: .5rem; padding: .55rem 1.2rem; border-radius: 4px; cursor: pointer; border: 1px solid var(--border); background: #fff; }
+.end-card button.primary { background: var(--primary); color: #fff; border-color: var(--primary); }
+
+@media (max-width: 768px) {
+  .main { flex-direction: column; }
+  .nav-panel { width: 100%; border-left: none; border-top: 1px solid var(--border); max-height: 200px; }
+  .nav-section-grid { grid-template-columns: repeat(8, 1fr); }
+  .question-panel { padding: 1rem; }
+}
+
+.topbar .timer { display: none; }
+</style>
+</head>
+<body>
+
+<div id="screen-start">
+  <div class="start-card">
+    <h1>1과목 Part2 EXAM 학습</h1>
+    <p class="sub">공공조달과 법제도 이해 · 문제은행 exam 전체</p>
+    <ul>
+      <li>총 <strong>71문항</strong> · 제한시간 없음 (학습용)</li>
+      <li>4지 선다형 — 문항당 하나만 선택</li>
+      <li>답안은 자동 저장됩니다 (브라우저)</li>
+    </ul>
+    <button class="btn-start" id="btn-start">학습 시작</button>
+  </div>
+</div>
+
+<div id="screen-exam">
+  <div class="topbar">
+    <span class="exam-title">1과목 Part2 EXAM 학습</span>
+    <span class="timer" id="timer">--:--:--</span>
+  </div>
+  <div class="subbar">
+    <span id="subject-label">1과목 공공조달과 법제도 이해</span>
+    <span>
+      <span id="progress-label">1 / 71</span>
+    </span>
+  </div>
+  <div class="main">
+    <div class="question-panel" id="question-panel"></div>
+    <aside class="nav-panel">
+      <div class="nav-title">문항 이동</div>
+      <div class="nav-scroll" id="nav-scroll"></div>
+      <div class="nav-legend">
+        <span><span class="legend-dot" style="background:var(--unanswered)"></span>미답</span>
+        <span><span class="legend-dot" style="background:#b8d4f0"></span>답변</span>
+        <span><span class="legend-dot" style="background:var(--current)"></span>현재</span>
+      </div>
+    </aside>
+  </div>
+  <div class="bottombar">
+    <div class="bottombar-left">
+      <button id="btn-prev">◀ 이전</button>
+      <button class="reset" id="btn-reset" type="button">처음부터</button>
+    </div>
+    <span class="progress-text" id="answered-count">답변 0 / 71</span>
+    <div class="bottombar-right">
+      <button id="btn-next">다음 ▶</button>
+      <button class="primary" id="btn-submit">종료</button>
+    </div>
+  </div>
+</div>
+
+<div id="screen-end">
+  <div class="end-card">
+    <h2>학습 종료</h2>
+    <p class="hint">아래 답안 문자열을 복사해 채팅에 붙여넣으면 채점합니다.<br>형식: <code>1③ 2④ 3④ …</code></p>
+    <textarea id="answer-export" readonly></textarea>
+    <button class="primary" id="btn-copy">답안 복사</button>
+    <button id="btn-restart">다시 풀기</button>
+    <p class="hint" style="margin-top:1rem">※ 정답·해설은 채점 후 제공됩니다.</p>
+  </div>
+</div>
+
+<script>
+const QUESTIONS = [{"no": 1, "subject": 1, "subjectName": "Part2 Ch1", "stem": "공공조달 기본원칙이 필요한 가장 근본적 이유는?", "choices": [{"key": "1", "label": "①", "text": "민간기업 보호"}, {"key": "2", "label": "②", "text": "계약 기간 단축"}, {"key": "3", "label": "③", "text": "행정 절차 간소화"}, {"key": "4", "label": "④", "text": "공공재정 사용에 대한 책임성 확보"}], "id": "1:2:1:exam:1"}, {"no": 2, "subject": 1, "subjectName": "Part2 Ch1", "stem": "비용 대비 가치(VFM)의 의미로 가장 적절한 것은?", "choices": [{"key": "1", "label": "①", "text": "최저가 구매"}, {"key": "2", "label": "②", "text": "단기 비용 절감"}, {"key": "3", "label": "③", "text": "공급자 이윤 최소화"}, {"key": "4", "label": "④", "text": "생애주기 관점의 최적 가치 확보"}], "id": "1:2:1:exam:2"}, {"no": 3, "subject": 1, "subjectName": "Part2 Ch1", "stem": "공공조달에서 경쟁성이 필요한 가장 큰 이유는?", "choices": [{"key": "1", "label": "①", "text": "가격·품질 측면의 효율성 확보를 위해"}, {"key": "2", "label": "②", "text": "행정 절차를 단순화하기 위해"}, {"key": "3", "label": "③", "text": "특정 기업을 보호하기 위해"}, {"key": "4", "label": "④", "text": "계약 기간을 단축하기 위해"}], "id": "1:2:1:exam:3"}, {"no": 4, "subject": 1, "subjectName": "Part2 Ch1", "stem": "차별 금지 및 동등한 대우 원칙에 가장 부합하는 설명은?", "choices": [{"key": "1", "label": "①", "text": "대기업 참여를 제한한다."}, {"key": "2", "label": "②", "text": "지역 업체를 우선 선정한다."}, {"key": "3", "label": "③", "text": "기존 거래 업체에 가점을 부여한다."}, {"key": "4", "label": "④", "text": "모든 업체에 동일한 기준을 적용한다."}], "id": "1:2:1:exam:4"}, {"no": 5, "subject": 1, "subjectName": "Part2 Ch1", "stem": "공공조달에서 책임성이 강조되는 이유로 가장 적절한 것은?", "choices": [{"key": "1", "label": "①", "text": "조달 속도를 높이기 위해"}, {"key": "2", "label": "②", "text": "공급자 부담을 줄이기 위해"}, {"key": "3", "label": "③", "text": "국민의 세금을 사용하기 때문에"}, {"key": "4", "label": "④", "text": "계약 실패의 책임을 회피하기 위해"}], "id": "1:2:1:exam:5"}, {"no": 6, "subject": 1, "subjectName": "Part2 Ch1", "stem": "공공조달에서 투명성 원칙의 핵심 내용으로 가장 적절한 것은?", "choices": [{"key": "1", "label": "①", "text": "조달 담당자의 재량 확대"}, {"key": "2", "label": "②", "text": "계약 체결 이후 정보 공개"}, {"key": "3", "label": "③", "text": "조달 절차와 기준의 명확한 공개"}, {"key": "4", "label": "④", "text": "모든 이해관계자에 대한 정보 비공개"}], "id": "1:2:1:exam:6"}, {"no": 7, "subject": 1, "subjectName": "Part2 Ch1", "stem": "투명성이 확보되지 않은 공공조달이 초래할 수 있는 결과로 가장 적절한 것은?", "choices": [{"key": "1", "label": "①", "text": "부패 및 특정 업체 특혜 발생"}, {"key": "2", "label": "②", "text": "행정 효율성 증대"}, {"key": "3", "label": "③", "text": "조달 전문성 강화"}, {"key": "4", "label": "④", "text": "경쟁 심화"}], "id": "1:2:1:exam:7"}, {"no": 8, "subject": 1, "subjectName": "Part2 Ch1", "stem": "다음 중 청렴성 확보를 위한 조치로 옳은 것은?", "choices": [{"key": "1", "label": "①", "text": "윤리 기준 및 행동강령 준수"}, {"key": "2", "label": "②", "text": "조달 담당자의 재량 확대"}, {"key": "3", "label": "③", "text": "이해충돌 상황 방치"}, {"key": "4", "label": "④", "text": "비공식 협상 허용"}], "id": "1:2:1:exam:8"}, {"no": 9, "subject": 1, "subjectName": "Part2 Ch1", "stem": "접근성이 부족한 공공조달이 초래할 수 있는 문제로 가장 적절한 것은?", "choices": [{"key": "1", "label": "①", "text": "시장 경쟁 촉진"}, {"key": "2", "label": "②", "text": "조달 효율성 증가"}, {"key": "3", "label": "③", "text": "신규 기업 참여 확대"}, {"key": "4", "label": "④", "text": "특정 기업 중심의 구조 고착화"}], "id": "1:2:1:exam:9"}, {"no": 10, "subject": 1, "subjectName": "Part2 Ch1", "stem": "청렴성이 확보되지 않은 공공조달의 가장 심각한 문제는?", "choices": [{"key": "1", "label": "①", "text": "조달 속도 저하"}, {"key": "2", "label": "②", "text": "단기 비용 증가"}, {"key": "3", "label": "③", "text": "경쟁 참여 확대"}, {"key": "4", "label": "④", "text": "공공조달 전반에 대한 신뢰 상실"}], "id": "1:2:1:exam:10"}, {"no": 11, "subject": 1, "subjectName": "Part2 Ch1", "stem": "공공조달에서 균형성 원칙의 핵심 내용으로 가장 적절한 것은?", "choices": [{"key": "1", "label": "①", "text": "1차 조달 목표와 2차 정책 목표의 조화"}, {"key": "2", "label": "②", "text": "정책 목표를 무제한적으로 반영"}, {"key": "3", "label": "③", "text": "가격보다 정책 목표를 우선"}, {"key": "4", "label": "④", "text": "조달 효율성 배제"}], "id": "1:2:1:exam:11"}, {"no": 12, "subject": 1, "subjectName": "Part2 Ch1", "stem": "균형성 원칙을 고려하지 않은 공공조달의 가장 큰 위험은?", "choices": [{"key": "1", "label": "①", "text": "조달 효율성 저하와 정책 목표 실패"}, {"key": "2", "label": "②", "text": "행정 절차 간소화"}, {"key": "3", "label": "③", "text": "단기 경쟁 심화"}, {"key": "4", "label": "④", "text": "계약 기간 단축"}], "id": "1:2:1:exam:12"}, {"no": 13, "subject": 1, "subjectName": "Part2 Ch1", "stem": "공공조달에서 참여 원칙의 주요 목적은?", "choices": [{"key": "1", "label": "①", "text": "경쟁 제한"}, {"key": "2", "label": "②", "text": "계약 절차 축소"}, {"key": "3", "label": "③", "text": "특정 기업 보호"}, {"key": "4", "label": "④", "text": "이해관계자 참여 확대"}], "id": "1:2:1:exam:13"}, {"no": 14, "subject": 1, "subjectName": "Part2 Ch1", "stem": "공공조달에서 효율성 원칙의 핵심 의미는?", "choices": [{"key": "1", "label": "①", "text": "최저가 계약 체결"}, {"key": "2", "label": "②", "text": "신속한 계약 종료"}, {"key": "3", "label": "③", "text": "공급자 이윤 최소화"}, {"key": "4", "label": "④", "text": "비용 대비 최상의 가치 확보"}], "id": "1:2:1:exam:14"}, {"no": 15, "subject": 1, "subjectName": "Part2 Ch1", "stem": "효율성 원칙을 준수했을 때 기대할 수 있는 효과로 옳지 않은 것은?", "choices": [{"key": "1", "label": "①", "text": "중복 절차 감소"}, {"key": "2", "label": "②", "text": "비용 낭비 감소"}, {"key": "3", "label": "③", "text": "자원 활용 극대화"}, {"key": "4", "label": "④", "text": "법령 위반 가능성 증가"}], "id": "1:2:1:exam:15"}, {"no": 16, "subject": 1, "subjectName": "Part2 Ch1", "stem": "전자조달 활용의 주요 목적으로 가장 적절한 것은?", "choices": [{"key": "1", "label": "①", "text": "조달 절차의 투명성과 효율성 강화"}, {"key": "2", "label": "②", "text": "조달 담당자의 재량 확대"}, {"key": "3", "label": "③", "text": "오프라인 계약 확대"}, {"key": "4", "label": "④", "text": "정보 접근 제한"}], "id": "1:2:1:exam:16"}, {"no": 17, "subject": 1, "subjectName": "Part2 Ch1", "stem": "다음 중 역량 개발이 필요한 이유로 가장 적절한 것은?", "choices": [{"key": "1", "label": "①", "text": "조달 절차가 단순하기 때문에"}, {"key": "2", "label": "②", "text": "정책 목표가 감소하기 때문에"}, {"key": "3", "label": "③", "text": "가격 경쟁이 사라졌기 때문에"}, {"key": "4", "label": "④", "text": "조달 환경이 복잡해지고 있기 때문에"}], "id": "1:2:1:exam:17"}, {"no": 18, "subject": 1, "subjectName": "Part2 Ch1", "stem": "역량 개발이 미흡할 경우 발생할 수 있는 문제로 가장 적절한 것은?", "choices": [{"key": "1", "label": "①", "text": "정책 목표 달성 강화"}, {"key": "2", "label": "②", "text": "조달 효율성 및 성과 저하"}, {"key": "3", "label": "③", "text": "경쟁 촉진"}, {"key": "4", "label": "④", "text": "투명성 자동 확보"}], "id": "1:2:1:exam:18"}, {"no": 19, "subject": 1, "subjectName": "Part2 Ch1", "stem": "평가 원칙이 제대로 작동하지 않을 경우 발생할 수 있는 문제는?", "choices": [{"key": "1", "label": "①", "text": "조달 성과의 개선"}, {"key": "2", "label": "②", "text": "동일한 실패의 반복"}, {"key": "3", "label": "③", "text": "정책 목표의 명확화"}, {"key": "4", "label": "④", "text": "효율성의 자동 확보"}], "id": "1:2:1:exam:19"}, {"no": 20, "subject": 1, "subjectName": "Part2 Ch1", "stem": "공공조달에서 위험관리의 주된 목적은?", "choices": [{"key": "1", "label": "①", "text": "공급자 보호"}, {"key": "2", "label": "②", "text": "계약 지연 유도"}, {"key": "3", "label": "③", "text": "위험의 완전 제거"}, {"key": "4", "label": "④", "text": "위험의 사전 식별과 통제"}], "id": "1:2:1:exam:20"}, {"no": 21, "subject": 1, "subjectName": "Part2 Ch1", "stem": "위험관리가 미흡한 공공조달에서 가장 발생 가능성이 높은 문제는?", "choices": [{"key": "1", "label": "①", "text": "경쟁 촉진"}, {"key": "2", "label": "②", "text": "조달 성과 향상"}, {"key": "3", "label": "③", "text": "예산 낭비와 사업 실패"}, {"key": "4", "label": "④", "text": "계약 이행 안정성 확보"}], "id": "1:2:1:exam:21"}, {"no": 22, "subject": 1, "subjectName": "Part2 Ch1", "stem": "공공조달에서 책임성 원칙의 핵심 내용은?", "choices": [{"key": "1", "label": "①", "text": "의사결정과 결과에 대한 설명 책임"}, {"key": "2", "label": "②", "text": "조달 실패 시 책임 면제"}, {"key": "3", "label": "③", "text": "계약 종료 후 책임 소멸"}, {"key": "4", "label": "④", "text": "공급자에게 책임 전가"}], "id": "1:2:1:exam:22"}, {"no": 23, "subject": 1, "subjectName": "Part2 Ch1", "stem": "책임성이 약화된 공공조달이 초래할 수 있는 가장 심각한 결과는?", "choices": [{"key": "1", "label": "①", "text": "절차 단순화"}, {"key": "2", "label": "②", "text": "조달 속도 증가"}, {"key": "3", "label": "③", "text": "국민 신뢰 상실"}, {"key": "4", "label": "④", "text": "경쟁 확대 촉진"}], "id": "1:2:1:exam:23"}, {"no": 24, "subject": 1, "subjectName": "Part2 Ch1", "stem": "다음 중 통합 원칙이 요구되는 이유로 가장 적절한 것은?", "choices": [{"key": "1", "label": "①", "text": "경쟁 제한을 위해"}, {"key": "2", "label": "②", "text": "정책 목표 축소를 위해"}, {"key": "3", "label": "③", "text": "중복과 비효율 방지를 위해"}, {"key": "4", "label": "④", "text": "조달 담당자의 권한 강화를 위해"}], "id": "1:2:1:exam:24"}, {"no": 25, "subject": 1, "subjectName": "Part2 Ch1", "stem": "통합이 이루어지지 않은 공공조달의 문제점으로 가장 적절한 것은?", "choices": [{"key": "1", "label": "①", "text": "정책 목표와 조달 운영 간 괴리"}, {"key": "2", "label": "②", "text": "전략적 조달 강화"}, {"key": "3", "label": "③", "text": "책임성 자동 확보"}, {"key": "4", "label": "④", "text": "성과 관리 용이"}], "id": "1:2:1:exam:25"}, {"no": 26, "subject": 1, "subjectName": "Part2 Ch1", "stem": "다음 중 OECD가 제시한 공공조달 실행원칙에 해당하지 않는 것은?", "choices": [{"key": "1", "label": "①", "text": "투명성"}, {"key": "2", "label": "②", "text": "효율성"}, {"key": "3", "label": "③", "text": "최저가 원칙"}, {"key": "4", "label": "④", "text": "전자조달 활용"}], "id": "1:2:1:exam:26"}, {"no": 27, "subject": 1, "subjectName": "Part2 Ch1", "stem": "공공조달 실행원칙이 필요한 가장 근본적인 이유는?", "choices": [{"key": "1", "label": "①", "text": "기본원칙을 실제 조달 현장에서 구현하기 위해"}, {"key": "2", "label": "②", "text": "계약 담당자의 재량을 확대하기 위해"}, {"key": "3", "label": "③", "text": "조달 절차를 복잡하게 하기 위해"}, {"key": "4", "label": "④", "text": "공급자 수를 제한하기 위해"}], "id": "1:2:1:exam:27"}, {"no": 28, "subject": 1, "subjectName": "Part2 Ch1", "stem": "다음 중 실행원칙들이 지향하는 궁극적 목표는?", "choices": [{"key": "1", "label": "①", "text": "계약 체결 자체"}, {"key": "2", "label": "②", "text": "공급자 이윤 극대화"}, {"key": "3", "label": "③", "text": "전략적 공공조달 실현"}, {"key": "4", "label": "④", "text": "조달 절차의 형식적 준수"}], "id": "1:2:1:exam:28"}, {"no": 29, "subject": 1, "subjectName": "Part2 Ch1", "stem": "공공조달에서 실행원칙을 무시한 채 정책 목표만 과도하게 반영할 경우 발생할 수 있는 문제는?", "choices": [{"key": "1", "label": "①", "text": "공정성 강화"}, {"key": "2", "label": "②", "text": "효율성 자동 확보"}, {"key": "3", "label": "③", "text": "전략적 조달 강화"}, {"key": "4", "label": "④", "text": "목표 과부하와 조달 실패"}], "id": "1:2:1:exam:29"}, {"no": 30, "subject": 1, "subjectName": "Part2 Ch2", "stem": "경쟁적 공공조달 방법의 원칙적 적용 이유로 가장 적절한 것은?", "choices": [{"key": "1", "label": "①", "text": "계약 이행 기간을 단축하기 위해"}, {"key": "2", "label": "②", "text": "특정 공급자의 기술을 보호하기 위해"}, {"key": "3", "label": "③", "text": "조달기관의 행정 부담을 최소화하기 위해"}, {"key": "4", "label": "④", "text": "공공조달의 기본원칙인 경쟁성과 투명성을 구현하기 위해"}], "id": "1:2:2:exam:1"}, {"no": 31, "subject": 1, "subjectName": "Part2 Ch2", "stem": "경쟁적 조달 방법의 단점으로 가장 적절한 것은?", "choices": [{"key": "1", "label": "①", "text": "경쟁성 약화"}, {"key": "2", "label": "②", "text": "계약 투명성 저하"}, {"key": "3", "label": "③", "text": "조달기업 참여 제한"}, {"key": "4", "label": "④", "text": "행정 절차로 인한 시간 지연 가능성"}], "id": "1:2:2:exam:2"}, {"no": 32, "subject": 1, "subjectName": "Part2 Ch2", "stem": "경쟁입찰 절차의 역할에 대한 설명으로 옳은 것은?", "choices": [{"key": "1", "label": "①", "text": "조달 의사결정에서 가장 핵심적인 단계이다."}, {"key": "2", "label": "②", "text": "계약 체결 이후 단계에서 중요성이 크다."}, {"key": "3", "label": "③", "text": "조달 단계 중 영향력이 가장 낮다."}, {"key": "4", "label": "④", "text": "기술 평가 단계만을 의미한다."}], "id": "1:2:2:exam:3"}, {"no": 33, "subject": 1, "subjectName": "Part2 Ch2", "stem": "경쟁적 조달 방법을 적용할 때 조달기관이 우선적으로 검토해야 할 사항은?", "choices": [{"key": "1", "label": "①", "text": "사후 감사 계획"}, {"key": "2", "label": "②", "text": "입찰 방법의 선택"}, {"key": "3", "label": "③", "text": "계약 변경 가능성"}, {"key": "4", "label": "④", "text": "계약 이행 관리 방안"}], "id": "1:2:2:exam:4"}, {"no": 34, "subject": 1, "subjectName": "Part2 Ch2", "stem": "우리나라에서 채택하고 있는 경쟁입찰 방식의 조합으로 옳은 것은?", "choices": [{"key": "1", "label": "①", "text": "일반경쟁, 제한경쟁, 수의계약"}, {"key": "2", "label": "②", "text": "공개경쟁, 지명경쟁, 제한경쟁"}, {"key": "3", "label": "③", "text": "공개경쟁, 협상경쟁, 직접계약"}, {"key": "4", "label": "④", "text": "선택경쟁, 단독협상, 공개입찰"}], "id": "1:2:2:exam:5"}, {"no": 35, "subject": 1, "subjectName": "Part2 Ch2", "stem": "경쟁입찰이 공공조달의 기본원칙 중 '경쟁성'을 구현하는 방식으로 가장 적절한 것은?", "choices": [{"key": "1", "label": "①", "text": "협상을 통한 조건 조정"}, {"key": "2", "label": "②", "text": "특정 기업을 사전에 선정"}, {"key": "3", "label": "③", "text": "조달기관 재량에 따른 업체 지정"}, {"key": "4", "label": "④", "text": "다수 공급자 간 경쟁을 통한 공급자 선정"}], "id": "1:2:2:exam:6"}, {"no": 36, "subject": 1, "subjectName": "Part2 Ch2", "stem": "다음 중 경쟁적 조달 방법의 구체적 실행방식에 해당하지 않는 것은?", "choices": [{"key": "1", "label": "①", "text": "제안요청(RFP)"}, {"key": "2", "label": "②", "text": "2단계 입찰"}, {"key": "3", "label": "③", "text": "경쟁적 대화"}, {"key": "4", "label": "④", "text": "수의계약"}], "id": "1:2:2:exam:7"}, {"no": 37, "subject": 1, "subjectName": "Part2 Ch2", "stem": "경쟁적 대화(Competitive Negotiation) 방식이 주로 활용되는 경우로 가장 적절한 것은?", "choices": [{"key": "1", "label": "①", "text": "긴급 소액 조달"}, {"key": "2", "label": "②", "text": "단순 반복 구매"}, {"key": "3", "label": "③", "text": "표준화된 상용제품 조달"}, {"key": "4", "label": "④", "text": "조달기관이 요구사항을 명확히 정의하기 어려운 경우"}], "id": "1:2:2:exam:8"}, {"no": 38, "subject": 1, "subjectName": "Part2 Ch2", "stem": "전자적 역경매(ERA: Electronic Reverse Auction)의 핵심 특징으로 옳은 것은?", "choices": [{"key": "1", "label": "①", "text": "협상을 통해 계약조건을 조정한다."}, {"key": "2", "label": "②", "text": "실시간 경쟁을 통해 가격을 낮춘다."}, {"key": "3", "label": "③", "text": "기술 점수만으로 낙찰자를 결정한다."}, {"key": "4", "label": "④", "text": "공급자가 가격을 점진적으로 인상한다."}], "id": "1:2:2:exam:9"}, {"no": 39, "subject": 1, "subjectName": "Part2 Ch2", "stem": "다음 중 경쟁적 조달 실행방식과 주된 평가 초점의 연결로 가장 적절한 것은?", "choices": [{"key": "1", "label": "①", "text": "ERA - 기술 협상"}, {"key": "2", "label": "②", "text": "RFP - 가격 단일 기준"}, {"key": "3", "label": "③", "text": "경쟁적 대화 - 수의계약"}, {"key": "4", "label": "④", "text": "2단계 입찰 - 기술 적합성 후 가격 평가"}], "id": "1:2:2:exam:10"}, {"no": 40, "subject": 1, "subjectName": "Part2 Ch2", "stem": "경쟁적 대화 방식의 장점으로 가장 적절한 것은?", "choices": [{"key": "1", "label": "①", "text": "복잡한 요구사항에 대한 해결방안 도출 가능"}, {"key": "2", "label": "②", "text": "조달 담당자의 재량 확대"}, {"key": "3", "label": "③", "text": "행정 절차의 단순화"}, {"key": "4", "label": "④", "text": "조달 기간 단축"}], "id": "1:2:2:exam:11"}, {"no": 41, "subject": 1, "subjectName": "Part2 Ch2", "stem": "RFP 방식에서 평가기준을 사전에 명확히 제시해야 하는 이유로 가장 타당한 것은?", "choices": [{"key": "1", "label": "①", "text": "협상 가능성을 높이기 위해"}, {"key": "2", "label": "②", "text": "평가자의 재량을 확대하기 위해"}, {"key": "3", "label": "③", "text": "투명성과 공정성을 확보하기 위해"}, {"key": "4", "label": "④", "text": "계약 변경을 용이하게 하기 위해"}], "id": "1:2:2:exam:12"}, {"no": 42, "subject": 1, "subjectName": "Part2 Ch2", "stem": "다음 중 경쟁적 조달 방법과 비경쟁적 조달 방법의 관계에 대한 설명으로 가장 타당한 것은?", "choices": [{"key": "1", "label": "①", "text": "두 방법은 상호 배타적으로 운영된다."}, {"key": "2", "label": "②", "text": "비경쟁적 방법이 항상 우선 적용된다."}, {"key": "3", "label": "③", "text": "조달기관의 선택에 따라 무제한 적용 가능하다."}, {"key": "4", "label": "④", "text": "경쟁적 방법을 원칙으로 하되, 예외적으로 비경쟁적 방법이 허용된다."}], "id": "1:2:2:exam:13"}, {"no": 43, "subject": 1, "subjectName": "Part2 Ch2", "stem": "경쟁적 조달 방법이 투명성 확보에 기여하는 이유로 가장 적절한 것은?", "choices": [{"key": "1", "label": "①", "text": "평가 결과만 공개되기 때문에"}, {"key": "2", "label": "②", "text": "계약조건을 사후에 공개하기 때문에"}, {"key": "3", "label": "③", "text": "절차 전반이 공개적으로 진행되기 때문에"}, {"key": "4", "label": "④", "text": "조달 담당자의 전문성에 의존하기 때문에"}], "id": "1:2:2:exam:14"}, {"no": 44, "subject": 1, "subjectName": "Part2 Ch2", "stem": "경쟁적 조달 실행방식의 선택과 관련한 설명으로 가장 타당한 것은?", "choices": [{"key": "1", "label": "①", "text": "조달 담당자의 선호에 따라 선택한다."}, {"key": "2", "label": "②", "text": "모든 조달사업에는 동일한 입찰방식을 적용해야 한다."}, {"key": "3", "label": "③", "text": "가격 경쟁이 가능한 경우에도 경쟁적 대화가 우선된다."}, {"key": "4", "label": "④", "text": "조달 대상물의 복잡성과 시장상황을 종합적으로 고려해야 한다."}], "id": "1:2:2:exam:15"}, {"no": 45, "subject": 1, "subjectName": "Part2 Ch2", "stem": "조달기관이 경쟁적 조달 방법을 선택할 때 가장 유의해야 할 점으로 적절한 것은?", "choices": [{"key": "1", "label": "①", "text": "행정 편의성"}, {"key": "2", "label": "②", "text": "특정 기업 보호"}, {"key": "3", "label": "③", "text": "조달 기간 단축 여부"}, {"key": "4", "label": "④", "text": "공공조달 원칙 준수 여부"}], "id": "1:2:2:exam:16"}, {"no": 46, "subject": 1, "subjectName": "Part2 Ch2", "stem": "경쟁적 조달 방법의 적용이 부적절할 수 있는 예외적 상황으로 옳은 것은?", "choices": [{"key": "1", "label": "①", "text": "조달 대상물의 전문성과 희소성이 매우 높은 경우"}, {"key": "2", "label": "②", "text": "다수 공급자가 존재하는 경우"}, {"key": "3", "label": "③", "text": "표준화된 물품의 조달인 경우"}, {"key": "4", "label": "④", "text": "시장 경쟁이 활발한 경우"}], "id": "1:2:2:exam:17"}, {"no": 47, "subject": 1, "subjectName": "Part2 Ch2", "stem": "경쟁입찰을 통해 기대할 수 있는 효과로 옳지 않은 것은?", "choices": [{"key": "1", "label": "①", "text": "시장가격 반영"}, {"key": "2", "label": "②", "text": "공급자 경쟁 촉진"}, {"key": "3", "label": "③", "text": "조달 투명성 강화"}, {"key": "4", "label": "④", "text": "계약 변경의 자유 확대"}], "id": "1:2:2:exam:18"}, {"no": 48, "subject": 1, "subjectName": "Part2 Ch2", "stem": "다음 중 부적절한 경쟁적 조달 실행방식을 선택함으로 인해 발생할 수 있는 위험으로 옳은 것은?", "choices": [{"key": "1", "label": "①", "text": "경쟁성 강화"}, {"key": "2", "label": "②", "text": "투명성 향상"}, {"key": "3", "label": "③", "text": "공급자 참여 확대"}, {"key": "4", "label": "④", "text": "조달 실패 가능성 증가"}], "id": "1:2:2:exam:19"}, {"no": 49, "subject": 1, "subjectName": "Part2 Ch2", "stem": "전문성과 복잡성이 높은 용역을 제한경쟁 방식으로 추진할 경우 발생할 수 있는 문제로 가장 적절한 것은?", "choices": [{"key": "1", "label": "①", "text": "가격 경쟁 과열"}, {"key": "2", "label": "②", "text": "공급자 과다 참여"}, {"key": "3", "label": "③", "text": "평가 기준 단순화"}, {"key": "4", "label": "④", "text": "적격 공급자 부족으로 인한 조달 실패"}], "id": "1:2:2:exam:20"}, {"no": 50, "subject": 1, "subjectName": "Part2 Ch2", "stem": "경쟁적 조달 실행방식의 적정성 확보가 의미하는 바로 가장 적절한 것은?", "choices": [{"key": "1", "label": "①", "text": "행정 절차를 최소화하는 것"}, {"key": "2", "label": "②", "text": "특정 기업을 보호하는 것"}, {"key": "3", "label": "③", "text": "가격을 최우선으로 고려하는 것"}, {"key": "4", "label": "④", "text": "기술·가격·계약 요건을 종합적으로 고려하는 것"}], "id": "1:2:2:exam:21"}, {"no": 51, "subject": 1, "subjectName": "Part2 Ch2", "stem": "경쟁적 조달 실행방식의 적절한 관리를 통해 조달기관이 달성할 수 있는 목표로 옳지 않은 것은?", "choices": [{"key": "1", "label": "①", "text": "책임성 확보"}, {"key": "2", "label": "②", "text": "조달 실패의 위험 완화"}, {"key": "3", "label": "③", "text": "이해관계자의 신뢰 확보"}, {"key": "4", "label": "④", "text": "조달 담당자의 재량 확대"}], "id": "1:2:2:exam:22"}, {"no": 52, "subject": 1, "subjectName": "Part2 Ch2", "stem": "다음 사례에 가장 적합한 경쟁적 조달 실행방식은?", "choices": [{"key": "1", "label": "①", "text": "경쟁적 대화"}, {"key": "2", "label": "②", "text": "공개경쟁 입찰"}, {"key": "3", "label": "③", "text": "전자적 역경매"}, {"key": "4", "label": "④", "text": "최저가 낙찰제"}], "id": "1:2:2:exam:23"}, {"no": 53, "subject": 1, "subjectName": "Part2 Ch3", "stem": "비경쟁적 공공조달 방법의 가장 본질적인 특징으로 옳은 것은?", "choices": [{"key": "1", "label": "①", "text": "국제입찰을 원칙으로 한다."}, {"key": "2", "label": "②", "text": "공개입찰 절차를 필수로 한다."}, {"key": "3", "label": "③", "text": "특정 공급자를 선정하여 계약한다."}, {"key": "4", "label": "④", "text": "다수 공급자 간 경쟁을 전제로 한다."}], "id": "1:2:3:exam:1"}, {"no": 54, "subject": 1, "subjectName": "Part2 Ch3", "stem": "다음 중 비경쟁적 공공조달 방법이 원칙적으로 허용되지 않는 경우는?", "choices": [{"key": "1", "label": "①", "text": "긴급 재난 대응"}, {"key": "2", "label": "②", "text": "표준 규격의 반복적 구매"}, {"key": "3", "label": "③", "text": "국가 안보와 직결된 조달"}, {"key": "4", "label": "④", "text": "대체 공급자가 존재하지 않는 경우"}], "id": "1:2:3:exam:2"}, {"no": 55, "subject": 1, "subjectName": "Part2 Ch3", "stem": "비경쟁적 조달 방법이 경쟁적 조달에 비해 가지는 일반적 장점으로 가장 적절한 것은?", "choices": [{"key": "1", "label": "①", "text": "투명성 강화"}, {"key": "2", "label": "②", "text": "경쟁성 확보"}, {"key": "3", "label": "③", "text": "절차의 신속성"}, {"key": "4", "label": "④", "text": "가격의 객관성"}], "id": "1:2:3:exam:3"}, {"no": 56, "subject": 1, "subjectName": "Part2 Ch3", "stem": "비경쟁적 조달 방법이 공공조달의 기본원칙과 충돌할 가능성이 가장 큰 이유는?", "choices": [{"key": "1", "label": "①", "text": "경쟁 제한"}, {"key": "2", "label": "②", "text": "조달 비용 증가"}, {"key": "3", "label": "③", "text": "계약 기간 단축"}, {"key": "4", "label": "④", "text": "공급자 책임 증가"}], "id": "1:2:3:exam:4"}, {"no": 57, "subject": 1, "subjectName": "Part2 Ch3", "stem": "다음 중 비경쟁적 공공조달 방법의 대표적인 형태는?", "choices": [{"key": "1", "label": "①", "text": "공개경쟁입찰"}, {"key": "2", "label": "②", "text": "제한경쟁입찰"}, {"key": "3", "label": "③", "text": "지명경쟁입찰"}, {"key": "4", "label": "④", "text": "수의계약"}], "id": "1:2:3:exam:5"}, {"no": 58, "subject": 1, "subjectName": "Part2 Ch3", "stem": "수의계약의 적용 요건으로 가장 적절하지 않은 것은?", "choices": [{"key": "1", "label": "①", "text": "긴급성"}, {"key": "2", "label": "②", "text": "경쟁 가능성"}, {"key": "3", "label": "③", "text": "대체 불가능성"}, {"key": "4", "label": "④", "text": "기술적 특수성"}], "id": "1:2:3:exam:6"}, {"no": 59, "subject": 1, "subjectName": "Part2 Ch3", "stem": "다음 중 비경쟁적 조달 방법 적용 시 조달기관이 가장 중점적으로 관리해야 할 사항은?", "choices": [{"key": "1", "label": "①", "text": "계약 기간"}, {"key": "2", "label": "②", "text": "공급자의 기업 규모"}, {"key": "3", "label": "③", "text": "기본원칙의 훼손 여부"}, {"key": "4", "label": "④", "text": "계약 금액의 증가 가능성"}], "id": "1:2:3:exam:7"}, {"no": 60, "subject": 1, "subjectName": "Part2 Ch3", "stem": "비경쟁적 조달 방법의 법적 성격에 대한 설명으로 옳은 것은?", "choices": [{"key": "1", "label": "①", "text": "경쟁적 조달과 동일한 법적 지위를 가진다."}, {"key": "2", "label": "②", "text": "경쟁적 조달의 예외로 제한적 허용된다."}, {"key": "3", "label": "③", "text": "경쟁적 조달의 보조적 수단이다."}, {"key": "4", "label": "④", "text": "국제 기준에서 금지된다."}], "id": "1:2:3:exam:8"}, {"no": 61, "subject": 1, "subjectName": "Part2 Ch3", "stem": "다음 중 비경쟁적 조달 방법을 선택할 때 요구되는 조달기관의 태도로 가장 적절한 것은?", "choices": [{"key": "1", "label": "①", "text": "재량 확대"}, {"key": "2", "label": "②", "text": "절차 단축 우선"}, {"key": "3", "label": "③", "text": "공급자 편의 고려"}, {"key": "4", "label": "④", "text": "객관적 사유에 대한 명확한 기록"}], "id": "1:2:3:exam:9"}, {"no": 62, "subject": 1, "subjectName": "Part2 Ch3", "stem": "비경쟁적 조달이 공공조달 성과에 미치는 영향에 대한 설명으로 가장 적절한 것은?", "choices": [{"key": "1", "label": "①", "text": "항상 효율성을 높인다."}, {"key": "2", "label": "②", "text": "항상 비용을 증가시킨다."}, {"key": "3", "label": "③", "text": "경쟁적 조달보다 우월하다."}, {"key": "4", "label": "④", "text": "상황에 따라 긍정·부정적 영향을 모두 가질 수 있다."}], "id": "1:2:3:exam:10"}, {"no": 63, "subject": 1, "subjectName": "Part2 Ch3", "stem": "다음 중 비경쟁적 조달 방법의 남용을 방지하기 위한 제도적 장치로 가장 적절한 것은?", "choices": [{"key": "1", "label": "①", "text": "공급자 추천제도"}, {"key": "2", "label": "②", "text": "경쟁 절차 간소화"}, {"key": "3", "label": "③", "text": "계약 금액 상한 설정"}, {"key": "4", "label": "④", "text": "사전·사후 통제 및 감사 강화"}], "id": "1:2:3:exam:11"}, {"no": 64, "subject": 1, "subjectName": "Part2 Ch3", "stem": "비경쟁적 조달 방법을 경쟁적 조달과 병행 활용해야 하는 이유로 가장 타당한 것은?", "choices": [{"key": "1", "label": "①", "text": "조달 목적 달성을 위한 유연성 확보"}, {"key": "2", "label": "②", "text": "조달 담당자의 재량 확대"}, {"key": "3", "label": "③", "text": "행정 편의성 확보"}, {"key": "4", "label": "④", "text": "국제 기준 회피"}], "id": "1:2:3:exam:12"}, {"no": 65, "subject": 1, "subjectName": "Part2 Ch3", "stem": "특허권, 저작권 등으로 인해 대체 공급자가 없는 경우 적용 가능한 조달방식은?", "choices": [{"key": "1", "label": "①", "text": "일반경쟁입찰"}, {"key": "2", "label": "②", "text": "제한경쟁입찰"}, {"key": "3", "label": "③", "text": "지명경쟁입찰"}, {"key": "4", "label": "④", "text": "수의계약"}], "id": "1:2:3:exam:13"}, {"no": 66, "subject": 1, "subjectName": "Part2 Ch3", "stem": "수의계약 적용 시 조달기관이 반드시 확보해야 할 사항으로 가장 적절한 것은?", "choices": [{"key": "1", "label": "①", "text": "최저 가격"}, {"key": "2", "label": "②", "text": "공급자의 시장 지위"}, {"key": "3", "label": "③", "text": "계약 기간의 장기성"}, {"key": "4", "label": "④", "text": "적용 사유에 대한 객관적 근거"}], "id": "1:2:3:exam:14"}, {"no": 67, "subject": 1, "subjectName": "Part2 Ch3", "stem": "다음 중 수의계약 적용이 가장 부적절한 사례는?", "choices": [{"key": "1", "label": "①", "text": "긴급 복구 공사"}, {"key": "2", "label": "②", "text": "특정 기업과 반복적 계약"}, {"key": "3", "label": "③", "text": "국가 안보 관련 특수 장비 구매"}, {"key": "4", "label": "④", "text": "대체 기술이 없는 전문 소프트웨어 도입"}], "id": "1:2:3:exam:15"}, {"no": 68, "subject": 1, "subjectName": "Part2 Ch3", "stem": "경쟁적 조달과 비경쟁적 조달의 관계에 대한 설명으로 옳은 것은?", "choices": [{"key": "1", "label": "①", "text": "두 방식은 동등한 원칙이다."}, {"key": "2", "label": "②", "text": "비경쟁적 조달이 우선 적용된다."}, {"key": "3", "label": "③", "text": "경쟁적 조달은 국제조달에만 적용된다."}, {"key": "4", "label": "④", "text": "경쟁적 조달이 원칙, 비경쟁적 조달은 예외이다."}], "id": "1:2:3:exam:16"}, {"no": 69, "subject": 1, "subjectName": "Part2 Ch3", "stem": "감사 관점에서 비경쟁적 조달이 중점 점검 대상이 되는 이유로 가장 적절한 것은?", "choices": [{"key": "1", "label": "①", "text": "계약 기간이 짧아서"}, {"key": "2", "label": "②", "text": "기술 수준이 낮아서"}, {"key": "3", "label": "③", "text": "경쟁 제한 가능성이 높아서"}, {"key": "4", "label": "④", "text": "국제 기준이 적용되지 않아서"}], "id": "1:2:3:exam:17"}, {"no": 70, "subject": 1, "subjectName": "Part2 Ch3", "stem": "다음 중 감사 시 위법 소지가 가장 큰 사례는?", "choices": [{"key": "1", "label": "①", "text": "긴급 재난 복구를 위한 수의계약"}, {"key": "2", "label": "②", "text": "특허 기술 도입을 위한 수의계약"}, {"key": "3", "label": "③", "text": "경쟁 가능함에도 편의상 수의계약"}, {"key": "4", "label": "④", "text": "국가 기밀 관련 계약"}], "id": "1:2:3:exam:18"}, {"no": 71, "subject": 1, "subjectName": "Part2 Ch3", "stem": "수의계약과 관련한 설명으로 옳지 않은 것은?", "choices": [{"key": "1", "label": "①", "text": "절차가 간소하다."}, {"key": "2", "label": "②", "text": "경쟁성은 제한된다."}, {"key": "3", "label": "③", "text": "예외적으로 허용된다."}, {"key": "4", "label": "④", "text": "항상 공공조달 원칙을 위반한다."}], "id": "1:2:3:exam:19"}];
+const STORAGE_KEY = 'study_1_p2_exam_answers';
+const EXAM_DURATION_SEC = 999999;
+</script>
+<script>
+/* CBT 응시 — 시험 상태·답안·타이머 (비즈니스 로직) */
+(function (global) {
+  const CHOICE_SYM = { 1: '①', 2: '②', 3: '③', 4: '④' };
+  const DURATION_SEC = 120 * 60;
+
+  function subjectLabel(q) {
+    return q.subject + '과목 ' + q.subjectName;
+  }
+
+  function formatTime(sec) {
+    const h = Math.floor(sec / 3600);
+    const m = Math.floor((sec % 3600) / 60);
+    const s = sec % 60;
+    return [h, m, s].map(v => String(v).padStart(2, '0')).join(':').replace(/^00:/, '');
+  }
+
+  function createSession(questions, storageKey, durationSec) {
+    const duration = durationSec || DURATION_SEC;
+    let current = 0;
+    let answers = {};
+    let timerSec = duration;
+    let timerId = null;
+    let choiceFocus = 0;
+    let examActive = false;
+
+    function loadAnswers() {
+      try {
+        const s = localStorage.getItem(storageKey);
+        if (s) answers = JSON.parse(s);
+      } catch (e) {}
+    }
+
+    function saveAnswers() {
+      localStorage.setItem(storageKey, JSON.stringify(answers));
+    }
+
+    function clearStoredAnswers() {
+      localStorage.removeItem(storageKey);
+    }
+
+    function getQuestions() {
+      return questions;
+    }
+
+    function getCurrentIndex() {
+      return current;
+    }
+
+    function getCurrentQuestion() {
+      return questions[current];
+    }
+
+    function getChoiceFocus() {
+      return choiceFocus;
+    }
+
+    function setChoiceFocus(idx) {
+      choiceFocus = idx;
+    }
+
+    function moveChoiceFocus(delta) {
+      const n = getCurrentQuestion().choices.length;
+      choiceFocus = (choiceFocus + delta + n) % n;
+    }
+
+    function syncChoiceFocusFromAnswer() {
+      const q = getCurrentQuestion();
+      const selected = answers[q.no];
+      const selIdx = selected ? q.choices.findIndex(c => c.key === selected) : -1;
+      choiceFocus = selIdx >= 0 ? selIdx : 0;
+    }
+
+    function getAnswer(no) {
+      return answers[no];
+    }
+
+    function getAnsweredCount() {
+      return Object.keys(answers).length;
+    }
+
+    function getUnansweredCount() {
+      return questions.length - getAnsweredCount();
+    }
+
+    function canGoPrev() {
+      return current > 0;
+    }
+
+    function canGoNext() {
+      return current < questions.length - 1;
+    }
+
+    function goPrev() {
+      if (!canGoPrev()) return false;
+      current--;
+      return true;
+    }
+
+    function goNext() {
+      if (!canGoNext()) return false;
+      current++;
+      return true;
+    }
+
+    function goToIndex(index) {
+      if (index < 0 || index >= questions.length) return false;
+      current = index;
+      return true;
+    }
+
+    function selectAnswer(key) {
+      const q = getCurrentQuestion();
+      answers[q.no] = key;
+      saveAnswers();
+      const idx = q.choices.findIndex(c => c.key === key);
+      if (idx >= 0) choiceFocus = idx;
+
+      const advanced = current < questions.length - 1;
+      if (advanced) current++;
+      return { advanced };
+    }
+
+    function selectAnswerByIndex(choiceIndex) {
+      const q = getCurrentQuestion();
+      if (choiceIndex < 0 || choiceIndex >= q.choices.length) return null;
+      return selectAnswer(q.choices[choiceIndex].key);
+    }
+
+    function exportAnswers() {
+      return questions.map(q => {
+        const a = answers[q.no];
+        const sym = CHOICE_SYM[a] || '?';
+        return q.no + sym;
+      }).join(' ');
+    }
+
+    function resetSession() {
+      answers = {};
+      clearStoredAnswers();
+      current = 0;
+      choiceFocus = 0;
+    }
+
+    function resetConfirmMessage() {
+      const n = getAnsweredCount();
+      return n > 0
+        ? '선택한 답안 ' + n + '개를 모두 지우고 1번 문항부터 다시 시작합니다.'
+        : '1번 문항부터 다시 시작합니다.';
+    }
+
+    function finishConfirmMessage() {
+      const left = getUnansweredCount();
+      return '미답 ' + left + '문항이 있습니다. 시험을 종료하시겠습니까?';
+    }
+
+    function startExam() {
+      examActive = true;
+    }
+
+    function stopExam() {
+      examActive = false;
+      if (timerId !== null) {
+        clearInterval(timerId);
+        timerId = null;
+      }
+    }
+
+    function isExamActive() {
+      return examActive;
+    }
+
+    function getTimerSec() {
+      return timerSec;
+    }
+
+    function startTimer(onTick) {
+      timerId = setInterval(() => {
+        timerSec--;
+        onTick(timerSec);
+        if (timerSec <= 0) {
+          stopExam();
+          onTick(0, true);
+        }
+      }, 1000);
+    }
+
+    return {
+      CHOICE_SYM,
+      DURATION_SEC: duration,
+      subjectLabel,
+      formatTime,
+      loadAnswers,
+      saveAnswers,
+      clearStoredAnswers,
+      getQuestions,
+      getCurrentIndex,
+      getCurrentQuestion,
+      getChoiceFocus,
+      setChoiceFocus,
+      moveChoiceFocus,
+      syncChoiceFocusFromAnswer,
+      getAnswer,
+      getAnsweredCount,
+      getUnansweredCount,
+      canGoPrev,
+      canGoNext,
+      goPrev,
+      goNext,
+      goToIndex,
+      selectAnswer,
+      selectAnswerByIndex,
+      exportAnswers,
+      resetSession,
+      resetConfirmMessage,
+      finishConfirmMessage,
+      startExam,
+      stopExam,
+      isExamActive,
+      getTimerSec,
+      startTimer,
+    };
+  }
+
+  global.CBTExam = { createSession, DURATION_SEC, formatTime };
+})(window);
+
+</script>
+<script>
+/* CBT 응시 — DOM 렌더링·이벤트 (UI 로직) */
+(function (global) {
+  function escapeHtml(s) {
+    return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+  }
+
+  function init(session) {
+    const screenStart = document.getElementById('screen-start');
+    const screenExam = document.getElementById('screen-exam');
+    const screenEnd = document.getElementById('screen-end');
+    const questionPanel = document.getElementById('question-panel');
+    const navScroll = document.getElementById('nav-scroll');
+    const timerEl = document.getElementById('timer');
+    const subjectLabelEl = document.getElementById('subject-label');
+    const progressLabelEl = document.getElementById('progress-label');
+    const answeredCountEl = document.getElementById('answered-count');
+    const btnPrev = document.getElementById('btn-prev');
+    const btnNext = document.getElementById('btn-next');
+    const answerExportEl = document.getElementById('answer-export');
+
+    function updateChoiceFocus() {
+      if (!questionPanel) return;
+      questionPanel.querySelectorAll('.choice').forEach((el, i) => {
+        el.classList.toggle('focused', i === session.getChoiceFocus());
+      });
+      const focused = questionPanel.querySelector('.choice.focused');
+      if (focused) focused.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+    }
+
+    function updateNav() {
+      const questions = session.getQuestions();
+      const current = session.getCurrentIndex();
+      document.querySelectorAll('.nav-btn').forEach(btn => {
+        const i = parseInt(btn.dataset.index, 10);
+        const q = questions[i];
+        btn.classList.remove('current', 'answered');
+        if (i === current) {
+          btn.classList.add('current');
+          btn.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+        } else if (session.getAnswer(q.no)) {
+          btn.classList.add('answered');
+        }
+      });
+    }
+
+    function updateCount() {
+      const total = session.getQuestions().length;
+      answeredCountEl.textContent = '답변 ' + session.getAnsweredCount() + ' / ' + total;
+    }
+
+    function renderNavGrid() {
+      const questions = session.getQuestions();
+      navScroll.innerHTML = '';
+      let lastSubject = null;
+      let sectionGrid = null;
+
+      questions.forEach((q, i) => {
+        if (q.subject !== lastSubject) {
+          lastSubject = q.subject;
+          const section = document.createElement('div');
+          section.className = 'nav-section';
+          const title = document.createElement('div');
+          title.className = 'nav-section-title';
+          title.textContent = q.subject + '과목 ' + q.subjectName;
+          sectionGrid = document.createElement('div');
+          sectionGrid.className = 'nav-section-grid';
+          section.appendChild(title);
+          section.appendChild(sectionGrid);
+          navScroll.appendChild(section);
+        }
+        const btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = 'nav-btn';
+        btn.dataset.index = String(i);
+        btn.textContent = q.no;
+        btn.title = session.subjectLabel(q);
+        btn.addEventListener('click', () => {
+          session.goToIndex(i);
+          renderQuestion();
+        });
+        sectionGrid.appendChild(btn);
+      });
+    }
+
+    function renderQuestion() {
+      const q = session.getCurrentQuestion();
+      const selected = session.getAnswer(q.no);
+      session.syncChoiceFocusFromAnswer();
+
+      let html = '<div class="q-header"><span class="q-badge">' + q.no + '</span><span class="q-subject">' + session.subjectLabel(q) + '</span></div>';
+      html += '<div class="q-stem">' + q.stem.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>') + '</div>';
+      html += '<div class="choices" id="choices">';
+      q.choices.forEach((c, i) => {
+        const sel = selected === c.key ? ' selected' : '';
+        const foc = i === session.getChoiceFocus() ? ' focused' : '';
+        html += '<label class="choice' + sel + foc + '" data-key="' + c.key + '" data-idx="' + i + '"><span class="num">' + c.label + '</span><span class="text">' + escapeHtml(c.text) + '</span><input type="radio" name="q" value="' + c.key + '"' + (sel ? ' checked' : '') + '></label>';
+      });
+      html += '</div>';
+      questionPanel.innerHTML = html;
+
+      questionPanel.querySelectorAll('.choice').forEach(el => {
+        el.addEventListener('click', () => {
+          session.selectAnswer(el.dataset.key);
+          renderQuestion();
+        });
+      });
+
+      subjectLabelEl.textContent = session.subjectLabel(q);
+      progressLabelEl.textContent = (session.getCurrentIndex() + 1) + ' / ' + session.getQuestions().length;
+      btnPrev.disabled = !session.canGoPrev();
+      btnNext.disabled = !session.canGoNext();
+      updateNav();
+      updateCount();
+      updateChoiceFocus();
+    }
+
+    function startTimer() {
+      timerEl.textContent = session.formatTime(session.getTimerSec());
+      session.startTimer((sec, timedOut) => {
+        timerEl.textContent = session.formatTime(sec);
+        if (sec <= 600) timerEl.classList.add('warn');
+        if (timedOut) finishExam(true);
+      });
+    }
+
+    function finishExam(auto) {
+      if (!auto) {
+        const left = session.getUnansweredCount();
+        if (left > 0 && !confirm(session.finishConfirmMessage())) return;
+      }
+      session.stopExam();
+      screenExam.style.display = 'none';
+      screenEnd.style.display = 'block';
+      answerExportEl.value = session.exportAnswers();
+    }
+
+    function handleExamKeydown(e) {
+      if (!session.isExamActive()) return;
+      if (e.target.tagName === 'TEXTAREA' || e.target.tagName === 'INPUT') return;
+
+      const q = session.getCurrentQuestion();
+      const n = q.choices.length;
+
+      if (e.key === 'ArrowDown') {
+        e.preventDefault();
+        session.moveChoiceFocus(1);
+        updateChoiceFocus();
+      } else if (e.key === 'ArrowUp') {
+        e.preventDefault();
+        session.moveChoiceFocus(-1);
+        updateChoiceFocus();
+      } else if (e.key === 'ArrowLeft') {
+        e.preventDefault();
+        if (session.goPrev()) renderQuestion();
+      } else if (e.key === 'ArrowRight') {
+        e.preventDefault();
+        if (session.goNext()) renderQuestion();
+      } else if (e.key >= '1' && e.key <= '4') {
+        const idx = parseInt(e.key, 10) - 1;
+        if (idx < n) {
+          e.preventDefault();
+          session.selectAnswerByIndex(idx);
+          renderQuestion();
+        }
+      } else if (e.key === 'Enter') {
+        e.preventDefault();
+        if (session.goNext()) renderQuestion();
+      }
+    }
+
+    document.getElementById('btn-start').addEventListener('click', () => {
+      session.loadAnswers();
+      screenStart.style.display = 'none';
+      screenExam.style.display = 'flex';
+      session.startExam();
+      renderNavGrid();
+      renderQuestion();
+      startTimer();
+    });
+
+    document.addEventListener('keydown', handleExamKeydown);
+
+    btnPrev.addEventListener('click', () => {
+      if (session.goPrev()) renderQuestion();
+    });
+
+    document.getElementById('btn-reset').addEventListener('click', () => {
+      if (!confirm(session.resetConfirmMessage())) return;
+      session.resetSession();
+      renderNavGrid();
+      renderQuestion();
+    });
+
+    btnNext.addEventListener('click', () => {
+      if (session.goNext()) renderQuestion();
+    });
+
+    document.getElementById('btn-submit').addEventListener('click', () => finishExam(false));
+
+    document.getElementById('btn-copy').addEventListener('click', () => {
+      answerExportEl.select();
+      navigator.clipboard.writeText(answerExportEl.value).catch(() => {});
+    });
+
+    document.getElementById('btn-restart').addEventListener('click', () => {
+      if (confirm('저장된 답안을 지우고 처음부터 다시 시작합니다.')) {
+        session.clearStoredAnswers();
+        location.reload();
+      }
+    });
+  }
+
+  global.CBTUI = { init };
+})(window);
+
+</script>
+<script>
+CBTUI.init(CBTExam.createSession(QUESTIONS, STORAGE_KEY, EXAM_DURATION_SEC));
+</script>
+</body>
+</html>
