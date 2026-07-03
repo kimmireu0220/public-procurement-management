@@ -346,6 +346,114 @@ SUBJECT3_ROUND6: list[str] = [
     "3:3:1:cqa:1",
 ]
 
+# Part 분포 5/4/5/4/5/4/3 · check 4건(≤6)
+SUBJECT1_ROUND7: list[str] = [
+    # Part1 (5)
+    "1:1:1:exam:13",
+    "1:1:2:exam:12",
+    "1:1:3:exam:10",
+    "1:1:4:exam:10",
+    "1:1:2:exam:13",
+    # Part2 (4)
+    "1:2:1:exam:12",
+    "1:2:2:exam:1",
+    "1:2:3:exam:1",
+    "1:2:1:exam:13",
+    # Part3 (5)
+    "1:3:1:exam:10",
+    "1:3:2:exam:1",
+    "1:3:3:exam:10",
+    "1:3:4:exam:1",
+    "1:3:2:exam:11",
+    # Part4 (4)
+    "1:4:1:exam:13",
+    "1:4:2:exam:11",
+    "1:4:3:exam:4",
+    "1:4:5:exam:1",
+    # Part5 (5)
+    "1:5:1:exam:15",
+    "1:5:2:exam:10",
+    "1:5:3:exam:10",
+    "1:5:4:exam:10",
+    "1:5:5:exam:1",
+    # Part6 (4) — exam 풀 소진으로 check
+    "1:6:1:check:1",
+    "1:6:1:check:6",
+    "1:6:1:check:8",
+    "1:6:2:check:3",
+    # Part7 (3)
+    "1:7:1:exam:10",
+    "1:7:2:exam:1",
+    "1:7:1:exam:11",
+]
+
+# Part 분포 5/5/5/5 · check 0건
+SUBJECT2_ROUND7: list[str] = [
+    # Part1 (5)
+    "2:1:1:exam:9",
+    "2:1:2:exam:12",
+    "2:1:2:exam:17",
+    "2:1:2:exam:18",
+    "2:1:2:exam:19",
+    # Part2 (5)
+    "2:2:3:exam:13",
+    "2:2:3:exam:15",
+    "2:2:3:exam:16",
+    "2:2:4:exam:1",
+    "2:2:4:exam:2",
+    # Part3 (5)
+    "2:3:1:exam:10",
+    "2:3:1:exam:11",
+    "2:3:3:exam:1",
+    "2:3:3:exam:11",
+    "2:3:4:exam:2",
+    # Part4 (5)
+    "2:4:1:exam:10",
+    "2:4:2:exam:1",
+    "2:4:3:exam:1",
+    "2:4:4:exam:14",
+    "2:4:6:exam:1",
+]
+
+# Part 분포 8/7/8/7 · cqa 6건(≤6)
+# 3과목은 1차 lap 미사용 풀이 cqa만 남아 2차 lap 재출제(exam) 포함.
+SUBJECT3_ROUND7: list[str] = [
+    # Part1 (8)
+    "3:1:3:exam:16",
+    "3:1:4:exam:1",
+    "3:1:4:exam:2",
+    "3:1:4:exam:6",
+    "3:1:4:exam:23",
+    "3:1:4:exam:28",
+    "3:1:4:exam:30",
+    "3:1:4:exam:32",
+    # Part2 (7)
+    "3:2:1:exam:44",
+    "3:2:1:exam:45",
+    "3:2:1:exam:46",
+    "3:2:1:exam:49",
+    "3:2:1:exam:50",
+    "3:2:2:exam:41",
+    "3:2:2:exam:42",
+    # Part3 (8)
+    "3:3:1:cqa:14",
+    "3:3:1:cqa:15",
+    "3:3:2:cqa:1",
+    "3:3:2:cqa:12",
+    "3:3:2:cqa:16",
+    "3:3:2:cqa:17",
+    "3:3:2:exam:21",
+    "3:3:2:exam:20",
+    # Part4 (7)
+    "3:4:1:exam:31",
+    "3:4:1:exam:16",
+    "3:4:1:exam:27",
+    "3:4:2:exam:11",
+    "3:4:2:exam:20",
+    "3:4:3:exam:8",
+    "3:4:3:exam:25",
+]
+
 INTEGRATED_SELECTIONS: dict[int, dict[str, list[str]]] = {
     4: {
         "1": SUBJECT1_ROUND4,
@@ -361,6 +469,11 @@ INTEGRATED_SELECTIONS: dict[int, dict[str, list[str]]] = {
         "1": SUBJECT1_ROUND6,
         "2": SUBJECT2_ROUND6,
         "3": SUBJECT3_ROUND6,
+    },
+    7: {
+        "1": SUBJECT1_ROUND7,
+        "2": SUBJECT2_ROUND7,
+        "3": SUBJECT3_ROUND7,
     },
 }
 
