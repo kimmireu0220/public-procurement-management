@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>1과목 Part6 EXAM 학습</title>
+<style>
+:root {
+  --bg: #e8ecf1;
+  --panel: #fff;
+  --primary: #1a4d8f;
+  --primary-dark: #0f3460;
+  --accent: #2e7dd1;
+  --border: #c5d0de;
+  --text: #1a1a1a;
+  --muted: #5c6b7a;
+  --answered: #2e7dd1;
+  --current: #1a4d8f;
+  --unanswered: #d0d7e2;
+  --warn: #c0392b;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: "Apple SD Gothic Neo", "Malgun Gothic", sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; }
+
+#screen-start { display: flex; align-items: center; justify-content: center; min-height: 100vh; padding: 1.5rem; }
+.start-card { background: var(--panel); max-width: 520px; width: 100%; border-radius: 8px; box-shadow: 0 4px 24px rgba(0,0,0,.12); padding: 2.5rem 2rem; text-align: center; border-top: 4px solid var(--primary); }
+.start-card h1 { font-size: 1.65rem; color: var(--primary-dark); margin-bottom: .5rem; }
+.start-card .sub { color: var(--muted); font-size: 1.05rem; margin-bottom: 1.5rem; }
+.start-card ul { text-align: left; margin: 0 auto 1.75rem; max-width: 340px; font-size: .92rem; line-height: 1.8; color: #333; }
+.start-card .btn-start { background: var(--primary); color: #fff; border: none; padding: .85rem 2.5rem; font-size: 1.05rem; border-radius: 4px; cursor: pointer; font-weight: 600; }
+.start-card .btn-start:hover { background: var(--primary-dark); }
+
+#screen-exam { display: none; flex-direction: column; height: 100vh; }
+.topbar { background: var(--primary-dark); color: #fff; display: flex; align-items: center; justify-content: space-between; padding: 1rem 1.5rem; font-size: 1.1rem; flex-shrink: 0; min-height: 3.75rem; }
+.topbar .exam-title { font-weight: 700; font-size: 1.3rem; }
+.topbar .timer { font-size: 1.65rem; font-weight: 700; font-variant-numeric: tabular-nums; letter-spacing: .05em; }
+.topbar .timer.warn { color: #ffcc00; animation: pulse 1s infinite; }
+@keyframes pulse { 50% { opacity: .7; } }
+.subbar { background: var(--primary); color: #fff; padding: .9rem 1.5rem; font-size: 1.1rem; display: flex; justify-content: space-between; align-items: center; min-height: 3.25rem; }
+.subbar #subject-label { font-size: 1.15rem; font-weight: 600; }
+.subbar #progress-label { font-size: 1.1rem; font-weight: 600; }
+
+.main { display: flex; flex: 1; overflow: hidden; }
+.question-panel { flex: 1; overflow-y: auto; padding: 1.5rem 2rem 2rem; background: var(--panel); }
+.q-header { display: flex; align-items: center; gap: .75rem; margin-bottom: 1.25rem; }
+.q-badge { background: var(--primary); color: #fff; font-weight: 700; font-size: 1.35rem; min-width: 3.25rem; text-align: center; padding: .45rem .7rem; border-radius: 4px; }
+.q-subject { color: var(--muted); font-size: 1rem; font-weight: 600; }
+.q-stem { font-size: 1.2rem; line-height: 1.75; margin-bottom: 1.5rem; font-weight: 600; }
+.q-stem strong { color: var(--primary-dark); }
+
+.choices { display: flex; flex-direction: column; gap: .65rem; }
+.choice { display: flex; align-items: flex-start; gap: .75rem; padding: .85rem 1rem; border: 2px solid var(--border); border-radius: 6px; cursor: pointer; transition: border-color .15s, background .15s; background: #fafbfc; }
+.choice:hover { border-color: var(--accent); background: #f0f6fc; }
+.choice.selected { border-color: var(--primary); background: #e8f0fa; box-shadow: 0 0 0 1px var(--primary); }
+.choice.focused { outline: 2px solid var(--accent); outline-offset: 2px; }
+.choice .num { font-weight: 700; color: var(--primary); min-width: 1.75rem; font-size: 1.15rem; }
+.choice .text { flex: 1; line-height: 1.6; font-size: 1.12rem; }
+.choice input { display: none; }
+
+.nav-panel { width: 280px; background: #f4f6f9; border-left: 1px solid var(--border); display: flex; flex-direction: column; flex-shrink: 0; }
+.nav-title { padding: .85rem 1rem; font-size: 1rem; font-weight: 700; color: var(--primary-dark); border-bottom: 1px solid var(--border); }
+.nav-scroll { overflow-y: auto; flex: 1; padding: .75rem; }
+.nav-section { margin-bottom: .9rem; }
+.nav-section:last-child { margin-bottom: 0; }
+.nav-section-title { font-size: .95rem; font-weight: 700; color: var(--primary-dark); margin-bottom: .45rem; padding-bottom: .3rem; border-bottom: 1px solid var(--border); line-height: 1.4; }
+.nav-section-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; }
+.nav-btn { min-height: 2.35rem; border: 1px solid var(--border); background: var(--unanswered); border-radius: 4px; font-size: .85rem; font-weight: 600; cursor: pointer; color: #444; }
+.nav-btn.answered { background: #b8d4f0; border-color: var(--answered); color: var(--primary-dark); }
+.nav-btn.current { background: var(--current); color: #fff; border-color: var(--current); }
+.nav-btn:hover { filter: brightness(.95); }
+.nav-legend { padding: .5rem .75rem; font-size: .72rem; color: var(--muted); border-top: 1px solid var(--border); display: flex; gap: .75rem; flex-wrap: wrap; }
+.legend-dot { display: inline-block; width: 10px; height: 10px; border-radius: 2px; margin-right: 2px; vertical-align: middle; }
+
+.bottombar { background: var(--panel); border-top: 1px solid var(--border); padding: .65rem 1.25rem; display: flex; justify-content: space-between; align-items: center; flex-shrink: 0; gap: .75rem; }
+.bottombar-left, .bottombar-right { display: flex; align-items: center; gap: .5rem; }
+.bottombar button { padding: .55rem 1.4rem; font-size: .92rem; border-radius: 4px; cursor: pointer; border: 1px solid var(--border); background: #fff; }
+.bottombar button.reset { color: var(--warn); border-color: #e8c4c0; background: #fff8f7; }
+.bottombar button.reset:hover { background: #fdecea; }
+.bottombar button.primary { background: var(--primary); color: #fff; border-color: var(--primary); font-weight: 600; }
+.bottombar button:disabled { opacity: .4; cursor: not-allowed; }
+.progress-text { font-size: 1rem; font-weight: 600; color: var(--text); }
+
+#screen-end { display: none; min-height: 100vh; padding: 2rem; }
+.end-card { max-width: 640px; margin: 0 auto; background: var(--panel); border-radius: 8px; padding: 2rem; box-shadow: 0 4px 20px rgba(0,0,0,.1); }
+.end-card h2 { color: var(--primary-dark); margin-bottom: 1rem; font-size: 1.55rem; }
+.end-card textarea { width: 100%; height: 160px; font-family: monospace; font-size: .85rem; padding: .75rem; border: 1px solid var(--border); border-radius: 4px; margin: 1rem 0; }
+.end-card .hint { font-size: .88rem; color: var(--muted); line-height: 1.6; }
+.end-card button { margin-right: .5rem; margin-top: .5rem; padding: .55rem 1.2rem; border-radius: 4px; cursor: pointer; border: 1px solid var(--border); background: #fff; }
+.end-card button.primary { background: var(--primary); color: #fff; border-color: var(--primary); }
+
+@media (max-width: 768px) {
+  .main { flex-direction: column; }
+  .nav-panel { width: 100%; border-left: none; border-top: 1px solid var(--border); max-height: 200px; }
+  .nav-section-grid { grid-template-columns: repeat(8, 1fr); }
+  .question-panel { padding: 1rem; }
+}
+
+.topbar .timer { display: none; }
+</style>
+</head>
+<body>
+
+<div id="screen-start">
+  <div class="start-card">
+    <h1>1과목 Part6 EXAM 학습</h1>
+    <p class="sub">공공조달과 법제도 이해 · 문제은행 exam 전체</p>
+    <ul>
+      <li>총 <strong>6문항</strong> · 제한시간 없음 (학습용)</li>
+      <li>4지 선다형 — 문항당 하나만 선택</li>
+      <li>답안은 자동 저장됩니다 (브라우저)</li>
+    </ul>
+    <button class="btn-start" id="btn-start">학습 시작</button>
+  </div>
+</div>
+
+<div id="screen-exam">
+  <div class="topbar">
+    <span class="exam-title">1과목 Part6 EXAM 학습</span>
+    <span class="timer" id="timer">--:--:--</span>
+  </div>
+  <div class="subbar">
+    <span id="subject-label">1과목 공공조달과 법제도 이해</span>
+    <span>
+      <span id="progress-label">1 / 6</span>
+    </span>
+  </div>
+  <div class="main">
+    <div class="question-panel" id="question-panel"></div>
+    <aside class="nav-panel">
+      <div class="nav-title">문항 이동</div>
+      <div class="nav-scroll" id="nav-scroll"></div>
+      <div class="nav-legend">
+        <span><span class="legend-dot" style="background:var(--unanswered)"></span>미답</span>
+        <span><span class="legend-dot" style="background:#b8d4f0"></span>답변</span>
+        <span><span class="legend-dot" style="background:var(--current)"></span>현재</span>
+      </div>
+    </aside>
+  </div>
+  <div class="bottombar">
+    <div class="bottombar-left">
+      <button id="btn-prev">◀ 이전</button>
+      <button class="reset" id="btn-reset" type="button">처음부터</button>
+    </div>
+    <span class="progress-text" id="answered-count">답변 0 / 6</span>
+    <div class="bottombar-right">
+      <button id="btn-next">다음 ▶</button>
+      <button class="primary" id="btn-submit">종료</button>
+    </div>
+  </div>
+</div>
+
+<div id="screen-end">
+  <div class="end-card">
+    <h2>학습 종료</h2>
+    <p class="hint">아래 답안 문자열을 복사해 채팅에 붙여넣으면 채점합니다.<br>형식: <code>1③ 2④ 3④ …</code></p>
+    <textarea id="answer-export" readonly></textarea>
+    <button class="primary" id="btn-copy">답안 복사</button>
+    <button id="btn-restart">다시 풀기</button>
+    <p class="hint" style="margin-top:1rem">※ 정답·해설은 채점 후 제공됩니다.</p>
+  </div>
+</div>
+
+<script>
+const QUESTIONS = [{"no": 1, "subject": 1, "subjectName": "Part6 Ch1", "stem": "다음 중 공동계약 이행방식에 대한 설명으로 옳지 않은 것은?", "choices": [{"key": "1", "label": "①", "text": "공동이행방식은 구성원이 출자비율에 따라 연대하여 공동으로 계약을 수행한다."}, {"key": "2", "label": "②", "text": "분담이행방식은 구성원이 분담 내용에 따라 나누어 수행하며 개별 책임을 진다."}, {"key": "3", "label": "③", "text": "주계약자관리방식은 주계약자가 전체 계약 수행을 종합 관리·조정한다."}, {"key": "4", "label": "④", "text": "공동이행방식은 구성원이 맡은 부분에 대해서만 책임지고 전체 계약에 대한 연대책임은 부담하지 않는다."}], "id": "1:6:1:exam:28"}, {"no": 2, "subject": 1, "subjectName": "Part6 Ch2", "stem": "다음 중 도급과 위임에 대한 설명으로 옳은 것은?", "choices": [{"key": "1", "label": "①", "text": "도급은 일정한 일을 완성할 것을 약정하고 그 대가를 지급하는 계약이다."}, {"key": "2", "label": "②", "text": "위임은 일정한 일을 완성할 것을 약정하는 계약이다."}, {"key": "3", "label": "③", "text": "도급은 주로 법률행위를 위탁하는 계약이다."}, {"key": "4", "label": "④", "text": "위임은 반드시 유상계약이어야 한다."}], "id": "1:6:2:exam:28"}, {"no": 3, "subject": 1, "subjectName": "Part6 Ch3", "stem": "다음 중 다수공급자계약에 대한 설명으로 옳은 것은?", "choices": [{"key": "1", "label": "①", "text": "조달청장이 단일 공급자와 계약을 체결하여 모든 수요기관이 동일 제품만 구매하도록 하는 계약이다."}, {"key": "2", "label": "②", "text": "계약상대자는 계약 상품의 가격을 시장거래가격보다 높게 유지할 수 있다."}, {"key": "3", "label": "③", "text": "품질·성능 또는 효율이 같거나 비슷한 종류의 수요물자를 대상으로 2명 이상을 계약상대자로 한다."}, {"key": "4", "label": "④", "text": "다수공급자계약은 특정 기관만 사용할 수 있으며, 반복 사용은 허용되지 않는다."}], "id": "1:6:3:exam:28"}, {"no": 4, "subject": 1, "subjectName": "Part6 Ch4", "stem": "다음 중 전자조달시스템 이용 제한 사유에 해당하지 않는 것은?", "choices": [{"key": "1", "label": "①", "text": "허위로 신청 내용을 기재한 경우"}, {"key": "2", "label": "②", "text": "입찰 질서를 훼손하거나 법령을 위반한 경우"}, {"key": "3", "label": "③", "text": "전자조달업무를 방해하거나 세금을 체납한 경우"}, {"key": "4", "label": "④", "text": "전자조달시스템을 활용해 새로운 서비스를 개발하려는 경우"}], "id": "1:6:4:exam:16"}, {"no": 5, "subject": 1, "subjectName": "Part6 Ch5", "stem": "부정당업자 제재처분 시 의견 진술 통지는 최소 며칠 전에 해야 하는가?", "choices": [{"key": "1", "label": "①", "text": "3일"}, {"key": "2", "label": "②", "text": "5일"}, {"key": "3", "label": "③", "text": "7일"}, {"key": "4", "label": "④", "text": "10일"}], "id": "1:6:5:exam:15"}, {"no": 6, "subject": 1, "subjectName": "Part6 Ch6", "stem": "「지방계약법」에서 계약과정 공개 방법은?", "choices": [{"key": "1", "label": "①", "text": "지정정보처리장치"}, {"key": "2", "label": "②", "text": "인터넷 홈페이지"}, {"key": "3", "label": "③", "text": "신문 공고"}, {"key": "4", "label": "④", "text": "내부 문서"}], "id": "1:6:6:exam:13"}];
+const STORAGE_KEY = 'study_1_p6_exam_answers';
+const EXAM_DURATION_SEC = 999999;
+</script>
+<script>
+/* CBT 응시 — 시험 상태·답안·타이머 (비즈니스 로직) */
+(function (global) {
+  const CHOICE_SYM = { 1: '①', 2: '②', 3: '③', 4: '④' };
+  const DURATION_SEC = 120 * 60;
+
+  function subjectLabel(q) {
+    return q.subject + '과목 ' + q.subjectName;
+  }
+
+  function formatTime(sec) {
+    const h = Math.floor(sec / 3600);
+    const m = Math.floor((sec % 3600) / 60);
+    const s = sec % 60;
+    return [h, m, s].map(v => String(v).padStart(2, '0')).join(':').replace(/^00:/, '');
+  }
+
+  function createSession(questions, storageKey, durationSec) {
+    const duration = durationSec || DURATION_SEC;
+    let current = 0;
+    let answers = {};
+    let timerSec = duration;
+    let timerId = null;
+    let choiceFocus = 0;
+    let examActive = false;
+
+    function loadAnswers() {
+      try {
+        const s = localStorage.getItem(storageKey);
+        if (s) answers = JSON.parse(s);
+      } catch (e) {}
+    }
+
+    function saveAnswers() {
+      localStorage.setItem(storageKey, JSON.stringify(answers));
+    }
+
+    function clearStoredAnswers() {
+      localStorage.removeItem(storageKey);
+    }
+
+    function getQuestions() {
+      return questions;
+    }
+
+    function getCurrentIndex() {
+      return current;
+    }
+
+    function getCurrentQuestion() {
+      return questions[current];
+    }
+
+    function getChoiceFocus() {
+      return choiceFocus;
+    }
+
+    function setChoiceFocus(idx) {
+      choiceFocus = idx;
+    }
+
+    function moveChoiceFocus(delta) {
+      const n = getCurrentQuestion().choices.length;
+      choiceFocus = (choiceFocus + delta + n) % n;
+    }
+
+    function syncChoiceFocusFromAnswer() {
+      const q = getCurrentQuestion();
+      const selected = answers[q.no];
+      const selIdx = selected ? q.choices.findIndex(c => c.key === selected) : -1;
+      choiceFocus = selIdx >= 0 ? selIdx : 0;
+    }
+
+    function getAnswer(no) {
+      return answers[no];
+    }
+
+    function getAnsweredCount() {
+      return Object.keys(answers).length;
+    }
+
+    function getUnansweredCount() {
+      return questions.length - getAnsweredCount();
+    }
+
+    function canGoPrev() {
+      return current > 0;
+    }
+
+    function canGoNext() {
+      return current < questions.length - 1;
+    }
+
+    function goPrev() {
+      if (!canGoPrev()) return false;
+      current--;
+      return true;
+    }
+
+    function goNext() {
+      if (!canGoNext()) return false;
+      current++;
+      return true;
+    }
+
+    function goToIndex(index) {
+      if (index < 0 || index >= questions.length) return false;
+      current = index;
+      return true;
+    }
+
+    function selectAnswer(key) {
+      const q = getCurrentQuestion();
+      answers[q.no] = key;
+      saveAnswers();
+      const idx = q.choices.findIndex(c => c.key === key);
+      if (idx >= 0) choiceFocus = idx;
+
+      const advanced = current < questions.length - 1;
+      if (advanced) current++;
+      return { advanced };
+    }
+
+    function selectAnswerByIndex(choiceIndex) {
+      const q = getCurrentQuestion();
+      if (choiceIndex < 0 || choiceIndex >= q.choices.length) return null;
+      return selectAnswer(q.choices[choiceIndex].key);
+    }
+
+    function exportAnswers() {
+      return questions.map(q => {
+        const a = answers[q.no];
+        const sym = CHOICE_SYM[a] || '?';
+        return q.no + sym;
+      }).join(' ');
+    }
+
+    function resetSession() {
+      answers = {};
+      clearStoredAnswers();
+      current = 0;
+      choiceFocus = 0;
+    }
+
+    function resetConfirmMessage() {
+      const n = getAnsweredCount();
+      return n > 0
+        ? '선택한 답안 ' + n + '개를 모두 지우고 1번 문항부터 다시 시작합니다.'
+        : '1번 문항부터 다시 시작합니다.';
+    }
+
+    function finishConfirmMessage() {
+      const left = getUnansweredCount();
+      return '미답 ' + left + '문항이 있습니다. 시험을 종료하시겠습니까?';
+    }
+
+    function startExam() {
+      examActive = true;
+    }
+
+    function stopExam() {
+      examActive = false;
+      if (timerId !== null) {
+        clearInterval(timerId);
+        timerId = null;
+      }
+    }
+
+    function isExamActive() {
+      return examActive;
+    }
+
+    function getTimerSec() {
+      return timerSec;
+    }
+
+    function startTimer(onTick) {
+      timerId = setInterval(() => {
+        timerSec--;
+        onTick(timerSec);
+        if (timerSec <= 0) {
+          stopExam();
+          onTick(0, true);
+        }
+      }, 1000);
+    }
+
+    return {
+      CHOICE_SYM,
+      DURATION_SEC: duration,
+      subjectLabel,
+      formatTime,
+      loadAnswers,
+      saveAnswers,
+      clearStoredAnswers,
+      getQuestions,
+      getCurrentIndex,
+      getCurrentQuestion,
+      getChoiceFocus,
+      setChoiceFocus,
+      moveChoiceFocus,
+      syncChoiceFocusFromAnswer,
+      getAnswer,
+      getAnsweredCount,
+      getUnansweredCount,
+      canGoPrev,
+      canGoNext,
+      goPrev,
+      goNext,
+      goToIndex,
+      selectAnswer,
+      selectAnswerByIndex,
+      exportAnswers,
+      resetSession,
+      resetConfirmMessage,
+      finishConfirmMessage,
+      startExam,
+      stopExam,
+      isExamActive,
+      getTimerSec,
+      startTimer,
+    };
+  }
+
+  global.CBTExam = { createSession, DURATION_SEC, formatTime };
+})(window);
+
+</script>
+<script>
+/* CBT 응시 — DOM 렌더링·이벤트 (UI 로직) */
+(function (global) {
+  function escapeHtml(s) {
+    return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+  }
+
+  function init(session) {
+    const screenStart = document.getElementById('screen-start');
+    const screenExam = document.getElementById('screen-exam');
+    const screenEnd = document.getElementById('screen-end');
+    const questionPanel = document.getElementById('question-panel');
+    const navScroll = document.getElementById('nav-scroll');
+    const timerEl = document.getElementById('timer');
+    const subjectLabelEl = document.getElementById('subject-label');
+    const progressLabelEl = document.getElementById('progress-label');
+    const answeredCountEl = document.getElementById('answered-count');
+    const btnPrev = document.getElementById('btn-prev');
+    const btnNext = document.getElementById('btn-next');
+    const answerExportEl = document.getElementById('answer-export');
+
+    function updateChoiceFocus() {
+      if (!questionPanel) return;
+      questionPanel.querySelectorAll('.choice').forEach((el, i) => {
+        el.classList.toggle('focused', i === session.getChoiceFocus());
+      });
+      const focused = questionPanel.querySelector('.choice.focused');
+      if (focused) focused.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+    }
+
+    function updateNav() {
+      const questions = session.getQuestions();
+      const current = session.getCurrentIndex();
+      document.querySelectorAll('.nav-btn').forEach(btn => {
+        const i = parseInt(btn.dataset.index, 10);
+        const q = questions[i];
+        btn.classList.remove('current', 'answered');
+        if (i === current) {
+          btn.classList.add('current');
+          btn.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+        } else if (session.getAnswer(q.no)) {
+          btn.classList.add('answered');
+        }
+      });
+    }
+
+    function updateCount() {
+      const total = session.getQuestions().length;
+      answeredCountEl.textContent = '답변 ' + session.getAnsweredCount() + ' / ' + total;
+    }
+
+    function renderNavGrid() {
+      const questions = session.getQuestions();
+      navScroll.innerHTML = '';
+      let lastSubject = null;
+      let sectionGrid = null;
+
+      questions.forEach((q, i) => {
+        if (q.subject !== lastSubject) {
+          lastSubject = q.subject;
+          const section = document.createElement('div');
+          section.className = 'nav-section';
+          const title = document.createElement('div');
+          title.className = 'nav-section-title';
+          title.textContent = q.subject + '과목 ' + q.subjectName;
+          sectionGrid = document.createElement('div');
+          sectionGrid.className = 'nav-section-grid';
+          section.appendChild(title);
+          section.appendChild(sectionGrid);
+          navScroll.appendChild(section);
+        }
+        const btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = 'nav-btn';
+        btn.dataset.index = String(i);
+        btn.textContent = q.no;
+        btn.title = session.subjectLabel(q);
+        btn.addEventListener('click', () => {
+          session.goToIndex(i);
+          renderQuestion();
+        });
+        sectionGrid.appendChild(btn);
+      });
+    }
+
+    function renderQuestion() {
+      const q = session.getCurrentQuestion();
+      const selected = session.getAnswer(q.no);
+      session.syncChoiceFocusFromAnswer();
+
+      let html = '<div class="q-header"><span class="q-badge">' + q.no + '</span><span class="q-subject">' + session.subjectLabel(q) + '</span></div>';
+      html += '<div class="q-stem">' + q.stem.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>') + '</div>';
+      html += '<div class="choices" id="choices">';
+      q.choices.forEach((c, i) => {
+        const sel = selected === c.key ? ' selected' : '';
+        const foc = i === session.getChoiceFocus() ? ' focused' : '';
+        html += '<label class="choice' + sel + foc + '" data-key="' + c.key + '" data-idx="' + i + '"><span class="num">' + c.label + '</span><span class="text">' + escapeHtml(c.text) + '</span><input type="radio" name="q" value="' + c.key + '"' + (sel ? ' checked' : '') + '></label>';
+      });
+      html += '</div>';
+      questionPanel.innerHTML = html;
+
+      questionPanel.querySelectorAll('.choice').forEach(el => {
+        el.addEventListener('click', () => {
+          session.selectAnswer(el.dataset.key);
+          renderQuestion();
+        });
+      });
+
+      subjectLabelEl.textContent = session.subjectLabel(q);
+      progressLabelEl.textContent = (session.getCurrentIndex() + 1) + ' / ' + session.getQuestions().length;
+      btnPrev.disabled = !session.canGoPrev();
+      btnNext.disabled = !session.canGoNext();
+      updateNav();
+      updateCount();
+      updateChoiceFocus();
+    }
+
+    function startTimer() {
+      timerEl.textContent = session.formatTime(session.getTimerSec());
+      session.startTimer((sec, timedOut) => {
+        timerEl.textContent = session.formatTime(sec);
+        if (sec <= 600) timerEl.classList.add('warn');
+        if (timedOut) finishExam(true);
+      });
+    }
+
+    function finishExam(auto) {
+      if (!auto) {
+        const left = session.getUnansweredCount();
+        if (left > 0 && !confirm(session.finishConfirmMessage())) return;
+      }
+      session.stopExam();
+      screenExam.style.display = 'none';
+      screenEnd.style.display = 'block';
+      answerExportEl.value = session.exportAnswers();
+    }
+
+    function handleExamKeydown(e) {
+      if (!session.isExamActive()) return;
+      if (e.target.tagName === 'TEXTAREA' || e.target.tagName === 'INPUT') return;
+
+      const q = session.getCurrentQuestion();
+      const n = q.choices.length;
+
+      if (e.key === 'ArrowDown') {
+        e.preventDefault();
+        session.moveChoiceFocus(1);
+        updateChoiceFocus();
+      } else if (e.key === 'ArrowUp') {
+        e.preventDefault();
+        session.moveChoiceFocus(-1);
+        updateChoiceFocus();
+      } else if (e.key === 'ArrowLeft') {
+        e.preventDefault();
+        if (session.goPrev()) renderQuestion();
+      } else if (e.key === 'ArrowRight') {
+        e.preventDefault();
+        if (session.goNext()) renderQuestion();
+      } else if (e.key >= '1' && e.key <= '4') {
+        const idx = parseInt(e.key, 10) - 1;
+        if (idx < n) {
+          e.preventDefault();
+          session.selectAnswerByIndex(idx);
+          renderQuestion();
+        }
+      } else if (e.key === 'Enter') {
+        e.preventDefault();
+        if (session.goNext()) renderQuestion();
+      }
+    }
+
+    document.getElementById('btn-start').addEventListener('click', () => {
+      session.loadAnswers();
+      screenStart.style.display = 'none';
+      screenExam.style.display = 'flex';
+      session.startExam();
+      renderNavGrid();
+      renderQuestion();
+      startTimer();
+    });
+
+    document.addEventListener('keydown', handleExamKeydown);
+
+    btnPrev.addEventListener('click', () => {
+      if (session.goPrev()) renderQuestion();
+    });
+
+    document.getElementById('btn-reset').addEventListener('click', () => {
+      if (!confirm(session.resetConfirmMessage())) return;
+      session.resetSession();
+      renderNavGrid();
+      renderQuestion();
+    });
+
+    btnNext.addEventListener('click', () => {
+      if (session.goNext()) renderQuestion();
+    });
+
+    document.getElementById('btn-submit').addEventListener('click', () => finishExam(false));
+
+    document.getElementById('btn-copy').addEventListener('click', () => {
+      answerExportEl.select();
+      navigator.clipboard.writeText(answerExportEl.value).catch(() => {});
+    });
+
+    document.getElementById('btn-restart').addEventListener('click', () => {
+      if (confirm('저장된 답안을 지우고 처음부터 다시 시작합니다.')) {
+        session.clearStoredAnswers();
+        location.reload();
+      }
+    });
+  }
+
+  global.CBTUI = { init };
+})(window);
+
+</script>
+<script>
+CBTUI.init(CBTExam.createSession(QUESTIONS, STORAGE_KEY, EXAM_DURATION_SEC));
+</script>
+</body>
+</html>
