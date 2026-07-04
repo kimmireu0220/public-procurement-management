@@ -70,14 +70,30 @@ def load_questions_index() -> dict[str, dict]:
     chapter = 0
     stype = "exam"
     out: dict[str, dict] = {}
+    pending: list[tuple[str, dict]] = []
     i = 0
+
+    def flush_pending(source: str = "") -> None:
+        nonlocal pending
+        if not pending:
+            return
+        for psid, pdata in pending:
+            if source:
+                pdata["source"] = source
+            if pdata.get("source"):
+                out[psid] = pdata
+        pending = []
+
     while i < len(lines):
         line = lines[i]
         if line.startswith("## Part"):
+            flush_pending()
             part = int(re.search(r"Part (\d+)", line).group(1))
             chapter = 0
             i += 1
             continue
+        if line.startswith("###"):
+            flush_pending()
         ch = CHAPTER_HDR.match(line)
         if ch:
             chapter = int(ch.group(1))
@@ -99,6 +115,11 @@ def load_questions_index() -> dict[str, dict]:
             continue
         if re.search(r"최종점검\s*OX|OX\s*퀴즈", line, re.I) and line.startswith("#"):
             stype = "ox"
+            i += 1
+            continue
+        sm = SOURCE_RE.search(line)
+        if sm and pending:
+            flush_pending(sm.group(1).strip())
             i += 1
             continue
         qm = Q_LINE.match(line.strip())
@@ -129,14 +150,20 @@ def load_questions_index() -> dict[str, dict]:
             if cm:
                 choices.append((cm.group(1), cm.group(2).strip()))
             j += 1
-        if len(choices) >= 4 and source:
+        if len(choices) >= 4:
             sid = f"1:{part}:{chapter}:{stype}:{qn}"
-            out[sid] = {
+            item = {
                 "stem": stem,
                 "choices": choices[:4],
                 "source": source,
             }
+            if source:
+                flush_pending(source)
+                out[sid] = item
+            else:
+                pending.append((sid, item))
         i = j
+    flush_pending()
     return out
 
 
