@@ -561,6 +561,113 @@ SUBJECT3_ROUND8: list[str] = [
     "3:4:1:cqa:1",
 ]
 
+# Part 분포 5/4/5/4/5/4/3 · check 0건 · 8회차 오답(지출유형·해지) 반영
+SUBJECT1_ROUND9: list[str] = [
+    # Part1 (5)
+    "1:1:1:exam:20",
+    "1:1:2:exam:10",
+    "1:1:3:exam:12",
+    "1:1:4:exam:12",
+    "1:1:1:exam:21",
+    # Part2 (4)
+    "1:2:1:exam:17",
+    "1:2:2:exam:14",
+    "1:2:3:exam:11",
+    "1:2:1:exam:18",
+    # Part3 (5)
+    "1:3:1:exam:14",
+    "1:3:2:exam:14",
+    "1:3:3:exam:13",
+    "1:3:4:exam:12",
+    "1:3:1:exam:15",
+    # Part4 (4)
+    "1:4:1:exam:15",
+    "1:4:2:exam:13",
+    "1:4:3:exam:9",
+    "1:4:4:exam:3",
+    # Part5 (5) — 지출유형·정책
+    "1:5:1:exam:18",
+    "1:5:2:exam:13",
+    "1:5:3:exam:12",
+    "1:5:4:exam:13",
+    "1:5:5:exam:11",
+    # Part6 (4)
+    "1:6:1:exam:10",
+    "1:6:2:exam:11",
+    "1:6:3:exam:10",
+    "1:6:4:exam:10",
+    # Part7 (3) — 해제/해지
+    "1:7:1:exam:15",
+    "1:7:2:exam:14",
+    "1:7:1:exam:16",
+]
+
+# Part 분포 5/5/5/5 · check 2건 · 8회차 오답(원가·파레토·탈락통지)
+SUBJECT2_ROUND9: list[str] = [
+    # Part1 (5) — check 1
+    "2:1:2:exam:31",
+    "2:1:2:exam:32",
+    "2:1:2:exam:4",
+    "2:1:2:exam:9",
+    "2:1:2:check:3",
+    # Part2 (5) — 학술용역 원가
+    "2:2:3:exam:20",
+    "2:2:4:exam:7",
+    "2:2:3:exam:21",
+    "2:2:4:exam:8",
+    "2:2:3:exam:22",
+    # Part3 (5) — check 1
+    "2:3:1:exam:19",
+    "2:3:3:exam:15",
+    "2:3:4:check:1",
+    "2:3:1:exam:22",
+    "2:3:3:exam:16",
+    # Part4 (5) — 파레토·탈락통지
+    "2:4:1:exam:4",
+    "2:4:2:exam:4",
+    "2:4:3:exam:11",
+    "2:4:4:exam:16",
+    "2:4:5:exam:4",
+]
+
+# Part 분포 8/7/8/7 · cqa 6건 · **2차 lap** exam+미사용 cqa · 적격·공동도급·JIT
+SUBJECT3_ROUND9: list[str] = [
+    # Part1 (8) — 6 exam + 2 cqa
+    "3:1:1:exam:16",
+    "3:1:1:exam:2",
+    "3:1:1:exam:22",
+    "3:1:1:exam:25",
+    "3:1:1:exam:6",
+    "3:1:1:exam:7",
+    "3:1:4:cqa:8",
+    "3:1:4:cqa:9",
+    # Part2 (7) — 6 exam + 1 cqa
+    "3:2:1:exam:22",
+    "3:2:1:exam:25",
+    "3:2:1:exam:28",
+    "3:2:1:exam:29",
+    "3:2:1:exam:31",
+    "3:2:1:exam:35",
+    "3:2:1:cqa:11",
+    # Part3 (8) — 6 exam + 2 cqa
+    "3:3:1:exam:15",
+    "3:3:1:exam:16",
+    "3:3:1:exam:19",
+    "3:3:1:exam:2",
+    "3:3:1:exam:20",
+    "3:3:1:exam:23",
+    "3:3:1:cqa:16",
+    "3:3:1:cqa:18",
+    # Part4 (7) — 6 exam + 1 cqa · 공동도급
+    "3:4:1:exam:16",
+    "3:4:1:exam:2",
+    "3:4:1:exam:20",
+    "3:4:1:exam:22",
+    "3:4:1:exam:23",
+    "3:4:1:exam:25",
+    "3:4:1:cqa:10",
+]
+
 INTEGRATED_SELECTIONS: dict[int, dict[str, list[str]]] = {
     4: {
         "1": SUBJECT1_ROUND4,
@@ -586,6 +693,11 @@ INTEGRATED_SELECTIONS: dict[int, dict[str, list[str]]] = {
         "1": SUBJECT1_ROUND8,
         "2": SUBJECT2_ROUND8,
         "3": SUBJECT3_ROUND8,
+    },
+    9: {
+        "1": SUBJECT1_ROUND9,
+        "2": SUBJECT2_ROUND9,
+        "3": SUBJECT3_ROUND9,
     },
 }
 
