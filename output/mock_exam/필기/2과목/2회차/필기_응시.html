@@ -184,12 +184,14 @@ const EXAM_DURATION_SEC = 1800;
 
   function createSession(questions, storageKey, durationSec) {
     const duration = durationSec || DURATION_SEC;
+    const deadlineStorageKey = storageKey + '_deadline';
     let current = 0;
     let answers = {};
     let timerSec = duration;
     let timerId = null;
     let choiceFocus = 0;
     let examActive = false;
+    let deadlineMs = null;
 
     function loadAnswers() {
       try {
@@ -204,6 +206,26 @@ const EXAM_DURATION_SEC = 1800;
 
     function clearStoredAnswers() {
       localStorage.removeItem(storageKey);
+    }
+
+    function clearStoredSession() {
+      localStorage.removeItem(storageKey);
+      localStorage.removeItem(deadlineStorageKey);
+    }
+
+    function loadOrCreateDeadline() {
+      try {
+        const stored = Number(localStorage.getItem(deadlineStorageKey));
+        if (Number.isFinite(stored) && stored > 0) {
+          deadlineMs = stored;
+        } else {
+          deadlineMs = Date.now() + duration * 1000;
+          localStorage.setItem(deadlineStorageKey, String(deadlineMs));
+        }
+      } catch (e) {
+        deadlineMs = Date.now() + duration * 1000;
+      }
+      timerSec = Math.max(0, Math.ceil((deadlineMs - Date.now()) / 1000));
     }
 
     function getQuestions() {
@@ -322,6 +344,7 @@ const EXAM_DURATION_SEC = 1800;
     }
 
     function startExam() {
+      loadOrCreateDeadline();
       examActive = true;
     }
 
@@ -342,8 +365,13 @@ const EXAM_DURATION_SEC = 1800;
     }
 
     function startTimer(onTick) {
+      if (timerSec <= 0) {
+        stopExam();
+        onTick(0, true);
+        return;
+      }
       timerId = setInterval(() => {
-        timerSec--;
+        timerSec = Math.max(0, Math.ceil((deadlineMs - Date.now()) / 1000));
         onTick(timerSec);
         if (timerSec <= 0) {
           stopExam();
@@ -360,6 +388,7 @@ const EXAM_DURATION_SEC = 1800;
       loadAnswers,
       saveAnswers,
       clearStoredAnswers,
+      clearStoredSession,
       getQuestions,
       getCurrentIndex,
       getCurrentQuestion,
@@ -397,7 +426,16 @@ const EXAM_DURATION_SEC = 1800;
 /* CBT 응시 — DOM 렌더링·이벤트 (UI 로직) */
 (function (global) {
   function escapeHtml(s) {
-    return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+    return String(s)
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#39;');
+  }
+
+  function formatStem(s) {
+    return escapeHtml(s).replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
   }
 
   function init(session) {
@@ -483,13 +521,13 @@ const EXAM_DURATION_SEC = 1800;
       const selected = session.getAnswer(q.no);
       session.syncChoiceFocusFromAnswer();
 
-      let html = '<div class="q-header"><span class="q-badge">' + q.no + '</span><span class="q-subject">' + session.subjectLabel(q) + '</span></div>';
-      html += '<div class="q-stem">' + q.stem.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>') + '</div>';
+      let html = '<div class="q-header"><span class="q-badge">' + escapeHtml(q.no) + '</span><span class="q-subject">' + escapeHtml(session.subjectLabel(q)) + '</span></div>';
+      html += '<div class="q-stem">' + formatStem(q.stem) + '</div>';
       html += '<div class="choices" id="choices">';
       q.choices.forEach((c, i) => {
         const sel = selected === c.key ? ' selected' : '';
         const foc = i === session.getChoiceFocus() ? ' focused' : '';
-        html += '<label class="choice' + sel + foc + '" data-key="' + c.key + '" data-idx="' + i + '"><span class="num">' + c.label + '</span><span class="text">' + escapeHtml(c.text) + '</span><input type="radio" name="q" value="' + c.key + '"' + (sel ? ' checked' : '') + '></label>';
+        html += '<label class="choice' + sel + foc + '" data-key="' + escapeHtml(c.key) + '" data-idx="' + i + '"><span class="num">' + escapeHtml(c.label) + '</span><span class="text">' + escapeHtml(c.text) + '</span><input type="radio" name="q" value="' + escapeHtml(c.key) + '"' + (sel ? ' checked' : '') + '></label>';
       });
       html += '</div>';
       questionPanel.innerHTML = html;
@@ -600,7 +638,7 @@ const EXAM_DURATION_SEC = 1800;
 
     document.getElementById('btn-restart').addEventListener('click', () => {
       if (confirm('저장된 답안을 지우고 처음부터 다시 시작합니다.')) {
-        session.clearStoredAnswers();
+        session.clearStoredSession();
         location.reload();
       }
     });

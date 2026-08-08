@@ -1,7 +1,16 @@
 /* CBT 응시 — DOM 렌더링·이벤트 (UI 로직) */
 (function (global) {
   function escapeHtml(s) {
-    return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+    return String(s)
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#39;');
+  }
+
+  function formatStem(s) {
+    return escapeHtml(s).replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
   }
 
   function init(session) {
@@ -87,13 +96,13 @@
       const selected = session.getAnswer(q.no);
       session.syncChoiceFocusFromAnswer();
 
-      let html = '<div class="q-header"><span class="q-badge">' + q.no + '</span><span class="q-subject">' + session.subjectLabel(q) + '</span></div>';
-      html += '<div class="q-stem">' + q.stem.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>') + '</div>';
+      let html = '<div class="q-header"><span class="q-badge">' + escapeHtml(q.no) + '</span><span class="q-subject">' + escapeHtml(session.subjectLabel(q)) + '</span></div>';
+      html += '<div class="q-stem">' + formatStem(q.stem) + '</div>';
       html += '<div class="choices" id="choices">';
       q.choices.forEach((c, i) => {
         const sel = selected === c.key ? ' selected' : '';
         const foc = i === session.getChoiceFocus() ? ' focused' : '';
-        html += '<label class="choice' + sel + foc + '" data-key="' + c.key + '" data-idx="' + i + '"><span class="num">' + c.label + '</span><span class="text">' + escapeHtml(c.text) + '</span><input type="radio" name="q" value="' + c.key + '"' + (sel ? ' checked' : '') + '></label>';
+        html += '<label class="choice' + sel + foc + '" data-key="' + escapeHtml(c.key) + '" data-idx="' + i + '"><span class="num">' + escapeHtml(c.label) + '</span><span class="text">' + escapeHtml(c.text) + '</span><input type="radio" name="q" value="' + escapeHtml(c.key) + '"' + (sel ? ' checked' : '') + '></label>';
       });
       html += '</div>';
       questionPanel.innerHTML = html;
@@ -204,7 +213,7 @@
 
     document.getElementById('btn-restart').addEventListener('click', () => {
       if (confirm('저장된 답안을 지우고 처음부터 다시 시작합니다.')) {
-        session.clearStoredAnswers();
+        session.clearStoredSession();
         location.reload();
       }
     });

@@ -16,12 +16,14 @@
 
   function createSession(questions, storageKey, durationSec) {
     const duration = durationSec || DURATION_SEC;
+    const deadlineStorageKey = storageKey + '_deadline';
     let current = 0;
     let answers = {};
     let timerSec = duration;
     let timerId = null;
     let choiceFocus = 0;
     let examActive = false;
+    let deadlineMs = null;
 
     function loadAnswers() {
       try {
@@ -36,6 +38,26 @@
 
     function clearStoredAnswers() {
       localStorage.removeItem(storageKey);
+    }
+
+    function clearStoredSession() {
+      localStorage.removeItem(storageKey);
+      localStorage.removeItem(deadlineStorageKey);
+    }
+
+    function loadOrCreateDeadline() {
+      try {
+        const stored = Number(localStorage.getItem(deadlineStorageKey));
+        if (Number.isFinite(stored) && stored > 0) {
+          deadlineMs = stored;
+        } else {
+          deadlineMs = Date.now() + duration * 1000;
+          localStorage.setItem(deadlineStorageKey, String(deadlineMs));
+        }
+      } catch (e) {
+        deadlineMs = Date.now() + duration * 1000;
+      }
+      timerSec = Math.max(0, Math.ceil((deadlineMs - Date.now()) / 1000));
     }
 
     function getQuestions() {
@@ -154,6 +176,7 @@
     }
 
     function startExam() {
+      loadOrCreateDeadline();
       examActive = true;
     }
 
@@ -174,8 +197,13 @@
     }
 
     function startTimer(onTick) {
+      if (timerSec <= 0) {
+        stopExam();
+        onTick(0, true);
+        return;
+      }
       timerId = setInterval(() => {
-        timerSec--;
+        timerSec = Math.max(0, Math.ceil((deadlineMs - Date.now()) / 1000));
         onTick(timerSec);
         if (timerSec <= 0) {
           stopExam();
@@ -192,6 +220,7 @@
       loadAnswers,
       saveAnswers,
       clearStoredAnswers,
+      clearStoredSession,
       getQuestions,
       getCurrentIndex,
       getCurrentQuestion,

@@ -29,6 +29,13 @@ python3 tools/build_cbt_viewer.py --round K
 python3 tools/publish_cbt_pages.py --round K
 ```
 
+전체 필기 회차와 Pages 배포본 무결성 검사:
+
+```bash
+python3 tools/validate_mock_exam.py
+python3 -m unittest discover -s tests -v
+```
+
 오답 누적: `output/mock_exam/필기/통합/오답노트.md`
 
 ## 과목 단독 (1·2·3과목)

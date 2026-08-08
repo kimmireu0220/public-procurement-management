@@ -14,7 +14,7 @@ TOOLS_DIR = Path(__file__).resolve().parent
 if str(TOOLS_DIR) not in sys.path:
     sys.path.insert(0, str(TOOLS_DIR))
 
-from cbt.builder import load_asset  # noqa: E402
+from cbt.builder import inline_json, load_asset  # noqa: E402
 from cbt.profiles import DOCS, ROOT  # noqa: E402
 
 BANK = {
@@ -89,7 +89,7 @@ def render_study_html(questions: list[dict], title: str, subtitle: str, storage_
     html = html.replace("__SUBTITLE__", subtitle)
     html = html.replace("__QUESTION_COUNT__", str(count))
     html = html.replace("__STORAGE_KEY__", storage_key)
-    html = html.replace("__QUESTIONS_JSON__", json.dumps(questions, ensure_ascii=False))
+    html = html.replace("__QUESTIONS_JSON__", inline_json(questions))
     html = html.replace("__STYLES__", css)
     html = html.replace("__EXAM_JS__", exam_js)
     html = html.replace("__UI_JS__", ui_js)
