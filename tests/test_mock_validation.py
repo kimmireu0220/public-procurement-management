@@ -112,6 +112,16 @@ class MockValidationTest(unittest.TestCase):
             messages = [issue.message for issue in validate_round(path)]
             self.assertTrue(any("stable_id Part와 source Part 불일치" in message for message in messages))
 
+    def test_non_string_stable_id_is_reported_without_crashing(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            path = self.make_round(Path(tmp) / "1회차")
+            manifest = json.loads(path.read_text(encoding="utf-8"))
+            manifest["items"][0]["stable_id"] = {"invalid": True}
+            path.write_text(json.dumps(manifest, ensure_ascii=False), encoding="utf-8")
+            messages = [issue.message for issue in validate_round(path, ROOT)]
+            self.assertIn("stable_id 형식 오류 또는 누락", messages)
+            self.assertIn("stable_id 형식 오류로 source 검증 불가", messages)
+
     def test_manifest_answer_mismatch_is_rejected(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
             directory = Path(tmp) / "1회차"

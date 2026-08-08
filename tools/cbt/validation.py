@@ -123,7 +123,7 @@ def _validate_manifest_profile(
 def _validate_source_parts(
     problem_path: Path,
     sources: list[str],
-    stable_ids: list[str],
+    stable_ids: list[object],
 ) -> list[ValidationIssue]:
     issues: list[ValidationIssue] = []
     for source, stable_id in zip(sources, stable_ids):
@@ -144,11 +144,14 @@ def _validate_source_parts(
 def _validate_source_images(
     problem_path: Path,
     sources: list[str],
-    stable_ids: list[str],
+    stable_ids: list[object],
     root: Path,
 ) -> list[ValidationIssue]:
     issues: list[ValidationIssue] = []
     for source, stable_id in zip(sources, stable_ids):
+        if not isinstance(stable_id, str):
+            issues.append(ValidationIssue(problem_path, "stable_id 형식 오류로 source 검증 불가"))
+            continue
         subject = stable_id.split(":", 1)[0]
         part_match = re.search(r"Part\s+(\d+)/", source)
         if subject not in SUBJECT_SLUGS or not part_match:
