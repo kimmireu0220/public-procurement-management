@@ -11,11 +11,17 @@ from cbt.parser import parse_questions
 
 ANSWER_RE = re.compile(r"^(\d+)\.\s*([①②③④])\s*—", re.MULTILINE)
 SOURCE_RE = re.compile(r"<!--\s*source:\s*([^>]*)-->")
-STABLE_ID_RE = re.compile(r"^[1-4]:\d+:\d+:(?:exam|check|cqa):\d+$")
+STABLE_ID_RE = re.compile(r"^[1-3]:\d+:\d+:(?:exam|check|cqa):\d+$")
 PRACTICAL_ID_RE = re.compile(r"^4:\d+:\d+:(?:essay|final):\d+$")
 PRACTICAL_QUESTION_RE = re.compile(r"^###\s+(\d+)\.\s+", re.MULTILINE)
 PRACTICAL_ANSWER_RE = re.compile(r"^###\s+(\d+)\.\s*$", re.MULTILINE)
 VALID_ANSWERS = {"①", "②", "③", "④"}
+SUBJECT_SLUGS = {
+    "1": "1과목_공공조달의 이해",
+    "2": "2과목_공공조달 계획분석",
+    "3": "3과목_공공계약관리",
+    "4": "4과목_공공조달 관리실무",
+}
 
 
 @dataclass(frozen=True)
@@ -31,7 +37,118 @@ def _read_json(path: Path) -> dict:
     return json.loads(path.read_text(encoding="utf-8"))
 
 
-def validate_round(manifest_path: Path) -> list[ValidationIssue]:
+def _normalize(value: str) -> str:
+    return re.sub(r"\s+", " ", value).strip()
+
+
+def _validate_source_images(
+    problem_path: Path,
+    sources: list[str],
+    stable_ids: list[str],
+    root: Path,
+) -> list[ValidationIssue]:
+    issues: list[ValidationIssue] = []
+    for source, stable_id in zip(sources, stable_ids):
+        subject = stable_id.split(":", 1)[0]
+        part_match = re.search(r"Part\s+(\d+)/", source)
+        if subject not in SUBJECT_SLUGS or not part_match:
+            issues.append(ValidationIssue(problem_path, f"{stable_id}: source Part 형식 오류"))
+            continue
+        part = int(part_match.group(1))
+        range_match = re.search(r"page_(\d+)\.jpg\s*~\s*page_(\d+)\.jpg", source)
+        if range_match:
+            pages = range(int(range_match.group(1)), int(range_match.group(2)) + 1)
+        else:
+            pages = [int(value) for value in re.findall(r"page_(\d+)\.jpg", source)]
+        if not pages:
+            issues.append(ValidationIssue(problem_path, f"{stable_id}: source 페이지 형식 오류"))
+            continue
+        for page in pages:
+            image_path = (
+                root
+                / "sources"
+                / "민간_박문각_수험서_jpg"
+                / SUBJECT_SLUGS[subject]
+                / f"Part {part}"
+                / f"page_{page:04d}.jpg"
+            )
+            if not image_path.is_file():
+                issues.append(ValidationIssue(problem_path, f"{stable_id}: 원본 이미지 누락 {image_path}"))
+    return issues
+
+
+def _validate_written_bank(
+    problem_path: Path,
+    items: list[dict],
+    questions: list[dict],
+) -> list[ValidationIssue]:
+    from subject1.bank import fetch_question as fetch_subject1
+    from subject2.bank import fetch_question as fetch_subject2
+    from subject3.bank import fetch_question as fetch_subject3
+
+    fetchers = {"1": fetch_subject1, "2": fetch_subject2, "3": fetch_subject3}
+    issues: list[ValidationIssue] = []
+    for item, question in zip(items, questions):
+        stable_id = item.get("stable_id")
+        if not isinstance(stable_id, str) or not STABLE_ID_RE.fullmatch(stable_id):
+            continue
+        try:
+            bank_question, bank_answer = fetchers[stable_id[0]](stable_id)
+        except (FileNotFoundError, KeyError, ValueError) as exc:
+            issues.append(ValidationIssue(problem_path, f"{stable_id}: 문제은행 조회 실패: {exc}"))
+            continue
+        choices = [(choice["label"], _normalize(choice["text"])) for choice in question["choices"]]
+        bank_choices = [(label, _normalize(text)) for label, text in bank_question["choices"]]
+        if _normalize(question["stem"]) != _normalize(bank_question["stem"]):
+            issues.append(ValidationIssue(problem_path, f"{stable_id}: 문제은행 지문 불일치"))
+        if choices != bank_choices:
+            issues.append(ValidationIssue(problem_path, f"{stable_id}: 문제은행 선지 불일치"))
+        if item.get("answer") != bank_answer:
+            issues.append(ValidationIssue(problem_path, f"{stable_id}: agent_extract 정답 불일치"))
+    return issues
+
+
+def _validate_practical_bank(problem_path: Path, stable_ids: list[str], root: Path) -> list[ValidationIssue]:
+    issues: list[ValidationIssue] = []
+    blocks = re.split(r"(?m)^###\s+", problem_path.read_text(encoding="utf-8"))[1:]
+    for block, stable_id in zip(blocks, stable_ids):
+        first, *rest = block.splitlines()
+        _, stem = first.split(".", 1)
+        mock_stem = " ".join(
+            line.strip()
+            for line in [stem, *rest]
+            if line.strip() and not line.strip().startswith("<!--")
+        )
+        _, part, chapter, question_type, question_number = stable_id.split(":")
+        bank_path = (
+            root
+            / "output"
+            / "problem_book_final"
+            / SUBJECT_SLUGS["4"]
+            / "문제정답_챕터별"
+            / f"Part{part}_CH{int(chapter):02d}.md"
+        )
+        if not bank_path.is_file():
+            issues.append(ValidationIssue(problem_path, f"{stable_id}: 실기 문제은행 누락"))
+            continue
+        section = "핵심 최종점검" if question_type == "final" else "서술형 출제예상문제"
+        bank_text = bank_path.read_text(encoding="utf-8")
+        if f"## {section}" not in bank_text:
+            issues.append(ValidationIssue(problem_path, f"{stable_id}: 실기 문제은행 섹션 누락"))
+            continue
+        section_text = bank_text.split(f"## {section}", 1)[1]
+        match = re.search(
+            rf"(?ms)^\*\*{question_number}[.]\*\*\s*(.*?)(?=^→)",
+            section_text,
+        )
+        if not match:
+            issues.append(ValidationIssue(problem_path, f"{stable_id}: 실기 문제은행 문항 조회 실패"))
+        elif _normalize(mock_stem) != _normalize(match.group(1)):
+            issues.append(ValidationIssue(problem_path, f"{stable_id}: 실기 문제은행 지문 불일치"))
+    return issues
+
+
+def validate_round(manifest_path: Path, root: Path | None = None) -> list[ValidationIssue]:
     """manifest가 있는 필기 회차 하나를 검증한다."""
 
     issues: list[ValidationIssue] = []
@@ -91,6 +208,10 @@ def validate_round(manifest_path: Path) -> list[ValidationIssue]:
             issues.append(ValidationIssue(problem_path, "source 주석 누락 또는 빈 값"))
         if re.search(r"\(O/X\)", problem_text, re.IGNORECASE):
             issues.append(ValidationIssue(problem_path, "실제 필기에 없는 O/X 문항 포함"))
+        if root is not None and len(questions) == len(items):
+            issues.extend(_validate_written_bank(problem_path, items, questions))
+        if root is not None and len(sources) == len(stable_ids):
+            issues.extend(_validate_source_images(problem_path, sources, stable_ids, root))
 
     if not answer_path.is_file():
         issues.append(ValidationIssue(answer_path, "정답지 누락"))
@@ -161,7 +282,7 @@ def validate_published_docs(root: Path) -> list[ValidationIssue]:
     return issues
 
 
-def validate_practical_round(round_dir: Path) -> list[ValidationIssue]:
+def validate_practical_round(round_dir: Path, root: Path | None = None) -> list[ValidationIssue]:
     """실기 모의 회차의 문제·정답 번호와 추적 주석을 검증한다."""
 
     issues: list[ValidationIssue] = []
@@ -191,6 +312,9 @@ def validate_practical_round(round_dir: Path) -> list[ValidationIssue]:
         issues.append(ValidationIssue(problem_path, "실기 id 주석 누락 또는 형식 오류"))
     if len(ids) != len(set(ids)):
         issues.append(ValidationIssue(problem_path, "실기 회차 내부 id 중복"))
+    if root is not None and len(sources) == len(ids):
+        issues.extend(_validate_source_images(problem_path, sources, ids, root))
+        issues.extend(_validate_practical_bank(problem_path, ids, root))
 
     answer_numbers = [int(number) for number in PRACTICAL_ANSWER_RE.findall(answer_text)]
     if answer_numbers != expected_numbers:
@@ -207,12 +331,12 @@ def validate_all(root: Path) -> tuple[int, int, int, list[ValidationIssue]]:
             item_count += len(_read_json(manifest_path).get("items", []))
         except (OSError, json.JSONDecodeError):
             pass
-        issues.extend(validate_round(manifest_path))
+        issues.extend(validate_round(manifest_path, root))
     practical_rounds = sorted(
         path.parent
         for path in (root / "output" / "mock_exam" / "실기").glob("*회차/실기_모의_문제.md")
     )
     for round_dir in practical_rounds:
-        issues.extend(validate_practical_round(round_dir))
+        issues.extend(validate_practical_round(round_dir, root))
     issues.extend(validate_published_docs(root))
     return len(manifests), item_count, len(practical_rounds), issues
