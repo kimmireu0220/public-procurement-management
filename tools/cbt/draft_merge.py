@@ -68,6 +68,7 @@ def parse_questions(text: str, *, subject: int | None = None) -> list[dict]:
             i += 1
         elif is_question_start(line):
             qm = Q_LINE.match(line)
+            assert qm is not None
             local_no = int(qm.group(1))
             stem = qm.group(2).strip()
             i += 1

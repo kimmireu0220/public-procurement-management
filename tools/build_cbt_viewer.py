@@ -12,7 +12,7 @@ if str(TOOLS_DIR) not in sys.path:
     sys.path.insert(0, str(TOOLS_DIR))
 
 from cbt.builder import build_for_profile  # noqa: E402
-from cbt.profiles import FULL_MOCK, PROFILES, SUBJECT1, SUBJECT2, SUBJECT3  # noqa: E402
+from cbt.profiles import FULL_MOCK, PROFILES, SUBJECT3  # noqa: E402
 
 
 def resolve_profile(args: argparse.Namespace):

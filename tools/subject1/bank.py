@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import re
+from functools import cache
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -23,6 +24,7 @@ def parse_stable_id(sid: str) -> tuple[int, int, str, int]:
     return int(parts[1]), int(parts[2]), parts[3], int(parts[4])
 
 
+@cache
 def load_answer_index(part: int) -> dict[tuple[int, str, int], str]:
     path = EXTRACT_DIR / f"part{part}.md"
     if not path.is_file():
@@ -63,6 +65,7 @@ def load_answer_index(part: int) -> dict[tuple[int, str, int], str]:
     return idx
 
 
+@cache
 def load_questions_index() -> dict[str, dict]:
     text = PROBLEM_MD.read_text(encoding="utf-8")
     lines = text.splitlines()
@@ -88,7 +91,9 @@ def load_questions_index() -> dict[str, dict]:
         line = lines[i]
         if line.startswith("## Part"):
             flush_pending()
-            part = int(re.search(r"Part (\d+)", line).group(1))
+            part_match = re.search(r"Part (\d+)", line)
+            assert part_match is not None
+            part = int(part_match.group(1))
             chapter = 0
             i += 1
             continue

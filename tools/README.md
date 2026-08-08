@@ -15,6 +15,7 @@ tools/
 │   ├── profiles.py                # CbtProfile (full / subject1 / subject2 / subject3)
 │   ├── parser.py
 │   ├── builder.py
+│   ├── validation.py              # 회차·문제은행·HTML·Pages 무결성
 │   └── assets/
 ├── subject1/                      # 1과목 전용 30문항
 ├── subject2/                      # 2과목 전용 20문항
@@ -35,6 +36,10 @@ python3 tools/publish_cbt_pages.py --round K
 python3 tools/validate_mock_exam.py
 python3 -m unittest discover -s tests -v
 ```
+
+검증기는 프로필별 문항 수·과목 순서, 회차 번호, stable ID와 출처 Part,
+문제·정답·manifest, CBT HTML 재현성, 전체 문제은행 정답 조회, Pages 배포본을 함께 확인한다.
+PR과 `main` push에서는 동일 검증과 Ruff·Mypy 정적 검사가 자동 실행된다.
 
 오답 누적: `output/mock_exam/필기/통합/오답노트.md`
 

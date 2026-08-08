@@ -2,8 +2,6 @@
 
 from __future__ import annotations
 
-from pathlib import Path
-
 from cbt.draft_merge import format_question, parse_answer_table, parse_questions, write_outputs
 from cbt.profiles import SUBJECT3
 from subject3.selection import QUESTION_COUNT
