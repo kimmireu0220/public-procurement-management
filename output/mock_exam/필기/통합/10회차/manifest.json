@@ -99,7 +99,7 @@
     },
     {
       "exam_no": 20,
-      "stable_id": "1:5:2:exam:23",
+      "stable_id": "1:5:2:exam:1",
       "answer": "①"
     },
     {
@@ -380,12 +380,12 @@
     {
       "exam_no": 76,
       "stable_id": "3:4:1:exam:11",
-      "answer": "④"
+      "answer": "③"
     },
     {
       "exam_no": 77,
       "stable_id": "3:4:1:exam:12",
-      "answer": "②"
+      "answer": "③"
     },
     {
       "exam_no": 78,
@@ -395,7 +395,7 @@
     {
       "exam_no": 79,
       "stable_id": "3:4:1:exam:14",
-      "answer": "②"
+      "answer": "①"
     },
     {
       "exam_no": 80,

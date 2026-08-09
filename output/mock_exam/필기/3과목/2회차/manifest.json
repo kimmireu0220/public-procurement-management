@@ -130,13 +130,13 @@
     },
     {
       "exam_no": 26,
-      "stable_id": "3:4:1:cqa:20",
+      "stable_id": "3:4:1:cqa:17",
       "answer": "③"
     },
     {
       "exam_no": 27,
       "stable_id": "3:4:2:cqa:3",
-      "answer": "④"
+      "answer": "③"
     },
     {
       "exam_no": 28,
@@ -151,7 +151,7 @@
     {
       "exam_no": 30,
       "stable_id": "3:4:3:exam:1",
-      "answer": "④"
+      "answer": "①"
     }
   ]
 }

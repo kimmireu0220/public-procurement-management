@@ -126,17 +126,17 @@
     {
       "exam_no": 25,
       "stable_id": "3:4:2:exam:7",
-      "answer": "①"
+      "answer": "②"
     },
     {
       "exam_no": 26,
       "stable_id": "3:4:2:exam:23",
-      "answer": "③"
+      "answer": "①"
     },
     {
       "exam_no": 27,
       "stable_id": "3:4:2:exam:24",
-      "answer": "②"
+      "answer": "③"
     },
     {
       "exam_no": 28,
@@ -146,7 +146,7 @@
     {
       "exam_no": 29,
       "stable_id": "3:4:3:exam:28",
-      "answer": "②"
+      "answer": "③"
     },
     {
       "exam_no": 30,

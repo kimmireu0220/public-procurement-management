@@ -345,7 +345,7 @@
     {
       "exam_no": 69,
       "stable_id": "3:4:1:exam:40",
-      "answer": "②"
+      "answer": "③"
     },
     {
       "exam_no": 70,
@@ -360,7 +360,7 @@
     {
       "exam_no": 72,
       "stable_id": "3:4:3:exam:17",
-      "answer": "②"
+      "answer": "④"
     },
     {
       "exam_no": 73,
@@ -370,27 +370,27 @@
     {
       "exam_no": 74,
       "stable_id": "3:4:3:exam:18",
-      "answer": "④"
+      "answer": "①"
     },
     {
       "exam_no": 75,
       "stable_id": "3:4:3:exam:26",
-      "answer": "②"
+      "answer": "③"
     },
     {
       "exam_no": 76,
       "stable_id": "3:4:3:exam:29",
-      "answer": "③"
+      "answer": "④"
     },
     {
       "exam_no": 77,
       "stable_id": "3:4:3:exam:35",
-      "answer": "②"
+      "answer": "③"
     },
     {
       "exam_no": 78,
       "stable_id": "3:4:3:exam:42",
-      "answer": "②"
+      "answer": "①"
     },
     {
       "exam_no": 79,
@@ -400,7 +400,7 @@
     {
       "exam_no": 80,
       "stable_id": "3:4:2:exam:22",
-      "answer": "④"
+      "answer": "②"
     }
   ]
 }

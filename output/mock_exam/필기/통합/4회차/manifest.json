@@ -375,7 +375,7 @@
     {
       "exam_no": 75,
       "stable_id": "3:4:3:exam:41",
-      "answer": "②"
+      "answer": "③"
     },
     {
       "exam_no": 76,
@@ -390,17 +390,17 @@
     {
       "exam_no": 78,
       "stable_id": "3:4:3:exam:13",
-      "answer": "④"
+      "answer": "③"
     },
     {
       "exam_no": 79,
       "stable_id": "3:4:2:exam:30",
-      "answer": "②"
+      "answer": "④"
     },
     {
       "exam_no": 80,
       "stable_id": "3:4:1:exam:37",
-      "answer": "②"
+      "answer": "①"
     }
   ]
 }

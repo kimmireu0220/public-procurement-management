@@ -5,6 +5,8 @@ Check Q&A / 바로 Check 제외.
 | Part | Chapter | 파일 |
 |------|---------|------|
 | 1 | CHAPTER 01 공공조달 입찰참가 준비 | [`Part1_CH01.md`](Part1_CH01.md) |
+| 1 | CHAPTER 02 입찰참가자격 정보 관리 | [`Part1_CH02.md`](Part1_CH02.md) |
+| 1 | CHAPTER 03 경쟁입찰참가자격 신청 | [`Part1_CH03.md`](Part1_CH03.md) |
 | 2 | CHAPTER 01 환경분석 | [`Part2_CH01.md`](Part2_CH01.md) |
 | 2 | CHAPTER 02 조달 수요정보 수집 | [`Part2_CH02.md`](Part2_CH02.md) |
 | 2 | CHAPTER 03 공급계획 수립 | [`Part2_CH03.md`](Part2_CH03.md) |

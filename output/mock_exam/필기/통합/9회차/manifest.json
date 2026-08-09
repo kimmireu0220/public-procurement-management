@@ -370,7 +370,7 @@
     {
       "exam_no": 74,
       "stable_id": "3:4:1:exam:16",
-      "answer": "④"
+      "answer": "①"
     },
     {
       "exam_no": 75,
@@ -385,7 +385,7 @@
     {
       "exam_no": 77,
       "stable_id": "3:4:1:exam:22",
-      "answer": "②"
+      "answer": "①"
     },
     {
       "exam_no": 78,
@@ -395,12 +395,12 @@
     {
       "exam_no": 79,
       "stable_id": "3:4:1:exam:25",
-      "answer": "④"
+      "answer": "③"
     },
     {
       "exam_no": 80,
       "stable_id": "3:4:1:cqa:10",
-      "answer": "④"
+      "answer": "②"
     }
   ]
 }

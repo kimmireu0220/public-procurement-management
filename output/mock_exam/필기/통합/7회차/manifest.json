@@ -375,12 +375,12 @@
     {
       "exam_no": 75,
       "stable_id": "3:4:1:exam:16",
-      "answer": "④"
+      "answer": "①"
     },
     {
       "exam_no": 76,
       "stable_id": "3:4:1:exam:27",
-      "answer": "③"
+      "answer": "②"
     },
     {
       "exam_no": 77,
@@ -390,7 +390,7 @@
     {
       "exam_no": 78,
       "stable_id": "3:4:2:exam:20",
-      "answer": "②"
+      "answer": "④"
     },
     {
       "exam_no": 79,
@@ -400,7 +400,7 @@
     {
       "exam_no": 80,
       "stable_id": "3:4:3:exam:25",
-      "answer": "③"
+      "answer": "①"
     }
   ]
 }

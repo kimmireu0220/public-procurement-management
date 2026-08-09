@@ -115,7 +115,7 @@
     {
       "exam_no": 23,
       "stable_id": "1:6:1:exam:25",
-      "answer": "③"
+      "answer": "④"
     },
     {
       "exam_no": 24,
@@ -310,7 +310,7 @@
     {
       "exam_no": 62,
       "stable_id": "3:4:1:cqa:14",
-      "answer": "①"
+      "answer": "②"
     },
     {
       "exam_no": 63,
@@ -375,12 +375,12 @@
     {
       "exam_no": 75,
       "stable_id": "3:4:1:exam:8",
-      "answer": "④"
+      "answer": "①"
     },
     {
       "exam_no": 76,
       "stable_id": "3:4:2:exam:9",
-      "answer": "②"
+      "answer": "①"
     },
     {
       "exam_no": 77,
@@ -395,7 +395,7 @@
     {
       "exam_no": 79,
       "stable_id": "3:4:2:exam:13",
-      "answer": "②"
+      "answer": "①"
     },
     {
       "exam_no": 80,
