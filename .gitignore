@@ -4,3 +4,6 @@ __pycache__/
 # 모의 출제 작업용 (manifest로 충분 — 커밋 금지)
 **/used_stable_ids.txt
 **/_draft/
+
+# 전수검수 렌더·OCR·일회성 감사 산출물
+tmp/
