@@ -283,6 +283,16 @@ def validate_written_bank_inventory(root: Path) -> list[ValidationIssue]:
 def _validate_practical_bank(problem_path: Path, stable_ids: list[str], root: Path) -> list[ValidationIssue]:
     issues: list[ValidationIssue] = []
     blocks = re.split(r"(?m)^###\s+", problem_path.read_text(encoding="utf-8"))[1:]
+    bank_path = (
+        root
+        / "output"
+        / "problem_book_final"
+        / SUBJECT_SLUGS["4"]
+        / "4과목_문제집.md"
+    )
+    if not bank_path.is_file():
+        return [ValidationIssue(problem_path, "4과목 실기 문제은행 누락")]
+    bank_text = bank_path.read_text(encoding="utf-8")
     for block, stable_id in zip(blocks, stable_ids):
         first, *rest = block.splitlines()
         _, stem = first.split(".", 1)
@@ -292,26 +302,24 @@ def _validate_practical_bank(problem_path: Path, stable_ids: list[str], root: Pa
             if line.strip() and not line.strip().startswith("<!--")
         )
         _, part, chapter, question_type, question_number = stable_id.split(":")
-        bank_path = (
-            root
-            / "output"
-            / "problem_book_final"
-            / SUBJECT_SLUGS["4"]
-            / "문제정답_챕터별"
-            / f"Part{part}_CH{int(chapter):02d}.md"
-        )
-        if not bank_path.is_file():
-            issues.append(ValidationIssue(problem_path, f"{stable_id}: 실기 문제은행 누락"))
-            continue
         section = "핵심 최종점검" if question_type == "final" else "서술형 출제예상문제"
-        bank_text = bank_path.read_text(encoding="utf-8")
-        if f"## {section}" not in bank_text:
+        part_match = re.search(
+            rf"(?ms)^## Part {part} 문제집\s*$.*?(?=^## Part \d+ 문제집\s*$|\Z)",
+            bank_text,
+        )
+        if not part_match:
+            issues.append(ValidationIssue(problem_path, f"{stable_id}: 실기 문제은행 Part 누락"))
+            continue
+        section_match = re.search(
+            rf"(?ms)^### CHAPTER {int(chapter):02d} .*? — {section}\s*$\n(.*?)(?=^### |\Z)",
+            part_match.group(0),
+        )
+        if not section_match:
             issues.append(ValidationIssue(problem_path, f"{stable_id}: 실기 문제은행 섹션 누락"))
             continue
-        section_text = bank_text.split(f"## {section}", 1)[1]
         match = re.search(
-            rf"(?ms)^\*\*{question_number}[.]\*\*\s*(.*?)(?=^→)",
-            section_text,
+            rf"(?ms)^{question_number}[.]\s+(.*?)(?=^<!--\s*source:)",
+            section_match.group(1),
         )
         if not match:
             issues.append(ValidationIssue(problem_path, f"{stable_id}: 실기 문제은행 문항 조회 실패"))
