@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""최신 회차 CBT index.html → docs/ (GitHub Pages). 정답·md 산출물은 복사하지 않음."""
+"""회차별 CBT index.html을 GitHub Pages용 docs/에 배포한다."""
 
 from __future__ import annotations
 
@@ -14,47 +14,48 @@ TOOLS_DIR = Path(__file__).resolve().parent
 if str(TOOLS_DIR) not in sys.path:
     sys.path.insert(0, str(TOOLS_DIR))
 
-from cbt.paths import FULL_MOCK_ROOT  # noqa: E402
-from cbt.profiles import DOCS, FULL_MOCK, PROFILES  # noqa: E402
+from cbt.profiles import CbtProfile, DOCS, PROFILES  # noqa: E402
 
 ROUND_DIR = re.compile(r"^(\d+)회차$")
 
 
-def find_latest_round() -> int:
+def find_latest_round(profile: CbtProfile) -> int:
+    base = profile.round_dir(1).parent
     rounds: list[int] = []
-    if not FULL_MOCK_ROOT.is_dir():
-        raise SystemExit(f"no integrated mock dir: {FULL_MOCK_ROOT}")
-    for p in FULL_MOCK_ROOT.iterdir():
-        if not p.is_dir():
+    if not base.is_dir():
+        raise SystemExit(f"no {profile.id} mock dir: {base}")
+    for path in base.iterdir():
+        match = ROUND_DIR.match(path.name) if path.is_dir() else None
+        if match is None:
             continue
-        m = ROUND_DIR.match(p.name)
-        if m and (p / "index.html").is_file() and (p / "필기_모의_문제.md").is_file():
-            rounds.append(int(m.group(1)))
+        round_no = int(match.group(1))
+        if (path / "index.html").is_file() and profile.problem_md(round_no).is_file():
+            rounds.append(round_no)
     if not rounds:
-        raise SystemExit(f"no mock exam round with CBT under {FULL_MOCK_ROOT}")
+        raise SystemExit(f"no {profile.id} mock round with CBT under {base}")
     return max(rounds)
 
 
-def publish_full(round_no: int | None = None) -> int:
-    k = round_no if round_no is not None else find_latest_round()
-    src = FULL_MOCK.round_dir(k) / "index.html"
-    if not src.is_file():
-        raise SystemExit(f"not found: {src} (run build_cbt_viewer.py --round {k} first)")
+def publish_profile(profile: CbtProfile, round_no: int | None = None) -> int:
+    """CBT를 프로필별 docs 경로에 배포한다."""
 
-    DOCS.mkdir(parents=True, exist_ok=True)
-    shutil.copy2(src, FULL_MOCK.docs_index())
+    selected_round = round_no if round_no is not None else find_latest_round(profile)
+    source = profile.round_dir(selected_round) / "index.html"
+    if not source.is_file():
+        raise SystemExit(
+            f"not found: {source} "
+            f"(run build_cbt_viewer.py --profile {profile.id} --round {selected_round} first)"
+        )
+
+    destination = profile.docs_index()
+    destination.parent.mkdir(parents=True, exist_ok=True)
+    shutil.copy2(source, destination)
     (DOCS / ".nojekyll").touch()
-
-    FULL_MOCK.docs_meta().write_text(
-        json.dumps(FULL_MOCK.publish_meta(k), ensure_ascii=False, indent=2) + "\n",
+    profile.docs_meta().write_text(
+        json.dumps(profile.publish_meta(selected_round), ensure_ascii=False, indent=2) + "\n",
         encoding="utf-8",
     )
-    return k
-
-
-def publish(round_no: int | None = None) -> int:
-    """통합 필기 모의 → docs/index.html"""
-    return publish_full(round_no)
+    return selected_round
 
 
 def main() -> None:
@@ -62,54 +63,15 @@ def main() -> None:
     parser.add_argument("--round", "-r", type=int, default=None, help="회차 (생략 시 최신)")
     parser.add_argument(
         "--profile",
-        choices=tuple(PROFILES.keys()),
+        choices=tuple(PROFILES),
         default="full",
         help="배포 프로필 (기본 full)",
     )
-    parser.add_argument(
-        "--subject3",
-        action="store_true",
-        help="(호환) --profile subject3 와 동일",
-    )
-    parser.add_argument(
-        "--subject1",
-        action="store_true",
-        help="(호환) --profile subject1 와 동일",
-    )
-    parser.add_argument(
-        "--subject2",
-        action="store_true",
-        help="(호환) --profile subject2 와 동일",
-    )
     args = parser.parse_args()
 
-    if args.subject3:
-        profile_id = "subject3"
-    elif args.subject2:
-        profile_id = "subject2"
-    elif args.subject1:
-        profile_id = "subject1"
-    else:
-        profile_id = args.profile
-
-    if profile_id == "subject1":
-        from subject1.publish import publish as publish_subject1  # noqa: E402
-
-        k = publish_subject1(args.round)
-        print(f"GitHub Pages: 1과목 round {k} → docs/1과목/index.html")
-    elif profile_id == "subject2":
-        from subject2.publish import publish as publish_subject2  # noqa: E402
-
-        k = publish_subject2(args.round)
-        print(f"GitHub Pages: 2과목 round {k} → docs/2과목/index.html")
-    elif profile_id == "subject3":
-        from subject3.publish import publish as publish_subject3  # noqa: E402
-
-        k = publish_subject3(args.round)
-        print(f"GitHub Pages: 3과목 round {k} → docs/3과목/index.html")
-    else:
-        k = publish_full(args.round)
-        print(f"GitHub Pages: round {k} → docs/index.html")
+    profile = PROFILES[args.profile]
+    round_no = publish_profile(profile, args.round)
+    print(f"GitHub Pages: {profile.id} round {round_no} → {profile.docs_index()}")
 
 
 if __name__ == "__main__":

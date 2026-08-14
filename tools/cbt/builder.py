@@ -6,10 +6,10 @@ import json
 from pathlib import Path
 
 from cbt.parser import parse_questions
-from cbt.profiles import CbtProfile, FULL_MOCK, SUBJECT3
+from cbt.profiles import CbtProfile
 
 ASSETS = Path(__file__).resolve().parent / "assets"
-OUTPUT_HTML_NAMES = ("index.html", "필기_응시.html", "필기_모의_응시.html")
+OUTPUT_HTML_NAMES = ("index.html",)
 
 
 def load_asset(name: str) -> str:
@@ -73,13 +73,3 @@ def build_for_profile(round_no: int, profile: CbtProfile) -> tuple[Path, int]:
     for name in OUTPUT_HTML_NAMES:
         (out_dir / name).write_text(html, encoding="utf-8")
     return out_dir, len(questions)
-
-
-def build_round(round_no: int) -> tuple[Path, int]:
-    """통합 필기 80문항."""
-    return build_for_profile(round_no, FULL_MOCK)
-
-
-def build_subject3_round(round_no: int) -> tuple[Path, int]:
-    """3과목 전용 30문항."""
-    return build_for_profile(round_no, SUBJECT3)

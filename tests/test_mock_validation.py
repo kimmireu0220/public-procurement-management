@@ -46,7 +46,7 @@ class MockValidationTest(unittest.TestCase):
         }
         manifest_path = directory / "manifest.json"
         manifest_path.write_text(json.dumps(manifest, ensure_ascii=False), encoding="utf-8")
-        for name in ("index.html", "필기_응시.html", "필기_모의_응시.html", "교차검수.md"):
+        for name in OUTPUT_HTML_NAMES:
             (directory / name).write_text("ok", encoding="utf-8")
         return manifest_path
 
@@ -86,7 +86,6 @@ class MockValidationTest(unittest.TestCase):
         html = render_html(parse_questions(problem), 1, FULL_MOCK)
         for name in OUTPUT_HTML_NAMES:
             (directory / name).write_text(html, encoding="utf-8")
-        (directory / "교차검수.md").write_text("ok", encoding="utf-8")
         return manifest_path
 
     def test_unknown_profile_is_rejected(self) -> None:
@@ -156,7 +155,6 @@ class MockValidationTest(unittest.TestCase):
             path = self.make_full_profile_round(Path(tmp))
             (path.parent / "index.html").write_text("stale", encoding="utf-8")
             messages = [issue.message for issue in validate_round(path)]
-            self.assertIn("CBT HTML 3종의 내용이 서로 다름", messages)
             self.assertIn("CBT HTML이 문제지 또는 현재 빌드 자산과 불일치", messages)
 
     def test_all_written_bank_questions_have_answers(self) -> None:

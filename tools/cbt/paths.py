@@ -14,11 +14,6 @@ SUBJECT_ROOTS = {
     3: FIELD_ROOT / "3과목",
 }
 PRACTICAL_ROOT = MOCK_ROOT / "실기"
-WRONG_NOTE = FULL_MOCK_ROOT / "오답노트.md"
-
-
-def subject_wrong_note(subject: int) -> Path:
-    return SUBJECT_ROOTS[subject] / "오답노트.md"
 
 ROUND_SUFFIX = "{round}회차"
 

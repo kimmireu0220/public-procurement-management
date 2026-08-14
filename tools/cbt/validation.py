@@ -193,11 +193,6 @@ def _validate_round_html(
         if not path.is_file():
             issues.append(ValidationIssue(path, "필수 산출물 누락"))
 
-    if len(existing) > 1:
-        first = existing[0].read_bytes()
-        if any(path.read_bytes() != first for path in existing[1:]):
-            issues.append(ValidationIssue(round_dir, "CBT HTML 3종의 내용이 서로 다름"))
-
     if profile is None or round_no is None or not questions:
         return issues
 
@@ -425,10 +420,6 @@ def validate_round(manifest_path: Path, root: Path | None = None) -> list[Valida
         issues.extend(_validate_round_html(round_dir, questions, directory_round, profile))
     else:
         issues.extend(_validate_round_html(round_dir, [], directory_round, profile))
-    review_path = round_dir / "교차검수.md"
-    if not review_path.is_file():
-        issues.append(ValidationIssue(review_path, "필수 산출물 누락"))
-
     by_subject: dict[str, list[str]] = {}
     for sid in stable_ids:
         if isinstance(sid, str) and STABLE_ID_RE.fullmatch(sid):

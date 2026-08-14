@@ -1,47 +1,43 @@
 # 공공조달관리사 학습 저장소
 
-박문각 수험서·조달청 표준교재·Q-Net 자료 기반 **학습·모의시험**용.
+공공조달관리사 필기 1~3과목과 실기 4과목 학습 자료, 문제은행, 모의고사 및 CBT를 관리한다.
 
-## 시험 안내
+## 바로가기
 
-[`docs/시험_안내.md`](docs/시험_안내.md) — 2026 제1회 일정·문항 수·합격 기준  
-문서 목록: [`docs/README.md`](docs/README.md)
+- [통합 필기 CBT](https://kimmireu0220.github.io/public-procurement-management/)
+- [1과목 CBT](https://kimmireu0220.github.io/public-procurement-management/1%EA%B3%BC%EB%AA%A9/)
+- [2과목 CBT](https://kimmireu0220.github.io/public-procurement-management/2%EA%B3%BC%EB%AA%A9/)
+- [3과목 CBT](https://kimmireu0220.github.io/public-procurement-management/3%EA%B3%BC%EB%AA%A9/)
+- [단원별 학습 CBT](https://kimmireu0220.github.io/public-procurement-management/study/)
 
-## 학습 경로
+## 구조
 
-| 단계 | 경로 | 설명 |
-|------|------|------|
-| 1. 이론 | [`docs/학습_프롬프트/`](docs/학습_프롬프트/) | 과목별 Cursor 강의 프롬프트 |
-| 2. 문제 풀이 | `output/problem_book_final/<과목>/〈N〉과목_문제집.html` | 사람 학습용 (정답 없음) |
-| 2b. 출제·선별 | `…/〈N〉과목_문제집.md` | 에이전트·모의 출제용 (html과 동일 내용) |
-| 3. 정답·해설 | `output/agent_extract/<과목>/partN.md` | 정답 섹션 |
-| 4. 모의시험 | [`docs/시험모의/`](docs/시험모의/) · [`output/mock_exam/`](output/mock_exam/README.md) | 통합 필기 80 · 1·2·3과목 단독 · 풀이 · 오답노트 |
+| 경로 | 내용 |
+|---|---|
+| `docs/시험_안내.md` | 시험 형식·일정·합격 기준 |
+| `docs/학습_프롬프트/` | 과목별 이론 학습 자료 |
+| `docs/학습_숫자암기/` | 금액·기한·비율 암기 자료 |
+| `docs/시험모의/` | 모의고사 선별·채점 규칙 |
+| `output/standard_textbook/` | 조달청 표준교재 핵심 정리 |
+| `output/problem_book_final/` | 박문각 문제은행 Markdown |
+| `output/agent_extract/` | 문제은행 정답·해설 |
+| `output/mock_exam/` | 필기·실기 1회차 모의고사 |
+| `output/part_lectures/` | 4과목 강의 대본 |
+| `output/gpt_sovits_audio/` | 4과목 최종 강의 MP3 |
+| `docs/` | GitHub Pages 공개본 |
+| `sources/` | 공식·민간 원본 자료 |
 
-## 원본 자료 (`sources/`)
+## CBT 관리
 
-| 경로 | 용도 |
-|------|------|
-| `민간_박문각_수험서_jpg/` | 수험서 스캔 (주 교재) |
-| `공식_조달청_표준교재_pdf/` | 조달청 표준교재 |
-| `공식_qnet_예제문제/` | Q-Net 예제 |
-| `공식_qnet_시행공고/` | 시행공고 |
+문항은 에이전트가 직접 선별한다. 코드는 확정된 문제지의 HTML 빌드·배포·검증에만 사용한다.
 
-## 문항 수 (3,536)
+```bash
+python3 tools/build_cbt_viewer.py --round 1 --pages
+python3 tools/build_cbt_viewer.py --profile subject1 --round 1 --pages
+python3 tools/build_cbt_viewer.py --profile subject2 --round 1 --pages
+python3 tools/build_cbt_viewer.py --profile subject3 --round 1 --pages
+python3 tools/validate_mock_exam.py
+python3 -m unittest discover -s tests -v
+```
 
-| 과목 | 문항 |
-|------|-----:|
-| 1과목 필기 | 1,050 |
-| 2과목 필기 | 534 |
-| 3과목 필기 | 708 |
-| 4과목 실기 | 1,244 |
-
-원본·파생본·현행 기준의 과목별 전수검수 범위와 교정 이력은
-[`docs/전수검수/README.md`](docs/전수검수/README.md)에서 확인한다.
-
-## 모의고사
-
-- 프롬프트: [`docs/시험모의/`](docs/시험모의/) — [`선별.md`](docs/시험모의/선별.md) · [`풀이.md`](docs/시험모의/풀이.md)
-- **온라인 CBT (통합 80문항):** [GitHub Pages](https://kimmireu0220.github.io/public-procurement-management/) — `python3 tools/build_cbt_viewer.py --round K --pages` → **`main` 커밋·푸시** ([`선별.md` §A-5](docs/시험모의/선별.md))
-- **온라인 CBT (과목 단독):** [1과목](https://kimmireu0220.github.io/public-procurement-management/1%EA%B3%BC%EB%AA%A9/) · [2과목](https://kimmireu0220.github.io/public-procurement-management/2%EA%B3%BC%EB%AA%A9/) · [3과목](https://kimmireu0220.github.io/public-procurement-management/3%EA%B3%BC%EB%AA%A9/) — `build_cbt_viewer.py --profile subject{1,2,3} --round K --pages` → **`main` push** ([`선별.md` §A-6](docs/시험모의/선별.md))
-
-에이전트 역할: [`AGENTS.md`](AGENTS.md)
+각 필기 회차는 문제·정답·manifest·`index.html`만 기본 산출물로 유지한다.
