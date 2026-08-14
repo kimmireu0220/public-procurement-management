@@ -4,6 +4,7 @@ import sys
 import tempfile
 import unittest
 from pathlib import Path
+from typing import cast
 from unittest.mock import patch
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -12,6 +13,7 @@ if str(TOOLS) not in sys.path:
     sys.path.insert(0, str(TOOLS))
 
 import publish_cbt_pages  # noqa: E402
+from cbt.profiles import CbtProfile  # noqa: E402
 from publish_cbt_pages import render_full_round_list  # noqa: E402
 
 
@@ -45,6 +47,7 @@ class PublishCbtPagesTest(unittest.TestCase):
         for round_no in (1, 2, 3):
             self.assertIn(f'href="mock/{round_no}회차/"', rendered)
             self.assertIn(f"필기 모의고사 {round_no}회차", rendered)
+        self.assertIn('href="lecture/"', rendered)
         self.assertEqual(rendered.count(" · 최신"), 1)
 
     def test_publishing_third_round_keeps_all_rounds_selectable(self) -> None:
@@ -61,7 +64,7 @@ class PublishCbtPagesTest(unittest.TestCase):
                 (round_dir / "필기_모의_문제.md").write_text("problem", encoding="utf-8")
 
             with patch.object(publish_cbt_pages, "DOCS", docs_root):
-                selected = publish_cbt_pages.publish_profile(profile, 3)
+                selected = publish_cbt_pages.publish_profile(cast(CbtProfile, profile), 3)
 
             self.assertEqual(selected, 3)
             landing = (docs_root / "index.html").read_text(encoding="utf-8")

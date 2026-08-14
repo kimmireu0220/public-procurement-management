@@ -79,6 +79,7 @@ li {{ margin: .55rem 0; }}
 </ul>
 <h2>다른 학습</h2>
 <ul>
+<li><a href="lecture/"><strong>과목별·Chapter별 이론 강의</strong></a> — 1과목 29개 Chapter 및 총정리</li>
 <li><a href="study/">문제은행 Part별 학습 CBT</a></li>
 <li><a href="1과목/">1과목 전용 모의 CBT</a></li>
 <li><a href="2과목/">2과목 전용 모의 CBT</a></li>
