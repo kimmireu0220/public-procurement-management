@@ -234,7 +234,9 @@ def markdown_to_html(markdown: str) -> str:
                 checked = " checked" if checkbox.group(1).lower() == "x" else ""
                 result.append(f"<li class=\"check-item\"><input type=\"checkbox\" disabled{checked}> {inline_markup(checkbox.group(2))}</li>")
             else:
-                value = (ordered or bullet).group(1)
+                list_match = ordered if ordered is not None else bullet
+                assert list_match is not None
+                value = list_match.group(1)
                 result.append(f"<li>{inline_markup(value)}</li>")
             index += 1
             continue
