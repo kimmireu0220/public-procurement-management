@@ -7,3 +7,10 @@ __pycache__/
 
 # 전수검수 렌더·OCR·일회성 감사 산출물
 tmp/
+
+# GPT-SoVITS 재개 캐시·진단/테스트 산출물 (최종 Part MP3만 Git LFS로 관리)
+output/gpt_sovits_audio/.*_gptsovits_*/
+output/gpt_sovits_audio/*.log
+output/gpt_sovits_audio/Sohee_GPT-SoVITS_MPS_테스트.mp3
+output/gpt_sovits_audio/Sohee_GPT-SoVITS_테스트.mp3
+output/gpt_sovits_audio/cloned_narration.mp3
