@@ -17,6 +17,10 @@ ROOT = Path(__file__).resolve().parents[1]
 SOURCE_DIR = ROOT / "output" / "chapter_lectures"
 OUTPUT_DIR = ROOT / "docs" / "lecture"
 REQUIRED_META = {"subject", "subject_title", "part", "part_title", "chapter", "title"}
+EXPECTED_CHAPTERS = {
+    1: {1: 4, 2: 3, 3: 4, 4: 5, 5: 5, 6: 6, 7: 2},
+    2: {1: 5, 2: 4, 3: 5, 4: 14},
+}
 
 
 @dataclass(frozen=True)
@@ -118,6 +122,18 @@ def validate_lectures(lectures: list[Lecture]) -> None:
         expected = list(range(1, max(chapters) + 1))
         if chapters != expected:
             raise ValueError(f"Chapter 번호가 연속적이지 않습니다: {part_key}: {chapters}")
+
+    for subject, expected_parts in EXPECTED_CHAPTERS.items():
+        actual_parts = {
+            part: len(chapters)
+            for (item_subject, part), chapters in by_part.items()
+            if item_subject == subject
+        }
+        if actual_parts != expected_parts:
+            raise ValueError(
+                f"{subject}과목 Part·Chapter 구성이 다릅니다: "
+                f"expected={expected_parts}, actual={actual_parts}"
+            )
 
 
 def inline_markup(text: str) -> str:
@@ -295,7 +311,10 @@ def sidebar_html(subject_lectures: list[Lecture], current: Lecture) -> str:
     review = next((item for item in subject_lectures if item.is_review), None)
     if review:
         current_class = " class=\"current\"" if review == current else ""
-        chunks.append(f"<h3>총정리</h3><a{current_class} href=\"../../review/total-review/\">1과목 총정리</a>")
+        chunks.append(
+            f"<h3>총정리</h3><a{current_class} href=\"../../review/total-review/\">"
+            f"{current.subject}과목 총정리</a>"
+        )
     chunks.append("</aside>")
     return "".join(chunks)
 
@@ -344,7 +363,13 @@ def render_subject(subject: dict, subject_lectures: list[Lecture]) -> str:
         sections.append(f'<section class="part-section"><h2>Part {part}. {html.escape(items[0].part_title)}</h2>{links}</section>')
     review_card = ""
     if review:
-        review_card = '<a class="card available" href="review/total-review/"><span class="badge">최종 복습</span><h2>1과목 총정리</h2><p>Part 1～7 핵심 개념·숫자·비교를 한 번에 확인합니다.</p></a>'
+        part_count = len(grouped)
+        review_card = (
+            '<a class="card available" href="review/total-review/">'
+            '<span class="badge">최종 복습</span>'
+            f'<h2>{subject["id"]}과목 총정리</h2>'
+            f'<p>Part 1～{part_count} 핵심 개념·숫자·비교를 한 번에 확인합니다.</p></a>'
+        )
     body = f"""<main class="page"><section class="hero"><span class="eyebrow">SUBJECT {subject['id']}</span>
 <h1>{subject['id']}과목 · {html.escape(subject['title'])}</h1><p>{len([x for x in subject_lectures if not x.is_review])}개 Chapter를 수험서 순서대로 학습합니다.</p></section>
 <section class="chapter-list">{''.join(sections)}</section><section class="grid">{review_card}</section><a class="back-link" href="../">← 전체 과목</a></main>"""
@@ -446,6 +471,9 @@ def main() -> int:
         if OUTPUT_DIR.exists():
             shutil.rmtree(OUTPUT_DIR)
         shutil.copytree(generated, OUTPUT_DIR)
+    from site_portal import write_portal
+
+    write_portal()
     print(f"강의 페이지 생성 완료: {meta['total_chapters']}개 Chapter → {OUTPUT_DIR}")
     return 0
 

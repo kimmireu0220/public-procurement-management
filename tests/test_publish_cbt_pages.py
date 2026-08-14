@@ -46,9 +46,17 @@ class PublishCbtPagesTest(unittest.TestCase):
 
         for round_no in (1, 2, 3):
             self.assertIn(f'href="mock/{round_no}회차/"', rendered)
-            self.assertIn(f"필기 모의고사 {round_no}회차", rendered)
-        self.assertIn('href="lecture/"', rendered)
-        self.assertEqual(rendered.count(" · 최신"), 1)
+            self.assertIn(f"<strong>{round_no}회차</strong>", rendered)
+        self.assertIn("공공조달관리사 학습센터", rendered)
+        self.assertIn('href="1과목/"', rendered)
+        self.assertIn('href="study/1과목-part1-exam/"', rendered)
+        self.assertIn('href="lecture/1/part01/chapter01/"', rendered)
+        self.assertIn('href="lecture/1/review/total-review/"', rendered)
+        self.assertIn('href="lecture/2/part01/chapter01/"', rendered)
+        self.assertIn('href="lecture/2/part04/chapter14/"', rendered)
+        self.assertIn('href="lecture/2/review/total-review/"', rendered)
+        self.assertIn("2과목 총정리", rendered)
+        self.assertEqual(rendered.count("<em>최신</em>"), 1)
 
     def test_publishing_third_round_keeps_all_rounds_selectable(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:

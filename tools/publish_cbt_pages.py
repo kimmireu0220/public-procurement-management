@@ -15,6 +15,7 @@ if str(TOOLS_DIR) not in sys.path:
     sys.path.insert(0, str(TOOLS_DIR))
 
 from cbt.profiles import CbtProfile, DOCS, PROFILES  # noqa: E402
+from site_portal import render_portal  # noqa: E402
 
 ROUND_DIR = re.compile(r"^(\d+)회차$")
 
@@ -45,49 +46,9 @@ def full_round_index(round_no: int) -> Path:
 
 
 def render_full_round_list(rounds: list[int]) -> str:
-    """통합 필기 모의고사의 GitHub Pages 회차 선택 화면을 만든다."""
+    """이전 호출부와 호환되는 통합 학습 홈 렌더러."""
 
-    latest = max(rounds)
-    items = "\n".join(
-        f'<li><a href="mock/{round_no}회차/">필기 모의고사 {round_no}회차</a>'
-        f" — 80문항 · 120분{' · 최신' if round_no == latest else ''}</li>"
-        for round_no in rounds
-    )
-    return f"""<!DOCTYPE html>
-<html lang="ko">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>공공조달관리사 필기 모의고사 CBT</title>
-<style>
-body {{ font-family: "Apple SD Gothic Neo", "Malgun Gothic", sans-serif; max-width: 720px; margin: 2rem auto; padding: 0 1rem; line-height: 1.6; color: #1a1a1a; }}
-h1 {{ color: #0f3460; font-size: 1.5rem; }}
-h2 {{ color: #1a4d8f; font-size: 1.15rem; margin-top: 1.75rem; border-bottom: 2px solid #c5d0de; padding-bottom: .35rem; }}
-a {{ color: #1a4d8f; }}
-ul {{ padding-left: 1.25rem; }}
-li {{ margin: .55rem 0; }}
-.note {{ background: #f0f6fc; border-left: 4px solid #1a4d8f; padding: .75rem 1rem; margin: 1rem 0; font-size: .92rem; }}
-</style>
-</head>
-<body>
-<h1>공공조달관리사 필기 모의고사 CBT</h1>
-<p>응시할 회차를 선택하세요. 회차별 답안은 브라우저에 각각 따로 저장됩니다.</p>
-<div class="note">통합 모의고사 · 80문항(1과목 30, 2과목 20, 3과목 30) · 120분</div>
-<h2>회차 선택</h2>
-<ul>
-{items}
-</ul>
-<h2>다른 학습</h2>
-<ul>
-<li><a href="lecture/"><strong>과목별·Chapter별 이론 강의</strong></a> — 1과목 29개 Chapter 및 총정리</li>
-<li><a href="study/">문제은행 Part별 학습 CBT</a></li>
-<li><a href="1과목/">1과목 전용 모의 CBT</a></li>
-<li><a href="2과목/">2과목 전용 모의 CBT</a></li>
-<li><a href="3과목/">3과목 전용 모의 CBT</a></li>
-</ul>
-</body>
-</html>
-"""
+    return render_portal(rounds)
 
 
 def publish_full_profile(profile: CbtProfile, selected_round: int) -> None:
