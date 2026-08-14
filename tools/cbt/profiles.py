@@ -57,7 +57,7 @@ class FullMockProfile(CbtProfile):
         return {
             "round": round_no,
             "source": f"output/{self.source_label(round_no)}",
-            "note": "GitHub Pages 루트 — 최신 회차 필기 통합 모의 CBT (정답 미포함)",
+            "note": "GitHub Pages — 통합 필기 모의 CBT (정답 미포함)",
         }
 
 

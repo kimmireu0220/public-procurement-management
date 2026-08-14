@@ -456,6 +456,27 @@ def validate_published_docs(root: Path) -> list[ValidationIssue]:
         except (OSError, json.JSONDecodeError) as exc:
             issues.append(ValidationIssue(meta_path, f"배포 메타를 읽을 수 없음: {exc}"))
             continue
+        if meta_path == root / "docs" / "cbt-meta.json":
+            rounds = meta.get("rounds")
+            if not isinstance(rounds, list) or not rounds:
+                issues.append(ValidationIssue(meta_path, "통합 모의 배포 회차 목록 누락"))
+                continue
+            landing = root / "docs" / "index.html"
+            if not landing.is_file():
+                issues.append(ValidationIssue(landing, "회차 선택 index.html 누락"))
+            for item in rounds:
+                if not isinstance(item, dict):
+                    issues.append(ValidationIssue(meta_path, "통합 모의 배포 회차 형식 오류"))
+                    continue
+                source = root / str(item.get("source", ""))
+                published = root / "docs" / str(item.get("published", ""))
+                if not source.is_file():
+                    issues.append(ValidationIssue(source, "배포 원본 누락"))
+                if not published.is_file():
+                    issues.append(ValidationIssue(published, "배포 index.html 누락"))
+                if source.is_file() and published.is_file() and source.read_bytes() != published.read_bytes():
+                    issues.append(ValidationIssue(published, f"배포본이 원본 {source}와 다름"))
+            continue
         source = root / str(meta.get("source", ""))
         published = meta_path.parent / "index.html"
         if not source.is_file():

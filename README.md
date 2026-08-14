@@ -40,4 +40,7 @@ python3 tools/validate_mock_exam.py
 python3 -m unittest discover -s tests -v
 ```
 
+통합 모의고사를 `--pages`로 배포하면 빌드된 모든 회차가 `docs/mock/<K>회차/`에
+누적되고, `docs/index.html`에는 응시할 회차를 고르는 목록이 생성된다.
+
 각 필기 회차는 문제·정답·manifest·`index.html`만 기본 산출물로 유지한다.
