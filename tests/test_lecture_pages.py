@@ -38,7 +38,7 @@ class LecturePagesTest(unittest.TestCase):
         self.assertEqual(len(reviews), 3)
         self.assertEqual({lecture.subject for lecture in chapters}, {1, 2, 3, 4})
         self.assertEqual({lecture.subject for lecture in reviews}, {1, 2, 3})
-        self.assertEqual({lecture.subject for lecture in overviews}, {1, 3, 4})
+        self.assertEqual({lecture.subject for lecture in overviews}, {1, 2, 3, 4})
         subject1 = [lecture for lecture in chapters if lecture.subject == 1]
         self.assertEqual(sorted({lecture.part for lecture in subject1}), [1, 2, 3, 4, 5, 6, 7])
         self.assertEqual(
@@ -46,6 +46,7 @@ class LecturePagesTest(unittest.TestCase):
             {1: 4, 2: 3, 3: 4, 4: 5, 5: 5, 6: 6, 7: 2},
         )
         for lecture in subject1:
+            self.assertIn("## 학습목표", lecture.body)
             self.assertIn("## ⑤ 다음 Chapter", lecture.body)
             self.assertNotIn("## ⑤ 확인문제", lecture.body)
             self.assertNotIn("### 문제 ", lecture.body)
@@ -60,6 +61,12 @@ class LecturePagesTest(unittest.TestCase):
             {part: len([item for item in subject2 if item.part == part]) for part in range(1, 5)},
             {1: 5, 2: 4, 3: 5, 4: 14},
         )
+        for lecture in subject2:
+            self.assertIn("## 학습목표", lecture.body)
+            self.assertIn("## ⑤ 다음 Chapter", lecture.body)
+            self.assertNotIn("## ⑤ 확인문제", lecture.body)
+            self.assertNotIn("### 문제 ", lecture.body)
+            self.assertNotIn("### 정답 및 해설", lecture.body)
         subject3 = [lecture for lecture in chapters if lecture.subject == 3]
         self.assertEqual(sorted({lecture.part for lecture in subject3}), [1, 2, 3, 4])
         self.assertEqual(
@@ -67,6 +74,12 @@ class LecturePagesTest(unittest.TestCase):
             {1: 4, 2: 3, 3: 2, 4: 13},
         )
         self.assertEqual({lecture.subject_title for lecture in subject3}, {"공공계약관리"})
+        for lecture in subject3:
+            self.assertIn("## 학습목표", lecture.body)
+            self.assertIn("## ⑤ 다음 Chapter", lecture.body)
+            self.assertNotIn("## ⑤ 확인문제", lecture.body)
+            self.assertNotIn("### 문제 ", lecture.body)
+            self.assertNotIn("### 정답 및 해설", lecture.body)
         subject4 = [lecture for lecture in chapters if lecture.subject == 4]
         self.assertEqual(sorted({lecture.part for lecture in subject4}), [1, 2, 3, 4, 5, 6, 7, 8])
         self.assertEqual(
@@ -74,6 +87,12 @@ class LecturePagesTest(unittest.TestCase):
             {1: 3, 2: 3, 3: 3, 4: 4, 5: 3, 6: 4, 7: 3, 8: 2},
         )
         self.assertEqual({lecture.subject_title for lecture in subject4}, {"공공조달 관리실무"})
+        for lecture in subject4:
+            self.assertIn("## 학습목표", lecture.body)
+            self.assertIn("## ⑤ 다음 Chapter", lecture.body)
+            self.assertNotIn("## ⑤ 확인문제", lecture.body)
+            self.assertNotIn("### 문제 ", lecture.body)
+            self.assertNotIn("### 정답 및 해설", lecture.body)
 
     def test_build_creates_navigation_and_future_subject_cards(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
