@@ -50,6 +50,7 @@ class PublishCbtPagesTest(unittest.TestCase):
         self.assertIn("공공조달관리사 학습센터", rendered)
         self.assertIn('href="1과목/"', rendered)
         self.assertIn('href="study/1과목-part1-exam/"', rendered)
+        self.assertIn('href="lecture/1/overview/"', rendered)
         self.assertIn('href="lecture/1/part01/chapter01/"', rendered)
         self.assertIn('href="lecture/1/review/total-review/"', rendered)
         self.assertIn('href="lecture/2/part01/chapter01/"', rendered)
