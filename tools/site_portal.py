@@ -39,6 +39,7 @@ class LectureLink:
     chapter: int
     title: str
     is_review: bool
+    is_overview: bool
     url: str
 
 
@@ -52,6 +53,7 @@ def lecture_links() -> list[LectureLink]:
             chapter=item.chapter,
             title=item.title,
             is_review=item.is_review,
+            is_overview=item.is_overview,
             url=f"lecture/{item.relative_url}",
         )
         for item in load_lectures()
@@ -109,13 +111,19 @@ def _lecture_groups(links: list[LectureLink]) -> str:
 
     subject_groups: list[str] = []
     for subject, items in sorted(by_subject.items()):
-        chapters = [item for item in items if not item.is_review]
+        chapters = [item for item in items if not item.is_review and not item.is_overview]
         review = next((item for item in items if item.is_review), None)
+        overview = next((item for item in items if item.is_overview), None)
         by_part: dict[int, list[LectureLink]] = defaultdict(list)
         for item in chapters:
             by_part[item.part].append(item)
 
         part_groups: list[str] = []
+        if overview:
+            part_groups.append(
+                f'<a class="review-link" href="{html.escape(overview.url)}">'
+                f'<span>학습 시작</span><strong>{subject}과목 개요 →</strong></a>'
+            )
         for part, part_items in sorted(by_part.items()):
             chapter_links = "".join(
                 f'<a href="{html.escape(item.url)}"><span>Chapter {item.chapter}</span>'

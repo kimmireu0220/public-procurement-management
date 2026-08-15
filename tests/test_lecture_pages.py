@@ -30,13 +30,15 @@ class LinkParser(HTMLParser):
 class LecturePagesTest(unittest.TestCase):
     def test_sources_have_expected_chapter_structure(self) -> None:
         lectures = build_lecture_pages.load_lectures()
-        chapters = [lecture for lecture in lectures if not lecture.is_review]
+        chapters = [lecture for lecture in lectures if lecture.is_chapter]
         reviews = [lecture for lecture in lectures if lecture.is_review]
+        overviews = [lecture for lecture in lectures if lecture.is_overview]
 
         self.assertEqual(len(chapters), 79)
         self.assertEqual(len(reviews), 3)
         self.assertEqual({lecture.subject for lecture in chapters}, {1, 2, 3})
         self.assertEqual({lecture.subject for lecture in reviews}, {1, 2, 3})
+        self.assertEqual({lecture.subject for lecture in overviews}, {3})
         subject2 = [lecture for lecture in chapters if lecture.subject == 2]
         self.assertEqual(sorted({lecture.part for lecture in subject2}), [1, 2, 3, 4])
         self.assertEqual(
@@ -66,6 +68,8 @@ class LecturePagesTest(unittest.TestCase):
             self.assertTrue((destination / "2" / "part04" / "chapter14" / "index.html").is_file())
             self.assertTrue((destination / "2" / "review" / "total-review" / "index.html").is_file())
             self.assertTrue((destination / "3" / "index.html").is_file())
+            overview = destination / "3" / "overview" / "index.html"
+            self.assertTrue(overview.is_file())
             self.assertTrue((destination / "3" / "part01" / "chapter01" / "index.html").is_file())
             last_chapter = destination / "3" / "part04" / "chapter13" / "index.html"
             review = destination / "3" / "review" / "total-review" / "index.html"
@@ -76,6 +80,12 @@ class LecturePagesTest(unittest.TestCase):
             self.assertIn('href="2/"', home)
             self.assertIn('href="3/"', home)
             self.assertEqual(home.count("추가 예정"), 1)
+            subject_home = (destination / "3" / "index.html").read_text(encoding="utf-8")
+            self.assertIn('href="overview/"', subject_home)
+            self.assertIn(
+                'href="../../3/part01/chapter01/"',
+                overview.read_text(encoding="utf-8"),
+            )
             self.assertIn(
                 'href="../../../3/review/total-review/"',
                 last_chapter.read_text(encoding="utf-8"),

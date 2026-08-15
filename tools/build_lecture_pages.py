@@ -41,7 +41,17 @@ class Lecture:
         return self.kind == "review"
 
     @property
+    def is_overview(self) -> bool:
+        return self.kind == "overview"
+
+    @property
+    def is_chapter(self) -> bool:
+        return not self.is_review and not self.is_overview
+
+    @property
     def relative_url(self) -> str:
+        if self.is_overview:
+            return f"{self.subject}/overview/"
         if self.is_review:
             return f"{self.subject}/review/total-review/"
         return f"{self.subject}/part{self.part:02d}/chapter{self.chapter:02d}/"
@@ -108,7 +118,7 @@ def validate_lectures(lectures: list[Lecture]) -> None:
         if lecture.subject in subject_titles and subject_titles[lecture.subject] != lecture.subject_title:
             raise ValueError(f"과목명이 일치하지 않습니다: {lecture.source}")
         subject_titles[lecture.subject] = lecture.subject_title
-        if not lecture.is_review:
+        if lecture.is_chapter:
             part_key = (lecture.subject, lecture.part)
             if part_key in part_titles and part_titles[part_key] != lecture.part_title:
                 raise ValueError(f"Part명이 일치하지 않습니다: {lecture.source}")
@@ -116,7 +126,7 @@ def validate_lectures(lectures: list[Lecture]) -> None:
             by_part.setdefault(part_key, []).append(lecture.chapter)
 
         required_sections = ("## ① 한눈에 보기", "## ② 차근차근 설명", "## ③ 시험 포인트", "## ④ 암기 체크리스트")
-        if not lecture.is_review and any(section not in lecture.body for section in required_sections):
+        if lecture.is_chapter and any(section not in lecture.body for section in required_sections):
             raise ValueError(f"강의 필수 섹션이 없습니다: {lecture.source}")
 
     for part_key, chapters in by_part.items():
@@ -297,23 +307,27 @@ def page_shell(title: str, body: str, asset_prefix: str) -> str:
 """
 
 
-def sidebar_html(subject_lectures: list[Lecture], current: Lecture) -> str:
+def sidebar_html(subject_lectures: list[Lecture], current: Lecture, subject_prefix: str) -> str:
     grouped: dict[int, list[Lecture]] = {}
     for lecture in subject_lectures:
-        if not lecture.is_review:
+        if lecture.is_chapter:
             grouped.setdefault(lecture.part, []).append(lecture)
     chunks = ["<aside class=\"sidebar\"><h2>과목 목차</h2>"]
+    overview = next((item for item in subject_lectures if item.is_overview), None)
+    if overview:
+        current_class = " class=\"current\"" if overview == current else ""
+        chunks.append(f'<a{current_class} href="{subject_prefix}overview/">과목 개요</a>')
     for part, items in sorted(grouped.items()):
         chunks.append(f"<h3>Part {part}. {html.escape(items[0].part_title)}</h3>")
         for item in items:
             current_class = " class=\"current\"" if item == current else ""
-            href = f"../../part{item.part:02d}/chapter{item.chapter:02d}/"
+            href = f"{subject_prefix}part{item.part:02d}/chapter{item.chapter:02d}/"
             chunks.append(f"<a{current_class} href=\"{href}\">Ch {item.chapter}. {html.escape(item.title)}</a>")
     review = next((item for item in subject_lectures if item.is_review), None)
     if review:
         current_class = " class=\"current\"" if review == current else ""
         chunks.append(
-            f"<h3>총정리</h3><a{current_class} href=\"../../review/total-review/\">"
+            f"<h3>총정리</h3><a{current_class} href=\"{subject_prefix}review/total-review/\">"
             f"{current.subject}과목 총정리</a>"
         )
     chunks.append("</aside>")
@@ -323,7 +337,7 @@ def sidebar_html(subject_lectures: list[Lecture], current: Lecture) -> str:
 def render_home(catalog: dict, lectures: list[Lecture]) -> str:
     counts: dict[int, int] = {}
     for lecture in lectures:
-        if not lecture.is_review:
+        if lecture.is_chapter:
             counts[lecture.subject] = counts.get(lecture.subject, 0) + 1
     cards: list[str] = []
     for subject in catalog["subjects"]:
@@ -349,9 +363,12 @@ def render_home(catalog: dict, lectures: list[Lecture]) -> str:
 def render_subject(subject: dict, subject_lectures: list[Lecture]) -> str:
     grouped: dict[int, list[Lecture]] = {}
     review = None
+    overview = None
     for lecture in subject_lectures:
         if lecture.is_review:
             review = lecture
+        elif lecture.is_overview:
+            overview = lecture
         else:
             grouped.setdefault(lecture.part, []).append(lecture)
     sections: list[str] = []
@@ -362,6 +379,14 @@ def render_subject(subject: dict, subject_lectures: list[Lecture]) -> str:
             for item in items
         )
         sections.append(f'<section class="part-section"><h2>Part {part}. {html.escape(items[0].part_title)}</h2>{links}</section>')
+    overview_card = ""
+    if overview:
+        overview_card = (
+            '<a class="card available" href="overview/"><span class="badge">START</span>'
+            f'<h2>{subject["id"]}과목 개요</h2>'
+            '<p>시험 구조와 Part별 학습 지도를 먼저 확인합니다.</p></a>'
+        )
+    overview_section = f'<section class="grid">{overview_card}</section>' if overview_card else ""
     review_card = ""
     if review:
         part_count = len(grouped)
@@ -372,13 +397,20 @@ def render_subject(subject: dict, subject_lectures: list[Lecture]) -> str:
             f'<p>Part 1～{part_count} 핵심 개념·숫자·비교를 한 번에 확인합니다.</p></a>'
         )
     body = f"""<main class="page"><section class="hero"><span class="eyebrow">SUBJECT {subject['id']}</span>
-<h1>{subject['id']}과목 · {html.escape(subject['title'])}</h1><p>{len([x for x in subject_lectures if not x.is_review])}개 Chapter를 수험서 순서대로 학습합니다.</p></section>
-<section class="chapter-list">{''.join(sections)}</section><section class="grid">{review_card}</section><a class="back-link" href="../">← 전체 과목</a></main>"""
+<h1>{subject['id']}과목 · {html.escape(subject['title'])}</h1><p>{len([x for x in subject_lectures if x.is_chapter])}개 Chapter를 수험서 순서대로 학습합니다.</p></section>
+{overview_section}<section class="chapter-list">{''.join(sections)}</section><section class="grid">{review_card}</section><a class="back-link" href="../">← 전체 과목</a></main>"""
     return page_shell(f"{subject['id']}과목", body, "../")
 
 
 def render_lecture(lecture: Lecture, subject_lectures: list[Lecture]) -> str:
-    ordered = sorted(subject_lectures, key=lambda item: (item.part, item.chapter))
+    def lecture_order(item: Lecture) -> tuple[int, int, int]:
+        if item.is_overview:
+            return (0, 0, 0)
+        if item.is_review:
+            return (2, 0, 0)
+        return (1, item.part, item.chapter)
+
+    ordered = sorted(subject_lectures, key=lecture_order)
     position = ordered.index(lecture)
     previous = ordered[position - 1] if position else None
     following = ordered[position + 1] if position + 1 < len(ordered) else None
@@ -386,19 +418,26 @@ def render_lecture(lecture: Lecture, subject_lectures: list[Lecture]) -> str:
     def nav_link(item: Lecture | None, direction: str) -> str:
         if not item:
             return "<span></span>"
-        href = f"../../../{item.relative_url}"
-        label = f"{item.title}" if item.is_review else f"Part {item.part} · Ch {item.chapter} {item.title}"
+        href = f"{root_prefix}{item.relative_url}"
+        label = item.title if not item.is_chapter else f"Part {item.part} · Ch {item.chapter} {item.title}"
         arrow = "← " if direction == "prev" else " →"
         text = f"{arrow}{html.escape(label)}" if direction == "prev" else f"{html.escape(label)}{arrow}"
         return f'<a class="nav-link {direction}" href="{href}">{text}</a>'
 
-    chapter_label = "총정리" if lecture.is_review else f"Part {lecture.part} · Chapter {lecture.chapter}"
+    root_prefix = "../../" if lecture.is_overview else "../../../"
+    subject_prefix = "../" if lecture.is_overview else "../../"
+    if lecture.is_review:
+        chapter_label = "총정리"
+    elif lecture.is_overview:
+        chapter_label = "과목 개요"
+    else:
+        chapter_label = f"Part {lecture.part} · Chapter {lecture.chapter}"
     article = markdown_to_html(lecture.body)
-    body = f"""<main class="page"><div class="subject-layout">{sidebar_html(subject_lectures, lecture)}
-<article class="article"><div class="breadcrumb"><a href="../../../">전체 과목</a> › <a href="../../">{lecture.subject}과목</a> › {html.escape(chapter_label)}</div>
+    body = f"""<main class="page"><div class="subject-layout">{sidebar_html(subject_lectures, lecture, subject_prefix)}
+<article class="article"><div class="breadcrumb"><a href="{root_prefix}">전체 과목</a> › <a href="{subject_prefix}">{lecture.subject}과목</a> › {html.escape(chapter_label)}</div>
 <span class="eyebrow">{html.escape(chapter_label)}</span><h1>{html.escape(lecture.title)}</h1><p class="subtitle">{html.escape(lecture.subject_title)} · {html.escape(lecture.part_title)}</p>
 {article}<nav class="article-nav">{nav_link(previous, 'prev')}{nav_link(following, 'next')}</nav></article></div></main>"""
-    return page_shell(lecture.title, body, "../../../")
+    return page_shell(lecture.title, body, root_prefix)
 
 
 def write_text(path: Path, content: str) -> None:
@@ -427,12 +466,12 @@ def build(destination: Path) -> dict:
             {
                 "id": int(subject["id"]),
                 "title": subject["title"],
-                "chapter_count": len([item for item in lectures if item.subject == int(subject["id"]) and not item.is_review]),
+                "chapter_count": len([item for item in lectures if item.subject == int(subject["id"]) and item.is_chapter]),
                 "published": any(item.subject == int(subject["id"]) for item in lectures),
             }
             for subject in catalog["subjects"]
         ],
-        "total_chapters": len([item for item in lectures if not item.is_review]),
+        "total_chapters": len([item for item in lectures if item.is_chapter]),
     }
     write_text(destination / "lecture-meta.json", json.dumps(meta, ensure_ascii=False, indent=2) + "\n")
     return meta
