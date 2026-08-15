@@ -45,6 +45,15 @@ class LecturePagesTest(unittest.TestCase):
             {part: len([item for item in subject1 if item.part == part]) for part in range(1, 8)},
             {1: 4, 2: 3, 3: 4, 4: 5, 5: 5, 6: 6, 7: 2},
         )
+        for lecture in subject1:
+            self.assertIn("## ⑤ 다음 Chapter", lecture.body)
+            self.assertNotIn("## ⑤ 확인문제", lecture.body)
+            self.assertNotIn("### 문제 ", lecture.body)
+            self.assertNotIn("### 정답 및 해설", lecture.body)
+        subject1_review = next(lecture for lecture in reviews if lecture.subject == 1)
+        self.assertNotIn("## 확인문제", subject1_review.body)
+        self.assertNotIn("### 문제 ", subject1_review.body)
+        self.assertNotIn("### 정답 및 해설", subject1_review.body)
         subject2 = [lecture for lecture in chapters if lecture.subject == 2]
         self.assertEqual(sorted({lecture.part for lecture in subject2}), [1, 2, 3, 4])
         self.assertEqual(
