@@ -20,6 +20,7 @@ REQUIRED_META = {"subject", "subject_title", "part", "part_title", "chapter", "t
 EXPECTED_CHAPTERS = {
     1: {1: 4, 2: 3, 3: 4, 4: 5, 5: 5, 6: 6, 7: 2},
     2: {1: 5, 2: 4, 3: 5, 4: 14},
+    3: {1: 4, 2: 3, 3: 2, 4: 13},
 }
 
 
