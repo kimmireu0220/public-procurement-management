@@ -65,6 +65,7 @@ class PublishCbtPagesTest(unittest.TestCase):
         self.assertIn('href="lecture/4/overview/"', rendered)
         self.assertIn('href="lecture/4/part01/chapter01/"', rendered)
         self.assertIn('href="lecture/4/part04/chapter04/"', rendered)
+        self.assertIn('href="lecture/4/part05/chapter01/"', rendered)
         self.assertIn("4과목 개요", rendered)
         self.assertEqual(rendered.count("<em>최신</em>"), 1)
 
