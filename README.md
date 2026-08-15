@@ -4,6 +4,16 @@
 
 ## 바로가기
 
+### 이론 강의 (104개 Chapter)
+
+- [강의 홈](https://kimmireu0220.github.io/public-procurement-management/lecture/)
+- [1과목 공공조달과 법제도 이해](https://kimmireu0220.github.io/public-procurement-management/lecture/1/) — 29 Chapter
+- [2과목 공공조달계획 수립 및 분석](https://kimmireu0220.github.io/public-procurement-management/lecture/2/) — 28 Chapter
+- [3과목 공공계약관리](https://kimmireu0220.github.io/public-procurement-management/lecture/3/) — 22 Chapter
+- [4과목 공공조달 관리실무](https://kimmireu0220.github.io/public-procurement-management/lecture/4/) — 25 Chapter
+
+### 문제풀이 CBT
+
 - [통합 필기 CBT](https://kimmireu0220.github.io/public-procurement-management/)
 - [1과목 CBT](https://kimmireu0220.github.io/public-procurement-management/1%EA%B3%BC%EB%AA%A9/)
 - [2과목 CBT](https://kimmireu0220.github.io/public-procurement-management/2%EA%B3%BC%EB%AA%A9/)
@@ -22,10 +32,25 @@
 | `output/problem_book_final/` | 박문각 문제은행 Markdown |
 | `output/agent_extract/` | 문제은행 정답·해설 |
 | `output/mock_exam/` | 필기·실기 1회차 모의고사 |
+| `output/chapter_lectures/` | Chapter 강의 원본 (공개본: `docs/lecture/`) |
 | `output/part_lectures/` | 4과목 강의 대본 |
 | `output/gpt_sovits_audio/` | 4과목 최종 강의 MP3 |
 | `docs/` | GitHub Pages 공개본 |
 | `sources/` | 공식·민간 원본 자료 |
+
+## 강의 관리
+
+강의 원본은 `output/chapter_lectures/<과목>/partNN/chapterNN.md`에 두고, 공개본은
+빌드로 생성한다. `docs/lecture/`는 산출물이므로 직접 고치지 않는다.
+
+```bash
+python3 tools/build_lecture_pages.py
+```
+
+각 Chapter는 `학습목표 → ① 한눈에 보기 → ② 차근차근 설명 → ③ 시험 포인트 →
+④ 암기 체크리스트 → ⑤ 다음 Chapter` 순서를 지킨다. 과목마다 `overview.md`와
+`total-review.md`를 두고, 문제·퀴즈는 넣지 않는다. 이 구조는
+`tests/test_lecture_pages.py`가 검사한다.
 
 ## CBT 관리
 

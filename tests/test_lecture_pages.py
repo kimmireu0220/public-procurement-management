@@ -35,9 +35,9 @@ class LecturePagesTest(unittest.TestCase):
         overviews = [lecture for lecture in lectures if lecture.is_overview]
 
         self.assertEqual(len(chapters), 104)
-        self.assertEqual(len(reviews), 3)
+        self.assertEqual(len(reviews), 4)
         self.assertEqual({lecture.subject for lecture in chapters}, {1, 2, 3, 4})
-        self.assertEqual({lecture.subject for lecture in reviews}, {1, 2, 3})
+        self.assertEqual({lecture.subject for lecture in reviews}, {1, 2, 3, 4})
         self.assertEqual({lecture.subject for lecture in overviews}, {1, 2, 3, 4})
         subject1 = [lecture for lecture in chapters if lecture.subject == 1]
         self.assertEqual(sorted({lecture.part for lecture in subject1}), [1, 2, 3, 4, 5, 6, 7])
