@@ -34,7 +34,7 @@ class LecturePagesTest(unittest.TestCase):
         reviews = [lecture for lecture in lectures if lecture.is_review]
         overviews = [lecture for lecture in lectures if lecture.is_overview]
 
-        self.assertEqual(len(chapters), 101)
+        self.assertEqual(len(chapters), 102)
         self.assertEqual(len(reviews), 3)
         self.assertEqual({lecture.subject for lecture in chapters}, {1, 2, 3, 4})
         self.assertEqual({lecture.subject for lecture in reviews}, {1, 2, 3})
@@ -71,7 +71,7 @@ class LecturePagesTest(unittest.TestCase):
         self.assertEqual(sorted({lecture.part for lecture in subject4}), [1, 2, 3, 4, 5, 6, 7])
         self.assertEqual(
             {part: len([item for item in subject4 if item.part == part]) for part in range(1, 8)},
-            {1: 3, 2: 3, 3: 3, 4: 4, 5: 3, 6: 4, 7: 2},
+            {1: 3, 2: 3, 3: 3, 4: 4, 5: 3, 6: 4, 7: 3},
         )
         self.assertEqual({lecture.subject_title for lecture in subject4}, {"공공조달 관리실무"})
 
@@ -80,7 +80,7 @@ class LecturePagesTest(unittest.TestCase):
             destination = Path(tmp) / "lecture"
             meta = build_lecture_pages.build(destination)
 
-            self.assertEqual(meta["total_chapters"], 101)
+            self.assertEqual(meta["total_chapters"], 102)
             self.assertTrue((destination / "1" / "part01" / "chapter01" / "index.html").is_file())
             self.assertTrue((destination / "1" / "review" / "total-review" / "index.html").is_file())
             subject1_overview = destination / "1" / "overview" / "index.html"
@@ -107,7 +107,8 @@ class LecturePagesTest(unittest.TestCase):
             latest_prior_part6_ch3_4 = destination / "4" / "part06" / "chapter03" / "index.html"
             latest_prior_part6_ch4_4 = destination / "4" / "part06" / "chapter04" / "index.html"
             latest_prior_part7_ch1_4 = destination / "4" / "part07" / "chapter01" / "index.html"
-            current4 = destination / "4" / "part07" / "chapter02" / "index.html"
+            latest_prior_part7_ch2_4 = destination / "4" / "part07" / "chapter02" / "index.html"
+            current4 = destination / "4" / "part07" / "chapter03" / "index.html"
             self.assertTrue(overview4.is_file())
             self.assertTrue(first4.is_file())
             self.assertTrue(prior4.is_file())
@@ -119,6 +120,7 @@ class LecturePagesTest(unittest.TestCase):
             self.assertTrue(latest_prior_part6_ch3_4.is_file())
             self.assertTrue(latest_prior_part6_ch4_4.is_file())
             self.assertTrue(latest_prior_part7_ch1_4.is_file())
+            self.assertTrue(latest_prior_part7_ch2_4.is_file())
             self.assertTrue(current4.is_file())
             subject4_home = (destination / "4" / "index.html").read_text(encoding="utf-8")
             self.assertNotIn('<section class="grid"></section>', subject4_home)
