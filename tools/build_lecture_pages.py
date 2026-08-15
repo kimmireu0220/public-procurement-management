@@ -21,7 +21,9 @@ EXPECTED_CHAPTERS = {
     1: {1: 4, 2: 3, 3: 4, 4: 5, 5: 5, 6: 6, 7: 2},
     2: {1: 5, 2: 4, 3: 5, 4: 14},
     3: {1: 4, 2: 3, 3: 2, 4: 13},
+    4: {1: 3, 2: 3, 3: 3, 4: 4, 5: 3, 6: 4, 7: 3, 8: 2},
 }
+ACTIVE_STATUSES = {"published", "in_progress"}
 
 
 @dataclass(frozen=True)
@@ -93,12 +95,20 @@ def parse_front_matter(path: Path) -> Lecture:
 
 
 def load_lectures() -> list[Lecture]:
-    lectures = [
-        parse_front_matter(path)
-        for path in SOURCE_DIR.glob("*/*.md")
-        if path.name != "README.md"
-    ]
-    lectures.extend(parse_front_matter(path) for path in SOURCE_DIR.glob("*/part*/*.md"))
+    catalog = json.loads((SOURCE_DIR / "catalog.json").read_text(encoding="utf-8"))
+    published_slugs = {
+        str(subject["slug"])
+        for subject in catalog["subjects"]
+        if subject.get("status") in ACTIVE_STATUSES
+    }
+    source_paths: list[Path] = []
+    for slug in sorted(published_slugs):
+        subject_dir = SOURCE_DIR / slug
+        source_paths.extend(
+            path for path in subject_dir.glob("*.md") if path.name != "README.md"
+        )
+        source_paths.extend(subject_dir.glob("part*/*.md"))
+    lectures = [parse_front_matter(path) for path in source_paths]
     lectures.sort(key=lambda item: (item.subject, item.part, item.chapter))
     validate_lectures(lectures)
     return lectures
@@ -134,13 +144,34 @@ def validate_lectures(lectures: list[Lecture]) -> None:
         if chapters != expected:
             raise ValueError(f"Chapter 번호가 연속적이지 않습니다: {part_key}: {chapters}")
 
+    catalog = json.loads((SOURCE_DIR / "catalog.json").read_text(encoding="utf-8"))
+    subject_status = {int(item["id"]): str(item.get("status", "planned")) for item in catalog["subjects"]}
     for subject, expected_parts in EXPECTED_CHAPTERS.items():
         actual_parts = {
             part: len(chapters)
             for (item_subject, part), chapters in by_part.items()
             if item_subject == subject
         }
-        if actual_parts != expected_parts:
+        if subject_status.get(subject) == "in_progress":
+            present_parts = sorted(actual_parts)
+            if not present_parts:
+                raise ValueError(f"{subject}과목은 진행 중이지만 공개 Chapter가 없습니다")
+            if present_parts != list(range(1, present_parts[-1] + 1)):
+                raise ValueError(f"{subject}과목 Part가 앞에서부터 연속적이지 않습니다: {actual_parts}")
+            for part in present_parts:
+                actual_count = actual_parts[part]
+                expected_count = expected_parts.get(part)
+                if expected_count is None or not 1 <= actual_count <= expected_count:
+                    raise ValueError(
+                        f"{subject}과목 Part {part} 공개 범위가 잘못되었습니다: "
+                        f"expected<= {expected_count}, actual={actual_count}"
+                    )
+                if part != present_parts[-1] and actual_count != expected_count:
+                    raise ValueError(
+                        f"{subject}과목은 이전 Part를 완료한 뒤 다음 Part를 공개해야 합니다: "
+                        f"Part {part} expected={expected_count}, actual={actual_count}"
+                    )
+        elif subject_status.get(subject) == "published" and actual_parts != expected_parts:
             raise ValueError(
                 f"{subject}과목 Part·Chapter 구성이 다릅니다: "
                 f"expected={expected_parts}, actual={actual_parts}"
@@ -293,7 +324,7 @@ a{color:var(--blue);text-decoration:none}a:hover{text-decoration:underline}.site
 .subject-layout{display:grid;grid-template-columns:280px minmax(0,1fr);gap:1.5rem}.sidebar{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:1rem;align-self:start;position:sticky;top:5.5rem;max-height:calc(100vh - 7rem);overflow:auto}.sidebar h2{font-size:1rem;color:var(--navy);margin:.4rem 0}.sidebar h3{font-size:.87rem;color:var(--muted);margin:1rem 0 .25rem}.sidebar a{display:block;padding:.3rem .45rem;border-radius:6px;font-size:.86rem;color:#344657}.sidebar a:hover,.sidebar a.current{background:var(--sky);color:var(--navy);text-decoration:none}
 .article{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:clamp(1.2rem,4vw,3rem);min-width:0}.breadcrumb{font-size:.84rem;color:var(--muted);margin-bottom:1.2rem}.article h1{font-size:clamp(1.65rem,4vw,2.35rem);line-height:1.25;margin:.2rem 0 .4rem;color:var(--navy)}.subtitle{color:var(--muted);margin-bottom:2rem}.article h2{margin:2.2rem 0 .8rem;padding-bottom:.45rem;border-bottom:2px solid var(--sky);color:var(--navy);font-size:1.35rem}.article h3{color:var(--blue);margin-top:1.7rem}.article p{margin:.8rem 0}.article li{margin:.28rem 0}.article code{background:#eef2f6;padding:.12rem .35rem;border-radius:5px}.article pre{background:#14283b;color:#edf6ff;padding:1rem;border-radius:10px;overflow:auto}.article blockquote{margin:1rem 0;padding:.8rem 1rem;background:#fff8e8;border-left:4px solid var(--accent);color:#4d4331}.article hr{border:0;border-top:1px solid var(--line);margin:2rem 0}.table-wrap{overflow:auto;margin:1rem 0}table{border-collapse:collapse;width:100%;font-size:.92rem}th,td{border:1px solid var(--line);padding:.65rem .75rem;text-align:left;vertical-align:top}th{background:var(--sky);color:var(--navy)}.check-item{list-style:none;margin-left:-1.2rem}.check-item input{margin-right:.35rem}
 .chapter-list{margin-top:1.5rem}.part-section{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:1.2rem 1.35rem;margin:1rem 0}.part-section h2{font-size:1.18rem;color:var(--navy);margin:0 0 .65rem}.chapter-link{display:flex;justify-content:space-between;gap:1rem;padding:.55rem 0;border-top:1px solid #edf1f5}.chapter-link:first-of-type{border-top:0}.chapter-link span:last-child{color:var(--muted);font-size:.82rem}.article-nav{display:grid;grid-template-columns:1fr 1fr;gap:.8rem;margin-top:2.5rem}.nav-link{border:1px solid var(--line);border-radius:10px;padding:.8rem 1rem}.nav-link.next{text-align:right}.footer{text-align:center;color:var(--muted);font-size:.82rem;padding:1.5rem}.back-link{display:inline-block;margin-top:1.25rem}
-@media(max-width:820px){.subject-layout{grid-template-columns:1fr}.sidebar{position:static;max-height:none}.header-note{display:none}.page{padding:1rem .75rem 3rem}.hero{padding:1.4rem}.article{padding:1.2rem}.article-nav{grid-template-columns:1fr}.nav-link.next{text-align:left}}
+@media(max-width:820px){.subject-layout{grid-template-columns:1fr}.sidebar{position:static;max-height:18rem;overflow:auto}.header-note{display:none}.page{padding:1rem .75rem 3rem}.hero{padding:1.4rem}.article{padding:1.2rem}.article-nav{grid-template-columns:1fr}.nav-link.next{text-align:left}}
 """.strip()
 
 
@@ -344,10 +375,13 @@ def render_home(catalog: dict, lectures: list[Lecture]) -> str:
         subject_id = int(subject["id"])
         count = counts.get(subject_id, 0)
         if count:
+            in_progress = subject.get("status") == "in_progress"
+            badge = "강의 추가 중" if in_progress else "강의 공개"
+            description = f"{count}개 Chapter · 순차 공개 중" if in_progress else f"{count}개 Chapter와 과목 총정리"
             cards.append(
-                f'<a class="card available" href="{subject_id}/"><span class="badge">강의 공개</span>'
+                f'<a class="card available" href="{subject_id}/"><span class="badge">{badge}</span>'
                 f'<h2>{subject_id}과목</h2><h3>{html.escape(subject["title"])}</h3>'
-                f'<p>{count}개 Chapter와 과목 총정리</p></a>'
+                f'<p>{description}</p></a>'
             )
         else:
             cards.append(
@@ -396,9 +430,10 @@ def render_subject(subject: dict, subject_lectures: list[Lecture]) -> str:
             f'<h2>{subject["id"]}과목 총정리</h2>'
             f'<p>Part 1～{part_count} 핵심 개념·숫자·비교를 한 번에 확인합니다.</p></a>'
         )
+    review_section = f'<section class="grid">{review_card}</section>' if review_card else ""
     body = f"""<main class="page"><section class="hero"><span class="eyebrow">SUBJECT {subject['id']}</span>
 <h1>{subject['id']}과목 · {html.escape(subject['title'])}</h1><p>{len([x for x in subject_lectures if x.is_chapter])}개 Chapter를 수험서 순서대로 학습합니다.</p></section>
-{overview_section}<section class="chapter-list">{''.join(sections)}</section><section class="grid">{review_card}</section><a class="back-link" href="../">← 전체 과목</a></main>"""
+{overview_section}<section class="chapter-list">{''.join(sections)}</section>{review_section}<a class="back-link" href="../">← 전체 과목</a></main>"""
     return page_shell(f"{subject['id']}과목", body, "../")
 
 
@@ -415,6 +450,9 @@ def render_lecture(lecture: Lecture, subject_lectures: list[Lecture]) -> str:
     previous = ordered[position - 1] if position else None
     following = ordered[position + 1] if position + 1 < len(ordered) else None
 
+    root_prefix = "../../" if lecture.is_overview else "../../../"
+    subject_prefix = "../" if lecture.is_overview else "../../"
+
     def nav_link(item: Lecture | None, direction: str) -> str:
         if not item:
             return "<span></span>"
@@ -424,8 +462,6 @@ def render_lecture(lecture: Lecture, subject_lectures: list[Lecture]) -> str:
         text = f"{arrow}{html.escape(label)}" if direction == "prev" else f"{html.escape(label)}{arrow}"
         return f'<a class="nav-link {direction}" href="{href}">{text}</a>'
 
-    root_prefix = "../../" if lecture.is_overview else "../../../"
-    subject_prefix = "../" if lecture.is_overview else "../../"
     if lecture.is_review:
         chapter_label = "총정리"
     elif lecture.is_overview:

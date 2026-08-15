@@ -34,11 +34,11 @@ class LecturePagesTest(unittest.TestCase):
         reviews = [lecture for lecture in lectures if lecture.is_review]
         overviews = [lecture for lecture in lectures if lecture.is_overview]
 
-        self.assertEqual(len(chapters), 79)
+        self.assertEqual(len(chapters), 92)
         self.assertEqual(len(reviews), 3)
-        self.assertEqual({lecture.subject for lecture in chapters}, {1, 2, 3})
+        self.assertEqual({lecture.subject for lecture in chapters}, {1, 2, 3, 4})
         self.assertEqual({lecture.subject for lecture in reviews}, {1, 2, 3})
-        self.assertEqual({lecture.subject for lecture in overviews}, {1, 3})
+        self.assertEqual({lecture.subject for lecture in overviews}, {1, 3, 4})
         subject1 = [lecture for lecture in chapters if lecture.subject == 1]
         self.assertEqual(sorted({lecture.part for lecture in subject1}), [1, 2, 3, 4, 5, 6, 7])
         self.assertEqual(
@@ -58,16 +58,20 @@ class LecturePagesTest(unittest.TestCase):
             {1: 4, 2: 3, 3: 2, 4: 13},
         )
         self.assertEqual({lecture.subject_title for lecture in subject3}, {"공공계약관리"})
-        subject3_review = next(lecture for lecture in reviews if lecture.subject == 3)
-        self.assertEqual(subject3_review.kind, "review")
-        self.assertEqual(subject3_review.title, "3과목 총정리")
+        subject4 = [lecture for lecture in chapters if lecture.subject == 4]
+        self.assertEqual(sorted({lecture.part for lecture in subject4}), [1, 2, 3, 4])
+        self.assertEqual(
+            {part: len([item for item in subject4 if item.part == part]) for part in range(1, 5)},
+            {1: 3, 2: 3, 3: 3, 4: 4},
+        )
+        self.assertEqual({lecture.subject_title for lecture in subject4}, {"공공조달 관리실무"})
 
     def test_build_creates_navigation_and_future_subject_cards(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
             destination = Path(tmp) / "lecture"
             meta = build_lecture_pages.build(destination)
 
-            self.assertEqual(meta["total_chapters"], 79)
+            self.assertEqual(meta["total_chapters"], 92)
             self.assertTrue((destination / "1" / "part01" / "chapter01" / "index.html").is_file())
             self.assertTrue((destination / "1" / "review" / "total-review" / "index.html").is_file())
             subject1_overview = destination / "1" / "overview" / "index.html"
@@ -83,11 +87,22 @@ class LecturePagesTest(unittest.TestCase):
             review = destination / "3" / "review" / "total-review" / "index.html"
             self.assertTrue(last_chapter.is_file())
             self.assertTrue(review.is_file())
+            overview4 = destination / "4" / "overview" / "index.html"
+            first4 = destination / "4" / "part01" / "chapter01" / "index.html"
+            current4 = destination / "4" / "part04" / "chapter04" / "index.html"
+            self.assertTrue(overview4.is_file())
+            self.assertTrue(first4.is_file())
+            self.assertTrue(current4.is_file())
+            subject4_home = (destination / "4" / "index.html").read_text(encoding="utf-8")
+            self.assertNotIn('<section class="grid"></section>', subject4_home)
+            style = (destination / "assets" / "style.css").read_text(encoding="utf-8")
+            self.assertIn("max-height:18rem", style)
             home = (destination / "index.html").read_text(encoding="utf-8")
             self.assertIn('href="1/"', home)
             self.assertIn('href="2/"', home)
             self.assertIn('href="3/"', home)
-            self.assertEqual(home.count("추가 예정"), 1)
+            self.assertIn('href="4/"', home)
+            self.assertEqual(home.count("추가 예정"), 0)
             subject_home = (destination / "3" / "index.html").read_text(encoding="utf-8")
             self.assertIn('href="overview/"', subject_home)
             subject1_home = (destination / "1" / "index.html").read_text(encoding="utf-8")
@@ -108,6 +123,10 @@ class LecturePagesTest(unittest.TestCase):
                 'href="../../../3/part04/chapter13/"',
                 review.read_text(encoding="utf-8"),
             )
+            overview_html = overview4.read_text(encoding="utf-8")
+            self.assertIn('href="../../assets/style.css"', overview_html)
+            self.assertIn('href="../part01/chapter01/"', overview_html)
+            self.assertIn('href="../../4/part01/chapter01/"', overview_html)
 
     def test_all_generated_internal_links_resolve(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:

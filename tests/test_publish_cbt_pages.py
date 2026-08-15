@@ -62,6 +62,10 @@ class PublishCbtPagesTest(unittest.TestCase):
         self.assertIn('href="lecture/3/part04/chapter13/"', rendered)
         self.assertIn('href="lecture/3/review/total-review/"', rendered)
         self.assertIn("3과목 총정리", rendered)
+        self.assertIn('href="lecture/4/overview/"', rendered)
+        self.assertIn('href="lecture/4/part01/chapter01/"', rendered)
+        self.assertIn('href="lecture/4/part04/chapter04/"', rendered)
+        self.assertIn("4과목 개요", rendered)
         self.assertEqual(rendered.count("<em>최신</em>"), 1)
 
     def test_publishing_third_round_keeps_all_rounds_selectable(self) -> None:
