@@ -316,26 +316,44 @@ def markdown_to_html(markdown: str) -> str:
 
 
 STYLE = """
-:root{--navy:#12375b;--blue:#2563a5;--sky:#eaf3fb;--paper:#fff;--ink:#17212b;--muted:#647383;--line:#d6e0e9;--accent:#f2a93b;--shell:1500px}
+:root{--navy:#12375b;--blue:#2563a5;--sky:#eaf3fb;--paper:#fff;--ink:#17212b;--muted:#647383;--line:#d6e0e9;--accent:#f2a93b;--gutter:clamp(.75rem,3vw,3.5rem);--toc:clamp(230px,19vw,340px)}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#f5f7fa;color:var(--ink);font-family:"Pretendard","Apple SD Gothic Neo","Malgun Gothic",sans-serif;line-height:1.72}
-a{color:var(--blue);text-decoration:none}a:hover{text-decoration:underline}.site-header{background:linear-gradient(135deg,var(--navy),#245f98);color:#fff;padding:1rem 1.25rem;position:sticky;top:0;z-index:5;box-shadow:0 2px 12px #12375b30}.header-inner{max-width:var(--shell);margin:auto;display:flex;align-items:center;justify-content:space-between;gap:1rem}.brand{font-weight:800;color:#fff}.brand:hover{text-decoration:none}.header-note{font-size:.86rem;opacity:.82}
-.page{max-width:var(--shell);margin:0 auto;padding:2rem 1.25rem 4rem}.hero{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:2.2rem;box-shadow:0 10px 30px #12375b10}.eyebrow{color:var(--blue);font-size:.88rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase}.hero h1{font-size:clamp(1.8rem,4vw,2.7rem);line-height:1.2;margin:.35rem 0 .75rem}.hero p{color:var(--muted);margin:0;max-width:760px}
+a{color:var(--blue);text-decoration:none}a:hover{text-decoration:underline}.site-header{background:linear-gradient(135deg,var(--navy),#245f98);color:#fff;padding:1rem var(--gutter);position:sticky;top:0;z-index:5;box-shadow:0 2px 12px #12375b30}.header-inner{margin:auto;display:flex;align-items:center;justify-content:space-between;gap:1rem}.brand{font-weight:800;color:#fff}.brand:hover{text-decoration:none}.header-note{font-size:.86rem;opacity:.82}
+.page{margin:0 auto;padding:2rem var(--gutter) 4rem}.hero{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:2.2rem;box-shadow:0 10px 30px #12375b10}.eyebrow{color:var(--blue);font-size:.88rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase}.hero h1{font-size:clamp(1.8rem,4vw,2.7rem);line-height:1.2;margin:.35rem 0 .75rem}.hero p{color:var(--muted);margin:0;max-width:760px}
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem;margin-top:1.5rem}.card{display:block;background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:1.25rem;color:var(--ink);box-shadow:0 4px 16px #12375b0b}.card.available:hover{border-color:var(--blue);transform:translateY(-2px);text-decoration:none}.card h2,.card h3{margin:.2rem 0 .45rem;color:var(--navy)}.card p{margin:0;color:var(--muted);font-size:.92rem}.badge{display:inline-block;border-radius:999px;padding:.2rem .6rem;background:var(--sky);color:var(--blue);font-size:.75rem;font-weight:800}.badge.pending{background:#f0f1f3;color:#737b84}
-.subject-layout{display:grid;grid-template-columns:280px minmax(0,1fr);gap:1.5rem}.sidebar{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:1rem;align-self:start;position:sticky;top:5.5rem;max-height:calc(100vh - 7rem);overflow:auto}.sidebar h2{font-size:1rem;color:var(--navy);margin:.4rem 0}.sidebar h3{font-size:.87rem;color:var(--muted);margin:1rem 0 .25rem}.sidebar a{display:block;padding:.3rem .45rem;border-radius:6px;font-size:.86rem;color:#344657}.sidebar a:hover,.sidebar a.current{background:var(--sky);color:var(--navy);text-decoration:none}
-.article{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:clamp(1.2rem,4vw,3rem);min-width:0}.breadcrumb{font-size:.84rem;color:var(--muted);margin-bottom:1.2rem}.article h1{font-size:clamp(1.65rem,4vw,2.35rem);line-height:1.25;margin:.2rem 0 .4rem;color:var(--navy)}.subtitle{color:var(--muted);margin-bottom:2rem}.article h2{margin:2.2rem 0 .8rem;padding-bottom:.45rem;border-bottom:2px solid var(--sky);color:var(--navy);font-size:1.35rem}.article h3{color:var(--blue);margin-top:1.7rem}.article p{margin:.8rem 0}.article li{margin:.28rem 0}.article code{background:#eef2f6;padding:.12rem .35rem;border-radius:5px}.article pre{background:#14283b;color:#edf6ff;padding:1rem;border-radius:10px;overflow:auto}.article blockquote{margin:1rem 0;padding:.8rem 1rem;background:#fff8e8;border-left:4px solid var(--accent);color:#4d4331}.article hr{border:0;border-top:1px solid var(--line);margin:2rem 0}.table-wrap{overflow:auto;margin:1rem 0}table{border-collapse:collapse;width:100%;font-size:.92rem}th,td{border:1px solid var(--line);padding:.65rem .75rem;text-align:left;vertical-align:top}th{background:var(--sky);color:var(--navy)}.check-item{list-style:none;margin-left:-1.2rem}.check-item input{margin-right:.35rem}
+.subject-layout{display:grid;grid-template-columns:var(--toc) minmax(0,1fr);gap:clamp(1rem,1.6vw,2rem)}.sidebar{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:1rem;align-self:start;position:sticky;top:5.5rem;max-height:calc(100vh - 7rem);overflow:auto}.sidebar h2{font-size:1rem;color:var(--navy);margin:.4rem 0}.sidebar h3{font-size:.87rem;color:var(--muted);margin:1rem 0 .25rem}.sidebar a{display:block;padding:.3rem .45rem;border-radius:6px;font-size:.86rem;color:#344657}.sidebar a:hover,.sidebar a.current{background:var(--sky);color:var(--navy);text-decoration:none}
+.article{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:clamp(1.2rem,2.6vw,3rem);min-width:0}.toc-toggle{display:inline-flex;align-items:center;gap:.4rem;margin-bottom:1rem;padding:.35rem .75rem;border:1px solid var(--line);border-radius:8px;background:var(--paper);color:var(--muted);font:inherit;font-size:.82rem;font-weight:700;cursor:pointer}.toc-toggle:hover{border-color:var(--blue);color:var(--blue)}.toc-toggle .toc-show{display:none}
+html.nav-collapsed .sidebar{display:none}html.nav-collapsed .subject-layout{grid-template-columns:minmax(0,1fr)}html.nav-collapsed .toc-toggle .toc-hide{display:none}html.nav-collapsed .toc-toggle .toc-show{display:inline}.breadcrumb{font-size:.84rem;color:var(--muted);margin-bottom:1.2rem}.article h1{font-size:clamp(1.65rem,4vw,2.35rem);line-height:1.25;margin:.2rem 0 .4rem;color:var(--navy)}.subtitle{color:var(--muted);margin-bottom:2rem}.article h2{margin:2.2rem 0 .8rem;padding-bottom:.45rem;border-bottom:2px solid var(--sky);color:var(--navy);font-size:1.35rem}.article h3{color:var(--blue);margin-top:1.7rem}.article p{margin:.8rem 0}.article li{margin:.28rem 0}.article code{background:#eef2f6;padding:.12rem .35rem;border-radius:5px}.article pre{background:#14283b;color:#edf6ff;padding:1rem;border-radius:10px;overflow:auto}.article blockquote{margin:1rem 0;padding:.8rem 1rem;background:#fff8e8;border-left:4px solid var(--accent);color:#4d4331}.article hr{border:0;border-top:1px solid var(--line);margin:2rem 0}.table-wrap{overflow:auto;margin:1rem 0}table{border-collapse:collapse;width:100%;font-size:.92rem}th,td{border:1px solid var(--line);padding:.65rem .75rem;text-align:left;vertical-align:top}th{background:var(--sky);color:var(--navy)}.check-item{list-style:none;margin-left:-1.2rem}.check-item input{margin-right:.35rem}
 .chapter-list{margin-top:1.5rem}.part-section{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:1.2rem 1.35rem;margin:1rem 0}.part-section h2{font-size:1.18rem;color:var(--navy);margin:0 0 .65rem}.chapter-link{display:flex;justify-content:space-between;gap:1rem;padding:.55rem 0;border-top:1px solid #edf1f5}.chapter-link:first-of-type{border-top:0}.chapter-link span:last-child{color:var(--muted);font-size:.82rem}.article-nav{display:grid;grid-template-columns:1fr 1fr;gap:.8rem;margin-top:2.5rem}.nav-link{border:1px solid var(--line);border-radius:10px;padding:.8rem 1rem}.nav-link.next{text-align:right}.footer{text-align:center;color:var(--muted);font-size:.82rem;padding:1.5rem}.back-link{display:inline-block;margin-top:1.25rem}
-@media(min-width:1400px){.subject-layout{grid-template-columns:300px minmax(0,1fr);gap:2rem}}
 @media(max-width:820px){.subject-layout{grid-template-columns:1fr}.sidebar{position:static;max-height:18rem;overflow:auto}.header-note{display:none}.page{padding:1rem .75rem 3rem}.hero{padding:1.4rem}.article{padding:1.2rem}.article-nav{grid-template-columns:1fr}.nav-link.next{text-align:left}}
 """.strip()
+
+
+TOC_STORAGE_KEY = "lectureTocCollapsed"
+
+# 헤드에서 먼저 실행해 접힌 상태로 들어올 때 목차가 잠깐 보였다 사라지는 깜빡임을 막는다.
+TOC_INIT_SCRIPT = (
+    "try{if(localStorage.getItem('%s')==='1')"
+    "document.documentElement.classList.add('nav-collapsed')}catch(e){}" % TOC_STORAGE_KEY
+)
+
+TOC_TOGGLE_SCRIPT = (
+    "(function(){var b=document.querySelector('.toc-toggle');if(!b)return;var r=document.documentElement;"
+    "function sync(){b.setAttribute('aria-expanded',r.classList.contains('nav-collapsed')?'false':'true')}"
+    "b.addEventListener('click',function(){var c=r.classList.toggle('nav-collapsed');"
+    "try{localStorage.setItem('%s',c?'1':'0')}catch(e){}sync()});sync()})();" % TOC_STORAGE_KEY
+)
 
 
 def page_shell(title: str, body: str, asset_prefix: str) -> str:
     return f"""<!doctype html>
 <html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{html.escape(title)} · 공공조달관리사 Chapter 강의</title>
-<link rel="stylesheet" href="{asset_prefix}assets/style.css"></head>
+<link rel="stylesheet" href="{asset_prefix}assets/style.css">
+<script>{TOC_INIT_SCRIPT}</script></head>
 <body><header class="site-header"><div class="header-inner"><a class="brand" href="{asset_prefix}">공공조달관리사 Chapter 강의</a><span class="header-note">이론 · 시험 포인트 · 암기 체크</span></div></header>
-{body}<footer class="footer">박문각 수험서·조달청 표준교재 기반 학습자료</footer></body></html>
+{body}<footer class="footer">박문각 수험서·조달청 표준교재 기반 학습자료</footer>
+<script>{TOC_TOGGLE_SCRIPT}</script></body></html>
 """
 
 
@@ -344,7 +362,7 @@ def sidebar_html(subject_lectures: list[Lecture], current: Lecture, subject_pref
     for lecture in subject_lectures:
         if lecture.is_chapter:
             grouped.setdefault(lecture.part, []).append(lecture)
-    chunks = ["<aside class=\"sidebar\"><h2>과목 목차</h2>"]
+    chunks = ["<aside class=\"sidebar\" id=\"subject-toc\"><h2>과목 목차</h2>"]
     overview = next((item for item in subject_lectures if item.is_overview), None)
     if overview:
         current_class = " class=\"current\"" if overview == current else ""
@@ -471,7 +489,8 @@ def render_lecture(lecture: Lecture, subject_lectures: list[Lecture]) -> str:
         chapter_label = f"Part {lecture.part} · Chapter {lecture.chapter}"
     article = markdown_to_html(lecture.body)
     body = f"""<main class="page"><div class="subject-layout">{sidebar_html(subject_lectures, lecture, subject_prefix)}
-<article class="article"><div class="breadcrumb"><a href="{root_prefix}">전체 과목</a> › <a href="{subject_prefix}">{lecture.subject}과목</a> › {html.escape(chapter_label)}</div>
+<article class="article"><button class="toc-toggle" type="button" aria-controls="subject-toc" aria-expanded="true"><span class="toc-hide">◀ 목차 접기</span><span class="toc-show">☰ 목차 펼치기</span></button>
+<div class="breadcrumb"><a href="{root_prefix}">전체 과목</a> › <a href="{subject_prefix}">{lecture.subject}과목</a> › {html.escape(chapter_label)}</div>
 <span class="eyebrow">{html.escape(chapter_label)}</span><h1>{html.escape(lecture.title)}</h1><p class="subtitle">{html.escape(lecture.subject_title)} · {html.escape(lecture.part_title)}</p>
 {article}<nav class="article-nav">{nav_link(previous, 'prev')}{nav_link(following, 'next')}</nav></article></div></main>"""
     return page_shell(lecture.title, body, root_prefix)
