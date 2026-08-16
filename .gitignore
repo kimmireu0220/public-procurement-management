@@ -12,3 +12,8 @@ output/gpt_sovits_audio/*.log
 output/gpt_sovits_audio/*_gptsovits_*/
 output/gpt_sovits_audio/*테스트*.mp3
 output/gpt_sovits_audio/cloned_narration.mp3
+
+# 배포·재배포 권한이 확인되지 않은 민간 교재 스캔은 로컬에서만 보관
+sources/민간_박문각_수험서_jpg/**
+!sources/민간_박문각_수험서_jpg/README.md
+!sources/민간_박문각_수험서_jpg/inventory.json

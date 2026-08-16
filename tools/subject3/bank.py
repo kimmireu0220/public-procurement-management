@@ -6,15 +6,19 @@ import re
 from functools import cache
 from pathlib import Path
 
+from question_bank import QuestionBankParserConfig, parse_question_index
+
 ROOT = Path(__file__).resolve().parents[2]
 PROBLEM_MD = ROOT / "output/problem_book_final/3과목_공공계약관리/3과목_문제집.md"
 EXTRACT_DIR = ROOT / "output/agent_extract/3과목_공공계약관리"
 
-CHOICE_RE = re.compile(r"^\s*([①②③④])\s+(.+)$")
-Q_LINE = re.compile(r"^(\d+)\.\s+(.+)$")
-SOURCE_RE = re.compile(r"<!--\s*source:\s*([^>]+?)\s*-->")
 ANS_LINE = re.compile(r"^(\d+)\.\s+([①②③④OX]+)\s*[—–-]")
 CHAPTER_HDR = re.compile(r"^#+\s*(?:CHAPTER|Chapter)\s+(\d+)", re.I)
+QUESTION_PARSER = QuestionBankParserConfig(
+    subject=3,
+    chapter_header=CHAPTER_HDR,
+    check_type="cqa",
+)
 
 
 def parse_stable_id(sid: str) -> tuple[int, int, str, int]:
@@ -67,82 +71,7 @@ def load_answer_index(part: int) -> dict[tuple[int, str, int], str]:
 
 @cache
 def load_questions_index() -> dict[str, dict]:
-    text = PROBLEM_MD.read_text(encoding="utf-8")
-    lines = text.splitlines()
-    part = 0
-    chapter = 0
-    stype = "exam"
-    out: dict[str, dict] = {}
-    i = 0
-    while i < len(lines):
-        line = lines[i]
-        if line.startswith("## Part"):
-            part_match = re.search(r"Part (\d+)", line)
-            assert part_match is not None
-            part = int(part_match.group(1))
-            chapter = 0
-            i += 1
-            continue
-        ch = CHAPTER_HDR.match(line)
-        if ch:
-            chapter = int(ch.group(1))
-            if "Check Q&A" in line:
-                stype = "cqa"
-            elif "단원별 출제예상" in line:
-                stype = "exam"
-            elif re.search(r"최종점검\s*OX|OX\s*퀴즈", line, re.I):
-                stype = "ox"
-            i += 1
-            continue
-        if "Check Q&A" in line:
-            stype = "cqa"
-            i += 1
-            continue
-        if "단원별 출제예상" in line:
-            stype = "exam"
-            i += 1
-            continue
-        if re.search(r"최종점검\s*OX|OX\s*퀴즈", line, re.I) and line.startswith("#"):
-            stype = "ox"
-            i += 1
-            continue
-        qm = Q_LINE.match(line.strip())
-        if qm and "(O/X)" in line:
-            i += 1
-            continue
-        if not qm or stype == "ox":
-            i += 1
-            continue
-        qn = int(qm.group(1))
-        stem = qm.group(2).strip()
-        if re.match(r"^[①②③④]", stem):
-            i += 1
-            continue
-        choices: list[tuple[str, str]] = []
-        source = ""
-        j = i + 1
-        while j < len(lines):
-            ln = lines[j]
-            if Q_LINE.match(ln.strip()) or ln.startswith("###") or ln.startswith("##"):
-                break
-            if ln.strip() == "---":
-                break
-            sm = SOURCE_RE.search(ln)
-            if sm:
-                source = sm.group(1).strip()
-            cm = CHOICE_RE.match(ln)
-            if cm:
-                choices.append((cm.group(1), cm.group(2).strip()))
-            j += 1
-        if len(choices) >= 4 and source:
-            sid = f"3:{part}:{chapter}:{stype}:{qn}"
-            out[sid] = {
-                "stem": stem,
-                "choices": choices[:4],
-                "source": source,
-            }
-        i = j
-    return out
+    return parse_question_index(PROBLEM_MD.read_text(encoding="utf-8"), QUESTION_PARSER)
 
 
 def fetch_question(sid: str) -> tuple[dict, str]:

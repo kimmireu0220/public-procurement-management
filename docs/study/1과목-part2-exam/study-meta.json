@@ -3,6 +3,7 @@
   "subject": 1,
   "part": 2,
   "stype": "exam",
-  "source": "output/problem_book_final",
+  "total": 71,
+  "source": "output/problem_book_final/1과목_공공조달의 이해/1과목_문제집.md",
   "note": "GitHub Pages — 문제은행 학습 CBT (정답 미포함)"
 }

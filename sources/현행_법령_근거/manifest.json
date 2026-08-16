@@ -1,0 +1,220 @@
+{
+  "schema_version": 1,
+  "retrieved_at": "2026-08-16",
+  "provider": {
+    "name": "국가법령정보센터",
+    "base_url": "https://www.law.go.kr/"
+  },
+  "sources": [
+    {
+      "id": "state_contract_act",
+      "title": "국가를 당사자로 하는 계약에 관한 법률",
+      "effective_date": "2026-06-11",
+      "version": "법률 제21418호",
+      "category": "법령",
+      "source_url": "https://www.law.go.kr/LSW/lsInfoP.do?lsiSeq=283877&chrClsCd=010202&urlMode=lsInfoP&efYd=20260611&ancYnChk=0",
+      "snapshot": "snapshots/state_contract_act.html",
+      "sha256": "646f669839d9cb1d1ffa3a278dfd000a7222a778c8291fabbe795c60343d9643"
+    },
+    {
+      "id": "state_contract_decree",
+      "title": "국가를 당사자로 하는 계약에 관한 법률 시행령",
+      "effective_date": "2026-06-03",
+      "version": "대통령령 제36338호",
+      "category": "법령",
+      "source_url": "https://www.law.go.kr/LSW/lsInfoP.do?lsiSeq=285893&chrClsCd=010202&urlMode=lsInfoP&efYd=20260603&ancYnChk=0",
+      "snapshot": "snapshots/state_contract_decree.html",
+      "sha256": "f7dcf1cf20d7373805aa35a471072cbaa853236e899a1ed700d2e638470032cc"
+    },
+    {
+      "id": "state_contract_rule",
+      "title": "국가를 당사자로 하는 계약에 관한 법률 시행규칙",
+      "effective_date": "2026-01-02",
+      "version": "재정경제부령 제1호",
+      "category": "법령",
+      "source_url": "https://www.law.go.kr/LSW/lsInfoP.do?lsiSeq=282607&chrClsCd=010202&urlMode=lsInfoP&efYd=20260102&ancYnChk=0",
+      "snapshot": "snapshots/state_contract_rule.html",
+      "sha256": "52aeb3cd1cce1920944ffeab4390cd9d05679186d0f3aa635b43bbefb07fd84e"
+    },
+    {
+      "id": "local_contract_act",
+      "title": "지방자치단체를 당사자로 하는 계약에 관한 법률",
+      "effective_date": "2024-02-17",
+      "version": "법률 제19634호",
+      "category": "법령",
+      "source_url": "https://www.law.go.kr/LSW/lsInfoP.do?lsiSeq=253973&chrClsCd=010202&urlMode=lsInfoP&efYd=20240217&ancYnChk=0",
+      "snapshot": "snapshots/local_contract_act.html",
+      "sha256": "4efc3e8dc9b5ce9b2b6b99e5d6f469633b01218cc6c2db7dc49fbb4ea98127ae"
+    },
+    {
+      "id": "local_contract_decree",
+      "title": "지방자치단체를 당사자로 하는 계약에 관한 법률 시행령",
+      "effective_date": "2026-06-03",
+      "version": "대통령령 제36338호",
+      "category": "법령",
+      "source_url": "https://www.law.go.kr/LSW/lsInfoP.do?lsiSeq=286149&chrClsCd=010202&urlMode=lsInfoP&efYd=20260603&ancYnChk=0",
+      "snapshot": "snapshots/local_contract_decree.html",
+      "sha256": "e10686b6cb5698c621cc42873c98a30b8b67774e2cc4635e38fa6fbd52f533b3"
+    },
+    {
+      "id": "local_contract_rule",
+      "title": "지방자치단체를 당사자로 하는 계약에 관한 법률 시행규칙",
+      "effective_date": "2026-07-01",
+      "version": "행정안전부령 제625호",
+      "category": "법령",
+      "source_url": "https://www.law.go.kr/LSW/lsInfoP.do?lsiSeq=287365&chrClsCd=010202&urlMode=lsInfoP&efYd=20260701&ancYnChk=0",
+      "snapshot": "snapshots/local_contract_rule.html",
+      "sha256": "dc90210df4b1743b4b6621b51631f70d78a6e7ce0348d7f90e0d9a3db915953b"
+    },
+    {
+      "id": "public_enterprise_contract_rule",
+      "title": "공기업ㆍ준정부기관 계약사무규칙",
+      "effective_date": "2026-04-20",
+      "version": "재정경제부령 제28호",
+      "category": "법령",
+      "source_url": "https://www.law.go.kr/LSW/lsInfoP.do?lsiSeq=285569&chrClsCd=010202&urlMode=lsInfoP&efYd=20260420&ancYnChk=0",
+      "snapshot": "snapshots/public_enterprise_contract_rule.html",
+      "sha256": "4cc345f2fc1dfc30935dfed3174bddad067f76a4b4d3f0ec52629cbc96a86741"
+    },
+    {
+      "id": "civil_act",
+      "title": "민법",
+      "effective_date": "2026-03-17",
+      "version": "법률 제21454호",
+      "category": "법령",
+      "source_url": "https://www.law.go.kr/LSW/lsInfoP.do?lsiSeq=284415&chrClsCd=010202&urlMode=lsInfoP&efYd=20260317&ancYnChk=0",
+      "snapshot": "snapshots/civil_act.html",
+      "sha256": "57407af2249bb1a3724b07e6af522417b4faa5f673816ce498c888e1333b94b7"
+    },
+    {
+      "id": "procurement_business_act",
+      "title": "조달사업에 관한 법률",
+      "effective_date": "2026-01-02",
+      "version": "법률 제21065호",
+      "category": "법령",
+      "source_url": "https://www.law.go.kr/LSW/lsInfoP.do?lsiSeq=277155&chrClsCd=010202&urlMode=lsInfoP&efYd=20260102&ancYnChk=0",
+      "snapshot": "snapshots/procurement_business_act.html",
+      "sha256": "135e996e3ac06aa6428388c61cc4af51f2373ea9228d67aa96c3f703927fa960"
+    },
+    {
+      "id": "procurement_business_decree",
+      "title": "조달사업에 관한 법률 시행령",
+      "effective_date": "2026-01-02",
+      "version": "대통령령 제35947호",
+      "category": "법령",
+      "source_url": "https://www.law.go.kr/LSW/lsInfoP.do?lsiSeq=280891&chrClsCd=010202&urlMode=lsInfoP&efYd=20260102&ancYnChk=0",
+      "snapshot": "snapshots/procurement_business_decree.html",
+      "sha256": "73f695389d1f569199eda3d6df95a51e3c7cb7d254851353e26b538ad536fcc3"
+    },
+    {
+      "id": "fair_subcontract_act",
+      "title": "하도급거래 공정화에 관한 법률",
+      "effective_date": "2026-08-11",
+      "version": "법률 제21340호",
+      "category": "법령",
+      "source_url": "https://www.law.go.kr/LSW/lsInfoP.do?lsiSeq=283169&chrClsCd=010202&urlMode=lsInfoP&efYd=20260811&ancYnChk=0",
+      "snapshot": "snapshots/fair_subcontract_act.html",
+      "sha256": "7a6c9d3e7e2d84bebbe2e255af0b8fcc5fa9ced9c7e67096588c86f679829ca3"
+    },
+    {
+      "id": "disability_enterprise_act",
+      "title": "장애인기업활동 촉진법",
+      "effective_date": "2026-06-03",
+      "version": "법률 제21195호",
+      "category": "법령",
+      "source_url": "https://www.law.go.kr/LSW/lsInfoP.do?lsiSeq=280145&chrClsCd=010202&urlMode=lsInfoP&efYd=20260603&ancYnChk=0",
+      "snapshot": "snapshots/disability_enterprise_act.html",
+      "sha256": "fe16ecab509656f89da336951a827210805c71631d55ebd66094c7c71f52b9bb"
+    },
+    {
+      "id": "sme_market_support_act",
+      "title": "중소기업제품 구매촉진 및 판로지원에 관한 법률",
+      "effective_date": "2026-07-01",
+      "version": "법률 제21447호",
+      "category": "법령",
+      "source_url": "https://www.law.go.kr/LSW/lsInfoP.do?lsiSeq=284097&chrClsCd=010202&urlMode=lsInfoP&efYd=20260701&ancYnChk=0",
+      "snapshot": "snapshots/sme_market_support_act.html",
+      "sha256": "2ab360be92dc74ee34344f92c284a653f1b050da1b3bb2f527811f6273f442cb"
+    },
+    {
+      "id": "government_contract_execution",
+      "title": "(계약예규) 정부 입찰·계약 집행기준",
+      "effective_date": "2026-04-30",
+      "version": "재정경제부계약예규 제148호",
+      "category": "행정규칙",
+      "source_url": "https://www.law.go.kr/LSW/admRulLsInfoP.do?admRulId=34470&efYd=0",
+      "snapshot": "snapshots/government_contract_execution.html",
+      "sha256": "e5fcf647c6b2c22bb5d3cda27977d502abbe0837714fc5a0e3dce01b300d918d"
+    },
+    {
+      "id": "excellent_procurement_goods",
+      "title": "우수조달물품 지정·관리 규정",
+      "effective_date": "2026-04-27",
+      "version": "조달청고시 제2026-29호",
+      "category": "행정규칙",
+      "source_url": "https://www.law.go.kr/LSW/admRulLsInfoP.do?admRulId=33169&efYd=0",
+      "snapshot": "snapshots/excellent_procurement_goods.html",
+      "sha256": "30bc910b3419949c9e95abc0823e2bb9faddf3dd7df2c73bde4039f2a80b95a2"
+    },
+    {
+      "id": "quality_assured_goods",
+      "title": "품질보증조달물품 지정 및 관리규정",
+      "effective_date": "2026-07-01",
+      "version": "조달청고시 제2026-35호",
+      "category": "행정규칙",
+      "source_url": "https://www.law.go.kr/LSW/admRulLsInfoP.do?admRulId=39644&efYd=0",
+      "snapshot": "snapshots/quality_assured_goods.html",
+      "sha256": "4d54c168512da46c03244f504246cc0be1c9aa33d917b88008002a30c2406235"
+    },
+    {
+      "id": "goods_mas",
+      "title": "물품 다수공급자계약 업무처리규정",
+      "effective_date": "2026-07-21",
+      "version": "조달청훈령 제2400호",
+      "category": "행정규칙",
+      "source_url": "https://www.law.go.kr/LSW/admRulLsInfoP.do?admRulId=65191&efYd=0",
+      "snapshot": "snapshots/goods_mas.html",
+      "sha256": "2aaa994a888fb64aac5aaf784247d9088d164dbae5ce2501a31d7ba9baebd4a8"
+    },
+    {
+      "id": "service_mas",
+      "title": "용역 다수공급자계약 업무처리규정",
+      "effective_date": "2026-07-21",
+      "version": "조달청고시 제2026-40호",
+      "category": "행정규칙",
+      "source_url": "https://www.law.go.kr/LSW/admRulLsInfoP.do?admRulId=70301&efYd=0",
+      "snapshot": "snapshots/service_mas.html",
+      "sha256": "3d7530a21c5aed5d3594d327efccd6b0a4b5b4f216bbc9149bb05489799110db"
+    },
+    {
+      "id": "service_catalog",
+      "title": "용역 카탈로그 계약 업무처리규정",
+      "effective_date": "2026-07-21",
+      "version": "조달청고시 제2026-41호",
+      "category": "행정규칙",
+      "source_url": "https://www.law.go.kr/LSW/admRulLsInfoP.do?admRulId=74127&efYd=0",
+      "snapshot": "snapshots/service_catalog.html",
+      "sha256": "42d8908d98c82d3276845ac74beb43f3f5de3eb7a7e1db37989a657f0e094858"
+    },
+    {
+      "id": "proposal_evaluation",
+      "title": "조달청 협상에 의한 계약 제안서평가 세부기준",
+      "effective_date": "2026-01-26",
+      "version": "조달청지침 제379호",
+      "category": "행정규칙",
+      "source_url": "https://www.law.go.kr/LSW/admRulLsInfoP.do?admRulId=2040266&efYd=0",
+      "snapshot": "snapshots/proposal_evaluation.html",
+      "sha256": "00b932969516a6f108801d6f93cfc6ca9d3f12f1610087e9675b97d71db14c25"
+    },
+    {
+      "id": "bidder_registration",
+      "title": "국가종합전자조달시스템 입찰참가자격등록규정",
+      "effective_date": "2026-01-23",
+      "version": "조달청고시 제2026-6호",
+      "category": "행정규칙",
+      "source_url": "https://www.law.go.kr/LSW/admRulLsInfoP.do?admRulSeq=2100000274756",
+      "snapshot": "snapshots/bidder_registration.html",
+      "sha256": "25740cf0125fdbbcc6d5adee08e0954e32e32f85b6d0c39fa9f9648c87bb167f"
+    }
+  ]
+}

@@ -6,15 +6,20 @@ import re
 from functools import cache
 from pathlib import Path
 
+from question_bank import QuestionBankParserConfig, parse_question_index
+
 ROOT = Path(__file__).resolve().parents[2]
 PROBLEM_MD = ROOT / "output/problem_book_final/1과목_공공조달의 이해/1과목_문제집.md"
 EXTRACT_DIR = ROOT / "output/agent_extract/1과목_공공조달의 이해"
 
-CHOICE_RE = re.compile(r"^\s*([①②③④])\s+(.+)$")
-Q_LINE = re.compile(r"^(\d+)\.\s+(.+)$")
-SOURCE_RE = re.compile(r"<!--\s*source:\s*([^>]+?)\s*-->")
 ANS_LINE = re.compile(r"^(\d+)\.\s+([①②③④OX]+)\s*[—–-]")
 CHAPTER_HDR = re.compile(r"^#+\s*(?:CHAPTER|Chapter)\s+(\d+)", re.I)
+QUESTION_PARSER = QuestionBankParserConfig(
+    subject=1,
+    chapter_header=CHAPTER_HDR,
+    check_type="check",
+    share_trailing_source=True,
+)
 
 
 def parse_stable_id(sid: str) -> tuple[int, int, str, int]:
@@ -67,109 +72,7 @@ def load_answer_index(part: int) -> dict[tuple[int, str, int], str]:
 
 @cache
 def load_questions_index() -> dict[str, dict]:
-    text = PROBLEM_MD.read_text(encoding="utf-8")
-    lines = text.splitlines()
-    part = 0
-    chapter = 0
-    stype = "exam"
-    out: dict[str, dict] = {}
-    pending: list[tuple[str, dict]] = []
-    i = 0
-
-    def flush_pending(source: str = "") -> None:
-        nonlocal pending
-        if not pending:
-            return
-        for psid, pdata in pending:
-            if source:
-                pdata["source"] = source
-            if pdata.get("source"):
-                out[psid] = pdata
-        pending = []
-
-    while i < len(lines):
-        line = lines[i]
-        if line.startswith("## Part"):
-            flush_pending()
-            part_match = re.search(r"Part (\d+)", line)
-            assert part_match is not None
-            part = int(part_match.group(1))
-            chapter = 0
-            i += 1
-            continue
-        if line.startswith("###"):
-            flush_pending()
-        ch = CHAPTER_HDR.match(line)
-        if ch:
-            chapter = int(ch.group(1))
-            if "Check Q&A" in line:
-                stype = "check"
-            elif "단원별 출제예상" in line:
-                stype = "exam"
-            elif re.search(r"최종점검\s*OX|OX\s*퀴즈", line, re.I):
-                stype = "ox"
-            i += 1
-            continue
-        if "Check Q&A" in line:
-            stype = "check"
-            i += 1
-            continue
-        if "단원별 출제예상" in line:
-            stype = "exam"
-            i += 1
-            continue
-        if re.search(r"최종점검\s*OX|OX\s*퀴즈", line, re.I) and line.startswith("#"):
-            stype = "ox"
-            i += 1
-            continue
-        sm = SOURCE_RE.search(line)
-        if sm and pending:
-            flush_pending(sm.group(1).strip())
-            i += 1
-            continue
-        qm = Q_LINE.match(line.strip())
-        if qm and "(O/X)" in line:
-            i += 1
-            continue
-        if not qm or stype == "ox":
-            i += 1
-            continue
-        qn = int(qm.group(1))
-        stem = qm.group(2).strip()
-        if re.match(r"^[①②③④]", stem):
-            i += 1
-            continue
-        choices: list[tuple[str, str]] = []
-        source = ""
-        j = i + 1
-        while j < len(lines):
-            ln = lines[j]
-            if Q_LINE.match(ln.strip()) or ln.startswith("###") or ln.startswith("##"):
-                break
-            if ln.strip() == "---":
-                break
-            sm = SOURCE_RE.search(ln)
-            if sm:
-                source = sm.group(1).strip()
-            cm = CHOICE_RE.match(ln)
-            if cm:
-                choices.append((cm.group(1), cm.group(2).strip()))
-            j += 1
-        if len(choices) >= 4:
-            sid = f"1:{part}:{chapter}:{stype}:{qn}"
-            item = {
-                "stem": stem,
-                "choices": choices[:4],
-                "source": source,
-            }
-            if source:
-                flush_pending(source)
-                out[sid] = item
-            else:
-                pending.append((sid, item))
-        i = j
-    flush_pending()
-    return out
+    return parse_question_index(PROBLEM_MD.read_text(encoding="utf-8"), QUESTION_PARSER)
 
 
 def fetch_question(sid: str) -> tuple[dict, str]:

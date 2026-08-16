@@ -10,6 +10,8 @@ from pathlib import Path
 from cbt.builder import OUTPUT_HTML_NAMES, render_html
 from cbt.parser import parse_questions
 from cbt.profiles import CbtProfile, FULL_MOCK, SUBJECT1, SUBJECT2, SUBJECT3
+from private_source_inventory import SourceInventoryError, load_inventory
+from question_bank import QuestionBankParseError
 
 ANSWER_RE = re.compile(r"^(\d+)\.\s*([①②③④])\s*—", re.MULTILINE)
 SOURCE_RE = re.compile(r"<!--\s*source:\s*([^>]*)-->")
@@ -67,6 +69,9 @@ def _validate_manifest_profile(
     profile: CbtProfile | None,
 ) -> tuple[int | None, list[ValidationIssue]]:
     issues: list[ValidationIssue] = []
+    lap = manifest.get("lap", 1)
+    if isinstance(lap, bool) or not isinstance(lap, int) or lap < 1:
+        issues.append(ValidationIssue(manifest_path, "manifest lap은 1 이상의 정수여야 함"))
     round_match = ROUND_DIR_RE.fullmatch(manifest_path.parent.name)
     directory_round = int(round_match.group(1)) if round_match else None
     if round_match is None:
@@ -148,6 +153,11 @@ def _validate_source_images(
     root: Path,
 ) -> list[ValidationIssue]:
     issues: list[ValidationIssue] = []
+    manifest_path = root / "sources" / "민간_박문각_수험서_jpg" / "inventory.json"
+    try:
+        inventory = load_inventory(manifest_path)
+    except SourceInventoryError as exc:
+        return [ValidationIssue(manifest_path, f"민간 원본 인벤토리 오류: {exc}")]
     for source, stable_id in zip(sources, stable_ids):
         if not isinstance(stable_id, str):
             issues.append(ValidationIssue(problem_path, "stable_id 형식 오류로 source 검증 불가"))
@@ -167,16 +177,16 @@ def _validate_source_images(
             issues.append(ValidationIssue(problem_path, f"{stable_id}: source 페이지 형식 오류"))
             continue
         for page in pages:
-            image_path = (
-                root
-                / "sources"
-                / "민간_박문각_수험서_jpg"
-                / SUBJECT_SLUGS[subject]
-                / f"Part {part}"
-                / f"page_{page:04d}.jpg"
-            )
-            if not image_path.is_file():
-                issues.append(ValidationIssue(problem_path, f"{stable_id}: 원본 이미지 누락 {image_path}"))
+            relative = (
+                Path(SUBJECT_SLUGS[subject]) / f"Part {part}" / f"page_{page:04d}.jpg"
+            ).as_posix()
+            if relative not in inventory:
+                issues.append(
+                    ValidationIssue(
+                        problem_path,
+                        f"{stable_id}: 민간 원본 인벤토리 경로 누락 {relative}",
+                    )
+                )
     return issues
 
 
@@ -262,6 +272,12 @@ def validate_written_bank_inventory(root: Path) -> list[ValidationIssue]:
         )
         try:
             stable_ids = load_index()
+        except QuestionBankParseError as exc:
+            issues.extend(
+                ValidationIssue(problem_path, f"문제은행 파싱 오류: {parse_issue}")
+                for parse_issue in exc.issues
+            )
+            continue
         except (OSError, ValueError) as exc:
             issues.append(ValidationIssue(problem_path, f"문제은행 인덱스 생성 실패: {exc}"))
             continue
@@ -289,6 +305,9 @@ def _validate_practical_bank(problem_path: Path, stable_ids: list[str], root: Pa
         return [ValidationIssue(problem_path, "4과목 실기 문제은행 누락")]
     bank_text = bank_path.read_text(encoding="utf-8")
     for block, stable_id in zip(blocks, stable_ids):
+        if not PRACTICAL_ID_RE.fullmatch(stable_id):
+            # 형식 오류는 validate_practical_round에서 이미 ValidationIssue로 보고한다.
+            continue
         first, *rest = block.splitlines()
         _, stem = first.split(".", 1)
         mock_stem = " ".join(
@@ -320,6 +339,56 @@ def _validate_practical_bank(problem_path: Path, stable_ids: list[str], root: Pa
             issues.append(ValidationIssue(problem_path, f"{stable_id}: 실기 문제은행 문항 조회 실패"))
         elif _normalize(mock_stem) != _normalize(match.group(1)):
             issues.append(ValidationIssue(problem_path, f"{stable_id}: 실기 문제은행 지문 불일치"))
+    return issues
+
+
+def validate_first_lap_stable_id_reuse(
+    manifest_paths: list[Path],
+) -> list[ValidationIssue]:
+    """lap 1 manifest끼리의 stable_id 재사용을 검사한다.
+
+    lap 필드가 없으면 1로 간주하고, lap 2 이상은 이전 문항 재사용을 허용한다.
+    """
+
+    issues: list[ValidationIssue] = []
+    owners: dict[str, Path] = {}
+    for manifest_path in manifest_paths:
+        try:
+            manifest = _read_json(manifest_path)
+        except (OSError, json.JSONDecodeError):
+            continue
+
+        lap = manifest.get("lap", 1)
+        if isinstance(lap, bool) or not isinstance(lap, int) or lap < 1:
+            # 잘못된 값으로 lap 1 중복 검사를 우회하지 못하게 한다.
+            lap = 1
+        if lap >= 2:
+            continue
+
+        items = manifest.get("items")
+        if not isinstance(items, list):
+            continue
+        manifest_ids: set[str] = set()
+        for item in items:
+            if not isinstance(item, dict):
+                continue
+            stable_id = item.get("stable_id")
+            if not isinstance(stable_id, str) or not STABLE_ID_RE.fullmatch(stable_id):
+                continue
+            if stable_id in manifest_ids:
+                # 회차 내부 중복은 validate_round가 별도로 보고한다.
+                continue
+            manifest_ids.add(stable_id)
+            owner = owners.get(stable_id)
+            if owner is None:
+                owners[stable_id] = manifest_path
+                continue
+            issues.append(
+                ValidationIssue(
+                    manifest_path,
+                    f"1차 lap stable_id 재사용: {stable_id} (기존: {owner})",
+                )
+            )
     return issues
 
 
@@ -540,6 +609,7 @@ def validate_all(root: Path) -> tuple[int, int, int, list[ValidationIssue]]:
         except (OSError, json.JSONDecodeError):
             pass
         issues.extend(validate_round(manifest_path, root))
+    issues.extend(validate_first_lap_stable_id_reuse(manifests))
     practical_rounds = sorted(
         path.parent
         for path in (root / "output" / "mock_exam" / "실기").glob("*회차/실기_모의_문제.md")

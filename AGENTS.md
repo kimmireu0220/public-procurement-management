@@ -10,6 +10,9 @@
 - 시험 고정값은 `docs/시험_안내.md`와 `sources/공식_qnet_시행공고/`를 따른다.
 - 이론 범위와 주제는 `output/standard_textbook/<과목>/INDEX.md` 및 장별 Markdown을 우선한다.
 - 숫자·기한·비율은 `docs/학습_숫자암기/`를 확인한다.
+- 현행 법령·행정규칙의 URL·시행일·보관본은
+  `sources/현행_법령_근거/manifest.json`을 확인하고
+  `python3 tools/verify_legal_sources.py`로 무결성을 검증한다.
 - 필기 지문은 `output/problem_book_final/<과목>/`의 Markdown에서만 선별한다.
 - 필기 정답은 `output/agent_extract/<과목>/partN.md`와 반드시 대조한다.
 - 실기 지문은 4과목 문제은행, 범위는 4과목 표준교재를 사용한다.
@@ -49,11 +52,17 @@
 ```bash
 python3 tools/build_cbt_viewer.py --round K --pages
 python3 tools/build_cbt_viewer.py --profile subjectN --round K --pages
+python3 tools/build_study_cbt.py --check
+python3 tools/build_lecture_pages.py --check
+python3 tools/private_source_inventory.py
+python3 tools/verify_legal_sources.py
 python3 tools/validate_mock_exam.py
 python3 -m unittest discover -s tests -v
 ```
 
 - 회차에는 `index.html` 하나만 생성한다.
 - GitHub Pages 공개본은 `docs/`에 둔다.
+- 민간 교재 스캔은 로컬 전용이며 Git·Pages에 올리지 않는다. 공개·저장 범위는
+  `docs/자료_공개_및_저장_정책.md`를 따른다.
 - 답안 문자열을 받으면 즉시 채점하고 틀린 문항만 해설·오답노트에 반영한다.
 - 답안 제출만으로 커밋하거나 푸시하지 않는다. 사용자가 Git 반영을 요청한 경우에만 수행한다.

@@ -28,6 +28,7 @@
 | `docs/학습_프롬프트/` | 과목별 이론 학습 자료 |
 | `docs/학습_숫자암기/` | 금액·기한·비율 암기 자료 |
 | `docs/시험모의/` | 모의고사 선별·채점 규칙 |
+| `docs/자료_공개_및_저장_정책.md` | 공개 범위·저작권·대용량 파일 정책 |
 | `output/standard_textbook/` | 조달청 표준교재 핵심 정리 |
 | `output/problem_book_final/` | 박문각 문제은행 Markdown |
 | `output/agent_extract/` | 문제은행 정답·해설 |
@@ -36,7 +37,18 @@
 | `output/part_lectures/` | 4과목 강의 대본 |
 | `output/gpt_sovits_audio/` | 4과목 최종 강의 MP3 |
 | `docs/` | GitHub Pages 공개본 |
-| `sources/` | 공식·민간 원본 자료 |
+| `sources/` | 공식 근거 자료와 로컬 민간 원본의 보관 위치 |
+
+시험 학습의 기준은 조달청 표준교재다. 현행 규정은
+`sources/현행_법령_근거/manifest.json`에 공식 URL·시행일·수집일·SHA-256과 함께
+보관하고 `현행(시행일)`로 구분한다. 민간 교재 스캔은 로컬 전용이며 Git에 올리지
+않는다. 자세한 범위는 `docs/자료_공개_및_저장_정책.md`를 따른다.
+
+개발·검증 환경은 Python 3.12 이상을 지원하고 CI는 Python 3.13을 사용한다.
+
+```bash
+python3 -m pip install -r requirements-dev.txt
+```
 
 ## 강의 관리
 
@@ -61,6 +73,11 @@ python3 tools/build_cbt_viewer.py --round 1 --pages
 python3 tools/build_cbt_viewer.py --profile subject1 --round 1 --pages
 python3 tools/build_cbt_viewer.py --profile subject2 --round 1 --pages
 python3 tools/build_cbt_viewer.py --profile subject3 --round 1 --pages
+python3 tools/build_study_cbt.py
+python3 tools/build_study_cbt.py --check
+python3 tools/build_lecture_pages.py --check
+python3 tools/private_source_inventory.py
+python3 tools/verify_legal_sources.py
 python3 tools/validate_mock_exam.py
 python3 -m unittest discover -s tests -v
 ```
