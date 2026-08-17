@@ -186,6 +186,10 @@ class LecturePagesTest(unittest.TestCase):
             self.assertLess(sidebar_end, article_start)
             self.assertIn('aria-controls="subject-toc"', overview_html)
             self.assertIn('<nav class="sidebar-content" id="subject-toc"', overview_html)
+            self.assertIn('<span aria-hidden="true">☰</span>', overview_html)
+            self.assertNotIn('접기', overview_html)
+            self.assertNotIn('toc-hide', overview_html)
+            self.assertNotIn('toc-show', overview_html)
             self.assertNotIn('<article class="article"><button class="toc-toggle"', overview_html)
 
     def test_all_generated_internal_links_resolve(self) -> None:
