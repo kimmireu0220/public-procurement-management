@@ -179,6 +179,14 @@ class LecturePagesTest(unittest.TestCase):
             self.assertIn('href="../../assets/style.css"', overview_html)
             self.assertIn('href="../part01/chapter01/"', overview_html)
             self.assertIn('href="../../4/part01/chapter01/"', overview_html)
+            sidebar_end = overview_html.index("</aside>")
+            article_start = overview_html.index('<article class="article">')
+            toggle_start = overview_html.index('<button class="toc-toggle"')
+            self.assertLess(toggle_start, sidebar_end)
+            self.assertLess(sidebar_end, article_start)
+            self.assertIn('aria-controls="subject-toc"', overview_html)
+            self.assertIn('<nav class="sidebar-content" id="subject-toc"', overview_html)
+            self.assertNotIn('<article class="article"><button class="toc-toggle"', overview_html)
 
     def test_all_generated_internal_links_resolve(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
