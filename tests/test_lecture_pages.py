@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import re
 import sys
 import tempfile
 import unittest
@@ -58,6 +59,48 @@ class LecturePagesTest(unittest.TestCase):
         self.assertEqual(len({lecture.source for lecture in lectures}), len(lectures))
         self.assertTrue(any(lecture.is_chapter for lecture in lectures))
         self.assertTrue(all(lecture.body.strip() for lecture in lectures))
+
+    def test_learning_questions_keep_answers_in_the_same_block(self) -> None:
+        question_pattern = re.compile(r"^\*\*(?:(?:문제|회상) )?\d+\.")
+        review_case_pattern = re.compile(r"^### 사례 \d+\.")
+        answer_pattern = re.compile(r"^> \*\*(?:정답(?:·해설|·채점)?|모범답안):")
+        separate_answer_heading = re.compile(
+            r"^#{2,4} .*?(?:정답|모범답안·채점요소)\s*$",
+            re.MULTILINE,
+        )
+
+        for subject in ("3과목", "4과목"):
+            for source in sorted((build_lecture_pages.SOURCE_DIR / subject).rglob("*.md")):
+                markdown = source.read_text(encoding="utf-8")
+                self.assertIsNone(
+                    separate_answer_heading.search(markdown),
+                    f"분리 정답 섹션이 남아 있습니다: {source}",
+                )
+                lines = markdown.splitlines()
+
+                def is_question(line: str) -> bool:
+                    if question_pattern.match(line):
+                        return True
+                    if source.name == "total-review.md":
+                        return bool(re.match(r"^\d+\. ", line) or review_case_pattern.match(line))
+                    return False
+
+                question_indexes = [
+                    index for index, line in enumerate(lines) if is_question(line)
+                ]
+                for position, question_index in enumerate(question_indexes):
+                    block_end = (
+                        question_indexes[position + 1]
+                        if position + 1 < len(question_indexes)
+                        else len(lines)
+                    )
+                    self.assertTrue(
+                        any(
+                            answer_pattern.match(line)
+                            for line in lines[question_index + 1 : block_end]
+                        ),
+                        f"문제 바로 뒤 블록에 정답이 없습니다: {source}:{question_index + 1}",
+                    )
 
     def test_overview_metadata_is_minimal_and_chapter_gaps_are_allowed(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:

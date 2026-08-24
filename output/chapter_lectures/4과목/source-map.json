@@ -49,7 +49,7 @@
   },
   "current_law_source": {
     "manifest": "sources/현행_법령_근거/manifest.json",
-    "retrieved_at": "2026-08-16",
+    "retrieved_at": "2026-08-24",
     "lesson_legal_cutoff": "2026-08-24",
     "policy": "숫자·기한·비율·법적 효과는 교재 서술보다 적용시점의 공식 원문을 우선하고, 교재와 다르면 둘을 구분해 설명"
   },
@@ -60,13 +60,15 @@
     "fine_criteria_checked": 91,
     "strict_criteria_mapping": "91/91",
     "questions_checked": 253,
-    "legal_sources_manifest_count": 21,
+    "review_questions_checked": 53,
+    "inline_answers_checked": 306,
+    "legal_sources_manifest_count": 33,
     "automated_tests": {
-      "repository_unittests": "33/33 passed",
-      "lecture_page_tests": "5/5 passed",
+      "repository_unittests": "35/35 passed",
+      "lecture_page_tests": "7/7 passed",
       "lecture_build_check": "passed",
       "private_source_inventory": "1300/1300 verified",
-      "legal_source_snapshots": "21/21 verified"
+      "legal_source_snapshots": "33/33 verified"
     },
     "private_similarity_check": {
       "comparison_files": 27,
