@@ -328,7 +328,7 @@
         "source_check_date": "2026-08-24",
         "exercise_check_date": "2026-08-24",
         "high_risk_facts_checked": true,
-        "source_sha256": "146698e76d2d06cbf9ece2a5c8417bd3a7d9eb6318de9e79367cc4811ee7933d",
+        "source_sha256": "9c91ce16df7196a428583a6cf011ebc9043af7ed2a841c75357e91899ce5baac",
         "questions_checked": 45,
         "private_similarity_audit": {
           "comparison_files": 5,
