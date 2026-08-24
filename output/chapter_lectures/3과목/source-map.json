@@ -50,7 +50,7 @@
   },
   "current_law_source": {
     "manifest": "sources/현행_법령_근거/manifest.json",
-    "retrieved_at": "2026-08-16",
+    "retrieved_at": "2026-08-24",
     "lesson_legal_cutoff": "2026-08-24",
     "policy": "숫자·기한·비율·법적 효과는 교재 서술보다 적용시점의 공식 원문을 우선하고, 교재와 다르면 둘을 구분해 설명"
   },
@@ -73,8 +73,8 @@
     "status": "mapping_checked",
     "lesson_content_status": "in_progress",
     "chapters_planned": 29,
-    "chapters_completed": 4,
-    "questions_checked": 158,
+    "chapters_completed": 5,
+    "questions_checked": 206,
     "major_criteria_mapped": "4/4",
     "subcriteria_mapped": "11/11",
     "fine_criteria_mapped": "55/55",
@@ -142,23 +142,65 @@
     {
       "id": "state_contract_decree",
       "title": "국가를 당사자로 하는 계약에 관한 법률 시행령",
-      "locators": ["제37조", "제50조~제63조", "제64조~제66조", "제74조~제76조", "제91조", "제108조", "제110조~제114조"],
+      "locators": ["제12조", "제26조제1항제5호가목", "제28조", "제30조", "제33조", "제35조~제37조", "제50조~제63조", "제64조~제66조", "제74조~제76조", "제91조", "제108조", "제110조~제114조"],
       "effective_date": "2026-06-03",
       "url": "https://www.law.go.kr/LSW/lsInfoP.do?lsiSeq=285893&chrClsCd=010202&urlMode=lsInfoP&efYd=20260603&ancYnChk=0"
     },
     {
       "id": "state_contract_rule",
       "title": "국가를 당사자로 하는 계약에 관한 법률 시행규칙",
-      "locators": ["제51조", "제55조", "제61조", "제63조", "제70조~제75조", "별표 1", "제86조"],
+      "locators": ["제15조", "제33조", "제44조", "제51조", "제55조", "제61조", "제63조", "제70조~제75조", "별표 1", "제86조"],
       "effective_date": "2026-01-02",
       "url": "https://www.law.go.kr/LSW/lsInfoP.do?lsiSeq=282607&chrClsCd=010202&urlMode=lsInfoP&efYd=20260102&ancYnChk=0"
     },
     {
       "id": "government_contract_execution",
       "title": "정부 입찰·계약 집행기준",
-      "locators": ["제33조~제39조", "제40조~제66조", "제70조~제76조"],
+      "locators": ["제10조~제10조의4", "제33조~제39조", "제40조~제66조", "제70조~제76조"],
       "effective_date": "2026-04-30",
       "url": "https://www.law.go.kr/LSW/admRulInfoP.do?admRulSeq=2100000276688&chrClsCd=010201"
+    },
+    {
+      "id": "bidder_registration",
+      "title": "국가종합전자조달시스템 입찰참가자격등록규정",
+      "locators": ["제4조~제6조", "제8조~제9조의2", "제11조", "제13조~제16조", "제18조", "제20조", "제22조~제23조의3"],
+      "effective_date": "2026-01-23",
+      "url": "https://www.law.go.kr/LSW/admRulLsInfoP.do?admRulSeq=2100000274756"
+    },
+    {
+      "id": "sme_market_support_act",
+      "title": "중소기업제품 구매촉진 및 판로지원에 관한 법률",
+      "locators": ["제6조", "제9조"],
+      "effective_date": "2026-07-01",
+      "url": "https://www.law.go.kr/LSW/lsInfoP.do?lsiSeq=284097&chrClsCd=010202&urlMode=lsInfoP&efYd=20260701&ancYnChk=0"
+    },
+    {
+      "id": "foreign_procurement_processing",
+      "title": "조달청 외자구매업무 처리규정",
+      "locators": ["제2조", "제11조·제12조", "제14조·제15조", "제17조~제20조", "제22조", "제37조", "제42조~제46조", "제51조·제52조", "제58조·제59조", "제66조", "제69조"],
+      "effective_date": "2026-01-23",
+      "url": "https://www.law.go.kr/LSW/admRulLsInfoP.do?admRulSeq=2100000276276"
+    },
+    {
+      "id": "foreign_bid_evaluation",
+      "title": "조달청 외자입찰서 평가업무 처리규정",
+      "locators": ["제4조", "제12조"],
+      "effective_date": "2025-12-08",
+      "url": "https://www.law.go.kr/LSW/admRulLsInfoP.do?admRulSeq=2100000269016"
+    },
+    {
+      "id": "foreign_bid_instructions",
+      "title": "외자입찰유의서",
+      "locators": ["제14조"],
+      "effective_date": "2023-07-01",
+      "url": "https://www.law.go.kr/LSW/admRulInfoP.do?admRulSeq=2100000225706"
+    },
+    {
+      "id": "foreign_contract_general_conditions",
+      "title": "외자계약일반조건",
+      "locators": ["제5조", "제8조", "제10조", "제21조", "제24조·제25조", "제35조"],
+      "effective_date": "2025-12-08",
+      "url": "https://www.law.go.kr/LSW/admRulLsInfoP.do?admRulId=34279&efYd=0"
     },
     {
       "id": "goods_contract_general_conditions",
@@ -388,7 +430,21 @@
       "scope_role": "official_direct",
       "origin": "custom",
       "rights": {"label": "자체 제작", "derivative_of_private_source": false, "publishable": true},
-      "status": "planned"
+      "status": "exercise_checked",
+      "qa": {
+        "revision_date": "2026-08-24",
+        "source_check_date": "2026-08-24",
+        "exercise_check_date": "2026-08-24",
+        "high_risk_facts_checked": true,
+        "source_sha256": "1783c943d8232956e7eff5969a3f4f1ea8c4af1f12ff6f4af9e0180e1a73233e",
+        "questions_checked": 48,
+        "private_similarity_audit": {
+          "comparison_files": 5,
+          "exact_question_matches": 0,
+          "exact_normalized_lines_min_60_chars": 0,
+          "normalized_windows_30_chars": 0
+        }
+      }
     },
     {
       "id": "PPM3-P02-L02",

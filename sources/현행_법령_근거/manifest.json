@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "retrieved_at": "2026-08-16",
+  "retrieved_at": "2026-08-24",
   "provider": {
     "name": "국가법령정보센터",
     "base_url": "https://www.law.go.kr/"
@@ -215,6 +215,46 @@
       "source_url": "https://www.law.go.kr/LSW/admRulLsInfoP.do?admRulSeq=2100000274756",
       "snapshot": "snapshots/bidder_registration.html",
       "sha256": "25740cf0125fdbbcc6d5adee08e0954e32e32f85b6d0c39fa9f9648c87bb167f"
+    },
+    {
+      "id": "foreign_procurement_processing",
+      "title": "조달청 외자구매업무 처리규정",
+      "effective_date": "2026-01-23",
+      "version": "조달청훈령 제2341호",
+      "category": "행정규칙",
+      "source_url": "https://www.law.go.kr/LSW/admRulLsInfoP.do?admRulSeq=2100000276276",
+      "snapshot": "snapshots/foreign_procurement_processing.html",
+      "sha256": "cf329bdb58dba1fde7a65031d5126cc88941574db84cf0679a74d06564c60847"
+    },
+    {
+      "id": "foreign_bid_evaluation",
+      "title": "조달청 외자입찰서 평가업무 처리규정",
+      "effective_date": "2025-12-08",
+      "version": "조달청훈령 제2302호",
+      "category": "행정규칙",
+      "source_url": "https://www.law.go.kr/LSW/admRulLsInfoP.do?admRulSeq=2100000269016",
+      "snapshot": "snapshots/foreign_bid_evaluation.html",
+      "sha256": "38ac3f3bcb4f11bc745b2138c7b9850b21c3647654443f4964ccf0191ac2f774"
+    },
+    {
+      "id": "foreign_bid_instructions",
+      "title": "외자입찰유의서",
+      "effective_date": "2023-07-01",
+      "version": "조달청지침 제10551호",
+      "category": "행정규칙",
+      "source_url": "https://www.law.go.kr/LSW/admRulInfoP.do?admRulSeq=2100000225706",
+      "snapshot": "snapshots/foreign_bid_instructions.html",
+      "sha256": "8c0bd0108d77928e30552d3c9a24d5648413bd213adeec970075c8b3f614a80f"
+    },
+    {
+      "id": "foreign_contract_general_conditions",
+      "title": "외자계약일반조건",
+      "effective_date": "2025-12-08",
+      "version": "조달청훈령 제2301호",
+      "category": "행정규칙",
+      "source_url": "https://www.law.go.kr/LSW/admRulLsInfoP.do?admRulId=34279&efYd=0",
+      "snapshot": "snapshots/foreign_contract_general_conditions.html",
+      "sha256": "a2788221db15033f91d633a657c9cd39a6544dcb7058cfe821f628be753857a6"
     }
   ]
 }
