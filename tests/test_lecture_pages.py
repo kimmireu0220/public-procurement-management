@@ -61,7 +61,7 @@ class LecturePagesTest(unittest.TestCase):
         self.assertTrue(all(lecture.body.strip() for lecture in lectures))
 
     def test_learning_questions_keep_answers_in_the_same_block(self) -> None:
-        question_pattern = re.compile(r"^\*\*(?:(?:문제|회상) )?\d+\.")
+        question_pattern = re.compile(r"^\*\*(?:(?:문제|회상|O/X|사례) )?\d+\.")
         review_case_pattern = re.compile(r"^### 사례 \d+\.")
         answer_pattern = re.compile(r"^> \*\*(?:정답(?:·해설|·채점)?|모범답안):")
         separate_answer_heading = re.compile(
@@ -69,7 +69,7 @@ class LecturePagesTest(unittest.TestCase):
             re.MULTILINE,
         )
 
-        for subject in ("3과목", "4과목"):
+        for subject in ("1과목", "2과목", "3과목", "4과목"):
             for source in sorted((build_lecture_pages.SOURCE_DIR / subject).rglob("*.md")):
                 markdown = source.read_text(encoding="utf-8")
                 self.assertIsNone(

@@ -3,8 +3,8 @@
     {
       "id": 1,
       "title": "공공조달과 법제도 이해",
-      "chapter_count": 0,
-      "published": false
+      "chapter_count": 4,
+      "published": true
     },
     {
       "id": 2,
@@ -25,5 +25,5 @@
       "published": true
     }
   ],
-  "total_chapters": 54
+  "total_chapters": 58
 }
