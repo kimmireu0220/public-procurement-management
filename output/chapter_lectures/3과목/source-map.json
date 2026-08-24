@@ -912,7 +912,8 @@
       "scope_role": "official_direct",
       "origin": "custom",
       "rights": {"label": "자체 제작", "derivative_of_private_source": false, "publishable": true},
-      "status": "planned"
+      "status": "draft",
+      "coverage_note": "표준교재 PDF 270~272쪽의 공사 입찰공고, 현장설명·입찰무효와 PQ 적용·심사항목을 자체 서술로 구성함. 법령·문항·수치의 일괄 검증은 3과목 전체 제작 후 수행 예정"
     },
     {
       "id": "PPM3-P04-L06",
