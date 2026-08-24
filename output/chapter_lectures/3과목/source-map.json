@@ -137,6 +137,34 @@
       "chapters": 29,
       "total_repository_chapters_built": 54
     },
+    "remote_public_pages": {
+      "status": "passed",
+      "checked_at": "2026-08-24",
+      "base_url": "https://kimmireu0220.github.io/public-procurement-management/lecture/3/",
+      "subject_index": "29개 Chapter·필기 출제기준·Part 6 벤처·혁신·우수제품 표시 확인",
+      "target_chapters_checked": [
+        "P04-C03",
+        "P04-C09",
+        "P04-C12",
+        "P05-C03",
+        "P05-C05",
+        "P06-C01",
+        "P06-C02",
+        "P06-C03"
+      ],
+      "target_inline_answer_counts": [
+        30,
+        28,
+        30,
+        33,
+        35,
+        25,
+        33,
+        37
+      ],
+      "content_markers": "8/8 passed",
+      "visual_layout": "passed"
+    },
     "external_links": {
       "status": "passed",
       "unique_urls": 132,
