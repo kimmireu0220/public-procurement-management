@@ -4,6 +4,6 @@
     {"id": 1, "slug": "1과목", "title": "공공조달과 법제도 이해", "status": "planned"},
     {"id": 2, "slug": "2과목", "title": "공공조달계획 수립 및 분석", "status": "planned"},
     {"id": 3, "slug": "3과목", "title": "공공계약관리", "status": "planned"},
-    {"id": 4, "slug": "4과목", "title": "공공조달 관리실무", "status": "in_progress"}
+    {"id": 4, "slug": "4과목", "title": "공공조달 관리실무", "status": "published"}
   ]
 }

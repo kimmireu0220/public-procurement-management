@@ -8,7 +8,7 @@ title: 조달데이터 활용하기
 kind: chapter
 lesson_id: PPM4-P08-L02
 origin: custom
-status: draft
+status: exercise_checked
 legal_cutoff: 2026-08-24
 ---
 

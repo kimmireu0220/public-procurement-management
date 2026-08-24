@@ -53,6 +53,35 @@
     "lesson_legal_cutoff": "2026-08-24",
     "policy": "숫자·기한·비율·법적 효과는 교재 서술보다 적용시점의 공식 원문을 우선하고, 교재와 다르면 둘을 구분해 설명"
   },
+  "integrated_qa": {
+    "status": "passed",
+    "completed_at": "2026-08-24",
+    "chapters_checked": 25,
+    "fine_criteria_checked": 91,
+    "strict_criteria_mapping": "91/91",
+    "questions_checked": 261,
+    "legal_sources_manifest_count": 21,
+    "automated_tests": {
+      "repository_unittests": "33/33 passed",
+      "lecture_page_tests": "5/5 passed",
+      "lecture_build_check": "passed",
+      "private_source_inventory": "1300/1300 verified",
+      "legal_source_snapshots": "21/21 verified"
+    },
+    "private_similarity_check": {
+      "comparison_files": 27,
+      "exact_question_matches": 0,
+      "normalized_30_character_phrase_matches": 0,
+      "exact_60_character_line_matches": 0,
+      "connected_document_question_matches": 0,
+      "connected_document_body_matches": 0
+    },
+    "high_risk_corrections_verified": [
+      "3-1 이윤율 상한·예외와 소프트웨어개발 분류",
+      "3-2 협상계약 가격평가 70% 하한·구간식·30% 평점",
+      "5-2 MAS 공고·차기공고·계약기간 원칙과 3년 미만 예외"
+    ]
+  },
   "part_source_strategy": {
     "1": "표준교재 7-61쪽 + 입찰참가자격등록규정·목록정보 규정·직접생산 기준·최신 나라장터 매뉴얼",
     "2": "표준교재 63-137쪽 + 국가·지방계약 발주계획 규정·조달정보개방포털·실제 공고·규격서",
@@ -174,7 +203,7 @@
       "artifact": "자격·품명·목록정보 관리대장, 제출서류 체크리스트",
       "origin": "custom",
       "rights": {"label": "자체 제작", "derivative_of_private_source": false, "publishable": true},
-      "status": "draft"
+      "status": "exercise_checked"
     },
     {
       "id": "PPM4-P01-L03",
@@ -190,7 +219,7 @@
       "artifact": "등록신청 패키지, 보완·승인 추적표",
       "origin": "custom",
       "rights": {"label": "자체 제작", "derivative_of_private_source": false, "publishable": true},
-      "status": "draft"
+      "status": "exercise_checked"
     },
     {
       "id": "PPM4-P02-L01",
@@ -209,7 +238,7 @@
       "artifact": "환경분석표, 입찰적정성 판단표, 수요예측 보고서",
       "origin": "custom",
       "rights": {"label": "자체 제작", "derivative_of_private_source": false, "publishable": true},
-      "status": "draft"
+      "status": "exercise_checked"
     },
     {
       "id": "PPM4-P02-L02",
@@ -225,7 +254,7 @@
       "artifact": "발주계획·사전규격·공고 연결대장, 수요정보 카드",
       "origin": "custom",
       "rights": {"label": "자체 제작", "derivative_of_private_source": false, "publishable": true},
-      "status": "draft"
+      "status": "exercise_checked"
     },
     {
       "id": "PPM4-P02-L03",
@@ -241,7 +270,7 @@
       "artifact": "경제성 분석표, 요구사항 대응표, 공급계획서",
       "origin": "custom",
       "rights": {"label": "자체 제작", "derivative_of_private_source": false, "publishable": true},
-      "status": "draft"
+      "status": "exercise_checked"
     },
     {
       "id": "PPM4-P03-L01",
@@ -257,7 +286,7 @@
       "artifact": "원가·견적 근거표, 요구사항 추적표, 발표 점검표",
       "origin": "custom",
       "rights": {"label": "자체 제작", "derivative_of_private_source": false, "publishable": true},
-      "status": "draft"
+      "status": "exercise_checked"
     },
     {
       "id": "PPM4-P03-L02",
@@ -273,7 +302,7 @@
       "artifact": "공고별 평가모형, 예상점수 시나리오, 이해상충 검증표",
       "origin": "custom",
       "rights": {"label": "자체 제작", "derivative_of_private_source": false, "publishable": true},
-      "status": "draft"
+      "status": "exercise_checked"
     },
     {
       "id": "PPM4-P03-L03",
@@ -289,7 +318,7 @@
       "artifact": "요구사항 변경대장, 기술·가격 영향표, 협상합의 확인서",
       "origin": "custom",
       "rights": {"label": "자체 제작", "derivative_of_private_source": false, "publishable": true},
-      "status": "draft"
+      "status": "exercise_checked"
     },
     {
       "id": "PPM4-P04-L01",
@@ -306,7 +335,7 @@
       "artifact": "계약체결 패키지, 보증 검토표, 핵심조건 설명서",
       "origin": "custom",
       "rights": {"label": "자체 제작", "derivative_of_private_source": false, "publishable": true},
-      "status": "draft"
+      "status": "exercise_checked"
     },
     {
       "id": "PPM4-P04-L02",
@@ -323,7 +352,7 @@
       "artifact": "계약기준선, 수행계획, 선금 산정·사용·정산표, 이행대장",
       "origin": "custom",
       "rights": {"label": "자체 제작", "derivative_of_private_source": false, "publishable": true},
-      "status": "draft"
+      "status": "exercise_checked"
     },
     {
       "id": "PPM4-P04-L03",
@@ -341,7 +370,7 @@
       "artifact": "변경유형 판정표, 조정산출·증빙 패키지, 변경계약 설명서",
       "origin": "custom",
       "rights": {"label": "자체 제작", "derivative_of_private_source": false, "publishable": true},
-      "status": "draft"
+      "status": "exercise_checked"
     },
     {
       "id": "PPM4-P04-L04",
@@ -358,7 +387,7 @@
       "artifact": "완료·검사·대금 종결목록, 해제·해지 검토·통지 패키지",
       "origin": "custom",
       "rights": {"label": "자체 제작", "derivative_of_private_source": false, "publishable": true},
-      "status": "draft"
+      "status": "exercise_checked"
     },
     {
       "id": "PPM4-P05-L01",
@@ -374,7 +403,7 @@
       "artifact": "공사 계약조건표, 공정·기성·검사대장, 하도급 이행관리표",
       "origin": "custom",
       "rights": {"label": "자체 제작", "derivative_of_private_source": false, "publishable": true},
-      "status": "draft"
+      "status": "exercise_checked"
     },
     {
       "id": "PPM4-P05-L02",
@@ -391,7 +420,7 @@
       "artifact": "물품 계약·납품·검사표, MAS·단가계약 비교·이행대장",
       "origin": "custom",
       "rights": {"label": "자체 제작", "derivative_of_private_source": false, "publishable": true},
-      "status": "draft"
+      "status": "exercise_checked"
     },
     {
       "id": "PPM4-P05-L03",
@@ -407,7 +436,7 @@
       "artifact": "과업·인력·성과물 이행표, 용역 하도급·재위탁 관리표",
       "origin": "custom",
       "rights": {"label": "자체 제작", "derivative_of_private_source": false, "publishable": true},
-      "status": "draft"
+      "status": "exercise_checked"
     },
     {
       "id": "PPM4-P06-L01",
@@ -423,7 +452,7 @@
       "artifact": "리스크관리계획서, 원인-사건-영향 기반 리스크등록부",
       "origin": "custom",
       "rights": {"label": "자체 제작", "derivative_of_private_source": false, "publishable": true},
-      "status": "draft"
+      "status": "exercise_checked"
     },
     {
       "id": "PPM4-P06-L02",
@@ -441,7 +470,7 @@
       "artifact": "확률·영향 근거표, 위험도 매트릭스, 우선순위 목록",
       "origin": "custom",
       "rights": {"label": "자체 제작", "derivative_of_private_source": false, "publishable": true},
-      "status": "draft"
+      "status": "exercise_checked"
     },
     {
       "id": "PPM4-P06-L03",
@@ -457,7 +486,7 @@
       "artifact": "리스크 대응카드, 적정성 평가표, 비상대응계획",
       "origin": "custom",
       "rights": {"label": "자체 제작", "derivative_of_private_source": false, "publishable": true},
-      "status": "draft"
+      "status": "exercise_checked"
     },
     {
       "id": "PPM4-P06-L04",
@@ -474,7 +503,7 @@
       "artifact": "핵심위험지표 대시보드, 대응성과·신규위험·조치추적표",
       "origin": "custom",
       "rights": {"label": "자체 제작", "derivative_of_private_source": false, "publishable": true},
-      "status": "draft"
+      "status": "exercise_checked"
     },
     {
       "id": "PPM4-P07-L01",
@@ -490,7 +519,7 @@
       "artifact": "법령·조건 쟁점검토표, 선례 검증표",
       "origin": "custom",
       "rights": {"label": "자체 제작", "derivative_of_private_source": false, "publishable": true},
-      "status": "draft"
+      "status": "exercise_checked"
     },
     {
       "id": "PPM4-P07-L02",
@@ -506,7 +535,7 @@
       "artifact": "분쟁예방대장, 사실연표·증거목록, 전문가 사건요약서",
       "origin": "custom",
       "rights": {"label": "자체 제작", "derivative_of_private_source": false, "publishable": true},
-      "status": "draft"
+      "status": "exercise_checked"
     },
     {
       "id": "PPM4-P07-L03",
@@ -522,7 +551,7 @@
       "artifact": "우대제도 카드, 증빙 만료관리표, 자격·제품·기회지도",
       "origin": "custom",
       "rights": {"label": "자체 제작", "derivative_of_private_source": false, "publishable": true},
-      "status": "draft"
+      "status": "exercise_checked"
     },
     {
       "id": "PPM4-P08-L01",
@@ -539,7 +568,7 @@
       "artifact": "전자업무 실행기록, 장애대응 기록",
       "origin": "custom",
       "rights": {"label": "자체 제작", "derivative_of_private_source": false, "publishable": true},
-      "status": "draft"
+      "status": "exercise_checked"
     },
     {
       "id": "PPM4-P08-L02",
@@ -556,7 +585,7 @@
       "artifact": "데이터 요구서, 정제로그, 지표·차트, 분석보고서",
       "origin": "custom",
       "rights": {"label": "자체 제작", "derivative_of_private_source": false, "publishable": true},
-      "status": "draft"
+      "status": "exercise_checked"
     }
   ]
 }

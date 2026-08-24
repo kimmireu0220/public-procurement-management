@@ -8,7 +8,7 @@ title: 전자조달시스템 이용하기
 kind: chapter
 lesson_id: PPM4-P08-L01
 origin: custom
-status: draft
+status: exercise_checked
 legal_cutoff: 2026-08-24
 ---
 

@@ -8,7 +8,7 @@ title: 리스크 발생 모니터링하기
 kind: chapter
 lesson_id: PPM4-P06-L04
 origin: custom
-status: draft
+status: exercise_checked
 legal_cutoff: 2026-08-24
 ---
 

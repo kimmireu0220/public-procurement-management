@@ -8,7 +8,7 @@ title: 계약 종결 관리하기
 kind: chapter
 lesson_id: PPM4-P04-L04
 origin: custom
-status: draft
+status: exercise_checked
 legal_cutoff: 2026-08-24
 ---
 

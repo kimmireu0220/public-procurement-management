@@ -8,7 +8,7 @@ title: 용역 계약 관리하기
 kind: chapter
 lesson_id: PPM4-P05-L03
 origin: custom
-status: draft
+status: exercise_checked
 legal_cutoff: 2026-08-24
 ---
 
