@@ -131,10 +131,23 @@ def validate_lectures(lectures: list[Lecture]) -> None:
 
 
 def inline_markup(text: str) -> str:
-    escaped = html.escape(text, quote=False)
-    escaped = re.sub(r"`([^`]+)`", r"<code>\1</code>", escaped)
-    escaped = re.sub(r"\*\*([^*]+)\*\*", r"<strong>\1</strong>", escaped)
-    return escaped
+    def format_text(value: str) -> str:
+        escaped = html.escape(value, quote=False)
+        escaped = re.sub(r"`([^`]+)`", r"<code>\1</code>", escaped)
+        return re.sub(r"\*\*([^*]+)\*\*", r"<strong>\1</strong>", escaped)
+
+    links = re.compile(r"\[([^\]\n]+)\]\((https?://[^)\s]+)\)")
+    chunks: list[str] = []
+    position = 0
+    for match in links.finditer(text):
+        chunks.append(format_text(text[position:match.start()]))
+        label, href = match.groups()
+        chunks.append(
+            f'<a href="{html.escape(href, quote=True)}">{format_text(label)}</a>'
+        )
+        position = match.end()
+    chunks.append(format_text(text[position:]))
+    return "".join(chunks)
 
 
 def is_table_separator(line: str) -> bool:
@@ -304,8 +317,8 @@ def page_shell(title: str, body: str, asset_prefix: str) -> str:
 <title>{html.escape(title)} · 공공조달관리사 Chapter 강의</title>
 <link rel="stylesheet" href="{asset_prefix}assets/style.css">
 <script>{TOC_INIT_SCRIPT}</script></head>
-<body><header class="site-header"><div class="header-inner"><a class="brand" href="{asset_prefix}">공공조달관리사 Chapter 강의</a><span class="header-note">이론 · 시험 포인트 · 암기 체크</span></div></header>
-{body}<footer class="footer">박문각 수험서·조달청 표준교재 기반 학습자료</footer>
+<body><header class="site-header"><div class="header-inner"><a class="brand" href="{asset_prefix}">공공조달관리사 Chapter 강의</a><span class="header-note">출제기준 · 실무 판단 · 답안 훈련</span></div></header>
+{body}<footer class="footer">공식 출제기준·조달청 표준교재·현행 규정 기반 자체 제작 학습자료</footer>
 <script>{TOC_TOGGLE_SCRIPT}</script></body></html>
 """
 
@@ -367,7 +380,7 @@ def render_home(catalog: dict, lectures: list[Lecture]) -> str:
                 f'<h3>{html.escape(subject["title"])}</h3><p>같은 구조로 Chapter 강의를 추가할 예정입니다.</p></div>'
             )
     body = f"""<main class="page"><section class="hero"><span class="eyebrow">PUBLIC PROCUREMENT MANAGER</span>
-<h1>{html.escape(catalog['site_title'])}</h1><p>과목별·Part별·Chapter별로 정리한 이론 강의입니다. 문제풀이 페이지와 분리해 개념, 시험 포인트, 암기 항목에 집중합니다.</p></section>
+<h1>{html.escape(catalog['site_title'])}</h1><p>공식 출제기준을 따라 실무 판단, 산출물 작성, 필답형 답안 훈련을 연결한 자체 제작 강의입니다.</p></section>
 <section class="grid">{''.join(cards)}</section><a class="back-link" href="../">← 필기 모의 CBT로 돌아가기</a></main>"""
     return page_shell("강의 홈", body, "")
 
@@ -410,7 +423,7 @@ def render_subject(subject: dict, subject_lectures: list[Lecture]) -> str:
         )
     review_section = f'<section class="grid">{review_card}</section>' if review_card else ""
     body = f"""<main class="page"><section class="hero"><span class="eyebrow">SUBJECT {subject['id']}</span>
-<h1>{subject['id']}과목 · {html.escape(subject['title'])}</h1><p>{len([x for x in subject_lectures if x.is_chapter])}개 Chapter를 수험서 순서대로 학습합니다.</p></section>
+<h1>{subject['id']}과목 · {html.escape(subject['title'])}</h1><p>{len([x for x in subject_lectures if x.is_chapter])}개 Chapter를 실기 출제기준 순서대로 학습합니다.</p></section>
 {overview_section}<section class="chapter-list">{''.join(sections)}</section>{review_section}<a class="back-link" href="../">← 전체 과목</a></main>"""
     return page_shell(f"{subject['id']}과목", body, "../")
 

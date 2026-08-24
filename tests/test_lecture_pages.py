@@ -28,6 +28,17 @@ class LinkParser(HTMLParser):
 
 
 class LecturePagesTest(unittest.TestCase):
+    def test_markdown_external_links_are_rendered_and_escaped(self) -> None:
+        rendered = build_lecture_pages.inline_markup(
+            "[공식 원문](https://example.com/rule?a=1&b=2) **확인**"
+        )
+
+        self.assertIn(
+            '<a href="https://example.com/rule?a=1&amp;b=2">공식 원문</a>',
+            rendered,
+        )
+        self.assertIn("<strong>확인</strong>", rendered)
+
     def test_sources_are_loadable_without_prescribing_body_structure(self) -> None:
         lectures = build_lecture_pages.load_lectures()
 

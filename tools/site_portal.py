@@ -194,9 +194,9 @@ a{{color:inherit}}.hero{{background:linear-gradient(135deg,#102f50,#1763a6);colo
 <section class="section" id="full-mock"><div class="section-head"><h2>통합 필기 모의고사</h2><p>실전과 같은 {FULL_MOCK.question_count}문항 · {FULL_MOCK.duration_sec // 60}분</p></div><div class="choice-grid">{_round_cards(rounds)}</div></section>
 <section class="section" id="subject-mock"><div class="section-head"><h2>과목별 모의고사</h2><p>집중해서 연습할 과목을 선택하세요</p></div><div class="choice-grid">{_subject_mock_cards()}</div></section>
 <section class="section" id="study-bank"><div class="section-head"><h2>문제은행 Part별 학습</h2><p>과목을 펼쳐 바로 시작하세요</p></div>{_study_groups()}</section>
-<section class="section" id="lectures"><div class="section-head"><h2>Chapter 이론 강의</h2><p>개념 · 시험 포인트 · 암기 체크</p></div>{_lecture_groups(lecture_items)}</section>
+<section class="section" id="lectures"><div class="section-head"><h2>Chapter 이론 강의</h2><p>출제기준 · 실무 판단 · 답안 훈련</p></div>{_lecture_groups(lecture_items)}</section>
 </main>
-<footer class="footer">박문각 수험서 · 조달청 표준교재 기반 학습자료</footer>
+<footer class="footer">공식 출제기준 · 조달청 표준교재 · 현행 규정 기반 자체 제작 학습자료</footer>
 </body>
 </html>
 """
