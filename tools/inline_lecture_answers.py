@@ -163,10 +163,12 @@ def convert(text: str) -> str:
     question_start = _question_region_start(text, answer_heading.start())
     answer_body = text[answer_heading.end() : answer_end]
 
-    if ANSWER_ROW.search(answer_body):
+    if LIST_ITEM.search(answer_body):
+        converted = _convert_numbered_lists(text, question_start, answer_heading, answer_end)
+    elif ANSWER_ROW.search(answer_body):
         converted = _convert_answer_table(text, question_start, answer_heading, answer_end)
     else:
-        converted = _convert_numbered_lists(text, question_start, answer_heading, answer_end)
+        raise ConversionError("지원하는 번호형 정답이나 정답표를 찾지 못했습니다.")
 
     if ANSWER_HEADING.search(converted):
         raise ConversionError("변환 뒤에도 분리된 정답 섹션이 남았습니다.")
