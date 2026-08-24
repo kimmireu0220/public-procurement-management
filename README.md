@@ -4,13 +4,13 @@
 
 ## 바로가기
 
-### 이론 강의 (104개 Chapter)
+### 이론 강의
 
 - [강의 홈](https://kimmireu0220.github.io/public-procurement-management/lecture/)
-- [1과목 공공조달과 법제도 이해](https://kimmireu0220.github.io/public-procurement-management/lecture/1/) — 29 Chapter
-- [2과목 공공조달계획 수립 및 분석](https://kimmireu0220.github.io/public-procurement-management/lecture/2/) — 28 Chapter
-- [3과목 공공계약관리](https://kimmireu0220.github.io/public-procurement-management/lecture/3/) — 22 Chapter
-- [4과목 공공조달 관리실무](https://kimmireu0220.github.io/public-procurement-management/lecture/4/) — 25 Chapter
+- [1과목 공공조달과 법제도 이해](https://kimmireu0220.github.io/public-procurement-management/lecture/1/)
+- [2과목 공공조달계획 수립 및 분석](https://kimmireu0220.github.io/public-procurement-management/lecture/2/)
+- [3과목 공공계약관리](https://kimmireu0220.github.io/public-procurement-management/lecture/3/)
+- [4과목 공공조달 관리실무](https://kimmireu0220.github.io/public-procurement-management/lecture/4/)
 
 ### 문제풀이 CBT
 
@@ -39,10 +39,10 @@
 | `docs/` | GitHub Pages 공개본 |
 | `sources/` | 공식 근거 자료와 로컬 민간 원본의 보관 위치 |
 
-시험 학습의 기준은 조달청 표준교재다. 현행 규정은
-`sources/현행_법령_근거/manifest.json`에 공식 URL·시행일·수집일·SHA-256과 함께
-보관하고 `현행(시행일)`로 구분한다. 민간 교재 스캔은 로컬 전용이며 Git에 올리지
-않는다. 자세한 범위는 `docs/자료_공개_및_저장_정책.md`를 따른다.
+시험 학습의 기준은 조달청 표준교재다. 현행 규정은 시험 기준과 혼동되지 않게
+시행일과 근거를 함께 밝힌다. 민간 교재 스캔과 공개 허가가 없는 제3자 원문·문항·해설은
+로컬 전용이며 Git이나 Pages에 올리지 않는다. 자세한 범위는
+`docs/자료_공개_및_저장_정책.md`를 따른다.
 
 개발·검증 환경은 Python 3.12 이상을 지원하고 CI는 Python 3.13을 사용한다.
 
@@ -53,20 +53,23 @@ python3 -m pip install -r requirements-dev.txt
 ## 강의 관리
 
 강의 원본은 `output/chapter_lectures/<과목>/partNN/chapterNN.md`에 두고, 공개본은
-빌드로 생성한다. `docs/lecture/`는 산출물이므로 직접 고치지 않는다.
+빌드로 생성할 수 있다. 공개본을 직접 수정했다면 다음 빌드에 사라지지 않도록 원본에도
+반영한다.
 
 ```bash
 python3 tools/build_lecture_pages.py
 ```
 
-각 Chapter는 `학습목표 → ① 한눈에 보기 → ② 차근차근 설명 → ③ 시험 포인트 →
-④ 암기 체크리스트 → ⑤ 다음 Chapter` 순서를 지킨다. 과목마다 `overview.md`와
-`total-review.md`를 두고, 문제·퀴즈는 넣지 않는다. 이 구조는
-`tests/test_lecture_pages.py`가 검사한다.
+Chapter의 목차, 길이와 설명 방식은 자유다. 필요에 따라 사례, 비교표, 비유, 질문,
+O/X, 회상 연습, 문제풀이와 요약을 사용할 수 있다. `overview.md`와
+`total-review.md`도 필요할 때만 둔다. 빌더를 사용할 문서에는 페이지 경로를 만들기 위한
+front matter만 필요하다.
 
 ## CBT 관리
 
-문항은 에이전트가 직접 선별한다. 코드는 확정된 문제지의 HTML 빌드·배포·검증에만 사용한다.
+문항은 직접 작성·선별·변형하거나 도구로 보조할 수 있다. 실제 시험 재현용 프로필은 공식
+문항 수와 시간을 따르고, 그 밖의 연습자료는 목적에 맞게 문항 수와 유형을 정한다. 기존
+CBT 빌더를 사용할 때는 문제·정답·식별자와 출처가 서로 대응해야 한다.
 
 ```bash
 python3 tools/build_cbt_viewer.py --round 1 --pages
@@ -85,4 +88,5 @@ python3 -m unittest discover -s tests -v
 통합 모의고사를 `--pages`로 배포하면 빌드된 모든 회차가 `docs/mock/<K>회차/`에
 누적되고, `docs/index.html`에는 응시할 회차를 고르는 목록이 생성된다.
 
-각 필기 회차는 문제·정답·manifest·`index.html`만 기본 산출물로 유지한다.
+산출물의 수와 형식은 작업 목적에 맞게 정한다. 기존 CBT 빌더의 표준 입력은 문제지,
+정답지와 `manifest.json`이며 출력은 `index.html`이다.

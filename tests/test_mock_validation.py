@@ -17,8 +17,8 @@ from cbt.builder import OUTPUT_HTML_NAMES, inline_json, render_html  # noqa: E40
 from cbt.parser import parse_questions  # noqa: E402
 from cbt.profiles import FULL_MOCK  # noqa: E402
 from cbt.validation import (  # noqa: E402
-    validate_all,
-    validate_first_lap_stable_id_reuse,
+    PRACTICAL_ID_RE,
+    STABLE_ID_RE,
     validate_practical_round,
     validate_round,
     validate_written_bank_inventory,
@@ -45,10 +45,15 @@ class MockValidationTest(unittest.TestCase):
         finally:
             module.load_questions_index.cache_clear()
 
-    def make_practical_round(self, directory: Path, id_template: str = "4:1:1:essay:{number}") -> None:
+    def make_practical_round(
+        self,
+        directory: Path,
+        id_template: str = "4:1:1:essay:{number}",
+        count: int = 20,
+    ) -> None:
         problems = ["# 실기 문제\n"]
         answers = ["# 실기 정답\n"]
-        for number in range(1, 21):
+        for number in range(1, count + 1):
             problems.append(
                 f"### {number}. 테스트 문제\n"
                 "<!-- source: Part 1/page_0001.jpg -->\n"
@@ -57,18 +62,6 @@ class MockValidationTest(unittest.TestCase):
             answers.append(f"### {number}.\n\n테스트 정답\n")
         (directory / "실기_모의_문제.md").write_text("\n".join(problems), encoding="utf-8")
         (directory / "실기_모의_정답.md").write_text("\n".join(answers), encoding="utf-8")
-
-    def write_manifest(self, path: Path, stable_id: str, *, lap: int | None = None) -> Path:
-        path.parent.mkdir(parents=True, exist_ok=True)
-        manifest = {
-            "round": 1,
-            "total": 1,
-            "items": [{"exam_no": 1, "stable_id": stable_id, "answer": "①"}],
-        }
-        if lap is not None:
-            manifest["lap"] = lap
-        path.write_text(json.dumps(manifest, ensure_ascii=False), encoding="utf-8")
-        return path
 
     def make_round(self, directory: Path, *, source: str = "Part 1/page_0001.jpg") -> Path:
         directory.mkdir(parents=True, exist_ok=True)
@@ -306,43 +299,24 @@ class MockValidationTest(unittest.TestCase):
             self.make_practical_round(directory)
             self.assertEqual(validate_practical_round(directory), [])
 
+    def test_custom_ids_and_arbitrary_practical_count_are_allowed(self) -> None:
+        self.assertIsNotNone(STABLE_ID_RE.fullmatch("1:1:1:custom:1"))
+        self.assertIsNotNone(PRACTICAL_ID_RE.fullmatch("4:1:1:custom:1"))
+        with tempfile.TemporaryDirectory() as tmp:
+            directory = Path(tmp)
+            self.make_practical_round(
+                directory,
+                id_template="4:1:1:custom:{number}",
+                count=3,
+            )
+            self.assertEqual(validate_practical_round(directory, ROOT), [])
+
     def test_malformed_practical_ids_are_reported_without_crashing(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
             directory = Path(tmp)
             self.make_practical_round(directory, id_template="malformed-{number}")
             messages = [issue.message for issue in validate_practical_round(directory, ROOT)]
         self.assertIn("실기 id 주석 누락 또는 형식 오류", messages)
-
-    def test_first_lap_reuse_is_rejected_but_later_lap_reuse_is_allowed(self) -> None:
-        stable_id = "1:1:1:exam:1"
-        with tempfile.TemporaryDirectory() as tmp:
-            root = Path(tmp)
-            first = self.write_manifest(
-                root / "output/mock_exam/필기/통합/1회차/manifest.json",
-                stable_id,
-            )
-            same_lap = self.write_manifest(
-                root / "output/mock_exam/필기/1과목/1회차/manifest.json",
-                stable_id,
-                lap=1,
-            )
-            later_lap = self.write_manifest(
-                root / "output/mock_exam/필기/1과목/2회차/manifest.json",
-                stable_id,
-                lap=2,
-            )
-
-            direct_issues = validate_first_lap_stable_id_reuse([first, same_lap])
-            self.assertEqual(len(direct_issues), 1)
-            self.assertIn("1차 lap stable_id 재사용", direct_issues[0].message)
-            self.assertEqual(validate_first_lap_stable_id_reuse([first, later_lap]), [])
-
-            _, _, _, all_issues = validate_all(root)
-            reuse_messages = [
-                issue.message for issue in all_issues if "1차 lap stable_id 재사용" in issue.message
-            ]
-            self.assertEqual(len(reuse_messages), 1)
-
 
 if __name__ == "__main__":
     unittest.main()

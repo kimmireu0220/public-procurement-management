@@ -16,13 +16,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 SOURCE_DIR = ROOT / "output" / "chapter_lectures"
 OUTPUT_DIR = ROOT / "docs" / "lecture"
-REQUIRED_META = {"subject", "subject_title", "part", "part_title", "chapter", "title"}
-EXPECTED_CHAPTERS = {
-    1: {1: 4, 2: 3, 3: 4, 4: 5, 5: 5, 6: 6, 7: 2},
-    2: {1: 5, 2: 4, 3: 5, 4: 14},
-    3: {1: 4, 2: 3, 3: 2, 4: 13},
-    4: {1: 3, 2: 3, 3: 3, 4: 4, 5: 3, 6: 4, 7: 3, 8: 2},
-}
+BASE_META = {"subject", "subject_title", "title"}
+CHAPTER_META = {"part", "part_title", "chapter"}
 ACTIVE_STATUSES = {"published", "in_progress"}
 
 
@@ -77,7 +72,9 @@ def parse_front_matter(path: Path) -> Lecture:
             raise ValueError(f"잘못된 front matter: {path}: {line}")
         meta[key.strip()] = value.strip()
 
-    missing = REQUIRED_META - meta.keys()
+    kind = meta.get("kind", "chapter")
+    required = BASE_META | (CHAPTER_META if kind not in {"overview", "review"} else set())
+    missing = required - meta.keys()
     if missing:
         raise ValueError(f"필수 metadata 누락 {sorted(missing)}: {path}")
 
@@ -85,11 +82,11 @@ def parse_front_matter(path: Path) -> Lecture:
         source=path,
         subject=int(meta["subject"]),
         subject_title=meta["subject_title"],
-        part=int(meta["part"]),
-        part_title=meta["part_title"],
-        chapter=int(meta["chapter"]),
+        part=int(meta.get("part", "0")),
+        part_title=meta.get("part_title", ""),
+        chapter=int(meta.get("chapter", "0")),
         title=meta["title"],
-        kind=meta.get("kind", "chapter"),
+        kind=kind,
         body=body.strip() + "\n",
     )
 
@@ -105,9 +102,8 @@ def load_lectures() -> list[Lecture]:
     for slug in sorted(published_slugs):
         subject_dir = SOURCE_DIR / slug
         source_paths.extend(
-            path for path in subject_dir.glob("*.md") if path.name != "README.md"
+            path for path in subject_dir.rglob("*.md") if path.name != "README.md"
         )
-        source_paths.extend(subject_dir.glob("part*/*.md"))
     lectures = [parse_front_matter(path) for path in source_paths]
     lectures.sort(key=lambda item: (item.subject, item.part, item.chapter))
     validate_lectures(lectures)
@@ -116,7 +112,6 @@ def load_lectures() -> list[Lecture]:
 
 def validate_lectures(lectures: list[Lecture]) -> None:
     seen: set[tuple[int, int, int, str]] = set()
-    by_part: dict[tuple[int, int], list[int]] = {}
     subject_titles: dict[int, str] = {}
     part_titles: dict[tuple[int, int], str] = {}
 
@@ -133,49 +128,6 @@ def validate_lectures(lectures: list[Lecture]) -> None:
             if part_key in part_titles and part_titles[part_key] != lecture.part_title:
                 raise ValueError(f"Part명이 일치하지 않습니다: {lecture.source}")
             part_titles[part_key] = lecture.part_title
-            by_part.setdefault(part_key, []).append(lecture.chapter)
-
-        required_sections = ("## ① 한눈에 보기", "## ② 차근차근 설명", "## ③ 시험 포인트", "## ④ 암기 체크리스트")
-        if lecture.is_chapter and any(section not in lecture.body for section in required_sections):
-            raise ValueError(f"강의 필수 섹션이 없습니다: {lecture.source}")
-
-    for part_key, chapters in by_part.items():
-        expected = list(range(1, max(chapters) + 1))
-        if chapters != expected:
-            raise ValueError(f"Chapter 번호가 연속적이지 않습니다: {part_key}: {chapters}")
-
-    catalog = json.loads((SOURCE_DIR / "catalog.json").read_text(encoding="utf-8"))
-    subject_status = {int(item["id"]): str(item.get("status", "planned")) for item in catalog["subjects"]}
-    for subject, expected_parts in EXPECTED_CHAPTERS.items():
-        actual_parts = {
-            part: len(chapters)
-            for (item_subject, part), chapters in by_part.items()
-            if item_subject == subject
-        }
-        if subject_status.get(subject) == "in_progress":
-            present_parts = sorted(actual_parts)
-            if not present_parts:
-                raise ValueError(f"{subject}과목은 진행 중이지만 공개 Chapter가 없습니다")
-            if present_parts != list(range(1, present_parts[-1] + 1)):
-                raise ValueError(f"{subject}과목 Part가 앞에서부터 연속적이지 않습니다: {actual_parts}")
-            for part in present_parts:
-                actual_count = actual_parts[part]
-                expected_count = expected_parts.get(part)
-                if expected_count is None or not 1 <= actual_count <= expected_count:
-                    raise ValueError(
-                        f"{subject}과목 Part {part} 공개 범위가 잘못되었습니다: "
-                        f"expected<= {expected_count}, actual={actual_count}"
-                    )
-                if part != present_parts[-1] and actual_count != expected_count:
-                    raise ValueError(
-                        f"{subject}과목은 이전 Part를 완료한 뒤 다음 Part를 공개해야 합니다: "
-                        f"Part {part} expected={expected_count}, actual={actual_count}"
-                    )
-        elif subject_status.get(subject) == "published" and actual_parts != expected_parts:
-            raise ValueError(
-                f"{subject}과목 Part·Chapter 구성이 다릅니다: "
-                f"expected={expected_parts}, actual={actual_parts}"
-            )
 
 
 def inline_markup(text: str) -> str:

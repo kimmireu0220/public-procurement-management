@@ -27,7 +27,6 @@ from subject3.bank import PROBLEM_MD as SUBJECT3_PROBLEM_MD  # noqa: E402
 from subject3.bank import load_questions_index as load_subject3_questions  # noqa: E402
 
 OUTPUT_DIR = DOCS / "study"
-EXPECTED_PAGE_COUNT = 15
 CHOICE_KEYS = {"①": "1", "②": "2", "③": "3", "④": "4"}
 
 
@@ -35,9 +34,9 @@ CHOICE_KEYS = {"①": "1", "②": "2", "③": "3", "④": "4"}
 class StudySubject:
     subject: int
     title: str
-    parts: tuple[int, ...]
     problem_md: Path
     load_questions: Callable[[], dict[str, dict]]
+    question_types: frozenset[str] = frozenset({"exam"})
 
 
 @dataclass(frozen=True)
@@ -67,21 +66,18 @@ SUBJECTS = (
     StudySubject(
         subject=1,
         title="공공조달과 법제도 이해",
-        parts=tuple(range(1, 8)),
         problem_md=SUBJECT1_PROBLEM_MD,
         load_questions=load_subject1_questions,
     ),
     StudySubject(
         subject=2,
         title="공공조달계획 수립 및 분석",
-        parts=tuple(range(1, 5)),
         problem_md=SUBJECT2_PROBLEM_MD,
         load_questions=load_subject2_questions,
     ),
     StudySubject(
         subject=3,
         title="공공계약관리",
-        parts=tuple(range(1, 5)),
         problem_md=SUBJECT3_PROBLEM_MD,
         load_questions=load_subject3_questions,
     ),
@@ -143,26 +139,20 @@ def _public_question(
 
 
 def collect_subject_pages(subject: StudySubject) -> list[StudyPage]:
-    grouped: dict[int, list[tuple[int, int, str, dict]]] = {
-        part: [] for part in subject.parts
-    }
+    grouped: dict[int, list[tuple[int, int, str, dict]]] = {}
     for stable_id, bank_question in subject.load_questions().items():
         sid_subject, part, chapter, question_type, question_number = _stable_id_parts(stable_id)
         if sid_subject != subject.subject:
             raise ValueError(
                 f"{stable_id}: {subject.subject}과목 문제은행에 다른 과목 ID가 포함됨"
             )
-        if question_type != "exam":
+        if question_type not in subject.question_types:
             continue
-        if part not in grouped:
-            raise ValueError(f"{stable_id}: 공개 대상에 없는 Part {part}")
-        grouped[part].append((chapter, question_number, stable_id, bank_question))
+        grouped.setdefault(part, []).append((chapter, question_number, stable_id, bank_question))
 
     pages: list[StudyPage] = []
-    for part in subject.parts:
+    for part in sorted(grouped):
         entries = sorted(grouped[part], key=lambda item: (item[0], item[1], item[2]))
-        if not entries:
-            raise ValueError(f"{subject.subject}과목 Part {part}: exam 문항 없음")
         questions = [
             _public_question(index, subject, part, chapter, stable_id, bank_question)
             for index, (chapter, _number, stable_id, bank_question) in enumerate(entries, 1)
@@ -172,10 +162,7 @@ def collect_subject_pages(subject: StudySubject) -> list[StudyPage]:
 
 
 def collect_pages() -> list[StudyPage]:
-    pages = [page for subject in SUBJECTS for page in collect_subject_pages(subject)]
-    if len(pages) != EXPECTED_PAGE_COUNT:
-        raise ValueError(f"학습 CBT는 {EXPECTED_PAGE_COUNT}개여야 함: actual={len(pages)}")
-    return pages
+    return [page for subject in SUBJECTS for page in collect_subject_pages(subject)]
 
 
 def render_study_html(page: StudyPage) -> str:
@@ -263,11 +250,12 @@ body {{ margin:0; background:var(--bg); color:var(--text); font-family:"Apple SD
 
 
 def page_meta(page: StudyPage) -> dict:
+    question_types = sorted({question["id"].split(":")[3] for question in page.questions})
     return {
         "kind": "study",
         "subject": page.subject.subject,
         "part": page.part,
-        "stype": "exam",
+        "stype": question_types[0] if len(question_types) == 1 else "mixed",
         "total": len(page.questions),
         "source": str(page.subject.problem_md.relative_to(ROOT)),
         "note": "GitHub Pages — 문제은행 학습 CBT (정답 미포함)",

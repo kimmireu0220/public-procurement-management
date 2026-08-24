@@ -15,8 +15,8 @@ from question_bank import QuestionBankParseError
 
 ANSWER_RE = re.compile(r"^(\d+)\.\s*([①②③④])\s*—", re.MULTILINE)
 SOURCE_RE = re.compile(r"<!--\s*source:\s*([^>]*)-->")
-STABLE_ID_RE = re.compile(r"^[1-3]:\d+:\d+:(?:exam|check|cqa):\d+$")
-PRACTICAL_ID_RE = re.compile(r"^4:\d+:\d+:(?:essay|final):\d+$")
+STABLE_ID_RE = re.compile(r"^[1-3]:\d+:\d+:(?:exam|check|cqa|custom):\d+$")
+PRACTICAL_ID_RE = re.compile(r"^4:\d+:\d+:(?:essay|final|custom):\d+$")
 PRACTICAL_QUESTION_RE = re.compile(r"^###\s+(\d+)\.\s+", re.MULTILINE)
 PRACTICAL_ANSWER_RE = re.compile(r"^###\s+(\d+)\.\s*$", re.MULTILINE)
 VALID_ANSWERS = {"①", "②", "③", "④"}
@@ -69,9 +69,6 @@ def _validate_manifest_profile(
     profile: CbtProfile | None,
 ) -> tuple[int | None, list[ValidationIssue]]:
     issues: list[ValidationIssue] = []
-    lap = manifest.get("lap", 1)
-    if isinstance(lap, bool) or not isinstance(lap, int) or lap < 1:
-        issues.append(ValidationIssue(manifest_path, "manifest lap은 1 이상의 정수여야 함"))
     round_match = ROUND_DIR_RE.fullmatch(manifest_path.parent.name)
     directory_round = int(round_match.group(1)) if round_match else None
     if round_match is None:
@@ -162,6 +159,8 @@ def _validate_source_images(
         if not isinstance(stable_id, str):
             issues.append(ValidationIssue(problem_path, "stable_id 형식 오류로 source 검증 불가"))
             continue
+        if len(stable_id.split(":")) == 5 and stable_id.split(":")[3] == "custom":
+            continue
         subject = stable_id.split(":", 1)[0]
         part_match = re.search(r"Part\s+(\d+)/", source)
         if subject not in SUBJECT_SLUGS or not part_match:
@@ -229,6 +228,8 @@ def _validate_written_bank(
     for item, question in zip(items, questions):
         stable_id = item.get("stable_id")
         if not isinstance(stable_id, str) or not STABLE_ID_RE.fullmatch(stable_id):
+            continue
+        if stable_id.split(":")[3] == "custom":
             continue
         try:
             bank_question, bank_answer = fetchers[stable_id[0]](stable_id)
@@ -316,6 +317,8 @@ def _validate_practical_bank(problem_path: Path, stable_ids: list[str], root: Pa
             if line.strip() and not line.strip().startswith("<!--")
         )
         _, part, chapter, question_type, question_number = stable_id.split(":")
+        if question_type == "custom":
+            continue
         section = "핵심 최종점검" if question_type == "final" else "서술형 출제예상문제"
         part_match = re.search(
             rf"(?ms)^## Part {part} 문제집\s*$.*?(?=^## Part \d+ 문제집\s*$|\Z)",
@@ -339,56 +342,6 @@ def _validate_practical_bank(problem_path: Path, stable_ids: list[str], root: Pa
             issues.append(ValidationIssue(problem_path, f"{stable_id}: 실기 문제은행 문항 조회 실패"))
         elif _normalize(mock_stem) != _normalize(match.group(1)):
             issues.append(ValidationIssue(problem_path, f"{stable_id}: 실기 문제은행 지문 불일치"))
-    return issues
-
-
-def validate_first_lap_stable_id_reuse(
-    manifest_paths: list[Path],
-) -> list[ValidationIssue]:
-    """lap 1 manifest끼리의 stable_id 재사용을 검사한다.
-
-    lap 필드가 없으면 1로 간주하고, lap 2 이상은 이전 문항 재사용을 허용한다.
-    """
-
-    issues: list[ValidationIssue] = []
-    owners: dict[str, Path] = {}
-    for manifest_path in manifest_paths:
-        try:
-            manifest = _read_json(manifest_path)
-        except (OSError, json.JSONDecodeError):
-            continue
-
-        lap = manifest.get("lap", 1)
-        if isinstance(lap, bool) or not isinstance(lap, int) or lap < 1:
-            # 잘못된 값으로 lap 1 중복 검사를 우회하지 못하게 한다.
-            lap = 1
-        if lap >= 2:
-            continue
-
-        items = manifest.get("items")
-        if not isinstance(items, list):
-            continue
-        manifest_ids: set[str] = set()
-        for item in items:
-            if not isinstance(item, dict):
-                continue
-            stable_id = item.get("stable_id")
-            if not isinstance(stable_id, str) or not STABLE_ID_RE.fullmatch(stable_id):
-                continue
-            if stable_id in manifest_ids:
-                # 회차 내부 중복은 validate_round가 별도로 보고한다.
-                continue
-            manifest_ids.add(stable_id)
-            owner = owners.get(stable_id)
-            if owner is None:
-                owners[stable_id] = manifest_path
-                continue
-            issues.append(
-                ValidationIssue(
-                    manifest_path,
-                    f"1차 lap stable_id 재사용: {stable_id} (기존: {owner})",
-                )
-            )
     return issues
 
 
@@ -461,8 +414,6 @@ def validate_round(manifest_path: Path, root: Path | None = None) -> list[Valida
             issues.append(ValidationIssue(problem_path, "source 주석 누락 또는 빈 값"))
         if len(sources) == len(stable_ids):
             issues.extend(_validate_source_parts(problem_path, sources, stable_ids))
-        if re.search(r"\(O/X\)", problem_text, re.IGNORECASE):
-            issues.append(ValidationIssue(problem_path, "실제 필기에 없는 O/X 문항 포함"))
         if root is not None and len(questions) == len(items):
             issues.extend(_validate_written_bank(problem_path, items, questions))
         if root is not None and len(sources) == len(stable_ids):
@@ -489,20 +440,6 @@ def validate_round(manifest_path: Path, root: Path | None = None) -> list[Valida
         issues.extend(_validate_round_html(round_dir, questions, directory_round, profile))
     else:
         issues.extend(_validate_round_html(round_dir, [], directory_round, profile))
-    by_subject: dict[str, list[str]] = {}
-    for sid in stable_ids:
-        if isinstance(sid, str) and STABLE_ID_RE.fullmatch(sid):
-            by_subject.setdefault(sid.split(":", 1)[0], []).append(sid)
-    for subject, subject_ids in by_subject.items():
-        check_count = sum(sid.split(":")[3] in {"check", "cqa"} for sid in subject_ids)
-        if check_count / len(subject_ids) > 0.20:
-            issues.append(
-                ValidationIssue(
-                    manifest_path,
-                    f"{subject}과목 Check Q&A {check_count}/{len(subject_ids)}로 20% 초과",
-                )
-            )
-
     return issues
 
 
@@ -518,7 +455,6 @@ def validate_published_docs(root: Path) -> list[ValidationIssue]:
     ]
     for meta_path in meta_paths:
         if not meta_path.is_file():
-            issues.append(ValidationIssue(meta_path, "배포 메타 누락"))
             continue
         try:
             meta = _read_json(meta_path)
@@ -574,11 +510,6 @@ def validate_practical_round(round_dir: Path, root: Path | None = None) -> list[
     expected_numbers = list(range(1, len(question_numbers) + 1))
     if question_numbers != expected_numbers:
         issues.append(ValidationIssue(problem_path, "실기 문제 번호가 1부터 연속되지 않음"))
-    if not 15 <= len(question_numbers) <= 25:
-        issues.append(
-            ValidationIssue(problem_path, f"실기 문항 수 {len(question_numbers)}개가 20문항 내외 범위를 벗어남")
-        )
-
     sources = [source.strip() for source in SOURCE_RE.findall(problem_text)]
     ids = [value.strip() for value in re.findall(r"<!--\s*id:\s*([^>]*)-->", problem_text)]
     if len(sources) != len(question_numbers) or any(not source for source in sources):
@@ -609,7 +540,6 @@ def validate_all(root: Path) -> tuple[int, int, int, list[ValidationIssue]]:
         except (OSError, json.JSONDecodeError):
             pass
         issues.extend(validate_round(manifest_path, root))
-    issues.extend(validate_first_lap_stable_id_reuse(manifests))
     practical_rounds = sorted(
         path.parent
         for path in (root / "output" / "mock_exam" / "실기").glob("*회차/실기_모의_문제.md")

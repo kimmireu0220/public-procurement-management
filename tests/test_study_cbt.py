@@ -29,16 +29,12 @@ def questions_from_html(rendered: str) -> list[dict]:
 
 
 class StudyCbtTest(unittest.TestCase):
-    def test_collects_all_fifteen_exam_parts_in_stable_order(self) -> None:
+    def test_collects_discovered_parts_in_stable_order(self) -> None:
         pages = build_study_cbt.collect_pages()
 
-        self.assertEqual(len(pages), 15)
-        self.assertEqual(
-            [(page.subject.subject, page.part) for page in pages],
-            [(1, part) for part in range(1, 8)]
-            + [(2, part) for part in range(1, 5)]
-            + [(3, part) for part in range(1, 5)],
-        )
+        self.assertTrue(pages)
+        page_keys = [(page.subject.subject, page.part) for page in pages]
+        self.assertEqual(page_keys, sorted(set(page_keys)))
         for page in pages:
             self.assertTrue(page.questions)
             self.assertEqual(
@@ -47,13 +43,17 @@ class StudyCbtTest(unittest.TestCase):
             )
             self.assertTrue(all(question["id"].split(":")[3] == "exam" for question in page.questions))
 
+        generated: dict[int, tuple[tuple[int, int], ...]] = {}
         for subject in build_study_cbt.SUBJECTS:
-            generated_parts = tuple(
+            generated[subject.subject] = tuple(
                 (page.part, len(page.questions))
                 for page in pages
                 if page.subject.subject == subject.subject
             )
-            self.assertEqual(site_portal.STUDY_PARTS[subject.subject], generated_parts)
+        rendered = site_portal._study_groups(generated)
+        for page in pages:
+            self.assertIn(f'href="study/{page.slug}/"', rendered)
+            self.assertIn(f"{len(page.questions)}문항", rendered)
 
     def test_build_publishes_only_question_data_and_generated_metadata(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:

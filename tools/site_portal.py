@@ -9,6 +9,7 @@ from dataclasses import dataclass
 from pathlib import Path
 
 from build_lecture_pages import load_lectures
+from cbt.profiles import FULL_MOCK, SUBJECT1, SUBJECT2, SUBJECT3
 
 ROOT = Path(__file__).resolve().parents[1]
 DOCS = ROOT / "docs"
@@ -19,14 +20,9 @@ SUBJECTS = {
     3: "공공계약관리",
 }
 SUBJECT_MOCKS = {
-    1: (30, 45),
-    2: (20, 30),
-    3: (30, 45),
-}
-STUDY_PARTS = {
-    1: ((1, 113), (2, 71), (3, 109), (4, 75), (5, 107), (6, 128), (7, 67)),
-    2: ((1, 112), (2, 58), (3, 65), (4, 100)),
-    3: ((1, 108), (2, 92), (3, 75), (4, 115)),
+    1: SUBJECT1,
+    2: SUBJECT2,
+    3: SUBJECT3,
 }
 
 
@@ -71,10 +67,12 @@ def published_rounds() -> list[int]:
 
 def _round_cards(rounds: list[int]) -> str:
     latest = max(rounds)
+    minutes = FULL_MOCK.duration_sec // 60
     return "".join(
         f'<a class="choice-card featured" href="mock/{round_no}회차/">'
         f'<span class="card-kicker">통합 모의고사</span><strong>{round_no}회차</strong>'
-        f'<span>80문항 · 120분</span>{"<em>최신</em>" if round_no == latest else ""}</a>'
+        f'<span>{FULL_MOCK.question_count}문항 · {minutes}분</span>'
+        f'{"<em>최신</em>" if round_no == latest else ""}</a>'
         for round_no in rounds
     )
 
@@ -83,14 +81,32 @@ def _subject_mock_cards() -> str:
     return "".join(
         f'<a class="choice-card" href="{subject}과목/">'
         f'<span class="card-kicker">과목별 모의고사</span><strong>{subject}과목</strong>'
-        f'<span>{count}문항 · {minutes}분</span></a>'
-        for subject, (count, minutes) in SUBJECT_MOCKS.items()
+        f'<span>{profile.question_count}문항 · {profile.duration_sec // 60}분</span></a>'
+        for subject, profile in SUBJECT_MOCKS.items()
     )
 
 
-def _study_groups() -> str:
+def study_parts() -> dict[int, tuple[tuple[int, int], ...]]:
+    grouped: dict[int, list[tuple[int, int]]] = defaultdict(list)
+    for meta_path in (DOCS / "study").glob("*/study-meta.json"):
+        try:
+            meta = json.loads(meta_path.read_text(encoding="utf-8"))
+            subject = int(meta["subject"])
+            part = int(meta["part"])
+            total = int(meta["total"])
+        except (OSError, KeyError, TypeError, ValueError, json.JSONDecodeError):
+            continue
+        grouped[subject].append((part, total))
+    return {
+        subject: tuple(sorted(set(parts)))
+        for subject, parts in sorted(grouped.items())
+    }
+
+
+def _study_groups(parts_by_subject: dict[int, tuple[tuple[int, int], ...]] | None = None) -> str:
     groups: list[str] = []
-    for subject, parts in STUDY_PARTS.items():
+    selected = study_parts() if parts_by_subject is None else parts_by_subject
+    for subject, parts in selected.items():
         links = "".join(
             f'<a class="mini-card" href="study/{subject}과목-part{part}-exam/">'
             f'<strong>Part {part}</strong><span>{count}문항</span></a>'
@@ -98,7 +114,7 @@ def _study_groups() -> str:
         )
         groups.append(
             '<details class="subject-group">'
-            f'<summary><span><b>{subject}과목</b> · {html.escape(SUBJECTS[subject])}</span>'
+            f'<summary><span><b>{subject}과목</b> · {html.escape(SUBJECTS.get(subject, f"{subject}과목"))}</span>'
             f'<small>{len(parts)}개 Part</small></summary><div class="mini-grid">{links}</div></details>'
         )
     return "".join(groups)
@@ -175,7 +191,7 @@ a{{color:inherit}}.hero{{background:linear-gradient(135deg,#102f50,#1763a6);colo
 <body>
 <header class="hero"><div class="hero-inner"><span class="eyebrow">PUBLIC PROCUREMENT MANAGER</span><h1>공공조달관리사 학습센터</h1><p>모의고사부터 문제은행, 이론 강의까지 필요한 학습을 한곳에서 선택하세요.</p><nav class="quick-nav" aria-label="학습 메뉴"><a href="#full-mock">통합 모의고사</a><a href="#subject-mock">과목별 모의고사</a><a href="#study-bank">문제은행</a><a href="#lectures">이론 강의</a></nav></div></header>
 <main class="page">
-<section class="section" id="full-mock"><div class="section-head"><h2>통합 필기 모의고사</h2><p>실전과 같은 80문항 · 120분</p></div><div class="choice-grid">{_round_cards(rounds)}</div></section>
+<section class="section" id="full-mock"><div class="section-head"><h2>통합 필기 모의고사</h2><p>실전과 같은 {FULL_MOCK.question_count}문항 · {FULL_MOCK.duration_sec // 60}분</p></div><div class="choice-grid">{_round_cards(rounds)}</div></section>
 <section class="section" id="subject-mock"><div class="section-head"><h2>과목별 모의고사</h2><p>집중해서 연습할 과목을 선택하세요</p></div><div class="choice-grid">{_subject_mock_cards()}</div></section>
 <section class="section" id="study-bank"><div class="section-head"><h2>문제은행 Part별 학습</h2><p>과목을 펼쳐 바로 시작하세요</p></div>{_study_groups()}</section>
 <section class="section" id="lectures"><div class="section-head"><h2>Chapter 이론 강의</h2><p>개념 · 시험 포인트 · 암기 체크</p></div>{_lecture_groups(lecture_items)}</section>

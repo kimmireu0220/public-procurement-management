@@ -13,6 +13,7 @@ if str(TOOLS) not in sys.path:
     sys.path.insert(0, str(TOOLS))
 
 import publish_cbt_pages  # noqa: E402
+import site_portal  # noqa: E402
 from cbt.profiles import CbtProfile  # noqa: E402
 from publish_cbt_pages import render_full_round_list  # noqa: E402
 
@@ -49,35 +50,11 @@ class PublishCbtPagesTest(unittest.TestCase):
             self.assertIn(f"<strong>{round_no}회차</strong>", rendered)
         self.assertIn("공공조달관리사 학습센터", rendered)
         self.assertIn('href="1과목/"', rendered)
-        self.assertIn('href="study/1과목-part1-exam/"', rendered)
-        self.assertIn('href="lecture/1/overview/"', rendered)
-        self.assertIn('href="lecture/1/part01/chapter01/"', rendered)
-        self.assertIn('href="lecture/1/review/total-review/"', rendered)
-        self.assertIn('href="lecture/2/part01/chapter01/"', rendered)
-        self.assertIn('href="lecture/2/part04/chapter14/"', rendered)
-        self.assertIn('href="lecture/2/review/total-review/"', rendered)
-        self.assertIn("2과목 총정리", rendered)
-        self.assertIn('href="lecture/3/part01/chapter01/"', rendered)
-        self.assertIn('href="lecture/3/overview/"', rendered)
-        self.assertIn('href="lecture/3/part04/chapter13/"', rendered)
-        self.assertIn('href="lecture/3/review/total-review/"', rendered)
-        self.assertIn("3과목 총정리", rendered)
-        self.assertIn('href="lecture/4/overview/"', rendered)
-        self.assertIn('href="lecture/4/part01/chapter01/"', rendered)
-        self.assertIn('href="lecture/4/part04/chapter04/"', rendered)
-        self.assertIn('href="lecture/4/part05/chapter01/"', rendered)
-        self.assertIn('href="lecture/4/part05/chapter02/"', rendered)
-        self.assertIn('href="lecture/4/part05/chapter03/"', rendered)
-        self.assertIn('href="lecture/4/part06/chapter01/"', rendered)
-        self.assertIn('href="lecture/4/part06/chapter02/"', rendered)
-        self.assertIn('href="lecture/4/part06/chapter03/"', rendered)
-        self.assertIn('href="lecture/4/part06/chapter04/"', rendered)
-        self.assertIn('href="lecture/4/part07/chapter01/"', rendered)
-        self.assertIn('href="lecture/4/part07/chapter02/"', rendered)
-        self.assertIn('href="lecture/4/part07/chapter03/"', rendered)
-        self.assertIn('href="lecture/4/part08/chapter01/"', rendered)
-        self.assertIn('href="lecture/4/part08/chapter02/"', rendered)
-        self.assertIn("4과목 개요", rendered)
+        for subject, parts in site_portal.study_parts().items():
+            for part, _count in parts:
+                self.assertIn(f'href="study/{subject}과목-part{part}-exam/"', rendered)
+        for lecture in site_portal.lecture_links():
+            self.assertIn(f'href="{lecture.url}"', rendered)
         self.assertEqual(rendered.count("<em>최신</em>"), 1)
 
     def test_publishing_third_round_keeps_all_rounds_selectable(self) -> None:
