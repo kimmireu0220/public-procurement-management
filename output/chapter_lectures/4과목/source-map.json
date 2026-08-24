@@ -1,0 +1,563 @@
+{
+  "schema_version": 2,
+  "subject": 4,
+  "subject_title": "공공조달 관리실무",
+  "created_at": "2026-08-24",
+  "basis_policy": {
+    "curriculum_primary": "한국산업인력공단 국가기술자격 출제기준",
+    "learning_reference": "조달청 공공조달관리사 표준교재 4권",
+    "current_practice": "기준일 현재 국가법령정보센터 공식 원문",
+    "private_source_role": "완성 후 유사성 점검에만 사용하며 문항·해설·고유 사례를 재사용하지 않음"
+  },
+  "criteria_source": {
+    "id": "qnet_ppm_criteria_2026_2028",
+    "publisher": "한국산업인력공단",
+    "official_index_url": "https://www.q-net.or.kr/crf005.do?gSite=Q&id=crf00503s02&jmCd=9777&jmInfoDivCcd=B0",
+    "qnet_report_id": "1254",
+    "public_copy_url": "https://att.pmg.co.kr/EtcData/board/5547/%EA%B3%B5%EA%B3%B5%EC%A1%B0%EB%8B%AC%EA%B4%80%EB%A6%AC%EC%82%AC%20%EC%B6%9C%EC%A0%9C%EA%B8%B0%EC%A4%80_20260204%20%ED%81%90%EB%84%B7.pdf",
+    "public_copy_role": "공식 원문이 아닌 공개 접근용 미러이며 Q-Net 공식 시험정보와 보고서 식별자를 우선 기록",
+    "applicable_period": "2026-03-01/2028-12-31",
+    "retrieved_at": "2026-08-24",
+    "sha256": "271dc108c68ec1a84586f291e0ce8300d28564693afa0aeef2e071127a03dbcb",
+    "verification_level": "official_index_and_all_subject4_pages_visually_and_text_checked",
+    "subject4_structure": {
+      "major_criteria": 8,
+      "chapters": 25,
+      "fine_criteria": 91,
+      "pdf_pages": "11-18"
+    },
+    "normalized_source_typos": [
+      {
+        "pdf_page": 12,
+        "source_text": "경쟁입참참가자격등록증",
+        "normalized_text": "경쟁입찰참가자격등록증"
+      },
+      {
+        "pdf_page": "14-15",
+        "source_text": "계약 변경 관리하리",
+        "normalized_text": "계약 변경 관리하기"
+      }
+    ]
+  },
+  "textbook_source": {
+    "id": "pps_standard_textbook_subject4_2026",
+    "publisher": "조달청 공공조달역량개발원",
+    "official_notice_url": "https://www.pps.go.kr/hrd/home/UserBoardActionUpdate.do?BO_CODE=REFERENCE_ROOM&BO_IDX=6582&CHILD_MENU=MENU209&method=detail",
+    "local_path": "sources/공식_조달청_표준교재_pdf/4과목_공공조달 관리실무/교재.pdf",
+    "sha256": "cf307d80f079be5035c8de1a183b203d3605ece06f673d9cc5430a5e52e94e6a",
+    "rights": "공공누리 제3유형 출처표시·변경금지; 강의는 원문·화면을 복제하지 않고 사실과 절차를 자체 서술",
+    "notice_warning": "표준교재는 출제기준이 아니며 오류·누락·법령 미반영 가능성이 있다고 게시기관이 명시함"
+  },
+  "current_law_source": {
+    "manifest": "sources/현행_법령_근거/manifest.json",
+    "retrieved_at": "2026-08-16",
+    "lesson_legal_cutoff": "2026-08-24",
+    "policy": "숫자·기한·비율·법적 효과는 교재 서술보다 적용시점의 공식 원문을 우선하고, 교재와 다르면 둘을 구분해 설명"
+  },
+  "part_source_strategy": {
+    "1": "표준교재 7-61쪽 + 입찰참가자격등록규정·목록정보 규정·직접생산 기준·최신 나라장터 매뉴얼",
+    "2": "표준교재 63-137쪽 + 국가·지방계약 발주계획 규정·조달정보개방포털·실제 공고·규격서",
+    "3": "표준교재 93-174쪽 + 예정가격 작성기준·협상계약 기준·제안서평가 세부기준·개별 평가표",
+    "4": "표준교재 175-244쪽 + 국가·지방계약법령·정부 입찰계약 집행기준·계약유형별 일반조건",
+    "5": "표준교재 199-369쪽 + 공사·물품·용역 계약일반조건·하도급법·조달사업법·MAS 규정",
+    "6": "표준교재에 직접 대응 장 없음; 공식 출제기준 기반 자체 방법론 + 계약유형별 실제 위험사례와 현행 계약조건",
+    "7": "표준교재 393-417쪽 + 국가·지방계약법령·민법·우대제도별 법령·고시",
+    "8": "표준교재의 전자업무·정보수집 부분 + 전자조달법·등록규정·최신 나라장터 매뉴얼·공식 조달데이터 설명"
+  },
+  "legal_sources_note": "다음 목록은 1-1에서 조문 단위 검증한 상세 근거이며, 나머지 장의 상세 근거는 각 강의 말미와 현행 법령 manifest로 추적",
+  "legal_sources": [
+    {
+      "id": "state_contract_decree",
+      "title": "국가를 당사자로 하는 계약에 관한 법률 시행령",
+      "locator": "제12조",
+      "effective_date": "2026-06-03",
+      "url": "https://www.law.go.kr/LSW/lsInfoP.do?lsiSeq=285893&chrClsCd=010202&urlMode=lsInfoP&efYd=20260603&ancYnChk=0",
+      "verification_level": "article_text_checked"
+    },
+    {
+      "id": "state_contract_rule",
+      "title": "국가를 당사자로 하는 계약에 관한 법률 시행규칙",
+      "locator": "제14조·제15조",
+      "effective_date": "2026-01-02",
+      "url": "https://www.law.go.kr/LSW/lsInfoP.do?lsiSeq=282607&chrClsCd=010202&urlMode=lsInfoP&efYd=20260102&ancYnChk=0",
+      "verification_level": "article_text_checked"
+    },
+    {
+      "id": "bidder_registration",
+      "title": "국가종합전자조달시스템 입찰참가자격등록규정",
+      "locator": "제2조·제5조·제9조·제9조의2·제11조·제14조·제18조·제22조·제23조·제23조의2·제24조·제25조·제25조의2",
+      "effective_date": "2026-01-23",
+      "url": "https://www.law.go.kr/LSW/admRulLsInfoP.do?admRulSeq=2100000274756",
+      "verification_level": "article_text_checked_live_and_repository_snapshot_hash_checked"
+    },
+    {
+      "id": "sme_market_support_act",
+      "title": "중소기업제품 구매촉진 및 판로지원에 관한 법률",
+      "locator": "제9조",
+      "effective_date": "2026-07-01",
+      "url": "https://www.law.go.kr/LSW/lsInfoP.do?lsiSeq=284097&chrClsCd=010202&urlMode=lsInfoP&efYd=20260701&ancYnChk=0",
+      "verification_level": "article_text_checked"
+    },
+    {
+      "id": "sme_competitive_products_designation",
+      "title": "중소기업자간 경쟁제품 및 공사용자재 직접구매 대상 품목 지정 내역",
+      "locator": "본문·부칙",
+      "effective_date": "2025-08-29",
+      "valid_through": "2027-12-31",
+      "url": "https://www.law.go.kr/LSW/admRulInfoP.do?admRulSeq=2100000263518",
+      "verification_level": "official_notice_checked"
+    },
+    {
+      "id": "sme_direct_production_standard",
+      "title": "중소기업자간 경쟁제품 직접생산 확인기준",
+      "locator": "총칙 및 품목별 별표",
+      "effective_date": "2025-11-19",
+      "url": "https://www.law.go.kr/LSW/admRulLsInfoP.do?admRulSeq=2100000268206",
+      "verification_level": "body_and_annex_presence_checked"
+    },
+    {
+      "id": "pps_general_direct_production_standard",
+      "title": "조달청 제조물품 직접생산확인 기준",
+      "locator": "제2조~제4조·제7조~제10조",
+      "effective_date": "2024-02-01",
+      "url": "https://www.law.go.kr/LSW/admRulLsInfoP.do?admRulSeq=2100000233208",
+      "verification_level": "article_text_checked"
+    }
+  ],
+  "lessons": [
+    {
+      "id": "PPM4-P01-L01",
+      "title": "공공조달 참여 준비하기",
+      "major_criterion": "1. 공공조달 입찰 참가 준비",
+      "subcriterion": "1. 공공조달 참여 준비하기",
+      "fine_criteria": [
+        "1-1-1 관련 고유 법령과 일반제도 확인",
+        "1-1-2 경쟁입찰참가자격 요건 검토",
+        "1-1-3 직접생산확인기준 검토",
+        "1-1-4 적합한 업종 검토"
+      ],
+      "textbook_pages": "PDF·인쇄 7-8, 11, 17-19쪽",
+      "artifact": "완성·빈 입찰 참가 준비 검토표, 시험 직전 암기카드, 자체 연습문제 18선",
+      "origin": "custom",
+      "rights": {
+        "label": "자체 제작",
+        "derivative_of_private_source": false,
+        "publishable": true
+      },
+      "status": "exercise_checked",
+      "qa": {
+        "revision_completed_at": "2026-08-24",
+        "source_checked_at": "2026-08-24",
+        "exercise_checked_at": "2026-08-24",
+        "high_risk_legal_claims_checked": true,
+        "private_similarity_check": {
+          "purpose": "완성된 자체 문항과 강의 서술의 비복제 확인",
+          "files_checked": 27,
+          "questions_checked": 18,
+          "exact_question_matches": 0,
+          "normalized_long_phrase_matches": 0,
+          "exact_authored_long_line_matches": 0
+        }
+      }
+    },
+    {
+      "id": "PPM4-P01-L02",
+      "title": "입찰자격 정보관리하기",
+      "major_criterion": "1. 공공조달 입찰 참가 준비",
+      "subcriterion": "2. 입찰자격 정보관리하기",
+      "fine_criteria": [
+        "1-2-1 공급대상물 유형별 품명·세부품명 신규 등록",
+        "1-2-2 변동사항 발생 시 경쟁입찰참가자격등록증 정보 갱신",
+        "1-2-3 공급 물품 목록화",
+        "1-2-4 입찰 제출서류 요건별 준비"
+      ],
+      "textbook_pages": "PDF·인쇄 17-61쪽; 변경·갱신은 현행 등록규정·매뉴얼 보강",
+      "artifact": "자격·품명·목록정보 관리대장, 제출서류 체크리스트",
+      "origin": "custom",
+      "rights": {"label": "자체 제작", "derivative_of_private_source": false, "publishable": true},
+      "status": "draft"
+    },
+    {
+      "id": "PPM4-P01-L03",
+      "title": "경쟁입찰 참가자격신청하기",
+      "major_criterion": "1. 공공조달 입찰 참가 준비",
+      "subcriterion": "3. 경쟁입찰 참가자격신청하기",
+      "fine_criteria": [
+        "1-3-1 경쟁입찰참가자격등록 문서 작성",
+        "1-3-2 경쟁입찰참가자격등록증 세부품명 등록",
+        "1-3-3 경쟁입찰참가자격등록증 입찰대리인 등록"
+      ],
+      "textbook_pages": "PDF·인쇄 9-19쪽; 입찰대리인은 현행 등록규정·매뉴얼 보강",
+      "artifact": "등록신청 패키지, 보완·승인 추적표",
+      "origin": "custom",
+      "rights": {"label": "자체 제작", "derivative_of_private_source": false, "publishable": true},
+      "status": "draft"
+    },
+    {
+      "id": "PPM4-P02-L01",
+      "title": "환경분석하기",
+      "major_criterion": "2. 공공조달 입찰계획 수립",
+      "subcriterion": "1. 환경분석하기",
+      "fine_criteria": [
+        "2-1-1 공공조달 동향 자료 수집",
+        "2-1-2 수집 자료 기반 동향 분석",
+        "2-1-3 수요기관 조달계획 정보 식별",
+        "2-1-4 정책·제도·법률 확인",
+        "2-1-5 입찰정보 분석과 입찰 적정성 확인",
+        "2-1-6 적정성 결과 기반 수요정보 예측"
+      ],
+      "textbook_pages": "PDF·인쇄 65-78, 79-88쪽",
+      "artifact": "환경분석표, 입찰적정성 판단표, 수요예측 보고서",
+      "origin": "custom",
+      "rights": {"label": "자체 제작", "derivative_of_private_source": false, "publishable": true},
+      "status": "draft"
+    },
+    {
+      "id": "PPM4-P02-L02",
+      "title": "조달 수요정보 수집하기",
+      "major_criterion": "2. 공공조달 입찰계획 수립",
+      "subcriterion": "2. 조달 수요정보 수집하기",
+      "fine_criteria": [
+        "2-2-1 수요기관 발주계획 정보 수집",
+        "2-2-2 전자조달시스템으로 공급·공급계획 정보 수집",
+        "2-2-3 수요정보 체계적 분류·문서화"
+      ],
+      "textbook_pages": "PDF·인쇄 65-70, 79-88쪽",
+      "artifact": "발주계획·사전규격·공고 연결대장, 수요정보 카드",
+      "origin": "custom",
+      "rights": {"label": "자체 제작", "derivative_of_private_source": false, "publishable": true},
+      "status": "draft"
+    },
+    {
+      "id": "PPM4-P02-L03",
+      "title": "공급계획수립하기",
+      "major_criterion": "2. 공공조달 입찰계획 수립",
+      "subcriterion": "3. 공급계획수립하기",
+      "fine_criteria": [
+        "2-3-1 유형별 공급대상물 경제성 분석",
+        "2-3-2 품명별 기술적 요구사항에 따른 기술 적합도 검증",
+        "2-3-3 환경분석 기반 공급계획 수립"
+      ],
+      "textbook_pages": "PDF·인쇄 79-91, 95-137쪽; 기술적합도는 공고·규격서 기반 자체 보강",
+      "artifact": "경제성 분석표, 요구사항 대응표, 공급계획서",
+      "origin": "custom",
+      "rights": {"label": "자체 제작", "derivative_of_private_source": false, "publishable": true},
+      "status": "draft"
+    },
+    {
+      "id": "PPM4-P03-L01",
+      "title": "입찰서류 작성하기",
+      "major_criterion": "3. 입찰실행 관리",
+      "subcriterion": "1. 입찰서류 작성하기",
+      "fine_criteria": [
+        "3-1-1 예정가격기준에 따른 견적서 작성",
+        "3-1-2 제안요청서와 평가요소를 고려한 기술제안서 작성",
+        "3-1-3 평가기준에 부합하도록 제안서 내용 설명"
+      ],
+      "textbook_pages": "PDF·인쇄 95-137, 141-159쪽",
+      "artifact": "원가·견적 근거표, 요구사항 추적표, 발표 점검표",
+      "origin": "custom",
+      "rights": {"label": "자체 제작", "derivative_of_private_source": false, "publishable": true},
+      "status": "draft"
+    },
+    {
+      "id": "PPM4-P03-L02",
+      "title": "입찰평가 기준 검증하기",
+      "major_criterion": "3. 입찰실행 관리",
+      "subcriterion": "2. 입찰평가 기준 검증하기",
+      "fine_criteria": [
+        "3-2-1 낙찰방법별 가격·기술 점수 산정",
+        "3-2-2 낙찰자 선정방법별 예상 평가점수 산정",
+        "3-2-3 심사 규정·절차상 이해상충 문제 식별"
+      ],
+      "textbook_pages": "PDF·인쇄 149-165쪽; 공고별 산식·배점은 현행 기준 보강",
+      "artifact": "공고별 평가모형, 예상점수 시나리오, 이해상충 검증표",
+      "origin": "custom",
+      "rights": {"label": "자체 제작", "derivative_of_private_source": false, "publishable": true},
+      "status": "draft"
+    },
+    {
+      "id": "PPM4-P03-L03",
+      "title": "협상 관리하기",
+      "major_criterion": "3. 입찰실행 관리",
+      "subcriterion": "3. 협상 관리하기",
+      "fine_criteria": [
+        "3-3-1 입찰공고 요구의 추가·삭제·변경 협상",
+        "3-3-2 기술협상 중 추가·변경·삭제 과업 조정",
+        "3-3-3 조정결과에 따른 가격 증감 조정"
+      ],
+      "textbook_pages": "PDF·인쇄 166-172쪽",
+      "artifact": "요구사항 변경대장, 기술·가격 영향표, 협상합의 확인서",
+      "origin": "custom",
+      "rights": {"label": "자체 제작", "derivative_of_private_source": false, "publishable": true},
+      "status": "draft"
+    },
+    {
+      "id": "PPM4-P04-L01",
+      "title": "계약 체결 관리하기",
+      "major_criterion": "4. 계약일반관리",
+      "subcriterion": "1. 계약 체결 관리하기",
+      "fine_criteria": [
+        "4-1-1 계약서 작성에 필요한 서류 준비",
+        "4-1-2 계약 이행보증 서류 준비",
+        "4-1-3 관련 계약법에 따른 계약서 작성",
+        "4-1-4 목적·금액·기간·보증금·지체상금 등 계약내용 설명"
+      ],
+      "textbook_pages": "PDF·인쇄 177-183, 188-189, 194-196쪽",
+      "artifact": "계약체결 패키지, 보증 검토표, 핵심조건 설명서",
+      "origin": "custom",
+      "rights": {"label": "자체 제작", "derivative_of_private_source": false, "publishable": true},
+      "status": "draft"
+    },
+    {
+      "id": "PPM4-P04-L02",
+      "title": "계약 이행 관리하기",
+      "major_criterion": "4. 계약일반관리",
+      "subcriterion": "2. 계약 이행 관리하기",
+      "fine_criteria": [
+        "4-2-1 목적·대상·금액·기간 등 계약내용 파악",
+        "4-2-2 계약이행 수행절차·방법 계획 수립",
+        "4-2-3 선급금 산정·신청",
+        "4-2-4 계획에 따른 계약 수행"
+      ],
+      "textbook_pages": "PDF·인쇄 184-193, 212-240쪽; 선금 현행 기준 보강",
+      "artifact": "계약기준선, 수행계획, 선금 산정·사용·정산표, 이행대장",
+      "origin": "custom",
+      "rights": {"label": "자체 제작", "derivative_of_private_source": false, "publishable": true},
+      "status": "draft"
+    },
+    {
+      "id": "PPM4-P04-L03",
+      "title": "계약 변경 관리하기",
+      "major_criterion": "4. 계약일반관리",
+      "subcriterion": "3. 계약 변경 관리하기",
+      "fine_criteria": [
+        "4-3-1 계약 조정요건 판단",
+        "4-3-2 조정요건별 처리방법 판단",
+        "4-3-3 계약변경 서류 준비",
+        "4-3-4 물가변동·설계변경 등을 반영한 변경계약서 작성",
+        "4-3-5 변경계약 내용 설명"
+      ],
+      "textbook_pages": "PDF·인쇄 181-183, 210-212쪽; 조정요건·산식은 현행 법령·계약예규 중심 보강",
+      "artifact": "변경유형 판정표, 조정산출·증빙 패키지, 변경계약 설명서",
+      "origin": "custom",
+      "rights": {"label": "자체 제작", "derivative_of_private_source": false, "publishable": true},
+      "status": "draft"
+    },
+    {
+      "id": "PPM4-P04-L04",
+      "title": "계약 종결 관리하기",
+      "major_criterion": "4. 계약일반관리",
+      "subcriterion": "4. 계약 종결 관리하기",
+      "fine_criteria": [
+        "4-4-1 계약서·설계서·관계서류로 이행완료 판단",
+        "4-4-2 검사·검수·대금청구 등 종결서류 준비",
+        "4-4-3 계약이행 완료서류 작성",
+        "4-4-4 이행 불가 시 해제·해지 절차와 서류 작성"
+      ],
+      "textbook_pages": "PDF·인쇄 223-238쪽; 해제·해지는 현행 계약법령·일반조건 보강",
+      "artifact": "완료·검사·대금 종결목록, 해제·해지 검토·통지 패키지",
+      "origin": "custom",
+      "rights": {"label": "자체 제작", "derivative_of_private_source": false, "publishable": true},
+      "status": "draft"
+    },
+    {
+      "id": "PPM4-P05-L01",
+      "title": "공사 계약 관리하기",
+      "major_criterion": "5. 공급대상물 유형별 계약관리",
+      "subcriterion": "1. 공사 계약 관리하기",
+      "fine_criteria": [
+        "5-1-1 공사 특화 계약조건에 따른 계약 체결",
+        "5-1-2 공사 특화 계약조건에 따른 이행절차 관리",
+        "5-1-3 원수급자·하수급자 간 계약이행절차 관리"
+      ],
+      "textbook_pages": "PDF·인쇄 177-193, 212-244, 296-333쪽; 공사계약일반조건·하도급 법령 보강",
+      "artifact": "공사 계약조건표, 공정·기성·검사대장, 하도급 이행관리표",
+      "origin": "custom",
+      "rights": {"label": "자체 제작", "derivative_of_private_source": false, "publishable": true},
+      "status": "draft"
+    },
+    {
+      "id": "PPM4-P05-L02",
+      "title": "물품 계약 관리하기",
+      "major_criterion": "5. 공급대상물 유형별 계약관리",
+      "subcriterion": "2. 물품 계약 관리하기",
+      "fine_criteria": [
+        "5-2-1 물품 특화 계약조건에 따른 계약 체결",
+        "5-2-2 물품 특화 계약조건에 따른 이행절차 관리",
+        "5-2-3 다수공급자계약 특성에 따른 이행절차 관리",
+        "5-2-4 단가계약 특성에 따른 이행절차 관리"
+      ],
+      "textbook_pages": "PDF·인쇄 177-183, 212-281, 339-369쪽; 일반 단가계약은 현행 법령·조건 보강",
+      "artifact": "물품 계약·납품·검사표, MAS·단가계약 비교·이행대장",
+      "origin": "custom",
+      "rights": {"label": "자체 제작", "derivative_of_private_source": false, "publishable": true},
+      "status": "draft"
+    },
+    {
+      "id": "PPM4-P05-L03",
+      "title": "용역 계약 관리하기",
+      "major_criterion": "5. 공급대상물 유형별 계약관리",
+      "subcriterion": "3. 용역 계약 관리하기",
+      "fine_criteria": [
+        "5-3-1 용역 특화 계약조건에 따른 계약 체결",
+        "5-3-2 용역 특화 계약조건에 따른 이행절차 관리",
+        "5-3-3 원수급자·하수급자 간 계약이행절차 관리"
+      ],
+      "textbook_pages": "PDF·인쇄 177-183, 212-244, 282-295쪽; 용역 하도급은 현행 법령·계약조건 보강",
+      "artifact": "과업·인력·성과물 이행표, 용역 하도급·재위탁 관리표",
+      "origin": "custom",
+      "rights": {"label": "자체 제작", "derivative_of_private_source": false, "publishable": true},
+      "status": "draft"
+    },
+    {
+      "id": "PPM4-P06-L01",
+      "title": "공급리스크 식별하기",
+      "major_criterion": "6. 공공조달 리스크 관리",
+      "subcriterion": "1. 공급리스크 식별하기",
+      "fine_criteria": [
+        "6-1-1 입찰계획에 따른 리스크관리계획 수립",
+        "6-1-2 입찰계획에 영향을 미치는 위험 식별",
+        "6-1-3 리스크 유형별 분류"
+      ],
+      "textbook_pages": "직접 대응 장 없음; 147-148, 181-183, 201-205, 245-369쪽 사례를 보조자료로 사용",
+      "artifact": "리스크관리계획서, 원인-사건-영향 기반 리스크등록부",
+      "origin": "custom",
+      "rights": {"label": "자체 제작", "derivative_of_private_source": false, "publishable": true},
+      "status": "draft"
+    },
+    {
+      "id": "PPM4-P06-L02",
+      "title": "위험도 평가하기",
+      "major_criterion": "6. 공공조달 리스크 관리",
+      "subcriterion": "2. 위험도 평가하기",
+      "fine_criteria": [
+        "6-2-1 위험도 평가계획 수립",
+        "6-2-2 발생확률 추정",
+        "6-2-3 영향정도 추정",
+        "6-2-4 중요도 산정",
+        "6-2-5 관리 우선순위 결정"
+      ],
+      "textbook_pages": "직접 대응 없음; 출제기준 기반 자체 학습모형과 조달사례로 구성",
+      "artifact": "확률·영향 근거표, 위험도 매트릭스, 우선순위 목록",
+      "origin": "custom",
+      "rights": {"label": "자체 제작", "derivative_of_private_source": false, "publishable": true},
+      "status": "draft"
+    },
+    {
+      "id": "PPM4-P06-L03",
+      "title": "리스크 대응계획 수립하기",
+      "major_criterion": "6. 공공조달 리스크 관리",
+      "subcriterion": "3. 리스크 대응계획 수립하기",
+      "fine_criteria": [
+        "6-3-1 주요 리스크 대응계획 수립",
+        "6-3-2 대응방안 적정성 평가",
+        "6-3-3 우발적 리스크 비상대응계획 수립"
+      ],
+      "textbook_pages": "직접 대응 없음; 181-183, 212-244, 362-367쪽 사례와 현행 계약조건 보강",
+      "artifact": "리스크 대응카드, 적정성 평가표, 비상대응계획",
+      "origin": "custom",
+      "rights": {"label": "자체 제작", "derivative_of_private_source": false, "publishable": true},
+      "status": "draft"
+    },
+    {
+      "id": "PPM4-P06-L04",
+      "title": "리스크 발생 모니터링하기",
+      "major_criterion": "6. 공공조달 리스크 관리",
+      "subcriterion": "4. 리스크 발생 모니터링하기",
+      "fine_criteria": [
+        "6-4-1 대응계획 실행 여부 확인",
+        "6-4-2 실행된 대응방안 성과 확인",
+        "6-4-3 새로운 리스크 식별",
+        "6-4-4 결과 공유와 필요조치 제안"
+      ],
+      "textbook_pages": "직접 대응 없음; 212-244, 327-333쪽 이행사례를 보조자료로 사용",
+      "artifact": "핵심위험지표 대시보드, 대응성과·신규위험·조치추적표",
+      "origin": "custom",
+      "rights": {"label": "자체 제작", "derivative_of_private_source": false, "publishable": true},
+      "status": "draft"
+    },
+    {
+      "id": "PPM4-P07-L01",
+      "title": "법령 활용하기",
+      "major_criterion": "7. 공공조달 법제도 활용",
+      "subcriterion": "1. 법령 활용하기",
+      "fine_criteria": [
+        "7-1-1 공공조달 법령의 구조·적용범위 이해·설명",
+        "7-1-2 공고·계약서 법적 근거 확인과 불리한 조건 대응",
+        "7-1-3 유권해석·판례 기반 쟁점정리와 리스크 예방"
+      ],
+      "textbook_pages": "PDF·인쇄 395-400쪽; 현행 조문·해석 검증 보강",
+      "artifact": "법령·조건 쟁점검토표, 선례 검증표",
+      "origin": "custom",
+      "rights": {"label": "자체 제작", "derivative_of_private_source": false, "publishable": true},
+      "status": "draft"
+    },
+    {
+      "id": "PPM4-P07-L02",
+      "title": "분쟁 대응하기",
+      "major_criterion": "7. 공공조달 법제도 활용",
+      "subcriterion": "2. 분쟁 대응하기",
+      "fine_criteria": [
+        "7-2-1 주요 분쟁원인과 선제적 예방관리 방안",
+        "7-2-2 분쟁 발생 시 대응절차 진행",
+        "7-2-3 법무·전문가 협력 대응"
+      ],
+      "textbook_pages": "PDF·인쇄 395-400쪽 일부; 분쟁절차·협업은 출제기준·현행법 기반 보강",
+      "artifact": "분쟁예방대장, 사실연표·증거목록, 전문가 사건요약서",
+      "origin": "custom",
+      "rights": {"label": "자체 제작", "derivative_of_private_source": false, "publishable": true},
+      "status": "draft"
+    },
+    {
+      "id": "PPM4-P07-L03",
+      "title": "우대제도 활용하기",
+      "major_criterion": "7. 공공조달 법제도 활용",
+      "subcriterion": "3. 우대제도 활용하기",
+      "fine_criteria": [
+        "7-3-1 우대제도 종류·특징 파악과 입찰 적용",
+        "7-3-2 우대자격 확보와 관련서류 준비",
+        "7-3-3 우대제도와 입찰전략 연계"
+      ],
+      "textbook_pages": "PDF·인쇄 401-417쪽, 필요시 370-388쪽; 현행 제도별 원문 보강",
+      "artifact": "우대제도 카드, 증빙 만료관리표, 자격·제품·기회지도",
+      "origin": "custom",
+      "rights": {"label": "자체 제작", "derivative_of_private_source": false, "publishable": true},
+      "status": "draft"
+    },
+    {
+      "id": "PPM4-P08-L01",
+      "title": "전자조달시스템 이용하기",
+      "major_criterion": "8. 전자조달시스템 활용",
+      "subcriterion": "1. 전자조달시스템 이용하기",
+      "fine_criteria": [
+        "8-1-1 공고·참가자격등록·계약현황 조회",
+        "8-1-2 입찰서 제출·계약체결·대금청구 수행",
+        "8-1-3 외부 시스템 연계와 조달정보 통합 활용",
+        "8-1-4 시스템 오류·문제 해결방법 적용"
+      ],
+      "textbook_pages": "PDF·인쇄 7-16, 65-78, 177-238, 245-369, 401-412쪽; 최신 매뉴얼·전자조달법 보강",
+      "artifact": "전자업무 실행기록, 장애대응 기록",
+      "origin": "custom",
+      "rights": {"label": "자체 제작", "derivative_of_private_source": false, "publishable": true},
+      "status": "draft"
+    },
+    {
+      "id": "PPM4-P08-L02",
+      "title": "조달데이터 활용하기",
+      "major_criterion": "8. 전자조달시스템 활용",
+      "subcriterion": "2. 조달데이터 활용하기",
+      "fine_criteria": [
+        "8-2-1 목적별 조달데이터 분류·정확한 추출",
+        "8-2-2 입찰·계약·경쟁사 데이터 기반 의사결정 지원",
+        "8-2-3 기준에 따른 데이터 분석·시각화",
+        "8-2-4 출처·신뢰성 검토와 보고서 작성"
+      ],
+      "textbook_pages": "PDF·인쇄 65-92쪽 중심, 245-281, 339-369, 401-412쪽 보조",
+      "artifact": "데이터 요구서, 정제로그, 지표·차트, 분석보고서",
+      "origin": "custom",
+      "rights": {"label": "자체 제작", "derivative_of_private_source": false, "publishable": true},
+      "status": "draft"
+    }
+  ]
+}
