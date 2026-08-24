@@ -1024,7 +1024,8 @@
       "scope_role": "official_direct",
       "origin": "custom",
       "rights": {"label": "자체 제작", "derivative_of_private_source": false, "publishable": true},
-      "status": "planned"
+      "status": "draft",
+      "coverage_note": "표준교재 PDF 324~334쪽의 물가변동·설계변경 계약금액 조정, 기술형 증액제한, 시공평가·사후평가를 자체 서술로 구성함. 법령·문항·수치의 일괄 검증은 3과목 전체 제작 후 수행 예정"
     },
     {
       "id": "PPM3-P05-L01",
