@@ -73,10 +73,10 @@
     "status": "mapping_checked",
     "lesson_content_status": "in_progress",
     "chapters_planned": 29,
-    "chapters_completed": 6,
-    "questions_checked": 254,
-    "recall_prompts_checked": 16,
-    "inline_answers_checked": 270,
+    "chapters_completed": 7,
+    "questions_checked": 290,
+    "recall_prompts_checked": 22,
+    "inline_answers_checked": 312,
     "major_criteria_mapped": "4/4",
     "subcriteria_mapped": "11/11",
     "fine_criteria_mapped": "55/55",
@@ -266,6 +266,13 @@
       "locators": ["제7조~제9조", "제11조~제11조의3", "제19조", "제21조·제22조·제22조의2", "제24조·제24조의2", "제25조~제27조", "제31조"],
       "effective_date": "2026-04-30",
       "url": "https://www.law.go.kr/LSW/admRulInfoP.do?admRulSeq=2100000276692&chrClsCd=010201"
+    },
+    {
+      "id": "goods_purchase_special_conditions",
+      "title": "조달청 물품구매(제조)계약 특수조건",
+      "locators": ["제7조", "제7조의2", "제10조"],
+      "effective_date": "2026-01-01",
+      "url": "https://www.law.go.kr/LSW/admRulInfoP.do?admRulSeq=2100000271470&chrClsCd=010201"
     },
     {
       "id": "goods_quality_special_conditions",
@@ -545,12 +552,28 @@
         "2-2-1 공정, 품질 및 안전관리",
         "2-2-2 설계변경 및 계약금액 조정"
       ],
-      "textbook_pages": "PDF 150-162쪽(제2장 제3절)",
+      "textbook_pages": "PDF 150-158쪽(제2장 제3절 실질 본문; 159-162쪽은 앞 절 요약·참고문헌·공백이라 제외)",
       "artifact": "공정·품질·안전 점검대장, 설계변경 및 계약금액 조정 검토서",
       "scope_role": "official_direct",
+      "coverage_note": "Q-Net 두 세세항목을 직접 다루며, 표준교재의 검사·대금·지체 설명에 현행 물품계약 일반·특수조건의 공정·규격변경·금액조정을 보충함",
       "origin": "custom",
       "rights": {"label": "자체 제작", "derivative_of_private_source": false, "publishable": true},
-      "status": "planned"
+      "status": "exercise_checked",
+      "qa": {
+        "revision_date": "2026-08-24",
+        "source_check_date": "2026-08-24",
+        "exercise_check_date": "2026-08-24",
+        "high_risk_facts_checked": true,
+        "source_sha256": "2682688285d5c2bee94acaf95531d5cd11569ebc7452d5629b7cae09ff7333e7",
+        "questions_checked": 36,
+        "recall_prompts_checked": 6,
+        "private_similarity_audit": {
+          "comparison_files": 5,
+          "exact_question_matches": 0,
+          "exact_normalized_lines_min_60_chars": 0,
+          "normalized_windows_30_chars": 0
+        }
+      }
     },
     {
       "id": "PPM3-P03-L01",
