@@ -2,7 +2,7 @@
 subject: 4
 subject_title: 공공조달 관리실무
 part: 2
-part_title: 공급계획 수립
+part_title: 공공조달 입찰계획 수립
 chapter: 3
 title: 공급계획수립하기
 kind: chapter

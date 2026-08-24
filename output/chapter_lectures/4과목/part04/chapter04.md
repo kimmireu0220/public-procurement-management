@@ -2,7 +2,7 @@
 subject: 4
 subject_title: 공공조달 관리실무
 part: 4
-part_title: 계약 일반 관리
+part_title: 계약일반관리
 chapter: 4
 title: 계약 종결 관리하기
 kind: chapter
