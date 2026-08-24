@@ -73,10 +73,10 @@
     "status": "mapping_checked",
     "lesson_content_status": "in_progress",
     "chapters_planned": 29,
-    "chapters_completed": 7,
-    "questions_checked": 290,
-    "recall_prompts_checked": 22,
-    "inline_answers_checked": 312,
+    "chapters_completed": 8,
+    "questions_checked": 332,
+    "recall_prompts_checked": 29,
+    "inline_answers_checked": 361,
     "major_criteria_mapped": "4/4",
     "subcriteria_mapped": "11/11",
     "fine_criteria_mapped": "55/55",
@@ -177,6 +177,13 @@
       "url": "https://www.law.go.kr/LSW/admRulInfoP.do?admRulSeq=2100000274732&chrClsCd=010201"
     },
     {
+      "id": "general_service_eligibility",
+      "title": "조달청 일반용역 적격심사 세부기준",
+      "locators": ["제3조~제13조", "별표 1~11", "부칙 제2026-390호"],
+      "effective_date": "2026-07-27",
+      "url": "https://www.law.go.kr/LSW/admRulInfoP.do?admRulSeq=2100000283412&chrClsCd=010201"
+    },
+    {
       "id": "state_contract_threshold",
       "title": "국가를 당사자로 하는 계약에 관한 법률 등의 재정경제부장관이 정하는 고시금액",
       "locators": ["국가기관 물품·용역 2억 3천만 원"],
@@ -205,6 +212,13 @@
       "url": "https://www.law.go.kr/LSW/admRulInfoP.do?admRulSeq=2100000272436"
     },
     {
+      "id": "proposal_evaluation",
+      "title": "조달청 협상에 의한 계약 제안서평가 세부기준",
+      "locators": ["제6조·제6조의2", "제9조~제16조", "별표 15"],
+      "effective_date": "2026-01-26",
+      "url": "https://www.law.go.kr/LSW/admRulInfoP.do?admRulSeq=2100000273638&chrClsCd=010201"
+    },
+    {
       "id": "competitive_dialogue_criteria",
       "title": "(계약예규) 경쟁적대화에 의한 계약체결기준",
       "locators": ["제4조~제16조", "별표"],
@@ -224,6 +238,13 @@
       "locators": ["제4조~제6조", "제8조~제9조의2", "제11조", "제13조~제16조", "제18조", "제20조", "제22조~제23조의3"],
       "effective_date": "2026-01-23",
       "url": "https://www.law.go.kr/LSW/admRulLsInfoP.do?admRulSeq=2100000274756"
+    },
+    {
+      "id": "electronic_procurement_act",
+      "title": "전자조달의 이용 및 촉진에 관한 법률",
+      "locators": ["제11조"],
+      "effective_date": "2026-01-02",
+      "url": "https://www.law.go.kr/LSW/lsInfoP.do?ancYnChk=0&chrClsCd=010202&efYd=20260102&lsiSeq=277153&urlMode=lsInfoP"
     },
     {
       "id": "sme_market_support_act",
@@ -343,6 +364,16 @@
       "locators": ["제18조", "제23조"],
       "effective_date": "2026-05-12",
       "url": "https://www.law.go.kr/법령/행정소송법"
+    }
+  ],
+  "operational_sources": [
+    {
+      "id": "nextgen_narajangteo_proposal_submission",
+      "title": "차세대 나라장터 시스템 개통에 따른 제안서 접수 유의사항",
+      "publisher": "나라장터 공고기관",
+      "retrieved_at": "2026-08-24",
+      "use": "구 e-발주시스템의 나라장터 통합·폐쇄, 제안서 제출 후 가격입찰, 제출내역·수신·파일 확인",
+      "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01476474&bidPbancOrd=000&fileSeq=2&fileType=&prcmBsneSeCd=03"
     }
   ],
   "lessons": [
@@ -592,9 +623,25 @@
       "textbook_pages": "PDF 163-194쪽(제3장 도입, 제1절)",
       "artifact": "용역 입찰공고 검토표, 제안서·발표 평가표, 협상 기록서, e-발주시스템 업무 흐름도",
       "scope_role": "official_direct",
+      "coverage_note": "Q-Net 7개 세세항목을 공고·RFP 검토, 요구사항 추적, 제안서 제출·평가·발표, 낙찰방법, 협상·경쟁적 대화, 일반용역 적격심사, 현행 나라장터 통합기능과 계약 이행기준선 전환으로 직접 다룸",
       "origin": "custom",
       "rights": {"label": "자체 제작", "derivative_of_private_source": false, "publishable": true},
-      "status": "planned"
+      "status": "exercise_checked",
+      "qa": {
+        "revision_date": "2026-08-24",
+        "source_check_date": "2026-08-24",
+        "exercise_check_date": "2026-08-24",
+        "high_risk_facts_checked": true,
+        "source_sha256": "64ebc6b70aa72714f40df1e60fe65cb921ffe0adf51549df49caf0d75b8a783a",
+        "questions_checked": 42,
+        "recall_prompts_checked": 7,
+        "private_similarity_audit": {
+          "comparison_files": 5,
+          "exact_question_matches": 0,
+          "exact_normalized_lines_min_60_chars": 0,
+          "normalized_windows_30_chars": 0
+        }
+      }
     },
     {
       "id": "PPM3-P03-L02",
