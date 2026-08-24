@@ -880,7 +880,8 @@
       "scope_role": "official_direct",
       "origin": "custom",
       "rights": {"label": "자체 제작", "derivative_of_private_source": false, "publishable": true},
-      "status": "planned"
+      "status": "draft",
+      "coverage_note": "표준교재 PDF 239~250쪽의 건설엔지니어링 입찰방식, PQ·SOQ·TP·종합심사와 기술용역 계약절차를 자체 서술로 구성함. 법령·문항·수치의 일괄 검증은 3과목 전체 제작 후 수행 예정"
     },
     {
       "id": "PPM3-P04-L04",
