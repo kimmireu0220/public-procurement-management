@@ -295,7 +295,7 @@
         "source_check_date": "2026-08-24",
         "exercise_check_date": "2026-08-24",
         "high_risk_facts_checked": true,
-        "source_sha256": "bd2bbb8a35c37aad4a449310d93f8eef9df83006bcbb07021a37495842359350",
+        "source_sha256": "cc40f3a2df965da4ef19ecc0429101c71febb23664c9add4fb4c78ae6f97af6b",
         "questions_checked": 40,
         "private_similarity_audit": {
           "comparison_files": 5,
