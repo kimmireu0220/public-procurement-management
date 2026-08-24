@@ -73,8 +73,8 @@
     "status": "mapping_checked",
     "lesson_content_status": "in_progress",
     "chapters_planned": 29,
-    "chapters_completed": 5,
-    "questions_checked": 206,
+    "chapters_completed": 6,
+    "questions_checked": 254,
     "major_criteria_mapped": "4/4",
     "subcriteria_mapped": "11/11",
     "fine_criteria_mapped": "55/55",
@@ -142,14 +142,14 @@
     {
       "id": "state_contract_decree",
       "title": "국가를 당사자로 하는 계약에 관한 법률 시행령",
-      "locators": ["제12조", "제26조제1항제5호가목", "제28조", "제30조", "제33조", "제35조~제37조", "제50조~제63조", "제64조~제66조", "제74조~제76조", "제91조", "제108조", "제110조~제114조"],
+      "locators": ["제12조", "제17조·제18조", "제25조", "제26조제1항제5호가목", "제28조", "제30조", "제33조", "제35조~제37조", "제42조~제47조의3", "제50조~제63조", "제64조~제66조", "제74조~제76조", "제91조", "제108조", "제110조~제114조"],
       "effective_date": "2026-06-03",
       "url": "https://www.law.go.kr/LSW/lsInfoP.do?lsiSeq=285893&chrClsCd=010202&urlMode=lsInfoP&efYd=20260603&ancYnChk=0"
     },
     {
       "id": "state_contract_rule",
       "title": "국가를 당사자로 하는 계약에 관한 법률 시행규칙",
-      "locators": ["제15조", "제33조", "제44조", "제51조", "제55조", "제61조", "제63조", "제70조~제75조", "별표 1", "제86조"],
+      "locators": ["제12조", "제15조", "제19조~제21조", "제33조", "제44조", "제46조~제48조", "제51조", "제55조", "제61조", "제63조", "제70조~제75조", "별표 1", "제86조"],
       "effective_date": "2026-01-02",
       "url": "https://www.law.go.kr/LSW/lsInfoP.do?lsiSeq=282607&chrClsCd=010202&urlMode=lsInfoP&efYd=20260102&ancYnChk=0"
     },
@@ -159,6 +159,62 @@
       "locators": ["제10조~제10조의4", "제33조~제39조", "제40조~제66조", "제70조~제76조"],
       "effective_date": "2026-04-30",
       "url": "https://www.law.go.kr/LSW/admRulInfoP.do?admRulSeq=2100000276688&chrClsCd=010201"
+    },
+    {
+      "id": "goods_purchase_eligibility",
+      "title": "조달청 물품구매적격심사 세부기준",
+      "locators": ["제3조~제10조", "별표 1~4", "부칙 제3373호"],
+      "effective_date": "2026-05-26",
+      "url": "https://www.law.go.kr/LSW/admRulLsInfoP.do?admRulSeq=2100000279836"
+    },
+    {
+      "id": "general_eligibility",
+      "title": "(계약예규) 적격심사기준",
+      "locators": ["제2조~제10조"],
+      "effective_date": "2026-01-02",
+      "url": "https://www.law.go.kr/LSW/admRulInfoP.do?admRulSeq=2100000274732&chrClsCd=010201"
+    },
+    {
+      "id": "state_contract_threshold",
+      "title": "국가를 당사자로 하는 계약에 관한 법률 등의 재정경제부장관이 정하는 고시금액",
+      "locators": ["국가기관 물품·용역 2억 3천만 원"],
+      "effective_date": "2026-01-08",
+      "url": "https://www.law.go.kr/LSW/admRulInfoP.do?admRulSeq=2100000272620&chrClsCd=010201"
+    },
+    {
+      "id": "sme_goods_performance_review",
+      "title": "(중소벤처기업부) 중소기업자간 경쟁제품 중 물품의 구매에 관한 계약이행능력심사 세부기준",
+      "locators": ["제3조~제10조", "별표 1~4", "부칙 제2026-51호"],
+      "effective_date": "2026-07-27",
+      "url": "https://www.law.go.kr/LSW/admRulLsInfoP.do?admRulSeq=2100000282814"
+    },
+    {
+      "id": "pps_sme_goods_performance_review",
+      "title": "조달청 중소기업자간 경쟁물품에 대한 계약이행능력심사 세부기준",
+      "locators": ["제3조~제10조", "별표 1~5", "부칙 제4781호"],
+      "effective_date": "2026-07-27",
+      "url": "https://www.law.go.kr/LSW/admRulInfoP.do?admRulSeq=2100000283050"
+    },
+    {
+      "id": "negotiated_contract_criteria",
+      "title": "(계약예규) 협상에 의한 계약체결기준",
+      "locators": ["제4조~제14조", "별표"],
+      "effective_date": "2026-01-02",
+      "url": "https://www.law.go.kr/LSW/admRulInfoP.do?admRulSeq=2100000272436"
+    },
+    {
+      "id": "competitive_dialogue_criteria",
+      "title": "(계약예규) 경쟁적대화에 의한 계약체결기준",
+      "locators": ["제4조~제16조", "별표"],
+      "effective_date": "2026-01-02",
+      "url": "https://www.law.go.kr/LSW/admRulLsInfoP.do?admRulSeq=2100000272426"
+    },
+    {
+      "id": "comprehensive_award_criteria",
+      "title": "종합낙찰제 세부운용기준",
+      "locators": ["제3조~제11조", "별표", "별지 서식"],
+      "effective_date": "2022-05-01",
+      "url": "https://www.law.go.kr/LSW/admRulLsInfoP.do?admRulSeq=2100000210969"
     },
     {
       "id": "bidder_registration",
@@ -304,7 +360,7 @@
         "source_check_date": "2026-08-24",
         "exercise_check_date": "2026-08-24",
         "high_risk_facts_checked": true,
-        "source_sha256": "8b2a6c5ddef7c31927ccd3cc366d810f286eacf6c0e76f1848ae97ce981733ca",
+        "source_sha256": "ca0dfd68b13fb4588bffda4709081d8668317d6d85edafaa5bb00f950861ba55",
         "questions_checked": 25,
         "private_similarity_audit": {
           "comparison_files": 5,
@@ -337,7 +393,7 @@
         "source_check_date": "2026-08-24",
         "exercise_check_date": "2026-08-24",
         "high_risk_facts_checked": true,
-        "source_sha256": "cc40f3a2df965da4ef19ecc0429101c71febb23664c9add4fb4c78ae6f97af6b",
+        "source_sha256": "aa6eccf0e01c71c6931861e9e059bdaa9412a72e2abf889e4dfd4032c286d7ff",
         "questions_checked": 40,
         "private_similarity_audit": {
           "comparison_files": 5,
@@ -370,7 +426,7 @@
         "source_check_date": "2026-08-24",
         "exercise_check_date": "2026-08-24",
         "high_risk_facts_checked": true,
-        "source_sha256": "9c91ce16df7196a428583a6cf011ebc9043af7ed2a841c75357e91899ce5baac",
+        "source_sha256": "3ab3528431aa2251822503ed7d4a4ac536f883f7529c34a4b6807ff9f2e15b3b",
         "questions_checked": 45,
         "private_similarity_audit": {
           "comparison_files": 5,
@@ -404,7 +460,7 @@
         "source_check_date": "2026-08-24",
         "exercise_check_date": "2026-08-24",
         "high_risk_facts_checked": true,
-        "source_sha256": "a971c73534a0c965464f6ca5057441076b3fdc6c18d18bf4e8f99972df28254e",
+        "source_sha256": "ef16f822111b37f0ca0951b8447c4a45cec453253bca88daaae229f7f11397e6",
         "questions_checked": 48,
         "private_similarity_audit": {
           "comparison_files": 5,
@@ -436,7 +492,7 @@
         "source_check_date": "2026-08-24",
         "exercise_check_date": "2026-08-24",
         "high_risk_facts_checked": true,
-        "source_sha256": "1783c943d8232956e7eff5969a3f4f1ea8c4af1f12ff6f4af9e0180e1a73233e",
+        "source_sha256": "8eac95f1643393d5a5ae2fdf1178643e066853903043ea5b35ba1c9edd57d220",
         "questions_checked": 48,
         "private_similarity_audit": {
           "comparison_files": 5,
@@ -459,7 +515,22 @@
       "scope_role": "official_direct",
       "origin": "custom",
       "rights": {"label": "자체 제작", "derivative_of_private_source": false, "publishable": true},
-      "status": "planned"
+      "status": "exercise_checked",
+      "qa": {
+        "revision_date": "2026-08-24",
+        "source_check_date": "2026-08-24",
+        "exercise_check_date": "2026-08-24",
+        "high_risk_facts_checked": true,
+        "source_sha256": "5edcdebafc5b08f3eacd6f7c838252c5c990aa835062706369617316d23c775d",
+        "questions_checked": 48,
+        "recall_prompts_checked": 6,
+        "private_similarity_audit": {
+          "comparison_files": 5,
+          "exact_question_matches": 0,
+          "exact_normalized_lines_min_60_chars": 0,
+          "normalized_windows_30_chars": 0
+        }
+      }
     },
     {
       "id": "PPM3-P02-L03",

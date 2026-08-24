@@ -255,6 +255,86 @@
       "source_url": "https://www.law.go.kr/LSW/admRulLsInfoP.do?admRulId=34279&efYd=0",
       "snapshot": "snapshots/foreign_contract_general_conditions.html",
       "sha256": "a2788221db15033f91d633a657c9cd39a6544dcb7058cfe821f628be753857a6"
+    },
+    {
+      "id": "goods_purchase_eligibility",
+      "title": "조달청 물품구매적격심사 세부기준",
+      "effective_date": "2026-05-26",
+      "version": "조달청지침 제3373호",
+      "category": "행정규칙",
+      "source_url": "https://www.law.go.kr/LSW/admRulLsInfoP.do?admRulSeq=2100000279836",
+      "snapshot": "snapshots/goods_purchase_eligibility.html",
+      "sha256": "0c328195b717681fdd0abf9cf6b4811c806ead25fb680aa65990ab13e01d255a"
+    },
+    {
+      "id": "general_eligibility",
+      "title": "(계약예규) 적격심사기준",
+      "effective_date": "2026-01-02",
+      "version": "재정경제부계약예규 제37호",
+      "category": "행정규칙",
+      "source_url": "https://www.law.go.kr/LSW/admRulInfoP.do?admRulSeq=2100000274732&chrClsCd=010201",
+      "snapshot": "snapshots/general_eligibility.html",
+      "sha256": "783e2405aa0394b8ea7e33c66a99730fb3f39125a29fd58ec9baa58dc8c0cdb9"
+    },
+    {
+      "id": "state_contract_threshold",
+      "title": "국가를 당사자로 하는 계약에 관한 법률 등의 재정경제부장관이 정하는 고시금액",
+      "effective_date": "2026-01-08",
+      "version": "재정경제부고시 제2026-439호",
+      "category": "행정규칙",
+      "source_url": "https://www.law.go.kr/LSW/admRulInfoP.do?admRulSeq=2100000272620&chrClsCd=010201",
+      "snapshot": "snapshots/state_contract_threshold.html",
+      "sha256": "71b85cf103cda0697237b46759d420aac065acbcb9adf9e412f2a6bd7c708641"
+    },
+    {
+      "id": "sme_goods_performance_review",
+      "title": "(중소벤처기업부) 중소기업자간 경쟁제품 중 물품의 구매에 관한 계약이행능력심사 세부기준",
+      "effective_date": "2026-07-27",
+      "version": "중소벤처기업부고시 제2026-51호",
+      "category": "행정규칙",
+      "source_url": "https://www.law.go.kr/LSW/admRulLsInfoP.do?admRulSeq=2100000282814",
+      "snapshot": "snapshots/sme_goods_performance_review.html",
+      "sha256": "d0d62e8150c53294645249e0cc6d4ec9ba52c07ff54fad6b06b6f775ba7f50fb"
+    },
+    {
+      "id": "pps_sme_goods_performance_review",
+      "title": "조달청 중소기업자간 경쟁물품에 대한 계약이행능력심사 세부기준",
+      "effective_date": "2026-07-27",
+      "version": "조달청지침 제4781호",
+      "category": "행정규칙",
+      "source_url": "https://www.law.go.kr/LSW/admRulInfoP.do?admRulSeq=2100000283050",
+      "snapshot": "snapshots/pps_sme_goods_performance_review.html",
+      "sha256": "f65d01e8e0ca16b5946f7590c25262a9b83458503a4041930ff6f004de46ff59"
+    },
+    {
+      "id": "negotiated_contract_criteria",
+      "title": "(계약예규) 협상에 의한 계약체결기준",
+      "effective_date": "2026-01-02",
+      "version": "재정경제부계약예규 제40호",
+      "category": "행정규칙",
+      "source_url": "https://www.law.go.kr/LSW/admRulInfoP.do?admRulSeq=2100000272436",
+      "snapshot": "snapshots/negotiated_contract_criteria.html",
+      "sha256": "4880b5d83180e51ef9e709a6c2ba591133cd2fe301bc9c9dcc883303bebde3bb"
+    },
+    {
+      "id": "competitive_dialogue_criteria",
+      "title": "(계약예규) 경쟁적대화에 의한 계약체결기준",
+      "effective_date": "2026-01-02",
+      "version": "재정경제부계약예규 제28호",
+      "category": "행정규칙",
+      "source_url": "https://www.law.go.kr/LSW/admRulLsInfoP.do?admRulSeq=2100000272426",
+      "snapshot": "snapshots/competitive_dialogue_criteria.html",
+      "sha256": "e7bba5ced19126c2ca31661cb494643b9a90a2a7a58e1161d54e8ccb2f08ff4f"
+    },
+    {
+      "id": "comprehensive_award_criteria",
+      "title": "종합낙찰제 세부운용기준",
+      "effective_date": "2022-05-01",
+      "version": "조달청훈령 제2042호",
+      "category": "행정규칙",
+      "source_url": "https://www.law.go.kr/LSW/admRulLsInfoP.do?admRulSeq=2100000210969",
+      "snapshot": "snapshots/comprehensive_award_criteria.html",
+      "sha256": "83e03dce2665278ec1d2f63d6c2af656451fd346e159bcde9e928220b2e207d7"
     }
   ]
 }

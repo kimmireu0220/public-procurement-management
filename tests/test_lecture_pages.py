@@ -39,6 +39,18 @@ class LecturePagesTest(unittest.TestCase):
         )
         self.assertIn("<strong>확인</strong>", rendered)
 
+    def test_markdown_hard_breaks_render_without_enabling_raw_html(self) -> None:
+        space_break = build_lecture_pages.markdown_to_html(
+            "① 첫 번째 보기  \n② 두 번째 보기\n\n원문 <br> 표기"
+        )
+        backslash_break = build_lecture_pages.markdown_to_html(
+            "① 첫 번째 보기\\\n② 두 번째 보기"
+        )
+
+        self.assertIn("<p>① 첫 번째 보기<br>② 두 번째 보기</p>", space_break)
+        self.assertIn("<p>① 첫 번째 보기<br>② 두 번째 보기</p>", backslash_break)
+        self.assertIn("원문 &lt;br&gt; 표기", space_break)
+
     def test_sources_are_loadable_without_prescribing_body_structure(self) -> None:
         lectures = build_lecture_pages.load_lectures()
 

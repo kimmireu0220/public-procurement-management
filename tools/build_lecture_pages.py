@@ -162,7 +162,7 @@ def split_table_row(line: str) -> list[str]:
 def markdown_to_html(markdown: str) -> str:
     lines = markdown.splitlines()
     result: list[str] = []
-    paragraph: list[str] = []
+    paragraph: list[tuple[str, bool]] = []
     list_kind: str | None = None
     in_code = False
     code_lines: list[str] = []
@@ -170,7 +170,14 @@ def markdown_to_html(markdown: str) -> str:
 
     def flush_paragraph() -> None:
         if paragraph:
-            result.append(f"<p>{inline_markup(' '.join(part.strip() for part in paragraph))}</p>")
+            rendered: list[str] = []
+            for part_index, (part, hard_break) in enumerate(paragraph):
+                rendered.append(inline_markup(part))
+                if hard_break:
+                    rendered.append("<br>")
+                elif part_index + 1 < len(paragraph):
+                    rendered.append(" ")
+            result.append(f"<p>{''.join(rendered)}</p>")
             paragraph.clear()
 
     def close_list() -> None:
@@ -270,7 +277,10 @@ def markdown_to_html(markdown: str) -> str:
             index += 1
             continue
 
-        paragraph.append(stripped)
+        hard_break = line.endswith("  ") or stripped.endswith("\\")
+        if stripped.endswith("\\"):
+            stripped = stripped[:-1].rstrip()
+        paragraph.append((stripped, hard_break))
         index += 1
 
     flush_paragraph()
