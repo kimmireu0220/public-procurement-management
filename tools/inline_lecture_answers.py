@@ -93,7 +93,7 @@ def _convert_numbered_lists(
     cursor = 0
     for question in questions:
         chunks.append(question_body[cursor : question.start()])
-        chunks.append(f"**{question.group(1)}.** {question.group(2)}")
+        chunks.append(f"**문제 {question.group(1)}.** {question.group(2)}")
         label, answer = _normalize_list_answer(answer_map[int(question.group(1))])
         chunks.append(f"\n\n> **{label}:** {answer}\n")
         cursor = question.end()
