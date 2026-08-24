@@ -1,241 +1,506 @@
 <!doctype html>
 <html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>입찰서류 작성 · 공공조달관리사 Chapter 강의</title>
+<title>입찰서류 작성하기 · 공공조달관리사 Chapter 강의</title>
 <link rel="stylesheet" href="../../../assets/style.css">
 <script>try{if(localStorage.getItem('lectureTocCollapsed')==='1')document.documentElement.classList.add('nav-collapsed')}catch(e){}</script></head>
-<body><header class="site-header"><div class="header-inner"><a class="brand" href="../../../">공공조달관리사 Chapter 강의</a><span class="header-note">이론 · 시험 포인트 · 암기 체크</span></div></header>
-<main class="page"><div class="subject-layout"><aside class="sidebar"><div class="sidebar-header"><h2>과목 목차</h2><button class="toc-toggle" type="button" aria-controls="subject-toc" aria-expanded="true" aria-label="과목 목차 닫기" title="과목 목차 닫기"><span aria-hidden="true">☰</span></button></div><nav class="sidebar-content" id="subject-toc" aria-label="과목 목차"><a href="../../overview/">과목 개요</a><h3>Part 1. 공공조달 입찰참가 준비</h3><a href="../../part01/chapter01/">Ch 1. 공공조달 입찰참가 준비</a><a href="../../part01/chapter02/">Ch 2. 입찰참가자격 정보 관리</a><a href="../../part01/chapter03/">Ch 3. 경쟁입찰참가자격 신청</a><h3>Part 2. 공공조달 입찰계획 수립</h3><a href="../../part02/chapter01/">Ch 1. 환경분석</a><a href="../../part02/chapter02/">Ch 2. 조달 수요정보 수집</a><a href="../../part02/chapter03/">Ch 3. 공급계획 수립</a><h3>Part 3. 입찰실행 관리</h3><a class="current" href="../../part03/chapter01/">Ch 1. 입찰서류 작성</a><a href="../../part03/chapter02/">Ch 2. 입찰평가 기준 검증</a><a href="../../part03/chapter03/">Ch 3. 협상 관리</a><h3>Part 4. 계약일반 관리</h3><a href="../../part04/chapter01/">Ch 1. 계약체결 관리</a><a href="../../part04/chapter02/">Ch 2. 계약이행 관리</a><a href="../../part04/chapter03/">Ch 3. 계약변경 관리</a><a href="../../part04/chapter04/">Ch 4. 계약종결 관리</a><h3>Part 5. 공급대상물 유형별 계약 관리</h3><a href="../../part05/chapter01/">Ch 1. 공사계약 관리</a><a href="../../part05/chapter02/">Ch 2. 물품계약 관리</a><a href="../../part05/chapter03/">Ch 3. 용역계약 관리</a><h3>Part 6. 공공조달 리스크 관리</h3><a href="../../part06/chapter01/">Ch 1. 공급리스크 식별</a><a href="../../part06/chapter02/">Ch 2. 위험도 평가</a><a href="../../part06/chapter03/">Ch 3. 리스크 대응계획 수립</a><a href="../../part06/chapter04/">Ch 4. 리스크 발생 모니터링</a><h3>Part 7. 공공조달 법제도 활용</h3><a href="../../part07/chapter01/">Ch 1. 법령 활용</a><a href="../../part07/chapter02/">Ch 2. 분쟁 대응</a><a href="../../part07/chapter03/">Ch 3. 우대제도 활용</a><h3>Part 8. 전자조달시스템 활용</h3><a href="../../part08/chapter01/">Ch 1. 전자조달시스템 이용</a><a href="../../part08/chapter02/">Ch 2. 조달데이터 활용</a><h3>총정리</h3><a href="../../review/total-review/">4과목 총정리</a></nav></aside>
+<body><header class="site-header"><div class="header-inner"><a class="brand" href="../../../">공공조달관리사 Chapter 강의</a><span class="header-note">출제기준 · 실무 판단 · 답안 훈련</span></div></header>
+<main class="page"><div class="subject-layout"><aside class="sidebar"><div class="sidebar-header"><h2>과목 목차</h2><button class="toc-toggle" type="button" aria-controls="subject-toc" aria-expanded="true" aria-label="과목 목차 닫기" title="과목 목차 닫기"><span aria-hidden="true">☰</span></button></div><nav class="sidebar-content" id="subject-toc" aria-label="과목 목차"><a href="../../overview/">과목 개요</a><h3>Part 1. 공공조달 입찰 참가 준비</h3><a href="../../part01/chapter01/">Ch 1. 공공조달 참여 준비하기</a><a href="../../part01/chapter02/">Ch 2. 입찰자격 정보관리하기</a><a href="../../part01/chapter03/">Ch 3. 경쟁입찰 참가자격신청하기</a><h3>Part 2. 공급계획 수립</h3><a href="../../part02/chapter01/">Ch 1. 환경분석하기</a><a href="../../part02/chapter02/">Ch 2. 조달 수요정보 수집하기</a><a href="../../part02/chapter03/">Ch 3. 공급계획수립하기</a><h3>Part 3. 입찰실행 관리</h3><a class="current" href="../../part03/chapter01/">Ch 1. 입찰서류 작성하기</a><a href="../../part03/chapter02/">Ch 2. 입찰평가 기준 검증하기</a><a href="../../part03/chapter03/">Ch 3. 협상 관리하기</a><h3>Part 4. 계약 일반 관리</h3><a href="../../part04/chapter01/">Ch 1. 계약 체결 관리하기</a><h3>Part 5. 공급대상물 유형별 계약관리</h3><a href="../../part05/chapter01/">Ch 1. 공사 계약 관리하기</a><a href="../../part05/chapter02/">Ch 2. 물품 계약 관리하기</a><a href="../../part05/chapter03/">Ch 3. 용역 계약 관리하기</a><h3>Part 6. 공공조달 리스크 관리</h3><a href="../../part06/chapter01/">Ch 1. 공급리스크 식별하기</a><h3>Part 7. 공공조달 법제도 활용</h3><a href="../../part07/chapter01/">Ch 1. 법령 활용하기</a><a href="../../part07/chapter02/">Ch 2. 분쟁 대응하기</a><a href="../../part07/chapter03/">Ch 3. 우대제도 활용하기</a><h3>Part 8. 전자조달시스템 활용</h3><a href="../../part08/chapter01/">Ch 1. 전자조달시스템 이용하기</a><a href="../../part08/chapter02/">Ch 2. 조달데이터 활용하기</a><h3>총정리</h3><a href="../../review/total-review/">4과목 총정리</a></nav></aside>
 <article class="article">
 <div class="breadcrumb"><a href="../../../">전체 과목</a> › <a href="../../">4과목</a> › Part 3 · Chapter 1</div>
-<span class="eyebrow">Part 3 · Chapter 1</span><h1>입찰서류 작성</h1><p class="subtitle">공공조달 관리실무 · 입찰실행 관리</p>
-<h2 id="학습목표">학습목표</h2>
-<p>이 Chapter를 학습한 뒤에는 다음을 할 수 있어야 한다.</p>
-<ol>
-<li>입찰서류 작성의 순서를 공고 확인부터 접수결과 보존까지 말한다.</li>
-<li>입찰서·산출내역서·제안서·정량증빙의 역할을 구분한다.</li>
-<li>제안서가 필요한 계약(협상계약·경쟁적 대화·2단계경쟁입찰)을 구분한다.</li>
-<li>입찰공고문·제안요청서(RFP)·과업지시서의 역할 차이를 설명한다.</li>
-<li>제안서 작성 5단계와 조견표의 기능을 설명한다.</li>
-<li>전자입찰에서 업로드와 유효한 제출이 다름을 설명하고 접수시각을 확인한다.</li>
-</ol>
-<h2 id="한눈에-보기">① 한눈에 보기</h2>
+<span class="eyebrow">Part 3 · Chapter 1</span><h1>입찰서류 작성하기</h1><p class="subtitle">공공조달 관리실무 · 입찰실행 관리</p>
+<blockquote>자체 제작 강의입니다. 공식 출제기준을 학습목표로 삼고 조달청 표준교재 4권 95~159쪽과 2026년 8월 24일 현재의 공식 원문만 사용했습니다. 표준교재의 예시 비율·금액은 보편 규칙으로 옮기지 않았습니다.</blockquote>
+<h2 id="이-강의-하나의-완료-기준">이 강의 하나의 완료 기준</h2>
+<p>이 강의를 마치면 공고문·제안요청서·평가기준을 받아 <strong>가격서류, 기술제안서, 제안설명 자료가 서로 모순되지 않는 한 묶음</strong>으로 완성되어야 합니다. 다음 여섯 가지를 자료 없이 할 수 있으면 완료입니다.</p>
 <ul>
-<li>입찰서류 작성은 <code>공고 확인 → 적용기준 확정 → 참가자격 증빙 → 가격서류 작성 → 기술서류 작성 → 전자서명·제출 → 접수결과 보존</code>의 순서로 한다.</li>
-<li>가장 먼저 국가계약인지 지방계약인지, 공사·물품·용역 중 무엇인지, 낙찰자 결정방법이 무엇인지 구분한다.</li>
-<li>입찰서는 금액과 의사표시, 산출내역서는 금액의 구성, 제안서는 수행방법과 능력을 보여 주는 문서다.</li>
-<li>공고문·제안요청서·규격서·입찰유의서가 요구하는 파일명, 형식, 분량, 서명, 제출방식을 하나의 제출목록으로 관리한다.</li>
-<li>전자입찰은 파일을 올린 것만으로 끝나지 않는다. 전자서명, 암호화 전송, 제출완료 여부와 접수시각을 확인해야 한다.</li>
+<li>발주기관이 작성하는 예정가격과 입찰자가 작성하는 견적·가격제안의 역할을 구분한다.</li>
+<li>물품 제조, 용역, 공사의 원가구조를 구분하고 계산 근거를 남긴다.</li>
+<li>제안요청서의 요구사항과 평가항목을 제안서 목차·증빙에 추적 연결한다.</li>
+<li>제출본의 수량·기간·인력·가격이 모든 서류에서 일치하는지 검증한다.</li>
+<li>평가항목 순서에 맞춰 제출한 제안서를 설명하고, 제출하지 않은 새 약속을 임의로 만들지 않는다.</li>
+<li>사례형 답안을 <code>요구분석 → 가격작성 → 제안작성 → 일치검증 → 제출·설명</code> 순으로 쓴다.</li>
 </ul>
-<h2 id="차근차근-설명">② 차근차근 설명</h2>
-<p>입찰서류는 회사소개 자료를 많이 붙이는 일이 아니다. 발주기관이 공고한 요건에 대해 “우리 회사가 참가할 수 있고, 요구한 목적물을 이 가격과 방법으로 이행할 수 있다”는 사실을 정해진 형식으로 증명하는 작업이다. 따라서 문장을 쓰기 전에 적용문서부터 확정해야 한다.</p>
-<h3 id="1-공고를-한-장의-요구사항표로-바꾼다">1. 공고를 한 장의 요구사항표로 바꾼다</h3>
-<p>다음 항목을 공고문과 붙임문서에서 뽑아 표로 만든다.</p>
+<blockquote>적용 경계: 예정가격 작성기준은 발주기관의 예정가격 산정 규범입니다. 입찰자는 그 구조를 이해해 견적의 누락과 비현실성을 점검하지만, 자기 견적을 발주기관의 비공개 예정가격이라고 부르면 안 됩니다. 실제 입찰가격, 기술·가격 배점, 제출형식과 반올림은 해당 공고가 정한 기준을 우선합니다.</blockquote>
+<h2 id="공식-수행능력표">공식 수행능력표</h2>
 <div class="table-wrap"><table><thead><tr>
-<th>확인항목</th>
-<th>실무 확인내용</th>
+<th>공식 세부항목</th>
+<th>이 강의에서 만드는 능력</th>
+<th>확인 산출물</th>
 </tr></thead><tbody>
 <tr>
-<td>계약체계</td>
-<td>국가계약·지방계약, 자체조달·조달청 의뢰 여부</td>
+<td>예정가격기준에 따라 견적서 작성</td>
+<td>대상물별 원가 비목과 수량을 계산하고 가격 근거를 기록한다.</td>
+<td>가격산출 검토표, 견적서</td>
 </tr>
 <tr>
-<td>계약목적물</td>
-<td>공사·물품구매·물품제조·일반용역·기술용역 등</td>
+<td>RFP와 평가요소를 고려하여 기술제안서 작성</td>
+<td>모든 요구·평가항목을 목차, 본문, 증빙에 연결한다.</td>
+<td>요구사항 추적표, 기술제안서</td>
 </tr>
 <tr>
-<td>입찰방법</td>
-<td>일반·제한·지명, 총액·단가, 전자입찰 여부</td>
-</tr>
-<tr>
-<td>낙찰방법</td>
-<td>적격심사, 협상에 의한 계약, 종합심사, 최저가 등</td>
-</tr>
-<tr>
-<td>참가자격</td>
-<td>업종·면허, 세부품명, 직접생산확인, 지역·실적 제한, 공동수급 허용 여부</td>
-</tr>
-<tr>
-<td>제출물</td>
-<td>입찰서, 산출내역서, 제안서, 증빙, 보증, 공동수급협정서 등</td>
-</tr>
-<tr>
-<td>시간</td>
-<td>질의, 공동수급협정, 가격입찰, 제안서 제출의 각각 다른 마감시각</td>
-</tr>
-<tr>
-<td>방식</td>
-<td>나라장터 전송, e-발주시스템, 온라인·방문 제출, 원본 요구 여부</td>
+<td>평가기준에 맞춰 제출 제안서 설명</td>
+<td>배점이 큰 쟁점을 먼저 설명하고 제출본의 근거 위치를 즉시 제시한다.</td>
+<td>발표 시나리오, 질의응답표</td>
 </tr>
 </tbody></table></div>
-<p>전자조달 화면의 요약정보만 보고 작성하지 말고 반드시 공고문과 붙임을 함께 읽는다. 두 문서 사이에 모순이나 중대한 누락이 있으면 임의로 유리하게 해석하지 말고 정정공고·질의답변을 확인한다.</p>
-<h3 id="2-참가자격은-기준일과-명의를-맞춘다">2. 참가자격은 기준일과 명의를 맞춘다</h3>
-<p>사업자등록, 경쟁입찰참가자격등록, 업종·면허, 직접생산확인, 중소기업확인, 실적과 기술인력은 각각 유효기간과 인정기준일이 다를 수 있다. 법인명·대표자·주소가 변경되었다면 입찰 전에 등록정보를 정비한다. 공동수급이면 구성원별 자격, 분담내용, 출자비율, 대표자와 협정서 제출시각까지 확인한다.</p>
-<p>증빙은 다음 세 가지 질문으로 검토한다.</p>
-<ol>
-<li>공고가 요구한 발급기관의 문서인가?</li>
-<li>평가기준일 현재 유효한가?</li>
-<li>제안서의 회사명·실적명·금액·기간과 서로 일치하는가?</li>
-</ol>
-<h3 id="3-가격서류와-기술서류의-역할을-구분한다">3. 가격서류와 기술서류의 역할을 구분한다</h3>
-<div class="table-wrap"><table><thead><tr>
-<th>문서</th>
-<th>핵심 기능</th>
-<th>대표 오류</th>
-</tr></thead><tbody>
-<tr>
-<td>입찰서·가격제안서</td>
-<td>계약하려는 가격을 전자적으로 표시</td>
-<td>부가가치세·면세사업 처리, 총액·단가 혼동</td>
-</tr>
-<tr>
-<td>산출내역서</td>
-<td>재료비·노무비·경비·수량·단가 등 가격 구성 제시</td>
-<td>입찰금액과 합계 불일치, 공종·수량 누락</td>
-</tr>
-<tr>
-<td>기술제안서</td>
-<td>이해도, 수행방법, 일정, 인력, 품질·위험관리 제시</td>
-<td>요구항목 누락, 증빙 없는 주장, 평가항목과 목차 불일치</td>
-</tr>
-<tr>
-<td>정량증빙</td>
-<td>실적·신용·인력 등 객관점수 증명</td>
-<td>인정범위 밖 실적, 인정 발급기간 위반, 기준일 이후 변동상태를 증빙</td>
-</tr>
-</tbody></table></div>
-<p>가격은 먼저 원가를 계산하고 마지막에 입찰전략을 반영한다. 최저가격만 추구하면 법정경비·품질·납기와 계약변경 위험을 감당하지 못할 수 있다. 제안서는 제안요청서의 평가항목 순서에 맞추고 각 주장 옆에 수치, 책임자, 일정, 산출물과 증빙 위치를 적는다.</p>
-<p>내역입찰처럼 산출내역서가 입찰서류인 경우에는 입찰금액과 총계의 일치, 발주기관 물량의 누락, 공종별 금액 표기를 특별히 점검한다. 반대로 공고가 낙찰 후 산출내역서 제출을 요구하는 경우에는 제출시점을 입찰단계와 혼동하지 않는다.</p>
-<h3 id="4-제안서는-정해진-5단계로-작성한다">4. 제안서는 정해진 5단계로 작성한다</h3>
-<p>제안서가 필요한 계약은 <strong>협상에 의한 계약</strong>, <strong>경쟁적 대화</strong>, <strong>2단계경쟁입찰(규격·가격 동시)</strong>이다. 일반 최저가 입찰에는 제안서가 없다는 점을 먼저 구분한다.</p>
-<p>제안서 작성의 근거가 되는 문서는 세 가지이며 역할이 다르다.</p>
-<div class="table-wrap"><table><thead><tr>
-<th>문서</th>
-<th>담고 있는 것</th>
-</tr></thead><tbody>
-<tr>
-<td>입찰공고문</td>
-<td>제출 종류·방법·장소</td>
-</tr>
-<tr>
-<td>제안요청서(RFP)</td>
-<td>과업개요, <strong>평가방법·비율</strong>, <strong>배점·목차</strong></td>
-</tr>
-<tr>
-<td>과업지시서(과업내용서)</td>
-<td><strong>세부 과업과 수행조건</strong></td>
-</tr>
-</tbody></table></div>
-<p><code>RFP는 평가와 배점, 과업지시서는 실제 할 일</code>로 구분한다. 두 문서를 같은 것으로 보면 배점을 놓치거나 과업을 빠뜨린다.</p>
-<p>제출 유형은 정성(서술)제안서, 정량자료(인력·실적 등), 발표자료, 요약서로 나뉘며 공고에 따라 일부 또는 전부를 요구한다.</p>
-<p>작성은 다음 <strong>5단계</strong>로 진행한다.</p>
+<h2 id="오늘의-사례">오늘의 사례</h2>
+<p>가온데이터는 12개월 동안 운영되는 공공 데이터 품질관리 용역에 참가하려 합니다. 공고는 기술제안서, 가격입찰서, 산출내역서, 발표자료를 요구합니다. 제안팀은 상주인력 4명을 적었는데 가격팀은 3명의 인건비만 계산했습니다. 발표자료에는 제안서에 없는 무료 기능도 추가했습니다. 기술점수를 높이려고 한 일이지만, 이 상태는 좋은 제안이 아닙니다.</p>
+<p>첫째, 인력 1명의 비용이 빠져 가격의 이행가능성이 흔들립니다. 둘째, 제출 제안서와 발표가 다르면 평가자가 같은 약속으로 볼 수 없습니다. 셋째, 무료 기능이 계약범위로 받아들여지면 비용·일정·책임이 달라집니다. 해결책은 문서를 많이 쓰는 것이 아니라 <strong>하나의 기준표에서 수량·일정·가격·증빙을 함께 관리하는 것</strong>입니다.</p>
+<h2 id="입찰서류를-한-묶음으로-만드는-8단계">입찰서류를 한 묶음으로 만드는 8단계</h2>
 <div class="table-wrap"><table><thead><tr>
 <th>단계</th>
-<th>할 일</th>
-<th>놓치면 생기는 문제</th>
+<th>핵심 질문</th>
+<th>남길 기록</th>
+</tr></thead><tbody>
+<tr>
+<td>1. 기준 고정</td>
+<td>어느 기관의 어떤 공고이며 최신 정정공고까지 반영했는가?</td>
+<td>공고번호, 적용 법령, 버전·확인시각</td>
+</tr>
+<tr>
+<td>2. 제출목록화</td>
+<td>서류명, 형식, 분량, 파일명, 제출경로, 마감은 무엇인가?</td>
+<td>제출물 통제표</td>
+</tr>
+<tr>
+<td>3. 요구분해</td>
+<td>필수·평가·계약조건·질의필요 사항은 무엇인가?</td>
+<td>요구사항 추적표</td>
+</tr>
+<tr>
+<td>4. 물량·과업 산정</td>
+<td>수량, 기간, 인력, 공정, 성과물은 얼마인가?</td>
+<td>물량·과업 산출근거</td>
+</tr>
+<tr>
+<td>5. 가격계산</td>
+<td>직접비·간접비·일반관리비·이윤·세금의 근거는 무엇인가?</td>
+<td>가격산출 검토표</td>
+</tr>
+<tr>
+<td>6. 제안서 작성</td>
+<td>요구별 해결방법·인력·일정·성과·증빙이 있는가?</td>
+<td>기술제안서와 증빙 색인</td>
+</tr>
+<tr>
+<td>7. 일치검증</td>
+<td>가격, 인력, 일정, 모델명, 실적, 약속이 모든 파일에서 같은가?</td>
+<td>교차검증표</td>
+</tr>
+<tr>
+<td>8. 제출·설명</td>
+<td>최종본을 적법하게 제출하고 평가항목대로 설명할 수 있는가?</td>
+<td>제출확인증, 발표·질의응답표</td>
+</tr>
+</tbody></table></div>
+<p>정정공고가 나오면 1단계로 돌아갑니다. 이전 파일을 부분 수정한 뒤 그대로 제출하지 말고, 요구사항 추적표의 버전을 올리고 모든 연결 문서를 다시 검증합니다.</p>
+<h2 id="가격작성의-출발점-가격-네-가지를-구분한다">가격작성의 출발점: 가격 네 가지를 구분한다</h2>
+<div class="table-wrap"><table><thead><tr>
+<th>용어</th>
+<th>작성 주체·기능</th>
+<th>주의점</th>
+</tr></thead><tbody>
+<tr>
+<td>추정가격</td>
+<td>발주기관이 계약방법·공고 등에 사용하는 기준가격</td>
+<td>원칙적으로 부가가치세를 제외하는 개념이므로 사업예산과 같다고 단정하지 않는다.</td>
+</tr>
+<tr>
+<td>예정가격</td>
+<td>발주기관이 낙찰·계약금액 결정 등에 쓰기 위해 정한 가격</td>
+<td>입찰자가 임의로 확정할 수 없다. 작성 여부도 계약방식에 따라 확인한다.</td>
+</tr>
+<tr>
+<td>견적원가</td>
+<td>입찰자가 실제 이행에 필요한 비용과 위험을 내부 산정한 값</td>
+<td>누락·중복·비현실적 단가가 없어야 한다.</td>
+</tr>
+<tr>
+<td>입찰가격</td>
+<td>입찰자가 경쟁전략과 이행가능성을 고려해 제출한 가격</td>
+<td>공고상 상한, 세금 처리, 가격평가 산식과 일치해야 한다.</td>
+</tr>
+</tbody></table></div>
+<p>국가계약법 시행령 제9조는 예정가격의 결정기준으로 적정한 거래가 형성된 경우의 거래실례가격, 신규개발품·특수규격품처럼 거래실례가격이 없는 경우의 원가계산가격, 공사의 표준시장단가, 그 밖의 감정가격·유사 거래실례가격·견적가격 등을 둡니다. 적용할 수 있는 기준을 건너뛰고 편한 숫자를 고르는 절차가 아닙니다.</p>
+<h2 id="대상물별-원가구조-비교">대상물별 원가구조 비교</h2>
+<div class="table-wrap"><table><thead><tr>
+<th>구분</th>
+<th>기본 구조</th>
+<th>특히 확인할 자료</th>
+<th>흔한 누락</th>
+</tr></thead><tbody>
+<tr>
+<td>제조</td>
+<td>재료비 + 노무비 + 경비 + 일반관리비 + 이윤</td>
+<td>소요량, 단가, 손실률, 공정별 시간, 외주·시험·운송</td>
+<td>포장, 검사, 폐기, 납품·설치 비용</td>
+</tr>
+<tr>
+<td>용역</td>
+<td>인건비 + 경비 + 일반관리비 + 이윤</td>
+<td>투입인력 등급·기간·참여율, 출장·장비·보험·성과물</td>
+<td>휴가·교체, 보안, 교육, 보고·인수인계</td>
+</tr>
+<tr>
+<td>공사</td>
+<td>재료비 + 직접노무비 + 경비 + 간접비·보험료 등 + 일반관리비 + 이윤</td>
+<td>설계서, 물량내역, 표준품셈·시장단가, 현장조건</td>
+<td>가설, 안전, 운반거리, 법정 보험·부담금</td>
+</tr>
+</tbody></table></div>
+<p>국가계약법 시행규칙 제8조의 이윤율은 원가계산 예정가격에서 넘지 못하는 상한입니다. 공사 15%, 제조·구매 25%, 수입물품 구매 10%, 용역 10%이나, 이를 입찰자가 언제나 적용받는 보장 이윤으로 해석하면 안 됩니다. 일반관리비율도 업종별 상한이 다르므로 하나의 공통률을 만들어 쓰지 않습니다. 실제 견적에서는 공고, 예정가격 작성기준, 적용 업종과 회사의 실현 가능한 비용을 각각 확인합니다.</p>
+<h3 id="계산-사례-제조-견적의-구조">계산 사례: 제조 견적의 구조</h3>
+<p>다음은 산식 연습을 위한 <strong>자체 가정</strong>입니다. 공고가 이 비율을 정했다는 뜻도, 법정 고정률이라는 뜻도 아닙니다.</p>
+<ul>
+<li>재료비 42,000,000원</li>
+<li>노무비 18,000,000원</li>
+<li>경비 6,000,000원</li>
+<li>연습용 일반관리비율 7%</li>
+<li>연습용 이윤율 8%, 이윤기초는 노무비·경비·일반관리비의 합계라고 가정</li>
+<li>과세거래로 부가가치세 10% 적용</li>
+</ul>
+<p>계산은 다음과 같습니다.</p>
+<ol>
+<li>제조원가 기초 = 42,000,000 + 18,000,000 + 6,000,000 = <strong>66,000,000원</strong></li>
+<li>일반관리비 = 66,000,000 × 7% = <strong>4,620,000원</strong></li>
+<li>이윤 = (18,000,000 + 6,000,000 + 4,620,000) × 8% = <strong>2,289,600원</strong></li>
+<li>공급가액 = 66,000,000 + 4,620,000 + 2,289,600 = <strong>72,909,600원</strong></li>
+<li>부가가치세 = 72,909,600 × 10% = <strong>7,290,960원</strong></li>
+<li>합계 = <strong>80,200,560원</strong></li>
+</ol>
+<p>정답보다 중요한 것은 각 비목의 <strong>적용근거, 계산기초, 포함·제외 여부</strong>입니다. 면세사업자도 가격입찰 시 부가가치세를 포함하도록 공고가 정한 경우가 있으므로, 과세유형만 보고 임의로 빼지 말고 공고의 가격 제출조건과 계약 시 처리를 확인합니다.</p>
+<h3 id="가격-검증-다섯-질문">가격 검증 다섯 질문</h3>
+<ol>
+<li>수량과 단위가 규격서·산출내역서·제안서에서 같은가?</li>
+<li>인력의 등급, 인원, 개월, 참여율을 모두 곱했는가?</li>
+<li>직접비와 간접비를 중복 계상하거나 빠뜨리지 않았는가?</li>
+<li>세금 포함 여부와 총액·단가 절사·반올림 규칙이 공고와 같은가?</li>
+<li>최종 입찰가격으로 제안한 품질·일정·인력을 실제 이행할 수 있는가?</li>
+</ol>
+<h2 id="기술제안서-요구사항을-문장으로-베끼지-말고-증명한다">기술제안서: 요구사항을 문장으로 베끼지 말고 증명한다</h2>
+<p>제안서 한 항목은 <code>요구 → 해법 → 수행주체 → 일정 → 산출물 → 검증 → 증빙</code>의 일곱 칸을 가져야 합니다. “최선을 다한다”는 해법도 증빙도 아닙니다.</p>
+<div class="table-wrap"><table><thead><tr>
+<th>RFP 요구</th>
+<th>제안서에 쓸 내용</th>
+<th>증빙</th>
+</tr></thead><tbody>
+<tr>
+<td>월별 품질점검</td>
+<td>대상·표본·점검방법·오류등급·시정기한</td>
+<td>점검표 견본, 책임자 경력</td>
+</tr>
+<tr>
+<td>장애 대응</td>
+<td>접수→분류→복구→원인분석→재발방지 절차</td>
+<td>대응조직도, 보고서 견본</td>
+</tr>
+<tr>
+<td>보안 준수</td>
+<td>인력·계정·자료반출·파기 통제</td>
+<td>보안서약·교육계획</td>
+</tr>
+<tr>
+<td>최종 인수인계</td>
+<td>자료목록, 교육, 지식이전, 인수기준</td>
+<td>인수인계 체크리스트</td>
+</tr>
+</tbody></table></div>
+<p>평가항목의 배점은 제안서 분량 배분의 중요한 단서지만, 낮은 배점의 <strong>필수요건</strong>을 생략할 수 있다는 뜻은 아닙니다. 필수요건은 통과조건으로 모두 충족하고, 차별화할 자원은 고배점 평가항목에 집중합니다.</p>
+<h3 id="요구사항-추적번호를-쓴다">요구사항 추적번호를 쓴다</h3>
+<p>요구마다 <code>R-001</code> 같은 번호를 부여하고 공고 문단, 제안서 쪽, 증빙 파일, 가격 비목을 연결합니다. 그러면 “기술에는 있는데 가격에 없는 약속”과 “비용은 있는데 제안서에 설명되지 않은 항목”을 찾을 수 있습니다.</p>
+<div class="table-wrap"><table><thead><tr>
+<th>ID</th>
+<th>요구 원문 위치</th>
+<th>필수/평가</th>
+<th>제안서 위치</th>
+<th>가격 연결</th>
+<th>증빙</th>
+<th>상태</th>
+</tr></thead><tbody>
+<tr>
+<td>R-001</td>
+<td>RFP 3.2</td>
+<td>필수</td>
+<td>Ⅱ-3, p.27</td>
+<td>인건비 A-1</td>
+<td>경력증명 01</td>
+<td>충족</td>
+</tr>
+<tr>
+<td>R-002</td>
+<td>평가표 2-1</td>
+<td>평가</td>
+<td>Ⅲ-1, p.41</td>
+<td>장비비 B-2</td>
+<td>시험성적 02</td>
+<td>확인중</td>
+</tr>
+</tbody></table></div>
+<h2 id="제안설명-제출한-약속을-평가언어로-되찾아-준다">제안설명: 제출한 약속을 평가언어로 되찾아 준다</h2>
+<p>발표는 새 제안서를 만드는 시간이 아닙니다. 다음 순서로 구성합니다.</p>
+<ol>
+<li>발주목표와 핵심 문제를 한 문장으로 재확인한다.</li>
+<li>평가항목 순서와 발표 목차를 맞춘다.</li>
+<li>각 항목에서 <code>주장 → 방법 → 수치·일정 → 증빙 위치 → 기대결과</code>를 말한다.</li>
+<li>위험요인에는 담당자, 예방통제, 발생 시 조치, 보고시점을 붙인다.</li>
+<li>답변은 제출본의 쪽과 표를 근거로 하고, 확인되지 않은 내용은 확인 후 공식 절차로 답하겠다고 구분한다.</li>
+</ol>
+<p>질문을 받았다고 필수 규격을 낮추거나 가격·인력·기간을 즉석에서 바꾸지 않습니다. 설명 과정의 답변이 사실상 새로운 약속이 될 수 있으면 협상·계약 반영 여부와 권한을 확인해야 합니다.</p>
+<h2 id="사례-완성">사례 완성</h2>
+<p>가온데이터는 요구사항 추적표에서 상주인력 요구를 <code>R-014</code>로 등록합니다. 제안서의 인력 4명, 일정표의 12개월, 가격산출의 48인월을 일치시킵니다. 인력 1명분이 빠진 가격서는 다시 계산하고, 수정한 가격이 공고상 제출조건과 사업예산을 충족하는지 확인합니다. 무료 기능은 제출 제안서에 없으므로 발표자료에서 삭제합니다. 꼭 제안할 필요가 있다면 제출 전 정정 가능한 범위와 가격 영향을 검토하여 모든 서류에 함께 반영합니다. 최종 교차검증자가 제출파일의 해시 또는 최종버전, 제출시각, 접수결과를 기록합니다.</p>
+<h2 id="실무-산출물-1-입찰서류-통제표">실무 산출물 1: 입찰서류 통제표</h2>
+<div class="table-wrap"><table><thead><tr>
+<th>번호</th>
+<th>제출물</th>
+<th>근거 위치</th>
+<th>형식·분량</th>
+<th>책임자</th>
+<th>내부마감</th>
+<th>최종버전</th>
+<th>제출결과</th>
 </tr></thead><tbody>
 <tr>
 <td>1</td>
-<td>RFP·과업지시서를 읽고 과업의 목적·범위를 파악</td>
-<td>발주기관이 원하지 않은 내용을 채운다</td>
+<td>기술제안서</td>
+<td>공고 8항</td>
+<td>PDF, 공고 기준</td>
+<td>제안책임</td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
 <tr>
 <td>2</td>
-<td><strong>배점이 큰 항목</strong>을 식별해 분량과 깊이를 배분</td>
-<td>배점 1점 항목에 열 쪽, 30점 항목에 한 쪽</td>
+<td>가격입찰서</td>
+<td>공고 9항</td>
+<td>전자입찰</td>
+<td>가격책임</td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
 <tr>
 <td>3</td>
-<td><strong>표준 목차와 작성지침</strong>을 준수</td>
-<td>평가위원이 항목을 찾지 못해 점수를 잃는다</td>
+<td>산출내역서</td>
+<td>RFP 별지</td>
+<td>지정서식</td>
+<td>가격책임</td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
 <tr>
 <td>4</td>
-<td>형식에 맞춰 작성(정성은 HWP, 발표는 PPT, A4·여백·분량 지침)</td>
-<td>형식 위반으로 감점되거나 반려된다</td>
-</tr>
-<tr>
-<td>5</td>
-<td><strong>조견표</strong>로 평가기준과 목차를 연결해 최종검토</td>
-<td>요구항목 누락을 마감 후에 발견한다</td>
+<td>발표자료</td>
+<td>평가안내</td>
+<td>PDF</td>
+<td>발표자</td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
 </tbody></table></div>
-<p><strong>조견표</strong>는 평가기준의 각 항목이 제안서 어느 쪽에 있는지를 대응시킨 표다. 온라인 평가에서는 제출을 요구하는 경우가 있으므로 형식적 부록이 아니라 평가 편의를 좌우하는 문서로 다룬다.</p>
-<p>작성 원칙은 세 가지다.</p>
-<ul>
-<li><strong>「~할 수도 있다」식 표현을 지양</strong>하고 확정적·구체적으로 쓴다. 평가위원은 제안된 것만 평가한다.</li>
-<li>과업의 <strong>선후행과 단계 연계</strong>를 보여 준다. 예를 들어 <code>조사 → 분석 → 시사점 → 대안</code>처럼 앞 단계의 산출물이 다음 단계의 입력이 되도록 서술한다.</li>
-<li><strong>발주기관·평가자의 관점</strong>에서 쓴다. 자사 홍보가 아니라 이 기관의 문제를 어떻게 해결하는지를 중심에 둔다.</li>
-</ul>
-<p>교재가 제시하는 실무 기준값은 다음과 같다. 법정 고정값이 아니라 공고별로 달라지므로 <strong>범위와 맥락으로</strong> 기억한다.</p>
+<h3 id="빈-가격산출-검토표">빈 가격산출 검토표</h3>
 <div class="table-wrap"><table><thead><tr>
-<th>항목</th>
-<th>교재 기준(예)</th>
+<th>비목</th>
+<th>수량·산식</th>
+<th>단가 근거·기준일</th>
+<th>금액</th>
+<th>제안서 연결</th>
+<th>검토의견</th>
 </tr></thead><tbody>
 <tr>
-<td>기술 : 가격 평가비율</td>
-<td><strong>80 : 20</strong></td>
+<td>재료비/인건비</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
 <tr>
-<td>정성 제안서 분량</td>
-<td><strong>50~100쪽</strong></td>
+<td>노무비</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
 <tr>
-<td>발표자료 분량</td>
-<td><strong>20~30쪽</strong></td>
+<td>경비</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
 <tr>
-<td>발표·평가 시간</td>
-<td><strong>20분</strong> 내외</td>
+<td>일반관리비</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
 <tr>
-<td>개별 항목 배점</td>
-<td>사업이해도·수행계획 각 30점 등</td>
+<td>이윤</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>세금</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>합계</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
 </tbody></table></div>
-<h3 id="5-보완-가능한-것과-불가능한-것을-구분한다">5. 보완 가능한 것과 불가능한 것을 구분한다</h3>
-<p>제안서 평가에서는 제안내용을 바꾸지 않는 경미한 불명확 사항이나 단순 누락의 확인·보완이 허용될 수 있다. 그러나 가격, 핵심 수행방식, 평가결과를 바꾸는 새로운 실적·인력·내용을 마감 후 추가할 권리가 입찰자에게 생기는 것은 아니다. “나중에 보완하면 된다”는 전제로 불완전한 서류를 제출해서는 안 된다.</p>
-<h3 id="6-제출-직전에는-사람과-시스템을-함께-점검한다">6. 제출 직전에는 사람과 시스템을 함께 점검한다</h3>
-<p>제출 담당자와 최종 승인자를 나누고, 금액·파일·서명을 교차검토한다. 전자서명 수단과 입찰대리인 권한, PC 환경, 파일 용량·암호·악성코드 여부를 미리 확인한다. 마감 직전 통신장애는 입찰자 책임이 될 수 있으므로 여유 있게 전송하고 다음 자료를 보존한다.</p>
+<h3 id="빈-요구사항-추적표">빈 요구사항 추적표</h3>
+<div class="table-wrap"><table><thead><tr>
+<th>ID</th>
+<th>요구 원문·위치</th>
+<th>필수/평가/계약</th>
+<th>제안서 쪽</th>
+<th>인력·일정</th>
+<th>가격비목</th>
+<th>증빙</th>
+<th>상태·조치</th>
+</tr></thead><tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table></div>
+<h2 id="필답형-답안-프레임">필답형 답안 프레임</h2>
+<p><strong>절차형:</strong> <code>공고·RFP와 정정사항 확정 → 제출목록 작성 → 요구사항 분해 → 수량·과업 산정 → 대상물별 원가계산과 견적 작성 → 평가항목별 제안 작성 → 가격·인력·일정 교차검증 → 적법 제출 → 제출본 근거로 설명</code></p>
+<p><strong>계산형:</strong> <code>계산대상과 세금조건 확인 → 비목별 계산기초 제시 → 적용률의 근거와 상한 여부 표시 → 중간값 계산 → 반올림·절사 규칙 적용 → 이행가능성 검토</code></p>
+<p><strong>사례형:</strong> <code>결론 → 불일치한 요구·수량·가격 특정 → 적용 기준 → 재계산·문서 동기화 → 최종 제출통제</code></p>
+<h2 id="자체-제작-문제-10개">자체 제작 문제 10개</h2>
+<ol>
+<li>O/X: 입찰자가 만든 내부 견적원가는 발주기관의 예정가격과 같은 개념이다. 2점</li>
+<li>O/X: 평가배점이 낮은 필수요건은 제안서에서 생략할 수 있다. 2점</li>
+<li>추정가격, 예정가격, 견적원가, 입찰가격을 구분하시오. 8점</li>
+<li>제조·용역·공사의 기본 원가구조와 각 한 가지 핵심 증빙을 쓰시오. 9점</li>
+<li>요구사항 추적표가 연결해야 할 항목을 다섯 가지 이상 쓰시오. 5점</li>
+<li>재료비 30,000,000원, 노무비 12,000,000원, 경비 3,000,000원이다. 연습용 일반관리비율을 원가 기초의 6%, 이윤율을 <code>노무비+경비+일반관리비</code>의 5%로 가정할 때 공급가액을 계산하시오. 8점</li>
+<li>제안서에는 5명×10개월, 가격서에는 40인월이 적혀 있다. 문제와 조치를 쓰시오. 6점</li>
+<li>제출한 제안서에 없는 무료 기능을 발표에서 약속해도 되는지 서술하시오. 5점</li>
+<li>정정공고가 나온 뒤 입찰서류를 다시 통제하는 절차를 쓰시오. 7점</li>
+<li>가온데이터 사례를 <code>결론→기준→적용→조치</code>로 답하시오. 8점</li>
+</ol>
+<h2 id="정답과-채점기준">정답과 채점기준</h2>
+<ol>
+<li><strong>X.</strong> 예정가격은 발주기관의 가격이고 견적원가는 입찰자의 내부 산정값이다. 정답 1점, 이유 1점.</li>
+<li><strong>X.</strong> 필수요건은 배점과 별개로 충족해야 한다. 정답 1점, 이유 1점.</li>
+<li>추정가격은 계약방법 등에 쓰는 발주기관 기준가격, 예정가격은 낙찰·계약금액 결정 등에 쓰도록 발주기관이 정한 가격, 견적원가는 입찰자의 실제 이행비용 산정, 입찰가격은 경쟁전략과 공고조건을 반영한 제출가격이다. 각 2점.</li>
+<li>제조는 <code>재료비+노무비+경비+일반관리비+이윤</code>과 소요량표, 용역은 <code>인건비+경비+일반관리비+이윤</code>과 인력투입표, 공사는 재료·노무·경비·법정경비·일반관리비·이윤과 설계서·물량내역을 쓴다. 구조별 2점, 증빙별 1점.</li>
+<li>요구 원문과 위치, 필수·평가 구분, 제안서 위치, 인력·일정, 가격비목, 증빙, 상태 중 다섯 가지. 각 1점.</li>
+<li>원가 기초 45,000,000원(2점), 일반관리비 2,700,000원(2점), 이윤 <code>(12,000,000+3,000,000+2,700,000)×5%=885,000원</code>(2점), 공급가액 <strong>48,585,000원</strong>(2점). 세금은 문제에서 요구하지 않았다.</li>
+<li>50인월과 40인월이 불일치하여 이행가능성과 가격 신뢰성이 훼손된다(3점). 실제 투입계획을 확정하고 제안서·일정·가격·증빙을 같은 값으로 수정한 뒤 재검증한다(3점).</li>
+<li>원칙적으로 즉석 약속하면 안 된다(2점). 제출본과 다른 약속은 평가·계약범위와 비용을 바꿀 수 있으므로, 근거 위치와 권한을 확인하고 필요한 경우 정식 협상·계약문서에 반영해야 한다(3점).</li>
+<li>정정사항과 버전을 확정하고(1점), 요구사항 추적표를 갱신하며(2점), 연결된 가격·제안·증빙·발표자료를 수정하고(2점), 일치검증 후 최종본을 다시 제출통제한다(2점).</li>
+<li>현재 서류는 제출하면 안 된다는 결론 2점, 인력·가격 및 발표 불일치 2점, 공고·RFP·평가기준과 제출본 일치 원칙 2점, 48인월 재산정·무료기능 삭제 또는 전 문서 반영·최종검증 2점.</li>
+</ol>
+<p>총점은 60점입니다. 48점 이상이면 다음 장으로 진행하고, 계산형 6번 또는 사례형 10번에서 절반 미만이면 가격검토표와 추적표를 다시 작성합니다.</p>
+<h2 id="시험-직전-암기카드">시험 직전 암기카드</h2>
+<div class="table-wrap"><table><thead><tr>
+<th>앞면</th>
+<th>뒷면</th>
+</tr></thead><tbody>
+<tr>
+<td>가격 4개</td>
+<td>추정가격 / 예정가격 / 견적원가 / 입찰가격</td>
+</tr>
+<tr>
+<td>서류 8단계</td>
+<td>기준 → 목록 → 요구 → 물량 → 가격 → 제안 → 일치 → 제출·설명</td>
+</tr>
+<tr>
+<td>원가 공통</td>
+<td>직접원가 → 간접·일반관리 → 이윤 → 세금, 근거와 계산기초 기록</td>
+</tr>
+<tr>
+<td>제안 한 항목</td>
+<td>요구 → 해법 → 주체 → 일정 → 산출물 → 검증 → 증빙</td>
+</tr>
+<tr>
+<td>추적표 연결</td>
+<td>원문 / 제안서 / 인력·일정 / 가격 / 증빙 / 상태</td>
+</tr>
+<tr>
+<td>설명 원칙</td>
+<td>새 약속이 아니라 제출한 약속의 근거를 평가언어로 설명</td>
+</tr>
+<tr>
+<td>사례 답안</td>
+<td>결론 → 불일치 → 기준 → 동기화·제출통제</td>
+</tr>
+</tbody></table></div>
+<h2 id="마무리-점검">마무리 점검</h2>
 <ul>
-<li>최종 제출본과 파일 해시 또는 버전</li>
-<li>전자입찰 송신·접수 확인 화면</li>
-<li>제출시각, 투찰금액, 담당자·승인자 기록</li>
-<li>정정공고와 질의답변을 반영한 검토표</li>
+<li class="check-item"><input type="checkbox" disabled> 정정공고까지 반영한 공고 버전을 기록했는가?</li>
+<li class="check-item"><input type="checkbox" disabled> 제출물의 형식·분량·경로·마감을 통제표에 적었는가?</li>
+<li class="check-item"><input type="checkbox" disabled> 모든 필수요구를 추적번호로 연결했는가?</li>
+<li class="check-item"><input type="checkbox" disabled> 수량·인력·기간의 계산기초와 단가 기준일이 있는가?</li>
+<li class="check-item"><input type="checkbox" disabled> 제안·가격·일정·발표의 숫자가 일치하는가?</li>
+<li class="check-item"><input type="checkbox" disabled> 실제 공고의 세금·반올림·가격제출 조건을 적용했는가?</li>
+<li class="check-item"><input type="checkbox" disabled> 제출확인과 최종버전을 보존했는가?</li>
+<li class="check-item"><input type="checkbox" disabled> 10문제를 채점하고 취약 항목을 다시 작성했는가?</li>
 </ul>
-<h2 id="시험-포인트">③ 시험 포인트</h2>
+<h2 id="근거와-기준일">근거와 기준일</h2>
 <ul>
-<li>서류 작성의 출발점은 디자인이 아니라 <strong>적용법령·계약유형·낙찰방법의 식별</strong>이다.</li>
-<li>입찰서와 산출내역서의 합계가 다르면 단순 오탈자로만 처리되지 않을 수 있다.</li>
-<li>정량평가는 증빙과 기준일이 핵심이고, 정성평가는 평가항목에 대응하는 실행계획이 핵심이다.</li>
-<li>전자파일 업로드와 유효한 전자입찰 제출은 같은 말이 아니다. 전자서명과 접수완료를 확인한다.</li>
-<li>예비가격 개수·추첨수·가격변동 범위·낙찰하한율을 모든 입찰에 공통인 숫자로 외우면 안 된다. 해당 법령, 낙찰자 결정기준과 공고에서 확인한다.</li>
-<li>입찰보증금도 계약보증금과 다른 제도다. 보증률·면제·귀속은 해당 입찰에 적용되는 현행 규정을 따로 확인한다.</li>
-<li>제출 후 보완은 제안내용을 변경하지 않는 경미한 사항에 한정될 수 있으며, 핵심내용을 새로 제출하는 기회가 아니다.</li>
-<li>제안서가 필요한 계약은 <strong>협상에 의한 계약·경쟁적 대화·2단계경쟁입찰</strong>이다. 일반 최저가 입찰에 제안서를 요구한다는 지문은 틀리다.</li>
-<li><strong>RFP는 평가방법·배점·목차</strong>, <strong>과업지시서는 세부 과업·수행조건</strong>이다. 두 문서의 역할을 바꾸는 문제가 자주 나온다.</li>
-<li>제안서 작성 5단계는 <code>과업 이해 → 배점 식별 → 표준 목차 준수 → 작성 → 조견표 최종검토</code>다. 2단계의 <strong>배점 큰 항목 우선 배분</strong>이 핵심이다.</li>
-<li>조견표는 평가기준과 제안서 목차를 연결하는 문서이며 온라인 평가에서 제출을 요구할 수 있다.</li>
-<li>「~할 수도 있다」식 서술은 평가에서 불리하다. 확정적·구체적 서술이 원칙이다.</li>
-<li>80:20, 50~100쪽, 20~30쪽, 20분은 <strong>교재의 실무 예시값</strong>이며 법정 고정값이 아니다. 공고가 정한 값을 우선한다.</li>
+<li><a href="https://www.q-net.or.kr/crf005.do?gSite=Q&amp;id=crf00503s02&amp;jmCd=9777&amp;jmInfoDivCcd=B0">Q-Net 공공조달관리사 시험정보</a>, 출제기준 적용기간 2026년 3월 1일~2028년 12월 31일</li>
+<li><a href="https://www.pps.go.kr/hrd/home/UserBoardActionUpdate.do?BO_CODE=REFERENCE_ROOM&amp;BO_IDX=6582&amp;CHILD_MENU=MENU209&amp;method=detail">조달청 표준교재 4권 게시</a>, 교재 95~159쪽</li>
+<li><a href="https://www.law.go.kr/LSW/lsInfoP.do?lsiSeq=285893&amp;chrClsCd=010202&amp;urlMode=lsInfoP&amp;efYd=20260603&amp;ancYnChk=0">국가계약법 시행령</a> 제7조의2·제8조·제9조, 2026년 6월 3일 시행</li>
+<li><a href="https://www.law.go.kr/LSW/lsInfoP.do?lsiSeq=282607&amp;chrClsCd=010202&amp;urlMode=lsInfoP&amp;efYd=20260102&amp;ancYnChk=0">국가계약법 시행규칙</a> 제4조~제13조, 특히 제8조, 2026년 1월 2일 시행</li>
+<li><a href="https://www.law.go.kr/LSW/admRulInfoP.do?admRulSeq=2100000272430&amp;chrClsCd=010201">(계약예규) 예정가격 작성기준</a>, 재정경제부계약예규 제34호, 2026년 1월 2일 시행</li>
+<li><a href="https://www.law.go.kr/admRulInfoP.do?admRulSeq=2100000272436">(계약예규) 협상에 의한 계약체결기준</a>, 재정경제부계약예규 제40호, 2026년 1월 2일 시행</li>
 </ul>
-<h2 id="암기-체크리스트">④ 암기 체크리스트</h2>
-<ul>
-<li class="check-item"><input type="checkbox" disabled> 국가·지방, 공사·물품·용역 구분</li>
-<li class="check-item"><input type="checkbox" disabled> 입찰방법과 낙찰자 결정방법 확인</li>
-<li class="check-item"><input type="checkbox" disabled> 참가자격의 명의·유효기간·기준일 확인</li>
-<li class="check-item"><input type="checkbox" disabled> 입찰서 금액과 산출내역서 총계 일치</li>
-<li class="check-item"><input type="checkbox" disabled> 평가항목 순서대로 제안서 목차 구성</li>
-<li class="check-item"><input type="checkbox" disabled> 제안서 필요 계약: 협상계약·경쟁적 대화·2단계경쟁입찰</li>
-<li class="check-item"><input type="checkbox" disabled> 입찰공고문(제출방법)·RFP(평가·배점)·과업지시서(세부 과업)</li>
-<li class="check-item"><input type="checkbox" disabled> 제안서 5단계: 과업 이해→배점 식별→표준 목차→작성→조견표 검토</li>
-<li class="check-item"><input type="checkbox" disabled> 조견표=평가기준과 목차의 연결표, 온라인 평가 시 제출</li>
-<li class="check-item"><input type="checkbox" disabled> 확정적 서술·과업 선후행 연계·발주기관 관점</li>
-<li class="check-item"><input type="checkbox" disabled> 교재 예시 80:20·50~100쪽·20~30쪽·20분</li>
-<li class="check-item"><input type="checkbox" disabled> 정량증빙과 제안서 수치의 상호 일치</li>
-<li class="check-item"><input type="checkbox" disabled> 전자서명·입찰대리인 권한 확인</li>
-<li class="check-item"><input type="checkbox" disabled> 가격·제안서·공동수급협정 각각의 마감 확인</li>
-<li class="check-item"><input type="checkbox" disabled> 제출완료·접수시각과 최종본 보존</li>
-</ul>
-<h2 id="다음-chapter">⑤ 다음 Chapter</h2>
-<p>다음은 Part 3 Chapter 2 <strong>「입찰평가 기준 검증」</strong>으로 이어진다.</p><nav class="article-nav"><a class="nav-link prev" href="../../../4/part02/chapter03/">← Part 2 · Ch 3 공급계획 수립</a><a class="nav-link next" href="../../../4/part03/chapter02/">Part 3 · Ch 2 입찰평가 기준 검증 →</a></nav></article></div></main><footer class="footer">박문각 수험서·조달청 표준교재 기반 학습자료</footer>
+<blockquote>기준일은 2026년 8월 24일입니다. 실제 입찰에서는 개별 공고의 적용 법체계, 정정공고, 가격산식, 세금조건과 최신 원문을 다시 확인해야 합니다.</blockquote><nav class="article-nav"><a class="nav-link prev" href="../../../4/part02/chapter03/">← Part 2 · Ch 3 공급계획수립하기</a><a class="nav-link next" href="../../../4/part03/chapter02/">Part 3 · Ch 2 입찰평가 기준 검증하기 →</a></nav></article></div></main><footer class="footer">공식 출제기준·조달청 표준교재·현행 규정 기반 자체 제작 학습자료</footer>
 <script>(function(){var b=document.querySelector('.toc-toggle');if(!b)return;var r=document.documentElement;function sync(){var c=r.classList.contains('nav-collapsed');var l=c?'과목 목차 열기':'과목 목차 닫기';b.setAttribute('aria-expanded',c?'false':'true');b.setAttribute('aria-label',l);b.setAttribute('title',l)}b.addEventListener('click',function(){var c=r.classList.toggle('nav-collapsed');try{localStorage.setItem('lectureTocCollapsed',c?'1':'0')}catch(e){}sync()});sync()})();</script></body></html>
