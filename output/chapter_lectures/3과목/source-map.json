@@ -977,7 +977,8 @@
       "scope_role": "official_direct",
       "origin": "custom",
       "rights": {"label": "자체 제작", "derivative_of_private_source": false, "publishable": true},
-      "status": "planned"
+      "status": "draft",
+      "coverage_note": "표준교재 PDF 300~305쪽의 기술형공사 유형, 집행기본계획, 중앙건설기술심의위원회·기술자문위원회 선정심의 흐름을 자체 서술로 구성함. 법령·문항·수치의 일괄 검증은 3과목 전체 제작 후 수행 예정"
     },
     {
       "id": "PPM3-P04-L10",
