@@ -73,10 +73,10 @@
     "status": "mapping_checked",
     "lesson_content_status": "in_progress",
     "chapters_planned": 29,
-    "chapters_completed": 9,
-    "questions_checked": 374,
-    "recall_prompts_checked": 36,
-    "inline_answers_checked": 410,
+    "chapters_completed": 10,
+    "questions_checked": 410,
+    "recall_prompts_checked": 43,
+    "inline_answers_checked": 453,
     "major_criteria_mapped": "4/4",
     "subcriteria_mapped": "11/11",
     "fine_criteria_mapped": "55/55",
@@ -90,7 +90,7 @@
     "5": "공식 2-2-1 공정, 품질 및 안전관리를 보강하는 표준교재 확장; 표준교재 PDF 335-376쪽의 5개 절을 각각 1개 Chapter로 구성",
     "6": "공식 세세항목 직접 대응이 없는 표준교재 확장; 표준교재 PDF 377-419쪽의 벤처나라·혁신시제품·우수조달물품 3개 절을 각각 1개 Chapter로 구성"
   },
-  "legal_sources_note": "완성된 장은 현행 법령·계약예규·행정규칙을 조문 단위로 검증하고, 아직 작성하지 않은 장의 근거는 작성 단계에서 추가함. PPM3-P03-L02는 2026-08-24 현재 시행 중인 물품·용역 MAS 및 카탈로그 규정을 적용하고, 물품 MAS 계약이행실적평가의 2027-01-01 시행 예정 개편은 2026년 현행 평가체계와 분리해 표시함",
+  "legal_sources_note": "완성된 장은 현행 법령·계약예규·행정규칙을 조문 단위로 검증하고, 아직 작성하지 않은 장의 근거는 작성 단계에서 추가함. PPM3-P03-L02는 2026-08-24 현재 시행 중인 물품·용역 MAS 및 카탈로그 규정을 적용하고, 물품 MAS 계약이행실적평가의 2027-01-01 시행 예정 개편은 2026년 현행 평가체계와 분리해 표시함. PPM3-P04-L01은 교재의 전문 15종·시설물유지관리업·산업설비공사업·100억 원 미만 타당성조사 생략 표현을 2026-08-24 현행 건설산업·건설기술 법령으로 보정하고, 상호시장 2026년 규정과 2027-01-01 시행 예정 범위를 분리함",
   "legal_sources": [
     {
       "id": "state_contract_act",
@@ -128,11 +128,69 @@
       "url": "https://law.go.kr/LSW/admRulLsInfoP.do?admRulSeq=2100000271122"
     },
     {
+      "id": "construction_industry_framework_act",
+      "title": "건설산업기본법",
+      "locators": ["제2조", "제4조", "제8조·제9조", "제16조", "제25조"],
+      "effective_date": "2025-11-27",
+      "url": "https://www.law.go.kr/LSW/lsInfoP.do?lsiSeq=273435&chrClsCd=010202&urlMode=lsInfoP&efYd=20251127&ancYnChk=0"
+    },
+    {
       "id": "construction_industry_framework_decree",
       "title": "건설산업기본법 시행령",
-      "locators": ["제32조", "제34조"],
+      "locators": ["제7조·제7조의2", "제8조", "제21조", "제32조", "제34조", "별표 1"],
       "effective_date": "2026-06-23",
-      "url": "https://www.law.go.kr/lsLinkCommonInfo.do?chrClsCd=010202&lspttninfSeq=105183"
+      "url": "https://www.law.go.kr/LSW/lsInfoP.do?lsiSeq=287349&chrClsCd=010202&urlMode=lsInfoP&efYd=20260623&ancYnChk=0",
+      "application_note": "별표 1의 시설물유지관리업은 2023-12-31까지만 유효하므로 2026년 현행 업종 수는 종합 5개·전문 14개로 적용"
+    },
+    {
+      "id": "construction_industry_framework_rule",
+      "title": "건설산업기본법 시행규칙",
+      "locators": ["제13조의4"],
+      "effective_date": "2026-01-02",
+      "url": "https://www.law.go.kr/LSW/lsInfoP.do?lsiSeq=282375&chrClsCd=010202&urlMode=lsInfoP&efYd=20260102&ancYnChk=0"
+    },
+    {
+      "id": "construction_technology_promotion_act",
+      "title": "건설기술 진흥법",
+      "locators": ["제2조", "제26조", "제46조·제47조", "제52조"],
+      "effective_date": "2025-10-01",
+      "url": "https://www.law.go.kr/LSW/lsInfoP.do?lsiSeq=276921&chrClsCd=010202&urlMode=lsInfoP&efYd=20251001&ancYnChk=0"
+    },
+    {
+      "id": "construction_technology_promotion_decree",
+      "title": "건설기술 진흥법 시행령",
+      "locators": ["제67조~제70조", "제81조", "제86조"],
+      "effective_date": "2026-06-09",
+      "url": "https://www.law.go.kr/LSW/lsInfoP.do?lsiSeq=286847&chrClsCd=010202&urlMode=lsInfoP&efYd=20260609&ancYnChk=0"
+    },
+    {
+      "id": "construction_technology_promotion_rule",
+      "title": "건설기술 진흥법 시행규칙",
+      "locators": ["제39조"],
+      "effective_date": "2026-06-11",
+      "url": "https://www.law.go.kr/LSW/lsInfoP.do?lsiSeq=286885&chrClsCd=010202&urlMode=lsInfoP&efYd=20260611&ancYnChk=0"
+    },
+    {
+      "id": "construction_feasibility_study_guideline",
+      "title": "건설공사 타당성 조사 지침",
+      "locators": ["타당성조사의 범위·수행절차"],
+      "effective_date": "2026-07-08",
+      "url": "https://www.law.go.kr/LSW/admRulInfoP.do?admRulSeq=2100000282384&chrClsCd=010201"
+    },
+    {
+      "id": "construction_order_detailed_standard",
+      "title": "건설공사 발주 세부기준",
+      "locators": ["제1조~제5조", "제6조~제8조의2", "제10조~제12조", "별표 1·2", "부칙"],
+      "effective_date": "2024-01-23",
+      "url": "https://www.law.go.kr/LSW/admRulLsInfoP.do?admRulSeq=2100000235518",
+      "application_note": "전문 공동수급의 종합공사 진출과 공사예정금액 4억3천만원 미만 종합사업자의 전문공사 진출은 2027-01-01 시행 부분을 2026년 현행과 분리"
+    },
+    {
+      "id": "national_finance_act",
+      "title": "국가재정법",
+      "locators": ["제38조"],
+      "effective_date": "2026-08-11",
+      "url": "https://www.law.go.kr/lsLinkCommonInfo.do?chrClsCd=010202&lsJoLnkSeq=1034011751"
     },
     {
       "id": "construction_management_guideline",
@@ -144,7 +202,7 @@
     {
       "id": "state_contract_decree",
       "title": "국가를 당사자로 하는 계약에 관한 법률 시행령",
-      "locators": ["제12조", "제17조·제18조", "제25조", "제26조제1항제5호가목", "제28조", "제30조", "제33조", "제35조~제37조", "제42조~제47조의3", "제50조~제63조", "제64조~제66조", "제74조~제76조", "제91조", "제108조", "제110조~제114조"],
+      "locators": ["제12조", "제17조·제18조", "제25조", "제26조제1항제5호가목", "제28조", "제30조", "제33조", "제35조~제37조", "제42조~제47조의3", "제50조~제63조", "제64조~제66조", "제74조~제76조", "제79조", "제91조", "제108조", "제110조~제114조"],
       "effective_date": "2026-06-03",
       "url": "https://www.law.go.kr/LSW/lsInfoP.do?lsiSeq=285893&chrClsCd=010202&urlMode=lsInfoP&efYd=20260603&ancYnChk=0"
     },
@@ -770,11 +828,27 @@
         "4-1-3 건설공사 발주 세부기준 이해"
       ],
       "textbook_pages": "PDF 219-232쪽(제4장 도입, 제1절)",
-      "artifact": "건설산업 법령·업역 비교표, 건설 생애주기와 발주방식 결정표",
+      "artifact": "건설산업 법령·업역 비교표, 건설 생애주기·사업수행방식 결정표, 공사분류·입찰참가자격 검토표",
       "scope_role": "official_direct",
       "origin": "custom",
       "rights": {"label": "자체 제작", "derivative_of_private_source": false, "publishable": true},
-      "status": "planned"
+      "status": "exercise_checked",
+      "coverage_note": "Q-Net 4-1-1~4-1-3의 건설산업기본법, 건설기술 진흥법, 건설공사 발주 세부기준을 모두 다루며 교재 PDF 219~232쪽의 구용어·구업종 수·타당성조사 표현을 2026-08-24 현행 기준으로 보정하고 2027-01-01 시행 예정 상호시장 규정을 분리함",
+      "qa": {
+        "revision_date": "2026-08-24",
+        "source_check_date": "2026-08-24",
+        "exercise_check_date": "2026-08-24",
+        "high_risk_facts_checked": true,
+        "source_sha256": "c1d64a66223a56e239226c48eaf62d6c0f920d8f6de803dd216ad50fb80f6247",
+        "questions_checked": 36,
+        "recall_prompts_checked": 7,
+        "private_similarity_audit": {
+          "comparison_files": 5,
+          "exact_question_matches": 0,
+          "exact_normalized_lines_min_60_chars": 0,
+          "normalized_windows_30_chars": 0
+        }
+      }
     },
     {
       "id": "PPM3-P04-L02",
