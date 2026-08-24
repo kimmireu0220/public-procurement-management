@@ -3,27 +3,27 @@
     {
       "id": 1,
       "title": "공공조달과 법제도 이해",
-      "chapter_count": 29,
-      "published": true
+      "chapter_count": 0,
+      "published": false
     },
     {
       "id": 2,
       "title": "공공조달계획 수립 및 분석",
-      "chapter_count": 28,
-      "published": true
+      "chapter_count": 0,
+      "published": false
     },
     {
       "id": 3,
       "title": "공공계약관리",
-      "chapter_count": 22,
-      "published": true
+      "chapter_count": 0,
+      "published": false
     },
     {
       "id": 4,
       "title": "공공조달 관리실무",
-      "chapter_count": 25,
+      "chapter_count": 22,
       "published": true
     }
   ],
-  "total_chapters": 104
+  "total_chapters": 22
 }
