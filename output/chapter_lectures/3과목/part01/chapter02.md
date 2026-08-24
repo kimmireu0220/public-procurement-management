@@ -803,14 +803,14 @@ legal_cutoff: 2026-08-24
 
 > **정답·해설:** ①. 원칙은 해당 부분 시공 전 변경이며 긴급 선시공은 사전 협의·기록이 필요합니다.
 
-**18. 기존 비목의 물량이 증가하고 계약단가가 예정가격단가보다 높은 경우 증가분의 기본 적용단가는?**
+**18. 설계변경으로 기존 비목 A가 80개 늘었다. A의 계약단가는 개당 12만 원, 예정가격단가는 개당 10만 원일 때 증가물량에 적용할 기본단가는?**
 
-① 계약단가의 두 배\
-② 예정가격단가\
-③ 설계변경 당시 단가 전액\
-④ 계약상대자가 제시한 단가
+① 개당 24만 원\
+② 개당 12만 원\
+③ 개당 10만 원\
+④ 설계변경 당시 시가를 그대로 적용
 
-> **정답·해설:** ②. 계약단가가 예정가격단가보다 높은 증가분에는 예정가격단가를 적용합니다.
+> **정답·해설:** ③. 기존 비목의 계약단가가 예정가격단가보다 높으면 증가물량에는 예정가격단가를 적용하므로 기본단가는 개당 10만 원입니다.
 
 **19. 계약단가가 없는 신규비목의 일반적인 단가는?**
 
@@ -1048,7 +1048,7 @@ legal_cutoff: 2026-08-24
 ## 근거와 기준일
 
 - [Q-Net 공공조달관리사 시험정보](https://www.q-net.or.kr/crf005.do?gSite=Q&id=crf00503s02&jmCd=9777&jmInfoDivCcd=B0), 출제기준 적용기간 2026년 3월 1일~2028년 12월 31일
-- [조달청 표준교재 게시](https://www.pps.go.kr/hrd/home/UserBoardActionUpdate.do?BO_CODE=REFERENCE_ROOM&BO_IDX=6582&CHILD_MENU=MENU209&method=detail), 3과목 공공계약관리 PDF 17~55쪽
+- [조달청 표준교재 게시](https://www.pps.go.kr/hrd/home/UserBoardActionUpdate.do?BO_CODE=REFERENCE_ROOM&BO_IDX=6581&CHILD_MENU=MENU209&method=detail), 3과목 공공계약관리 PDF 17~55쪽
 - [국가계약법](https://www.law.go.kr/LSW/lsInfoP.do?lsiSeq=283877&chrClsCd=010202&urlMode=lsInfoP&efYd=20260611&ancYnChk=0), 제19조·제27조·제28조·제28조의2 등, 2026년 6월 11일 시행본
 - [국가계약법 시행령](https://www.law.go.kr/LSW/lsInfoP.do?lsiSeq=285893&chrClsCd=010202&urlMode=lsInfoP&efYd=20260603&ancYnChk=0), 제64조~제66조·제75조·제76조 등, 2026년 6월 3일 시행본
 - [국가계약법 시행규칙](https://www.law.go.kr/LSW/lsInfoP.do?lsiSeq=282607&chrClsCd=010202&urlMode=lsInfoP&efYd=20260102&ancYnChk=0), 제74조~제74조의3, 2026년 1월 2일 시행본

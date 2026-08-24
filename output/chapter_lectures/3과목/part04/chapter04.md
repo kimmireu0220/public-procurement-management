@@ -8,7 +8,7 @@ title: 건설 공사비와 계약방법 검토
 kind: chapter
 lesson_id: PPM3-P04-L04
 origin: custom
-status: draft
+status: exercise_checked
 legal_cutoff: 2026-08-24
 ---
 

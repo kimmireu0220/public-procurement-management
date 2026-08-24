@@ -878,7 +878,7 @@ DAP·DPU와 DDP의 수입통관 책임은 같지 않습니다. 실제 계약에�
 ## 근거와 기준일
 
 - [Q-Net 공공조달관리사 시험정보](https://www.q-net.or.kr/crf005.do?gSite=Q&id=crf00503s02&jmCd=9777&jmInfoDivCcd=B0), 출제기준 보고서 1254, 적용기간 2026년 3월 1일~2028년 12월 31일, 3과목 표 8/18쪽
-- [조달청 표준교재 게시](https://www.pps.go.kr/hrd/home/UserBoardActionUpdate.do?BO_CODE=REFERENCE_ROOM&BO_IDX=6582&CHILD_MENU=MENU209&method=detail), 3과목 PDF 99~115쪽
+- [조달청 표준교재 게시](https://www.pps.go.kr/hrd/home/UserBoardActionUpdate.do?BO_CODE=REFERENCE_ROOM&BO_IDX=6581&CHILD_MENU=MENU209&method=detail), 3과목 PDF 99~115쪽
 - [국가계약법 시행령](https://www.law.go.kr/LSW/lsInfoP.do?lsiSeq=285893&chrClsCd=010202&urlMode=lsInfoP&efYd=20260603&ancYnChk=0), 제12조·제26조·제30조·제33조·제35조·제36조, 2026년 6월 3일 시행본
 - [국가계약법 시행규칙](https://www.law.go.kr/LSW/lsInfoP.do?lsiSeq=282607&chrClsCd=010202&urlMode=lsInfoP&efYd=20260102&ancYnChk=0), 제15조·제44조, 2026년 1월 2일 시행본
 - [입찰참가자격등록규정](https://www.law.go.kr/LSW/admRulLsInfoP.do?admRulSeq=2100000274756), 제4조~제23조의3, 2026년 1월 23일 시행본

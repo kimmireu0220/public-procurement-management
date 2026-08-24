@@ -8,7 +8,7 @@ title: 공사 입찰공고와 입찰참가자격 사전심사(PQ)
 kind: chapter
 lesson_id: PPM3-P04-L05
 origin: custom
-status: draft
+status: exercise_checked
 legal_cutoff: 2026-08-24
 ---
 
@@ -527,6 +527,6 @@ PQ를 실시한다면 다음 항목이 공고와 심사서류에서 서로 일�
 - `조달청 입찰참가자격사전심사기준`(시행 2026. 3. 31., 조달청지침 제2565호)
 - 지방계약법 시행령 제35조·제36조와 지방자치단체 입찰시 낙찰자 결정기준의 PQ 규정
 
-공식 원문은 [Q-Net 공공조달관리사 시험정보](https://www.q-net.or.kr/crf005.do?gSite=Q&id=crf00503s02&jmCd=9777&jmInfoDivCcd=B0), [조달청 표준교재 게시](https://www.pps.go.kr/hrd/home/UserBoardActionUpdate.do?BO_CODE=REFERENCE_ROOM&BO_IDX=6582&CHILD_MENU=MENU209&method=detail), [국가계약법 시행령 제13조](https://www.law.go.kr/LSW/lsLinkCommonInfo.do?chrClsCd=010202&lspttninfSeq=68536), [국가계약법 시행령 제33조부터 제36조](https://www.law.go.kr/lsLinkCommonInfo.do?chrClsCd=010202&lspttninfSeq=68537), [입찰참가자격사전심사요령](https://www.law.go.kr/LSW/admRulInfoP.do?admRulSeq=2100000275554&chrClsCd=010201), [조달청 입찰참가자격사전심사기준](https://www.law.go.kr/LSW/admRulLsInfoP.do?admRulId=35078&efYd=0)에서 확인할 수 있습니다.
+공식 원문은 [Q-Net 공공조달관리사 시험정보](https://www.q-net.or.kr/crf005.do?gSite=Q&id=crf00503s02&jmCd=9777&jmInfoDivCcd=B0), [조달청 표준교재 게시](https://www.pps.go.kr/hrd/home/UserBoardActionUpdate.do?BO_CODE=REFERENCE_ROOM&BO_IDX=6581&CHILD_MENU=MENU209&method=detail), [국가계약법 시행령 제13조](https://www.law.go.kr/LSW/lsLinkCommonInfo.do?chrClsCd=010202&lspttninfSeq=68536), [국가계약법 시행령 제33조부터 제36조](https://www.law.go.kr/lsLinkCommonInfo.do?chrClsCd=010202&lspttninfSeq=68537), [입찰참가자격사전심사요령](https://www.law.go.kr/LSW/admRulInfoP.do?admRulSeq=2100000275554&chrClsCd=010201), [조달청 입찰참가자격사전심사기준](https://www.law.go.kr/LSW/admRulLsInfoP.do?admRulId=35078&efYd=0)에서 확인할 수 있습니다.
 
 > **교재와 현행의 구별:** 교재의 `300억 원 이상 PQ 의무`, `현장설명 참가의무` 표현은 시험용 압축으로 기억하되 모든 기관에 그대로 일반화하지 않습니다. 실제 발주는 적용 법체계와 기관 세부기준, 입찰공고일 현재 시행본을 확인합니다.

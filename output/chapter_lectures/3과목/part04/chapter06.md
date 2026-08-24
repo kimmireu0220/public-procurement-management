@@ -8,7 +8,7 @@ title: 공사 적격심사
 kind: chapter
 lesson_id: PPM3-P04-L06
 origin: custom
-status: draft
+status: exercise_checked
 legal_cutoff: 2026-08-24
 ---
 
@@ -376,6 +376,6 @@ A값은 입찰자가 가격경쟁으로 임의 삭감해서는 안 되는 법정
 - 조달청 시설공사 적격심사세부기준
 - 지방계약법 시행령과 지방자치단체 입찰시 낙찰자 결정기준
 
-공식 원문은 [Q-Net 공공조달관리사 시험정보](https://www.q-net.or.kr/crf005.do?gSite=Q&id=crf00503s02&jmCd=9777&jmInfoDivCcd=B0), [조달청 표준교재 게시](https://www.pps.go.kr/hrd/home/UserBoardActionUpdate.do?BO_CODE=REFERENCE_ROOM&BO_IDX=6582&CHILD_MENU=MENU209&method=detail), [국가계약법 시행령](https://www.law.go.kr/LSW/lsInfoP.do?lsiSeq=285893&chrClsCd=010202&urlMode=lsInfoP&efYd=20260603&ancYnChk=0), [적격심사기준](https://www.law.go.kr/행정규칙/적격심사기준), [조달청 시설공사 적격심사세부기준](https://www.law.go.kr/행정규칙/조달청시설공사적격심사세부기준), [지방자치단체 입찰시 낙찰자 결정기준](https://www.law.go.kr/행정규칙/지방자치단체입찰시낙찰자결정기준)에서 확인할 수 있습니다.
+공식 원문은 [Q-Net 공공조달관리사 시험정보](https://www.q-net.or.kr/crf005.do?gSite=Q&id=crf00503s02&jmCd=9777&jmInfoDivCcd=B0), [조달청 표준교재 게시](https://www.pps.go.kr/hrd/home/UserBoardActionUpdate.do?BO_CODE=REFERENCE_ROOM&BO_IDX=6581&CHILD_MENU=MENU209&method=detail), [국가계약법 시행령](https://www.law.go.kr/LSW/lsInfoP.do?lsiSeq=285893&chrClsCd=010202&urlMode=lsInfoP&efYd=20260603&ancYnChk=0), [적격심사기준](https://www.law.go.kr/행정규칙/적격심사기준), [조달청 시설공사 적격심사세부기준](https://www.law.go.kr/행정규칙/조달청시설공사적격심사세부기준), [지방자치단체 입찰시 낙찰자 결정기준](https://www.law.go.kr/행정규칙/지방자치단체입찰시낙찰자결정기준)에서 확인할 수 있습니다.
 
-> **교재와 현행의 구별:** 교재의 배점·가격산식·하한율은 시험 학습의 기준표로 사용하되, 실제 입찰에서는 발주기관, 공사종류, 추정가격과 공고일에 적용되는 최신 세부기준을 우선합니다. 이 장은 전체 제작 후 현행 수치와 문항을 일괄 검증할 예정입니다.
+> **교재와 현행의 구별:** 교재의 배점·가격산식·하한율은 시험 학습의 기준표로 사용하되, 실제 입찰에서는 발주기관, 공사종류, 추정가격과 공고일에 적용되는 최신 세부기준을 우선합니다. 이 장의 수치와 문항은 2026년 8월 24일 기준 공식 원문과 대조했습니다.

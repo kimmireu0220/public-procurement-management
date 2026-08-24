@@ -41,7 +41,7 @@
   "textbook_source": {
     "id": "pps_standard_textbook_subject3_2026",
     "publisher": "조달청 공공조달역량개발원",
-    "official_notice_url": "https://www.pps.go.kr/hrd/home/UserBoardActionUpdate.do?BO_CODE=REFERENCE_ROOM&BO_IDX=6582&CHILD_MENU=MENU209&method=detail",
+    "official_notice_url": "https://www.pps.go.kr/hrd/home/UserBoardActionUpdate.do?BO_CODE=REFERENCE_ROOM&BO_IDX=6581&CHILD_MENU=MENU209&method=detail",
     "local_path": "sources/공식_조달청_표준교재_pdf/3과목_공공계약관리/교재.pdf",
     "sha256": "eebcc3e60f2a119611c75e1a5eb0b1d38db62ec65b0af9a97bf86b4b89c442a2",
     "pdf_pages": 419,
@@ -64,23 +64,91 @@
       "5": 5,
       "6": 3
     },
-    "official_direct_parts": [1, 2, 3, 4],
-    "textbook_extension_parts": [5, 6],
+    "official_direct_parts": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "textbook_extension_parts": [
+      5,
+      6
+    ],
     "part5_relation": "공공조달 품질관리 5개 장은 공식 세세항목 2-2-1 공정, 품질 및 안전관리를 깊게 보강하는 표준교재 확장",
     "part6_relation": "벤처나라·혁신시제품·우수조달물품 3개 장은 공식 55개 세세항목 밖의 표준교재 확장이며 직접 대응 출제기준으로 표시하지 않음"
   },
   "integrated_qa": {
-    "status": "mapping_checked",
-    "lesson_content_status": "in_progress",
+    "status": "passed",
+    "lesson_content_status": "exercise_checked",
     "chapters_planned": 29,
-    "chapters_completed": 10,
-    "questions_checked": 410,
-    "recall_prompts_checked": 43,
-    "inline_answers_checked": 453,
+    "chapters_completed": 29,
+    "questions_checked": 851,
+    "recall_prompts_checked": 160,
+    "inline_answers_checked": 1011,
+    "answer_placement": "모든 객관식·회상 문항 바로 아래 정답·해설 배치",
+    "separate_answer_sheet": false,
     "major_criteria_mapped": "4/4",
     "subcriteria_mapped": "11/11",
     "fine_criteria_mapped": "55/55",
-    "mapping_policy": "공식 세세항목은 Part 1~4의 최소 한 Chapter에 명시적으로 연결하고, Part 5~6의 확장 범위는 공식 직접 대응 여부를 별도 표시"
+    "mapping_policy": "공식 세세항목은 Part 1~4의 최소 한 Chapter에 명시적으로 연결하고, Part 5~6의 확장 범위는 공식 직접 대응 여부를 별도 표시",
+    "verification_date": "2026-08-24",
+    "legal_cutoff": "2026-08-24",
+    "high_risk_reviews": [
+      "P04-C03 기술용역 적격심사 현행 시행일과 점수구간",
+      "P04-C09 기술제안입찰 200억원의 교재 과거 기준과 현행 독립요건 삭제",
+      "P04-C12 해당 부분 시공 전 설계변경 원칙과 긴급 우선시공 예외",
+      "P05-C03 품질점검 갈음자료와 교재 공개기간 2년·현행 기간 삭제",
+      "P05-C05 신청자격·23개 심사항목·신인도 가감점",
+      "P06-C01 현행 대상기업·동일 물품식별번호·수의계약 별도요건·6년",
+      "P06-C02 혁신시제품 정의·대면발표·위원·70점·1차/2차 연장",
+      "P06-C03 NEP/NET 최초 지정일·신규 지정제품 시작일·만료일 다음 날"
+    ],
+    "private_similarity_audit": {
+      "comparison_files": 5,
+      "lecture_questions_compared": 851,
+      "private_questions_compared": 708,
+      "exact_question_matches": 0,
+      "exact_normalized_lines_min_60_chars": 0,
+      "normalized_windows_30_chars": 0,
+      "normalization": "NFKC 후 한글·영문·숫자만 유지하여 문제줄부터 정답·해설 직전까지 전체 블록 비교",
+      "max_full_sequence_matcher": 0.648,
+      "high_risk_sequence_threshold": 0.75,
+      "max_character_3gram_jaccard": 0.349,
+      "high_risk_jaccard_threshold": 0.5,
+      "manual_top_candidates_reviewed": 60,
+      "semantic_candidates_rewritten": 4,
+      "rewritten_questions": [
+        "P01-C01 Q1",
+        "P01-C02 Q18",
+        "P01-C04 Q36",
+        "P04-C10 Q17"
+      ],
+      "unresolved_candidates": 0
+    },
+    "rights_review": {
+      "lecture_origin": "custom",
+      "private_questions_reused": false,
+      "public_lecture_artifacts": "publishable",
+      "repository_exception": "기존 Git 이력에 추적된 민간 문제집 전사본은 이번 변경에 포함하지 않았으며, 이력 제거는 자료 공개 정책상 별도 명시 승인이 필요함"
+    },
+    "legal_sources_catalogued": 65,
+    "public_build": {
+      "status": "passed",
+      "chapters": 29,
+      "total_repository_chapters_built": 54
+    },
+    "external_links": {
+      "status": "passed",
+      "unique_urls": 132,
+      "retry_successes": 1
+    },
+    "automated_checks": {
+      "lecture_build_check": "passed",
+      "unit_tests": "36/36 passed",
+      "private_source_inventory": "1300 metadata entries passed",
+      "legal_source_snapshots": "33/33 passed",
+      "inline_answer_check": "29/29 chapters passed"
+    }
   },
   "part_source_strategy": {
     "1": "공식 주요항목 1 직접 대응; 표준교재 PDF 5-98쪽의 4개 절을 각각 1개 Chapter로 구성",
@@ -90,54 +158,114 @@
     "5": "공식 2-2-1 공정, 품질 및 안전관리를 보강하는 표준교재 확장; 표준교재 PDF 335-376쪽의 5개 절을 각각 1개 Chapter로 구성",
     "6": "공식 세세항목 직접 대응이 없는 표준교재 확장; 표준교재 PDF 377-419쪽의 벤처나라·혁신시제품·우수조달물품 3개 절을 각각 1개 Chapter로 구성"
   },
-  "legal_sources_note": "완성된 장은 현행 법령·계약예규·행정규칙을 조문 단위로 검증하고, 아직 작성하지 않은 장의 근거는 작성 단계에서 추가함. PPM3-P03-L02는 2026-08-24 현재 시행 중인 물품·용역 MAS 및 카탈로그 규정을 적용하고, 물품 MAS 계약이행실적평가의 2027-01-01 시행 예정 개편은 2026년 현행 평가체계와 분리해 표시함. PPM3-P04-L01은 교재의 전문 15종·시설물유지관리업·산업설비공사업·100억 원 미만 타당성조사 생략 표현을 2026-08-24 현행 건설산업·건설기술 법령으로 보정하고, 상호시장 2026년 규정과 2027-01-01 시행 예정 범위를 분리함",
+  "legal_sources_note": "29강 전체의 현행 법령·계약예규·행정규칙을 2026-08-24 기준으로 조문 단위 통합 검증함. 물품·용역 MAS 및 카탈로그의 2026년 현행 체계와 2027-01-01 시행 예정 평가개편을 분리하고, 공사계약의 기술용역 시행일·기술제안 200억원 과거 기준·설계변경 시공 전 원칙과 긴급 예외를 보존함. 품질점검 공개기간, 품질보증 심사항목·신인도, 벤처나라·혁신시제품·우수조달물품의 지정·연장 기준은 표준교재 시험 기준과 현행 규정을 구별해 본문·문제·회상·요약에 일관되게 적용함.",
   "legal_sources": [
     {
       "id": "state_contract_act",
       "title": "국가를 당사자로 하는 계약에 관한 법률",
-      "locators": ["제5조", "제9조", "제11조", "제12조", "제14조", "제15조", "제18조", "제19조", "제26조", "제27조", "제28조", "제28조의2", "제30조"],
+      "locators": [
+        "제5조",
+        "제9조",
+        "제11조",
+        "제12조",
+        "제14조",
+        "제15조",
+        "제18조",
+        "제19조",
+        "제26조",
+        "제27조",
+        "제28조",
+        "제28조의2",
+        "제30조"
+      ],
       "effective_date": "2026-06-11",
       "url": "https://www.law.go.kr/LSW/lsInfoP.do?lsiSeq=283877&chrClsCd=010202&urlMode=lsInfoP&efYd=20260611&ancYnChk=0"
     },
     {
       "id": "civil_act",
       "title": "민법",
-      "locators": ["제390조", "제393조", "제396조", "제398조", "제548조", "제551조", "제565조", "제580조~제582조", "제673조", "제731조"],
+      "locators": [
+        "제390조",
+        "제393조",
+        "제396조",
+        "제398조",
+        "제548조",
+        "제551조",
+        "제565조",
+        "제580조~제582조",
+        "제673조",
+        "제731조"
+      ],
       "effective_date": "2026-03-17",
       "url": "https://www.law.go.kr/LSW/lsInfoP.do?lsiSeq=284415&chrClsCd=010202&urlMode=lsInfoP&efYd=20260317&ancYnChk=0"
     },
     {
       "id": "service_contract_general_conditions",
       "title": "용역계약일반조건",
-      "locators": ["제10조", "제13조", "제15조~제17조", "제19조", "제23조·제24조", "제29조~제31조", "제36조", "제41조"],
+      "locators": [
+        "제10조",
+        "제13조",
+        "제15조~제17조",
+        "제19조",
+        "제23조·제24조",
+        "제29조~제31조",
+        "제36조",
+        "제41조"
+      ],
       "effective_date": "2026-04-30",
       "url": "https://www.law.go.kr/LSW/admRulInfoP.do?admRulSeq=2100000276694&chrClsCd=010201"
     },
     {
       "id": "construction_contract_general_conditions",
       "title": "공사계약일반조건",
-      "locators": ["제2조", "제9조·제10조", "제17조", "제19조~제23조", "제25조~제27조", "제31조~제35조", "제42조·제43조의2", "제44조~제48조", "제51조"],
+      "locators": [
+        "제2조",
+        "제9조·제10조",
+        "제17조",
+        "제19조~제23조",
+        "제25조~제27조",
+        "제31조~제35조",
+        "제42조·제43조의2",
+        "제44조~제48조",
+        "제51조",
+        "제19조제3항"
+      ],
       "effective_date": "2026-04-30",
       "url": "https://www.law.go.kr/LSW/admRulInfoP.do?admRulSeq=2100000276690&chrClsCd=010201"
     },
     {
       "id": "construction_bid_instructions",
       "title": "공사입찰유의서",
-      "locators": ["제11조"],
+      "locators": [
+        "제11조"
+      ],
       "effective_date": "2025-12-31",
       "url": "https://law.go.kr/LSW/admRulLsInfoP.do?admRulSeq=2100000271122"
     },
     {
       "id": "construction_industry_framework_act",
       "title": "건설산업기본법",
-      "locators": ["제2조", "제4조", "제8조·제9조", "제16조", "제25조"],
+      "locators": [
+        "제2조",
+        "제4조",
+        "제8조·제9조",
+        "제16조",
+        "제25조"
+      ],
       "effective_date": "2025-11-27",
       "url": "https://www.law.go.kr/LSW/lsInfoP.do?lsiSeq=273435&chrClsCd=010202&urlMode=lsInfoP&efYd=20251127&ancYnChk=0"
     },
     {
       "id": "construction_industry_framework_decree",
       "title": "건설산업기본법 시행령",
-      "locators": ["제7조·제7조의2", "제8조", "제21조", "제32조", "제34조", "별표 1"],
+      "locators": [
+        "제7조·제7조의2",
+        "제8조",
+        "제21조",
+        "제32조",
+        "제34조",
+        "별표 1"
+      ],
       "effective_date": "2026-06-23",
       "url": "https://www.law.go.kr/LSW/lsInfoP.do?lsiSeq=287349&chrClsCd=010202&urlMode=lsInfoP&efYd=20260623&ancYnChk=0",
       "application_note": "별표 1의 시설물유지관리업은 2023-12-31까지만 유효하므로 2026년 현행 업종 수는 종합 5개·전문 14개로 적용"
@@ -145,42 +273,63 @@
     {
       "id": "construction_industry_framework_rule",
       "title": "건설산업기본법 시행규칙",
-      "locators": ["제13조의4"],
+      "locators": [
+        "제13조의4"
+      ],
       "effective_date": "2026-01-02",
       "url": "https://www.law.go.kr/LSW/lsInfoP.do?lsiSeq=282375&chrClsCd=010202&urlMode=lsInfoP&efYd=20260102&ancYnChk=0"
     },
     {
       "id": "construction_technology_promotion_act",
       "title": "건설기술 진흥법",
-      "locators": ["제2조", "제26조", "제46조·제47조", "제52조"],
+      "locators": [
+        "제2조",
+        "제26조",
+        "제46조·제47조",
+        "제52조"
+      ],
       "effective_date": "2025-10-01",
       "url": "https://www.law.go.kr/LSW/lsInfoP.do?lsiSeq=276921&chrClsCd=010202&urlMode=lsInfoP&efYd=20251001&ancYnChk=0"
     },
     {
       "id": "construction_technology_promotion_decree",
       "title": "건설기술 진흥법 시행령",
-      "locators": ["제67조~제70조", "제81조", "제86조"],
+      "locators": [
+        "제67조~제70조",
+        "제81조",
+        "제86조"
+      ],
       "effective_date": "2026-06-09",
       "url": "https://www.law.go.kr/LSW/lsInfoP.do?lsiSeq=286847&chrClsCd=010202&urlMode=lsInfoP&efYd=20260609&ancYnChk=0"
     },
     {
       "id": "construction_technology_promotion_rule",
       "title": "건설기술 진흥법 시행규칙",
-      "locators": ["제39조"],
+      "locators": [
+        "제39조"
+      ],
       "effective_date": "2026-06-11",
       "url": "https://www.law.go.kr/LSW/lsInfoP.do?lsiSeq=286885&chrClsCd=010202&urlMode=lsInfoP&efYd=20260611&ancYnChk=0"
     },
     {
       "id": "construction_feasibility_study_guideline",
       "title": "건설공사 타당성 조사 지침",
-      "locators": ["타당성조사의 범위·수행절차"],
+      "locators": [
+        "타당성조사의 범위·수행절차"
+      ],
       "effective_date": "2026-07-08",
       "url": "https://www.law.go.kr/LSW/admRulInfoP.do?admRulSeq=2100000282384&chrClsCd=010201"
     },
     {
       "id": "construction_order_detailed_standard",
       "title": "건설공사 발주 세부기준",
-      "locators": ["제1조~제5조", "제6조~제8조의2", "제10조~제12조", "별표 1·2", "부칙"],
+      "locators": [
+        "제1조~제5조",
+        "제6조~제8조의2",
+        "제10조~제12조",
+        "별표 1·2",
+        "부칙"
+      ],
       "effective_date": "2024-01-23",
       "url": "https://www.law.go.kr/LSW/admRulLsInfoP.do?admRulSeq=2100000235518",
       "application_note": "전문 공동수급의 종합공사 진출과 공사예정금액 4억3천만원 미만 종합사업자의 전문공사 진출은 2027-01-01 시행 부분을 2026년 현행과 분리"
@@ -188,210 +337,358 @@
     {
       "id": "national_finance_act",
       "title": "국가재정법",
-      "locators": ["제38조"],
+      "locators": [
+        "제38조"
+      ],
       "effective_date": "2026-08-11",
       "url": "https://www.law.go.kr/lsLinkCommonInfo.do?chrClsCd=010202&lsJoLnkSeq=1034011751"
     },
     {
       "id": "construction_management_guideline",
       "title": "건설공사 사업관리방식 검토기준 및 업무수행지침",
-      "locators": ["제83조"],
+      "locators": [
+        "제83조"
+      ],
       "effective_date": "2026-07-08",
       "url": "https://law.go.kr/LSW/admRulInfoP.do?admRulSeq=2100000282382&chrClsCd=010202&lsId=48823"
     },
     {
       "id": "state_contract_decree",
       "title": "국가를 당사자로 하는 계약에 관한 법률 시행령",
-      "locators": ["제12조", "제17조·제18조", "제25조", "제26조제1항제5호가목", "제28조", "제30조", "제33조", "제35조~제37조", "제42조~제47조의3", "제50조~제63조", "제64조~제66조", "제74조~제76조", "제79조", "제91조", "제108조", "제110조~제114조"],
+      "locators": [
+        "제12조",
+        "제17조·제18조",
+        "제25조",
+        "제26조제1항제5호가목",
+        "제28조",
+        "제30조",
+        "제33조",
+        "제35조~제37조",
+        "제42조~제47조의3",
+        "제50조~제63조",
+        "제64조~제66조",
+        "제74조~제76조",
+        "제79조",
+        "제91조",
+        "제108조",
+        "제110조~제114조",
+        "제49조"
+      ],
       "effective_date": "2026-06-03",
       "url": "https://www.law.go.kr/LSW/lsInfoP.do?lsiSeq=285893&chrClsCd=010202&urlMode=lsInfoP&efYd=20260603&ancYnChk=0"
     },
     {
       "id": "state_contract_rule",
       "title": "국가를 당사자로 하는 계약에 관한 법률 시행규칙",
-      "locators": ["제12조", "제15조", "제19조~제21조", "제33조", "제44조", "제46조~제48조", "제51조", "제55조", "제61조", "제63조", "제70조~제75조", "별표 1", "제86조"],
+      "locators": [
+        "제12조",
+        "제15조",
+        "제19조~제21조",
+        "제33조",
+        "제44조",
+        "제46조~제48조",
+        "제51조",
+        "제55조",
+        "제61조",
+        "제63조",
+        "제70조~제75조",
+        "별표 1",
+        "제86조"
+      ],
       "effective_date": "2026-01-02",
       "url": "https://www.law.go.kr/LSW/lsInfoP.do?lsiSeq=282607&chrClsCd=010202&urlMode=lsInfoP&efYd=20260102&ancYnChk=0"
     },
     {
       "id": "government_contract_execution",
       "title": "정부 입찰·계약 집행기준",
-      "locators": ["제10조~제10조의4", "제33조~제39조", "제40조~제66조", "제70조~제76조"],
+      "locators": [
+        "제10조~제10조의4",
+        "제33조~제39조",
+        "제40조~제66조",
+        "제70조~제76조"
+      ],
       "effective_date": "2026-04-30",
       "url": "https://www.law.go.kr/LSW/admRulInfoP.do?admRulSeq=2100000276688&chrClsCd=010201"
     },
     {
       "id": "goods_purchase_eligibility",
       "title": "조달청 물품구매적격심사 세부기준",
-      "locators": ["제3조~제10조", "별표 1~4", "부칙 제3373호"],
+      "locators": [
+        "제3조~제10조",
+        "별표 1~4",
+        "부칙 제3373호"
+      ],
       "effective_date": "2026-05-26",
       "url": "https://www.law.go.kr/LSW/admRulLsInfoP.do?admRulSeq=2100000279836"
     },
     {
       "id": "general_eligibility",
       "title": "(계약예규) 적격심사기준",
-      "locators": ["제2조~제10조"],
+      "locators": [
+        "제2조~제10조"
+      ],
       "effective_date": "2026-01-02",
       "url": "https://www.law.go.kr/LSW/admRulInfoP.do?admRulSeq=2100000274732&chrClsCd=010201"
     },
     {
       "id": "general_service_eligibility",
       "title": "조달청 일반용역 적격심사 세부기준",
-      "locators": ["제3조~제13조", "별표 1~11", "부칙 제2026-390호"],
+      "locators": [
+        "제3조~제13조",
+        "별표 1~11",
+        "부칙 제2026-390호"
+      ],
       "effective_date": "2026-07-27",
       "url": "https://www.law.go.kr/LSW/admRulInfoP.do?admRulSeq=2100000283412&chrClsCd=010201"
     },
     {
       "id": "state_contract_threshold",
       "title": "국가를 당사자로 하는 계약에 관한 법률 등의 재정경제부장관이 정하는 고시금액",
-      "locators": ["국가기관 물품·용역 2억 3천만 원"],
+      "locators": [
+        "국가기관 물품·용역 2억 3천만 원"
+      ],
       "effective_date": "2026-01-08",
       "url": "https://www.law.go.kr/LSW/admRulInfoP.do?admRulSeq=2100000272620&chrClsCd=010201"
     },
     {
       "id": "sme_goods_performance_review",
       "title": "(중소벤처기업부) 중소기업자간 경쟁제품 중 물품의 구매에 관한 계약이행능력심사 세부기준",
-      "locators": ["제3조~제10조", "별표 1~4", "부칙 제2026-51호"],
+      "locators": [
+        "제3조~제10조",
+        "별표 1~4",
+        "부칙 제2026-51호"
+      ],
       "effective_date": "2026-07-27",
       "url": "https://www.law.go.kr/LSW/admRulLsInfoP.do?admRulSeq=2100000282814"
     },
     {
       "id": "pps_sme_goods_performance_review",
       "title": "조달청 중소기업자간 경쟁물품에 대한 계약이행능력심사 세부기준",
-      "locators": ["제3조~제10조", "별표 1~5", "부칙 제4781호"],
+      "locators": [
+        "제3조~제10조",
+        "별표 1~5",
+        "부칙 제4781호"
+      ],
       "effective_date": "2026-07-27",
       "url": "https://www.law.go.kr/LSW/admRulInfoP.do?admRulSeq=2100000283050"
     },
     {
       "id": "negotiated_contract_criteria",
       "title": "(계약예규) 협상에 의한 계약체결기준",
-      "locators": ["제4조~제14조", "별표"],
+      "locators": [
+        "제4조~제14조",
+        "별표"
+      ],
       "effective_date": "2026-01-02",
       "url": "https://www.law.go.kr/LSW/admRulInfoP.do?admRulSeq=2100000272436"
     },
     {
       "id": "proposal_evaluation",
       "title": "조달청 협상에 의한 계약 제안서평가 세부기준",
-      "locators": ["제6조·제6조의2", "제9조~제16조", "별표 15"],
+      "locators": [
+        "제6조·제6조의2",
+        "제9조~제16조",
+        "별표 15"
+      ],
       "effective_date": "2026-01-26",
       "url": "https://www.law.go.kr/LSW/admRulInfoP.do?admRulSeq=2100000273638&chrClsCd=010201"
     },
     {
       "id": "competitive_dialogue_criteria",
       "title": "(계약예규) 경쟁적대화에 의한 계약체결기준",
-      "locators": ["제4조~제16조", "별표"],
+      "locators": [
+        "제4조~제16조",
+        "별표"
+      ],
       "effective_date": "2026-01-02",
       "url": "https://www.law.go.kr/LSW/admRulLsInfoP.do?admRulSeq=2100000272426"
     },
     {
       "id": "comprehensive_award_criteria",
       "title": "종합낙찰제 세부운용기준",
-      "locators": ["제3조~제11조", "별표", "별지 서식"],
+      "locators": [
+        "제3조~제11조",
+        "별표",
+        "별지 서식"
+      ],
       "effective_date": "2022-05-01",
       "url": "https://www.law.go.kr/LSW/admRulLsInfoP.do?admRulSeq=2100000210969"
     },
     {
       "id": "bidder_registration",
       "title": "국가종합전자조달시스템 입찰참가자격등록규정",
-      "locators": ["제4조~제6조", "제8조~제9조의2", "제11조", "제13조~제16조", "제18조", "제20조", "제22조~제23조의3"],
+      "locators": [
+        "제4조~제6조",
+        "제8조~제9조의2",
+        "제11조",
+        "제13조~제16조",
+        "제18조",
+        "제20조",
+        "제22조~제23조의3"
+      ],
       "effective_date": "2026-01-23",
       "url": "https://www.law.go.kr/LSW/admRulLsInfoP.do?admRulSeq=2100000274756"
     },
     {
       "id": "electronic_procurement_act",
       "title": "전자조달의 이용 및 촉진에 관한 법률",
-      "locators": ["제11조"],
+      "locators": [
+        "제11조"
+      ],
       "effective_date": "2026-01-02",
       "url": "https://www.law.go.kr/LSW/lsInfoP.do?ancYnChk=0&chrClsCd=010202&efYd=20260102&lsiSeq=277153&urlMode=lsInfoP"
     },
     {
       "id": "sme_market_support_act",
       "title": "중소기업제품 구매촉진 및 판로지원에 관한 법률",
-      "locators": ["제6조", "제9조"],
+      "locators": [
+        "제6조",
+        "제9조"
+      ],
       "effective_date": "2026-07-01",
       "url": "https://www.law.go.kr/LSW/lsInfoP.do?lsiSeq=284097&chrClsCd=010202&urlMode=lsInfoP&efYd=20260701&ancYnChk=0"
     },
     {
       "id": "foreign_procurement_processing",
       "title": "조달청 외자구매업무 처리규정",
-      "locators": ["제2조", "제11조·제12조", "제14조·제15조", "제17조~제20조", "제22조", "제37조", "제42조~제46조", "제51조·제52조", "제58조·제59조", "제66조", "제69조"],
+      "locators": [
+        "제2조",
+        "제11조·제12조",
+        "제14조·제15조",
+        "제17조~제20조",
+        "제22조",
+        "제37조",
+        "제42조~제46조",
+        "제51조·제52조",
+        "제58조·제59조",
+        "제66조",
+        "제69조"
+      ],
       "effective_date": "2026-01-23",
       "url": "https://www.law.go.kr/LSW/admRulLsInfoP.do?admRulSeq=2100000276276"
     },
     {
       "id": "foreign_bid_evaluation",
       "title": "조달청 외자입찰서 평가업무 처리규정",
-      "locators": ["제4조", "제12조"],
+      "locators": [
+        "제4조",
+        "제12조"
+      ],
       "effective_date": "2025-12-08",
       "url": "https://www.law.go.kr/LSW/admRulLsInfoP.do?admRulSeq=2100000269016"
     },
     {
       "id": "foreign_bid_instructions",
       "title": "외자입찰유의서",
-      "locators": ["제14조"],
+      "locators": [
+        "제14조"
+      ],
       "effective_date": "2023-07-01",
       "url": "https://www.law.go.kr/LSW/admRulInfoP.do?admRulSeq=2100000225706"
     },
     {
       "id": "foreign_contract_general_conditions",
       "title": "외자계약일반조건",
-      "locators": ["제5조", "제8조", "제10조", "제21조", "제24조·제25조", "제35조"],
+      "locators": [
+        "제5조",
+        "제8조",
+        "제10조",
+        "제21조",
+        "제24조·제25조",
+        "제35조"
+      ],
       "effective_date": "2025-12-08",
       "url": "https://www.law.go.kr/LSW/admRulLsInfoP.do?admRulId=34279&efYd=0"
     },
     {
       "id": "goods_contract_general_conditions",
       "title": "물품구매(제조)계약일반조건",
-      "locators": ["제7조~제9조", "제11조~제11조의3", "제19조", "제21조·제22조·제22조의2", "제24조·제24조의2", "제25조~제27조", "제31조"],
+      "locators": [
+        "제7조~제9조",
+        "제11조~제11조의3",
+        "제19조",
+        "제21조·제22조·제22조의2",
+        "제24조·제24조의2",
+        "제25조~제27조",
+        "제31조"
+      ],
       "effective_date": "2026-04-30",
       "url": "https://www.law.go.kr/LSW/admRulInfoP.do?admRulSeq=2100000276692&chrClsCd=010201"
     },
     {
       "id": "goods_purchase_special_conditions",
       "title": "조달청 물품구매(제조)계약 특수조건",
-      "locators": ["제7조", "제7조의2", "제10조"],
+      "locators": [
+        "제7조",
+        "제7조의2",
+        "제10조"
+      ],
       "effective_date": "2026-01-01",
       "url": "https://www.law.go.kr/LSW/admRulInfoP.do?admRulSeq=2100000271470&chrClsCd=010201"
     },
     {
       "id": "goods_quality_special_conditions",
       "title": "물품구매계약 품질관리 특수조건",
-      "locators": ["제11조제3항", "제18조~제20조"],
+      "locators": [
+        "제11조제3항",
+        "제18조~제20조",
+        "제14조의2",
+        "제17조"
+      ],
       "effective_date": "2026-03-16",
       "url": "https://law.go.kr/admRulLsInfoP.do?admRulId=37629&efYd=0"
     },
     {
       "id": "commissioning_contract_additional_special_conditions",
       "title": "시운전조건부계약 추가특수조건",
-      "locators": ["제6조"],
+      "locators": [
+        "제6조"
+      ],
       "effective_date": "2026-01-01",
       "url": "https://www.law.go.kr/LSW/admRulInfoP.do?admRulSeq=2100000271408&chrClsCd=010201"
     },
     {
       "id": "procurement_defect_aftercare",
       "title": "조달물자의 하자처리 등 사후관리에 관한 규정",
-      "locators": ["제2조", "하자 원인판정·처리절차"],
+      "locators": [
+        "제2조",
+        "하자 원인판정·처리절차"
+      ],
       "effective_date": "2026-07-01",
       "url": "https://www.law.go.kr/LSW/admRulLsInfoP.do?admRulSeq=2100000281008"
     },
     {
       "id": "construction_prequalification_guideline",
       "title": "입찰참가자격사전심사요령",
-      "locators": ["제6조제5항제1호"],
+      "locators": [
+        "제6조제5항제1호"
+      ],
       "effective_date": "2026-01-02",
       "url": "https://www.law.go.kr/LSW/admRulInfoP.do?admRulSeq=2100000275554&chrClsCd=010201"
     },
     {
       "id": "housing_urban_fund_decree",
       "title": "주택도시기금법 시행령",
-      "locators": ["제8조", "별표 제18호"],
+      "locators": [
+        "제8조",
+        "별표 제18호"
+      ],
       "effective_date": "2026-01-02",
       "url": "https://www.law.go.kr/LSW/lsInfoP.do?ancYnChk=0&chrClsCd=010202&efYd=20260102&lsiSeq=281291&urlMode=lsInfoP"
     },
     {
       "id": "mas_goods_contract_regulation",
       "title": "물품 다수공급자계약 업무처리규정",
-      "locators": ["제2조", "제4조~제5조", "제8조~제13조", "제21조~제27조", "제41조~제46조", "제49조~제55조", "별표 2·4·5", "부칙 제2314호·제2393호·제2400호"],
+      "locators": [
+        "제2조",
+        "제4조~제5조",
+        "제8조~제13조",
+        "제21조~제27조",
+        "제41조~제46조",
+        "제49조~제55조",
+        "별표 2·4·5",
+        "부칙 제2314호·제2393호·제2400호"
+      ],
       "effective_date": "2026-07-21",
       "url": "https://www.law.go.kr/LSW/admRulLsInfoP.do?admRulSeq=2100000282818&chrClsCd=010202",
       "application_note": "2026-08-24 현재 물품 제안공고 의무선은 모든 물품 5억 원 이상이고, 2027-01-01부터 중소기업자간 경쟁제품 5억 원·그 밖의 물품 5천만 원으로 분리됨. 현행 평가표와 2027-01-01 시행 예정 계약이행실적평가 개편도 분리해 적용"
@@ -399,93 +696,247 @@
     {
       "id": "procurement_business_act",
       "title": "조달사업에 관한 법률",
-      "locators": ["제13조", "제14조"],
+      "locators": [
+        "제13조",
+        "제14조",
+        "제18조",
+        "제23조",
+        "제27조"
+      ],
       "effective_date": "2026-01-02",
       "url": "https://www.law.go.kr/LSW/lsInfoP.do?lsiSeq=277155&chrClsCd=010202&urlMode=lsInfoP&efYd=20260102&ancYnChk=0"
     },
     {
       "id": "procurement_business_decree",
       "title": "조달사업에 관한 법률 시행령",
-      "locators": ["제13조", "제13조의2", "제16조"],
+      "locators": [
+        "제13조",
+        "제13조의2",
+        "제16조",
+        "제30조",
+        "제33조"
+      ],
       "effective_date": "2026-01-02",
       "url": "https://www.law.go.kr/LSW/lsInfoP.do?lsiSeq=280891&chrClsCd=010202&urlMode=lsInfoP&efYd=20260102&ancYnChk=0"
     },
     {
       "id": "mas_service_contract_regulation",
       "title": "용역 다수공급자계약 업무처리규정",
-      "locators": ["제4조~제5조", "제9조~제11조", "제18조~제34조", "제64조"],
+      "locators": [
+        "제4조~제5조",
+        "제9조~제11조",
+        "제18조~제34조",
+        "제64조"
+      ],
       "effective_date": "2026-07-21",
       "url": "https://law.go.kr/LSW/admRulLsInfoP.do?admRulId=70301&efYd=0"
     },
     {
       "id": "service_catalog_contract_regulation",
       "title": "용역 카탈로그 계약 업무처리규정",
-      "locators": ["제3조~제24조", "계약관리 관련 조문"],
+      "locators": [
+        "제3조~제24조",
+        "계약관리 관련 조문"
+      ],
       "effective_date": "2026-07-21",
       "url": "https://www.law.go.kr/admRulLsInfoP.do?admRulSeq=2100000282836"
     },
     {
       "id": "digital_service_catalog_contract_regulation",
       "title": "디지털서비스 카탈로그계약 업무처리규정",
-      "locators": ["제2조제25호", "제4조~제12조", "제31조~제51조"],
+      "locators": [
+        "제2조제25호",
+        "제4조~제12조",
+        "제31조~제51조"
+      ],
       "effective_date": "2026-01-01",
       "url": "https://www.law.go.kr/LSW/admRulInfoP.do?admRulSeq=2100000270208&chrClsCd=010201"
     },
     {
       "id": "digital_service_catalog_special_conditions",
       "title": "디지털서비스 카탈로그계약 특수조건",
-      "locators": ["제2조~제5조", "제24조~제35조", "제38조", "제40조~제46조", "별표 2"],
+      "locators": [
+        "제2조~제5조",
+        "제24조~제35조",
+        "제38조",
+        "제40조~제46조",
+        "별표 2"
+      ],
       "effective_date": "2026-01-01",
       "url": "https://www.law.go.kr/LSW/admRulInfoP.do?admRulSeq=2100000270210&chrClsCd=010201"
     },
     {
       "id": "shopping_mall_operating_regulation",
       "title": "국가종합전자조달시스템 종합쇼핑몰 운영규정",
-      "locators": ["제13조"],
+      "locators": [
+        "제13조"
+      ],
       "effective_date": "2026-07-01",
       "url": "https://www.law.go.kr/LSW/admRulLsInfoP.do?admRulSeq=2100000282140&chrClsCd=010202"
     },
     {
       "id": "cloud_computing_act",
       "title": "클라우드컴퓨팅 발전 및 이용자 보호에 관한 법률",
-      "locators": ["제2조", "제20조"],
+      "locators": [
+        "제2조",
+        "제20조"
+      ],
       "effective_date": "2025-10-01",
       "url": "https://www.law.go.kr/LSW/lsInfoP.do?ancYnChk=0&chrClsCd=010202&efYd=20251001&lsiSeq=277387&urlMode=lsInfoP"
     },
     {
       "id": "cloud_computing_decree",
       "title": "클라우드컴퓨팅 발전 및 이용자 보호에 관한 법률 시행령",
-      "locators": ["제3조", "제15조의2·제15조의3"],
+      "locators": [
+        "제3조",
+        "제15조의2·제15조의3"
+      ],
       "effective_date": "2026-01-02",
       "url": "https://www.law.go.kr/LSW/lsInfoP.do?ancYnChk=0&chrClsCd=010202&efYd=20260102&lsiSeq=280955&urlMode=lsInfoP"
     },
     {
       "id": "supreme_court_95da11436",
       "title": "대법원 1996. 4. 26. 선고 95다11436 판결",
-      "locators": ["계약이행보증금과 지체상금의 성질"],
+      "locators": [
+        "계약이행보증금과 지체상금의 성질"
+      ],
       "effective_date": "1996-04-26",
       "url": "https://www.law.go.kr/precInfoP.do?precSeq=115516"
     },
     {
       "id": "arbitration_act",
       "title": "중재법",
-      "locators": ["제9조", "제35조"],
+      "locators": [
+        "제9조",
+        "제35조"
+      ],
       "effective_date": "2025-10-01",
       "url": "https://www.law.go.kr/법령/중재법"
     },
     {
       "id": "administrative_appeals_act",
       "title": "행정심판법",
-      "locators": ["제5조", "제30조"],
+      "locators": [
+        "제5조",
+        "제30조"
+      ],
       "effective_date": "2023-03-21",
       "url": "https://www.law.go.kr/법령/행정심판법"
     },
     {
       "id": "administrative_litigation_act",
       "title": "행정소송법",
-      "locators": ["제18조", "제23조"],
+      "locators": [
+        "제18조",
+        "제23조"
+      ],
       "effective_date": "2026-05-12",
       "url": "https://www.law.go.kr/법령/행정소송법"
+    },
+    {
+      "id": "technical_service_eligibility",
+      "title": "조달청 기술용역 적격심사 세부기준",
+      "locators": [
+        "제2조",
+        "제4조제1항",
+        "별표 1·2",
+        "부칙 제5283호"
+      ],
+      "effective_date": "2026-05-26",
+      "url": "https://www.law.go.kr/LSW/admRulLsInfoP.do?admRulSeq=2100000279692"
+    },
+    {
+      "id": "large_construction_bid_review",
+      "title": "대형공사 등의 입찰방법 심의기준",
+      "locators": [
+        "제3조제2항",
+        "제5조",
+        "별표 1~4",
+        "별표 3의2"
+      ],
+      "effective_date": "2023-06-08",
+      "url": "https://www.law.go.kr/LSW/admRulInfoP.do?admRulSeq=2100000224502&chrClsCd=010201"
+    },
+    {
+      "id": "procurement_quality_inspection",
+      "title": "조달물자 품질점검 업무규정",
+      "locators": [
+        "제8조제5항",
+        "제20조"
+      ],
+      "effective_date": "2026-04-06",
+      "url": "https://www.law.go.kr/LSW/admRulLsInfoP.do?admRulSeq=2100000276960"
+    },
+    {
+      "id": "safety_management_goods",
+      "title": "조달청 안전관리물자 품질관리 업무규정",
+      "locators": [
+        "제2조",
+        "제4조~제8조",
+        "별표"
+      ],
+      "effective_date": "2026-01-01",
+      "url": "https://law.go.kr/LSW/admRulLsInfoP.do?admRulSeq=2100000270268"
+    },
+    {
+      "id": "quality_assured_procurement_goods",
+      "title": "품질보증조달물품 지정 및 관리규정",
+      "locators": [
+        "제9조",
+        "제12조의2",
+        "별표 5"
+      ],
+      "effective_date": "2026-07-01",
+      "url": "https://www.law.go.kr/LSW/admRulLsInfoP.do?admRulId=39644&efYd=0"
+    },
+    {
+      "id": "venture_nara_designation",
+      "title": "벤처나라 등록 물품·서비스 지정 관리 규정",
+      "locators": [
+        "제5조",
+        "제6조제1항제5호",
+        "제15조",
+        "제25조"
+      ],
+      "effective_date": "2026-05-12",
+      "url": "https://law.go.kr/LSW/admRulLsInfoP.do?admRulSeq=2100000278906"
+    },
+    {
+      "id": "innovation_product_purchase",
+      "title": "혁신제품 구매 운영 규정",
+      "locators": [
+        "제2조제2호",
+        "제5조제2항",
+        "제14조제3항·제4항",
+        "제16조",
+        "제22조의2",
+        "부칙 제2026-19호 제2조제3항"
+      ],
+      "effective_date": "2026-02-03",
+      "url": "https://www.law.go.kr/LSW/admRulLsInfoP.do?admRulSeq=2100000274044"
+    },
+    {
+      "id": "excellent_procurement_goods",
+      "title": "우수조달물품 지정·관리 규정",
+      "locators": [
+        "제4조제2항제1호·제2호",
+        "제24조제1항제1호",
+        "제26조제4항",
+        "별표 7 제1호나"
+      ],
+      "effective_date": "2026-04-27",
+      "url": "https://www.law.go.kr/LSW/admRulLsInfoP.do?admRulSeq=2100000278224"
+    },
+    {
+      "id": "local_contract_decree",
+      "title": "지방자치단체를 당사자로 하는 계약에 관한 법률 시행령",
+      "locators": [
+        "제25조",
+        "제30조",
+        "제50조"
+      ],
+      "effective_date": "2026-06-03",
+      "url": "https://www.law.go.kr/LSW/lsInfoP.do?lsiSeq=286149&chrClsCd=010202&urlMode=lsInfoP&efYd=20260603&ancYnChk=0"
     }
   ],
   "operational_sources": [
@@ -531,22 +982,31 @@
       "artifact": "계약관리 원칙 점검표, 착수협의 의제, 소요자원 투입계획서",
       "scope_role": "official_direct",
       "origin": "custom",
-      "rights": {"label": "자체 제작", "derivative_of_private_source": false, "publishable": true},
+      "rights": {
+        "label": "자체 제작",
+        "derivative_of_private_source": false,
+        "publishable": true
+      },
       "status": "exercise_checked",
       "qa": {
         "revision_date": "2026-08-24",
         "source_check_date": "2026-08-24",
         "exercise_check_date": "2026-08-24",
         "high_risk_facts_checked": true,
-        "source_sha256": "1a112260604fa90366ff057c792fd8bb74b63fa4e3974c9951d6b8177b8c1a5a",
+        "source_sha256": "a4f6df7ff9d33885edc3958a6a4b8bb88167a92f5cc4152921abb0b8ed2e7eb5",
         "questions_checked": 25,
         "recall_prompts_checked": 6,
+        "inline_answers_checked": 31,
+        "inline_answer_placement_checked": true,
         "private_similarity_audit": {
           "comparison_files": 5,
           "exact_question_matches": 0,
           "exact_normalized_lines_min_60_chars": 0,
           "normalized_windows_30_chars": 0
-        }
+        },
+        "public_artifact": "docs/lecture/3/part01/chapter01/index.html",
+        "public_sha256": "25cc4c4c863df239d02ce248c18966e67b870a6b49c0e8a62c516b044477cd6b",
+        "local_public_page_checked": true
       }
     },
     {
@@ -565,21 +1025,31 @@
       "artifact": "변경요청서, 변경 전후 대비표, 해제·해지·손해배상·분쟁 대응 의사결정표",
       "scope_role": "official_direct",
       "origin": "custom",
-      "rights": {"label": "자체 제작", "derivative_of_private_source": false, "publishable": true},
+      "rights": {
+        "label": "자체 제작",
+        "derivative_of_private_source": false,
+        "publishable": true
+      },
       "status": "exercise_checked",
       "qa": {
         "revision_date": "2026-08-24",
         "source_check_date": "2026-08-24",
         "exercise_check_date": "2026-08-24",
         "high_risk_facts_checked": true,
-        "source_sha256": "aa6eccf0e01c71c6931861e9e059bdaa9412a72e2abf889e4dfd4032c286d7ff",
+        "source_sha256": "5995aa750eb8f9d9bafefa73c00799ebb5c2adb1755cfa35c9945bf04a5f9175",
         "questions_checked": 40,
+        "recall_prompts_checked": 0,
+        "inline_answers_checked": 40,
+        "inline_answer_placement_checked": true,
         "private_similarity_audit": {
           "comparison_files": 5,
           "exact_question_matches": 0,
           "exact_normalized_lines_min_60_chars": 0,
           "normalized_windows_30_chars": 0
-        }
+        },
+        "public_artifact": "docs/lecture/3/part01/chapter02/index.html",
+        "public_sha256": "8664a2b538b52ccd8783902157e4855824a75f78d364abb9f4ad60f031d2df4a",
+        "local_public_page_checked": true
       }
     },
     {
@@ -598,21 +1068,31 @@
       "artifact": "이행점검표, 오류·지연 관리대장, 계약성과·위험 대시보드",
       "scope_role": "official_direct",
       "origin": "custom",
-      "rights": {"label": "자체 제작", "derivative_of_private_source": false, "publishable": true},
+      "rights": {
+        "label": "자체 제작",
+        "derivative_of_private_source": false,
+        "publishable": true
+      },
       "status": "exercise_checked",
       "qa": {
         "revision_date": "2026-08-24",
         "source_check_date": "2026-08-24",
         "exercise_check_date": "2026-08-24",
         "high_risk_facts_checked": true,
-        "source_sha256": "3ab3528431aa2251822503ed7d4a4ac536f883f7529c34a4b6807ff9f2e15b3b",
+        "source_sha256": "308cb7e9baa2a77b02b2f8503ec15c238806ed49299ae8c908f4ee72fe8318fb",
         "questions_checked": 45,
+        "recall_prompts_checked": 0,
+        "inline_answers_checked": 45,
+        "inline_answer_placement_checked": true,
         "private_similarity_audit": {
           "comparison_files": 5,
           "exact_question_matches": 0,
           "exact_normalized_lines_min_60_chars": 0,
           "normalized_windows_30_chars": 0
-        }
+        },
+        "public_artifact": "docs/lecture/3/part01/chapter03/index.html",
+        "public_sha256": "9ae8ab98d146435a23a11c60c1d91d41cb3a93b2197fa98bed47ec26d87e7dc0",
+        "local_public_page_checked": true
       }
     },
     {
@@ -632,21 +1112,31 @@
       "artifact": "검사·검수 및 대금지급 체크리스트, 보증금 관리대장, 지체상금 계산표, 종결보고서",
       "scope_role": "official_direct",
       "origin": "custom",
-      "rights": {"label": "자체 제작", "derivative_of_private_source": false, "publishable": true},
+      "rights": {
+        "label": "자체 제작",
+        "derivative_of_private_source": false,
+        "publishable": true
+      },
       "status": "exercise_checked",
       "qa": {
         "revision_date": "2026-08-24",
         "source_check_date": "2026-08-24",
         "exercise_check_date": "2026-08-24",
         "high_risk_facts_checked": true,
-        "source_sha256": "ef16f822111b37f0ca0951b8447c4a45cec453253bca88daaae229f7f11397e6",
+        "source_sha256": "fc3c5d55ce26b1c17dc95b4712668b90cbb55253ace112dd20196f81d8fac409",
         "questions_checked": 48,
+        "recall_prompts_checked": 0,
+        "inline_answers_checked": 48,
+        "inline_answer_placement_checked": true,
         "private_similarity_audit": {
           "comparison_files": 5,
           "exact_question_matches": 0,
           "exact_normalized_lines_min_60_chars": 0,
           "normalized_windows_30_chars": 0
-        }
+        },
+        "public_artifact": "docs/lecture/3/part01/chapter04/index.html",
+        "public_sha256": "575f97cbceb17bb0ffed3bab4fe0283d114176e4bb1eac495e5aefdb83a6a947",
+        "local_public_page_checked": true
       }
     },
     {
@@ -664,22 +1154,31 @@
       "artifact": "물품 입찰참가자격·공고서 점검표, 소액수의·외자구매 절차 비교표",
       "scope_role": "official_direct",
       "origin": "custom",
-      "rights": {"label": "자체 제작", "derivative_of_private_source": false, "publishable": true},
+      "rights": {
+        "label": "자체 제작",
+        "derivative_of_private_source": false,
+        "publishable": true
+      },
       "status": "exercise_checked",
       "qa": {
         "revision_date": "2026-08-24",
         "source_check_date": "2026-08-24",
         "exercise_check_date": "2026-08-24",
         "high_risk_facts_checked": true,
-        "source_sha256": "a7723fc95e0a5c98fdc2d2f1d9dc411ef733ca8361a40daa25884e11f3a70db5",
+        "source_sha256": "03d0727767be04ef5f759723377056b913bfd5205cb1be668ccb86f44439818a",
         "questions_checked": 48,
         "recall_prompts_checked": 4,
+        "inline_answers_checked": 52,
+        "inline_answer_placement_checked": true,
         "private_similarity_audit": {
           "comparison_files": 5,
           "exact_question_matches": 0,
           "exact_normalized_lines_min_60_chars": 0,
           "normalized_windows_30_chars": 0
-        }
+        },
+        "public_artifact": "docs/lecture/3/part02/chapter01/index.html",
+        "public_sha256": "50f9575ebe925d3d284f05f353c26ed3689172ee722fe8f4cdba7eb1e7b5ddcb",
+        "local_public_page_checked": true
       }
     },
     {
@@ -694,22 +1193,31 @@
       "artifact": "낙찰자 결정방법 선택표, 적격심사 흐름도와 평가 연습표",
       "scope_role": "official_direct",
       "origin": "custom",
-      "rights": {"label": "자체 제작", "derivative_of_private_source": false, "publishable": true},
+      "rights": {
+        "label": "자체 제작",
+        "derivative_of_private_source": false,
+        "publishable": true
+      },
       "status": "exercise_checked",
       "qa": {
         "revision_date": "2026-08-24",
         "source_check_date": "2026-08-24",
         "exercise_check_date": "2026-08-24",
         "high_risk_facts_checked": true,
-        "source_sha256": "5edcdebafc5b08f3eacd6f7c838252c5c990aa835062706369617316d23c775d",
+        "source_sha256": "2331bff0fd8e987a0b849d32cde00a9cd7f59927cbdc77efff933bed10072e94",
         "questions_checked": 48,
         "recall_prompts_checked": 6,
+        "inline_answers_checked": 54,
+        "inline_answer_placement_checked": true,
         "private_similarity_audit": {
           "comparison_files": 5,
           "exact_question_matches": 0,
           "exact_normalized_lines_min_60_chars": 0,
           "normalized_windows_30_chars": 0
-        }
+        },
+        "public_artifact": "docs/lecture/3/part02/chapter02/index.html",
+        "public_sha256": "ab60b25517b23fe8a7d3edfc9212084f2be1984f710e904190af0fd49203a285",
+        "local_public_page_checked": true
       }
     },
     {
@@ -726,7 +1234,11 @@
       "scope_role": "official_direct",
       "coverage_note": "Q-Net 두 세세항목을 직접 다루며, 표준교재의 검사·대금·지체 설명에 현행 물품계약 일반·특수조건의 공정·규격변경·금액조정을 보충함",
       "origin": "custom",
-      "rights": {"label": "자체 제작", "derivative_of_private_source": false, "publishable": true},
+      "rights": {
+        "label": "자체 제작",
+        "derivative_of_private_source": false,
+        "publishable": true
+      },
       "status": "exercise_checked",
       "qa": {
         "revision_date": "2026-08-24",
@@ -736,12 +1248,17 @@
         "source_sha256": "2682688285d5c2bee94acaf95531d5cd11569ebc7452d5629b7cae09ff7333e7",
         "questions_checked": 36,
         "recall_prompts_checked": 6,
+        "inline_answers_checked": 42,
+        "inline_answer_placement_checked": true,
         "private_similarity_audit": {
           "comparison_files": 5,
           "exact_question_matches": 0,
           "exact_normalized_lines_min_60_chars": 0,
           "normalized_windows_30_chars": 0
-        }
+        },
+        "public_artifact": "docs/lecture/3/part02/chapter03/index.html",
+        "public_sha256": "b9b2509373d6b8f2bf44dd46e7730010b082bb1629dc5d4e90ab9bb091e824ca",
+        "local_public_page_checked": true
       }
     },
     {
@@ -763,22 +1280,31 @@
       "scope_role": "official_direct",
       "coverage_note": "Q-Net 7개 세세항목을 공고·RFP 검토, 요구사항 추적, 제안서 제출·평가·발표, 낙찰방법, 협상·경쟁적 대화, 일반용역 적격심사, 현행 나라장터 통합기능과 계약 이행기준선 전환으로 직접 다룸",
       "origin": "custom",
-      "rights": {"label": "자체 제작", "derivative_of_private_source": false, "publishable": true},
+      "rights": {
+        "label": "자체 제작",
+        "derivative_of_private_source": false,
+        "publishable": true
+      },
       "status": "exercise_checked",
       "qa": {
         "revision_date": "2026-08-24",
         "source_check_date": "2026-08-24",
         "exercise_check_date": "2026-08-24",
         "high_risk_facts_checked": true,
-        "source_sha256": "64ebc6b70aa72714f40df1e60fe65cb921ffe0adf51549df49caf0d75b8a783a",
+        "source_sha256": "61cb560fde9da08e60eda79a836c7216053132a7489fca4566dd7b4913abfba5",
         "questions_checked": 42,
         "recall_prompts_checked": 7,
+        "inline_answers_checked": 49,
+        "inline_answer_placement_checked": true,
         "private_similarity_audit": {
           "comparison_files": 5,
           "exact_question_matches": 0,
           "exact_normalized_lines_min_60_chars": 0,
           "normalized_windows_30_chars": 0
-        }
+        },
+        "public_artifact": "docs/lecture/3/part03/chapter01/index.html",
+        "public_sha256": "f2c7bb3e99db95e167f07fcc561e6355753479562922cc19dc7182cdf60d57e7",
+        "local_public_page_checked": true
       }
     },
     {
@@ -798,7 +1324,11 @@
       "artifact": "MAS 생애주기 지도, 적격성평가 체크리스트, 2단계경쟁 제안·평가표, 계약이행실적 관리표",
       "scope_role": "official_direct",
       "origin": "custom",
-      "rights": {"label": "자체 제작", "derivative_of_private_source": false, "publishable": true},
+      "rights": {
+        "label": "자체 제작",
+        "derivative_of_private_source": false,
+        "publishable": true
+      },
       "status": "exercise_checked",
       "coverage_note": "Q-Net 3-2-1~3-2-6의 종합쇼핑몰 활용, MAS 일반절차, 적격성평가·사전심사, 2단계경쟁, 계약이행실적평가, 용역·디지털서비스 카탈로그를 모두 다루며 교재 PDF 195~218쪽의 구수치·내부 충돌을 2026-08-24 현행 규정으로 보정하고 2027-01-01 시행 예정 평가개편을 분리함",
       "qa": {
@@ -806,15 +1336,20 @@
         "source_check_date": "2026-08-24",
         "exercise_check_date": "2026-08-24",
         "high_risk_facts_checked": true,
-        "source_sha256": "9633f7628896a14e0c064249fc172c09d9111fd7959fcd4c601d06d548afb1eb",
+        "source_sha256": "aa91842e9e8896e8c60cb8703d51db7b2ad8c93b957abbc1947d65a648721fc2",
         "questions_checked": 42,
         "recall_prompts_checked": 7,
+        "inline_answers_checked": 49,
+        "inline_answer_placement_checked": true,
         "private_similarity_audit": {
           "comparison_files": 5,
           "exact_question_matches": 0,
           "exact_normalized_lines_min_60_chars": 0,
           "normalized_windows_30_chars": 0
-        }
+        },
+        "public_artifact": "docs/lecture/3/part03/chapter02/index.html",
+        "public_sha256": "4cc21268308599f362793dd80db1fe0771377128d64092f362f46f7f77dba86b",
+        "local_public_page_checked": true
       }
     },
     {
@@ -831,7 +1366,11 @@
       "artifact": "건설산업 법령·업역 비교표, 건설 생애주기·사업수행방식 결정표, 공사분류·입찰참가자격 검토표",
       "scope_role": "official_direct",
       "origin": "custom",
-      "rights": {"label": "자체 제작", "derivative_of_private_source": false, "publishable": true},
+      "rights": {
+        "label": "자체 제작",
+        "derivative_of_private_source": false,
+        "publishable": true
+      },
       "status": "exercise_checked",
       "coverage_note": "Q-Net 4-1-1~4-1-3의 건설산업기본법, 건설기술 진흥법, 건설공사 발주 세부기준을 모두 다루며 교재 PDF 219~232쪽의 구용어·구업종 수·타당성조사 표현을 2026-08-24 현행 기준으로 보정하고 2027-01-01 시행 예정 상호시장 규정을 분리함",
       "qa": {
@@ -839,15 +1378,20 @@
         "source_check_date": "2026-08-24",
         "exercise_check_date": "2026-08-24",
         "high_risk_facts_checked": true,
-        "source_sha256": "c1d64a66223a56e239226c48eaf62d6c0f920d8f6de803dd216ad50fb80f6247",
+        "source_sha256": "cdc4cd7497f7430a0985fc701aeec17c64acedb10f6cfec8a6ac363d5b9e9330",
         "questions_checked": 36,
         "recall_prompts_checked": 7,
+        "inline_answers_checked": 43,
+        "inline_answer_placement_checked": true,
         "private_similarity_audit": {
           "comparison_files": 5,
           "exact_question_matches": 0,
           "exact_normalized_lines_min_60_chars": 0,
           "normalized_windows_30_chars": 0
-        }
+        },
+        "public_artifact": "docs/lecture/3/part04/chapter01/index.html",
+        "public_sha256": "60eeaffcd926c566c25330ebcfa97d757db9dcaa35b5c798e2607e512e0078fb",
+        "local_public_page_checked": true
       }
     },
     {
@@ -863,9 +1407,33 @@
       "artifact": "건설엔지니어링 업무유형·대가산정 비교표, 과업범위·비용 추적표",
       "scope_role": "official_direct",
       "origin": "custom",
-      "rights": {"label": "자체 제작", "derivative_of_private_source": false, "publishable": true},
-      "status": "draft",
-      "coverage_note": "표준교재 PDF 233~238쪽의 건설엔지니어링 구분, 설계·감리·건설사업관리, 실비정액가산·공사비요율과 추가업무를 자체 서술로 구성함. 법령·문항·수치의 일괄 검증은 3과목 전체 제작 후 수행 예정"
+      "rights": {
+        "label": "자체 제작",
+        "derivative_of_private_source": false,
+        "publishable": true
+      },
+      "status": "exercise_checked",
+      "coverage_note": "표준교재 PDF 233~238쪽의 건설엔지니어링 구분, 설계·감리·건설사업관리, 실비정액가산·공사비요율과 추가업무를 자체 서술로 구성함. 법령·문항·수치는 2026-08-24 기준 공식 원문과 통합 검증함",
+      "qa": {
+        "revision_date": "2026-08-24",
+        "source_check_date": "2026-08-24",
+        "exercise_check_date": "2026-08-24",
+        "high_risk_facts_checked": true,
+        "source_sha256": "34fe2cfbfc0b9e25f1494acaff1b20499a6265bb5d143faa5f514c395a621245",
+        "questions_checked": 20,
+        "recall_prompts_checked": 5,
+        "inline_answers_checked": 25,
+        "inline_answer_placement_checked": true,
+        "private_similarity_audit": {
+          "comparison_files": 5,
+          "exact_question_matches": 0,
+          "exact_normalized_lines_min_60_chars": 0,
+          "normalized_windows_30_chars": 0
+        },
+        "public_artifact": "docs/lecture/3/part04/chapter02/index.html",
+        "public_sha256": "0d345dd856b520b581db4220a20c4fac5e4becac605773807765f49ea3ce7416",
+        "local_public_page_checked": true
+      }
     },
     {
       "id": "PPM3-P04-L03",
@@ -879,9 +1447,33 @@
       "artifact": "PQ·SOQ·TP·종합심사·협상계약 적용구간 비교표와 기술용역 계약 체크리스트",
       "scope_role": "official_direct",
       "origin": "custom",
-      "rights": {"label": "자체 제작", "derivative_of_private_source": false, "publishable": true},
-      "status": "draft",
-      "coverage_note": "표준교재 PDF 239~250쪽의 건설엔지니어링 입찰방식, PQ·SOQ·TP·종합심사와 기술용역 계약절차를 자체 서술로 구성함. 법령·문항·수치의 일괄 검증은 3과목 전체 제작 후 수행 예정"
+      "rights": {
+        "label": "자체 제작",
+        "derivative_of_private_source": false,
+        "publishable": true
+      },
+      "status": "exercise_checked",
+      "coverage_note": "표준교재 PDF 239~250쪽의 건설엔지니어링 입찰방식, PQ·SOQ·TP·종합심사와 기술용역 계약절차를 자체 서술로 구성함. 법령·문항·수치는 2026-08-24 기준 공식 원문과 통합 검증함",
+      "qa": {
+        "revision_date": "2026-08-24",
+        "source_check_date": "2026-08-24",
+        "exercise_check_date": "2026-08-24",
+        "high_risk_facts_checked": true,
+        "source_sha256": "e2d4a6b9c1a6d2e815b997532f0c7be5899a0fad0f9565bca41eee59df425ced",
+        "questions_checked": 24,
+        "recall_prompts_checked": 6,
+        "inline_answers_checked": 30,
+        "inline_answer_placement_checked": true,
+        "private_similarity_audit": {
+          "comparison_files": 5,
+          "exact_question_matches": 0,
+          "exact_normalized_lines_min_60_chars": 0,
+          "normalized_windows_30_chars": 0
+        },
+        "public_artifact": "docs/lecture/3/part04/chapter03/index.html",
+        "public_sha256": "b656c2c3c95c0406498900cca3b88ffbd0ac609e64ed5f7e51c283dc3ab4cfff",
+        "local_public_page_checked": true
+      }
     },
     {
       "id": "PPM3-P04-L04",
@@ -895,9 +1487,33 @@
       "artifact": "공사비 구성표, 경쟁·수의·공동도급·국제입찰 계약방법 검토서",
       "scope_role": "official_direct",
       "origin": "custom",
-      "rights": {"label": "자체 제작", "derivative_of_private_source": false, "publishable": true},
-      "status": "draft",
-      "coverage_note": "표준교재 PDF 251~269쪽의 공사비 구성, 경쟁·수의·공동도급·국제입찰과 계약방법 검토를 자체 서술로 구성함. 법령·문항·수치의 일괄 검증은 3과목 전체 제작 후 수행 예정"
+      "rights": {
+        "label": "자체 제작",
+        "derivative_of_private_source": false,
+        "publishable": true
+      },
+      "status": "exercise_checked",
+      "coverage_note": "표준교재 PDF 251~269쪽의 공사비 구성, 경쟁·수의·공동도급·국제입찰과 계약방법 검토를 자체 서술로 구성함. 법령·문항·수치는 2026-08-24 기준 공식 원문과 통합 검증함",
+      "qa": {
+        "revision_date": "2026-08-24",
+        "source_check_date": "2026-08-24",
+        "exercise_check_date": "2026-08-24",
+        "high_risk_facts_checked": true,
+        "source_sha256": "62541e2c552b9f841622649e61d84be9b18e96358d131f9e7651df7ccee9cd6b",
+        "questions_checked": 26,
+        "recall_prompts_checked": 7,
+        "inline_answers_checked": 33,
+        "inline_answer_placement_checked": true,
+        "private_similarity_audit": {
+          "comparison_files": 5,
+          "exact_question_matches": 0,
+          "exact_normalized_lines_min_60_chars": 0,
+          "normalized_windows_30_chars": 0
+        },
+        "public_artifact": "docs/lecture/3/part04/chapter04/index.html",
+        "public_sha256": "9937df61b48d9f0e721be12e5c750fb4bd0d13eb2e414f539f40630654a3628e",
+        "local_public_page_checked": true
+      }
     },
     {
       "id": "PPM3-P04-L05",
@@ -912,9 +1528,33 @@
       "artifact": "공사 입찰공고문 검토표, PQ 적용 여부·심사항목 판정표",
       "scope_role": "official_direct",
       "origin": "custom",
-      "rights": {"label": "자체 제작", "derivative_of_private_source": false, "publishable": true},
-      "status": "draft",
-      "coverage_note": "표준교재 PDF 270~272쪽의 공사 입찰공고, 현장설명·입찰무효와 PQ 적용·심사항목을 자체 서술로 구성함. 법령·문항·수치의 일괄 검증은 3과목 전체 제작 후 수행 예정"
+      "rights": {
+        "label": "자체 제작",
+        "derivative_of_private_source": false,
+        "publishable": true
+      },
+      "status": "exercise_checked",
+      "coverage_note": "표준교재 PDF 270~272쪽의 공사 입찰공고, 현장설명·입찰무효와 PQ 적용·심사항목을 자체 서술로 구성함. 법령·문항·수치는 2026-08-24 기준 공식 원문과 통합 검증함",
+      "qa": {
+        "revision_date": "2026-08-24",
+        "source_check_date": "2026-08-24",
+        "exercise_check_date": "2026-08-24",
+        "high_risk_facts_checked": true,
+        "source_sha256": "49c3e4c8c3db281d192c1df7139ae4c9fcad6165c9ca23fe1efd6dc2592c2409",
+        "questions_checked": 24,
+        "recall_prompts_checked": 6,
+        "inline_answers_checked": 30,
+        "inline_answer_placement_checked": true,
+        "private_similarity_audit": {
+          "comparison_files": 5,
+          "exact_question_matches": 0,
+          "exact_normalized_lines_min_60_chars": 0,
+          "normalized_windows_30_chars": 0
+        },
+        "public_artifact": "docs/lecture/3/part04/chapter05/index.html",
+        "public_sha256": "cf4555488ba23ca27c5e5d07b4344e859ba70cf9ebda9026469f49db25bfe834",
+        "local_public_page_checked": true
+      }
     },
     {
       "id": "PPM3-P04-L06",
@@ -928,9 +1568,33 @@
       "artifact": "국가·지방 공사 적격심사 구간 비교표, 평가항목·A값·차순위 판정표",
       "scope_role": "official_direct",
       "origin": "custom",
-      "rights": {"label": "자체 제작", "derivative_of_private_source": false, "publishable": true},
-      "status": "draft",
-      "coverage_note": "표준교재 PDF 272~277쪽의 적격심사 적용대상·통과점수·평가항목·A값·낙찰하한율·차순위 심사를 자체 서술로 구성함. 법령·문항·수치의 일괄 검증은 3과목 전체 제작 후 수행 예정"
+      "rights": {
+        "label": "자체 제작",
+        "derivative_of_private_source": false,
+        "publishable": true
+      },
+      "status": "exercise_checked",
+      "coverage_note": "표준교재 PDF 272~277쪽의 적격심사 적용대상·통과점수·평가항목·A값·낙찰하한율·차순위 심사를 자체 서술로 구성함. 법령·문항·수치는 2026-08-24 기준 공식 원문과 통합 검증함",
+      "qa": {
+        "revision_date": "2026-08-24",
+        "source_check_date": "2026-08-24",
+        "exercise_check_date": "2026-08-24",
+        "high_risk_facts_checked": true,
+        "source_sha256": "a0c72e3bd4363de2c5d20f61758d6fc4d7e9d70514a2c6970cebb2b91275e2f5",
+        "questions_checked": 20,
+        "recall_prompts_checked": 5,
+        "inline_answers_checked": 25,
+        "inline_answer_placement_checked": true,
+        "private_similarity_audit": {
+          "comparison_files": 5,
+          "exact_question_matches": 0,
+          "exact_normalized_lines_min_60_chars": 0,
+          "normalized_windows_30_chars": 0
+        },
+        "public_artifact": "docs/lecture/3/part04/chapter06/index.html",
+        "public_sha256": "20807c1727e51a58d10b699521e885a6191f744196f272802da2a82a54ba0bc6",
+        "local_public_page_checked": true
+      }
     },
     {
       "id": "PPM3-P04-L07",
@@ -944,9 +1608,33 @@
       "artifact": "종합심사·종합평가 절차 비교표, 수행능력·가격산출·동점자 판정표",
       "scope_role": "official_direct",
       "origin": "custom",
-      "rights": {"label": "자체 제작", "derivative_of_private_source": false, "publishable": true},
-      "status": "draft",
-      "coverage_note": "표준교재 PDF 277~295쪽의 국가 종합심사 네 유형, 수행능력·사회적 책임·가격산출 적정성·계약신뢰도·동점자, 지방 종합평가 2단계를 자체 서술로 구성함. 법령·문항·수치의 일괄 검증은 3과목 전체 제작 후 수행 예정"
+      "rights": {
+        "label": "자체 제작",
+        "derivative_of_private_source": false,
+        "publishable": true
+      },
+      "status": "exercise_checked",
+      "coverage_note": "표준교재 PDF 277~295쪽의 국가 종합심사 네 유형, 수행능력·사회적 책임·가격산출 적정성·계약신뢰도·동점자, 지방 종합평가 2단계를 자체 서술로 구성함. 법령·문항·수치는 2026-08-24 기준 공식 원문과 통합 검증함",
+      "qa": {
+        "revision_date": "2026-08-24",
+        "source_check_date": "2026-08-24",
+        "exercise_check_date": "2026-08-24",
+        "high_risk_facts_checked": true,
+        "source_sha256": "1e1347da4a1c6024a9fa85872247ebdafefbe1b2a82da4c91730b7a65cebab79",
+        "questions_checked": 20,
+        "recall_prompts_checked": 5,
+        "inline_answers_checked": 25,
+        "inline_answer_placement_checked": true,
+        "private_similarity_audit": {
+          "comparison_files": 5,
+          "exact_question_matches": 0,
+          "exact_normalized_lines_min_60_chars": 0,
+          "normalized_windows_30_chars": 0
+        },
+        "public_artifact": "docs/lecture/3/part04/chapter07/index.html",
+        "public_sha256": "7af85ea9dad443da1a2d52671903fb2ec8a9062c8e200dabec8587e1eade30db",
+        "local_public_page_checked": true
+      }
     },
     {
       "id": "PPM3-P04-L08",
@@ -960,9 +1648,33 @@
       "artifact": "표준행정기간 산정표, 규모별 발주방식 판정표, 계약문서·보증 점검표",
       "scope_role": "official_direct",
       "origin": "custom",
-      "rights": {"label": "자체 제작", "derivative_of_private_source": false, "publishable": true},
-      "status": "draft",
-      "coverage_note": "표준교재 PDF 296~299쪽의 시설공사 표준행정 소요일수, 규모별 발주방식, 계약성립·계약문서·계약보증을 자체 서술로 구성함. 법령·문항·수치의 일괄 검증은 3과목 전체 제작 후 수행 예정"
+      "rights": {
+        "label": "자체 제작",
+        "derivative_of_private_source": false,
+        "publishable": true
+      },
+      "status": "exercise_checked",
+      "coverage_note": "표준교재 PDF 296~299쪽의 시설공사 표준행정 소요일수, 규모별 발주방식, 계약성립·계약문서·계약보증을 자체 서술로 구성함. 법령·문항·수치는 2026-08-24 기준 공식 원문과 통합 검증함",
+      "qa": {
+        "revision_date": "2026-08-24",
+        "source_check_date": "2026-08-24",
+        "exercise_check_date": "2026-08-24",
+        "high_risk_facts_checked": true,
+        "source_sha256": "1b5cb9d25bd37107dae69d8270621cb36019b30cc3b4e77467de1c029f75a7d4",
+        "questions_checked": 18,
+        "recall_prompts_checked": 5,
+        "inline_answers_checked": 23,
+        "inline_answer_placement_checked": true,
+        "private_similarity_audit": {
+          "comparison_files": 5,
+          "exact_question_matches": 0,
+          "exact_normalized_lines_min_60_chars": 0,
+          "normalized_windows_30_chars": 0
+        },
+        "public_artifact": "docs/lecture/3/part04/chapter08/index.html",
+        "public_sha256": "fb02e9b5b57f8879764ed0a9cb8078f82505ba4ec07d22b143a5ef6403289f56",
+        "local_public_page_checked": true
+      }
     },
     {
       "id": "PPM3-P04-L09",
@@ -976,9 +1688,33 @@
       "artifact": "기술형공사 유형 판정표와 집행기본계획·선정심의 체크리스트",
       "scope_role": "official_direct",
       "origin": "custom",
-      "rights": {"label": "자체 제작", "derivative_of_private_source": false, "publishable": true},
-      "status": "draft",
-      "coverage_note": "표준교재 PDF 300~305쪽의 기술형공사 유형, 집행기본계획, 중앙건설기술심의위원회·기술자문위원회 선정심의 흐름을 자체 서술로 구성함. 법령·문항·수치의 일괄 검증은 3과목 전체 제작 후 수행 예정"
+      "rights": {
+        "label": "자체 제작",
+        "derivative_of_private_source": false,
+        "publishable": true
+      },
+      "status": "exercise_checked",
+      "coverage_note": "표준교재 PDF 300~305쪽의 기술형공사 유형, 집행기본계획, 중앙건설기술심의위원회·기술자문위원회 선정심의 흐름을 자체 서술로 구성함. 법령·문항·수치는 2026-08-24 기준 공식 원문과 통합 검증함",
+      "qa": {
+        "revision_date": "2026-08-24",
+        "source_check_date": "2026-08-24",
+        "exercise_check_date": "2026-08-24",
+        "high_risk_facts_checked": true,
+        "source_sha256": "88d129a187832d5ca185b655901399c504ae334892aa9f8f3d99c83839a329d4",
+        "questions_checked": 22,
+        "recall_prompts_checked": 6,
+        "inline_answers_checked": 28,
+        "inline_answer_placement_checked": true,
+        "private_similarity_audit": {
+          "comparison_files": 5,
+          "exact_question_matches": 0,
+          "exact_normalized_lines_min_60_chars": 0,
+          "normalized_windows_30_chars": 0
+        },
+        "public_artifact": "docs/lecture/3/part04/chapter09/index.html",
+        "public_sha256": "3720d84dfb266c6f2c2f90032726e89d8d0ca63e260818809b5aed5af70ac762",
+        "local_public_page_checked": true
+      }
     },
     {
       "id": "PPM3-P04-L10",
@@ -992,9 +1728,33 @@
       "artifact": "기술형 입찰 절차 비교표, 조정가격·조정점수 계산표, 낙찰방식 선택 연습지",
       "scope_role": "official_direct",
       "origin": "custom",
-      "rights": {"label": "자체 제작", "derivative_of_private_source": false, "publishable": true},
-      "status": "draft",
-      "coverage_note": "표준교재 PDF 306~317쪽의 일괄·대안·기술제안입찰 절차, 설계심의와 낙찰자 선정방식, 조정가격·조정점수 계산을 자체 서술로 구성함. 법령·문항·수치의 일괄 검증은 3과목 전체 제작 후 수행 예정"
+      "rights": {
+        "label": "자체 제작",
+        "derivative_of_private_source": false,
+        "publishable": true
+      },
+      "status": "exercise_checked",
+      "coverage_note": "표준교재 PDF 306~317쪽의 일괄·대안·기술제안입찰 절차, 설계심의와 낙찰자 선정방식, 조정가격·조정점수 계산을 자체 서술로 구성함. 법령·문항·수치는 2026-08-24 기준 공식 원문과 통합 검증함",
+      "qa": {
+        "revision_date": "2026-08-24",
+        "source_check_date": "2026-08-24",
+        "exercise_check_date": "2026-08-24",
+        "high_risk_facts_checked": true,
+        "source_sha256": "7afee18215292d29f94a3e876faf2a04497815fec8fe0b5b40a5cbe2267a17de",
+        "questions_checked": 24,
+        "recall_prompts_checked": 6,
+        "inline_answers_checked": 30,
+        "inline_answer_placement_checked": true,
+        "private_similarity_audit": {
+          "comparison_files": 5,
+          "exact_question_matches": 0,
+          "exact_normalized_lines_min_60_chars": 0,
+          "normalized_windows_30_chars": 0
+        },
+        "public_artifact": "docs/lecture/3/part04/chapter10/index.html",
+        "public_sha256": "4026e715475f78184d1b6771ec6bd4f8c0f27c8bf187a93fa240ce07d3e983ac",
+        "local_public_page_checked": true
+      }
     },
     {
       "id": "PPM3-P04-L11",
@@ -1010,9 +1770,33 @@
       "artifact": "착공·공정보고·선금·기성·준공·지체상금 관리대장, 하도급·전자지급 체크리스트",
       "scope_role": "official_direct",
       "origin": "custom",
-      "rights": {"label": "자체 제작", "derivative_of_private_source": false, "publishable": true},
-      "status": "draft",
-      "coverage_note": "표준교재 PDF 318~323쪽의 착공·공정·선금·기성·준공·지체상금 관리와 하도급 관리·하도급지킴이를 자체 서술로 구성함. 교재와 현행 기준 차이는 본문에 구분했으며 전체 일괄 검증은 3과목 제작 후 수행 예정"
+      "rights": {
+        "label": "자체 제작",
+        "derivative_of_private_source": false,
+        "publishable": true
+      },
+      "status": "exercise_checked",
+      "coverage_note": "표준교재 PDF 318~323쪽의 착공·공정·선금·기성·준공·지체상금 관리와 하도급 관리·하도급지킴이를 자체 서술로 구성함. 교재와 현행 기준 차이를 본문에 구분하고 2026-08-24 기준 공식 원문과 통합 검증함",
+      "qa": {
+        "revision_date": "2026-08-24",
+        "source_check_date": "2026-08-24",
+        "exercise_check_date": "2026-08-24",
+        "high_risk_facts_checked": true,
+        "source_sha256": "ac2665ec15a62d6a55b639d598621b68b80b64de90dbf1e8c8215ff65944b329",
+        "questions_checked": 28,
+        "recall_prompts_checked": 6,
+        "inline_answers_checked": 34,
+        "inline_answer_placement_checked": true,
+        "private_similarity_audit": {
+          "comparison_files": 5,
+          "exact_question_matches": 0,
+          "exact_normalized_lines_min_60_chars": 0,
+          "normalized_windows_30_chars": 0
+        },
+        "public_artifact": "docs/lecture/3/part04/chapter11/index.html",
+        "public_sha256": "f90f07d0bb086d9c8edd6f8c37142dda96beef10173e0664d68b07db2f27eac7",
+        "local_public_page_checked": true
+      }
     },
     {
       "id": "PPM3-P04-L12",
@@ -1026,9 +1810,33 @@
       "artifact": "물가변동·설계변경 계약금액 조정 검토서, 시공평가·사후평가 기록표",
       "scope_role": "official_direct",
       "origin": "custom",
-      "rights": {"label": "자체 제작", "derivative_of_private_source": false, "publishable": true},
-      "status": "draft",
-      "coverage_note": "표준교재 PDF 324~334쪽의 물가변동·설계변경 계약금액 조정, 기술형 증액제한, 시공평가·사후평가를 자체 서술로 구성함. 법령·문항·수치의 일괄 검증은 3과목 전체 제작 후 수행 예정"
+      "rights": {
+        "label": "자체 제작",
+        "derivative_of_private_source": false,
+        "publishable": true
+      },
+      "status": "exercise_checked",
+      "coverage_note": "표준교재 PDF 324~334쪽의 물가변동·설계변경 계약금액 조정, 기술형 증액제한, 시공평가·사후평가를 자체 서술로 구성함. 법령·문항·수치는 2026-08-24 기준 공식 원문과 통합 검증함",
+      "qa": {
+        "revision_date": "2026-08-24",
+        "source_check_date": "2026-08-24",
+        "exercise_check_date": "2026-08-24",
+        "high_risk_facts_checked": true,
+        "source_sha256": "dc96e40286f5a7147ba181898ababf51cc7c25c74210d898d1fd0e793aeeb948",
+        "questions_checked": 24,
+        "recall_prompts_checked": 6,
+        "inline_answers_checked": 30,
+        "inline_answer_placement_checked": true,
+        "private_similarity_audit": {
+          "comparison_files": 5,
+          "exact_question_matches": 0,
+          "exact_normalized_lines_min_60_chars": 0,
+          "normalized_windows_30_chars": 0
+        },
+        "public_artifact": "docs/lecture/3/part04/chapter12/index.html",
+        "public_sha256": "71b070036f40dbe819f5d65e6fc19058e8267d3df19f65da5d555750e155bc27",
+        "local_public_page_checked": true
+      }
     },
     {
       "id": "PPM3-P05-L01",
@@ -1042,9 +1850,33 @@
       "artifact": "진입·계약·이행·납품·사후 품질관리 생애주기 지도와 역할분담표",
       "scope_role": "textbook_extension_to_official_2-2-1",
       "origin": "custom",
-      "rights": {"label": "자체 제작", "derivative_of_private_source": false, "publishable": true},
-      "status": "draft",
-      "coverage_note": "표준교재 PDF 335~340쪽의 공공조달 품질관리 개요와 진입·계약·이행·납품·사후관리 단계별 제도를 자체 서술로 구성함. 법령·문항·수치의 일괄 검증은 3과목 전체 제작 후 수행 예정"
+      "rights": {
+        "label": "자체 제작",
+        "derivative_of_private_source": false,
+        "publishable": true
+      },
+      "status": "exercise_checked",
+      "coverage_note": "표준교재 PDF 335~340쪽의 공공조달 품질관리 개요와 진입·계약·이행·납품·사후관리 단계별 제도를 자체 서술로 구성함. 법령·문항·수치는 2026-08-24 기준 공식 원문과 통합 검증함",
+      "qa": {
+        "revision_date": "2026-08-24",
+        "source_check_date": "2026-08-24",
+        "exercise_check_date": "2026-08-24",
+        "high_risk_facts_checked": true,
+        "source_sha256": "20e413f12f12671823b4453fe92772b2b07bc86bfde829fb3d8cb626c0db2f3b",
+        "questions_checked": 23,
+        "recall_prompts_checked": 6,
+        "inline_answers_checked": 29,
+        "inline_answer_placement_checked": true,
+        "private_similarity_audit": {
+          "comparison_files": 5,
+          "exact_question_matches": 0,
+          "exact_normalized_lines_min_60_chars": 0,
+          "normalized_windows_30_chars": 0
+        },
+        "public_artifact": "docs/lecture/3/part05/chapter01/index.html",
+        "public_sha256": "f5f44fdd97def2877237ec9097467e5042547b91a6e4c21d830ad6e440066010",
+        "local_public_page_checked": true
+      }
     },
     {
       "id": "PPM3-P05-L02",
@@ -1058,9 +1890,33 @@
       "artifact": "국내외 품질관리·표준·인증·검사 체계 비교표와 벤치마킹 적용안",
       "scope_role": "textbook_extension_to_official_2-2-1",
       "origin": "custom",
-      "rights": {"label": "자체 제작", "derivative_of_private_source": false, "publishable": true},
-      "status": "draft",
-      "coverage_note": "표준교재 PDF 341~347쪽의 미국·영국·캐나다 공공조달 품질관리, 공급자 평가·검사·인증·성과관리 비교를 자체 서술로 구성함. 교재와 현행 용어·기준 차이는 본문에 구분했으며 전체 일괄 검증은 3과목 제작 후 수행 예정"
+      "rights": {
+        "label": "자체 제작",
+        "derivative_of_private_source": false,
+        "publishable": true
+      },
+      "status": "exercise_checked",
+      "coverage_note": "표준교재 PDF 341~347쪽의 미국·영국·캐나다 공공조달 품질관리, 공급자 평가·검사·인증·성과관리 비교를 자체 서술로 구성함. 교재와 현행 용어·기준 차이를 본문에 구분하고 2026-08-24 기준 공식 원문과 통합 검증함",
+      "qa": {
+        "revision_date": "2026-08-24",
+        "source_check_date": "2026-08-24",
+        "exercise_check_date": "2026-08-24",
+        "high_risk_facts_checked": true,
+        "source_sha256": "016048a57c95cd8b90143021616747fb07aba7fc267258469e75e100334b40b1",
+        "questions_checked": 22,
+        "recall_prompts_checked": 6,
+        "inline_answers_checked": 28,
+        "inline_answer_placement_checked": true,
+        "private_similarity_audit": {
+          "comparison_files": 5,
+          "exact_question_matches": 0,
+          "exact_normalized_lines_min_60_chars": 0,
+          "normalized_windows_30_chars": 0
+        },
+        "public_artifact": "docs/lecture/3/part05/chapter02/index.html",
+        "public_sha256": "b19a67e838e9d997809208b6d97d58f6dd02c27071fc15d8a12307961552902c",
+        "local_public_page_checked": true
+      }
     },
     {
       "id": "PPM3-P05-L03",
@@ -1074,9 +1930,33 @@
       "artifact": "직접생산확인·현장조사·품질점검 체크리스트와 부적합 조치대장",
       "scope_role": "textbook_extension_to_official_2-2-1",
       "origin": "custom",
-      "rights": {"label": "자체 제작", "derivative_of_private_source": false, "publishable": true},
-      "status": "draft",
-      "coverage_note": "표준교재 PDF 348~357쪽의 직접생산확인 대상·현장조사·위반조치와 품질점검 대상·시료시험·부적합 조치를 자체 서술로 구성함. 법령·문항·수치의 일괄 검증은 3과목 전체 제작 후 수행 예정"
+      "rights": {
+        "label": "자체 제작",
+        "derivative_of_private_source": false,
+        "publishable": true
+      },
+      "status": "exercise_checked",
+      "coverage_note": "표준교재 PDF 348~357쪽의 직접생산확인 대상·현장조사·위반조치와 품질점검 대상·시료시험·부적합 조치를 자체 서술로 구성함. 법령·문항·수치는 2026-08-24 기준 공식 원문과 통합 검증함",
+      "qa": {
+        "revision_date": "2026-08-24",
+        "source_check_date": "2026-08-24",
+        "exercise_check_date": "2026-08-24",
+        "high_risk_facts_checked": true,
+        "source_sha256": "98c2d9ffe81a49440ba136a28a28517786873db9997fbc97995394472171e643",
+        "questions_checked": 25,
+        "recall_prompts_checked": 8,
+        "inline_answers_checked": 33,
+        "inline_answer_placement_checked": true,
+        "private_similarity_audit": {
+          "comparison_files": 5,
+          "exact_question_matches": 0,
+          "exact_normalized_lines_min_60_chars": 0,
+          "normalized_windows_30_chars": 0
+        },
+        "public_artifact": "docs/lecture/3/part05/chapter03/index.html",
+        "public_sha256": "a2bf687f578e5664d7be063784b523d927f30b4db39ee6f9b5d984ed4a1ca907",
+        "local_public_page_checked": true
+      }
     },
     {
       "id": "PPM3-P05-L04",
@@ -1090,9 +1970,33 @@
       "artifact": "안전관리물자 지정·변경·취소 및 검사강화 절차표와 대응 체크리스트",
       "scope_role": "textbook_extension_to_official_2-2-1",
       "origin": "custom",
-      "rights": {"label": "자체 제작", "derivative_of_private_source": false, "publishable": true},
-      "status": "draft",
-      "coverage_note": "표준교재 PDF 358~362쪽의 안전관리물자 목적·선정요건·1·2등급, 직접생산 확인·품질점검과 부적합 조치를 자체 서술로 구성함. 법령·문항·수치의 일괄 검증은 3과목 전체 제작 후 수행 예정"
+      "rights": {
+        "label": "자체 제작",
+        "derivative_of_private_source": false,
+        "publishable": true
+      },
+      "status": "exercise_checked",
+      "coverage_note": "표준교재 PDF 358~362쪽의 안전관리물자 목적·선정요건·1·2등급, 직접생산 확인·품질점검과 부적합 조치를 자체 서술로 구성함. 법령·문항·수치는 2026-08-24 기준 공식 원문과 통합 검증함",
+      "qa": {
+        "revision_date": "2026-08-24",
+        "source_check_date": "2026-08-24",
+        "exercise_check_date": "2026-08-24",
+        "high_risk_facts_checked": true,
+        "source_sha256": "ac5ad4fb7343081205197959b7d4b58a03edb3416490997f9bdb3efa81aa53c2",
+        "questions_checked": 20,
+        "recall_prompts_checked": 5,
+        "inline_answers_checked": 25,
+        "inline_answer_placement_checked": true,
+        "private_similarity_audit": {
+          "comparison_files": 5,
+          "exact_question_matches": 0,
+          "exact_normalized_lines_min_60_chars": 0,
+          "normalized_windows_30_chars": 0
+        },
+        "public_artifact": "docs/lecture/3/part05/chapter04/index.html",
+        "public_sha256": "dfcf8c7ad75c4193c9da32bbfcbccfe9927f55f4d79f738e061c14725d4b118a",
+        "local_public_page_checked": true
+      }
     },
     {
       "id": "PPM3-P05-L05",
@@ -1106,9 +2010,33 @@
       "artifact": "품질보증조달물품 지정·등급·검사면제·사후관리 판정표와 자체 품질관리계획",
       "scope_role": "textbook_extension_to_official_2-2-1",
       "origin": "custom",
-      "rights": {"label": "자체 제작", "derivative_of_private_source": false, "publishable": true},
-      "status": "draft",
-      "coverage_note": "표준교재 PDF 363~376쪽의 품질보증조달물품 지정·평가·등급·유효기간·혜택과 유지관리를 자체 서술로 구성함. 교재와 현행 용어·검사면제 예외는 본문에 구분했으며 전체 일괄 검증은 3과목 제작 후 수행 예정"
+      "rights": {
+        "label": "자체 제작",
+        "derivative_of_private_source": false,
+        "publishable": true
+      },
+      "status": "exercise_checked",
+      "coverage_note": "표준교재 PDF 363~376쪽의 품질보증조달물품 지정·평가·등급·유효기간·혜택과 유지관리를 자체 서술로 구성함. 교재와 현행 용어·검사면제 예외를 본문에 구분하고 2026-08-24 기준 공식 원문과 통합 검증함",
+      "qa": {
+        "revision_date": "2026-08-24",
+        "source_check_date": "2026-08-24",
+        "exercise_check_date": "2026-08-24",
+        "high_risk_facts_checked": true,
+        "source_sha256": "5929ac1fc958bf4a18e9fe4546f642e8ee13bb0abe0fc93a95d39e53cbd2d6fa",
+        "questions_checked": 28,
+        "recall_prompts_checked": 7,
+        "inline_answers_checked": 35,
+        "inline_answer_placement_checked": true,
+        "private_similarity_audit": {
+          "comparison_files": 5,
+          "exact_question_matches": 0,
+          "exact_normalized_lines_min_60_chars": 0,
+          "normalized_windows_30_chars": 0
+        },
+        "public_artifact": "docs/lecture/3/part05/chapter05/index.html",
+        "public_sha256": "5aa72e403fcd2b8ecd0167690ff68f91cd1bcea84d3c74299a618ef2a3507b18",
+        "local_public_page_checked": true
+      }
     },
     {
       "id": "PPM3-P06-L01",
@@ -1121,9 +2049,33 @@
       "scope_role": "textbook_extension_no_direct_criterion",
       "criteria_relation": "표준교재 확장으로서 공식 55개 세세항목의 직접 대응 범위에 포함하지 않음",
       "origin": "custom",
-      "rights": {"label": "자체 제작", "derivative_of_private_source": false, "publishable": true},
-      "status": "draft",
-      "coverage_note": "표준교재 PDF 377~385쪽의 벤처나라 목적, 기업·상품요건, 지정·등록·거래절차, 종합쇼핑몰 비교와 금액별 구매경로를 자체 서술로 구성함. 법령·문항·수치의 일괄 검증은 3과목 전체 제작 후 수행 예정"
+      "rights": {
+        "label": "자체 제작",
+        "derivative_of_private_source": false,
+        "publishable": true
+      },
+      "status": "exercise_checked",
+      "coverage_note": "표준교재 PDF 377~385쪽의 벤처나라 목적, 기업·상품요건, 지정·등록·거래절차, 종합쇼핑몰 비교와 금액별 구매경로를 자체 서술로 구성함. 법령·문항·수치는 2026-08-24 기준 공식 원문과 통합 검증함",
+      "qa": {
+        "revision_date": "2026-08-24",
+        "source_check_date": "2026-08-24",
+        "exercise_check_date": "2026-08-24",
+        "high_risk_facts_checked": true,
+        "source_sha256": "29943a1bc0158b8f87b0a7ce1990a51c6da04f1181cf87f0f57307ed3a0efe69",
+        "questions_checked": 20,
+        "recall_prompts_checked": 5,
+        "inline_answers_checked": 25,
+        "inline_answer_placement_checked": true,
+        "private_similarity_audit": {
+          "comparison_files": 5,
+          "exact_question_matches": 0,
+          "exact_normalized_lines_min_60_chars": 0,
+          "normalized_windows_30_chars": 0
+        },
+        "public_artifact": "docs/lecture/3/part06/chapter01/index.html",
+        "public_sha256": "522fee9f7e17e9466acfbd166a5525d7d3ca5df2b56a1167b9f2986d2b0bcc83",
+        "local_public_page_checked": true
+      }
     },
     {
       "id": "PPM3-P06-L02",
@@ -1136,9 +2088,33 @@
       "scope_role": "textbook_extension_no_direct_criterion",
       "criteria_relation": "표준교재 확장으로서 공식 55개 세세항목의 직접 대응 범위에 포함하지 않음",
       "origin": "custom",
-      "rights": {"label": "자체 제작", "derivative_of_private_source": false, "publishable": true},
-      "status": "draft",
-      "coverage_note": "표준교재 PDF 386~398쪽의 혁신제품 개념, 혁신시제품 지정·평가, 시범구매·실증과 본조달 연계 흐름을 자체 서술로 구성함. 법령·문항·수치의 일괄 검증은 3과목 전체 제작 후 수행 예정"
+      "rights": {
+        "label": "자체 제작",
+        "derivative_of_private_source": false,
+        "publishable": true
+      },
+      "status": "exercise_checked",
+      "coverage_note": "표준교재 PDF 386~398쪽의 혁신제품 개념, 혁신시제품 지정·평가, 시범구매·실증과 본조달 연계 흐름을 자체 서술로 구성함. 법령·문항·수치는 2026-08-24 기준 공식 원문과 통합 검증함",
+      "qa": {
+        "revision_date": "2026-08-24",
+        "source_check_date": "2026-08-24",
+        "exercise_check_date": "2026-08-24",
+        "high_risk_facts_checked": true,
+        "source_sha256": "2b582359d05deb0b066729d32f6442153e532451b3735e73443b0d794c4908e9",
+        "questions_checked": 26,
+        "recall_prompts_checked": 7,
+        "inline_answers_checked": 33,
+        "inline_answer_placement_checked": true,
+        "private_similarity_audit": {
+          "comparison_files": 5,
+          "exact_question_matches": 0,
+          "exact_normalized_lines_min_60_chars": 0,
+          "normalized_windows_30_chars": 0
+        },
+        "public_artifact": "docs/lecture/3/part06/chapter02/index.html",
+        "public_sha256": "55198648f9705d80a74750e4c39fd9d97b1410c78ebf4aa2514eeeb69b91984f",
+        "local_public_page_checked": true
+      }
     },
     {
       "id": "PPM3-P06-L03",
@@ -1151,9 +2127,34 @@
       "scope_role": "textbook_extension_no_direct_criterion",
       "criteria_relation": "표준교재 확장으로서 공식 55개 세세항목의 직접 대응 범위에 포함하지 않음",
       "origin": "custom",
-      "rights": {"label": "자체 제작", "derivative_of_private_source": false, "publishable": true},
-      "status": "draft",
-      "coverage_note": "표준교재 PDF 399~419쪽의 우수조달물품 신청·지정·연장·취소·계약·사후관리와 다른 기술품질제품 제도 비교를 자체 서술로 구성함. 교재와 현행 만족도 기준 차이는 본문에 구분했으며 전체 일괄 검증은 3과목 제작 후 수행 예정"
+      "rights": {
+        "label": "자체 제작",
+        "derivative_of_private_source": false,
+        "publishable": true
+      },
+      "status": "exercise_checked",
+      "coverage_note": "표준교재 PDF 399~419쪽의 우수조달물품 신청·지정·연장·취소·계약·사후관리와 다른 기술품질제품 제도 비교를 자체 서술로 구성함. 교재와 현행 만족도 기준 차이를 본문에 구분하고 2026-08-24 기준 공식 원문과 통합 검증함",
+      "qa": {
+        "revision_date": "2026-08-24",
+        "source_check_date": "2026-08-24",
+        "exercise_check_date": "2026-08-24",
+        "high_risk_facts_checked": true,
+        "source_sha256": "3f8206359d8e8446d2b03df53068b537c9e06c1239c166b2e47e25e674f2db87",
+        "questions_checked": 27,
+        "recall_prompts_checked": 10,
+        "inline_answers_checked": 37,
+        "inline_answer_placement_checked": true,
+        "private_similarity_audit": {
+          "comparison_files": 5,
+          "exact_question_matches": 0,
+          "exact_normalized_lines_min_60_chars": 0,
+          "normalized_windows_30_chars": 0
+        },
+        "public_artifact": "docs/lecture/3/part06/chapter03/index.html",
+        "public_sha256": "32b7b74b2c8b794e2a6ea02ba2439206c9814529b8e138af115581c4928002aa",
+        "local_public_page_checked": true
+      }
     }
-  ]
+  ],
+  "updated_at": "2026-08-24"
 }

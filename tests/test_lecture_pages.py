@@ -130,6 +130,31 @@ class LecturePagesTest(unittest.TestCase):
         ]
         build_lecture_pages.validate_lectures(chapters)
 
+    def test_subject_index_uses_the_correct_exam_type(self) -> None:
+        def chapter(subject: int) -> build_lecture_pages.Lecture:
+            return build_lecture_pages.Lecture(
+                source=Path(f"subject{subject}.md"),
+                subject=subject,
+                subject_title="테스트",
+                part=1,
+                part_title="Part",
+                chapter=1,
+                title="Chapter",
+                kind="chapter",
+                body="본문\n",
+            )
+
+        written = build_lecture_pages.render_subject(
+            {"id": 3, "title": "공공계약관리"}, [chapter(3)]
+        )
+        practical = build_lecture_pages.render_subject(
+            {"id": 4, "title": "공공조달 관리실무"}, [chapter(4)]
+        )
+
+        self.assertIn("필기 출제기준", written)
+        self.assertNotIn("실기 출제기준", written)
+        self.assertIn("실기 출제기준", practical)
+
     def test_build_emits_a_page_for_every_loaded_lecture(self) -> None:
         lectures = build_lecture_pages.load_lectures()
         with tempfile.TemporaryDirectory() as tmp:

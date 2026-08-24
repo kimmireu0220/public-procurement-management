@@ -8,7 +8,7 @@ title: 종합심사·종합평가 낙찰제
 kind: chapter
 lesson_id: PPM3-P04-L07
 origin: custom
-status: draft
+status: exercise_checked
 legal_cutoff: 2026-08-24
 ---
 
@@ -411,6 +411,6 @@ legal_cutoff: 2026-08-24
 - 조달청 공사계약 종합심사낙찰제 심사세부기준
 - 지방계약법 시행령과 지방자치단체 입찰시 낙찰자 결정기준
 
-공식 원문은 [Q-Net 공공조달관리사 시험정보](https://www.q-net.or.kr/crf005.do?gSite=Q&id=crf00503s02&jmCd=9777&jmInfoDivCcd=B0), [조달청 표준교재 게시](https://www.pps.go.kr/hrd/home/UserBoardActionUpdate.do?BO_CODE=REFERENCE_ROOM&BO_IDX=6582&CHILD_MENU=MENU209&method=detail), [국가계약법 시행령](https://www.law.go.kr/LSW/lsInfoP.do?lsiSeq=285893&chrClsCd=010202&urlMode=lsInfoP&efYd=20260603&ancYnChk=0), [공사계약 종합심사낙찰제 심사기준](https://www.law.go.kr/행정규칙/공사계약종합심사낙찰제심사기준), [조달청 공사계약 종합심사낙찰제 심사세부기준](https://www.law.go.kr/행정규칙/조달청공사계약종합심사낙찰제심사세부기준), [지방자치단체 입찰시 낙찰자 결정기준](https://www.law.go.kr/행정규칙/지방자치단체입찰시낙찰자결정기준)에서 확인할 수 있습니다.
+공식 원문은 [Q-Net 공공조달관리사 시험정보](https://www.q-net.or.kr/crf005.do?gSite=Q&id=crf00503s02&jmCd=9777&jmInfoDivCcd=B0), [조달청 표준교재 3권 게시](https://www.pps.go.kr/hrd/home/UserBoardActionUpdate.do?BO_CODE=REFERENCE_ROOM&BO_IDX=6581&CHILD_MENU=MENU209&method=detail), [국가계약법 시행령](https://www.law.go.kr/LSW/lsInfoP.do?lsiSeq=285893&chrClsCd=010202&urlMode=lsInfoP&efYd=20260603&ancYnChk=0), [공사계약 종합심사낙찰제 심사기준](https://www.law.go.kr/행정규칙/공사계약종합심사낙찰제심사기준), [조달청 공사계약 종합심사낙찰제 심사세부기준](https://www.law.go.kr/행정규칙/조달청공사계약종합심사낙찰제심사세부기준), [지방자치단체 입찰시 낙찰자 결정기준](https://www.law.go.kr/행정규칙/지방자치단체입찰시낙찰자결정기준)에서 확인할 수 있습니다.
 
-> **교재와 현행의 구별:** 교재의 유형별 배점·실적계수·단가범위·하도급비율·동점기준은 시험 학습표로 사용하되, 실제 입찰은 발주기관·공사유형·추정가격과 공고일에 적용되는 최신 기준을 우선합니다. 이 장은 3과목 전체 제작 후 현행 수치와 문항을 일괄 검증할 예정입니다.
+> **교재와 현행의 구별:** 교재의 유형별 배점·실적계수·단가범위·하도급비율·동점기준은 시험 학습표로 사용하되, 실제 입찰은 발주기관·공사유형·추정가격과 공고일에 적용되는 최신 기준을 우선합니다. 이 장의 수치와 문항은 2026년 8월 24일 기준 공식 원문과 대조했습니다.

@@ -848,7 +848,7 @@ legal_cutoff: 2026-08-24
 ## 근거와 기준일
 
 - [Q-Net 공공조달관리사 시험정보](https://www.q-net.or.kr/crf005.do?gSite=Q&id=crf00503s02&jmCd=9777&jmInfoDivCcd=B0), 출제기준 보고서 1254, 적용기간 2026년 3월 1일~2028년 12월 31일, 3과목 세세항목 2-1-3
-- [조달청 표준교재 게시](https://www.pps.go.kr/hrd/home/UserBoardActionUpdate.do?BO_CODE=REFERENCE_ROOM&BO_IDX=6582&CHILD_MENU=MENU209&method=detail), 3과목 PDF 116~149쪽
+- [조달청 표준교재 게시](https://www.pps.go.kr/hrd/home/UserBoardActionUpdate.do?BO_CODE=REFERENCE_ROOM&BO_IDX=6581&CHILD_MENU=MENU209&method=detail), 3과목 PDF 116~149쪽
 - [국가계약법 시행령](https://www.law.go.kr/LSW/lsInfoP.do?lsiSeq=285893&chrClsCd=010202&urlMode=lsInfoP&efYd=20260603&ancYnChk=0), 제17조·제18조·제25조·제42조~제47조의3, 2026년 6월 3일 시행본
 - [국가계약법 시행규칙](https://www.law.go.kr/LSW/lsInfoP.do?lsiSeq=282607&chrClsCd=010202&urlMode=lsInfoP&efYd=20260102&ancYnChk=0), 제12조·제19조~제21조·제46조~제48조, 2026년 1월 2일 시행본
 - [조달청 물품구매적격심사 세부기준](https://www.law.go.kr/LSW/admRulLsInfoP.do?admRulSeq=2100000279836), 별표 1~4·제3조~제10조, 2026년 5월 26일 시행본

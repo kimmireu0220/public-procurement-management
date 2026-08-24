@@ -8,7 +8,7 @@ title: 공사 시공·대금·하도급 관리
 kind: chapter
 lesson_id: PPM3-P04-L11
 origin: custom
-status: draft
+status: exercise_checked
 legal_cutoff: 2026-08-24
 ---
 
@@ -660,6 +660,6 @@ legal_cutoff: 2026-08-24
 - 전자조달법 제9조의2
 - 조달청 하도급지킴이 공식 안내
 
-공식 원문은 [Q-Net 공공조달관리사 시험정보](https://www.q-net.or.kr/crf005.do?gSite=Q&id=crf00503s02&jmCd=9777&jmInfoDivCcd=B0), [조달청 표준교재 게시](https://www.pps.go.kr/hrd/home/UserBoardActionUpdate.do?BO_CODE=REFERENCE_ROOM&BO_IDX=6582&CHILD_MENU=MENU209&method=detail), [공사계약일반조건](https://law.go.kr/LSW/admRulInfoP.do?admRulSeq=2100000276690&chrClsCd=010201), [정부 입찰·계약 집행기준](https://www.law.go.kr/LSW/admRulLsInfoP.do?admRulNm=%28%EA%B3%84%EC%95%BD%EC%98%88%EA%B7%9C%29+%EC%A0%95%EB%B6%80+%EC%9E%85%EC%B0%B0%C2%B7%EA%B3%84%EC%95%BD+%EC%A7%91%ED%96%89%EA%B8%B0%EC%A4%80&docType=JO&joNo=005900000&languageType=KO&paras=1), [국가계약법 시행규칙 제75조](https://www.law.go.kr/LSW/lsSideInfoP.do?docCls=jo&joBrNo=00&joNo=0075&lsiSeq=282607&urlMode=lsScJoRltInfoR), [건설산업기본법](https://www.law.go.kr/법령/건설산업기본법), [전자조달법 제9조의2](https://www.law.go.kr/lsLinkCommonInfo.do?chrClsCd=010202&lsJoLnkSeq=1030549473), [조달청 하도급지킴이 안내](https://www.pps.go.kr/kor/content.do?key=01178)에서 확인할 수 있습니다.
+공식 원문은 [Q-Net 공공조달관리사 시험정보](https://www.q-net.or.kr/crf005.do?gSite=Q&id=crf00503s02&jmCd=9777&jmInfoDivCcd=B0), [조달청 표준교재 3권 게시](https://www.pps.go.kr/hrd/home/UserBoardActionUpdate.do?BO_CODE=REFERENCE_ROOM&BO_IDX=6581&CHILD_MENU=MENU209&method=detail), [공사계약일반조건](https://law.go.kr/LSW/admRulInfoP.do?admRulSeq=2100000276690&chrClsCd=010201), [정부 입찰·계약 집행기준](https://www.law.go.kr/LSW/admRulInfoP.do?admRulSeq=2100000276688&chrClsCd=010201), [국가계약법 시행규칙 제75조](https://www.law.go.kr/LSW/lsSideInfoP.do?docCls=jo&joBrNo=00&joNo=0075&lsiSeq=282607&urlMode=lsScJoRltInfoR), [건설산업기본법](https://www.law.go.kr/법령/건설산업기본법), [전자조달법 제9조의2](https://www.law.go.kr/lsLinkCommonInfo.do?chrClsCd=010202&lsJoLnkSeq=1030549473), [조달청 하도급지킴이 안내](https://www.pps.go.kr/kor/content.do?key=01178)에서 확인할 수 있습니다.
 
 > **교재와 현행의 구별:** 교재의 지체상금 산식 `0.005`는 현행 국가계약 공사 지체상금률 `0.0005`와 다릅니다. 교재의 옛 `저탄소 녹색성장 기본법`, 선금 반환의 `사고이월` 항목, 직접지급의 재량 표현도 2026년 현행 계약예규와 구별해 학습합니다.

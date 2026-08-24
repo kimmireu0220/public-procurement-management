@@ -168,7 +168,7 @@ Part 5와 Part 6을 별도의 공식 주요항목인 것처럼 세지 않습니�
 ## 근거와 기준일
 
 - [Q-Net 공공조달관리사 시험정보](https://www.q-net.or.kr/crf005.do?gSite=Q&id=crf00503s02&jmCd=9777&jmInfoDivCcd=B0), 출제기준 보고서 1254, 적용기간 2026년 3월 1일~2028년 12월 31일
-- [조달청 표준교재 게시](https://www.pps.go.kr/hrd/home/UserBoardActionUpdate.do?BO_CODE=REFERENCE_ROOM&BO_IDX=6582&CHILD_MENU=MENU209&method=detail), 3과목 공공계약관리 교재
+- [조달청 표준교재 게시](https://www.pps.go.kr/hrd/home/UserBoardActionUpdate.do?BO_CODE=REFERENCE_ROOM&BO_IDX=6581&CHILD_MENU=MENU209&method=detail), 3과목 공공계약관리 교재
 - 프로젝트 현행 법령 근거 스냅샷, 2026년 8월 16일 수집·검증
 - 각 강의의 법령·계약예규 기준일: 2026년 8월 24일
 

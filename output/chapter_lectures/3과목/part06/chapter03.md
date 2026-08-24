@@ -2,13 +2,13 @@
 subject: 3
 subject_title: 공공계약관리
 part: 6
-part_title: 공공조달 기술품질 제품
+part_title: 벤처·혁신·우수제품
 chapter: 3
 title: 우수조달물품 지정과 계약관리
 kind: chapter
 lesson_id: PPM3-P06-L03
 origin: custom
-status: draft
+status: exercise_checked
 legal_cutoff: 2026-08-24
 ---
 

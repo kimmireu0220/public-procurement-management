@@ -893,14 +893,14 @@ legal_cutoff: 2026-08-24
 
 > **정답·해설:** ④. P-Bond 이행청구는 보증기간 말일의 다음 날부터 6개월 이내입니다.
 
-**36. 국가 공사손해보험의 제3자 손해배상책임 사고당 보상한도로 옳은 것은?**
+**36. 국가 공사손해보험의 보험가입금액이 600억 원일 때 제3자 손해배상책임의 사고당 보상한도는?**
 
-① 보험가입금액의 1%와 5억 원 중 큰 금액\
-② 계약금액의 0.1%와 1억 원 중 작은 금액\
-③ 실제 보험료와 예정 보험료의 차액\
-④ 공사이행보증금의 50%
+① 5억 원\
+② 6억 원\
+③ 30억 원\
+④ 60억 원
 
-> **정답·해설:** ①. 제3자 사고당 한도는 보험가입금액의 1%와 5억 원 중 큰 금액입니다.
+> **정답·해설:** ②. 사고당 한도는 `보험가입금액의 1%`와 `5억 원` 중 큰 금액입니다. 600억 원의 1%는 6억 원이므로 6억 원을 적용합니다.
 
 **37. 대금청구 내용의 일부가 부당한 것으로 확인된 경우 국가계약의 처리로 옳은 것은?**
 
@@ -1066,7 +1066,7 @@ legal_cutoff: 2026-08-24
 ## 근거와 기준일
 
 - [Q-Net 공공조달관리사 시험정보](https://www.q-net.or.kr/crf005.do?gSite=Q&id=crf00503s02&jmCd=9777&jmInfoDivCcd=B0), 출제기준 적용기간 2026년 3월 1일~2028년 12월 31일
-- [조달청 표준교재 게시](https://www.pps.go.kr/hrd/home/UserBoardActionUpdate.do?BO_CODE=REFERENCE_ROOM&BO_IDX=6582&CHILD_MENU=MENU209&method=detail), 3과목 공공계약관리 PDF 71~94쪽
+- [조달청 표준교재 게시](https://www.pps.go.kr/hrd/home/UserBoardActionUpdate.do?BO_CODE=REFERENCE_ROOM&BO_IDX=6581&CHILD_MENU=MENU209&method=detail), 3과목 공공계약관리 PDF 71~94쪽
 - [국가계약법](https://www.law.go.kr/LSW/lsInfoP.do?lsiSeq=283877&chrClsCd=010202&urlMode=lsInfoP&efYd=20260611&ancYnChk=0), 제9조·제12조·제14조·제15조·제18조·제26조, 2026년 6월 11일 시행본
 - [국가계약법 시행령](https://www.law.go.kr/LSW/lsInfoP.do?lsiSeq=285893&chrClsCd=010202&urlMode=lsInfoP&efYd=20260603&ancYnChk=0), 제37조·제50조~제53조·제55조~제63조·제74조·제75조, 2026년 6월 3일 시행본
 - [국가계약법 시행규칙](https://www.law.go.kr/LSW/lsInfoP.do?lsiSeq=282607&chrClsCd=010202&urlMode=lsInfoP&efYd=20260102&ancYnChk=0), 제63조·제70조~제73조·제75조·별표 1, 2026년 1월 2일 시행본

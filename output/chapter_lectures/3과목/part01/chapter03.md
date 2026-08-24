@@ -1167,7 +1167,7 @@ SC·SCP 자체가 지체상금 면제, 대체품 승인 또는 계약변경의 �
 ## 근거와 기준일
 
 - [Q-Net 공공조달관리사 시험정보](https://www.q-net.or.kr/crf005.do?gSite=Q&id=crf00503s02&jmCd=9777&jmInfoDivCcd=B0), 출제기준 적용기간 2026년 3월 1일~2028년 12월 31일
-- [조달청 표준교재 게시](https://www.pps.go.kr/hrd/home/UserBoardActionUpdate.do?BO_CODE=REFERENCE_ROOM&BO_IDX=6582&CHILD_MENU=MENU209&method=detail), 3과목 공공계약관리 PDF 56~70쪽
+- [조달청 표준교재 게시](https://www.pps.go.kr/hrd/home/UserBoardActionUpdate.do?BO_CODE=REFERENCE_ROOM&BO_IDX=6581&CHILD_MENU=MENU209&method=detail), 3과목 공공계약관리 PDF 56~70쪽
 - [국가계약법](https://www.law.go.kr/LSW/lsInfoP.do?lsiSeq=283877&chrClsCd=010202&urlMode=lsInfoP&efYd=20260611&ancYnChk=0), 제12조·제27조 등, 2026년 6월 11일 시행본
 - [국가계약법 시행령](https://www.law.go.kr/LSW/lsInfoP.do?lsiSeq=285893&chrClsCd=010202&urlMode=lsInfoP&efYd=20260603&ancYnChk=0), 제50조~제52조·제74조·제75조, 2026년 6월 3일 시행본
 - [국가계약법 시행규칙](https://www.law.go.kr/LSW/lsInfoP.do?lsiSeq=282607&chrClsCd=010202&urlMode=lsInfoP&efYd=20260102&ancYnChk=0), 제51조·제55조·제61조·제63조·제75조, 2026년 1월 2일 시행본

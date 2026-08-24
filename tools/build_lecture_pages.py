@@ -432,8 +432,9 @@ def render_subject(subject: dict, subject_lectures: list[Lecture]) -> str:
             f'<p>Part 1～{part_count} 핵심 개념·숫자·비교를 한 번에 확인합니다.</p></a>'
         )
     review_section = f'<section class="grid">{review_card}</section>' if review_card else ""
+    exam_type = "실기" if int(subject["id"]) == 4 else "필기"
     body = f"""<main class="page"><section class="hero"><span class="eyebrow">SUBJECT {subject['id']}</span>
-<h1>{subject['id']}과목 · {html.escape(subject['title'])}</h1><p>{len([x for x in subject_lectures if x.is_chapter])}개 Chapter를 실기 출제기준 순서대로 학습합니다.</p></section>
+<h1>{subject['id']}과목 · {html.escape(subject['title'])}</h1><p>{len([x for x in subject_lectures if x.is_chapter])}개 Chapter를 {exam_type} 출제기준 순서대로 학습합니다.</p></section>
 {overview_section}<section class="chapter-list">{''.join(sections)}</section>{review_section}<a class="back-link" href="../">← 전체 과목</a></main>"""
     return page_shell(f"{subject['id']}과목", body, "../")
 

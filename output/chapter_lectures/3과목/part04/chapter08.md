@@ -8,7 +8,7 @@ title: 공사 입찰 행정기간과 계약체결
 kind: chapter
 lesson_id: PPM3-P04-L08
 origin: custom
-status: draft
+status: exercise_checked
 legal_cutoff: 2026-08-24
 ---
 
@@ -365,6 +365,6 @@ legal_cutoff: 2026-08-24
 - 국가계약법 제11조와 시행령 제48조~제52조
 - 공사입찰유의서, 공사계약 일반조건
 
-공식 원문은 [Q-Net 공공조달관리사 시험정보](https://www.q-net.or.kr/crf005.do?gSite=Q&id=crf00503s02&jmCd=9777&jmInfoDivCcd=B0), [조달청 표준교재 게시](https://www.pps.go.kr/hrd/home/UserBoardActionUpdate.do?BO_CODE=REFERENCE_ROOM&BO_IDX=6582&CHILD_MENU=MENU209&method=detail), [국가계약법](https://www.law.go.kr/법령/국가를당사자로하는계약에관한법률), [국가계약법 시행령](https://www.law.go.kr/LSW/lsInfoP.do?lsiSeq=285893&chrClsCd=010202&urlMode=lsInfoP&efYd=20260603&ancYnChk=0), [공사입찰유의서](https://www.law.go.kr/행정규칙/공사입찰유의서), [공사계약 일반조건](https://www.law.go.kr/행정규칙/공사계약일반조건)에서 확인할 수 있습니다.
+공식 원문은 [Q-Net 공공조달관리사 시험정보](https://www.q-net.or.kr/crf005.do?gSite=Q&id=crf00503s02&jmCd=9777&jmInfoDivCcd=B0), [조달청 표준교재 3권 게시](https://www.pps.go.kr/hrd/home/UserBoardActionUpdate.do?BO_CODE=REFERENCE_ROOM&BO_IDX=6581&CHILD_MENU=MENU209&method=detail), [국가계약법](https://www.law.go.kr/법령/국가를당사자로하는계약에관한법률), [국가계약법 시행령](https://www.law.go.kr/LSW/lsInfoP.do?lsiSeq=285893&chrClsCd=010202&urlMode=lsInfoP&efYd=20260603&ancYnChk=0), [공사입찰유의서](https://www.law.go.kr/행정규칙/공사입찰유의서), [공사계약 일반조건](https://www.law.go.kr/행정규칙/공사계약일반조건)에서 확인할 수 있습니다.
 
-> **교재와 현행의 구별:** 교재의 88억·265억 등 발주방식 금액, 계약서 작성 생략 3천만 원, 계약보증 10%·특례 5%와 면제기준은 시험 학습표로 표시하되, 최종 단계에서 2026년 현행 규정과 일괄 대조합니다.
+> **교재와 현행의 구별:** 교재의 88억·265억 등 발주방식 금액, 계약서 작성 생략 3천만 원, 계약보증 10%·특례 5%와 면제기준은 시험 학습표로 표시하되, 2026년 8월 24일 기준 현행 규정과 대조했습니다.

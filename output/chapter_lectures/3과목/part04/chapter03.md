@@ -8,7 +8,7 @@ title: 건설엔지니어링 입찰과 기술용역 계약
 kind: chapter
 lesson_id: PPM3-P04-L03
 origin: custom
-status: draft
+status: exercise_checked
 legal_cutoff: 2026-08-24
 ---
 
@@ -574,6 +574,6 @@ legal_cutoff: 2026-08-24
 - 지방자치단체 입찰시 낙찰자 결정기준(행정안전부예규 제344호, 2025. 12. 1. 시행)
 - 건축서비스산업 진흥법 제21조, 같은 법 시행령 제17조, 건축 설계공모 운영지침
 
-공식 원문은 [Q-Net 공공조달관리사 시험정보](https://www.q-net.or.kr/crf005.do?gSite=Q&id=crf00503s02&jmCd=9777&jmInfoDivCcd=B0), [조달청 표준교재 게시](https://www.pps.go.kr/hrd/home/UserBoardActionUpdate.do?BO_CODE=REFERENCE_ROOM&BO_IDX=6582&CHILD_MENU=MENU209&method=detail), [조달청 건설엔지니어링사업자 사업수행능력 세부평가기준](https://www.law.go.kr/LSW/admRulLsInfoP.do?admRulSeq=2100000268960), [조달청 기술용역 적격심사 세부기준](https://law.go.kr/LSW/admRulLsInfoP.do?admRulSeq=2100000279692), [건설엔지니어링 종합심사낙찰제 심사기준](https://www.law.go.kr/LSW/admRulLsInfoP.do?admRulSeq=2100000282470), [용역계약 종합심사낙찰제 심사기준](https://www.law.go.kr/LSW/admRulInfoP.do?admRulSeq=2100000272404), [협상에 의한 계약체결기준](https://www.law.go.kr/LSW/admRulInfoP.do?admRulSeq=2100000272436), [지방자치단체 입찰시 낙찰자 결정기준](https://www.mois.go.kr/frt/bbs/type001/commonSelectBoardArticle.do?bbsId=BBSMSTR_000000000061&nttId=124326), [건축서비스산업 진흥법 시행령 제17조](https://www.law.go.kr/lsLinkCommonInfo.do?chrClsCd=010202&lspttninfSeq=105747), [건축 설계공모 운영지침](https://www.law.go.kr/admRulLsInfoP.do?admRulSeq=2100000279634)에서 확인할 수 있습니다.
+공식 원문은 [Q-Net 공공조달관리사 시험정보](https://www.q-net.or.kr/crf005.do?gSite=Q&id=crf00503s02&jmCd=9777&jmInfoDivCcd=B0), [조달청 표준교재 게시](https://www.pps.go.kr/hrd/home/UserBoardActionUpdate.do?BO_CODE=REFERENCE_ROOM&BO_IDX=6581&CHILD_MENU=MENU209&method=detail), [조달청 건설엔지니어링사업자 사업수행능력 세부평가기준](https://www.law.go.kr/LSW/admRulLsInfoP.do?admRulSeq=2100000268960), [조달청 기술용역 적격심사 세부기준](https://law.go.kr/LSW/admRulLsInfoP.do?admRulSeq=2100000279692), [건설엔지니어링 종합심사낙찰제 심사기준](https://www.law.go.kr/LSW/admRulLsInfoP.do?admRulSeq=2100000282470), [용역계약 종합심사낙찰제 심사기준](https://www.law.go.kr/LSW/admRulInfoP.do?admRulSeq=2100000272404), [협상에 의한 계약체결기준](https://www.law.go.kr/LSW/admRulInfoP.do?admRulSeq=2100000272436), [지방자치단체 입찰시 낙찰자 결정기준](https://www.mois.go.kr/frt/bbs/type001/commonSelectBoardArticle.do?bbsId=BBSMSTR_000000000061&nttId=124326), [건축서비스산업 진흥법 시행령 제17조](https://www.law.go.kr/lsLinkCommonInfo.do?chrClsCd=010202&lspttninfSeq=105747), [건축 설계공모 운영지침](https://www.law.go.kr/admRulLsInfoP.do?admRulSeq=2100000279634)에서 확인할 수 있습니다.
 
 > **교재와 현행의 구별:** 교재의 입찰·선정 표는 2022년 가이드북을 토대로 한 학습자료입니다. 개념과 절차는 교재로 익히되, 금액구간·통과점수·가중치·기한과 법령 용어는 위의 2026년 현행 공식 원문 및 해당 입찰공고를 적용합니다.

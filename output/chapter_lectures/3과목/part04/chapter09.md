@@ -8,7 +8,7 @@ title: 기술형공사 개요와 선정심의
 kind: chapter
 lesson_id: PPM3-P04-L09
 origin: custom
-status: draft
+status: exercise_checked
 legal_cutoff: 2026-08-24
 ---
 
@@ -531,6 +531,6 @@ legal_cutoff: 2026-08-24
 - 국가·지방계약법 시행규칙의 집행기본계획서 제출·심의 규정
 - 대형공사 등의 입찰방법 심의기준(국토교통부고시 제2023-299호, 2023. 6. 8. 시행)
 
-공식 원문은 [Q-Net 공공조달관리사 시험정보](https://www.q-net.or.kr/crf005.do?gSite=Q&id=crf00503s02&jmCd=9777&jmInfoDivCcd=B0), [조달청 표준교재 게시](https://www.pps.go.kr/hrd/home/UserBoardActionUpdate.do?BO_CODE=REFERENCE_ROOM&BO_IDX=6582&CHILD_MENU=MENU209&method=detail), [국가계약법 시행령](https://www.law.go.kr/LSW/lsInfoP.do?lsiSeq=285893&chrClsCd=010202&urlMode=lsInfoP&efYd=20260603&ancYnChk=0), [대형공사 등의 입찰방법 심의기준](https://www.law.go.kr/LSW/admRulInfoP.do?admRulSeq=2100000224502&chrClsCd=010201), [지방계약법 시행령](https://www.law.go.kr/법령/지방자치단체를당사자로하는계약에관한법률시행령), [지방계약법 시행규칙 제78조](https://www.law.go.kr/lsLinkCommonInfo.do?chrClsCd=010202&lsJoLnkSeq=1032965525)에서 확인할 수 있습니다.
+공식 원문은 [Q-Net 공공조달관리사 시험정보](https://www.q-net.or.kr/crf005.do?gSite=Q&id=crf00503s02&jmCd=9777&jmInfoDivCcd=B0), [조달청 표준교재 3권 게시](https://www.pps.go.kr/hrd/home/UserBoardActionUpdate.do?BO_CODE=REFERENCE_ROOM&BO_IDX=6581&CHILD_MENU=MENU209&method=detail), [국가계약법 시행령](https://www.law.go.kr/LSW/lsInfoP.do?lsiSeq=285893&chrClsCd=010202&urlMode=lsInfoP&efYd=20260603&ancYnChk=0), [대형공사 등의 입찰방법 심의기준](https://www.law.go.kr/LSW/admRulInfoP.do?admRulSeq=2100000224502&chrClsCd=010201), [지방계약법 시행령](https://www.law.go.kr/법령/지방자치단체를당사자로하는계약에관한법률시행령), [지방계약법 시행규칙 제78조](https://www.law.go.kr/lsLinkCommonInfo.do?chrClsCd=010202&lsJoLnkSeq=1032965525)에서 확인할 수 있습니다.
 
 > **교재와 현행의 구별:** 교재 표 71·72의 시설별 상세 수치와 기술제안 `추정가격 200억원`은 과거 기준입니다. 현재 적용할 공식 심의기준은 국토교통부고시 제2023-299호이며 독립적인 200억원 요건이 없습니다. 교재의 시설군과 판단구조는 학습하되 실제 세부 규모기준은 현행 별표 1, 스마트 건설기술은 현행 별표 3의2를 확인합니다.

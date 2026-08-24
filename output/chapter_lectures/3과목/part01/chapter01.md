@@ -346,14 +346,14 @@ legal_cutoff: 2026-08-24
 
 ### 문제
 
-**1. 계약자유의 내용으로 보기 어려운 것은?**
+**1. 새론시 계약담당자가 `계약자유`를 근거로 검토한 조치 중 그 원칙만으로 정당화할 수 없는 것은?**
 
-① 계약체결 여부의 자유\
-② 상대방 선택의 자유\
-③ 계약내용 결정의 자유\
-④ 계약위반 후 책임을 임의로 면제받을 자유
+① 법령이 허용한 범위에서 계약 체결 여부를 결정한다.\
+② 조달절차와 참가자격 요건 안에서 계약상대자를 정한다.\
+③ 강행규정과 공공질서에 어긋나지 않는 범위에서 계약내용을 합의한다.\
+④ 이미 발생한 계약위반 책임을 상대방 동의와 법적 근거 없이 일방적으로 소멸시킨다.
 
-> **정답·해설:** ④. 계약자유는 체결·상대방·내용·방식의 자유로 설명한다. 위반책임을 일방적으로 없애는 자유를 뜻하지 않는다.
+> **정답·해설:** ④. 계약자유는 체결·상대방·내용·방식을 정할 자유를 포함하지만, 이미 발생한 책임을 한쪽 당사자가 근거 없이 없애는 권한까지 주지는 않습니다.
 
 **2. 국가계약법 제5조의 설명으로 옳은 것은?**
 
@@ -612,7 +612,7 @@ legal_cutoff: 2026-08-24
 ## 근거와 기준일
 
 - [Q-Net 공공조달관리사 시험정보](https://www.q-net.or.kr/crf005.do?gSite=Q&id=crf00503s02&jmCd=9777&jmInfoDivCcd=B0), 출제기준 보고서 1254, 3과목 PDF 7~10쪽, 적용기간 2026년 3월 1일~2028년 12월 31일
-- [조달청 표준교재 게시](https://www.pps.go.kr/hrd/home/UserBoardActionUpdate.do?BO_CODE=REFERENCE_ROOM&BO_IDX=6582&CHILD_MENU=MENU209&method=detail), 3과목 공공계약관리 PDF 7~16쪽
+- [조달청 표준교재 게시](https://www.pps.go.kr/hrd/home/UserBoardActionUpdate.do?BO_CODE=REFERENCE_ROOM&BO_IDX=6581&CHILD_MENU=MENU209&method=detail), 3과목 공공계약관리 PDF 7~16쪽
 - [국가를 당사자로 하는 계약에 관한 법률](https://www.law.go.kr/LSW/lsInfoP.do?lsiSeq=283877&chrClsCd=010202&urlMode=lsInfoP&efYd=20260611&ancYnChk=0), 제5조·제11조, 2026년 6월 11일 시행본
 - [민법](https://www.law.go.kr/LSW/lsInfoP.do?lsiSeq=284415&chrClsCd=010202&urlMode=lsInfoP&efYd=20260317&ancYnChk=0), 의사표시·행위능력·법률행위 관련 규정, 2026년 3월 17일 시행본
 - [용역계약일반조건](https://www.law.go.kr/LSW/admRulInfoP.do?admRulSeq=2100000276694&chrClsCd=010201), 착수와 착수신고 관련 조항, 2026년 4월 30일 시행본
