@@ -15,8 +15,8 @@
     {
       "id": 3,
       "title": "공공계약관리",
-      "chapter_count": 0,
-      "published": false
+      "chapter_count": 1,
+      "published": true
     },
     {
       "id": 4,
@@ -25,5 +25,5 @@
       "published": true
     }
   ],
-  "total_chapters": 25
+  "total_chapters": 26
 }

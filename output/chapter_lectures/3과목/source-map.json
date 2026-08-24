@@ -1,0 +1,629 @@
+{
+  "schema_version": 2,
+  "subject": 3,
+  "subject_title": "공공계약관리",
+  "created_at": "2026-08-24",
+  "basis_policy": {
+    "curriculum_primary": "한국산업인력공단 국가기술자격 출제기준",
+    "learning_reference": "조달청 공공조달관리사 표준교재 3권",
+    "current_practice": "기준일 현재 국가법령정보센터 공식 원문",
+    "private_source_role": "완성 후 유사성 점검에만 사용하며 문항·해설·고유 사례를 재사용하지 않음"
+  },
+  "criteria_source": {
+    "id": "qnet_ppm_criteria_2026_2028",
+    "publisher": "한국산업인력공단",
+    "official_index_url": "https://www.q-net.or.kr/crf005.do?gSite=Q&id=crf00503s02&jmCd=9777&jmInfoDivCcd=B0",
+    "qnet_report_id": "1254",
+    "qnet_item_code": "9777",
+    "official_report_note": "Q-Net 공식 시험정보의 출제기준 보고서 1254를 기준으로 하며 제3자 미러 URL은 출처로 보존하지 않음",
+    "applicable_period": "2026-03-01/2028-12-31",
+    "retrieved_at": "2026-08-24",
+    "report_pdf_pages": 18,
+    "subject_pdf_pages": "7-10",
+    "extracted_text_sha256": "e25f6d1a6aebb4190196757bb31e3b82ff8ae971046920889f36e09f31f03ab9",
+    "raw_pdf_hash_note": "Q-Net Crownix 서버가 생성시각과 보안 PDF 정보를 넣어 내려받을 때마다 원시 PDF SHA-256이 달라질 수 있으므로 보고서 ID·적용기간·페이지 범위·추출텍스트 해시를 함께 식별자로 사용",
+    "verification_level": "official_index_and_all_subject3_pages_visually_and_text_checked",
+    "subject3_structure": {
+      "major_criteria": 4,
+      "subcriteria": 11,
+      "fine_criteria": 55,
+      "chapters": 29,
+      "pdf_pages": "7-10"
+    },
+    "normalized_source_typos": [],
+    "source_layout_notes": [
+      "PDF 7쪽에서 2과목 표가 끝난 뒤 같은 페이지 하단에서 3과목 표가 시작됨",
+      "PDF 8쪽과 10쪽의 반복 표 머리글은 시각적으로 상단 일부가 잘리지만 텍스트 레이어에는 열명이 존재함",
+      "좁은 표 셀의 줄바꿈으로 단어가 분리되며 이는 원문 오탈자가 아님",
+      "물품구매 낙찰자결정 방법, 다수공급자계약 2단계경쟁 등 붙여쓰기는 원문 표기를 유지함"
+    ]
+  },
+  "textbook_source": {
+    "id": "pps_standard_textbook_subject3_2026",
+    "publisher": "조달청 공공조달역량개발원",
+    "official_notice_url": "https://www.pps.go.kr/hrd/home/UserBoardActionUpdate.do?BO_CODE=REFERENCE_ROOM&BO_IDX=6582&CHILD_MENU=MENU209&method=detail",
+    "local_path": "sources/공식_조달청_표준교재_pdf/3과목_공공계약관리/교재.pdf",
+    "sha256": "eebcc3e60f2a119611c75e1a5eb0b1d38db62ec65b0af9a97bf86b4b89c442a2",
+    "pdf_pages": 419,
+    "rights": "공공누리 제3유형 출처표시·변경금지; 강의는 원문·화면을 복제하지 않고 사실과 절차를 자체 서술",
+    "notice_warning": "표준교재는 출제기준이 아니며 오류·누락·법령 미반영 가능성이 있다고 게시기관이 명시함"
+  },
+  "current_law_source": {
+    "manifest": "sources/현행_법령_근거/manifest.json",
+    "retrieved_at": "2026-08-16",
+    "lesson_legal_cutoff": "2026-08-24",
+    "policy": "숫자·기한·비율·법적 효과는 교재 서술보다 적용시점의 공식 원문을 우선하고, 교재와 다르면 둘을 구분해 설명"
+  },
+  "course_design": {
+    "total_chapters": 29,
+    "part_chapter_counts": {
+      "1": 4,
+      "2": 3,
+      "3": 2,
+      "4": 12,
+      "5": 5,
+      "6": 3
+    },
+    "official_direct_parts": [1, 2, 3, 4],
+    "textbook_extension_parts": [5, 6],
+    "part5_relation": "공공조달 품질관리 5개 장은 공식 세세항목 2-2-1 공정, 품질 및 안전관리를 깊게 보강하는 표준교재 확장",
+    "part6_relation": "벤처나라·혁신시제품·우수조달물품 3개 장은 공식 55개 세세항목 밖의 표준교재 확장이며 직접 대응 출제기준으로 표시하지 않음"
+  },
+  "integrated_qa": {
+    "status": "mapping_checked",
+    "lesson_content_status": "in_progress",
+    "chapters_planned": 29,
+    "chapters_completed": 1,
+    "questions_checked": 25,
+    "major_criteria_mapped": "4/4",
+    "subcriteria_mapped": "11/11",
+    "fine_criteria_mapped": "55/55",
+    "mapping_policy": "공식 세세항목은 Part 1~4의 최소 한 Chapter에 명시적으로 연결하고, Part 5~6의 확장 범위는 공식 직접 대응 여부를 별도 표시"
+  },
+  "part_source_strategy": {
+    "1": "공식 주요항목 1 직접 대응; 표준교재 PDF 5-98쪽의 4개 절을 각각 1개 Chapter로 구성",
+    "2": "공식 주요항목 2 직접 대응; 표준교재 PDF 99-162쪽의 3개 절을 각각 1개 Chapter로 구성",
+    "3": "공식 주요항목 3 직접 대응; 표준교재 PDF 163-218쪽의 용역계약·다수공급자계약 2개 절을 각각 1개 Chapter로 구성",
+    "4": "공식 주요항목 4 직접 대응; 표준교재 PDF 219-334쪽의 공사계약 5개 절을 절차·낙찰·기술형·이행 쟁점별 12개 Chapter로 세분화",
+    "5": "공식 2-2-1 공정, 품질 및 안전관리를 보강하는 표준교재 확장; 표준교재 PDF 335-376쪽의 5개 절을 각각 1개 Chapter로 구성",
+    "6": "공식 세세항목 직접 대응이 없는 표준교재 확장; 표준교재 PDF 377-419쪽의 벤처나라·혁신시제품·우수조달물품 3개 절을 각각 1개 Chapter로 구성"
+  },
+  "legal_sources_note": "완성된 장은 현행 법령·계약예규·행정규칙을 조문 단위로 검증하고, 아직 작성하지 않은 장의 근거는 작성 단계에서 추가함",
+  "legal_sources": [
+    {
+      "id": "state_contract_act",
+      "title": "국가를 당사자로 하는 계약에 관한 법률",
+      "locators": ["제5조", "제11조"],
+      "effective_date": "2026-06-11",
+      "url": "https://www.law.go.kr/LSW/lsInfoP.do?lsiSeq=283877&chrClsCd=010202&urlMode=lsInfoP&efYd=20260611&ancYnChk=0"
+    },
+    {
+      "id": "civil_act",
+      "title": "민법",
+      "locators": ["법률행위와 계약의 성립·효력 관련 조문"],
+      "effective_date": "2026-03-17",
+      "url": "https://www.law.go.kr/LSW/lsInfoP.do?lsiSeq=284415&chrClsCd=010202&urlMode=lsInfoP&efYd=20260317&ancYnChk=0"
+    },
+    {
+      "id": "service_contract_general_conditions",
+      "title": "용역계약일반조건",
+      "locators": ["제13조"],
+      "effective_date": "2026-04-30",
+      "url": "https://www.law.go.kr/LSW/admRulInfoP.do?admRulSeq=2100000276694&chrClsCd=010201"
+    },
+    {
+      "id": "construction_contract_general_conditions",
+      "title": "공사계약일반조건",
+      "locators": ["제17조", "제42조"],
+      "effective_date": "2026-04-30",
+      "url": "https://www.law.go.kr/LSW/admRulInfoP.do?admRulSeq=2100000276690&chrClsCd=010201"
+    },
+    {
+      "id": "construction_bid_instructions",
+      "title": "공사입찰유의서",
+      "locators": ["제11조"],
+      "effective_date": "2025-12-31",
+      "url": "https://law.go.kr/LSW/admRulLsInfoP.do?admRulSeq=2100000271122"
+    },
+    {
+      "id": "construction_industry_framework_decree",
+      "title": "건설산업기본법 시행령",
+      "locators": ["제32조", "제34조"],
+      "effective_date": "2026-06-23",
+      "url": "https://www.law.go.kr/lsLinkCommonInfo.do?chrClsCd=010202&lspttninfSeq=105183"
+    },
+    {
+      "id": "construction_management_guideline",
+      "title": "건설공사 사업관리방식 검토기준 및 업무수행지침",
+      "locators": ["제83조"],
+      "effective_date": "2026-07-08",
+      "url": "https://law.go.kr/LSW/admRulInfoP.do?admRulSeq=2100000282382&chrClsCd=010202&lsId=48823"
+    }
+  ],
+  "lessons": [
+    {
+      "id": "PPM3-P01-L01",
+      "title": "효과적 계약관리 계획",
+      "major_criterion": "1. 계약관리 일반 절차",
+      "subcriterion": "1. 계약관리 계획",
+      "fine_criteria": [
+        "1-1-1 계약관리 원칙",
+        "1-1-2 계약관리 계획",
+        "1-1-3 계약체결 후 발주처와 착수 협의",
+        "1-1-4 착수시점, 보고(점검)일정, 납품대상, 투입인력 등 계약이행 소요자원 투입(생산)계획",
+        "1-1-5 하도급계약 승인 및 변경 계획"
+      ],
+      "textbook_pages": "PDF 5-16쪽(제1장 도입, 제1절)",
+      "artifact": "계약관리 원칙 점검표, 착수협의 의제, 소요자원 투입계획서",
+      "scope_role": "official_direct",
+      "origin": "custom",
+      "rights": {"label": "자체 제작", "derivative_of_private_source": false, "publishable": true},
+      "status": "exercise_checked",
+      "qa": {
+        "revision_date": "2026-08-24",
+        "source_check_date": "2026-08-24",
+        "exercise_check_date": "2026-08-24",
+        "high_risk_facts_checked": true,
+        "source_sha256": "724274e6a30613d9e61a4ef9fe493c5729d27c45b34a576203b12625d08ba835",
+        "questions_checked": 25,
+        "private_similarity_audit": {
+          "comparison_files": 5,
+          "exact_question_matches": 0,
+          "exact_normalized_lines_min_60_chars": 0,
+          "normalized_windows_30_chars": 0
+        }
+      }
+    },
+    {
+      "id": "PPM3-P01-L02",
+      "title": "계약변경 관리",
+      "major_criterion": "1. 계약관리 일반 절차",
+      "subcriterion": "2. 계약변경 관리",
+      "fine_criteria": [
+        "1-2-1 변경계약 관리 일반절차",
+        "1-2-2 변경계약 절차 실행",
+        "1-2-3 계약해제·해지 절차 및 사후조치",
+        "1-2-4 손해배상 절차 및 사후조치",
+        "1-2-5 분쟁해결 절차"
+      ],
+      "textbook_pages": "PDF 17-55쪽(제1장 제2절)",
+      "artifact": "변경요청서, 변경 전후 대비표, 해제·해지·손해배상·분쟁 대응 의사결정표",
+      "scope_role": "official_direct",
+      "origin": "custom",
+      "rights": {"label": "자체 제작", "derivative_of_private_source": false, "publishable": true},
+      "status": "planned"
+    },
+    {
+      "id": "PPM3-P01-L03",
+      "title": "안정적 계약이행 관리",
+      "major_criterion": "1. 계약관리 일반 절차",
+      "subcriterion": "3. 계약이행 관리",
+      "fine_criteria": [
+        "1-3-1 계약 대상물 공급(납품, 과업 이행 및 시공 등) 일반절차",
+        "1-3-2 공급 계약조건 이행 점검",
+        "1-3-3 계약이행 및 조건 미이행, 오류 및 지연 관리",
+        "1-3-4 계약성과관리",
+        "1-3-5 계약상 위험 관리"
+      ],
+      "textbook_pages": "PDF 56-70쪽(제1장 제3절)",
+      "artifact": "이행점검표, 오류·지연 관리대장, 계약성과·위험 대시보드",
+      "scope_role": "official_direct",
+      "origin": "custom",
+      "rights": {"label": "자체 제작", "derivative_of_private_source": false, "publishable": true},
+      "status": "planned"
+    },
+    {
+      "id": "PPM3-P01-L04",
+      "title": "계약 종결 관리",
+      "major_criterion": "1. 계약관리 일반 절차",
+      "subcriterion": "4. 계약종결 관리",
+      "fine_criteria": [
+        "1-4-1 납품검사·검수 절차",
+        "1-4-2 대금지급 절차",
+        "1-4-3 계약종결 절차",
+        "1-4-4 하자보증 및 사후관리 이행",
+        "1-4-5 입찰보증금, 계약보증금, 선급금보증금, 하자보수보증금, 매입채권 및 보험 관리",
+        "1-4-6 지체상금 부과"
+      ],
+      "textbook_pages": "PDF 71-98쪽(제1장 제4절)",
+      "artifact": "검사·검수 및 대금지급 체크리스트, 보증금 관리대장, 지체상금 계산표, 종결보고서",
+      "scope_role": "official_direct",
+      "origin": "custom",
+      "rights": {"label": "자체 제작", "derivative_of_private_source": false, "publishable": true},
+      "status": "planned"
+    },
+    {
+      "id": "PPM3-P02-L01",
+      "title": "물품계약 일반절차 관리",
+      "major_criterion": "2. 물품 계약관리",
+      "subcriterion": "1. 물품계약 일반절차 관리",
+      "fine_criteria": [
+        "2-1-1 물품(제조·공급) 입찰참가자격 등록",
+        "2-1-2 물품구매 입찰 공고서 작성 및 검토",
+        "2-1-4 소액수의계약 절차",
+        "2-1-5 외자구매계약 절차"
+      ],
+      "textbook_pages": "PDF 99-115쪽(제2장 도입, 제1절)",
+      "artifact": "물품 입찰참가자격·공고서 점검표, 소액수의·외자구매 절차 비교표",
+      "scope_role": "official_direct",
+      "origin": "custom",
+      "rights": {"label": "자체 제작", "derivative_of_private_source": false, "publishable": true},
+      "status": "planned"
+    },
+    {
+      "id": "PPM3-P02-L02",
+      "title": "물품구매·제조 낙찰자 결정 방법",
+      "major_criterion": "2. 물품 계약관리",
+      "subcriterion": "1. 물품계약 일반절차 관리",
+      "fine_criteria": [
+        "2-1-3 물품구매 낙찰자결정 방법"
+      ],
+      "textbook_pages": "PDF 116-149쪽(제2장 제2절)",
+      "artifact": "낙찰자 결정방법 선택표, 적격심사 흐름도와 평가 연습표",
+      "scope_role": "official_direct",
+      "origin": "custom",
+      "rights": {"label": "자체 제작", "derivative_of_private_source": false, "publishable": true},
+      "status": "planned"
+    },
+    {
+      "id": "PPM3-P02-L03",
+      "title": "물품계약 이행관리",
+      "major_criterion": "2. 물품 계약관리",
+      "subcriterion": "2. 물품계약 이행관리",
+      "fine_criteria": [
+        "2-2-1 공정, 품질 및 안전관리",
+        "2-2-2 설계변경 및 계약금액 조정"
+      ],
+      "textbook_pages": "PDF 150-162쪽(제2장 제3절)",
+      "artifact": "공정·품질·안전 점검대장, 설계변경 및 계약금액 조정 검토서",
+      "scope_role": "official_direct",
+      "origin": "custom",
+      "rights": {"label": "자체 제작", "derivative_of_private_source": false, "publishable": true},
+      "status": "planned"
+    },
+    {
+      "id": "PPM3-P03-L01",
+      "title": "용역계약 절차 및 이행관리",
+      "major_criterion": "3. 용역·다수공급자 계약 관리",
+      "subcriterion": "1. 용역계약 절차 및 이행관리",
+      "fine_criteria": [
+        "3-1-1 용역 입찰공고문 검토",
+        "3-1-2 제안서 작성",
+        "3-1-3 낙찰자 결정방법",
+        "3-1-4 제안서 평가 및 제안발표",
+        "3-1-5 협상계약 및 경쟁적대화 계약",
+        "3-1-6 용역적격심사",
+        "3-1-7 e-발주시스템 활용"
+      ],
+      "textbook_pages": "PDF 163-194쪽(제3장 도입, 제1절)",
+      "artifact": "용역 입찰공고 검토표, 제안서·발표 평가표, 협상 기록서, e-발주시스템 업무 흐름도",
+      "scope_role": "official_direct",
+      "origin": "custom",
+      "rights": {"label": "자체 제작", "derivative_of_private_source": false, "publishable": true},
+      "status": "planned"
+    },
+    {
+      "id": "PPM3-P03-L02",
+      "title": "다수공급자계약(MAS) 절차 및 이행관리",
+      "major_criterion": "3. 용역·다수공급자 계약 관리",
+      "subcriterion": "2. 다수공급자계약(MAS) 절차 및 이행관리",
+      "fine_criteria": [
+        "3-2-1 국가종합전자조달시스템(나라장터) 종합쇼핑몰 활용",
+        "3-2-2 다수공급자계약 일반절차 이해",
+        "3-2-3 다수공급자계약 적격성 평가 및 사전심사",
+        "3-2-4 다수공급자계약 2단계경쟁",
+        "3-2-5 다수공급자계약 계약이행실적 평가",
+        "3-2-6 카탈로그계약 및 디지털서비스계약 절차"
+      ],
+      "textbook_pages": "PDF 195-218쪽(제3장 제2절)",
+      "artifact": "MAS 생애주기 지도, 적격성평가 체크리스트, 2단계경쟁 제안·평가표, 계약이행실적 관리표",
+      "scope_role": "official_direct",
+      "origin": "custom",
+      "rights": {"label": "자체 제작", "derivative_of_private_source": false, "publishable": true},
+      "status": "planned"
+    },
+    {
+      "id": "PPM3-P04-L01",
+      "title": "공사계약 일반개요와 건설산업 법체계",
+      "major_criterion": "4. 공사계약관리",
+      "subcriterion": "1. 공사계약 일반개요",
+      "fine_criteria": [
+        "4-1-1 건설산업기본법 이해",
+        "4-1-2 건설기술진흥법 이해",
+        "4-1-3 건설공사 발주 세부기준 이해"
+      ],
+      "textbook_pages": "PDF 219-232쪽(제4장 도입, 제1절)",
+      "artifact": "건설산업 법령·업역 비교표, 건설 생애주기와 발주방식 결정표",
+      "scope_role": "official_direct",
+      "origin": "custom",
+      "rights": {"label": "자체 제작", "derivative_of_private_source": false, "publishable": true},
+      "status": "planned"
+    },
+    {
+      "id": "PPM3-P04-L02",
+      "title": "건설엔지니어링 유형과 대가",
+      "major_criterion": "4. 공사계약관리",
+      "subcriterion": "1. 공사계약 일반개요",
+      "fine_criteria": [
+        "4-1-2 건설기술진흥법 이해",
+        "4-1-3 건설공사 발주 세부기준 이해"
+      ],
+      "textbook_pages": "PDF 233-238쪽(제4장 제2절 2.1-2.3)",
+      "artifact": "건설엔지니어링 업무유형·대가산정 비교표와 과업범위서",
+      "scope_role": "official_direct",
+      "origin": "custom",
+      "rights": {"label": "자체 제작", "derivative_of_private_source": false, "publishable": true},
+      "status": "planned"
+    },
+    {
+      "id": "PPM3-P04-L03",
+      "title": "건설엔지니어링 입찰과 기술용역 계약",
+      "major_criterion": "4. 공사계약관리",
+      "subcriterion": "3. 공사계약 특화 절차 및 이행관리",
+      "fine_criteria": [
+        "4-3-4 기술용역 계약 절차"
+      ],
+      "textbook_pages": "PDF 239-250쪽(제4장 제2절 2.4-2.5)",
+      "artifact": "PQ·SOQ·TP·종합심사·협상계약 적용구간 비교표와 기술용역 계약 체크리스트",
+      "scope_role": "official_direct",
+      "origin": "custom",
+      "rights": {"label": "자체 제작", "derivative_of_private_source": false, "publishable": true},
+      "status": "planned"
+    },
+    {
+      "id": "PPM3-P04-L04",
+      "title": "건설 공사비와 계약방법 검토",
+      "major_criterion": "4. 공사계약관리",
+      "subcriterion": "2. 공사계약 일반절차 및 이행관리",
+      "fine_criteria": [
+        "4-2-2 공사 낙찰자 결정방법"
+      ],
+      "textbook_pages": "PDF 251-269쪽(제4장 제3절 3.1-3.2)",
+      "artifact": "공사비 구성표, 경쟁·수의·공동도급·국제입찰 계약방법 검토서",
+      "scope_role": "official_direct",
+      "origin": "custom",
+      "rights": {"label": "자체 제작", "derivative_of_private_source": false, "publishable": true},
+      "status": "planned"
+    },
+    {
+      "id": "PPM3-P04-L05",
+      "title": "공사 입찰공고와 입찰참가자격 사전심사(PQ)",
+      "major_criterion": "4. 공사계약관리",
+      "subcriterion": "2. 공사계약 일반절차 및 이행관리",
+      "fine_criteria": [
+        "4-2-1 공사 입찰 공고문 검토",
+        "4-2-3 입찰참가자격 사전심사(PQ)"
+      ],
+      "textbook_pages": "PDF 270-272쪽(제4장 제3절 3.2-3.3)",
+      "artifact": "공사 입찰공고문 검토표, PQ 적용 여부·심사항목 판정표",
+      "scope_role": "official_direct",
+      "origin": "custom",
+      "rights": {"label": "자체 제작", "derivative_of_private_source": false, "publishable": true},
+      "status": "planned"
+    },
+    {
+      "id": "PPM3-P04-L06",
+      "title": "공사 적격심사",
+      "major_criterion": "4. 공사계약관리",
+      "subcriterion": "2. 공사계약 일반절차 및 이행관리",
+      "fine_criteria": [
+        "4-2-4 공사 적격심사"
+      ],
+      "textbook_pages": "PDF 272-277쪽(제4장 제3절 3.4 가)",
+      "artifact": "국가·지방 공사 적격심사 구간 비교표와 모의 평점표",
+      "scope_role": "official_direct",
+      "origin": "custom",
+      "rights": {"label": "자체 제작", "derivative_of_private_source": false, "publishable": true},
+      "status": "planned"
+    },
+    {
+      "id": "PPM3-P04-L07",
+      "title": "종합심사·종합평가 낙찰제",
+      "major_criterion": "4. 공사계약관리",
+      "subcriterion": "3. 공사계약 특화 절차 및 이행관리",
+      "fine_criteria": [
+        "4-3-1 공사 종합심사낙찰제 절차"
+      ],
+      "textbook_pages": "PDF 277-295쪽(제4장 제3절 3.4 나-다)",
+      "artifact": "종합심사·종합평가 절차 비교표와 공사수행능력·가격·사회적 책임 평가 연습표",
+      "scope_role": "official_direct",
+      "origin": "custom",
+      "rights": {"label": "자체 제작", "derivative_of_private_source": false, "publishable": true},
+      "status": "planned"
+    },
+    {
+      "id": "PPM3-P04-L08",
+      "title": "공사 입찰 행정기간과 계약체결",
+      "major_criterion": "4. 공사계약관리",
+      "subcriterion": "2. 공사계약 일반절차 및 이행관리",
+      "fine_criteria": [
+        "4-2-2 공사 낙찰자 결정방법"
+      ],
+      "textbook_pages": "PDF 296-299쪽(제4장 제3절 3.5-3.7)",
+      "artifact": "시설공사 표준행정 일정표, 공사규모별 입찰방법 판정표, 계약체결 서류목록",
+      "scope_role": "official_direct",
+      "origin": "custom",
+      "rights": {"label": "자체 제작", "derivative_of_private_source": false, "publishable": true},
+      "status": "planned"
+    },
+    {
+      "id": "PPM3-P04-L09",
+      "title": "기술형공사 개요와 선정심의",
+      "major_criterion": "4. 공사계약관리",
+      "subcriterion": "3. 공사계약 특화 절차 및 이행관리",
+      "fine_criteria": [
+        "4-3-2 일괄, 대안 및 기술제안입찰 절차"
+      ],
+      "textbook_pages": "PDF 300-305쪽(제4장 제4절 4.1)",
+      "artifact": "기술형공사 유형 판정표와 집행기본계획·선정심의 체크리스트",
+      "scope_role": "official_direct",
+      "origin": "custom",
+      "rights": {"label": "자체 제작", "derivative_of_private_source": false, "publishable": true},
+      "status": "planned"
+    },
+    {
+      "id": "PPM3-P04-L10",
+      "title": "일괄·대안·기술제안입찰과 낙찰자 선정",
+      "major_criterion": "4. 공사계약관리",
+      "subcriterion": "3. 공사계약 특화 절차 및 이행관리",
+      "fine_criteria": [
+        "4-3-2 일괄, 대안 및 기술제안입찰 절차"
+      ],
+      "textbook_pages": "PDF 306-317쪽(제4장 제4절 4.2-4.4)",
+      "artifact": "기술형 입찰 절차 비교표, 조정가격·조정점수 계산표, 낙찰방식 선택 연습지",
+      "scope_role": "official_direct",
+      "origin": "custom",
+      "rights": {"label": "자체 제작", "derivative_of_private_source": false, "publishable": true},
+      "status": "planned"
+    },
+    {
+      "id": "PPM3-P04-L11",
+      "title": "공사 시공·대금·하도급 관리",
+      "major_criterion": "4. 공사계약관리",
+      "subcriterion": "3. 공사계약 특화 절차 및 이행관리",
+      "fine_criteria": [
+        "4-3-3 공사 시공관리 절차",
+        "4-3-5 하도급관리",
+        "4-3-6 하도급대금 전자적 처리를 위한 지급시스템(하도급지킴이)"
+      ],
+      "textbook_pages": "PDF 318-323쪽(제4장 제5절 5.1)",
+      "artifact": "착공·공정보고·선금·기성·준공·지체상금 관리대장, 하도급·전자지급 체크리스트",
+      "scope_role": "official_direct",
+      "origin": "custom",
+      "rights": {"label": "자체 제작", "derivative_of_private_source": false, "publishable": true},
+      "status": "planned"
+    },
+    {
+      "id": "PPM3-P04-L12",
+      "title": "공사 계약금액 조정과 시공·사후평가",
+      "major_criterion": "4. 공사계약관리",
+      "subcriterion": "2. 공사계약 일반절차 및 이행관리",
+      "fine_criteria": [
+        "4-2-5 공사 설계변경 및 계약금액 조정"
+      ],
+      "textbook_pages": "PDF 324-334쪽(제4장 제5절 5.2-5.3)",
+      "artifact": "물가변동·설계변경 계약금액 조정 검토서, 시공평가·사후평가 기록표",
+      "scope_role": "official_direct",
+      "origin": "custom",
+      "rights": {"label": "자체 제작", "derivative_of_private_source": false, "publishable": true},
+      "status": "planned"
+    },
+    {
+      "id": "PPM3-P05-L01",
+      "title": "공공조달 품질관리 체계",
+      "major_criterion": "2. 물품 계약관리",
+      "subcriterion": "2. 물품계약 이행관리",
+      "fine_criteria": [
+        "2-2-1 공정, 품질 및 안전관리"
+      ],
+      "textbook_pages": "PDF 335-340쪽(제5장 도입, 제1절)",
+      "artifact": "진입·계약·이행·납품·사후 품질관리 생애주기 지도와 역할분담표",
+      "scope_role": "textbook_extension_to_official_2-2-1",
+      "origin": "custom",
+      "rights": {"label": "자체 제작", "derivative_of_private_source": false, "publishable": true},
+      "status": "planned"
+    },
+    {
+      "id": "PPM3-P05-L02",
+      "title": "해외 공공조달 품질관리",
+      "major_criterion": "2. 물품 계약관리",
+      "subcriterion": "2. 물품계약 이행관리",
+      "fine_criteria": [
+        "2-2-1 공정, 품질 및 안전관리"
+      ],
+      "textbook_pages": "PDF 341-347쪽(제5장 제2절)",
+      "artifact": "국내외 품질관리·표준·인증·검사 체계 비교표와 벤치마킹 적용안",
+      "scope_role": "textbook_extension_to_official_2-2-1",
+      "origin": "custom",
+      "rights": {"label": "자체 제작", "derivative_of_private_source": false, "publishable": true},
+      "status": "planned"
+    },
+    {
+      "id": "PPM3-P05-L03",
+      "title": "직접생산확인과 품질점검",
+      "major_criterion": "2. 물품 계약관리",
+      "subcriterion": "2. 물품계약 이행관리",
+      "fine_criteria": [
+        "2-2-1 공정, 품질 및 안전관리"
+      ],
+      "textbook_pages": "PDF 348-357쪽(제5장 제3절)",
+      "artifact": "직접생산확인·현장조사·품질점검 체크리스트와 부적합 조치대장",
+      "scope_role": "textbook_extension_to_official_2-2-1",
+      "origin": "custom",
+      "rights": {"label": "자체 제작", "derivative_of_private_source": false, "publishable": true},
+      "status": "planned"
+    },
+    {
+      "id": "PPM3-P05-L04",
+      "title": "안전관리물자 지정제도",
+      "major_criterion": "2. 물품 계약관리",
+      "subcriterion": "2. 물품계약 이행관리",
+      "fine_criteria": [
+        "2-2-1 공정, 품질 및 안전관리"
+      ],
+      "textbook_pages": "PDF 358-362쪽(제5장 제4절)",
+      "artifact": "안전관리물자 지정·변경·취소 및 검사강화 절차표와 대응 체크리스트",
+      "scope_role": "textbook_extension_to_official_2-2-1",
+      "origin": "custom",
+      "rights": {"label": "자체 제작", "derivative_of_private_source": false, "publishable": true},
+      "status": "planned"
+    },
+    {
+      "id": "PPM3-P05-L05",
+      "title": "품질보증조달물품 지정제도",
+      "major_criterion": "2. 물품 계약관리",
+      "subcriterion": "2. 물품계약 이행관리",
+      "fine_criteria": [
+        "2-2-1 공정, 품질 및 안전관리"
+      ],
+      "textbook_pages": "PDF 363-376쪽(제5장 제5절)",
+      "artifact": "품질보증조달물품 지정·등급·검사면제·사후관리 판정표와 자체 품질관리계획",
+      "scope_role": "textbook_extension_to_official_2-2-1",
+      "origin": "custom",
+      "rights": {"label": "자체 제작", "derivative_of_private_source": false, "publishable": true},
+      "status": "planned"
+    },
+    {
+      "id": "PPM3-P06-L01",
+      "title": "벤처나라 등록제도",
+      "major_criterion": "표준교재 확장(공식 주요항목 직접 대응 없음)",
+      "subcriterion": "벤처나라(벤처창업혁신조달상품) 등록제도",
+      "fine_criteria": [],
+      "textbook_pages": "PDF 377-385쪽(제6장 도입, 제1절)",
+      "artifact": "벤처나라 대상·지정·등록·거래 절차표와 신청 적격성 체크리스트",
+      "scope_role": "textbook_extension_no_direct_criterion",
+      "criteria_relation": "표준교재 확장으로서 공식 55개 세세항목의 직접 대응 범위에 포함하지 않음",
+      "origin": "custom",
+      "rights": {"label": "자체 제작", "derivative_of_private_source": false, "publishable": true},
+      "status": "planned"
+    },
+    {
+      "id": "PPM3-P06-L02",
+      "title": "혁신시제품 시범구매제도",
+      "major_criterion": "표준교재 확장(공식 주요항목 직접 대응 없음)",
+      "subcriterion": "혁신시제품 시범구매제도",
+      "fine_criteria": [],
+      "textbook_pages": "PDF 386-398쪽(제6장 제2절)",
+      "artifact": "혁신시제품 제안·평가·시범구매·실증·본조달 연계 계획서",
+      "scope_role": "textbook_extension_no_direct_criterion",
+      "criteria_relation": "표준교재 확장으로서 공식 55개 세세항목의 직접 대응 범위에 포함하지 않음",
+      "origin": "custom",
+      "rights": {"label": "자체 제작", "derivative_of_private_source": false, "publishable": true},
+      "status": "planned"
+    },
+    {
+      "id": "PPM3-P06-L03",
+      "title": "우수조달물품 지정제도",
+      "major_criterion": "표준교재 확장(공식 주요항목 직접 대응 없음)",
+      "subcriterion": "우수조달물품(우수제품) 지정제도",
+      "fine_criteria": [],
+      "textbook_pages": "PDF 399-419쪽(제6장 제3절, 판권 포함)",
+      "artifact": "우수조달물품 지정·연장·취소·계약 절차표와 MAS·벤처나라·혁신시제품 비교표",
+      "scope_role": "textbook_extension_no_direct_criterion",
+      "criteria_relation": "표준교재 확장으로서 공식 55개 세세항목의 직접 대응 범위에 포함하지 않음",
+      "origin": "custom",
+      "rights": {"label": "자체 제작", "derivative_of_private_source": false, "publishable": true},
+      "status": "planned"
+    }
+  ]
+}
