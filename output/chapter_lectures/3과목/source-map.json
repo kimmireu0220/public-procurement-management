@@ -1136,7 +1136,8 @@
       "criteria_relation": "표준교재 확장으로서 공식 55개 세세항목의 직접 대응 범위에 포함하지 않음",
       "origin": "custom",
       "rights": {"label": "자체 제작", "derivative_of_private_source": false, "publishable": true},
-      "status": "planned"
+      "status": "draft",
+      "coverage_note": "표준교재 PDF 386~398쪽의 혁신제품 개념, 혁신시제품 지정·평가, 시범구매·실증과 본조달 연계 흐름을 자체 서술로 구성함. 법령·문항·수치의 일괄 검증은 3과목 전체 제작 후 수행 예정"
     },
     {
       "id": "PPM3-P06-L03",
