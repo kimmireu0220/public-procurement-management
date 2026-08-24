@@ -73,10 +73,10 @@
     "status": "mapping_checked",
     "lesson_content_status": "in_progress",
     "chapters_planned": 29,
-    "chapters_completed": 8,
-    "questions_checked": 332,
-    "recall_prompts_checked": 29,
-    "inline_answers_checked": 361,
+    "chapters_completed": 9,
+    "questions_checked": 374,
+    "recall_prompts_checked": 36,
+    "inline_answers_checked": 410,
     "major_criteria_mapped": "4/4",
     "subcriteria_mapped": "11/11",
     "fine_criteria_mapped": "55/55",
@@ -90,7 +90,7 @@
     "5": "공식 2-2-1 공정, 품질 및 안전관리를 보강하는 표준교재 확장; 표준교재 PDF 335-376쪽의 5개 절을 각각 1개 Chapter로 구성",
     "6": "공식 세세항목 직접 대응이 없는 표준교재 확장; 표준교재 PDF 377-419쪽의 벤처나라·혁신시제품·우수조달물품 3개 절을 각각 1개 Chapter로 구성"
   },
-  "legal_sources_note": "완성된 장은 현행 법령·계약예규·행정규칙을 조문 단위로 검증하고, 아직 작성하지 않은 장의 근거는 작성 단계에서 추가함",
+  "legal_sources_note": "완성된 장은 현행 법령·계약예규·행정규칙을 조문 단위로 검증하고, 아직 작성하지 않은 장의 근거는 작성 단계에서 추가함. PPM3-P03-L02는 2026-08-24 현재 시행 중인 물품·용역 MAS 및 카탈로그 규정을 적용하고, 물품 MAS 계약이행실적평가의 2027-01-01 시행 예정 개편은 2026년 현행 평가체계와 분리해 표시함",
   "legal_sources": [
     {
       "id": "state_contract_act",
@@ -333,9 +333,73 @@
     {
       "id": "mas_goods_contract_regulation",
       "title": "물품 다수공급자계약 업무처리규정",
-      "locators": ["제41조~제45조", "별표 4", "부칙 제2314호·제2393호·제2400호"],
+      "locators": ["제2조", "제4조~제5조", "제8조~제13조", "제21조~제27조", "제41조~제46조", "제49조~제55조", "별표 2·4·5", "부칙 제2314호·제2393호·제2400호"],
       "effective_date": "2026-07-21",
-      "url": "https://www.law.go.kr/LSW/admRulLsInfoP.do?admRulSeq=2100000282818&chrClsCd=010202"
+      "url": "https://www.law.go.kr/LSW/admRulLsInfoP.do?admRulSeq=2100000282818&chrClsCd=010202",
+      "application_note": "2026-08-24 현재 물품 제안공고 의무선은 모든 물품 5억 원 이상이고, 2027-01-01부터 중소기업자간 경쟁제품 5억 원·그 밖의 물품 5천만 원으로 분리됨. 현행 평가표와 2027-01-01 시행 예정 계약이행실적평가 개편도 분리해 적용"
+    },
+    {
+      "id": "procurement_business_act",
+      "title": "조달사업에 관한 법률",
+      "locators": ["제13조", "제14조"],
+      "effective_date": "2026-01-02",
+      "url": "https://www.law.go.kr/LSW/lsInfoP.do?lsiSeq=277155&chrClsCd=010202&urlMode=lsInfoP&efYd=20260102&ancYnChk=0"
+    },
+    {
+      "id": "procurement_business_decree",
+      "title": "조달사업에 관한 법률 시행령",
+      "locators": ["제13조", "제13조의2", "제16조"],
+      "effective_date": "2026-01-02",
+      "url": "https://www.law.go.kr/LSW/lsInfoP.do?lsiSeq=280891&chrClsCd=010202&urlMode=lsInfoP&efYd=20260102&ancYnChk=0"
+    },
+    {
+      "id": "mas_service_contract_regulation",
+      "title": "용역 다수공급자계약 업무처리규정",
+      "locators": ["제4조~제5조", "제9조~제11조", "제18조~제34조", "제64조"],
+      "effective_date": "2026-07-21",
+      "url": "https://law.go.kr/LSW/admRulLsInfoP.do?admRulId=70301&efYd=0"
+    },
+    {
+      "id": "service_catalog_contract_regulation",
+      "title": "용역 카탈로그 계약 업무처리규정",
+      "locators": ["제3조~제24조", "계약관리 관련 조문"],
+      "effective_date": "2026-07-21",
+      "url": "https://www.law.go.kr/admRulLsInfoP.do?admRulSeq=2100000282836"
+    },
+    {
+      "id": "digital_service_catalog_contract_regulation",
+      "title": "디지털서비스 카탈로그계약 업무처리규정",
+      "locators": ["제2조제25호", "제4조~제12조", "제31조~제51조"],
+      "effective_date": "2026-01-01",
+      "url": "https://www.law.go.kr/LSW/admRulInfoP.do?admRulSeq=2100000270208&chrClsCd=010201"
+    },
+    {
+      "id": "digital_service_catalog_special_conditions",
+      "title": "디지털서비스 카탈로그계약 특수조건",
+      "locators": ["제2조~제5조", "제24조~제35조", "제38조", "제40조~제46조", "별표 2"],
+      "effective_date": "2026-01-01",
+      "url": "https://www.law.go.kr/LSW/admRulInfoP.do?admRulSeq=2100000270210&chrClsCd=010201"
+    },
+    {
+      "id": "shopping_mall_operating_regulation",
+      "title": "국가종합전자조달시스템 종합쇼핑몰 운영규정",
+      "locators": ["제13조"],
+      "effective_date": "2026-07-01",
+      "url": "https://www.law.go.kr/LSW/admRulLsInfoP.do?admRulSeq=2100000282140&chrClsCd=010202"
+    },
+    {
+      "id": "cloud_computing_act",
+      "title": "클라우드컴퓨팅 발전 및 이용자 보호에 관한 법률",
+      "locators": ["제2조", "제20조"],
+      "effective_date": "2025-10-01",
+      "url": "https://www.law.go.kr/LSW/lsInfoP.do?ancYnChk=0&chrClsCd=010202&efYd=20251001&lsiSeq=277387&urlMode=lsInfoP"
+    },
+    {
+      "id": "cloud_computing_decree",
+      "title": "클라우드컴퓨팅 발전 및 이용자 보호에 관한 법률 시행령",
+      "locators": ["제3조", "제15조의2·제15조의3"],
+      "effective_date": "2026-01-02",
+      "url": "https://www.law.go.kr/LSW/lsInfoP.do?ancYnChk=0&chrClsCd=010202&efYd=20260102&lsiSeq=280955&urlMode=lsInfoP"
     },
     {
       "id": "supreme_court_95da11436",
@@ -368,12 +432,28 @@
   ],
   "operational_sources": [
     {
+      "id": "pps_unit_price_contract_guarantee_ratio_notice",
+      "title": "제3자를 위한 단가계약 등의 계약보증금 산출 시 납품이행실적을 고려하여 정한 비율 고시",
+      "publisher": "조달청",
+      "retrieved_at": "2026-08-24",
+      "use": "제3자를 위한 단가계약 계약보증 기준금액의 고시비율 C=50% 확인",
+      "url": "https://www.pps.go.kr/kor/bbs/view.do?bbsSn=2306290008&key=00030"
+    },
+    {
       "id": "nextgen_narajangteo_proposal_submission",
       "title": "차세대 나라장터 시스템 개통에 따른 제안서 접수 유의사항",
       "publisher": "나라장터 공고기관",
       "retrieved_at": "2026-08-24",
       "use": "구 e-발주시스템의 나라장터 통합·폐쇄, 제안서 제출 후 가격입찰, 제출내역·수신·파일 확인",
       "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01476474&bidPbancOrd=000&fileSeq=2&fileType=&prcmBsneSeCd=03"
+    },
+    {
+      "id": "pps_catalog_contract_guide",
+      "title": "카탈로그 계약 제도안내",
+      "publisher": "조달청",
+      "retrieved_at": "2026-08-24",
+      "use": "카탈로그계약의 개념·대상·구매절차와 디지털서비스 운영 안내를 행정규칙 원문과 구분해 보조 설명으로 사용",
+      "url": "https://www.pps.go.kr/kor/content.do?key=01182"
     }
   ],
   "lessons": [
@@ -661,7 +741,23 @@
       "scope_role": "official_direct",
       "origin": "custom",
       "rights": {"label": "자체 제작", "derivative_of_private_source": false, "publishable": true},
-      "status": "planned"
+      "status": "exercise_checked",
+      "coverage_note": "Q-Net 3-2-1~3-2-6의 종합쇼핑몰 활용, MAS 일반절차, 적격성평가·사전심사, 2단계경쟁, 계약이행실적평가, 용역·디지털서비스 카탈로그를 모두 다루며 교재 PDF 195~218쪽의 구수치·내부 충돌을 2026-08-24 현행 규정으로 보정하고 2027-01-01 시행 예정 평가개편을 분리함",
+      "qa": {
+        "revision_date": "2026-08-24",
+        "source_check_date": "2026-08-24",
+        "exercise_check_date": "2026-08-24",
+        "high_risk_facts_checked": true,
+        "source_sha256": "9633f7628896a14e0c064249fc172c09d9111fd7959fcd4c601d06d548afb1eb",
+        "questions_checked": 42,
+        "recall_prompts_checked": 7,
+        "private_similarity_audit": {
+          "comparison_files": 5,
+          "exact_question_matches": 0,
+          "exact_normalized_lines_min_60_chars": 0,
+          "normalized_windows_30_chars": 0
+        }
+      }
     },
     {
       "id": "PPM3-P04-L01",
