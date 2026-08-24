@@ -124,10 +124,10 @@
         "title": "공공조달 원칙 및 방법",
         "textbook_pages": "49-65, 67-126",
         "lessons": [
-          {"id": "P02-C01", "subcriterion": "2-1 공공조달 원칙", "fine_criteria": ["2-1-1 공공조달 기본 원칙", "2-1-2 공공조달 실행 원칙"], "textbook_pages": "69-96", "status": "planned"},
-          {"id": "P02-C02", "subcriterion": "2-2 공공조달 유형", "fine_criteria": ["2-2-1 중앙집중형 공공조달", "2-2-2 분산형 공공조달"], "textbook_pages": "49-65", "status": "planned"},
-          {"id": "P02-C03", "subcriterion": "2-3 경쟁적 공공조달 방법", "fine_criteria": ["2-3-1 일반경쟁", "2-3-2 제한경쟁", "2-3-3 지명경쟁"], "textbook_pages": "97-116", "status": "planned"},
-          {"id": "P02-C04", "subcriterion": "2-4 비경쟁적 공공조달 방법", "fine_criteria": ["2-4-1 수의계약", "2-4-2 소액구매"], "textbook_pages": "117-124", "status": "planned"}
+          {"id": "P02-C01", "subcriterion": "2-1 공공조달 원칙", "fine_criteria": ["2-1-1 공공조달 기본 원칙", "2-1-2 공공조달 실행 원칙"], "textbook_pages": "69-96", "status": "source_checked", "questions_written": 20, "recall_prompts_written": 5, "inline_answers_written": 25},
+          {"id": "P02-C02", "subcriterion": "2-2 공공조달 유형", "fine_criteria": ["2-2-1 중앙집중형 공공조달", "2-2-2 분산형 공공조달"], "textbook_pages": "49-65", "status": "source_checked", "questions_written": 20, "recall_prompts_written": 5, "inline_answers_written": 25},
+          {"id": "P02-C03", "subcriterion": "2-3 경쟁적 공공조달 방법", "fine_criteria": ["2-3-1 일반경쟁", "2-3-2 제한경쟁", "2-3-3 지명경쟁"], "textbook_pages": "97-116", "status": "source_checked", "questions_written": 20, "recall_prompts_written": 5, "inline_answers_written": 25},
+          {"id": "P02-C04", "subcriterion": "2-4 비경쟁적 공공조달 방법", "fine_criteria": ["2-4-1 수의계약", "2-4-2 소액구매"], "textbook_pages": "117-124", "status": "source_checked", "questions_written": 22, "recall_prompts_written": 5, "inline_answers_written": 27}
         ]
       },
       {
@@ -177,13 +177,13 @@
   "production_status": {
     "status": "in_progress",
     "chapters_planned": 22,
-    "chapters_completed": 4,
+    "chapters_completed": 8,
     "major_criteria_mapped": "6/6",
     "subcriteria_mapped": "22/22",
     "fine_criteria_mapped": "84/84",
-    "questions_written": 80,
-    "recall_prompts_written": 20,
-    "inline_answers_written": 100,
+    "questions_written": 162,
+    "recall_prompts_written": 40,
+    "inline_answers_written": 202,
     "answer_placement": "모든 객관식·O/X·회상·사례 문항 바로 아래 정답·해설 배치",
     "separate_answer_sheet": false,
     "final_integrated_qa": "pending_after_subjects_1_and_2_generation"
