@@ -7,10 +7,8 @@
 ### 이론 강의
 
 - [강의 홈](https://kimmireu0220.github.io/public-procurement-management/lecture/)
-- [1과목 공공조달과 법제도 이해](https://kimmireu0220.github.io/public-procurement-management/lecture/1/)
-- [2과목 공공조달계획 수립 및 분석](https://kimmireu0220.github.io/public-procurement-management/lecture/2/)
-- [3과목 공공계약관리](https://kimmireu0220.github.io/public-procurement-management/lecture/3/)
 - [4과목 공공조달 관리실무](https://kimmireu0220.github.io/public-procurement-management/lecture/4/)
+- 1~3과목 기존 강의는 폐기했으며 재제작 예정
 
 ### 문제풀이 CBT
 
@@ -30,12 +28,10 @@
 | `docs/시험모의/` | 모의고사 선별·채점 규칙 |
 | `docs/자료_공개_및_저장_정책.md` | 공개 범위·저작권·대용량 파일 정책 |
 | `output/standard_textbook/` | 조달청 표준교재 핵심 정리 |
-| `output/problem_book_final/` | 박문각 문제은행 Markdown |
-| `output/agent_extract/` | 문제은행 정답·해설 |
+| `output/problem_book_final/` | 민간 문제은행 Markdown(로컬 전용) |
+| `output/agent_extract/` | 민간 문제은행 정답·해설(로컬 전용) |
 | `output/mock_exam/` | 필기·실기 1회차 모의고사 |
 | `output/chapter_lectures/` | Chapter 강의 원본 (공개본: `docs/lecture/`) |
-| `output/part_lectures/` | 4과목 강의 대본 |
-| `output/gpt_sovits_audio/` | 4과목 최종 강의 MP3 |
 | `docs/` | GitHub Pages 공개본 |
 | `sources/` | 공식 근거 자료와 로컬 민간 원본의 보관 위치 |
 
