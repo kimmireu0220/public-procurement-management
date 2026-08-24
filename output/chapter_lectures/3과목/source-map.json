@@ -1059,7 +1059,8 @@
       "scope_role": "textbook_extension_to_official_2-2-1",
       "origin": "custom",
       "rights": {"label": "자체 제작", "derivative_of_private_source": false, "publishable": true},
-      "status": "planned"
+      "status": "draft",
+      "coverage_note": "표준교재 PDF 341~347쪽의 미국·영국·캐나다 공공조달 품질관리, 공급자 평가·검사·인증·성과관리 비교를 자체 서술로 구성함. 교재와 현행 용어·기준 차이는 본문에 구분했으며 전체 일괄 검증은 3과목 제작 후 수행 예정"
     },
     {
       "id": "PPM3-P05-L03",
