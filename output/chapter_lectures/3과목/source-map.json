@@ -73,8 +73,8 @@
     "status": "mapping_checked",
     "lesson_content_status": "in_progress",
     "chapters_planned": 29,
-    "chapters_completed": 2,
-    "questions_checked": 65,
+    "chapters_completed": 3,
+    "questions_checked": 110,
     "major_criteria_mapped": "4/4",
     "subcriteria_mapped": "11/11",
     "fine_criteria_mapped": "55/55",
@@ -93,28 +93,28 @@
     {
       "id": "state_contract_act",
       "title": "국가를 당사자로 하는 계약에 관한 법률",
-      "locators": ["제5조", "제11조", "제19조", "제27조", "제28조", "제28조의2", "제30조"],
+      "locators": ["제5조", "제11조", "제12조", "제19조", "제27조", "제28조", "제28조의2", "제30조"],
       "effective_date": "2026-06-11",
       "url": "https://www.law.go.kr/LSW/lsInfoP.do?lsiSeq=283877&chrClsCd=010202&urlMode=lsInfoP&efYd=20260611&ancYnChk=0"
     },
     {
       "id": "civil_act",
       "title": "민법",
-      "locators": ["제390조", "제393조", "제396조", "제398조", "제548조", "제551조", "제673조", "제731조"],
+      "locators": ["제390조", "제393조", "제396조", "제398조", "제548조", "제551조", "제565조", "제673조", "제731조"],
       "effective_date": "2026-03-17",
       "url": "https://www.law.go.kr/LSW/lsInfoP.do?lsiSeq=284415&chrClsCd=010202&urlMode=lsInfoP&efYd=20260317&ancYnChk=0"
     },
     {
       "id": "service_contract_general_conditions",
       "title": "용역계약일반조건",
-      "locators": ["제13조", "제15조~제17조", "제19조", "제23조·제24조", "제29조~제31조", "제36조"],
+      "locators": ["제10조", "제13조", "제15조~제17조", "제19조", "제23조·제24조", "제29조~제31조", "제36조"],
       "effective_date": "2026-04-30",
       "url": "https://www.law.go.kr/LSW/admRulInfoP.do?admRulSeq=2100000276694&chrClsCd=010201"
     },
     {
       "id": "construction_contract_general_conditions",
       "title": "공사계약일반조건",
-      "locators": ["제2조", "제17조", "제19조~제23조", "제26조", "제31조·제32조", "제42조", "제44조~제46조", "제51조"],
+      "locators": ["제2조", "제9조", "제17조", "제19조~제23조", "제26조", "제31조·제32조", "제42조", "제44조~제48조", "제51조"],
       "effective_date": "2026-04-30",
       "url": "https://www.law.go.kr/LSW/admRulInfoP.do?admRulSeq=2100000276690&chrClsCd=010201"
     },
@@ -142,14 +142,14 @@
     {
       "id": "state_contract_decree",
       "title": "국가를 당사자로 하는 계약에 관한 법률 시행령",
-      "locators": ["제64조~제66조", "제74조~제76조", "제91조", "제108조", "제110조~제114조"],
+      "locators": ["제50조~제52조", "제64조~제66조", "제74조~제76조", "제91조", "제108조", "제110조~제114조"],
       "effective_date": "2026-06-03",
       "url": "https://www.law.go.kr/LSW/lsInfoP.do?lsiSeq=285893&chrClsCd=010202&urlMode=lsInfoP&efYd=20260603&ancYnChk=0"
     },
     {
       "id": "state_contract_rule",
       "title": "국가를 당사자로 하는 계약에 관한 법률 시행규칙",
-      "locators": ["제74조", "제74조의2", "제74조의3", "제75조", "제86조"],
+      "locators": ["제51조", "제55조", "제61조", "제63조", "제74조", "제74조의2", "제74조의3", "제75조", "제86조"],
       "effective_date": "2026-01-02",
       "url": "https://www.law.go.kr/LSW/lsInfoP.do?lsiSeq=282607&chrClsCd=010202&urlMode=lsInfoP&efYd=20260102&ancYnChk=0"
     },
@@ -163,9 +163,23 @@
     {
       "id": "goods_contract_general_conditions",
       "title": "물품구매(제조)계약일반조건",
-      "locators": ["제9조", "제11조~제11조의3", "제24조의2", "제25조~제27조", "제31조"],
+      "locators": ["제7조~제9조", "제11조~제11조의3", "제24조의2", "제25조~제27조", "제31조"],
       "effective_date": "2026-04-30",
       "url": "https://www.law.go.kr/LSW/admRulInfoP.do?admRulSeq=2100000276692&chrClsCd=010201"
+    },
+    {
+      "id": "mas_goods_contract_regulation",
+      "title": "물품 다수공급자계약 업무처리규정",
+      "locators": ["제41조~제45조", "별표 4", "부칙 제2314호·제2393호·제2400호"],
+      "effective_date": "2026-07-21",
+      "url": "https://www.law.go.kr/LSW/admRulLsInfoP.do?admRulSeq=2100000282818&chrClsCd=010202"
+    },
+    {
+      "id": "supreme_court_95da11436",
+      "title": "대법원 1996. 4. 26. 선고 95다11436 판결",
+      "locators": ["계약이행보증금과 지체상금의 성질"],
+      "effective_date": "1996-04-26",
+      "url": "https://www.law.go.kr/precInfoP.do?precSeq=115516"
     },
     {
       "id": "arbitration_act",
@@ -273,7 +287,21 @@
       "scope_role": "official_direct",
       "origin": "custom",
       "rights": {"label": "자체 제작", "derivative_of_private_source": false, "publishable": true},
-      "status": "planned"
+      "status": "exercise_checked",
+      "qa": {
+        "revision_date": "2026-08-24",
+        "source_check_date": "2026-08-24",
+        "exercise_check_date": "2026-08-24",
+        "high_risk_facts_checked": true,
+        "source_sha256": "146698e76d2d06cbf9ece2a5c8417bd3a7d9eb6318de9e79367cc4811ee7933d",
+        "questions_checked": 45,
+        "private_similarity_audit": {
+          "comparison_files": 5,
+          "exact_question_matches": 0,
+          "exact_normalized_lines_min_60_chars": 0,
+          "normalized_windows_30_chars": 0
+        }
+      }
     },
     {
       "id": "PPM3-P01-L04",
