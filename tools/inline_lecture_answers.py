@@ -137,7 +137,7 @@ def _convert_answer_table(
         block_end = questions[index + 1].start() if index + 1 < len(questions) else len(question_body)
         block = question_body[question.start() : block_end].rstrip()
         answer, explanation = answer_map[int(question.group(1))]
-        chunks.append(f"{block}\n\n> **정답 {answer}.** {explanation}\n\n")
+        chunks.append(f"{block}\n\n> **정답·해설:** {answer}. {explanation}\n\n")
     converted_questions = "".join(chunks).rstrip() + "\n\n"
 
     trailing = answer_body[rows[-1].end() :].lstrip("\n")
