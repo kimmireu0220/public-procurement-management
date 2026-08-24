@@ -139,7 +139,7 @@ legal_cutoff: 2026-08-24
 | 3 | 입찰가격 점수와 신인도·결격사유 반영 |
 | 4 | 적격통과점수 이상이면 낙찰, 미달이면 차순위 심사 |
 
-2026년 1월 26일 조달청 기술용역 적격심사 세부기준에서는 추정가격 **10억원 이상은 92점**, **10억원 미만은 95점**을 적격통과점수로 둡니다. 이는 조달청 집행 기술용역의 현행 세부기준이며 지방자치단체나 다른 기관의 모든 기술용역에 보편적으로 대입하지 않습니다.
+2026년 5월 26일 시행 조달청 기술용역 적격심사 세부기준에서는 추정가격 **10억원 이상은 92점**, **10억원 미만은 95점**을 적격통과점수로 둡니다. 이는 조달청 집행 기술용역의 현행 세부기준이며 지방자치단체나 다른 기관의 모든 기술용역에 보편적으로 대입하지 않습니다.
 
 ### 낙찰하한율을 정확히 읽는다
 
@@ -567,13 +567,13 @@ legal_cutoff: 2026-08-24
 - 조달청 공공조달관리사 표준교재 3권 239~250쪽
 - 건설기술 진흥법 제35조, 같은 법 시행령 제51조·제52조, 같은 법 시행규칙 제28조
 - 조달청 건설엔지니어링사업자 사업수행능력 세부평가기준(2026. 1. 1. 시행)
-- 조달청 기술용역 적격심사 세부기준(2026. 1. 26.)
+- 조달청 기술용역 적격심사 세부기준(조달청지침 제5283호, 2026. 5. 26. 시행)
 - 건설엔지니어링 종합심사낙찰제 심사기준(국토교통부예규 제463호, 2026. 7. 8. 시행)
 - 용역계약 종합심사낙찰제 심사기준(재정경제부계약예규 제33호, 2026. 1. 2. 시행)
 - 협상에 의한 계약체결기준(재정경제부계약예규 제40호, 2026. 1. 2. 시행)
 - 지방자치단체 입찰시 낙찰자 결정기준(행정안전부예규 제344호, 2025. 12. 1. 시행)
 - 건축서비스산업 진흥법 제21조, 같은 법 시행령 제17조, 건축 설계공모 운영지침
 
-공식 원문은 [Q-Net 공공조달관리사 시험정보](https://www.q-net.or.kr/crf005.do?gSite=Q&id=crf00503s02&jmCd=9777&jmInfoDivCcd=B0), [조달청 표준교재 게시](https://www.pps.go.kr/hrd/home/UserBoardActionUpdate.do?BO_CODE=REFERENCE_ROOM&BO_IDX=6582&CHILD_MENU=MENU209&method=detail), [조달청 건설엔지니어링사업자 사업수행능력 세부평가기준](https://www.law.go.kr/LSW/admRulLsInfoP.do?admRulSeq=2100000268960), [조달청 기술용역 적격심사 세부기준](https://law.go.kr/flDownload.do?flSeq=161209621), [건설엔지니어링 종합심사낙찰제 심사기준](https://www.law.go.kr/LSW/admRulLsInfoP.do?admRulSeq=2100000282470), [용역계약 종합심사낙찰제 심사기준](https://www.law.go.kr/LSW/admRulInfoP.do?admRulSeq=2100000272404), [협상에 의한 계약체결기준](https://www.law.go.kr/LSW/admRulInfoP.do?admRulSeq=2100000272436), [지방자치단체 입찰시 낙찰자 결정기준](https://www.mois.go.kr/frt/bbs/type001/commonSelectBoardArticle.do?bbsId=BBSMSTR_000000000061&nttId=124326), [건축서비스산업 진흥법 시행령 제17조](https://www.law.go.kr/lsLinkCommonInfo.do?chrClsCd=010202&lspttninfSeq=105747), [건축 설계공모 운영지침](https://www.law.go.kr/admRulLsInfoP.do?admRulSeq=2100000279634)에서 확인할 수 있습니다.
+공식 원문은 [Q-Net 공공조달관리사 시험정보](https://www.q-net.or.kr/crf005.do?gSite=Q&id=crf00503s02&jmCd=9777&jmInfoDivCcd=B0), [조달청 표준교재 게시](https://www.pps.go.kr/hrd/home/UserBoardActionUpdate.do?BO_CODE=REFERENCE_ROOM&BO_IDX=6582&CHILD_MENU=MENU209&method=detail), [조달청 건설엔지니어링사업자 사업수행능력 세부평가기준](https://www.law.go.kr/LSW/admRulLsInfoP.do?admRulSeq=2100000268960), [조달청 기술용역 적격심사 세부기준](https://law.go.kr/LSW/admRulLsInfoP.do?admRulSeq=2100000279692), [건설엔지니어링 종합심사낙찰제 심사기준](https://www.law.go.kr/LSW/admRulLsInfoP.do?admRulSeq=2100000282470), [용역계약 종합심사낙찰제 심사기준](https://www.law.go.kr/LSW/admRulInfoP.do?admRulSeq=2100000272404), [협상에 의한 계약체결기준](https://www.law.go.kr/LSW/admRulInfoP.do?admRulSeq=2100000272436), [지방자치단체 입찰시 낙찰자 결정기준](https://www.mois.go.kr/frt/bbs/type001/commonSelectBoardArticle.do?bbsId=BBSMSTR_000000000061&nttId=124326), [건축서비스산업 진흥법 시행령 제17조](https://www.law.go.kr/lsLinkCommonInfo.do?chrClsCd=010202&lspttninfSeq=105747), [건축 설계공모 운영지침](https://www.law.go.kr/admRulLsInfoP.do?admRulSeq=2100000279634)에서 확인할 수 있습니다.
 
 > **교재와 현행의 구별:** 교재의 입찰·선정 표는 2022년 가이드북을 토대로 한 학습자료입니다. 개념과 절차는 교재로 익히되, 금액구간·통과점수·가중치·기한과 법령 용어는 위의 2026년 현행 공식 원문 및 해당 입찰공고를 적용합니다.
