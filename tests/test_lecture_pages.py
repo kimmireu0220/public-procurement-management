@@ -63,6 +63,13 @@ class LecturePagesTest(unittest.TestCase):
                 self.assertIn("정답·해설 보기", rendered)
                 self.assertIn("핵심 답안", rendered)
 
+    def test_header_omits_decorative_training_tagline(self) -> None:
+        rendered = build_lecture_pages.page_shell("강의", "<main></main>", "")
+
+        self.assertNotIn("출제기준 · 실무 판단 · 답안 훈련", rendered)
+        self.assertNotIn("header-note", rendered)
+        self.assertIn("학습센터", rendered)
+
     def test_duplicate_headings_receive_unique_anchors(self) -> None:
         markdown = "## 개념\n본문\n\n## 개념\n다른 본문"
         rendered = build_lecture_pages.markdown_to_html(markdown)
