@@ -206,8 +206,14 @@ def _validate_round_html(
         return issues
 
     expected_html = render_html(questions, round_no, profile)
+    grading_extension = re.compile(
+        r'<script>window\.CBT_ANSWER_KEY=\[[^<]*\];</script>\n'
+        r'<script src="\.\./assets/subject-cbt-grading\.js"></script>\n'
+    )
     for path in existing:
-        if path.read_text(encoding="utf-8") != expected_html:
+        actual_html = path.read_text(encoding="utf-8")
+        comparable_html = grading_extension.sub("", actual_html, count=1)
+        if comparable_html != expected_html:
             issues.append(
                 ValidationIssue(path, "CBT HTML이 문제지 또는 현재 빌드 자산과 불일치")
             )
