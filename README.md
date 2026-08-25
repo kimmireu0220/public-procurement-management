@@ -1,22 +1,21 @@
 # 공공조달관리사 학습 저장소
 
-공공조달관리사 필기 1~3과목과 실기 4과목 학습 자료, 문제은행, 모의고사 및 CBT를 관리한다.
+공공조달관리사 필기 1~3과목과 실기 4과목의 공식 자료 기반 학습 강의를 관리한다.
 
 ## 바로가기
 
 ### 이론 강의
 
 - [강의 홈](https://kimmireu0220.github.io/public-procurement-management/lecture/)
+- [1과목 공공조달과 법제도 이해](https://kimmireu0220.github.io/public-procurement-management/lecture/1/)
+- [2과목 공공조달계획 수립 및 분석](https://kimmireu0220.github.io/public-procurement-management/lecture/2/)
+- [3과목 공공계약관리](https://kimmireu0220.github.io/public-procurement-management/lecture/3/)
 - [4과목 공공조달 관리실무](https://kimmireu0220.github.io/public-procurement-management/lecture/4/)
-- 1~3과목 기존 강의는 폐기했으며 재제작 예정
 
-### 문제풀이 CBT
+### 연습문제
 
-- [통합 필기 CBT](https://kimmireu0220.github.io/public-procurement-management/)
-- [1과목 CBT](https://kimmireu0220.github.io/public-procurement-management/1%EA%B3%BC%EB%AA%A9/)
-- [2과목 CBT](https://kimmireu0220.github.io/public-procurement-management/2%EA%B3%BC%EB%AA%A9/)
-- [3과목 CBT](https://kimmireu0220.github.io/public-procurement-management/3%EA%B3%BC%EB%AA%A9/)
-- [단원별 학습 CBT](https://kimmireu0220.github.io/public-procurement-management/study/)
+- 각 Chapter의 객관식·O/X·회상·사례 문제 바로 아래에 정답과 해설을 둔다.
+- [강의별 자체 연습문제 안내](https://kimmireu0220.github.io/public-procurement-management/study/)
 
 ## 구조
 
@@ -30,7 +29,7 @@
 | `output/standard_textbook/` | 조달청 표준교재 핵심 정리 |
 | `output/problem_book_final/` | 민간 문제은행 Markdown(로컬 전용) |
 | `output/agent_extract/` | 민간 문제은행 정답·해설(로컬 전용) |
-| `output/mock_exam/` | 필기·실기 1회차 모의고사 |
+| `output/mock_exam/` | 로컬 모의고사 작업물; 공개 전 권리·출처 확인 필수 |
 | `output/chapter_lectures/` | Chapter 강의 원본 (공개본: `docs/lecture/`) |
 | `docs/` | GitHub Pages 공개본 |
 | `sources/` | 공식 근거 자료와 로컬 민간 원본의 보관 위치 |

@@ -59,8 +59,8 @@
   "current_law_source": {
     "manifest": "sources/현행_법령_근거/manifest.json",
     "retrieved_at": "2026-08-25",
-    "manifest_entries": 33,
-    "lesson_legal_cutoff": "2026-08-24",
+    "manifest_entries": 34,
+    "lesson_legal_cutoff": "2026-08-25",
     "policy": "교재의 시험 학습 기준과 현행 법령의 시행일·적용대상을 구분하고 최종 통합검증에서 모든 고위험 수치와 법적 효과를 공식 원문에 대조",
     "part_source_families": {
       "1": ["국가·지방계약법령", "조달사업법령", "계약예규 원가계산 기준", "나라장터·조달데이터허브 공식 정보", "조달청 리스크 관리 자료"],
@@ -90,7 +90,7 @@
       "id": "volatile_thresholds_and_scores",
       "textbook_locations": ["110", "173-191", "201-244"],
       "issue": "소액수의·사전규격·공고·보증·평가·협상·낙찰 관련 금액과 점수는 개정될 수 있는 시점값",
-      "teaching_rule": "교재 작성시점과 2026-08-24 현행 기준의 적용기관·시행일을 구분"
+      "teaching_rule": "교재 작성시점과 2026-08-25 현행 기준의 적용기관·시행일을 구분"
     }
   ],
   "course_design": {
@@ -102,10 +102,10 @@
         "title": "공공조달계획",
         "textbook_pages": "7-50, 95-154, 247-274",
         "lessons": [
-          {"id": "P01-C01", "subcriterion": "1-1 공공조달 수요 분석 및 계획", "fine_criteria": ["1-1-1 공급 대상물 수요정보 식별", "1-1-2 수요정보 평가와 요구사항 분석", "1-1-3 공급계획 및 일정 수립", "1-1-4 비상 공급계획 수립"], "textbook_pages": "97-105, 262-264; 보완 7-28, 247-274", "status": "source_checked", "questions_written": 20, "recall_prompts_written": 5, "inline_answers_written": 25},
-          {"id": "P01-C02", "subcriterion": "1-2 공공조달 적정성 분석", "fine_criteria": ["1-2-1 공급방법 적정성 분석", "1-2-2 공급정보 적정성 분석", "1-2-3 공급 대상물 조달시장 분석", "1-2-4 공급역량분석"], "textbook_pages": "106-114, 132-153", "status": "source_checked", "questions_written": 20, "recall_prompts_written": 5, "inline_answers_written": 25},
-          {"id": "P01-C03", "subcriterion": "1-3 공공조달 비용 적정성 분석", "fine_criteria": ["1-3-1 공급 의사결정을 위한 비용 분석", "1-3-2 적정 공급비용 산정"], "textbook_pages": "115-131", "status": "source_checked", "questions_written": 20, "recall_prompts_written": 5, "inline_answers_written": 25},
-          {"id": "P01-C04", "subcriterion": "1-4 기타 적정성 분석", "fine_criteria": ["1-4-1 공공조달 동향 모니터링을 통한 수요예측", "1-4-2 다양한 공급방법의 장단점 분석", "1-4-3 공급관리 및 위험분석"], "textbook_pages": "98-104, 132-153, 247-274; 보완 11-50", "status": "source_checked", "questions_written": 20, "recall_prompts_written": 5, "inline_answers_written": 25}
+          {"id": "P01-C01", "subcriterion": "1-1 공공조달 수요 분석 및 계획", "fine_criteria": ["1-1-1 공급 대상물 수요정보 식별", "1-1-2 수요정보 평가와 요구사항 분석", "1-1-3 공급계획 및 일정 수립", "1-1-4 비상 공급계획 수립"], "textbook_pages": "97-105, 262-264; 보완 7-28, 247-274", "status": "exercise_checked", "questions_written": 20, "recall_prompts_written": 5, "inline_answers_written": 25},
+          {"id": "P01-C02", "subcriterion": "1-2 공공조달 적정성 분석", "fine_criteria": ["1-2-1 공급방법 적정성 분석", "1-2-2 공급정보 적정성 분석", "1-2-3 공급 대상물 조달시장 분석", "1-2-4 공급역량분석"], "textbook_pages": "106-114, 132-153", "status": "exercise_checked", "questions_written": 20, "recall_prompts_written": 5, "inline_answers_written": 25},
+          {"id": "P01-C03", "subcriterion": "1-3 공공조달 비용 적정성 분석", "fine_criteria": ["1-3-1 공급 의사결정을 위한 비용 분석", "1-3-2 적정 공급비용 산정"], "textbook_pages": "115-131", "status": "exercise_checked", "questions_written": 20, "recall_prompts_written": 5, "inline_answers_written": 25},
+          {"id": "P01-C04", "subcriterion": "1-4 기타 적정성 분석", "fine_criteria": ["1-4-1 공공조달 동향 모니터링을 통한 수요예측", "1-4-2 다양한 공급방법의 장단점 분석", "1-4-3 공급관리 및 위험분석"], "textbook_pages": "98-104, 132-153, 247-274; 보완 11-50", "status": "exercise_checked", "questions_written": 20, "recall_prompts_written": 5, "inline_answers_written": 25}
         ]
       },
       {
@@ -113,11 +113,11 @@
         "title": "조달요구 응대 및 제안",
         "textbook_pages": "53-94, 155-198",
         "lessons": [
-          {"id": "P02-C01", "subcriterion": "2-1 조달요구 대처 절차", "fine_criteria": ["2-1-1 경쟁입찰참가자격 등록", "2-1-2 수요기관의 정보요청(규격, 과업 및 예산 등)에 대한 문서 작성 및 제출", "2-1-3 조달관련 입법·행정예고 검색 및 의견제시"], "textbook_pages": "157-172, 181-187; 보완 53-68", "status": "source_checked", "questions_written": 20, "recall_prompts_written": 5, "inline_answers_written": 25},
-          {"id": "P02-C02", "subcriterion": "2-2 사전규격공개 분석", "fine_criteria": ["2-2-1 과업내용 적정성 검토", "2-2-2 사업예산 적정성 검토", "2-2-3 당해 규격공개 관련 법규 준수 및 부합여부 검토", "2-2-4 개선보완 필요사항에 대한 의견 제시 및 처리"], "textbook_pages": "173-178", "status": "source_checked", "questions_written": 20, "recall_prompts_written": 5, "inline_answers_written": 25},
-          {"id": "P02-C03", "subcriterion": "2-3 입찰공고문 분석", "fine_criteria": ["2-3-1 공고 내용 중 오류 및 법령 위반 사안으로 정정 필요성 검토", "2-3-2 입찰공고 내용 검토 및 분석", "2-3-3 입찰보증금 제출방법"], "textbook_pages": "179-191; 보완 53-68", "status": "source_checked", "questions_written": 20, "recall_prompts_written": 5, "inline_answers_written": 25},
-          {"id": "P02-C04", "subcriterion": "2-4 입찰·제안요청 설명", "fine_criteria": ["2-4-1 입찰설명회 참석", "2-4-2 입찰 및 제안준비에 필요한 정보 식별 및 요청"], "textbook_pages": "192-193; 보완 66-68", "status": "source_checked", "questions_written": 20, "recall_prompts_written": 5, "inline_answers_written": 25},
-          {"id": "P02-C05", "subcriterion": "2-5 입찰서 제출 및 개찰", "fine_criteria": ["2-5-1 입찰서 제출 방법", "2-5-2 무효입찰 사유", "2-5-3 개찰 및 낙찰 절차"], "textbook_pages": "194-198; 보완 57-68, 185-191", "status": "source_checked", "questions_written": 20, "recall_prompts_written": 5, "inline_answers_written": 25}
+          {"id": "P02-C01", "subcriterion": "2-1 조달요구 대처 절차", "fine_criteria": ["2-1-1 경쟁입찰참가자격 등록", "2-1-2 수요기관의 정보요청(규격, 과업 및 예산 등)에 대한 문서 작성 및 제출", "2-1-3 조달관련 입법·행정예고 검색 및 의견제시"], "textbook_pages": "157-172, 181-187; 보완 53-68", "status": "exercise_checked", "questions_written": 20, "recall_prompts_written": 5, "inline_answers_written": 25},
+          {"id": "P02-C02", "subcriterion": "2-2 사전규격공개 분석", "fine_criteria": ["2-2-1 과업내용 적정성 검토", "2-2-2 사업예산 적정성 검토", "2-2-3 당해 규격공개 관련 법규 준수 및 부합여부 검토", "2-2-4 개선보완 필요사항에 대한 의견 제시 및 처리"], "textbook_pages": "173-178", "status": "exercise_checked", "questions_written": 20, "recall_prompts_written": 5, "inline_answers_written": 25},
+          {"id": "P02-C03", "subcriterion": "2-3 입찰공고문 분석", "fine_criteria": ["2-3-1 공고 내용 중 오류 및 법령 위반 사안으로 정정 필요성 검토", "2-3-2 입찰공고 내용 검토 및 분석", "2-3-3 입찰보증금 제출방법"], "textbook_pages": "179-191; 보완 53-68", "status": "exercise_checked", "questions_written": 20, "recall_prompts_written": 5, "inline_answers_written": 25},
+          {"id": "P02-C04", "subcriterion": "2-4 입찰·제안요청 설명", "fine_criteria": ["2-4-1 입찰설명회 참석", "2-4-2 입찰 및 제안준비에 필요한 정보 식별 및 요청"], "textbook_pages": "192-193; 보완 66-68", "status": "exercise_checked", "questions_written": 20, "recall_prompts_written": 5, "inline_answers_written": 25},
+          {"id": "P02-C05", "subcriterion": "2-5 입찰서 제출 및 개찰", "fine_criteria": ["2-5-1 입찰서 제출 방법", "2-5-2 무효입찰 사유", "2-5-3 개찰 및 낙찰 절차"], "textbook_pages": "194-198; 보완 57-68, 185-191", "status": "exercise_checked", "questions_written": 20, "recall_prompts_written": 5, "inline_answers_written": 25}
         ]
       },
       {
@@ -125,17 +125,17 @@
         "title": "입찰·제안평가 및 계약체결",
         "textbook_pages": "29-33, 53-94, 199-244",
         "lessons": [
-          {"id": "P03-C01", "subcriterion": "3-1 입찰·제안평가 절차", "fine_criteria": ["3-1-1 일반·제한·지명 경쟁입찰 절차", "3-1-2 수의계약 절차"], "textbook_pages": "201-205; 보완 29-33, 53-94", "status": "source_checked", "questions_written": 20, "recall_prompts_written": 5, "inline_answers_written": 25},
-          {"id": "P03-C02", "subcriterion": "3-2 평가위원회 및 이해충돌", "fine_criteria": ["3-2-1 입찰·낙찰 방법별 평가위원회 구성에 대한 이해", "3-2-2 이해상충 평가위원에 대한 회피", "3-2-3 평가위원 사전접촉 금지 등 공정한 평가를 위한 기준 지침 준수"], "textbook_pages": "206-214; 보완 69-79", "status": "source_checked", "questions_written": 20, "recall_prompts_written": 5, "inline_answers_written": 25},
-          {"id": "P03-C03", "subcriterion": "3-3 계약의 협상", "fine_criteria": ["3-3-1 기술(규격) 적합자 및 우선협상대상자 이해", "3-3-2 기술협상", "3-3-3 가격협상"], "textbook_pages": "215-223; 보완 236-244", "status": "source_checked", "questions_written": 20, "recall_prompts_written": 5, "inline_answers_written": 25},
-          {"id": "P03-C04", "subcriterion": "3-4 낙찰자 결정방법", "fine_criteria": ["3-4-1 적격심사 절차 및 낙찰자 결정", "3-4-2 협상계약 절차 및 낙찰자 결정", "3-4-3 희망수량경쟁입찰 절차 및 낙찰자 결정", "3-4-4 종합심사낙찰제(시설공사 등) 절차 및 낙찰", "3-4-5 계약법령상 낙찰요건 부합여부"], "textbook_pages": "224-233, 236-244; 보완 80-94", "status": "source_checked", "questions_written": 20, "recall_prompts_written": 5, "inline_answers_written": 25},
-          {"id": "P03-C05", "subcriterion": "3-5 입찰결과 분석 및 이의제기", "fine_criteria": ["3-5-1 입찰·낙찰 과정 오류 및 문제점 분석", "3-5-2 분석결과 문제점에 대한 이의제기"], "textbook_pages": "234-235; 보완 191, 243-244", "status": "source_checked", "questions_written": 20, "recall_prompts_written": 5, "inline_answers_written": 25}
+          {"id": "P03-C01", "subcriterion": "3-1 입찰·제안평가 절차", "fine_criteria": ["3-1-1 일반·제한·지명 경쟁입찰 절차", "3-1-2 수의계약 절차"], "textbook_pages": "201-205; 보완 29-33, 53-94", "status": "exercise_checked", "questions_written": 20, "recall_prompts_written": 5, "inline_answers_written": 25},
+          {"id": "P03-C02", "subcriterion": "3-2 평가위원회 및 이해충돌", "fine_criteria": ["3-2-1 입찰·낙찰 방법별 평가위원회 구성에 대한 이해", "3-2-2 이해상충 평가위원에 대한 회피", "3-2-3 평가위원 사전접촉 금지 등 공정한 평가를 위한 기준 지침 준수"], "textbook_pages": "206-214; 보완 69-79", "status": "exercise_checked", "questions_written": 20, "recall_prompts_written": 5, "inline_answers_written": 25},
+          {"id": "P03-C03", "subcriterion": "3-3 계약의 협상", "fine_criteria": ["3-3-1 기술(규격) 적합자 및 우선협상대상자 이해", "3-3-2 기술협상", "3-3-3 가격협상"], "textbook_pages": "215-223; 보완 236-244", "status": "exercise_checked", "questions_written": 20, "recall_prompts_written": 5, "inline_answers_written": 25},
+          {"id": "P03-C04", "subcriterion": "3-4 낙찰자 결정방법", "fine_criteria": ["3-4-1 적격심사 절차 및 낙찰자 결정", "3-4-2 협상계약 절차 및 낙찰자 결정", "3-4-3 희망수량경쟁입찰 절차 및 낙찰자 결정", "3-4-4 종합심사낙찰제(시설공사 등) 절차 및 낙찰", "3-4-5 계약법령상 낙찰요건 부합여부"], "textbook_pages": "224-233, 236-244; 보완 80-94", "status": "exercise_checked", "questions_written": 20, "recall_prompts_written": 5, "inline_answers_written": 25},
+          {"id": "P03-C05", "subcriterion": "3-5 입찰결과 분석 및 이의제기", "fine_criteria": ["3-5-1 입찰·낙찰 과정 오류 및 문제점 분석", "3-5-2 분석결과 문제점에 대한 이의제기"], "textbook_pages": "234-235; 보완 191, 243-244", "status": "exercise_checked", "questions_written": 20, "recall_prompts_written": 5, "inline_answers_written": 25}
         ]
       }
     ]
   },
   "production_status": {
-    "status": "generated_pending_final_integrated_qa",
+    "status": "complete",
     "chapters_planned": 14,
     "chapters_completed": 14,
     "major_criteria_mapped": "3/3",
@@ -146,6 +146,83 @@
     "inline_answers_written": 350,
     "answer_placement": "모든 객관식·O/X·회상·사례 문항 바로 아래 정답·해설 배치",
     "separate_answer_sheet": false,
-    "final_integrated_qa": "pending_after_subjects_1_and_2_generation"
+    "final_integrated_qa": "passed_2026-08-25"
+  },
+  "integrated_qa": {
+    "status": "passed",
+    "lesson_content_status": "exercise_checked",
+    "chapters_planned": 14,
+    "chapters_completed": 14,
+    "questions_checked": 280,
+    "recall_prompts_checked": 70,
+    "inline_answers_checked": 350,
+    "answer_placement": "모든 객관식·O/X·회상·사례 문항 바로 아래 정답·해설 배치",
+    "separate_answer_sheet": false,
+    "major_criteria_mapped": "3/3",
+    "subcriteria_mapped": "14/14",
+    "fine_criteria_mapped": "43/43",
+    "verification_date": "2026-08-25",
+    "legal_cutoff": "2026-08-25",
+    "high_risk_reviews": [
+      "공급자 관점의 공식 세세항목 43개와 교재 여러 장의 재배열 매핑",
+      "발주계획의 교재 약 90일 예시와 현행 공개규정 구분",
+      "일반관리비·이윤·원가계산 비율의 계약목적별 적용범위",
+      "국가·지방·조달청 사전규격 5일·긴급 3일과 별도 소프트웨어 요건",
+      "협상적격 85퍼센트와 협상결과 15일·계약체결 5일·10일 구조",
+      "평가위원 구성·회피·사전접촉의 규정별 적용범위",
+      "국가·지방 이의기한·금액기준·절차정지 효과",
+      "2026-08-25 종합심사낙찰제 균형가격 동일금액 처리와 적용례"
+    ],
+    "private_similarity_audit": {
+      "comparison_files": 1,
+      "lecture_questions_compared": 350,
+      "private_questions_compared": 534,
+      "exact_question_matches": 0,
+      "exact_normalized_lines_min_60_chars": 0,
+      "normalized_windows_30_chars": 0,
+      "normalization": "NFKC 후 한글·영문·숫자만 유지하여 문제줄부터 정답·해설 직전까지 전체 블록 비교",
+      "max_full_sequence_matcher": 0.558559,
+      "high_risk_sequence_threshold": 0.75,
+      "max_character_3gram_jaccard": 0.325,
+      "high_risk_jaccard_threshold": 0.5,
+      "manual_top_candidates_reviewed": 12,
+      "semantic_candidates_rewritten": 2,
+      "rewritten_questions": ["P01-C02 Q11", "P01-C03 Q8"],
+      "unresolved_candidates": 0
+    },
+    "rights_review": {
+      "lecture_origin": "custom",
+      "private_questions_reused": false,
+      "current_tree_private_derivatives_tracked": 0,
+      "private_reference_files": "로컬 보존·Git 무시",
+      "public_private_question_payloads": 0,
+      "cleanup": "민간 문제은행 파생 Part CBT·모의 CBT를 Pages에서 제거하고 공개 도구에 차단검사 추가",
+      "history_note": "과거 Git 이력 정리는 별도 명시 승인과 이력 재작성 영향 검토가 필요"
+    },
+    "legal_sources_catalogued": 34,
+    "link_corrections": [
+      "행정절차법 오연결 URL을 공식 법령 페이지로 교정",
+      "정부 입찰·계약 집행기준의 존재하지 않는 구 식별자를 현행 행정규칙 순번으로 교정",
+      "ISO 31000 링크를 공식 표준 페이지의 canonical URL로 교정"
+    ],
+    "public_build": {
+      "status": "passed",
+      "chapters": 14,
+      "total_repository_chapters_built": 90
+    },
+    "external_links": {
+      "status": "passed_with_iso_bot_block_validated",
+      "unique_urls": 59,
+      "http_successes": 58,
+      "official_crawler_validated": 1
+    },
+    "automated_checks": {
+      "lecture_build_check": "90/90 chapters passed",
+      "study_publication_check": "private question payloads 0",
+      "unit_tests": "36/36 passed",
+      "private_source_inventory": "1300 metadata entries passed",
+      "legal_source_snapshots": "34/34 passed",
+      "inline_answer_check": "14/14 chapters passed"
+    }
   }
 }

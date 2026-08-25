@@ -17,3 +17,8 @@ output/gpt_sovits_audio/cloned_narration.mp3
 sources/민간_박문각_수험서_jpg/**
 !sources/민간_박문각_수험서_jpg/README.md
 !sources/민간_박문각_수험서_jpg/inventory.json
+
+# 민간 수험서에서 파생된 문항·해설 산출물도 로컬에서만 보관
+/output/agent_extract/
+/output/problem_book_final/
+/output/mock_exam/

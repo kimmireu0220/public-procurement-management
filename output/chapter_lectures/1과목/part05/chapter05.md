@@ -8,8 +8,8 @@ title: 공기업·준정부기관 계약사무규칙
 kind: chapter
 lesson_id: PPM1-P05-L05
 origin: custom
-status: source_checked
-legal_cutoff: 2026-08-24
+status: exercise_checked
+legal_cutoff: 2026-08-25
 ---
 
 > 이 강의는 Q-Net 출제기준 보고서 1254의 세부항목 `공기업·준정부기관 계약사무규칙`과 그 아래 5개 세세항목인 국제입찰, 중소기업자간 경쟁제품 구매위탁 예외, 수의계약, 의견청취·심의, 이의신청을 연결해 새로 썼습니다. 조달청 표준교재의 시험 범위를 기준으로 하되, 규칙은 **2026년 4월 20일 시행 재정경제부령 제28호**를 대조했습니다. 문제는 공식 자료만으로 자체 작성했습니다.
@@ -365,4 +365,4 @@ legal_cutoff: 2026-08-24
 - 조달청, [공공조달관리사 표준교재 1과목](https://www.pps.go.kr/hrd/home/UserBoardActionUpdate.do?BO_CODE=REFERENCE_ROOM&BO_IDX=6579&CHILD_MENU=MENU209&method=detail), 인쇄면 384~395쪽.
 - 법제처 국가법령정보센터, [공기업·준정부기관 계약사무규칙](https://www.law.go.kr/LSW/lsInfoP.do?lsiSeq=285569&chrClsCd=010202&urlMode=lsInfoP&efYd=20260420&ancYnChk=0), 2026년 4월 20일 시행 재정경제부령 제28호.
 - 법제처 국가법령정보센터, [공기업·준정부기관 계약사무규칙 2026년 4월 20일 개정이유](https://www.law.go.kr/lsInfoP.do?lsiSeq=285569&viewCls=lsRvsDocInfoR).
-- 기준일: 2026년 8월 24일.
+- 기준일: 2026년 8월 25일.

@@ -8,8 +8,8 @@ title: 공공조달 원칙
 kind: chapter
 lesson_id: PPM1-P02-L01
 origin: custom
-status: source_checked
-legal_cutoff: 2026-08-24
+status: exercise_checked
+legal_cutoff: 2026-08-25
 ---
 
 > Q-Net 출제기준 보고서 1254의 세세항목 `공공조달 기본 원칙`과 `공공조달 실행 원칙`을 학습합니다. 조달청 표준교재 제1장 도입부와 제2장 본절의 원칙 목록이 서로 다르다는 점을 숨기지 않고, OECD 12대 실행원칙과도 층위를 나누어 설명합니다. 문제와 해설은 공식 자료를 근거로 새로 작성했습니다.
@@ -392,4 +392,4 @@ VFM은 높은 가격을 정당화하는 구호도 아닙니다. 추가 비용이
 - [조달청 표준교재 1권 게시](https://www.pps.go.kr/hrd/home/UserBoardActionUpdate.do?BO_CODE=REFERENCE_ROOM&BO_IDX=6579&CHILD_MENU=MENU209&method=detail), 「공공조달의 이해 - 공공조달 및 법제도 일반」 PDF 7쪽과 69~96쪽
 - [OECD 공공조달 권고](https://legalinstruments.oecd.org/en/instruments/OECD-LEGAL-0411), 2015년 채택
 
-> 이 강의의 법령·제도 확인 기준일은 2026년 8월 24일입니다. 실제 조달에서는 최신 공식 원문과 개별 공고를 다시 확인해야 합니다.
+> 이 강의의 법령·제도 확인 기준일은 2026년 8월 25일입니다. 실제 조달에서는 최신 공식 원문과 개별 공고를 다시 확인해야 합니다.

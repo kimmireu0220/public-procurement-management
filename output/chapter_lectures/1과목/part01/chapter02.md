@@ -8,8 +8,8 @@ title: 공공조달 참여자와 이해관계자
 kind: chapter
 lesson_id: PPM1-P01-L02
 origin: custom
-status: source_checked
-legal_cutoff: 2026-08-24
+status: exercise_checked
+legal_cutoff: 2026-08-25
 ---
 
 > 이 강의는 Q-Net 1과목 세부항목 ‘공공조달 참여자, 이해관계자’의 수요자·공급자·이해관계자를 다루는 자체 제작 강의입니다. 조달청 표준교재 1권 28~41쪽을 학습 기준으로 삼았습니다. 2024년 기관·기업 수치는 통계 시점값이며 수요기관 여부나 입찰자격을 결정하는 법정 숫자가 아닙니다.
@@ -451,4 +451,4 @@ legal_cutoff: 2026-08-24
 - [조달사업에 관한 법률](https://www.law.go.kr/LSW/lsInfoP.do?lsiSeq=277155&chrClsCd=010202&urlMode=lsInfoP&efYd=20260102&ancYnChk=0), 수요기관 정의 관련, 2026년 1월 2일 시행본
 - [조달사업에 관한 법률 시행령](https://www.law.go.kr/LSW/lsInfoP.do?lsiSeq=280891&chrClsCd=010202&urlMode=lsInfoP&efYd=20260102&ancYnChk=0), 수요기관 범위 관련, 2026년 1월 2일 시행본
 - 숫자 기준: 조달청 조달통계 2024년 12월을 인용한 표준교재. 법정 정원·입찰기준이 아닌 시점 통계
-- 내용 확인일: 2026년 8월 24일
+- 내용 확인일: 2026년 8월 25일

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "retrieved_at": "2026-08-24",
+  "retrieved_at": "2026-08-25",
   "provider": {
     "name": "국가법령정보센터",
     "base_url": "https://www.law.go.kr/"
@@ -325,6 +325,16 @@
       "source_url": "https://www.law.go.kr/LSW/admRulLsInfoP.do?admRulSeq=2100000272426",
       "snapshot": "snapshots/competitive_dialogue_criteria.html",
       "sha256": "e7bba5ced19126c2ca31661cb494643b9a90a2a7a58e1161d54e8ccb2f08ff4f"
+    },
+    {
+      "id": "construction_comprehensive_award_criteria",
+      "title": "(계약예규) 공사계약 종합심사낙찰제 심사기준",
+      "effective_date": "2026-08-25",
+      "version": "재정경제부예규 제168호",
+      "category": "행정규칙",
+      "source_url": "https://www.law.go.kr/LSW/admRulInfoP.do?admRulSeq=2100000284220&chrClsCd=010201",
+      "snapshot": "snapshots/construction_comprehensive_award_criteria.html",
+      "sha256": "57f1a88453d41676826c6b35b97bdcbf1282718a81a563bd07e8ebf9bdce059a"
     },
     {
       "id": "comprehensive_award_criteria",

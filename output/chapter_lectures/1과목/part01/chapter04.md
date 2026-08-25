@@ -8,8 +8,8 @@ title: 공공조달의 구성체계
 kind: chapter
 lesson_id: PPM1-P01-L04
 origin: custom
-status: source_checked
-legal_cutoff: 2026-08-24
+status: exercise_checked
+legal_cutoff: 2026-08-25
 ---
 
 > 이 강의는 Q-Net 1과목 세부항목 ‘공공조달의 구성체계’ 중 조직적 구성체계와 감독·기능적 책임을 다루는 자체 제작 강의입니다. 조달청 표준교재 1권 49~65쪽을 학습 기준으로 삼았습니다. 교재의 30:70, 32/35개국 등은 각각 국내 운영구조의 설명값과 OECD 2024년 조사 시점값이며 법정 배분율이 아닙니다.
@@ -443,4 +443,4 @@ legal_cutoff: 2026-08-24
 - [국가를 당사자로 하는 계약에 관한 법률](https://www.law.go.kr/LSW/lsInfoP.do?lsiSeq=283877&chrClsCd=010202&urlMode=lsInfoP&efYd=20260611&ancYnChk=0), 2026년 6월 11일 시행본
 - [지방자치단체를 당사자로 하는 계약에 관한 법률](https://www.law.go.kr/LSW/lsInfoP.do?lsiSeq=253973&chrClsCd=010202&urlMode=lsInfoP&efYd=20240217&ancYnChk=0), 2024년 2월 17일 시행본
 - 숫자 기준: 표준교재의 국내 중앙·자체조달 약 30:70 설명과 OECD 2024년 조사값. 법정 의무비율이 아님
-- 내용 확인일: 2026년 8월 24일
+- 내용 확인일: 2026년 8월 25일

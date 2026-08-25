@@ -8,8 +8,8 @@ title: 공공조달의 특성
 kind: chapter
 lesson_id: PPM1-P01-L03
 origin: custom
-status: source_checked
-legal_cutoff: 2026-08-24
+status: exercise_checked
+legal_cutoff: 2026-08-25
 ---
 
 > 이 강의는 Q-Net 1과목 세부항목 ‘공공조달의 특성’ 중 상업적 구매행위와 공공조달 조달행위를 비교하는 자체 제작 강의입니다. 조달청 표준교재 1권 42~48쪽을 학습 기준으로 삼았습니다. 5R·7R은 개념 암기틀이며 법정 요건이나 고정된 평가배점이 아닙니다.
@@ -394,4 +394,4 @@ legal_cutoff: 2026-08-24
 - [Q-Net 공공조달관리사 시험정보](https://www.q-net.or.kr/crf005.do?gSite=Q&id=crf00503s02&jmCd=9777&jmInfoDivCcd=B0), 출제기준 보고서 1254의 1과목 ‘공공조달의 특성’ 매핑, 적용기간 2026년 3월 1일~2028년 12월 31일
 - [조달청 표준교재 게시](https://www.pps.go.kr/hrd/home/UserBoardActionUpdate.do?BO_CODE=REFERENCE_ROOM&BO_IDX=6579&CHILD_MENU=MENU209&method=detail), 1권 ‘공공조달의 이해’ PDF 42~48쪽
 - 법적 효과 주의: 이 장의 법규·책임 비교는 개념구분이며 개별 책임은 2026년 현행 법령과 계약요건에 따라 별도 판단
-- 내용 확인일: 2026년 8월 24일
+- 내용 확인일: 2026년 8월 25일

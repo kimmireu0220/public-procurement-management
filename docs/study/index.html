@@ -3,68 +3,29 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>문제은행 학습 CBT</title>
+<meta name="description" content="공식 자료를 근거로 자체 작성한 강의별 연습문제 안내">
+<title>강의별 자체 연습문제</title>
 <style>
-:root { --bg:#f4f7fb; --panel:#fff; --primary:#164a86; --primary-dark:#0f3460; --border:#dbe3ed; --text:#17202a; --muted:#637083; }
-* { box-sizing: border-box; }
-body { margin:0; background:var(--bg); color:var(--text); font-family:"Apple SD Gothic Neo","Malgun Gothic",sans-serif; line-height:1.6; }
-.page { max-width:920px; margin:0 auto; padding:2.5rem 1.25rem 4rem; }
-.back { display:inline-block; margin-bottom:1.25rem; color:var(--primary); text-decoration:none; font-weight:600; }
-.back:hover { text-decoration:underline; }
-.hero { margin-bottom:2.5rem; }
-.hero h1 { margin:0 0 .55rem; color:var(--primary-dark); font-size:clamp(1.65rem,4vw,2.15rem); }
-.hero p { margin:0; color:var(--muted); font-size:1.02rem; }
-.subject { margin-top:2.4rem; }
-.subject h2 { margin:0 0 1rem; color:var(--primary-dark); font-size:1.25rem; }
-.cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(190px,1fr)); gap:.9rem; }
-.card { display:block; min-height:128px; padding:1.15rem; border:1px solid var(--border); border-radius:12px; background:var(--panel); color:inherit; text-decoration:none; box-shadow:0 3px 12px rgba(20,49,83,.05); transition:transform .15s ease,border-color .15s ease,box-shadow .15s ease; }
-.card:hover,.card:focus-visible { transform:translateY(-2px); border-color:#8eb1d8; box-shadow:0 7px 18px rgba(20,49,83,.11); outline:none; }
-.part { display:block; color:var(--primary-dark); font-size:1.12rem; font-weight:700; }
-.count { display:block; margin-top:.3rem; color:var(--muted); font-size:.92rem; }
-.start { display:block; margin-top:.85rem; color:var(--primary); font-size:.9rem; font-weight:700; }
-@media (max-width:520px) { .page { padding:1.5rem 1rem 3rem; } .cards { grid-template-columns:1fr 1fr; gap:.7rem; } .card { min-height:120px; padding:1rem; } }
+:root { --bg:#f4f7fb; --paper:#fff; --navy:#102f50; --blue:#1763a6; --line:#dbe4ee; --muted:#647386; }
+* { box-sizing:border-box; }
+body { margin:0; background:var(--bg); color:#172331; font-family:"Apple SD Gothic Neo","Malgun Gothic",sans-serif; line-height:1.65; }
+main { max-width:760px; margin:0 auto; padding:clamp(1.5rem,5vw,4rem) 1rem; }
+.card { padding:clamp(1.4rem,4vw,2.4rem); border:1px solid var(--line); border-radius:16px; background:var(--paper); box-shadow:0 8px 24px rgba(16,47,80,.08); }
+h1 { margin:.2rem 0 .8rem; color:var(--navy); font-size:clamp(1.7rem,5vw,2.35rem); }
+p { margin:.75rem 0; }
+.note { color:var(--muted); }
+.actions { display:flex; flex-wrap:wrap; gap:.7rem; margin-top:1.5rem; }
+a { display:inline-block; padding:.72rem 1rem; border-radius:9px; background:var(--blue); color:#fff; text-decoration:none; font-weight:700; }
+a.secondary { border:1px solid var(--line); background:#fff; color:var(--navy); }
 </style>
 </head>
 <body>
-<main class="page">
-  <a class="back" href="../">← 모의고사 홈</a>
-  <header class="hero">
-    <h1>문제은행 학습 CBT</h1>
-    <p>학습할 과목과 Part를 선택하세요. Part별 문제를 처음부터 끝까지 연습할 수 있습니다.</p>
-  </header>
-
-  <section class="subject">
-    <h2>1과목 · 공공조달과 법제도 이해</h2>
-    <div class="cards">
-      <a class="card" href="1과목-part1-exam/"><span class="part">Part 1</span><span class="count">113문항</span><span class="start">학습 시작 →</span></a>
-      <a class="card" href="1과목-part2-exam/"><span class="part">Part 2</span><span class="count">71문항</span><span class="start">학습 시작 →</span></a>
-      <a class="card" href="1과목-part3-exam/"><span class="part">Part 3</span><span class="count">109문항</span><span class="start">학습 시작 →</span></a>
-      <a class="card" href="1과목-part4-exam/"><span class="part">Part 4</span><span class="count">75문항</span><span class="start">학습 시작 →</span></a>
-      <a class="card" href="1과목-part5-exam/"><span class="part">Part 5</span><span class="count">107문항</span><span class="start">학습 시작 →</span></a>
-      <a class="card" href="1과목-part6-exam/"><span class="part">Part 6</span><span class="count">128문항</span><span class="start">학습 시작 →</span></a>
-      <a class="card" href="1과목-part7-exam/"><span class="part">Part 7</span><span class="count">67문항</span><span class="start">학습 시작 →</span></a>
-    </div>
-  </section>
-
-  <section class="subject">
-    <h2>2과목 · 공공조달계획 수립 및 분석</h2>
-    <div class="cards">
-      <a class="card" href="2과목-part1-exam/"><span class="part">Part 1</span><span class="count">112문항</span><span class="start">학습 시작 →</span></a>
-      <a class="card" href="2과목-part2-exam/"><span class="part">Part 2</span><span class="count">58문항</span><span class="start">학습 시작 →</span></a>
-      <a class="card" href="2과목-part3-exam/"><span class="part">Part 3</span><span class="count">65문항</span><span class="start">학습 시작 →</span></a>
-      <a class="card" href="2과목-part4-exam/"><span class="part">Part 4</span><span class="count">100문항</span><span class="start">학습 시작 →</span></a>
-    </div>
-  </section>
-
-  <section class="subject">
-    <h2>3과목 · 공공계약관리</h2>
-    <div class="cards">
-      <a class="card" href="3과목-part1-exam/"><span class="part">Part 1</span><span class="count">108문항</span><span class="start">학습 시작 →</span></a>
-      <a class="card" href="3과목-part2-exam/"><span class="part">Part 2</span><span class="count">92문항</span><span class="start">학습 시작 →</span></a>
-      <a class="card" href="3과목-part3-exam/"><span class="part">Part 3</span><span class="count">75문항</span><span class="start">학습 시작 →</span></a>
-      <a class="card" href="3과목-part4-exam/"><span class="part">Part 4</span><span class="count">115문항</span><span class="start">학습 시작 →</span></a>
-    </div>
-  </section>
-</main>
+<main><section class="card">
+  <span>PUBLIC PROCUREMENT MANAGER</span>
+  <h1>강의별 자체 연습문제</h1>
+  <p>민간 문제은행을 사용하던 예전 Part별 CBT 공개는 종료했습니다.</p>
+  <p class="note">새 강의에는 공식 출제기준·조달청 표준교재·현행 공식 원문을 근거로 자체 작성한 객관식·O/X·회상·사례 문제가 있으며, 모든 문제 바로 아래에서 정답과 해설을 확인할 수 있습니다.</p>
+  <div class="actions"><a href="../lecture/">새 강의와 연습문제 보기</a><a class="secondary" href="../">학습센터 홈</a></div>
+</section></main>
 </body>
 </html>

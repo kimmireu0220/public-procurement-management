@@ -8,8 +8,8 @@ title: 공공조달 유형
 kind: chapter
 lesson_id: PPM1-P02-L02
 origin: custom
-status: source_checked
-legal_cutoff: 2026-08-24
+status: exercise_checked
+legal_cutoff: 2026-08-25
 ---
 
 > Q-Net 출제기준 보고서 1254의 세세항목 `중앙집중형 공공조달`과 `분산형 공공조달`을 다룹니다. 조달청 표준교재 PDF 49~59쪽을 기준으로 두 유형의 구조·장단점·선택기준을 익히고, 실제 국가가 흔히 채택하는 혼합형과 구별합니다. 문제와 해설은 공식 자료를 근거로 새로 작성했습니다.
@@ -387,4 +387,4 @@ legal_cutoff: 2026-08-24
 - [Q-Net 공공조달관리사 시험정보](https://www.q-net.or.kr/crf005.do?gSite=Q&id=crf00503s02&jmCd=9777&jmInfoDivCcd=B0), 출제기준 보고서 1254, 적용기간 2026년 3월 1일~2028년 12월 31일, 필기 출제기준 PDF 2/18쪽
 - [조달청 표준교재 1권 게시](https://www.pps.go.kr/hrd/home/UserBoardActionUpdate.do?BO_CODE=REFERENCE_ROOM&BO_IDX=6579&CHILD_MENU=MENU209&method=detail), 「공공조달의 이해 - 공공조달 및 법제도 일반」 PDF 49~59쪽
 
-> 교재의 국가별 비중과 조사 통계는 작성 시점의 운영현황이며 국내 법정 의무비율이 아닙니다. 실제 조달에서는 2026년 8월 24일 이후의 최신 공식 원문, 해당 기관의 법적 지위와 개별 공고를 다시 확인해야 합니다.
+> 교재의 국가별 비중과 조사 통계는 작성 시점의 운영현황이며 국내 법정 의무비율이 아닙니다. 실제 조달에서는 2026년 8월 25일 이후의 최신 공식 원문, 해당 기관의 법적 지위와 개별 공고를 다시 확인해야 합니다.

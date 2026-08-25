@@ -9,22 +9,10 @@ from dataclasses import dataclass
 from pathlib import Path
 
 from build_lecture_pages import load_lectures
-from cbt.profiles import FULL_MOCK, SUBJECT1, SUBJECT2, SUBJECT3
+from cbt.profiles import FULL_MOCK
 
 ROOT = Path(__file__).resolve().parents[1]
 DOCS = ROOT / "docs"
-
-SUBJECTS = {
-    1: "공공조달과 법제도 이해",
-    2: "공공조달계획 수립 및 분석",
-    3: "공공계약관리",
-}
-SUBJECT_MOCKS = {
-    1: SUBJECT1,
-    2: SUBJECT2,
-    3: SUBJECT3,
-}
-
 
 @dataclass(frozen=True)
 class LectureLink:
@@ -77,49 +65,6 @@ def _round_cards(rounds: list[int]) -> str:
     )
 
 
-def _subject_mock_cards() -> str:
-    return "".join(
-        f'<a class="choice-card" href="{subject}과목/">'
-        f'<span class="card-kicker">과목별 모의고사</span><strong>{subject}과목</strong>'
-        f'<span>{profile.question_count}문항 · {profile.duration_sec // 60}분</span></a>'
-        for subject, profile in SUBJECT_MOCKS.items()
-    )
-
-
-def study_parts() -> dict[int, tuple[tuple[int, int], ...]]:
-    grouped: dict[int, list[tuple[int, int]]] = defaultdict(list)
-    for meta_path in (DOCS / "study").glob("*/study-meta.json"):
-        try:
-            meta = json.loads(meta_path.read_text(encoding="utf-8"))
-            subject = int(meta["subject"])
-            part = int(meta["part"])
-            total = int(meta["total"])
-        except (OSError, KeyError, TypeError, ValueError, json.JSONDecodeError):
-            continue
-        grouped[subject].append((part, total))
-    return {
-        subject: tuple(sorted(set(parts)))
-        for subject, parts in sorted(grouped.items())
-    }
-
-
-def _study_groups(parts_by_subject: dict[int, tuple[tuple[int, int], ...]] | None = None) -> str:
-    groups: list[str] = []
-    selected = study_parts() if parts_by_subject is None else parts_by_subject
-    for subject, parts in selected.items():
-        links = "".join(
-            f'<a class="mini-card" href="study/{subject}과목-part{part}-exam/">'
-            f'<strong>Part {part}</strong><span>{count}문항</span></a>'
-            for part, count in parts
-        )
-        groups.append(
-            '<details class="subject-group">'
-            f'<summary><span><b>{subject}과목</b> · {html.escape(SUBJECTS.get(subject, f"{subject}과목"))}</span>'
-            f'<small>{len(parts)}개 Part</small></summary><div class="mini-grid">{links}</div></details>'
-        )
-    return "".join(groups)
-
-
 def _lecture_groups(links: list[LectureLink]) -> str:
     by_subject: dict[int, list[LectureLink]] = defaultdict(list)
     for link in links:
@@ -165,15 +110,21 @@ def _lecture_groups(links: list[LectureLink]) -> str:
 
 
 def render_portal(rounds: list[int], lectures: list[LectureLink] | None = None) -> str:
-    if not rounds:
-        raise ValueError("공개할 통합 모의고사 회차가 없습니다")
     lecture_items = lecture_links() if lectures is None else lectures
+    mock_nav = '<a href="#full-mock">통합 모의고사</a>' if rounds else ""
+    mock_section = (
+        f'<section class="section" id="full-mock"><div class="section-head"><h2>통합 필기 모의고사</h2>'
+        f'<p>실전과 같은 {FULL_MOCK.question_count}문항 · {FULL_MOCK.duration_sec // 60}분</p></div>'
+        f'<div class="choice-grid">{_round_cards(rounds)}</div></section>'
+        if rounds
+        else ""
+    )
     return f"""<!DOCTYPE html>
 <html lang="ko">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="공공조달관리사 모의고사, 문제은행, 이론 강의를 한곳에서 학습하세요.">
+<meta name="description" content="공공조달관리사 모의고사와 공식 자료 기반 자체 강의를 한곳에서 학습하세요.">
 <title>공공조달관리사 학습센터</title>
 <style>
 :root{{--navy:#102f50;--blue:#1763a6;--sky:#eaf3fb;--bg:#f5f7fa;--paper:#fff;--line:#dbe4ee;--text:#172331;--muted:#647386;--accent:#f3a712;--gutter:clamp(.75rem,3vw,3.5rem)}}
@@ -189,11 +140,9 @@ a{{color:inherit}}.hero{{background:linear-gradient(135deg,#102f50,#1763a6);colo
 </style>
 </head>
 <body>
-<header class="hero"><div class="hero-inner"><span class="eyebrow">PUBLIC PROCUREMENT MANAGER</span><h1>공공조달관리사 학습센터</h1><p>모의고사부터 문제은행, 이론 강의까지 필요한 학습을 한곳에서 선택하세요.</p><nav class="quick-nav" aria-label="학습 메뉴"><a href="#full-mock">통합 모의고사</a><a href="#subject-mock">과목별 모의고사</a><a href="#study-bank">문제은행</a><a href="#lectures">이론 강의</a></nav></div></header>
+<header class="hero"><div class="hero-inner"><span class="eyebrow">PUBLIC PROCUREMENT MANAGER</span><h1>공공조달관리사 학습센터</h1><p>공식 자료 기반 자체 강의와 검증된 연습문제를 한곳에서 선택하세요.</p><nav class="quick-nav" aria-label="학습 메뉴">{mock_nav}<a href="#lectures">이론 강의</a></nav></div></header>
 <main class="page">
-<section class="section" id="full-mock"><div class="section-head"><h2>통합 필기 모의고사</h2><p>실전과 같은 {FULL_MOCK.question_count}문항 · {FULL_MOCK.duration_sec // 60}분</p></div><div class="choice-grid">{_round_cards(rounds)}</div></section>
-<section class="section" id="subject-mock"><div class="section-head"><h2>과목별 모의고사</h2><p>집중해서 연습할 과목을 선택하세요</p></div><div class="choice-grid">{_subject_mock_cards()}</div></section>
-<section class="section" id="study-bank"><div class="section-head"><h2>문제은행 Part별 학습</h2><p>과목을 펼쳐 바로 시작하세요</p></div>{_study_groups()}</section>
+{mock_section}
 <section class="section" id="lectures"><div class="section-head"><h2>Chapter 이론 강의</h2><p>출제기준 · 실무 판단 · 답안 훈련</p></div>{_lecture_groups(lecture_items)}</section>
 </main>
 <footer class="footer">공식 출제기준 · 조달청 표준교재 · 현행 규정 기반 자체 제작 학습자료</footer>

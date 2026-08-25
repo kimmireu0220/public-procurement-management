@@ -8,8 +8,8 @@ title: 전자조달시스템 개요
 kind: chapter
 lesson_id: PPM1-P03-L01
 origin: custom
-status: source_checked
-legal_cutoff: 2026-08-24
+status: exercise_checked
+legal_cutoff: 2026-08-25
 ---
 
 > 이 강의는 Q-Net 출제기준 보고서 1254의 세부항목 `전자조달시스템 개요`와 그 아래 6개 세세항목인 개념·유형·운영환경·구성요소·기능·도입 성과를 연결해 새로 썼습니다. 공식 PDF 본문 표의 실제 행에 따라 전자조달 표준기능은 **9개**로 학습합니다. 문제는 공식 자료만으로 자체 제작했고, 각 문제 바로 아래에 정답과 해설을 붙였습니다.

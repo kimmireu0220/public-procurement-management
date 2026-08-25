@@ -49,13 +49,32 @@ class PublishCbtPagesTest(unittest.TestCase):
             self.assertIn(f'href="mock/{round_no}회차/"', rendered)
             self.assertIn(f"<strong>{round_no}회차</strong>", rendered)
         self.assertIn("공공조달관리사 학습센터", rendered)
-        self.assertIn('href="1과목/"', rendered)
-        for subject, parts in site_portal.study_parts().items():
-            for part, _count in parts:
-                self.assertIn(f'href="study/{subject}과목-part{part}-exam/"', rendered)
+        self.assertNotIn("problem_book_final", rendered)
+        self.assertNotIn("과목-part", rendered)
         for lecture in site_portal.lecture_links():
             self.assertIn(f'href="{lecture.url}"', rendered)
         self.assertEqual(rendered.count("<em>최신</em>"), 1)
+
+    def test_private_scan_sourced_mock_is_not_publishable(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            source_root = root / "output"
+            docs_root = root / "docs"
+            docs_root.mkdir()
+            profile = FakeFullProfile(source_root, docs_root)
+            round_dir = profile.round_dir(1)
+            round_dir.mkdir(parents=True)
+            (round_dir / "index.html").write_text("private mock", encoding="utf-8")
+            profile.problem_md(1).write_text(
+                "문제\n<!-- source: Part 1/page_0001.jpg -->\n",
+                encoding="utf-8",
+            )
+
+            with patch.object(publish_cbt_pages, "DOCS", docs_root):
+                with self.assertRaisesRegex(SystemExit, "민간 수험서 파생 문항"):
+                    publish_cbt_pages.publish_profile(cast(CbtProfile, profile), 1)
+
+            self.assertFalse((docs_root / "mock" / "1회차" / "index.html").exists())
 
     def test_publishing_third_round_keeps_all_rounds_selectable(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:

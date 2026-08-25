@@ -8,8 +8,8 @@ title: 공공조달의 정의 및 목적
 kind: chapter
 lesson_id: PPM1-P01-L01
 origin: custom
-status: source_checked
-legal_cutoff: 2026-08-24
+status: exercise_checked
+legal_cutoff: 2026-08-25
 ---
 
 > 이 강의는 Q-Net 1과목 세부항목 ‘공공조달의 정의 및 목적’ 가운데 정의·목적·범위를 다루는 자체 제작 강의입니다. 조달청 표준교재 1권 7~27쪽의 개념을 학습 기준으로 삼았습니다. 통계는 해당 자료의 조사연도를 붙였으며 법정 기준이나 현재의 고정값으로 사용하지 않습니다.
@@ -390,4 +390,4 @@ legal_cutoff: 2026-08-24
 - [Q-Net 공공조달관리사 시험정보](https://www.q-net.or.kr/crf005.do?gSite=Q&id=crf00503s02&jmCd=9777&jmInfoDivCcd=B0), 출제기준 보고서 1254의 1과목 ‘공공조달의 정의 및 목적’ 매핑, 적용기간 2026년 3월 1일~2028년 12월 31일
 - [조달청 표준교재 게시](https://www.pps.go.kr/hrd/home/UserBoardActionUpdate.do?BO_CODE=REFERENCE_ROOM&BO_IDX=6579&CHILD_MENU=MENU209&method=detail), 1권 ‘공공조달의 이해’ PDF 7~27쪽
 - 숫자 기준: 표준교재가 인용한 OECD 2023년 자료와 국내 2024년 조달통계·교재 산식. 법정 금액·비율이 아닌 학습용 시점 통계
-- 내용 확인일: 2026년 8월 24일
+- 내용 확인일: 2026년 8월 25일

@@ -8,8 +8,8 @@ title: 기타 적정성 분석
 kind: chapter
 lesson_id: PPM2-P01-L04
 origin: custom
-status: source_checked
-legal_cutoff: 2026-08-24
+status: exercise_checked
+legal_cutoff: 2026-08-25
 ---
 
 > 이 강의는 Q-Net 출제기준 보고서 1254의 세부항목 `기타 적정성 분석`과 세세항목인 공공조달 동향 모니터링을 통한 수요예측, 다양한 공급방법의 장단점 분석, 공급관리 및 위험분석을 연결해 새로 썼습니다. 조달청 표준교재 인쇄면 98~104쪽·132~153쪽·247~274쪽을 중심으로 삼되, 사례의 연도·비율은 법정 고정값과 구분했습니다. 문제와 해설은 공식 자료만으로 자체 작성했습니다.
@@ -446,4 +446,4 @@ legal_cutoff: 2026-08-24
 - 조달청, [공공조달관리사 표준교재 2과목](https://www.pps.go.kr/hrd/home/UserBoardActionUpdate.do?BO_CODE=REFERENCE_ROOM&BO_IDX=6580&CHILD_MENU=MENU209&ROOT_MENU=MENU002&method=detail), 인쇄면 98~104쪽·132~153쪽·247~274쪽.
 - 법제처 국가법령정보센터, [국가를 당사자로 하는 계약에 관한 법률 시행령](https://www.law.go.kr/법령/국가를당사자로하는계약에관한법률시행령), 발주계획 관련 제92조의2.
 - 법제처 국가법령정보센터, [지방자치단체를 당사자로 하는 계약에 관한 법률 시행령](https://www.law.go.kr/법령/지방자치단체를당사자로하는계약에관한법률시행령), 발주계획 관련 제124조.
-- 국제표준화기구, [ISO 31000 Risk management](https://www.iso.org/iso-31000-risk-management.html), 표준교재의 리스크 관리 틀 확인.
+- 국제표준화기구, [ISO 31000:2018 Risk management — Guidelines](https://www.iso.org/standard/65694.html), 표준교재의 리스크 관리 틀 확인.
