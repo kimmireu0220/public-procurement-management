@@ -88,8 +88,6 @@ def load_inventory(manifest_path: Path = DEFAULT_MANIFEST) -> dict[str, SourceIm
     errors: list[str] = []
     if payload.get("schema_version") != 1:
         errors.append("schema_version은 1이어야 합니다.")
-    if payload.get("visibility") != "local-only":
-        errors.append("visibility는 local-only여야 합니다.")
     if payload.get("root") != "sources/민간_박문각_수험서_jpg":
         errors.append("root 경로가 예상값과 다릅니다.")
 

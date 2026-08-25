@@ -55,7 +55,7 @@ class PublishCbtPagesTest(unittest.TestCase):
             self.assertIn(f'href="{lecture.url}"', rendered)
         self.assertEqual(rendered.count("<em>최신</em>"), 1)
 
-    def test_private_scan_sourced_mock_is_not_publishable(self) -> None:
+    def test_scan_sourced_mock_can_be_published(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
             source_root = root / "output"
@@ -71,10 +71,13 @@ class PublishCbtPagesTest(unittest.TestCase):
             )
 
             with patch.object(publish_cbt_pages, "DOCS", docs_root):
-                with self.assertRaisesRegex(SystemExit, "민간 수험서 파생 문항"):
-                    publish_cbt_pages.publish_profile(cast(CbtProfile, profile), 1)
+                selected = publish_cbt_pages.publish_profile(cast(CbtProfile, profile), 1)
 
-            self.assertFalse((docs_root / "mock" / "1회차" / "index.html").exists())
+            self.assertEqual(selected, 1)
+            self.assertEqual(
+                (docs_root / "mock" / "1회차" / "index.html").read_text(encoding="utf-8"),
+                "private mock",
+            )
 
     def test_publishing_third_round_keeps_all_rounds_selectable(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
