@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import re
 import shutil
@@ -51,6 +52,10 @@ TYPE_SLUG = {
 
 def _json(value: object) -> str:
     return json.dumps(value, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/")
+
+
+def _asset_version(name: str) -> str:
+    return hashlib.sha256((ASSETS / name).read_bytes()).hexdigest()[:10]
 
 
 def load_written_questions() -> list[dict]:
@@ -263,15 +268,24 @@ def page_html(subject: int, mode: str, count: int) -> str:
             else "답안을 클릭하면 즉시 채점되며 오답은 과목별로 누적됩니다."
         )
     asset = "../../assets" if is_wrong else "../assets"
+    home = "../../" if is_wrong else "../"
+    counterpart = f"../../{subject}과목/" if is_wrong else f"../오답/{subject}과목/"
+    counterpart_label = "전체 CBT" if is_wrong else "오답 CBT"
     mode_label = "오답 재풀이" if is_wrong else f"전체 {count:,}문항"
+    client = "cumulative-cbt.js" if subject == 4 else "objective-cumulative-cbt.js"
+    style_version = _asset_version("cumulative-cbt.css")
+    client_version = _asset_version(client)
     return f"""<!DOCTYPE html>
 <html lang="ko"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="description" content="공공조달관리사 {heading}"><title>{heading} · 공공조달관리사</title>
-<link rel="stylesheet" href="{asset}/cumulative-cbt.css"></head><body>
-<header class="topbar"><div><small>{mode_label}</small><h1>{heading}</h1><p>{title} · {note}</p></div></header>
-<main id="cbt-app" class="cbt-shell" aria-live="polite"><p class="loading">문제은행을 불러오는 중입니다.</p></main>
+<meta name="theme-color" content="#123b66">
+<link rel="stylesheet" href="{asset}/cumulative-cbt.css?v={style_version}"></head><body>
+<a class="skip-link" href="#cbt-app">문제로 바로가기</a>
+<header class="topbar"><div class="topbar-inner"><div><small>{mode_label}</small><h1>{heading}</h1><p>{title} · {note}</p></div><nav class="page-nav" aria-label="CBT 메뉴"><a href="{home}">← 학습센터</a><a href="{counterpart}">{counterpart_label}</a></nav></div></header>
+<main id="cbt-app" class="cbt-shell"><p class="loading" role="status">문제은행을 불러오는 중입니다.</p></main>
+<noscript><p class="empty-card">문제를 풀려면 브라우저에서 JavaScript를 켜 주세요.</p></noscript>
 <script>window.CBT_CONFIG={_json({"subject": subject, "mode": mode, "title": title})};</script>
-<script src="{asset}/subject{subject}-bank.js"></script><script src="{asset}/{'cumulative-cbt.js' if subject == 4 else 'objective-cumulative-cbt.js'}"></script>
+<script src="{asset}/subject{subject}-bank.js"></script><script src="{asset}/{client}?v={client_version}"></script>
 </body></html>
 """
 

@@ -19,27 +19,35 @@ LANDING_HTML = """<!DOCTYPE html>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="공공조달관리사 1·2·3과목 필기 CBT와 4과목 실기 문제은행">
+<meta name="theme-color" content="#123b66">
 <title>과목별 전체 문제은행 CBT</title>
 <style>
-:root { --bg:#f4f7fb; --paper:#fff; --navy:#102f50; --blue:#1763a6; --line:#dbe4ee; --muted:#647386; }
+:root { --bg:#f4f7fb; --paper:#fff; --navy:#0b2b4b; --blue:#1769aa; --line:#d5e0eb; --muted:#5d6e81; --focus:#f2a93b; }
 * { box-sizing:border-box; }
-body { margin:0; background:var(--bg); color:#172331; font-family:"Apple SD Gothic Neo","Malgun Gothic",sans-serif; line-height:1.65; }
-main { max-width:760px; margin:0 auto; padding:clamp(1.5rem,5vw,4rem) 1rem; }
-.card { padding:clamp(1.4rem,4vw,2.4rem); border:1px solid var(--line); border-radius:16px; background:var(--paper); box-shadow:0 8px 24px rgba(16,47,80,.08); }
-h1 { margin:.2rem 0 .8rem; color:var(--navy); font-size:clamp(1.7rem,5vw,2.35rem); }
+body { min-height:100vh; margin:0; background:linear-gradient(145deg,#edf4fa,var(--bg) 42%); color:#172535; font-family:"Pretendard","Apple SD Gothic Neo","Malgun Gothic",sans-serif; line-height:1.65; word-break:keep-all; }
+main { max-width:900px; margin:0 auto; padding:clamp(1.25rem,5vw,4rem) 1rem; }
+.card { padding:clamp(1.35rem,4vw,2.6rem); border:1px solid var(--line); border-radius:18px; background:var(--paper); box-shadow:0 12px 34px rgba(16,47,80,.09); }
+.eyebrow { color:var(--blue); font-size:.78rem; font-weight:850; letter-spacing:.1em; }
+h1 { margin:.3rem 0 .8rem; color:var(--navy); font-size:clamp(1.8rem,5vw,2.55rem); line-height:1.2; letter-spacing:-.025em; }
 p { margin:.75rem 0; }
 .note { color:var(--muted); }
-.actions { display:flex; flex-wrap:wrap; gap:.7rem; margin-top:1.5rem; }
-a { display:inline-block; padding:.72rem 1rem; border-radius:9px; background:var(--blue); color:#fff; text-decoration:none; font-weight:700; }
-a.secondary { border:1px solid var(--line); background:#fff; color:var(--navy); }
+.actions { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:.7rem; margin-top:1.5rem; }
+a { display:flex; min-height:52px; align-items:center; justify-content:space-between; padding:.72rem 1rem; border:1px solid #8fb6d6; border-radius:10px; background:#f7fbfe; color:var(--navy); text-decoration:none; font-weight:800; }
+a::after { content:"→"; color:var(--blue); }
+a:hover { border-color:var(--blue); background:#eaf4fc; }
+a.secondary { grid-column:1/-1; justify-content:center; border-color:var(--line); background:#fff; }
+a.secondary::after { content:""; }
+a:focus-visible { outline:3px solid var(--focus); outline-offset:3px; }
+@media(max-width:560px){.actions{grid-template-columns:1fr}.card{border-radius:14px}}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
 </style>
 </head>
 <body>
 <main><section class="card">
-  <span>PUBLIC PROCUREMENT MANAGER</span>
+  <span class="eyebrow">PUBLIC PROCUREMENT MANAGER</span>
   <h1>과목별 전체 문제은행 CBT</h1>
-  <p>1·2·3과목 필기 CBT와 4과목 실기형 문제를 Part별로 학습합니다.</p>
-  <p class="note">전체 2,639문항입니다. 필기 CBT는 제출 즉시 자동 채점하며, 4과목은 서술형 답안 작성 연습에 사용합니다.</p>
+  <p>1·2·3과목 필기 문제와 4과목 서술형 문제를 과목별로 한 번에 학습합니다.</p>
+  <p class="note">전체 2,639문항입니다. 필기는 답안 선택 즉시 채점하며, 4과목은 모범답안과 비교해 직접 판정합니다.</p>
   <div class="actions"><a href="../1과목/">1과목 · 670문항</a><a href="../2과목/">2과목 · 335문항</a><a href="../3과목/">3과목 · 390문항</a><a href="../4과목/">4과목 · 1,244문항</a><a class="secondary" href="../">학습센터 홈</a></div>
 </section></main>
 </body>
