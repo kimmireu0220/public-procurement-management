@@ -279,6 +279,10 @@ def validate_written_bank_inventory(root: Path) -> list[ValidationIssue]:
                 for parse_issue in exc.issues
             )
             continue
+        except FileNotFoundError:
+            # 민간 문제은행은 권리 정책상 로컬에만 둘 수 있다.
+            # 자료가 있는 환경에서는 아래 전수 검증을 그대로 실행한다.
+            continue
         except (OSError, ValueError) as exc:
             issues.append(ValidationIssue(problem_path, f"문제은행 인덱스 생성 실패: {exc}"))
             continue
@@ -294,6 +298,14 @@ def validate_written_bank_inventory(root: Path) -> list[ValidationIssue]:
 
 def _validate_practical_bank(problem_path: Path, stable_ids: list[str], root: Path) -> list[ValidationIssue]:
     issues: list[ValidationIssue] = []
+    requires_bank = any(
+        PRACTICAL_ID_RE.fullmatch(stable_id)
+        and stable_id.split(":")[3] != "custom"
+        for stable_id in stable_ids
+    )
+    if not requires_bank:
+        return issues
+
     blocks = re.split(r"(?m)^###\s+", problem_path.read_text(encoding="utf-8"))[1:]
     bank_path = (
         root
