@@ -1,0 +1,4 @@
+interface:
+  display_name: "Qwen3-TTS Sohee 한국어 강의"
+  short_description: "Sohee 화자로 한국어 장문 강의 음성을 로컬 합성합니다"
+  default_prompt: "Use $qwen3-tts-korean-lecture to create a Korean lecture and synthesize it locally with Qwen3-TTS Sohee."

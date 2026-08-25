@@ -1,0 +1,2853 @@
+{
+  "chapter_root": "/Users/kimmireu/Desktop/Storage/public-procurement-management/output/chapter_lectures/4과목",
+  "chapters": {
+    "P01-C01": {
+      "adopted_existing": true,
+      "attempts": 0,
+      "chapter": 1,
+      "cleaned_chars": 7459,
+      "cleaned_sha256": "f0fb13a6fed4291e5901ee5a628a4e4aaf89560dc07e0ade69327836923c937c",
+      "completed_at": "2026-08-25T05:43:38+00:00",
+      "engine": "pytorch-qwen3-tts-custom-voice",
+      "error": null,
+      "expected_chunks": 54,
+      "output_path": "/Users/kimmireu/Desktop/Storage/public-procurement-management/output/qwen3_tts_audio/4과목_Part01_Chapter01_공공조달_참여_준비하기_Qwen3-TTS_Sohee.mp3",
+      "part": 1,
+      "profile": {
+        "engine": "pytorch-qwen3-tts-custom-voice",
+        "legacy_adoption": true,
+        "pause_policy": "between-chunks-only-legacy-pytorch",
+        "settings": {
+          "device": "mps",
+          "generator_sha256": "29365881c24a6a6929ceea37da1bdb04df7b4c69870a77b718aa5b1773e06095",
+          "instruct": "차분하고 명료한 한국어 강의 톤으로 또박또박 말해 주세요.",
+          "language": "Korean",
+          "max_chars": 160,
+          "max_new_tokens": 1024,
+          "model": "/Users/kimmireu/.cache/huggingface/hub/models--Qwen--Qwen3-TTS-12Hz-1.7B-CustomVoice/snapshots/0c0e3051f131929182e2c023b9537f8b1c68adfe",
+          "pause_ms": 250,
+          "repetition_penalty": 1.05,
+          "revision": null,
+          "seed": 1234,
+          "speaker": "Sohee",
+          "speed": 1.0,
+          "temperature": 0.9,
+          "top_k": 50,
+          "top_p": 1.0
+        },
+        "source_manifest": "/Users/kimmireu/Desktop/Storage/public-procurement-management/output/qwen3_tts_audio/4과목_Qwen3-TTS_Sohee_manifest.json"
+      },
+      "request_fingerprint": "0b5705c9a694808a14e730898e1a101ca603360f681a32e6bd96905d712d07f1",
+      "source_path": "/Users/kimmireu/Desktop/Storage/public-procurement-management/output/chapter_lectures/4과목/part01/chapter01.md",
+      "speech_chars": 7460,
+      "speech_path": "/Users/kimmireu/Desktop/Storage/public-procurement-management/output/qwen3_tts_audio/4과목_Part01_Chapter01_공공조달_참여_준비하기_대본.txt",
+      "speech_sha256": "30157ea0f90b0db7c5beff6d60a80b651341316e1f150c2b543fb992ba8eb4e9",
+      "status": "verified",
+      "title": "공공조달 참여 준비하기",
+      "updated_at": "2026-08-25T05:43:38+00:00",
+      "verification": {
+        "bit_rate": 128000,
+        "boundary_safe": false,
+        "cache_dir": "/Users/kimmireu/Desktop/Storage/public-procurement-management/output/qwen3_tts_audio/.4과목_Part01_Chapter01_공공조달_참여_준비하기_Qwen3-TTS_Sohee_qwen3tts_47b38f6dbf21",
+        "channels": 1,
+        "codec": "mp3",
+        "duration_seconds": 1249.464,
+        "expected_output_duration_seconds": 1249.41,
+        "legacy_adoption": true,
+        "observed_chunks": 54,
+        "output_mtime_ns": 1787590787906943149,
+        "output_sha256": "5b1ab6614ecd78db7156af931712b5d616ca945b20072b6fe538fc64e906b12b",
+        "pause_count": 53,
+        "pause_ms": 250,
+        "pause_policy": "between-chunks-only-legacy-pytorch",
+        "raw_chunk_duration_seconds": 1236.16,
+        "raw_chunk_frames": [
+          647040,
+          583680,
+          485760,
+          514560,
+          650880,
+          545280,
+          608640,
+          445440,
+          664320,
+          412800,
+          672000,
+          516480,
+          458880,
+          597120,
+          535680,
+          529920,
+          499200,
+          794880,
+          647040,
+          353280,
+          679680,
+          359040,
+          420480,
+          451200,
+          460800,
+          622080,
+          666240,
+          595200,
+          456960,
+          597120,
+          625920,
+          391680,
+          606720,
+          437760,
+          489600,
+          456960,
+          541440,
+          597120,
+          733440,
+          614400,
+          533760,
+          547200,
+          535680,
+          414720,
+          433920,
+          574080,
+          566400,
+          639360,
+          633600,
+          591360,
+          577920,
+          577920,
+          597120,
+          478080
+        ],
+        "raw_chunk_sha256s": [
+          "70e7fc568daa3c7fb553859eca04a1588621a481df9bf0c225e4c68bf4b89de4",
+          "92cd3c63e2d68131a3b1a64eb4c27f282ade38d41ff879f920382938f45d45d0",
+          "99be9cc39aadf7469f27b14a18fbba4ce4688bc2baba437a4c538bdc6c55f86d",
+          "2a6aadffe05de6bf8d3acedd60626a43125f3991d5b31d5dcdd39d143e7ca753",
+          "e11ce821d04650097ea1758372c2e0d4230e4310aa682d3e798c6219b91be862",
+          "ffbd6fa5261ffa976c129325e5fc7498086d771611ff8f6af2d7f36a9bd33319",
+          "aeb51598d51fcdccdb7ff9760a91d83af50927a53cad2737ac63a6fa20f5ca7e",
+          "d57681d7336d97b8657d4ad8e21accdd5353b9869c52399efdd68b2d7db06c84",
+          "f7dbfc0c54253ca03879b0c330b31e236f7349d4ad37814fd6dbd1f704229829",
+          "339f69a76a2a88d2010dfb940f17c5e64a3901bd78218add65e3171b5845665e",
+          "28e3903928bd4a560ebcf4e4833360c29aa54e721d71de1b8b0b8185ce497727",
+          "7853929d5a6744e2c0beebcd210d327645425fd908273e562767b8c1dab7eddb",
+          "ed0b793a66800088f5b87f1d5dd68210d9a4fde4e68a0be7677a5f7a2a82b60f",
+          "7e76fc35dfdcba16a5ab0505f9518b7b0785a23e6c2ee808631c33c55291e292",
+          "aaaefc1b3e204c8535a9deaa458508235351a4518d8d20fa6b6d7031e20efdb9",
+          "a7b79280526be14ed46ffc38a6a08a14545e9711411baf87dd43d62367637bc3",
+          "733fc19a7c541baa43ff5199eed8a23dd2ab3d1a346bf94e53f5629e86cbe226",
+          "5863002e5742174bf27c9b44c2b9dae4ddfd6cc2f2881e4cc0024b3c729f31bb",
+          "2a07ecbf5f166ae9ad93c8f0b4417c2da85445c4f561dae4148ca9a933a457b3",
+          "fc8e1f6a96ee70c1f82a1e48c8eac379c9013e0e00872a5f90b4fb85ba0e0001",
+          "0f19dc4c2a4d236851343fa8d921f23a525e45584743aa94fb4e656349813fb1",
+          "7a32b35d5602b2f919fad44e13386259f0e9c686de13f77f5580dc8eefcc3665",
+          "b8b201bc43c8910e0c45dfe445b95dba10b09fe9fe3f27505af8d1fdde9768c5",
+          "d7d7094c25806796e14f487051ee767caf9657c0a34d98cfce98b98af50de621",
+          "909ad7b428e62402f581a272f022fc9e3735e9d64534b40e757f283e352b1fa5",
+          "a73a8fd1e0e43345e4f1e46e2edc24a1406dbeea369b4715b832bfea305f5516",
+          "a4b77be0e57b633430d0b7349fbdd7a1f5be657dd849d99f0c6d7aee6eae3cc5",
+          "c596d0f2d49f21d9682f7b8646547765f8e7045d0cf4e05ec52baadc0100145e",
+          "e26d416e1a4ec5aa3a74ce25870637c244dc30e79b2c2295e8b8d3b96f551587",
+          "af06402e7f5353fc5b48fccc3820d9c8beeac968e452b62a26a0c426cbcb9c72",
+          "291c4da23da80f6e06c3d6782075905a4578d7a2419a01164ec2fce5caf23330",
+          "ad6bd23993599ff06aad8f64105614211e54caa5c9f9b9c8b02c28336e45bdb5",
+          "bfb295d153a24ef803d519794d9fc42fc0c4decdd77165fd9cd2b4bc08b2a356",
+          "6557424f58fa84eed574bd51930629c2f625c97fd417650f39c177a6d09b6cef",
+          "2999d7b7e4c59257b3ed88ed5246771d7d3c8b9c97c75259fff8829bf7faf780",
+          "dd42d3b42cb3fe03e5b13c5587821842498f8ae1926dc4d4c05032410f655321",
+          "be9d87f3fb7c16be0b335b01580e55e6da71dfddf1dc58678b6ea34dcb8c9b21",
+          "4bde9fd381b6a5eeefcd95a8e98a0cd2e31abee6d3c07c8f547da2b8d134fa2d",
+          "20a2c814cd31851c72c2a4bbcc66d7970282c7d6726e995055ea6ea3adcf5791",
+          "40c7dc7499f8fab0cbdfc84832fae570db996cabfef38bbe83a74f11d98aab64",
+          "d0ca23a3bfbf2fd0b226bd92ef93938cd57f6d1dcabe44353937f3e79b7f918a",
+          "2e5e5698f37ccce4dbac5ba19e8615619da3302728254318f24955323bdade50",
+          "6d5f0ea048fd8c3904a35155715da46e7b135e77a398d21aea27d9fb9b091e01",
+          "766a504bd33c2955e0f54673e8f96b99b6505a1fa614444e8b3db97e1d721ab8",
+          "82418b7e062d4ccfcf12c0ce244f7b3edb971fa1531d2c2d2b2d401baec49f44",
+          "814ccecb4b13aaabaa3706207aeb5acba7f50d10768e34207110d9522e7c4bd7",
+          "d6288bec62846895bb7692d47d033a244a1b90096dd139e5b92f2f2ee7db2035",
+          "2bc9120c519963b6c4ed78067bd9bf8ad2a85c067713b21526ec6e1cb1b0f582",
+          "07e1b759132bf5c5379aefe79d4734c1b6f09f3e03c46e81dd2083e028c894cd",
+          "aac25f28b8f4ba88076dcf925501071a45dade740fbaf06fb4c34fdb5904a4c6",
+          "e3980d7507ca1e52d04334a3f5f1e8fa27dfb8f4d7751cc7b8affcf48b5736bf",
+          "f9d154cb6c3a3dd4ca9080726f887a9aef3473b2994142f4e97bc9d5d96062a3",
+          "d9838401b4a1c3a8217563c6900d6855ee6b15f537daa4a27df7f30716f2d67c",
+          "d19854d279eb9ef0570e3169f4e3d6f86a7d899ba5f035110903319c98c87f02"
+        ],
+        "sample_rate": 24000,
+        "size": 19991852,
+        "source_manifest": "/Users/kimmireu/Desktop/Storage/public-procurement-management/output/qwen3_tts_audio/4과목_Qwen3-TTS_Sohee_manifest.json",
+        "source_request_fingerprint": "0b5705c9a694808a14e730898e1a101ca603360f681a32e6bd96905d712d07f1",
+        "trailing_silence_ms": 0,
+        "verified_at": "2026-08-25T05:43:38+00:00"
+      }
+    },
+    "P01-C02": {
+      "adopted_existing": true,
+      "attempts": 0,
+      "chapter": 2,
+      "cleaned_chars": 13031,
+      "cleaned_sha256": "683c25f894efbf252eafcac74d82ffe3aa2ff17faee323dbadac9c967378a00d",
+      "completed_at": "2026-08-25T05:43:45+00:00",
+      "engine": "pytorch-qwen3-tts-custom-voice",
+      "error": null,
+      "expected_chunks": 94,
+      "output_path": "/Users/kimmireu/Desktop/Storage/public-procurement-management/output/qwen3_tts_audio/4과목_Part01_Chapter02_입찰자격_정보관리하기_Qwen3-TTS_Sohee.mp3",
+      "part": 1,
+      "profile": {
+        "engine": "pytorch-qwen3-tts-custom-voice",
+        "legacy_adoption": true,
+        "pause_policy": "between-chunks-only-legacy-pytorch",
+        "settings": {
+          "device": "mps",
+          "generator_sha256": "29365881c24a6a6929ceea37da1bdb04df7b4c69870a77b718aa5b1773e06095",
+          "instruct": "차분하고 명료한 한국어 강의 톤으로 또박또박 말해 주세요.",
+          "language": "Korean",
+          "max_chars": 160,
+          "max_new_tokens": 1024,
+          "model": "/Users/kimmireu/.cache/huggingface/hub/models--Qwen--Qwen3-TTS-12Hz-1.7B-CustomVoice/snapshots/0c0e3051f131929182e2c023b9537f8b1c68adfe",
+          "pause_ms": 250,
+          "repetition_penalty": 1.05,
+          "revision": null,
+          "seed": 1234,
+          "speaker": "Sohee",
+          "speed": 1.0,
+          "temperature": 0.9,
+          "top_k": 50,
+          "top_p": 1.0
+        },
+        "source_manifest": "/Users/kimmireu/Desktop/Storage/public-procurement-management/output/qwen3_tts_audio/4과목_Qwen3-TTS_Sohee_manifest.json"
+      },
+      "request_fingerprint": "1fd330b4492a41ac6b8696ab5d3cc9f3da9eb0e43a06d5ae1ec598b059153fb8",
+      "source_path": "/Users/kimmireu/Desktop/Storage/public-procurement-management/output/chapter_lectures/4과목/part01/chapter02.md",
+      "speech_chars": 13032,
+      "speech_path": "/Users/kimmireu/Desktop/Storage/public-procurement-management/output/qwen3_tts_audio/4과목_Part01_Chapter02_입찰자격_정보관리하기_대본.txt",
+      "speech_sha256": "cc8b5f14038899f129f34463cd4359b0df0429f046ee96c8740654086a38184c",
+      "status": "verified",
+      "title": "입찰자격 정보관리하기",
+      "updated_at": "2026-08-25T05:43:45+00:00",
+      "verification": {
+        "bit_rate": 128000,
+        "boundary_safe": false,
+        "cache_dir": "/Users/kimmireu/Desktop/Storage/public-procurement-management/output/qwen3_tts_audio/.4과목_Part01_Chapter02_입찰자격_정보관리하기_Qwen3-TTS_Sohee_qwen3tts_e1eda02cd376",
+        "channels": 1,
+        "codec": "mp3",
+        "duration_seconds": 2170.992,
+        "expected_output_duration_seconds": 2170.93,
+        "legacy_adoption": true,
+        "observed_chunks": 94,
+        "output_mtime_ns": 1787612087563669902,
+        "output_sha256": "15dfdda15b575e36c74acca4db91387985591ca1906de0457ab4813e82d526a9",
+        "pause_count": 93,
+        "pause_ms": 250,
+        "pause_policy": "between-chunks-only-legacy-pytorch",
+        "raw_chunk_duration_seconds": 2147.68,
+        "raw_chunk_frames": [
+          566400,
+          714240,
+          541440,
+          213120,
+          495360,
+          470400,
+          472320,
+          670080,
+          568320,
+          380160,
+          366720,
+          562560,
+          456960,
+          514560,
+          493440,
+          324480,
+          622080,
+          647040,
+          612480,
+          462720,
+          577920,
+          408960,
+          528000,
+          560640,
+          627840,
+          577920,
+          520320,
+          581760,
+          599040,
+          612480,
+          503040,
+          549120,
+          579840,
+          464640,
+          514560,
+          458880,
+          656640,
+          483840,
+          543360,
+          589440,
+          537600,
+          504960,
+          731520,
+          700800,
+          660480,
+          681600,
+          520320,
+          568320,
+          610560,
+          516480,
+          562560,
+          585600,
+          474240,
+          543360,
+          456960,
+          610560,
+          549120,
+          583680,
+          558720,
+          408960,
+          257280,
+          695040,
+          679680,
+          339840,
+          576000,
+          462720,
+          677760,
+          600960,
+          545280,
+          641280,
+          591360,
+          614400,
+          566400,
+          756480,
+          501120,
+          668160,
+          389760,
+          637440,
+          721920,
+          583680,
+          533760,
+          606720,
+          585600,
+          627840,
+          637440,
+          476160,
+          506880,
+          522240,
+          493440,
+          506880,
+          441600,
+          489600,
+          556800,
+          593280
+        ],
+        "raw_chunk_sha256s": [
+          "1cbcec69c017837c5b41e6669eba2ba46ecf2a62803222df2aeeb9c118063a72",
+          "c59941aab192b43970d6e277780a1edf0a3124d7a381929dfe80acb27a3565cc",
+          "d4419d5571404c25570a50197fb92f20cfc4baaac0102354156925d9bea12f19",
+          "16ee5151f965bac17a6c0a1e7d9ba96eedb29d125e7e5ba775010efb0e96c683",
+          "00131f36c2aee32bcf3e67115e80b188e5b8bbf5f4cc20c866d5da51ad96de7d",
+          "b7fc9e7fe879914afb4baae49c7a73b878c00f41c490c4d11050a024b3cd589e",
+          "e68891823b28df7f1056cb4ce153c498f4241e19d8435bd93a16f1bd199b59d0",
+          "3d79c2cd3862932ca3895f7512a72e7db0f1379ec779a349cf344e5e7de2fb93",
+          "4123b7feaa9080d9e0d460f00c71f5408614611d91e8379813f3a7a3d9a39d77",
+          "370aaf0656965a64ca1de3590967260640339626fa2ab725004b5d154ab11c75",
+          "b0656282dfed306592a9303f54ddd613d854a2f2efba078e3144482cd604318c",
+          "f618640fa853a766a39b320ced97fb374a083072d26e698a10954109e2c65dc1",
+          "aafc29de28c2fe6e6b154c5fa9febe9e345bd6ae1ca5cd9d74f09af6ef17ce89",
+          "15c74c8ef6de4a55aedb62bbf29e92110987d482d3e0958cf618c7904eb44fe1",
+          "80464c511e14e62aa173a9f24c8d284008268b34cc9a709235156eba7a9ec8f6",
+          "30f57627b3846c971c7ffdcd2c61a74f499ead242aaaa24a9e2adccfe8bdedae",
+          "aaf4b7726497d2ebbdf4405582cb98e93cac395f5c2be45c5f632495fd403c32",
+          "d7e4adf76c8900bb752b8eada9525d26e2c369c820c201043b828cbee7ecd3f4",
+          "dac4e2ea48fff21f0665051657d36f34bca58f7fb8893617cf124417cc0acfe3",
+          "56d26bba612180d5b8f42a9850d31685e46d6fbb41428401462e40da0f4414a6",
+          "9c812fcc1a10d157634de0a9ccfa51ce96a36b9807e9a4c360eabef778915c39",
+          "aa372c68082b7f19c7f90ad314eafd4ef9a4a26021b81e3e45a72ea94755b537",
+          "2f404ef64381dadf809c112e951ffa59cb0572bcd408cfa979482960fa3bb96a",
+          "3dd74f82172f90c6ec0bbc6382b81965d9d30137636f97a1a824a19aefb19158",
+          "a55e0eb97154e4e52f0c457e22800ee1d6f30193671870e0c5ed6b8e99d181d5",
+          "08e4eed6c047b1601226937a96f293f123f388ff8a5ec195518b6fc6d04cc81a",
+          "ddc7b0d97d6107324aed4566248e63528d8503df02388df5e3c2bf8ea059b7e0",
+          "9e2e8cff9eb67a173b7175c53a08bd72539516519a95cb290388e0fde3f61586",
+          "f467d44ebb0d8c13db5e059a0cb3576a6b06705242211879689ad62a3485afff",
+          "f0dd7998aaeb8e67136c487716cc54514b46d55fa038a0fd7eea67557760f8fb",
+          "bc86d11a06ea7ffa80b4b6c253c830d0ab3590e3689b3fa4df3418c001d0944e",
+          "3043442d9c0140d7620e86923072de6ac0b9599bc1cc03e7a20eb4e7b2593e6e",
+          "e0cc7b239f7a6431999e733cc0b561c265e5ed29b02ef269979e7ce77eeba891",
+          "6eeb5695f96cd279de8231070a2312b884fd9b9f6951279a4427687994843f50",
+          "ca84fff580ea6bd3b2a0716676f6157a2d1dbfff211c23738eb92368d38722e1",
+          "9b9801cff2c310055a2e22129d178e1c6600b3cb9c0c6a0e824ca10dcdf70b70",
+          "11e4da3f4309b950fea8eb20c5a8170a08f2e65883f6d416acbdb3bfc15ce7ff",
+          "71316655b3474cbf963b7d1891d48b2268794b28963498ddd0d390eae1ea3690",
+          "6f28131595b2897bb20e30cbdad4d8f589f15fe54abe50d9e247fce74c183636",
+          "7304474d53c3a2130af419997542d06a8bc588d1d10bed6f3942b245f4c93006",
+          "d88942b7fd9f046bd161cff8b0ecb912c367e9f57d7d4cba77e8f3bc7449944e",
+          "b5db10e86899d97bfd043e02de18a324c7565d140c7d25edb373febdcd674bc1",
+          "9b8925a754e3143c34017e4315579c10ee5c65fe248e63c1000fa07fa8a643e3",
+          "89f806cf5802dc1180711b0f8d539976da01a84065273935b17b6eb18197315b",
+          "263559391dbc6fdb75bce074e6c8fd640fa0e0e1331b818320458a08789b7f55",
+          "8a4b6c1ac3fbebb181cb5035a8e0290c06b4a05f6aa5937e55dfdd3c26e66752",
+          "6ddf952ccdbbd338e2876c85ba98c4518fa02159c4c23b005e54b3f3b389fc8e",
+          "a2c96332c903ba40039cdfbd9eebfa70afc0e3bfeeda4c70efa69730f3df1daf",
+          "663bfd51aaddcc3b02a1fca0c554c8fdbac9f24c9e3b4c46ef8f95a63af838d8",
+          "c196927061e431bafc4cbec314268bd98e2315c9af220b073d68504ce7c5ae8e",
+          "a4be1828d918b414fefe1fcb07190bacd478f398275427fea1b061e60ae024d3",
+          "69833eaa9bc41861a8787baf836a09202e80886651f16eb6e61304cadbe92e49",
+          "d323118192d263583725ae688ad0affd771df812b6a5984be3c62595bb181c5f",
+          "d2f03271c57324aab2b92f93502abe101276a62da4e9168738715f331f2289b2",
+          "c1959bf042be81c016a8c3b7a21e8afae824eba95329a3b9e6b23daa472ad3a0",
+          "cfa58aded4e44641e3e4dcfbf903595162f1cdc92b7fc8601b3333d879dc3929",
+          "05bd28577a843eb9ec681a00fb3c785a5ced034fdbaf619722b56731d85eec4a",
+          "8b1e083b5fb0d2357653c6983c7ed329257c22bcb0d15ea875280941363d3cb9",
+          "df6501290bfe788eba9e2b9169769fb3abe230f40d7cec3c3a4f990fc4ae3b26",
+          "f9258676dd6f93f3e0ec02d589c09a5b5f1fca67f05e808ce73dc5af847d1a8d",
+          "6b80de6e6942d221a4e2146973b4d3d0fbf90d3f137b0e57fa41ff5d59b4491d",
+          "a2a0641ad253c2a7d4d8e84073fda708af76aca4802634d8365f90311b17174f",
+          "cfff693dec3e04be8227e29e8450505faf0b9d51a6dfea25d34f5db403c5d322",
+          "13596394290bdce84bb22bfce29a05ccec79dd0032eb87e76406df1988f6c1b8",
+          "5724e57886990243cdc9a8a537d5ce8bcf091a8938b539d9a1ce5eb3f5afc212",
+          "ae9196e84ea9c9adb6ea654a53fe9b4b701ab1a3df37966b5753d159a8063f48",
+          "3360cae6c1a3e4b5be29db558293d4fe06401273723074e80e2597e6ac43345f",
+          "3d6106d707a781e5a8b8b4bd3eeddad37952f38193c070c7e691586b328e9d94",
+          "071bcdd24276aec018cec6f28f08a85f6051ebc7730485d83de7d07acf35123c",
+          "2e3cc6ea1b753c46455574f8967dbd9106e93f83768d5ea5dbcc1d8d9edee9ee",
+          "1c7f4208d45b6f7aa599295c480b54efa39797c74776cad822922bcbc8acaa13",
+          "6137badf2e2cfab7a65b091cb356e8a23969e881807e766b605ad480f5c90c07",
+          "b0cf92c1ff425c22464f5733ef5ad2caf6a8214b17e0c6ce8c3e6f15feb46747",
+          "1ec607b1945b902f9ad43d3068a9f3aaf897ff7a4e5fa514af37f8faab55034e",
+          "06567be7cb28d571f3458125c9fe858a1292f2f8086ead9f6b99391f4a2ad6d9",
+          "0b99f21a2e5e5761b07db38016a5a9ef3079907e81a4fad2f625843a33903783",
+          "536ab10bc0a96300b31c58ba460a53e6fce5dcef860a6be5c21d70f8cf6c1a26",
+          "d8c0eb0bf95b45ed12bdcb43349daea27c3fed5f195761ce037eaaa8de1d0803",
+          "9c06c61c5c9f9f758ecf197711d054ac9c9f7181bf2b5be5e06706093c021f62",
+          "8403442a0c02ca1f45e4f0a270b59a01681955cae03cc7e6165311a9643bc0da",
+          "713b8e6d01d510151a48c6f35313603d3a7e66491de90ae9d394a0db23e8c745",
+          "1085db8de9f1b6791bbbb6e66f352ee9edad38df228428f9ebd1021a9a40c766",
+          "19724d3b09993e83792dd69ef9c7c901763e8ea4dd91df589125366e898d9864",
+          "a5abddb2de6ce061f598d384bd22da308477f722d799073015eb891ccb77561f",
+          "0c9af1757139cb25ee241041966f4c0605514833539415b9a0c15fff59f85605",
+          "a42e83d42c764a54804a62d8e0a635ee174ef702ff5be4b767b3cace9467f3a1",
+          "2c4dbcc866250b94fbd87c36280dc70fe2df9f7f1bcbb1c4a84afe3b22e974e8",
+          "4c6aeeaa86a4999e78532734f31a035797c1deb2a0e9bbadf504afaabeeed100",
+          "bcc27369762fd4d7233ed164edb298bbf7c61ad33e2fd7ca28379f69cf1f04d4",
+          "53b47125d82ad5804370e4d48239e6c8515999da3efebd5cf39f84b5aadb041f",
+          "66b5289b2ad958b2b57cc4a84b0e76d5ba6ad8009fa88285ed58bec3cc8fe13b",
+          "54baaca36a8dc8d8544958fc23a427fa7fd1d8d78d94fe18ed121b3a2cc7f070",
+          "2e6d2176335e46597097dc334e41ef4aab145e655a8882c14e5b703e345e9087",
+          "1cbcda78d1bc4e877b826f31e2c27a6fb6c16ec7e96269a2b0c68f10ef9ceb88"
+        ],
+        "sample_rate": 24000,
+        "size": 34736300,
+        "source_manifest": "/Users/kimmireu/Desktop/Storage/public-procurement-management/output/qwen3_tts_audio/4과목_Qwen3-TTS_Sohee_manifest.json",
+        "source_request_fingerprint": "1fd330b4492a41ac6b8696ab5d3cc9f3da9eb0e43a06d5ae1ec598b059153fb8",
+        "trailing_silence_ms": 0,
+        "verified_at": "2026-08-25T05:43:45+00:00"
+      }
+    },
+    "P01-C03": {
+      "adopted_existing": true,
+      "attempts": 0,
+      "chapter": 3,
+      "cleaned_chars": 11121,
+      "cleaned_sha256": "35daa70cda96a7c8f33c07c6b1411a86bc6ef8906676fba2085ac2422d338a7f",
+      "completed_at": "2026-08-25T05:43:50+00:00",
+      "engine": "pytorch-qwen3-tts-custom-voice",
+      "error": null,
+      "expected_chunks": 83,
+      "output_path": "/Users/kimmireu/Desktop/Storage/public-procurement-management/output/qwen3_tts_audio/4과목_Part01_Chapter03_경쟁입찰_참가자격신청하기_Qwen3-TTS_Sohee.mp3",
+      "part": 1,
+      "profile": {
+        "engine": "pytorch-qwen3-tts-custom-voice",
+        "legacy_adoption": true,
+        "pause_policy": "between-chunks-only-legacy-pytorch",
+        "settings": {
+          "device": "mps",
+          "generator_sha256": "29365881c24a6a6929ceea37da1bdb04df7b4c69870a77b718aa5b1773e06095",
+          "instruct": "차분하고 명료한 한국어 강의 톤으로 또박또박 말해 주세요.",
+          "language": "Korean",
+          "max_chars": 160,
+          "max_new_tokens": 1024,
+          "model": "/Users/kimmireu/.cache/huggingface/hub/models--Qwen--Qwen3-TTS-12Hz-1.7B-CustomVoice/snapshots/0c0e3051f131929182e2c023b9537f8b1c68adfe",
+          "pause_ms": 250,
+          "repetition_penalty": 1.05,
+          "revision": null,
+          "seed": 1234,
+          "speaker": "Sohee",
+          "speed": 1.0,
+          "temperature": 0.9,
+          "top_k": 50,
+          "top_p": 1.0
+        },
+        "source_manifest": "/Users/kimmireu/Desktop/Storage/public-procurement-management/output/qwen3_tts_audio/4과목_Qwen3-TTS_Sohee_manifest.json"
+      },
+      "request_fingerprint": "79eb47463ab04922caa0f6c04113a1474f749a96865bd18ec7ebf3670fdb125b",
+      "source_path": "/Users/kimmireu/Desktop/Storage/public-procurement-management/output/chapter_lectures/4과목/part01/chapter03.md",
+      "speech_chars": 11122,
+      "speech_path": "/Users/kimmireu/Desktop/Storage/public-procurement-management/output/qwen3_tts_audio/4과목_Part01_Chapter03_경쟁입찰_참가자격신청하기_대본.txt",
+      "speech_sha256": "557af0e90112f62113a6ba9ca6cc07e24f2b29bb4bddf85152a6ddd77c8f3f9b",
+      "status": "verified",
+      "title": "경쟁입찰 참가자격신청하기",
+      "updated_at": "2026-08-25T05:43:50+00:00",
+      "verification": {
+        "bit_rate": 128000,
+        "boundary_safe": false,
+        "cache_dir": "/Users/kimmireu/Desktop/Storage/public-procurement-management/output/qwen3_tts_audio/.4과목_Part01_Chapter03_경쟁입찰_참가자격신청하기_Qwen3-TTS_Sohee_qwen3tts_8058c8bc36d8",
+        "channels": 1,
+        "codec": "mp3",
+        "duration_seconds": 1775.76,
+        "expected_output_duration_seconds": 1775.6999999999991,
+        "legacy_adoption": true,
+        "observed_chunks": 83,
+        "output_mtime_ns": 1787633250111862833,
+        "output_sha256": "b1e1d28bd80afdfd61a96624b0971efa73f2695ed7dad20b99b05d96823c2d3e",
+        "pause_count": 82,
+        "pause_ms": 250,
+        "pause_policy": "between-chunks-only-legacy-pytorch",
+        "raw_chunk_duration_seconds": 1755.1999999999991,
+        "raw_chunk_frames": [
+          662400,
+          401280,
+          529920,
+          470400,
+          489600,
+          497280,
+          566400,
+          360960,
+          480000,
+          503040,
+          456960,
+          551040,
+          462720,
+          476160,
+          462720,
+          558720,
+          424320,
+          604800,
+          566400,
+          656640,
+          464640,
+          610560,
+          481920,
+          633600,
+          483840,
+          689280,
+          591360,
+          635520,
+          451200,
+          355200,
+          487680,
+          637440,
+          620160,
+          524160,
+          522240,
+          518400,
+          481920,
+          587520,
+          666240,
+          541440,
+          497280,
+          403200,
+          355200,
+          410880,
+          574080,
+          491520,
+          708480,
+          533760,
+          501120,
+          414720,
+          529920,
+          610560,
+          535680,
+          541440,
+          370560,
+          456960,
+          293760,
+          403200,
+          234240,
+          541440,
+          443520,
+          533760,
+          470400,
+          470400,
+          570240,
+          478080,
+          554880,
+          480000,
+          696960,
+          518400,
+          368640,
+          456960,
+          529920,
+          551040,
+          366720,
+          600960,
+          620160,
+          478080,
+          556800,
+          547200,
+          587520,
+          493440,
+          176640
+        ],
+        "raw_chunk_sha256s": [
+          "5de1f554695283df2426d4d8f68b1903ef09253b4955bdf88819ff19a29ebe49",
+          "d2954ec35c8b7834de6bc2b500545ed32a4d7e8cc6d7968b97c7ec22a175f14b",
+          "8c5033aec8d0473a09c8aedfbc9c321600c39ff961a714cd86aff1ee23129c7a",
+          "095db2516e3a15dd1fa9459bf248a91b8a4725c278eb51b02ffac054b4eec3f8",
+          "30bc408e2d3fed6822268a3840e74b598f092abeb8378446149f7fc8688854f8",
+          "e3b19d58cb9d70e1dbed71e4df4733d2f1906cd05c176492e429da27cbcba20e",
+          "7018d6bbcc9f7a22db8dfc0cdba67406a6be9edc30ba5c7127583a2b76704413",
+          "e37214cc6a6bc58e087f13886eb83a9177908358dadeea1a86f37c3b0efe86c0",
+          "19633dabc5058488b876256397bc2e86d89ccc2b01cfedda7c669f5e9e736f5d",
+          "f23b5c7dd21f3eb82d9c0007ae40c8be40490a6e093c3866db24e8be0f5d4384",
+          "5f8774d006ffc23fc37519bd266e51800e9284e7b2f8cc55c3aa21311e770109",
+          "ca4bbe1090d861b43ea73394b3f0825e24117be2d0449d41a3b7eef58e36e7a3",
+          "4b0caadc521152dd8a7a5e400cc2099bb698b0c20b1ffbe439abb0f9b63a5eeb",
+          "c9e3abb6de72fd7201bf56ffc3007bf9d4c7b6e06b9e01db087106c8331034fd",
+          "10087331499d41076c21ddc4e9c15a1740681a5a17cac7a22f014390204c0092",
+          "6ade2ae59fca971a16cd6fa6f99d9f3103a8ebf5efaa7f95c52a15c7a27e1a95",
+          "31f7bacfb7e38504c94a8ba1331bbc3bc4ea5ef1a82373925a7e81d114cb4655",
+          "dedef20d3ec4e9fa7a27e323dce2942fc19157276bdbf637e9f76d8410bb8fe5",
+          "fb94daffcd0cea84b45c322e836bf73832bc99ab901c682f6ae0dc731eb03c33",
+          "60ae3a8984adba664cf97c12d0a78dc0c11b489c8af1cd3d1500122a6616818a",
+          "7ff819413e510334f43e2debc02a1fda4fdfae2d06c8f964bd1a30714d703407",
+          "90c71804d73a209584d143b4023f0e9054febac8a544e8175927116102bcc282",
+          "9b505bc605bd3462a46b02c32543c88d1e8c6e7f3fd9223ffe88b995b74574c4",
+          "39d3af5427c585b2d095a6910e5fddec875097b5debe47cf511c94e9ce5eb133",
+          "8acc78baff34f4502acc674d76a0b7b16e6239810330d6eda691ffc1b6461b0d",
+          "caad26397b6f7bd35eab94263a3631acb2e55f6f7ea2746310d0af8c2c65ae37",
+          "8e7caaeadc3543a71fa483ea72d3c53171d2fa4489a0b02c9a5dba5577648c1b",
+          "fdbc9a76977b2d8111c6d1fb1de613b580793542f57793359cc545f28e9ad600",
+          "8340509f026a219701ee6b26619d31dae93fc3ce503c1b85b1e070d8fb114a2f",
+          "fe8ef97a4e0742a16c628568abcd929b3fbfe1c4b2651244029506bb280ecbab",
+          "6ab17b36059c4e81dd76984d3b1d6de0392a92b358dad2b9fced4f67226f6be3",
+          "e628e3311902873a0c2eac685193e070154f4a57d48b509f54f845e49954504a",
+          "7909a9c478180ad5d26067a0dce1e4f6e43587917b289e8c2561b2a5f2a1d210",
+          "fe3b9a96db4f0bf06ea60f6077b6ab9966ce6c8b56204404382d1830971aba53",
+          "22a715785883bc28b5e531357ccd2fb039a08c068a12672909c14073fe8ce44d",
+          "d47bf7bb19a197dd0b11164851c1b004db232e4351eaa0f8eedb625eeef55d80",
+          "74e3e58161d6f7fb6f5ba5c8c003756d3e74ad37d1b652afd1049ead10ff7d19",
+          "6bc2c1cdb30dbb2223d2d36e21f09be3f1b4a75a8c5f9ee412989949c7d9c75a",
+          "eb7f935627157675b49fef1a94a6a126c6d8ab1e0183e2b589e4ae1b33712ad3",
+          "b48a87ae66e152f2d1ac409e42d0cad68fbafa033c226d8b15141437269f7595",
+          "5470ba28b5262d05d2876b2417e9e9a7d5ecafd3c00d50a9b8905f451b8b031a",
+          "2c81ee0b68775249aed552293e6090b74d838e17e199a399409fd9f89af4f96c",
+          "cd982ab580efc526259389e90899d847ada7f3e19ef92b697d0c2c6135d0557d",
+          "69e3afe1e96e8b7589252dd96ff322f7e6699e62822f95e6f1b28489ac9686cd",
+          "a7c2b6878afce4188c97250edb5937c939feb6569239f4936e002c190cf8843b",
+          "6520170b939835a2b4e623a9b07662c25d0a82c8eda58b0802d3f2a750b0837d",
+          "e283458bf3c1ddfe8cee267dac9269a24948620eb7497d33b10636e5dcb7f1ff",
+          "2011a2e41abcd3c7d2219c269e6da3c0e11b9512fe8821143f469f038b5f3837",
+          "9fdbe3fe994e7ba9fb1d9b4360d65758ae58e41929b97d8c7efc1ca6644bcab3",
+          "bf151f3d23e93bcdb79242c60af1a836c561fe84026365515106fb726e1e4892",
+          "1710c350de2c726635121be29f1d8dddf9da148b97dd5015af4f250fb60fcf50",
+          "0116a06cf54258f0273e56593624594c38d0441ee700309602c377413da3ba55",
+          "b67b495315541f61501e7e90875804bc6ba7045f1c9695fa37f86bfb05b30e9d",
+          "90759ba6f6a2065adf785ca26b27c96a9b23c7d6390005fc6038a9d1acedd0cc",
+          "2cdd1a18b7bff1a0ca0ca2449239c549b2fe52f23b5366ac821478268d55f5a1",
+          "905dc587ae47678859e0beb819e9fb0664c93299c74ac6a9e1b6f2a65f53c054",
+          "4c5ff2a77920640e8e29f73849c05f47d8f0a35714b5972bdc57f8b4bae5ce6a",
+          "a49d59650538fb3f7dd26a8b58691fe902379a898b471c7b06e2a182f0ddb85e",
+          "8b62d48707c83ec2181a85b16ca6c17c24be6fddfe7a65939090add8ddf50159",
+          "458820eed200f2953417ae155126e11f01434718e4d0b4f335b590c6c57ed03c",
+          "10328db5b40e732ca70dc7d31b92e46b8e4c2f683dee6290a4fe81b1ea2aaa63",
+          "858c2e6c25886d2014ad3b7418b784e6d3c1f914c8897a7dddda02435fa82843",
+          "b423060e978be88a56b7af5a809e8b3dab8b963bacf17018c7e38e70c91a82c8",
+          "5fe1e5c46c03a3719ea9b82cc3bd475f6e663d8e3a074c5c8247700c1f8acfb1",
+          "79f810656f496f729ec0ac729b4dfbe7e86af378df6460f970626796d72c48f7",
+          "e87dc983e4bf7d3e3880bf4330f7e92ce57268860792862409636288c2439bbb",
+          "dcb822c826f97d3d96550aed3d5c34d9fbb9b5d11dc4dfe314c7cc6c9b0780bc",
+          "7815eef739b832b297414757055b340a863cd570da652c77182a0610b071589d",
+          "fc791c470685ddb3f27496a665cbb22f6e839b21d42f519e698865d9b288f394",
+          "4fc9077a65d39362c109cc08b9984836d2ac939697ff6f023bcf42004fe08744",
+          "6731b2adc7501125a8a10a8003130663801ae6bc663cb7071adc9e994c4b3af7",
+          "adcb2cdadf08c83a44c5eae6979841cf215525dade2946c10dbf4c1b6213ea8e",
+          "37ab5c4be6ea4ff1e40373a7c1beeed139645284cde110872c4daf7551e0722d",
+          "fddb33c55d351aea9304666818835d48cedbffacfef141d708dc7eb06f413802",
+          "a77280502104fd022e490f7002a415d1626eada67679547e092826e17d640d57",
+          "693e68c4919ca6fa0f9d49886321ba8074b613baf3009dd07532c4e65780be52",
+          "8807ff5fe4ea4ff05c11952d49ae361ad5f715fad73daffc63ee531c40321bfd",
+          "f93fa3f92f27e9cdce3ac39f76c906e54282ffaf40fc4ccea85c9be791bcbf96",
+          "93405acc3e6ee3a28db49168272768a2e1204dc878d9e1ee3fc787a6038f2e65",
+          "ad8b936ba9cd44552aafac1d6f71befc7383e560fab901e1cc3885250d9872b3",
+          "3226cb23e63c087a50e4d045d49437cad7e37462e64b320b41773fa6a3160e7a",
+          "a5c89b5b31f184ade519811e4c7bb13b6dd264c6dd3cab829c0fa61e60d61e80",
+          "331ee707288c78ee93873c7e45fa78ecae270d49fcd2e7b2ba83e611f45382e6"
+        ],
+        "sample_rate": 24000,
+        "size": 28412588,
+        "source_manifest": "/Users/kimmireu/Desktop/Storage/public-procurement-management/output/qwen3_tts_audio/4과목_Qwen3-TTS_Sohee_manifest.json",
+        "source_request_fingerprint": "79eb47463ab04922caa0f6c04113a1474f749a96865bd18ec7ebf3670fdb125b",
+        "trailing_silence_ms": 0,
+        "verified_at": "2026-08-25T05:43:50+00:00"
+      }
+    },
+    "P02-C01": {
+      "adopted_existing": false,
+      "attempts": 4,
+      "chapter": 1,
+      "cleaned_chars": 13084,
+      "cleaned_sha256": "8464147bc935b4fccb317218b67366c66002966a3113703d1f7b9af8a7a0466b",
+      "completed_at": "2026-08-25T07:39:30+00:00",
+      "engine": "mlx-audio-qwen3-tts-custom-voice-direct-hf-bf16",
+      "error": null,
+      "expected_chunks": 94,
+      "output_path": "/Users/kimmireu/Desktop/Storage/public-procurement-management/output/qwen3_tts_audio/4과목_Part02_Chapter01_환경분석하기_Qwen3-TTS_Sohee.mp3",
+      "part": 2,
+      "profile": {
+        "batch_script_sha256": "8305b62facadd56929866a2d253766f24fe43925a04fa290b701ba45b14b04b6",
+        "engine": "mlx-audio-qwen3-tts-custom-voice-direct-hf-bf16",
+        "packages": {
+          "mlx": "0.32.0",
+          "mlx-audio": "0.5.0",
+          "mlx-metal": "0.32.0",
+          "transformers": "5.14.0"
+        },
+        "platform": "macOS-26.6.2-arm64-arm-64bit",
+        "python": "3.10.18",
+        "source_weights": "original-hugging-face-bfloat16"
+      },
+      "request_fingerprint": "657073e1d88eb39803709f42a9bfdccc9aa02c2ef3fbad748a12ca5a37f2b5c2",
+      "source_path": "/Users/kimmireu/Desktop/Storage/public-procurement-management/output/chapter_lectures/4과목/part02/chapter01.md",
+      "speech_chars": 13085,
+      "speech_path": "/Users/kimmireu/Desktop/Storage/public-procurement-management/output/qwen3_tts_audio/4과목_Part02_Chapter01_환경분석하기_대본.txt",
+      "speech_sha256": "10e012fde84f5222902f5d3066693180cecfd4262d05ca7c484fad7e9ff12026",
+      "started_at": "2026-08-25T07:38:42+00:00",
+      "status": "verified",
+      "title": "환경분석하기",
+      "updated_at": "2026-08-25T07:39:30+00:00",
+      "verification": {
+        "bit_rate": 128000,
+        "boundary_safe": true,
+        "boundary_silence": {
+          "boundary_clipping_risk": 0,
+          "expected_boundaries": 94,
+          "interior_window_seconds": 0.05,
+          "minimum_interval_seconds": 0.06,
+          "noise_threshold_db": -48,
+          "silence_intervals": 1693,
+          "verified_boundaries": 94
+        },
+        "cache_dir": "/Users/kimmireu/Desktop/Storage/public-procurement-management/output/qwen3_tts_audio/.4과목_Part02_Chapter01_환경분석하기_Qwen3-TTS_Sohee_qwen3tts_mlx_c408baa7de5b",
+        "cache_identity_sha256": "c408baa7de5b20f261c06b2f3ee5afc6151ae35985e0b826060735a889c8735a",
+        "channels": 1,
+        "codec": "mp3",
+        "duration_seconds": 2217.072,
+        "expected_output_duration_seconds": 2217.0200000000004,
+        "group_generations": [
+          {
+            "base_seed": 1234,
+            "batch_size": 3,
+            "mode": "base",
+            "seed_offset": 0,
+            "subgroups": [
+              {
+                "chunk_indices": [
+                  39,
+                  51,
+                  74
+                ],
+                "seed": 1234,
+                "subgroup_index": 0
+              }
+            ]
+          },
+          {
+            "base_seed": 1235,
+            "batch_size": 3,
+            "mode": "base",
+            "seed_offset": 0,
+            "subgroups": [
+              {
+                "chunk_indices": [
+                  84,
+                  29,
+                  35
+                ],
+                "seed": 1235,
+                "subgroup_index": 0
+              }
+            ]
+          },
+          {
+            "base_seed": 1236,
+            "batch_size": 3,
+            "mode": "base",
+            "seed_offset": 0,
+            "subgroups": [
+              {
+                "chunk_indices": [
+                  41,
+                  93,
+                  76
+                ],
+                "seed": 1236,
+                "subgroup_index": 0
+              }
+            ]
+          },
+          {
+            "base_seed": 1237,
+            "batch_size": 3,
+            "mode": "base",
+            "seed_offset": 0,
+            "subgroups": [
+              {
+                "chunk_indices": [
+                  62,
+                  68,
+                  92
+                ],
+                "seed": 1237,
+                "subgroup_index": 0
+              }
+            ]
+          },
+          {
+            "base_seed": 1238,
+            "batch_size": 3,
+            "mode": "base",
+            "seed_offset": 0,
+            "subgroups": [
+              {
+                "chunk_indices": [
+                  36,
+                  80,
+                  8
+                ],
+                "seed": 1238,
+                "subgroup_index": 0
+              }
+            ]
+          },
+          {
+            "base_seed": 1239,
+            "batch_size": 2,
+            "mode": "override",
+            "seed_offset": 10000,
+            "subgroups": [
+              {
+                "chunk_indices": [
+                  11,
+                  47
+                ],
+                "seed": 11239,
+                "subgroup_index": 0
+              },
+              {
+                "chunk_indices": [
+                  42
+                ],
+                "seed": 11240,
+                "subgroup_index": 1
+              }
+            ]
+          },
+          {
+            "base_seed": 1240,
+            "batch_size": 3,
+            "mode": "base",
+            "seed_offset": 0,
+            "subgroups": [
+              {
+                "chunk_indices": [
+                  83,
+                  54,
+                  60
+                ],
+                "seed": 1240,
+                "subgroup_index": 0
+              }
+            ]
+          },
+          {
+            "base_seed": 1241,
+            "batch_size": 3,
+            "mode": "base",
+            "seed_offset": 0,
+            "subgroups": [
+              {
+                "chunk_indices": [
+                  73,
+                  22,
+                  2
+                ],
+                "seed": 1241,
+                "subgroup_index": 0
+              }
+            ]
+          },
+          {
+            "base_seed": 1242,
+            "batch_size": 3,
+            "mode": "base",
+            "seed_offset": 0,
+            "subgroups": [
+              {
+                "chunk_indices": [
+                  26,
+                  34,
+                  25
+                ],
+                "seed": 1242,
+                "subgroup_index": 0
+              }
+            ]
+          },
+          {
+            "base_seed": 1243,
+            "batch_size": 3,
+            "mode": "base",
+            "seed_offset": 0,
+            "subgroups": [
+              {
+                "chunk_indices": [
+                  57,
+                  53,
+                  77
+                ],
+                "seed": 1243,
+                "subgroup_index": 0
+              }
+            ]
+          },
+          {
+            "base_seed": 1244,
+            "batch_size": 3,
+            "mode": "base",
+            "seed_offset": 0,
+            "subgroups": [
+              {
+                "chunk_indices": [
+                  86,
+                  13,
+                  61
+                ],
+                "seed": 1244,
+                "subgroup_index": 0
+              }
+            ]
+          },
+          {
+            "base_seed": 1245,
+            "batch_size": 3,
+            "mode": "base",
+            "seed_offset": 0,
+            "subgroups": [
+              {
+                "chunk_indices": [
+                  71,
+                  21,
+                  56
+                ],
+                "seed": 1245,
+                "subgroup_index": 0
+              }
+            ]
+          },
+          {
+            "base_seed": 1246,
+            "batch_size": 3,
+            "mode": "base",
+            "seed_offset": 0,
+            "subgroups": [
+              {
+                "chunk_indices": [
+                  87,
+                  10,
+                  59
+                ],
+                "seed": 1246,
+                "subgroup_index": 0
+              }
+            ]
+          },
+          {
+            "base_seed": 1247,
+            "batch_size": 3,
+            "mode": "base",
+            "seed_offset": 0,
+            "subgroups": [
+              {
+                "chunk_indices": [
+                  6,
+                  24,
+                  46
+                ],
+                "seed": 1247,
+                "subgroup_index": 0
+              }
+            ]
+          },
+          {
+            "base_seed": 1248,
+            "batch_size": 3,
+            "mode": "base",
+            "seed_offset": 0,
+            "subgroups": [
+              {
+                "chunk_indices": [
+                  81,
+                  88,
+                  20
+                ],
+                "seed": 1248,
+                "subgroup_index": 0
+              }
+            ]
+          },
+          {
+            "base_seed": 1249,
+            "batch_size": 3,
+            "mode": "base",
+            "seed_offset": 0,
+            "subgroups": [
+              {
+                "chunk_indices": [
+                  1,
+                  48,
+                  17
+                ],
+                "seed": 1249,
+                "subgroup_index": 0
+              }
+            ]
+          },
+          {
+            "base_seed": 1250,
+            "batch_size": 3,
+            "mode": "base",
+            "seed_offset": 0,
+            "subgroups": [
+              {
+                "chunk_indices": [
+                  58,
+                  79,
+                  28
+                ],
+                "seed": 1250,
+                "subgroup_index": 0
+              }
+            ]
+          },
+          {
+            "base_seed": 1251,
+            "batch_size": 3,
+            "mode": "base",
+            "seed_offset": 0,
+            "subgroups": [
+              {
+                "chunk_indices": [
+                  31,
+                  7,
+                  18
+                ],
+                "seed": 1251,
+                "subgroup_index": 0
+              }
+            ]
+          },
+          {
+            "base_seed": 1252,
+            "batch_size": 2,
+            "mode": "override",
+            "seed_offset": 10000,
+            "subgroups": [
+              {
+                "chunk_indices": [
+                  37,
+                  19
+                ],
+                "seed": 11252,
+                "subgroup_index": 0
+              },
+              {
+                "chunk_indices": [
+                  30
+                ],
+                "seed": 11253,
+                "subgroup_index": 1
+              }
+            ]
+          },
+          {
+            "base_seed": 1253,
+            "batch_size": 3,
+            "mode": "base",
+            "seed_offset": 0,
+            "subgroups": [
+              {
+                "chunk_indices": [
+                  43,
+                  44,
+                  45
+                ],
+                "seed": 1253,
+                "subgroup_index": 0
+              }
+            ]
+          },
+          {
+            "base_seed": 1254,
+            "batch_size": 3,
+            "mode": "base",
+            "seed_offset": 0,
+            "subgroups": [
+              {
+                "chunk_indices": [
+                  33,
+                  49,
+                  65
+                ],
+                "seed": 1254,
+                "subgroup_index": 0
+              }
+            ]
+          },
+          {
+            "base_seed": 1255,
+            "batch_size": 2,
+            "mode": "base",
+            "seed_offset": 0,
+            "subgroups": [
+              {
+                "chunk_indices": [
+                  55,
+                  23
+                ],
+                "seed": 1255,
+                "subgroup_index": 0
+              }
+            ]
+          },
+          {
+            "base_seed": 1256,
+            "batch_size": 3,
+            "mode": "base",
+            "seed_offset": 0,
+            "subgroups": [
+              {
+                "chunk_indices": [
+                  32,
+                  66,
+                  70
+                ],
+                "seed": 1256,
+                "subgroup_index": 0
+              }
+            ]
+          },
+          {
+            "base_seed": 1257,
+            "batch_size": 3,
+            "mode": "base",
+            "seed_offset": 0,
+            "subgroups": [
+              {
+                "chunk_indices": [
+                  85,
+                  40,
+                  78
+                ],
+                "seed": 1257,
+                "subgroup_index": 0
+              }
+            ]
+          },
+          {
+            "base_seed": 1258,
+            "batch_size": 3,
+            "mode": "base",
+            "seed_offset": 0,
+            "subgroups": [
+              {
+                "chunk_indices": [
+                  67,
+                  69,
+                  89
+                ],
+                "seed": 1258,
+                "subgroup_index": 0
+              }
+            ]
+          },
+          {
+            "base_seed": 1259,
+            "batch_size": 3,
+            "mode": "base",
+            "seed_offset": 0,
+            "subgroups": [
+              {
+                "chunk_indices": [
+                  52,
+                  63,
+                  9
+                ],
+                "seed": 1259,
+                "subgroup_index": 0
+              }
+            ]
+          },
+          {
+            "base_seed": 1260,
+            "batch_size": 3,
+            "mode": "base",
+            "seed_offset": 0,
+            "subgroups": [
+              {
+                "chunk_indices": [
+                  12,
+                  50,
+                  27
+                ],
+                "seed": 1260,
+                "subgroup_index": 0
+              }
+            ]
+          },
+          {
+            "base_seed": 1261,
+            "batch_size": 3,
+            "mode": "base",
+            "seed_offset": 0,
+            "subgroups": [
+              {
+                "chunk_indices": [
+                  5,
+                  90,
+                  14
+                ],
+                "seed": 1261,
+                "subgroup_index": 0
+              }
+            ]
+          },
+          {
+            "base_seed": 1262,
+            "batch_size": 1,
+            "mode": "base",
+            "seed_offset": 0,
+            "subgroups": [
+              {
+                "chunk_indices": [
+                  38
+                ],
+                "seed": 1262,
+                "subgroup_index": 0
+              }
+            ]
+          },
+          {
+            "base_seed": 1263,
+            "batch_size": 3,
+            "mode": "base",
+            "seed_offset": 0,
+            "subgroups": [
+              {
+                "chunk_indices": [
+                  72,
+                  15,
+                  3
+                ],
+                "seed": 1263,
+                "subgroup_index": 0
+              }
+            ]
+          },
+          {
+            "base_seed": 1264,
+            "batch_size": 3,
+            "mode": "base",
+            "seed_offset": 0,
+            "subgroups": [
+              {
+                "chunk_indices": [
+                  64,
+                  16,
+                  4
+                ],
+                "seed": 1264,
+                "subgroup_index": 0
+              }
+            ]
+          },
+          {
+            "base_seed": 1265,
+            "batch_size": 1,
+            "mode": "base",
+            "seed_offset": 0,
+            "subgroups": [
+              {
+                "chunk_indices": [
+                  75
+                ],
+                "seed": 1265,
+                "subgroup_index": 0
+              }
+            ]
+          },
+          {
+            "base_seed": 1266,
+            "batch_size": 3,
+            "mode": "base",
+            "seed_offset": 0,
+            "subgroups": [
+              {
+                "chunk_indices": [
+                  91,
+                  82,
+                  94
+                ],
+                "seed": 1266,
+                "subgroup_index": 0
+              }
+            ]
+          }
+        ],
+        "merge_receipt": {
+          "created_at": "2026-08-25T07:39:17+00:00",
+          "output_sha256": "28888b36c0fdf948d50db99326fde52c4a3155255eb6c562b5932084407601c1",
+          "path": "/Users/kimmireu/Desktop/Storage/public-procurement-management/output/qwen3_tts_audio/.4과목_Part02_Chapter01_환경분석하기_Qwen3-TTS_Sohee_qwen3tts_mlx_c408baa7de5b/merge.commit.json",
+          "sha256": "c90c45cba92868a06bf6e25350c4aef4de2c28ce38f6277921ce00e18d5c84b1"
+        },
+        "observed_chunks": 94,
+        "observed_groups": 33,
+        "output_mtime_ns": 1787643555311196252,
+        "output_sha256": "28888b36c0fdf948d50db99326fde52c4a3155255eb6c562b5932084407601c1",
+        "pause_count": 94,
+        "pause_ms": 250,
+        "raw_chunk_duration_seconds": 2193.5200000000004,
+        "raw_chunk_frames": [
+          583680,
+          518400,
+          432000,
+          384000,
+          428160,
+          610560,
+          723840,
+          650880,
+          437760,
+          702720,
+          581760,
+          481920,
+          604800,
+          501120,
+          456960,
+          322560,
+          577920,
+          583680,
+          529920,
+          554880,
+          566400,
+          526080,
+          503040,
+          595200,
+          608640,
+          560640,
+          426240,
+          610560,
+          754560,
+          604800,
+          518400,
+          526080,
+          602880,
+          595200,
+          696960,
+          635520,
+          524160,
+          418560,
+          564480,
+          478080,
+          673920,
+          687360,
+          631680,
+          570240,
+          543360,
+          566400,
+          702720,
+          547200,
+          554880,
+          435840,
+          560640,
+          595200,
+          633600,
+          564480,
+          451200,
+          480000,
+          551040,
+          558720,
+          531840,
+          695040,
+          568320,
+          683520,
+          501120,
+          376320,
+          491520,
+          522240,
+          531840,
+          789120,
+          620160,
+          589440,
+          516480,
+          433920,
+          537600,
+          650880,
+          412800,
+          625920,
+          754560,
+          620160,
+          541440,
+          810240,
+          579840,
+          364800,
+          624000,
+          627840,
+          508800,
+          579840,
+          568320,
+          606720,
+          539520,
+          395520,
+          384000,
+          712320,
+          668160,
+          387840
+        ],
+        "raw_chunk_sha256s": [
+          "54abd4359cfeb6a4d9ce29a260ad7b3939b8523aa285fa69458f9689b36b52ab",
+          "0d8c0b52f178794e674681cb8597b29cea5453047b8b8cd4996654f1f5205a63",
+          "72ff3f9d325a79bc673e3c1ded31c02d03c8ac9eb33aecf865c4318eb7090f42",
+          "77e85672690e72b20299c4cff81315a08ff50d823ad80ad31757d08877aee60f",
+          "7366545afbe6a18fe3f44ad9f0e84ff3e6a61126594915afc83710d69c1feab8",
+          "e4d6caa1244bc1f9d53e51000a2e12b26947c11cbd18c152ceae406f87046a43",
+          "8e75443138465adfeff6bc64b4a4e69f4e1b91cb75ed246de6adc5226b0d29d7",
+          "a7210e60581629fab176dddf36c6c8fcb0e1d2f665be0974c7361fe0a5ec4510",
+          "452fd33a4d70420b994dfb84e0eb49e000e97c088bce0a66da1fccc7d60c11fb",
+          "8fdb72b2abc8e46d1d1a4a680cb0a9e0da7e681d33dcd9859235882a7605e7ae",
+          "89136b8fb13da99d3aa39aff09dbb6f9914aa8c4032aadfbc51d91d65aef8c87",
+          "ec095e083594f3c808347a7009c5cb2bf3366b3de17fd31a48f1ea87b123202d",
+          "cd7b228ebd13b4665a7350f02f27d8db107788a195ee21b20191db75094f88fa",
+          "d55db980ae6a6f2707e7c64869990a5be39c06861cc25903c67bc4ae3e068ae4",
+          "98498f2e7f68726d0a6f31c10676b452816de45c45d55cfa17e1ea478a1e8e4c",
+          "046fa5368026033a9412571e871f360d92b9e8f4e15864fc923958426a54bbc3",
+          "fae66be1172132d9ec3cb888de2abf466e93c384beb3aed1228ff9b3f00982ef",
+          "94811f06ef86809f5e7313295aacf4d6185487ce21e281a9f11b801b74e827cf",
+          "1d81e9a7e0c4f86ce59eb420e40e8d39416cf8dde345f828069181905a505604",
+          "5e5fde078608a7feb9437321ddea5f7e7f673044e66e801092dbe7ae4519a47f",
+          "bd193854cd22b82fb735fc834ad07980eac0b983a51446c1837fb490f94d659e",
+          "9f73b8db8a01bcb19a2f68c54b50893abef6e531ef4d6b5da780ec52cd83b4ab",
+          "b3b3009b3ed095b7021e5a14c24295bee635a9d291804623db6a2205ea07a5b3",
+          "36fa7eebd1e8b307646f296e118d5b32a0a4a94d9cdf7a575219b432ad58aa28",
+          "dca9b0f1a2836bb08f7370278a0d087f6d5efadecb3b8fc10d63cfa008f660a5",
+          "925a38b3c955fbaf97f59690d4553dfcc3483bcf341b32085d03bc03f9b67139",
+          "4f5855796628b9eca04113b376c65969df4b528f47c4868cdac9707c3554dd45",
+          "606191e765a433955b8ba89117df45138fe90a1aa3318cc627c322c7aba12b62",
+          "1bd1b3927b11ca2fc4533c76f668ce3e6374ec1e0bbc10113850110418a1882c",
+          "3e227489a4fd7382025bca6ccbbdc0cf922f1cb904eadb491a88e6f1d89e2394",
+          "a8e689b474dffe66d49ab2c318d8bfee0f036330674c7a5c3e03b67e39a1c5d3",
+          "da5665a308a892c65191526c9b156895cd104244d23f072938b4441781b0a8b0",
+          "2162cb4cf9197005bb3f672dcb8c8709d63edce776b757a3934cc5121c30c388",
+          "86740465c64107a8b61febfad1acd1a792d53110b41bb634c19902417f69027d",
+          "146b43b07153ac65e7c505b08cbf4b70d5408e7cdb8334da87ab7eaf260c8413",
+          "1d3b2d4f4bb272af27f5251dc062e137cf099c54286996db6dbf5fb08ed7f7ae",
+          "55c9dd64e47c60e658be261274ac0beb673beb530f1c3bfab7875c59baae46a9",
+          "43bf949633f65dbccba73a00ef66e690db51af7b49b18e800b9840244bdbce70",
+          "8311222165e69500763ddb1a5663ad66205a9f029c9b6afef0137098496f8f29",
+          "45ab307602fc09d59685a8e7c9d96e40c5d52fe51d1c8a878468035e50212749",
+          "1ebaf0db7fd5b9de05d1681b185b1d3f0a9a303bc8a503bf0535bd2acd154071",
+          "6db4ca3b14cb8bfeae2a629aaa762e583162ae901c8bf625874416b894250f7d",
+          "8700475d955b72591b6066f7b10f9a9f38654100a4ebfd429598458383c104e7",
+          "f5b8acabadf467ad9a886d7093f69477bd4e4bfc5f2b1ff34b74dc490ea03468",
+          "05da3af1fb768fe1a20bcb826c3d7dacf0e29267a566002869ab192d9b7b0622",
+          "82437adba7f83a10e342da17b5396079cdb25f31d5d420b4cdbd79e215bf3222",
+          "f37996dcc5925f087d528d1dfd1b1848592380b45303a7950cd5ea167de0ae37",
+          "148dee33e95dd8eea23f525b44a0acee30074a2c3a7939d3d1ba8d0cf4f65216",
+          "abd3243e4500050f0803abfc15d159c0f95c62ac5452a6e241d35e15c5b099f4",
+          "14c1c9160f1f33b12257d9ec5c1c0cf671c69d82935af57d1918b2e05ab1fef3",
+          "81220c7834ee0f818d167d12843110a5c93be76bdb123832e74e93426bcb8f0d",
+          "409e8566fcf9f8ee5cb33b2fc837a87da9261a12c205b5ceb1828415f043749d",
+          "ef655272399679c45ec2143ac9afd04d3abcde0c6a3cdc33b64b04315695d212",
+          "736f536c15e62e11305bc5221bb6947ae1762cac3046df355ddd0ffc4d1fa8b6",
+          "f2736edcb86a77e5db7766e8a32678027465ea1b66bb8b87b22565e7e90bf1bf",
+          "6c718687867e504dafffd02e42782d927486bee2fd906115108b99f33a88ed09",
+          "1b4bd31b44903237d6c435ee92723aa75d62adad123cd993cf32a90689cf59b4",
+          "a4fb9bcc2ef6fc63cba0bef4d8718e7144e953803aa94e02e43b8c155334c2bf",
+          "4ff500e6b55fa1d2c559950b5f19cdcebcafd6bb4a3c37648af052ace7c3482c",
+          "2681722d4bbc3eea760ad008b291f02034f250400c5db7c898e2863a96f19033",
+          "61e982c79d0635a214ed8cc19bc88b04619023a40fb2c57b62ba356bbbc6b3e0",
+          "898569d79334059b90a47f31934f572ec51daba368d7cdcc4a2fafa001ae2a25",
+          "dabb21dc73e513fdd96ccd1df68905464ae4494162cbc7f7177e7a1875f7a232",
+          "cf1adf7d5fcc59d25a94b260c9fed295a2656327e7d882c0329b89e5647a7d16",
+          "1443a39417093a1139ff11cd4226113a86293f5bd4e9931cf0d3fb735265216d",
+          "8be1beabc56c023980fa9b66f55f34accb823a4f1babda643732c173a1dc5edc",
+          "d38c6b2752d6e1cc62239bcac41b99b6c3090844e3de5800ad611d88d4480091",
+          "a6a7c14356dde29c26d764790b945a65741776187415883fdc029df3d21fa9fb",
+          "9043c55d295413d4e6f3a00c36388db96541f6bf6aac62216fcf74e66ee43d59",
+          "65b71e68e32f0e3164eaed9ebc812eb1936e13ec340691b9259a772950fdc2e9",
+          "5482d169ff6acda7b40bbad6e189c977d4c94a7ea1c6d684db23761be0314730",
+          "a58cfe0c42fac1d34b78d914a7ff028000f4e6e599c4dd29fff59f19f6add559",
+          "9797de1e2a60cfffb0d2ec04150be13dd621d38a200e283e7caacfe03f12119e",
+          "1b4282d5765857e8c5ec637377af2d01d2690918e7ccbe3dde4d62d7e603aa8d",
+          "6ea8a6f18a0950216264152b7866c2c2aa784a845c92e0d63d0283bf72679e1f",
+          "4d3eadea252e66940c250fa0d1b8b12dddab738c8f8481e5142c4d0d8a272e0f",
+          "a2c20c6df3b020f4104d3f793dccee080410c104e671ed9487926a7d196990c2",
+          "b2d380bc4a90c23cbebdf0ba6cd542a77cfddf99d801d0907d1963f5b7cf7071",
+          "c04a30245dfccb68f5a5f2363dfb7cb686eb9fb9f59e92d220d636af40e996aa",
+          "71cdefe38483438ae64d23e381a8a059e887701323479ee5d4473f3bf6fab227",
+          "1c579a2f258bb69f34214fddeec685aac2351e6ebfdb76bad668534a50034996",
+          "c34f88eb0c04160da92a2a77f696fbd5b3ee0316b115ddefae95ed695ce31417",
+          "10c08e230bd404fc3cbae161ee1391912e24e38e5f3917c446c5a4f65c14a145",
+          "ac0091b12a3cb5520b42724f9ced3b8f46281c75269008a12be6be1ad6719407",
+          "eb3bd051322909ef67bccf0193bae1a2747a9f15b918552cfb6a662e524e494e",
+          "096b077b6c547ed7af96f893544e19ac0a8bcc602180379078667327e6f33c6f",
+          "e23140ba139f8c1aeb613045292049047fd13339abedf43660e9b98a62e509bd",
+          "e8f331e8ada108094b000d0ccacd3b1f18e4fb0e417a86a7d915e7ff29d85ec4",
+          "f7e8a462171591857711136ba5037f3efddb0f5f2b09fe031588d22ba2612d5f",
+          "cd27ba347b4b5daaab743b0e9328cd135b226bd27917c307c84a4b898dca4027",
+          "65b697497f89bad079af1a65af1e40563ed5eb5d48a932089c89abf2a40a4408",
+          "196a917f599dce3d64af8e6b2c199853f2b9d551d226420af20b5f2b23d10c36",
+          "ff9b805689d2ee13f2a6079e090630fa4641d178fe776fd59e4a16c5ba324e8d",
+          "1cd3700d1ed2a97f1000d23fb02623ac95926640647cf290d2fe435aca5e7483"
+        ],
+        "raw_digital_clipping_samples": 0,
+        "sample_rate": 24000,
+        "size": 35473580,
+        "tail_silence": {
+          "end_clipping_risk": 0,
+          "frames": 4800,
+          "peak_limit": 512,
+          "peak_pcm16": 0,
+          "probe_ms": 200,
+          "rms_limit": 64.0,
+          "rms_pcm16": 0.0
+        },
+        "trailing_silence_ms": 250,
+        "verified_at": "2026-08-25T07:39:30+00:00"
+      }
+    },
+    "P02-C02": {
+      "adopted_existing": false,
+      "attempts": 3,
+      "chapter": 2,
+      "cleaned_chars": 12664,
+      "cleaned_sha256": "0eafd147f4eaedfa965fd3e22c715ab7518fb57999e826d36560c293e72fd492",
+      "completed_at": "2026-08-25T10:00:41+00:00",
+      "engine": "mlx-audio-qwen3-tts-custom-voice-direct-hf-bf16",
+      "error": null,
+      "expected_chunks": 90,
+      "output_path": "/Users/kimmireu/Desktop/Storage/public-procurement-management/output/qwen3_tts_audio/4과목_Part02_Chapter02_조달_수요정보_수집하기_Qwen3-TTS_Sohee.mp3",
+      "part": 2,
+      "profile": {
+        "batch_script_sha256": "8305b62facadd56929866a2d253766f24fe43925a04fa290b701ba45b14b04b6",
+        "engine": "mlx-audio-qwen3-tts-custom-voice-direct-hf-bf16",
+        "packages": {
+          "mlx": "0.32.0",
+          "mlx-audio": "0.5.0",
+          "mlx-metal": "0.32.0",
+          "transformers": "5.14.0"
+        },
+        "platform": "macOS-26.6.2-arm64-arm-64bit",
+        "python": "3.10.18",
+        "source_weights": "original-hugging-face-bfloat16"
+      },
+      "request_fingerprint": "2e464a3ae62cb3a7855ab50ccdf8d541ba6a3156ab6dafaa55e2744df8cb5a30",
+      "source_path": "/Users/kimmireu/Desktop/Storage/public-procurement-management/output/chapter_lectures/4과목/part02/chapter02.md",
+      "speech_chars": 12665,
+      "speech_path": "/Users/kimmireu/Desktop/Storage/public-procurement-management/output/qwen3_tts_audio/4과목_Part02_Chapter02_조달_수요정보_수집하기_대본.txt",
+      "speech_sha256": "f870d453f03c76f9bbe32973bed6b0900a29a6e7029c69d58635e0d54ab8c091",
+      "started_at": "2026-08-25T09:59:55+00:00",
+      "status": "verified",
+      "title": "조달 수요정보 수집하기",
+      "updated_at": "2026-08-25T10:00:41+00:00",
+      "verification": {
+        "bit_rate": 128000,
+        "boundary_safe": true,
+        "boundary_silence": {
+          "boundary_clipping_risk": 0,
+          "expected_boundaries": 90,
+          "interior_window_seconds": 0.05,
+          "minimum_interval_seconds": 0.06,
+          "noise_threshold_db": -48,
+          "silence_intervals": 1583,
+          "verified_boundaries": 90
+        },
+        "cache_dir": "/Users/kimmireu/Desktop/Storage/public-procurement-management/output/qwen3_tts_audio/.4과목_Part02_Chapter02_조달_수요정보_수집하기_Qwen3-TTS_Sohee_qwen3tts_mlx_59cc9c4023f9",
+        "cache_identity_sha256": "59cc9c4023f978b62bfc029da4581bf1922bb859a565b91864968d8b1a40a42d",
+        "channels": 1,
+        "codec": "mp3",
+        "duration_seconds": 2127.12,
+        "expected_output_duration_seconds": 2127.06,
+        "group_generations": [
+          {
+            "base_seed": 1234,
+            "batch_size": 3,
+            "mode": "base",
+            "seed_offset": 0,
+            "subgroups": [
+              {
+                "chunk_indices": [
+                  68,
+                  35,
+                  87
+                ],
+                "seed": 1234,
+                "subgroup_index": 0
+              }
+            ]
+          },
+          {
+            "base_seed": 1235,
+            "batch_size": 3,
+            "mode": "base",
+            "seed_offset": 0,
+            "subgroups": [
+              {
+                "chunk_indices": [
+                  89,
+                  19,
+                  78
+                ],
+                "seed": 1235,
+                "subgroup_index": 0
+              }
+            ]
+          },
+          {
+            "base_seed": 1236,
+            "batch_size": 3,
+            "mode": "base",
+            "seed_offset": 0,
+            "subgroups": [
+              {
+                "chunk_indices": [
+                  4,
+                  47,
+                  21
+                ],
+                "seed": 1236,
+                "subgroup_index": 0
+              }
+            ]
+          },
+          {
+            "base_seed": 1237,
+            "batch_size": 3,
+            "mode": "base",
+            "seed_offset": 0,
+            "subgroups": [
+              {
+                "chunk_indices": [
+                  65,
+                  33,
+                  71
+                ],
+                "seed": 1237,
+                "subgroup_index": 0
+              }
+            ]
+          },
+          {
+            "base_seed": 1238,
+            "batch_size": 3,
+            "mode": "base",
+            "seed_offset": 0,
+            "subgroups": [
+              {
+                "chunk_indices": [
+                  85,
+                  14,
+                  20
+                ],
+                "seed": 1238,
+                "subgroup_index": 0
+              }
+            ]
+          },
+          {
+            "base_seed": 1239,
+            "batch_size": 3,
+            "mode": "base",
+            "seed_offset": 0,
+            "subgroups": [
+              {
+                "chunk_indices": [
+                  6,
+                  46,
+                  70
+                ],
+                "seed": 1239,
+                "subgroup_index": 0
+              }
+            ]
+          },
+          {
+            "base_seed": 1240,
+            "batch_size": 3,
+            "mode": "base",
+            "seed_offset": 0,
+            "subgroups": [
+              {
+                "chunk_indices": [
+                  58,
+                  18,
+                  49
+                ],
+                "seed": 1240,
+                "subgroup_index": 0
+              }
+            ]
+          },
+          {
+            "base_seed": 1241,
+            "batch_size": 3,
+            "mode": "base",
+            "seed_offset": 0,
+            "subgroups": [
+              {
+                "chunk_indices": [
+                  52,
+                  59,
+                  75
+                ],
+                "seed": 1241,
+                "subgroup_index": 0
+              }
+            ]
+          },
+          {
+            "base_seed": 1242,
+            "batch_size": 3,
+            "mode": "base",
+            "seed_offset": 0,
+            "subgroups": [
+              {
+                "chunk_indices": [
+                  15,
+                  43,
+                  72
+                ],
+                "seed": 1242,
+                "subgroup_index": 0
+              }
+            ]
+          },
+          {
+            "base_seed": 1243,
+            "batch_size": 3,
+            "mode": "base",
+            "seed_offset": 0,
+            "subgroups": [
+              {
+                "chunk_indices": [
+                  76,
+                  9,
+                  32
+                ],
+                "seed": 1243,
+                "subgroup_index": 0
+              }
+            ]
+          },
+          {
+            "base_seed": 1244,
+            "batch_size": 3,
+            "mode": "base",
+            "seed_offset": 0,
+            "subgroups": [
+              {
+                "chunk_indices": [
+                  36,
+                  41,
+                  37
+                ],
+                "seed": 1244,
+                "subgroup_index": 0
+              }
+            ]
+          },
+          {
+            "base_seed": 1245,
+            "batch_size": 3,
+            "mode": "base",
+            "seed_offset": 0,
+            "subgroups": [
+              {
+                "chunk_indices": [
+                  42,
+                  57,
+                  38
+                ],
+                "seed": 1245,
+                "subgroup_index": 0
+              }
+            ]
+          },
+          {
+            "base_seed": 1246,
+            "batch_size": 2,
+            "mode": "base",
+            "seed_offset": 0,
+            "subgroups": [
+              {
+                "chunk_indices": [
+                  45,
+                  74
+                ],
+                "seed": 1246,
+                "subgroup_index": 0
+              }
+            ]
+          },
+          {
+            "base_seed": 1247,
+            "batch_size": 3,
+            "mode": "base",
+            "seed_offset": 0,
+            "subgroups": [
+              {
+                "chunk_indices": [
+                  3,
+                  53,
+                  56
+                ],
+                "seed": 1247,
+                "subgroup_index": 0
+              }
+            ]
+          },
+          {
+            "base_seed": 1248,
+            "batch_size": 3,
+            "mode": "base",
+            "seed_offset": 0,
+            "subgroups": [
+              {
+                "chunk_indices": [
+                  51,
+                  73,
+                  77
+                ],
+                "seed": 1248,
+                "subgroup_index": 0
+              }
+            ]
+          },
+          {
+            "base_seed": 1249,
+            "batch_size": 3,
+            "mode": "base",
+            "seed_offset": 0,
+            "subgroups": [
+              {
+                "chunk_indices": [
+                  88,
+                  60,
+                  66
+                ],
+                "seed": 1249,
+                "subgroup_index": 0
+              }
+            ]
+          },
+          {
+            "base_seed": 1250,
+            "batch_size": 3,
+            "mode": "base",
+            "seed_offset": 0,
+            "subgroups": [
+              {
+                "chunk_indices": [
+                  67,
+                  79,
+                  27
+                ],
+                "seed": 1250,
+                "subgroup_index": 0
+              }
+            ]
+          },
+          {
+            "base_seed": 1251,
+            "batch_size": 3,
+            "mode": "base",
+            "seed_offset": 0,
+            "subgroups": [
+              {
+                "chunk_indices": [
+                  69,
+                  1,
+                  7
+                ],
+                "seed": 1251,
+                "subgroup_index": 0
+              }
+            ]
+          },
+          {
+            "base_seed": 1252,
+            "batch_size": 3,
+            "mode": "base",
+            "seed_offset": 0,
+            "subgroups": [
+              {
+                "chunk_indices": [
+                  55,
+                  34,
+                  40
+                ],
+                "seed": 1252,
+                "subgroup_index": 0
+              }
+            ]
+          },
+          {
+            "base_seed": 1253,
+            "batch_size": 3,
+            "mode": "base",
+            "seed_offset": 0,
+            "subgroups": [
+              {
+                "chunk_indices": [
+                  23,
+                  44,
+                  31
+                ],
+                "seed": 1253,
+                "subgroup_index": 0
+              }
+            ]
+          },
+          {
+            "base_seed": 1254,
+            "batch_size": 3,
+            "mode": "base",
+            "seed_offset": 0,
+            "subgroups": [
+              {
+                "chunk_indices": [
+                  61,
+                  39,
+                  54
+                ],
+                "seed": 1254,
+                "subgroup_index": 0
+              }
+            ]
+          },
+          {
+            "base_seed": 1255,
+            "batch_size": 3,
+            "mode": "base",
+            "seed_offset": 0,
+            "subgroups": [
+              {
+                "chunk_indices": [
+                  64,
+                  29,
+                  24
+                ],
+                "seed": 1255,
+                "subgroup_index": 0
+              }
+            ]
+          },
+          {
+            "base_seed": 1256,
+            "batch_size": 1,
+            "mode": "base",
+            "seed_offset": 0,
+            "subgroups": [
+              {
+                "chunk_indices": [
+                  50
+                ],
+                "seed": 1256,
+                "subgroup_index": 0
+              }
+            ]
+          },
+          {
+            "base_seed": 1257,
+            "batch_size": 3,
+            "mode": "base",
+            "seed_offset": 0,
+            "subgroups": [
+              {
+                "chunk_indices": [
+                  5,
+                  16,
+                  48
+                ],
+                "seed": 1257,
+                "subgroup_index": 0
+              }
+            ]
+          },
+          {
+            "base_seed": 1258,
+            "batch_size": 3,
+            "mode": "base",
+            "seed_offset": 0,
+            "subgroups": [
+              {
+                "chunk_indices": [
+                  30,
+                  86,
+                  12
+                ],
+                "seed": 1258,
+                "subgroup_index": 0
+              }
+            ]
+          },
+          {
+            "base_seed": 1259,
+            "batch_size": 3,
+            "mode": "base",
+            "seed_offset": 0,
+            "subgroups": [
+              {
+                "chunk_indices": [
+                  80,
+                  84,
+                  17
+                ],
+                "seed": 1259,
+                "subgroup_index": 0
+              }
+            ]
+          },
+          {
+            "base_seed": 1260,
+            "batch_size": 2,
+            "mode": "override",
+            "seed_offset": 10000,
+            "subgroups": [
+              {
+                "chunk_indices": [
+                  22,
+                  26
+                ],
+                "seed": 11260,
+                "subgroup_index": 0
+              },
+              {
+                "chunk_indices": [
+                  8
+                ],
+                "seed": 11261,
+                "subgroup_index": 1
+              }
+            ]
+          },
+          {
+            "base_seed": 1261,
+            "batch_size": 3,
+            "mode": "base",
+            "seed_offset": 0,
+            "subgroups": [
+              {
+                "chunk_indices": [
+                  13,
+                  25,
+                  62
+                ],
+                "seed": 1261,
+                "subgroup_index": 0
+              }
+            ]
+          },
+          {
+            "base_seed": 1262,
+            "batch_size": 3,
+            "mode": "base",
+            "seed_offset": 0,
+            "subgroups": [
+              {
+                "chunk_indices": [
+                  11,
+                  82,
+                  83
+                ],
+                "seed": 1262,
+                "subgroup_index": 0
+              }
+            ]
+          },
+          {
+            "base_seed": 1263,
+            "batch_size": 3,
+            "mode": "base",
+            "seed_offset": 0,
+            "subgroups": [
+              {
+                "chunk_indices": [
+                  81,
+                  90,
+                  10
+                ],
+                "seed": 1263,
+                "subgroup_index": 0
+              }
+            ]
+          },
+          {
+            "base_seed": 1264,
+            "batch_size": 2,
+            "mode": "base",
+            "seed_offset": 0,
+            "subgroups": [
+              {
+                "chunk_indices": [
+                  28,
+                  2
+                ],
+                "seed": 1264,
+                "subgroup_index": 0
+              }
+            ]
+          },
+          {
+            "base_seed": 1265,
+            "batch_size": 1,
+            "mode": "base",
+            "seed_offset": 0,
+            "subgroups": [
+              {
+                "chunk_indices": [
+                  63
+                ],
+                "seed": 1265,
+                "subgroup_index": 0
+              }
+            ]
+          }
+        ],
+        "merge_receipt": {
+          "created_at": "2026-08-25T10:00:28+00:00",
+          "output_sha256": "d8dbc0770a9a059de7f870809561bce12ee696ec4db17a533f7d851d05472fa5",
+          "path": "/Users/kimmireu/Desktop/Storage/public-procurement-management/output/qwen3_tts_audio/.4과목_Part02_Chapter02_조달_수요정보_수집하기_Qwen3-TTS_Sohee_qwen3tts_mlx_59cc9c4023f9/merge.commit.json",
+          "sha256": "808d6b88019cd07e1b6f075718c96b0edc9c178c9cc54297d6fd65d8390b30c2"
+        },
+        "observed_chunks": 90,
+        "observed_groups": 32,
+        "output_mtime_ns": 1787652026643419795,
+        "output_sha256": "d8dbc0770a9a059de7f870809561bce12ee696ec4db17a533f7d851d05472fa5",
+        "pause_count": 90,
+        "pause_ms": 250,
+        "raw_chunk_duration_seconds": 2104.56,
+        "raw_chunk_frames": [
+          560640,
+          303360,
+          552960,
+          668160,
+          451200,
+          585600,
+          589440,
+          468480,
+          720000,
+          422400,
+          441600,
+          441600,
+          416640,
+          539520,
+          681600,
+          566400,
+          672000,
+          718080,
+          670080,
+          637440,
+          608640,
+          554880,
+          468480,
+          547200,
+          489600,
+          437760,
+          493440,
+          307200,
+          497280,
+          514560,
+          543360,
+          612480,
+          670080,
+          672000,
+          599040,
+          503040,
+          645120,
+          648960,
+          568320,
+          556800,
+          564480,
+          577920,
+          533760,
+          541440,
+          520320,
+          529920,
+          696960,
+          524160,
+          572160,
+          453120,
+          597120,
+          608640,
+          606720,
+          501120,
+          583680,
+          556800,
+          508800,
+          577920,
+          597120,
+          541440,
+          445440,
+          439680,
+          326400,
+          585600,
+          652800,
+          537600,
+          633600,
+          687360,
+          691200,
+          612480,
+          616320,
+          731520,
+          716160,
+          666240,
+          723840,
+          547200,
+          549120,
+          714240,
+          720000,
+          526080,
+          422400,
+          449280,
+          391680,
+          447360,
+          577920,
+          499200,
+          746880,
+          597120,
+          606720,
+          408960
+        ],
+        "raw_chunk_sha256s": [
+          "6334de6478a387490834d75e3099df4680eb1dab7511a3a0c43cb2d789eeb82e",
+          "af30664c9b15ff830e8ef3d15621858bbc2375ac8ccfb87a732decf3d95c859d",
+          "bfc03221d317db6929384f92a502e330532afd6c1e1b67f2c8177faca9384386",
+          "ab306faf68150dd4c5aaa9f1b6a6b58f25f65c9767683f76a23c78767719ce45",
+          "ff95c2d2e2dcc3f1d762dbabb1c6a01e68aa1ac13146660e338df19db4960ba2",
+          "04f3f6212965f7784fb562a8168abe7c8b9de58ea2345e3692c4de42f622effd",
+          "a474fe55538c9cbd9fb6f30be6dd0cd3158a94b3c07d340a3ba70b0ee052969c",
+          "aa32649d825a7ec0dd3b249fa8205135db8c9b7cb5f512bfe20d59a3784739d2",
+          "ef459255ab0da3831baf7d4bd07f5677feac220cd1db9070ccbceb33ff3c054c",
+          "7cdad48cc29e541df68ce1c803f5e5b7995bed42d7e26a1f850d54fea9fbe363",
+          "62474fc279c8b0f715aaa4f7f0c160b88a30b6a4ba6750faf34760356710b39a",
+          "174b4792682a882ad32026a872b3fd7af89c0c20c847ede4a023c8341703c39d",
+          "e0950952c439d565e1ca2a485c81737a8c9a88cb6ed92c06faad9dd57bbc4f20",
+          "8df2bc2e64f02dd21665bc8256e99bd410840f226e483c8e879138faa74a1762",
+          "ca09a60162de46fd068c770d4ff3f881e021adf9dd5077f8b1982de634380ade",
+          "72beaaae0965bbccd06c7e884a7c86d13b223a49e4bb210688d84e1db17bd53a",
+          "3aa109a06ecee5f2fb8c8a94ca429da361595d531bdca2c4ef868969bf0ffef6",
+          "0ed264317d7b88a2c656582e7ed90d5b4527493ba11ed2d36706c0819ae7de04",
+          "734b54a73294f23932dc34ef38ab3960bf30b0fcc16d600d350c4cd6aad62072",
+          "76fe2e2f50f8a86efe6a84c9d0568930b582cbac7f6f9658796b2f5af90c3f39",
+          "655a2916409e3072ad0775c272de972a1f20ee3e419f6af3c37b66b30129c086",
+          "0fe0835ce28430228d325689e670438053dd45fb4442443225a65a44381717d4",
+          "1de624e85f319b6a3f1a03cb6e6096d930b35244576791ba7c5fcaa7eaf62c0b",
+          "d2ac0b26ad5deecf32b6c8f00d16ab92fa9b2ba215fc6ed3485283b9d5f6464e",
+          "3e0dc5893d1f7bfdd28c84ee363373664563bdf30f73d42ffcf2d0da8fe3468d",
+          "8ad645dbcf9f18171d268d8f16c2ae65c7e29bb6ca6f5a7f84fef9e4887f8c34",
+          "55e9c6fa228235972e18c688038d79f6cf5c1636d6aa442a72636c9d4c7ffbbf",
+          "8f59881650b88baf19ee24b2a9a81319b52812aeeda42f95a920cef3aecded30",
+          "0b02f09261d00c6c299459a802ba33619bf7c9fa839037a66507753140ec756f",
+          "2bedbb61e9d3b71128146b2f5bd7eb8d3ee95c576392f5596d7bde254d00ece3",
+          "5fd8b3716f059194af881110f8fda257a2e1e45e9368d5ea7b8b9c5ccd0400af",
+          "408cb02809117d83db3da0282e5310afdc5acfddb2b984c8f194bfb9c705785f",
+          "3ef43a16287d588b9f7a8863ffdf14481ec102e1250a36ce9f46226776b056a5",
+          "ea54750f08267e7d15971c30ee2e0c3c0f2627f993573fd9b29e1dc7bc8eee22",
+          "05272a0c8c1662e71f2e826113f6821565792668f9d7a7daeae5441e5d418db0",
+          "35fbc09069ed9d0d338f5be1ea04bba43e29dd2563363e793ef0de261e34102c",
+          "e26944f65fa5b4153a18c2a416c1bbc2524538ce2421dd3b06d0bc4be3147a05",
+          "0e4c2037943e8c4724de59181433f9831c0546b1bb931174b584c8f2ca3d0578",
+          "e0994f39c63d8b3a51091259ed121bbd598bc61426a051e42a4080ef1b8d8be1",
+          "535714b32af7766091bba5670fc1c2347133840d75bb6d2ad0f5234dc1007dd5",
+          "aad6869246ce261e7c59a2087a6bc2e91fd1307f752720e269ba3d66f1bb8d3f",
+          "6b98cbf3a4ba84432489745c9f492138ac495efdccafa5a74afb31aedbc79905",
+          "a60a547a8dce861c6ab2f9016d9fbb5225eba9e7833ec1fcfda1b8a2c5589333",
+          "e970d5a79497ec896e0666fb2e49fad398d2bf53086d8effb38dc9bb19f47dd1",
+          "bb59b11f869a34284ffd27e162aa6ff246c5a3e07a6aa639bf4be7b561cfa243",
+          "040dc231d82f1707fb3fcb58f14cbed6a89bfccd36b79343f24d378c43e7f0d6",
+          "bd963209006a153ecea40f525f67059b86433a0f92e745f92e4d8f731717ffe0",
+          "78607c4b81f19cdd92e73b355a28acb86ef866d3ef81473e5506935c72904fef",
+          "7a3a2dbac1d23d29c5561955f477fdb1a594c393ec1464f87d8ffc497fe8650d",
+          "f7ee8dec743cdc1dce0c0fc62a81ef12fadefc5d4ffd79d8c281ea2ba0ddebfd",
+          "b8d6329e317ce598167aeb375ebd76114ced18708e86a7c123d4eb3007b28df1",
+          "19b300d1aebd42bda671662cf06c264c99c9f71bc035a398c76489ecd1920e8b",
+          "adffd0666c9add134ae3f85efdae690bd98a21a5b74e27aa85e322ca07a527af",
+          "911f66ad3f45c460dfa5e783584077d26c8aa812995e6e57e5b91df8f7ce83cd",
+          "6d3360f4ed466ce977d570bb4517f8b493abc5405a508bd97716219a1a210dec",
+          "a38b931083709e26535579ca2d9f1c7b057cc2ab289ae00e1f3db82f2ed4cfd6",
+          "8bddfe599672f0116f874a3eb711671ad88e753ba961cbbb536387cd2aa54b5f",
+          "54b008b6187a0915a892219f085f088f400988bb8a5cdf34c166340dc0165756",
+          "4e64f6eae0dc5fbfada62cf768a1a997f44a3f6ebf1fffb41ab5bbca95ed9060",
+          "f3fe0fe2b62c98cd47774dba9fefef80616bc63cdf71fad8659e8cf3a03395a2",
+          "355586b783fceb20b97871b75da1e290509086ae124a353d17e52bd8f0403f92",
+          "a03519f562451e87321acb9fe1840ed66c0738751efbea29317983a459efe06c",
+          "612c088779658705a53d0ce44b166caa4677484ee6af84094476bb50f7032884",
+          "07d159996a6b5ea5d12f582d8fbf815b7aa66db8155f66117816b21ff53567ae",
+          "296dea0ed81e18da59346ca4f2fe1eb4c7aec0c4704e24f685b135529bb6c54e",
+          "caec1d59a6af14271000e51851e0ce9f962316c8345814a8cd5096e850ea4d80",
+          "d8c8c0354a74a90beae8447a37c7b565a370461aadea5b8fc30e8d7b3cb7ac91",
+          "68129be315a12de127267f23af96fe81b6b4383265fffe5abd578c8eeb5cfb43",
+          "fdf4f5d72b73e10f2654842a370915284c053729dcd2a701ef14959a8f08fbb9",
+          "c992a3421bf01f71881a36992d51dc1559613ac403f0a884d88038fd403b42e9",
+          "44bc55ab8dd1e74873f498ab556deceb08cf0ab06cd31f8f537c429fd127db40",
+          "6a352bb3ac1380d9c66612b12f7f5456300115f65e26a58106855307750920f8",
+          "c17895d3dba162edd6389d768eaf4784fc79aa886046082a4a68990466eb3235",
+          "4497fdc523b1366d9705032ca85913dc5b6af2e5fa3fe3d5e267a2ea1fad2214",
+          "6b2fdb0433dadac78e6bb2f8169a05258ad366f5cdca3be6721e40d319ed600c",
+          "18eda5f7e22da4cdc085b7c9ea53a7f94456d537ce4fa286caa8887c0b5de4e8",
+          "7978aff14884b5ede13a6e25f97934ac48e7e729180c5c2575f7d74a893c8719",
+          "ee4223128127a196fa8a5363331c65f04001a51e88a60045c5866f2e4f3cd5bd",
+          "fa388bdc096da8e78b309c833a6b64a6a861b2473bba2cf0e2dbea79422ccb67",
+          "2e53626f0756af2c3c4b138d81c5b635e4551f4b61a7c362809127ab01786477",
+          "4ccfa0964c3a625a99889a53d28e3715cfe46b5ff040919bf267017e0f879dcb",
+          "303b1f24e4e3635cfde0c83b0486d841a300acadedc9f019509b2a057a74f957",
+          "703a9a3ddc94ec2b4d46dd4b1acb919a68b57bf360173ef7dba56706a91cf71e",
+          "f65736c473f43583cd14db053c77a8673b948153e146e5db50ff0d7c60ad7862",
+          "875a9518e44da9e9be31d9ebada96224c2a5752086f036a7016a46e3098792a4",
+          "afcd194db18c2cfb2d55223ab8bc817a24d65b3369b20cfb0b3573e0a34f33ca",
+          "9f8dd658fc644e6c0c622d852095c0d5429015fb8ba68655b2c9b77b04ceaf54",
+          "e32aa38145a1a89dc916cb9199a85412755e42218828bd458ba03a920277f92c",
+          "8cc85ccb328191499991b405bcdfd19e3668df12a8ee4904b3c89ea017f9ea2a",
+          "c9a5f557377670f10fc0f5ef5e7059c18101ef04ccfd4e1cbce8d4a83e96d229"
+        ],
+        "raw_digital_clipping_samples": 0,
+        "sample_rate": 24000,
+        "size": 34034348,
+        "tail_silence": {
+          "end_clipping_risk": 0,
+          "frames": 4800,
+          "peak_limit": 512,
+          "peak_pcm16": 0,
+          "probe_ms": 200,
+          "rms_limit": 64.0,
+          "rms_pcm16": 0.0
+        },
+        "trailing_silence_ms": 250,
+        "verified_at": "2026-08-25T10:00:41+00:00"
+      }
+    },
+    "P02-C03": {
+      "attempts": 1,
+      "chapter": 3,
+      "cleaned_chars": 14006,
+      "cleaned_sha256": "8b5d72a34a16ee08d5f78990137647cba206b60592a356aa1c4ce5ea3f25fdbc",
+      "engine": "mlx-audio-qwen3-tts-custom-voice-direct-hf-bf16",
+      "error": null,
+      "expected_chunks": 101,
+      "output_path": "/Users/kimmireu/Desktop/Storage/public-procurement-management/output/qwen3_tts_audio/4과목_Part02_Chapter03_공급계획수립하기_Qwen3-TTS_Sohee.mp3",
+      "part": 2,
+      "profile": {
+        "batch_script_sha256": "8305b62facadd56929866a2d253766f24fe43925a04fa290b701ba45b14b04b6",
+        "engine": "mlx-audio-qwen3-tts-custom-voice-direct-hf-bf16",
+        "packages": {
+          "mlx": "0.32.0",
+          "mlx-audio": "0.5.0",
+          "mlx-metal": "0.32.0",
+          "transformers": "5.14.0"
+        },
+        "platform": "macOS-26.6.2-arm64-arm-64bit",
+        "python": "3.10.18",
+        "source_weights": "original-hugging-face-bfloat16"
+      },
+      "request_fingerprint": "455bff302ec769033762d1b3b5aecda07e040c81aef31f1f71bc61590a7b86cf",
+      "source_path": "/Users/kimmireu/Desktop/Storage/public-procurement-management/output/chapter_lectures/4과목/part02/chapter03.md",
+      "speech_chars": 14007,
+      "speech_path": "/Users/kimmireu/Desktop/Storage/public-procurement-management/output/qwen3_tts_audio/4과목_Part02_Chapter03_공급계획수립하기_대본.txt",
+      "speech_sha256": "ba19379041f1d295d030eee1820157ee81df344578fafad22d4d02c89b49d685",
+      "started_at": "2026-08-25T10:02:00+00:00",
+      "status": "running",
+      "title": "공급계획수립하기",
+      "updated_at": "2026-08-25T10:02:00+00:00",
+      "verification": null
+    },
+    "P03-C01": {
+      "attempts": 0,
+      "chapter": 1,
+      "cleaned_chars": 10233,
+      "cleaned_sha256": "cd98697961f94564d25f6726e4d585aa55712934dab69bfd24b9c6b3df053530",
+      "engine": null,
+      "error": null,
+      "expected_chunks": 74,
+      "output_path": "/Users/kimmireu/Desktop/Storage/public-procurement-management/output/qwen3_tts_audio/4과목_Part03_Chapter01_입찰서류_작성하기_Qwen3-TTS_Sohee.mp3",
+      "part": 3,
+      "profile": null,
+      "request_fingerprint": "208275507cf8dbf2fde818d657eb98d70046447266e2e80a2ed58494401cd19b",
+      "source_path": "/Users/kimmireu/Desktop/Storage/public-procurement-management/output/chapter_lectures/4과목/part03/chapter01.md",
+      "speech_chars": 10234,
+      "speech_path": "/Users/kimmireu/Desktop/Storage/public-procurement-management/output/qwen3_tts_audio/4과목_Part03_Chapter01_입찰서류_작성하기_대본.txt",
+      "speech_sha256": "32a2cf21781ecebf13d6830ceaf46c869b21c614669fa50595240b91e91c2a23",
+      "status": "pending",
+      "title": "입찰서류 작성하기",
+      "updated_at": null,
+      "verification": null
+    },
+    "P03-C02": {
+      "attempts": 0,
+      "chapter": 2,
+      "cleaned_chars": 11192,
+      "cleaned_sha256": "ba2a144472d8823cd3bbce2054658816c557de60185a8210cdc7f522110929f4",
+      "engine": null,
+      "error": null,
+      "expected_chunks": 80,
+      "output_path": "/Users/kimmireu/Desktop/Storage/public-procurement-management/output/qwen3_tts_audio/4과목_Part03_Chapter02_입찰평가_기준_검증하기_Qwen3-TTS_Sohee.mp3",
+      "part": 3,
+      "profile": null,
+      "request_fingerprint": "85b9f43945261bb99086aa477f191c75fd9eb80c8f7dff47b713332e4c24753f",
+      "source_path": "/Users/kimmireu/Desktop/Storage/public-procurement-management/output/chapter_lectures/4과목/part03/chapter02.md",
+      "speech_chars": 11193,
+      "speech_path": "/Users/kimmireu/Desktop/Storage/public-procurement-management/output/qwen3_tts_audio/4과목_Part03_Chapter02_입찰평가_기준_검증하기_대본.txt",
+      "speech_sha256": "bc3b40fa6036bc17cf95f2e5aea2ef836cad7a11f1425373e31fee0dbfa6111f",
+      "status": "pending",
+      "title": "입찰평가 기준 검증하기",
+      "updated_at": null,
+      "verification": null
+    },
+    "P03-C03": {
+      "attempts": 0,
+      "chapter": 3,
+      "cleaned_chars": 10142,
+      "cleaned_sha256": "ea4b3a7ab35d3a62276289a4a17320b4afe14edf2ebd58d0988cd8c7930d7057",
+      "engine": null,
+      "error": null,
+      "expected_chunks": 75,
+      "output_path": "/Users/kimmireu/Desktop/Storage/public-procurement-management/output/qwen3_tts_audio/4과목_Part03_Chapter03_협상_관리하기_Qwen3-TTS_Sohee.mp3",
+      "part": 3,
+      "profile": null,
+      "request_fingerprint": "7e0640743c9af4f564ec511d1269423a3a44265b092db9170c9bcf98a03b025f",
+      "source_path": "/Users/kimmireu/Desktop/Storage/public-procurement-management/output/chapter_lectures/4과목/part03/chapter03.md",
+      "speech_chars": 10143,
+      "speech_path": "/Users/kimmireu/Desktop/Storage/public-procurement-management/output/qwen3_tts_audio/4과목_Part03_Chapter03_협상_관리하기_대본.txt",
+      "speech_sha256": "149e54da8d79fe0a691d7b10f214c665336b567d16e0e69a6200c10ae6bfdade",
+      "status": "pending",
+      "title": "협상 관리하기",
+      "updated_at": null,
+      "verification": null
+    },
+    "P04-C01": {
+      "attempts": 0,
+      "chapter": 1,
+      "cleaned_chars": 10057,
+      "cleaned_sha256": "4d277a9477181d216964fc98ea034addfb1ab8399dbbe690478dce1913617d1e",
+      "engine": null,
+      "error": null,
+      "expected_chunks": 76,
+      "output_path": "/Users/kimmireu/Desktop/Storage/public-procurement-management/output/qwen3_tts_audio/4과목_Part04_Chapter01_계약_체결_관리하기_Qwen3-TTS_Sohee.mp3",
+      "part": 4,
+      "profile": null,
+      "request_fingerprint": "58edb2c608387592d132f86e99ef9caef160bf22da5d08a358ec47176cf50a02",
+      "source_path": "/Users/kimmireu/Desktop/Storage/public-procurement-management/output/chapter_lectures/4과목/part04/chapter01.md",
+      "speech_chars": 10058,
+      "speech_path": "/Users/kimmireu/Desktop/Storage/public-procurement-management/output/qwen3_tts_audio/4과목_Part04_Chapter01_계약_체결_관리하기_대본.txt",
+      "speech_sha256": "25a83c45e2007f35e194cd11010c7edc48e39dcc419b2a413633bbc605fb7fc0",
+      "status": "pending",
+      "title": "계약 체결 관리하기",
+      "updated_at": null,
+      "verification": null
+    },
+    "P04-C02": {
+      "attempts": 0,
+      "chapter": 2,
+      "cleaned_chars": 11793,
+      "cleaned_sha256": "f608c7f6c5866a472fae4aa88dc31f83d4930139ffc4d2b2ee5d4455b27f3ef6",
+      "engine": null,
+      "error": null,
+      "expected_chunks": 88,
+      "output_path": "/Users/kimmireu/Desktop/Storage/public-procurement-management/output/qwen3_tts_audio/4과목_Part04_Chapter02_계약_이행_관리하기_Qwen3-TTS_Sohee.mp3",
+      "part": 4,
+      "profile": null,
+      "request_fingerprint": "ad7078fef4b82eb85df48eafbe509d6bb20269ea5744df99fffff5d9ada23ec9",
+      "source_path": "/Users/kimmireu/Desktop/Storage/public-procurement-management/output/chapter_lectures/4과목/part04/chapter02.md",
+      "speech_chars": 11794,
+      "speech_path": "/Users/kimmireu/Desktop/Storage/public-procurement-management/output/qwen3_tts_audio/4과목_Part04_Chapter02_계약_이행_관리하기_대본.txt",
+      "speech_sha256": "12af8ccff9ebfba03cd91067a35b913efec2c9d4d09ee2afd5f4a814aab0b1c9",
+      "status": "pending",
+      "title": "계약 이행 관리하기",
+      "updated_at": null,
+      "verification": null
+    },
+    "P04-C03": {
+      "attempts": 0,
+      "chapter": 3,
+      "cleaned_chars": 11597,
+      "cleaned_sha256": "1ea721c70e2c03bf0af7e2a0e41a9c1ecab4cc8ba89402b24eb9f9529e1be93a",
+      "engine": null,
+      "error": null,
+      "expected_chunks": 85,
+      "output_path": "/Users/kimmireu/Desktop/Storage/public-procurement-management/output/qwen3_tts_audio/4과목_Part04_Chapter03_계약_변경_관리하기_Qwen3-TTS_Sohee.mp3",
+      "part": 4,
+      "profile": null,
+      "request_fingerprint": "006b4fc4a756c620f1d17a8135fa08364ee6c31d7cb4ca20e30991e921d9546c",
+      "source_path": "/Users/kimmireu/Desktop/Storage/public-procurement-management/output/chapter_lectures/4과목/part04/chapter03.md",
+      "speech_chars": 11598,
+      "speech_path": "/Users/kimmireu/Desktop/Storage/public-procurement-management/output/qwen3_tts_audio/4과목_Part04_Chapter03_계약_변경_관리하기_대본.txt",
+      "speech_sha256": "dc0cd1d6ef0e866e17b85a57829e62d780f4b0af871b459d2652cdc04ad9cc12",
+      "status": "pending",
+      "title": "계약 변경 관리하기",
+      "updated_at": null,
+      "verification": null
+    },
+    "P04-C04": {
+      "attempts": 0,
+      "chapter": 4,
+      "cleaned_chars": 12284,
+      "cleaned_sha256": "2b3e833eb30fd26a998c4cfdff5ed997b8fa4c07fb94224abda6146b6f4ec091",
+      "engine": null,
+      "error": null,
+      "expected_chunks": 93,
+      "output_path": "/Users/kimmireu/Desktop/Storage/public-procurement-management/output/qwen3_tts_audio/4과목_Part04_Chapter04_계약_종결_관리하기_Qwen3-TTS_Sohee.mp3",
+      "part": 4,
+      "profile": null,
+      "request_fingerprint": "85fea297322cf245a41184fcc6d985120f9335f197becc1fb82b215f08e61149",
+      "source_path": "/Users/kimmireu/Desktop/Storage/public-procurement-management/output/chapter_lectures/4과목/part04/chapter04.md",
+      "speech_chars": 12285,
+      "speech_path": "/Users/kimmireu/Desktop/Storage/public-procurement-management/output/qwen3_tts_audio/4과목_Part04_Chapter04_계약_종결_관리하기_대본.txt",
+      "speech_sha256": "a2329429d57d9a59ab9a67dbbe78e217a0aeb38e8ad76127deb9f54d5face256",
+      "status": "pending",
+      "title": "계약 종결 관리하기",
+      "updated_at": null,
+      "verification": null
+    },
+    "P05-C01": {
+      "attempts": 0,
+      "chapter": 1,
+      "cleaned_chars": 10983,
+      "cleaned_sha256": "7e0e59caae730373daed8b92e6ff41c7faa24dac1868bd24d4217525ded6e1c1",
+      "engine": null,
+      "error": null,
+      "expected_chunks": 79,
+      "output_path": "/Users/kimmireu/Desktop/Storage/public-procurement-management/output/qwen3_tts_audio/4과목_Part05_Chapter01_공사_계약_관리하기_Qwen3-TTS_Sohee.mp3",
+      "part": 5,
+      "profile": null,
+      "request_fingerprint": "dfdd376864c206d2866f0aaddcc948305e1141e1d032b3b197c2afa00a304cc1",
+      "source_path": "/Users/kimmireu/Desktop/Storage/public-procurement-management/output/chapter_lectures/4과목/part05/chapter01.md",
+      "speech_chars": 10984,
+      "speech_path": "/Users/kimmireu/Desktop/Storage/public-procurement-management/output/qwen3_tts_audio/4과목_Part05_Chapter01_공사_계약_관리하기_대본.txt",
+      "speech_sha256": "a238e8642ddd8108adec5927592ec72c50cc3378afb98689a5334dee5c6ea983",
+      "status": "pending",
+      "title": "공사 계약 관리하기",
+      "updated_at": null,
+      "verification": null
+    },
+    "P05-C02": {
+      "attempts": 0,
+      "chapter": 2,
+      "cleaned_chars": 11095,
+      "cleaned_sha256": "f4cc002291e6f056d8b1bfea13e362ea2fdba6586b8d1b6b3fb01662613a0c86",
+      "engine": null,
+      "error": null,
+      "expected_chunks": 82,
+      "output_path": "/Users/kimmireu/Desktop/Storage/public-procurement-management/output/qwen3_tts_audio/4과목_Part05_Chapter02_물품_계약_관리하기_Qwen3-TTS_Sohee.mp3",
+      "part": 5,
+      "profile": null,
+      "request_fingerprint": "f17cbe3744f6beea0b22e9510d6fe31ee28f6c0e7aa9e5bcfe24e77b0ce0a4b8",
+      "source_path": "/Users/kimmireu/Desktop/Storage/public-procurement-management/output/chapter_lectures/4과목/part05/chapter02.md",
+      "speech_chars": 11096,
+      "speech_path": "/Users/kimmireu/Desktop/Storage/public-procurement-management/output/qwen3_tts_audio/4과목_Part05_Chapter02_물품_계약_관리하기_대본.txt",
+      "speech_sha256": "2b6a7f6d05317d995f99faa6e3b126886c3442b6fa5e1d82f9482fde2dca2577",
+      "status": "pending",
+      "title": "물품 계약 관리하기",
+      "updated_at": null,
+      "verification": null
+    },
+    "P05-C03": {
+      "attempts": 0,
+      "chapter": 3,
+      "cleaned_chars": 10976,
+      "cleaned_sha256": "68dfcf341e23d51baa8d3166c64fbea7f095d42b00a58894901141c08e9bc83e",
+      "engine": null,
+      "error": null,
+      "expected_chunks": 79,
+      "output_path": "/Users/kimmireu/Desktop/Storage/public-procurement-management/output/qwen3_tts_audio/4과목_Part05_Chapter03_용역_계약_관리하기_Qwen3-TTS_Sohee.mp3",
+      "part": 5,
+      "profile": null,
+      "request_fingerprint": "df033f4ab0229b72b0a4ed5bb71bc8389882bff4322501c1702975e968449158",
+      "source_path": "/Users/kimmireu/Desktop/Storage/public-procurement-management/output/chapter_lectures/4과목/part05/chapter03.md",
+      "speech_chars": 10977,
+      "speech_path": "/Users/kimmireu/Desktop/Storage/public-procurement-management/output/qwen3_tts_audio/4과목_Part05_Chapter03_용역_계약_관리하기_대본.txt",
+      "speech_sha256": "0e3e141a4c2c2317b3bfab34dd648a7b9feeca6c2f5909cfd225a454c748497d",
+      "status": "pending",
+      "title": "용역 계약 관리하기",
+      "updated_at": null,
+      "verification": null
+    },
+    "P06-C01": {
+      "attempts": 0,
+      "chapter": 1,
+      "cleaned_chars": 9576,
+      "cleaned_sha256": "4f449a5b09024f575f06a28cb87f57a466fe9a4c8f7695558972ca98aebc0c0a",
+      "engine": null,
+      "error": null,
+      "expected_chunks": 70,
+      "output_path": "/Users/kimmireu/Desktop/Storage/public-procurement-management/output/qwen3_tts_audio/4과목_Part06_Chapter01_공급리스크_식별하기_Qwen3-TTS_Sohee.mp3",
+      "part": 6,
+      "profile": null,
+      "request_fingerprint": "dbd6105d9535a3e5bebbd08d5c0112f7823038f3322609f17da493da35e38c57",
+      "source_path": "/Users/kimmireu/Desktop/Storage/public-procurement-management/output/chapter_lectures/4과목/part06/chapter01.md",
+      "speech_chars": 9577,
+      "speech_path": "/Users/kimmireu/Desktop/Storage/public-procurement-management/output/qwen3_tts_audio/4과목_Part06_Chapter01_공급리스크_식별하기_대본.txt",
+      "speech_sha256": "03e5e93b5096aeafb543b33824488ebc20817edf5e74f2d56787142b89562cab",
+      "status": "pending",
+      "title": "공급리스크 식별하기",
+      "updated_at": null,
+      "verification": null
+    },
+    "P06-C02": {
+      "attempts": 0,
+      "chapter": 2,
+      "cleaned_chars": 10385,
+      "cleaned_sha256": "0a82fad84bea6390a90a6b3ee9c67a2b2fc53f434dc7974d44d60c258c9dfdb5",
+      "engine": null,
+      "error": null,
+      "expected_chunks": 73,
+      "output_path": "/Users/kimmireu/Desktop/Storage/public-procurement-management/output/qwen3_tts_audio/4과목_Part06_Chapter02_위험도_평가하기_Qwen3-TTS_Sohee.mp3",
+      "part": 6,
+      "profile": null,
+      "request_fingerprint": "3d178eb46d84dc18397ba58f4f07d23ef0cd87fb4a0808a92d04612293a278e3",
+      "source_path": "/Users/kimmireu/Desktop/Storage/public-procurement-management/output/chapter_lectures/4과목/part06/chapter02.md",
+      "speech_chars": 10386,
+      "speech_path": "/Users/kimmireu/Desktop/Storage/public-procurement-management/output/qwen3_tts_audio/4과목_Part06_Chapter02_위험도_평가하기_대본.txt",
+      "speech_sha256": "8c1862360577d44c71bb88acf092f7533fc840a2b42f69dc8fdfce461ae079c2",
+      "status": "pending",
+      "title": "위험도 평가하기",
+      "updated_at": null,
+      "verification": null
+    },
+    "P06-C03": {
+      "attempts": 0,
+      "chapter": 3,
+      "cleaned_chars": 10492,
+      "cleaned_sha256": "479dfb18ec9f8b5856109e8bac700bc7fa9e7828e094ad1661d94da2cdae6c9f",
+      "engine": null,
+      "error": null,
+      "expected_chunks": 76,
+      "output_path": "/Users/kimmireu/Desktop/Storage/public-procurement-management/output/qwen3_tts_audio/4과목_Part06_Chapter03_리스크_대응계획_수립하기_Qwen3-TTS_Sohee.mp3",
+      "part": 6,
+      "profile": null,
+      "request_fingerprint": "1ce5a9b2208ba87aff508e6b7516f51cd37abb9db2eb9103ebb926ea9a392af1",
+      "source_path": "/Users/kimmireu/Desktop/Storage/public-procurement-management/output/chapter_lectures/4과목/part06/chapter03.md",
+      "speech_chars": 10493,
+      "speech_path": "/Users/kimmireu/Desktop/Storage/public-procurement-management/output/qwen3_tts_audio/4과목_Part06_Chapter03_리스크_대응계획_수립하기_대본.txt",
+      "speech_sha256": "1de13e2bab3b722dd4a9085aa4b388d5032a39271c8c0049f5c1b7d0d6625ff0",
+      "status": "pending",
+      "title": "리스크 대응계획 수립하기",
+      "updated_at": null,
+      "verification": null
+    },
+    "P06-C04": {
+      "attempts": 0,
+      "chapter": 4,
+      "cleaned_chars": 11583,
+      "cleaned_sha256": "38506661dbcab55f0b5164730af2c49ef9a0776a6d3de435ae33df55ecc9dad9",
+      "engine": null,
+      "error": null,
+      "expected_chunks": 81,
+      "output_path": "/Users/kimmireu/Desktop/Storage/public-procurement-management/output/qwen3_tts_audio/4과목_Part06_Chapter04_리스크_발생_모니터링하기_Qwen3-TTS_Sohee.mp3",
+      "part": 6,
+      "profile": null,
+      "request_fingerprint": "8c204726def96d356091e0c2a7fee7ea4dcc2ce83635f97491681ad3725e72e2",
+      "source_path": "/Users/kimmireu/Desktop/Storage/public-procurement-management/output/chapter_lectures/4과목/part06/chapter04.md",
+      "speech_chars": 11584,
+      "speech_path": "/Users/kimmireu/Desktop/Storage/public-procurement-management/output/qwen3_tts_audio/4과목_Part06_Chapter04_리스크_발생_모니터링하기_대본.txt",
+      "speech_sha256": "2abc52a00a3347091a05861cac776360b0517100b0615d49f546582e3610ab1c",
+      "status": "pending",
+      "title": "리스크 발생 모니터링하기",
+      "updated_at": null,
+      "verification": null
+    },
+    "P07-C01": {
+      "attempts": 0,
+      "chapter": 1,
+      "cleaned_chars": 9537,
+      "cleaned_sha256": "91585a26c1779f21afa8d1d732f37c98003c4c26c9a92eb98991f79c60921bdb",
+      "engine": null,
+      "error": null,
+      "expected_chunks": 69,
+      "output_path": "/Users/kimmireu/Desktop/Storage/public-procurement-management/output/qwen3_tts_audio/4과목_Part07_Chapter01_법령_활용하기_Qwen3-TTS_Sohee.mp3",
+      "part": 7,
+      "profile": null,
+      "request_fingerprint": "f64510e20f1a89ddf978de0be830b5a839478760db1a36a854e3dd4aaa7e8ef4",
+      "source_path": "/Users/kimmireu/Desktop/Storage/public-procurement-management/output/chapter_lectures/4과목/part07/chapter01.md",
+      "speech_chars": 9538,
+      "speech_path": "/Users/kimmireu/Desktop/Storage/public-procurement-management/output/qwen3_tts_audio/4과목_Part07_Chapter01_법령_활용하기_대본.txt",
+      "speech_sha256": "c0616945606b9dbbeb44d6ecc8778959759ce242e4b2d60545899768233c3b7b",
+      "status": "pending",
+      "title": "법령 활용하기",
+      "updated_at": null,
+      "verification": null
+    },
+    "P07-C02": {
+      "attempts": 0,
+      "chapter": 2,
+      "cleaned_chars": 12544,
+      "cleaned_sha256": "19b86a7c618c5e9a6d8ea271c2cd2d3141fccec57048d3be25fd9092aa3eeafa",
+      "engine": null,
+      "error": null,
+      "expected_chunks": 92,
+      "output_path": "/Users/kimmireu/Desktop/Storage/public-procurement-management/output/qwen3_tts_audio/4과목_Part07_Chapter02_분쟁_대응하기_Qwen3-TTS_Sohee.mp3",
+      "part": 7,
+      "profile": null,
+      "request_fingerprint": "1089da617d6fd839cb4263587d74ba23d5ca678d905e3099f94f4b720d0f1290",
+      "source_path": "/Users/kimmireu/Desktop/Storage/public-procurement-management/output/chapter_lectures/4과목/part07/chapter02.md",
+      "speech_chars": 12545,
+      "speech_path": "/Users/kimmireu/Desktop/Storage/public-procurement-management/output/qwen3_tts_audio/4과목_Part07_Chapter02_분쟁_대응하기_대본.txt",
+      "speech_sha256": "867fc3acc3677800ae331caeda90793631c9dfd4307f2b1f5f1d37c41e9de8f2",
+      "status": "pending",
+      "title": "분쟁 대응하기",
+      "updated_at": null,
+      "verification": null
+    },
+    "P07-C03": {
+      "attempts": 0,
+      "chapter": 3,
+      "cleaned_chars": 11268,
+      "cleaned_sha256": "7aaab4f78c767871402d257f5736566e6d5b9a8e22b496ad337f3b6d834530f9",
+      "engine": null,
+      "error": null,
+      "expected_chunks": 81,
+      "output_path": "/Users/kimmireu/Desktop/Storage/public-procurement-management/output/qwen3_tts_audio/4과목_Part07_Chapter03_우대제도_활용하기_Qwen3-TTS_Sohee.mp3",
+      "part": 7,
+      "profile": null,
+      "request_fingerprint": "3cb9e23a26e2b16c9691aba17a3a34b7a388ca97155a15dd204134632a3ebc41",
+      "source_path": "/Users/kimmireu/Desktop/Storage/public-procurement-management/output/chapter_lectures/4과목/part07/chapter03.md",
+      "speech_chars": 11269,
+      "speech_path": "/Users/kimmireu/Desktop/Storage/public-procurement-management/output/qwen3_tts_audio/4과목_Part07_Chapter03_우대제도_활용하기_대본.txt",
+      "speech_sha256": "7cf4bdfd48743531f80145007b5bee24e032f5412e2dce5946c0f5118a3dbaa7",
+      "status": "pending",
+      "title": "우대제도 활용하기",
+      "updated_at": null,
+      "verification": null
+    },
+    "P08-C01": {
+      "attempts": 0,
+      "chapter": 1,
+      "cleaned_chars": 11453,
+      "cleaned_sha256": "27c7653c3ce05286e64d6b61262528490093b800af0656215a490f61b73d898c",
+      "engine": null,
+      "error": null,
+      "expected_chunks": 83,
+      "output_path": "/Users/kimmireu/Desktop/Storage/public-procurement-management/output/qwen3_tts_audio/4과목_Part08_Chapter01_전자조달시스템_이용하기_Qwen3-TTS_Sohee.mp3",
+      "part": 8,
+      "profile": null,
+      "request_fingerprint": "5527358276dce6adc05c8c0f546221ce7085907f2a654a793e63b0dfe4803859",
+      "source_path": "/Users/kimmireu/Desktop/Storage/public-procurement-management/output/chapter_lectures/4과목/part08/chapter01.md",
+      "speech_chars": 11454,
+      "speech_path": "/Users/kimmireu/Desktop/Storage/public-procurement-management/output/qwen3_tts_audio/4과목_Part08_Chapter01_전자조달시스템_이용하기_대본.txt",
+      "speech_sha256": "4066261c6668c8c9346075da93714124032b9588cf25a5033745e67dbfacf2cf",
+      "status": "pending",
+      "title": "전자조달시스템 이용하기",
+      "updated_at": null,
+      "verification": null
+    },
+    "P08-C02": {
+      "attempts": 0,
+      "chapter": 2,
+      "cleaned_chars": 12831,
+      "cleaned_sha256": "e7e382631816287bc8349514d9c481a77772632e91d22d7d57ebea197aa1b45c",
+      "engine": null,
+      "error": null,
+      "expected_chunks": 94,
+      "output_path": "/Users/kimmireu/Desktop/Storage/public-procurement-management/output/qwen3_tts_audio/4과목_Part08_Chapter02_조달데이터_활용하기_Qwen3-TTS_Sohee.mp3",
+      "part": 8,
+      "profile": null,
+      "request_fingerprint": "7414d4bc69f8545418cae7ccc9e79db1e1df98f765289843315869494bf37d58",
+      "source_path": "/Users/kimmireu/Desktop/Storage/public-procurement-management/output/chapter_lectures/4과목/part08/chapter02.md",
+      "speech_chars": 12832,
+      "speech_path": "/Users/kimmireu/Desktop/Storage/public-procurement-management/output/qwen3_tts_audio/4과목_Part08_Chapter02_조달데이터_활용하기_대본.txt",
+      "speech_sha256": "0455a67d197465f26af56f2b4c0e5afed1177af25a48717c58caf68ec4759247",
+      "status": "pending",
+      "title": "조달데이터 활용하기",
+      "updated_at": null,
+      "verification": null
+    }
+  },
+  "engine": "hybrid-pytorch-adoption-or-mlx-audio",
+  "inventory": [
+    "P01-C01",
+    "P01-C02",
+    "P01-C03",
+    "P02-C01",
+    "P02-C02",
+    "P02-C03",
+    "P03-C01",
+    "P03-C02",
+    "P03-C03",
+    "P04-C01",
+    "P04-C02",
+    "P04-C03",
+    "P04-C04",
+    "P05-C01",
+    "P05-C02",
+    "P05-C03",
+    "P06-C01",
+    "P06-C02",
+    "P06-C03",
+    "P06-C04",
+    "P07-C01",
+    "P07-C02",
+    "P07-C03",
+    "P08-C01",
+    "P08-C02"
+  ],
+  "model": {
+    "config_sha256": "17a07f527a1c25ea30b4e023a184482a23d3e279d697b1dc81b1bde498d29cf9",
+    "format": "direct-original-hugging-face",
+    "generation_config_sha256": "f1b90b4513f3b34c62851049e2492d7b4c5940daf1276f89c82b8ef04127f3aa",
+    "path": "/Users/kimmireu/.cache/huggingface/hub/models--Qwen--Qwen3-TTS-12Hz-1.7B-CustomVoice/snapshots/0c0e3051f131929182e2c023b9537f8b1c68adfe",
+    "root_weight_dtypes": [
+      "BF16"
+    ],
+    "safetensors_sha256": {
+      "model.safetensors": "38b1d5971bdbd982b561cccec982669a53b0537c3cf5e9bd4778ed07bb2f5137",
+      "speech_tokenizer/model.safetensors": "836b7b357f5ea43e889936a3709af68dfe3751881acefe4ecf0dbd30ba571258"
+    }
+  },
+  "output_root": "/Users/kimmireu/Desktop/Storage/public-procurement-management/output/qwen3_tts_audio",
+  "profile": {
+    "batch_script_sha256": "8305b62facadd56929866a2d253766f24fe43925a04fa290b701ba45b14b04b6",
+    "engine": "mlx-audio-qwen3-tts-custom-voice-direct-hf-bf16",
+    "packages": {
+      "mlx": "0.32.0",
+      "mlx-audio": "0.5.0",
+      "mlx-metal": "0.32.0",
+      "transformers": "5.14.0"
+    },
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "python": "3.10.18",
+    "source_weights": "original-hugging-face-bfloat16"
+  },
+  "schema_version": 1,
+  "settings": {
+    "batch_size": 3,
+    "channels": 1,
+    "group_override_policy": "atomic-whole-group-seed-and-batch-v1",
+    "instruct": "차분하고 명료한 한국어 강의 톤으로 또박또박 말해 주세요.",
+    "language": "Korean",
+    "length_bucket_chars": 16,
+    "max_chars": 160,
+    "max_tokens": 1024,
+    "mp3_bit_rate": 128000,
+    "pause_ms": 250,
+    "pause_policy": "after-every-raw-chunk-including-final",
+    "repetition_penalty": 1.05,
+    "sample_rate": 24000,
+    "sample_width_bytes": 2,
+    "seed": 1234,
+    "speaker": "Sohee",
+    "speed": 1.0,
+    "temperature": 0.9,
+    "token_limit_guard_ratio": 0.95,
+    "top_k": 50,
+    "top_p": 1.0
+  },
+  "settings_fingerprint": "f6dc731759c2095a7f6c6a5a6eed3664dcc4551288cc1421697747d8dc4bb824",
+  "speech_root": "/Users/kimmireu/Desktop/Storage/public-procurement-management/output/qwen3_tts_audio",
+  "subject": "4과목",
+  "updated_at": "2026-08-25T10:02:00+00:00"
+}

@@ -1,4 +1,0 @@
-interface:
-  display_name: "GPT-SoVITS 한국어 강의 스튜디오"
-  short_description: "한국어 장문 강의 제작과 허가된 음성 복제를 통합합니다"
-  default_prompt: "Use $gpt-sovits-korean-lecture to create a Korean lecture and synthesize it with my authorized reference voice."

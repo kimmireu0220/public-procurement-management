@@ -17,7 +17,7 @@ Part 전체 강의 또는 세부 구간별 음성을 만들 때 참고한다. �
 
 ```text
 output/part_lectures/4과목/
-output/gpt_sovits_audio/
+output/qwen3_tts_audio/
 ```
 
 다른 위치나 이름이 더 적합하면 그렇게 해도 된다.
@@ -43,6 +43,6 @@ output/gpt_sovits_audio/
 ## 합성 전 확인
 
 정확성, 발음, 구간 쌍과 출력 경로를 작업 위험에 비례해 확인한 뒤
-`scripts/generate_gpt_sovits.py --split-sections`를 실행한다. 합성기는 표시를 제거하고
+`scripts/generate_qwen3_tts.py --split-sections`를 실행한다. 합성기는 표시를 제거하고
 구간을 개별 파일로 만든다. 표시가 있는 대본을 파싱하지 않은 채 음성 엔진에 직접 전달하지
 않는다.
