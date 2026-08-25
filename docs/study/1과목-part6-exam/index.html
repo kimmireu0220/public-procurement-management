@@ -22,7 +22,7 @@
 * { box-sizing: border-box; margin: 0; padding: 0; }
 body { font-family: "Apple SD Gothic Neo", "Malgun Gothic", sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; }
 
-#screen-start { display: flex; align-items: center; justify-content: center; min-height: 100vh; padding: 1.5rem; }
+#screen-start { display: none; align-items: center; justify-content: center; min-height: 100vh; padding: 1.5rem; }
 .start-card { background: var(--panel); max-width: 520px; width: 100%; border-radius: 8px; box-shadow: 0 4px 24px rgba(0,0,0,.12); padding: 2.5rem 2rem; text-align: center; border-top: 4px solid var(--primary); }
 .start-card h1 { font-size: 1.65rem; color: var(--primary-dark); margin-bottom: .5rem; }
 .start-card .sub { color: var(--muted); font-size: 1.05rem; margin-bottom: 1.5rem; }
@@ -648,6 +648,7 @@ const EXAM_DURATION_SEC = 999999;
 </script>
 <script>
 CBTUI.init(CBTExam.createSession(QUESTIONS, STORAGE_KEY, EXAM_DURATION_SEC));
+document.getElementById("btn-start").click();
 </script>
 <script>window.CBT_ANSWER_KEY=["③","①","④","②","④","①","③","④","②","①","④","③","②","④","②","④","④","①","②","①","④","①","④","③","④","④","④","④","②","④","①","③","④","③","④","③","③","③","③","②","②","③","③","③","③","③","①","④","①","②","④","③","③","②","③","①","④","①","①","④","④","②","③","③","①","④","③","④","②","①","③","④","④","①","④","③","①","④","③","④","④","②","③","③","④","③","②","①","④","③","①","④","①","④","③","③","④","②","②","④","①","④","②","②","①","①","②","②","②","②","④","④","②","①","③","②","④","③","②","②","②","①","①","①","②","②","④","②"];</script>
 <script src="../../assets/subject-cbt-grading.js"></script>
