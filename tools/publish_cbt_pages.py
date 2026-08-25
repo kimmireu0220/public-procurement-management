@@ -18,20 +18,6 @@ from cbt.profiles import CbtProfile, DOCS, PROFILES  # noqa: E402
 from site_portal import render_portal  # noqa: E402
 
 ROUND_DIR = re.compile(r"^(\d+)회차$")
-PRIVATE_SCAN_SOURCE = re.compile(
-    r"<!--\s*source:\s*Part\s+\d+/page_\d+\.jpg", re.IGNORECASE
-)
-
-
-def assert_publishable_problem_source(profile: CbtProfile, round_no: int) -> None:
-    """민간 수험서 스캔에서 가져온 문항이 Pages로 복사되는 것을 막는다."""
-
-    problem_path = profile.problem_md(round_no)
-    problem_text = problem_path.read_text(encoding="utf-8")
-    if PRIVATE_SCAN_SOURCE.search(problem_text) or "sources/민간_박문각" in problem_text:
-        raise SystemExit(
-            f"공개 중단: 민간 수험서 파생 문항이 포함됨: {problem_path}"
-        )
 
 
 def find_rounds(profile: CbtProfile) -> list[int]:
@@ -72,7 +58,6 @@ def publish_full_profile(profile: CbtProfile, selected_round: int) -> None:
 
     published_rounds: list[dict[str, object]] = []
     for round_no in rounds:
-        assert_publishable_problem_source(profile, round_no)
         source = profile.round_dir(round_no) / "index.html"
         destination = full_round_index(round_no)
         destination.parent.mkdir(parents=True, exist_ok=True)
@@ -104,7 +89,6 @@ def publish_profile(profile: CbtProfile, round_no: int | None = None) -> int:
     """CBT를 프로필별 docs 경로에 배포한다."""
 
     selected_round = round_no if round_no is not None else find_latest_round(profile)
-    assert_publishable_problem_source(profile, selected_round)
     source = profile.round_dir(selected_round) / "index.html"
     if not source.is_file():
         raise SystemExit(

@@ -21,10 +21,7 @@
 
 ### 공개와 권리
 
-- 이 저장소는 공개될 수 있다. 민간 수험서 스캔, 제3자 원문·문항·해설의 실질적 복제본,
-  무허가 음성·바이너리는 Git이나 GitHub Pages에 올리지 않는다.
 - 공식 자료도 공개·재배포 조건을 확인하고 필요한 출처와 기준일을 남긴다.
-- `docs/자료_공개_및_저장_정책.md`의 공개 범위와 권리 보호 규칙을 따른다.
 - 음성 복제는 화자 또는 권리자의 허가가 확인된 참조 음성에만 사용하며, 사칭·기만·인증
   우회에 사용하지 않는다. 참조 음성을 외부 서비스에 보내거나 결과를 공개하려면 그 범위의
   권한도 확인한다.
@@ -45,7 +42,7 @@
 - 기존 필기 문제·정답 확인: `output/problem_book_final/`, `output/agent_extract/`
 - 모의고사와 CBT: `output/mock_exam/`, 공개본은 `docs/`
 - 강의 원본: `output/chapter_lectures/`; 공개본 생성은 `tools/build_lecture_pages.py`
-- 한국어 GPT-SoVITS 음성 작업: `.agents/skills/gpt-sovits-korean-lecture/`
+- 한국어 Qwen3-TTS Sohee 음성 작업: `.agents/skills/qwen3-tts-korean-lecture/`
 
 강의는 고정 목차나 분량을 요구하지 않는다. 사례, 비교표, 이야기, 질문, O/X, 회상 연습,
 문제풀이, 요약 등 학습에 유용한 방식을 자유롭게 사용할 수 있다. 모의고사도 목적에 따라

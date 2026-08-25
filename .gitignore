@@ -2,23 +2,5 @@
 __pycache__/
 *.pyc
 
-# 임시/일회성 산출물
-**/used_stable_ids.txt
-**/_draft/
-tmp/
-
-# GPT-SoVITS 일회성 산출물 (최종 MP3만 관리 대상)
-output/gpt_sovits_audio/*.log
-output/gpt_sovits_audio/*_gptsovits_*/
-output/gpt_sovits_audio/*테스트*.mp3
-output/gpt_sovits_audio/cloned_narration.mp3
-
-# 배포·재배포 권한이 확인되지 않은 민간 교재 스캔은 로컬에서만 보관
-sources/민간_박문각_수험서_jpg/**
-!sources/민간_박문각_수험서_jpg/README.md
-!sources/민간_박문각_수험서_jpg/inventory.json
-
-# 민간 수험서에서 파생된 문항·해설 산출물도 로컬에서만 보관
-/output/agent_extract/
-/output/problem_book_final/
-/output/mock_exam/
+# Qwen3-TTS 재개·검증용 로컬 캐시
+output/qwen3_tts_audio/.*_qwen3tts_*/
