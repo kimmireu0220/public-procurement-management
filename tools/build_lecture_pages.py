@@ -117,6 +117,10 @@ def validate_lectures(lectures: list[Lecture]) -> None:
     part_titles: dict[tuple[int, int], str] = {}
 
     for lecture in lectures:
+        if re.search(r"^#\s+", lecture.body, re.MULTILINE):
+            raise ValueError(
+                f"본문의 1단계 제목은 metadata title과 중복됩니다: {lecture.source}"
+            )
         key = (lecture.subject, lecture.part, lecture.chapter, lecture.kind)
         if key in seen:
             raise ValueError(f"중복 Chapter metadata: {key}")

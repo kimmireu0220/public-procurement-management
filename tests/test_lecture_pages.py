@@ -157,6 +157,22 @@ class LecturePagesTest(unittest.TestCase):
         ]
         build_lecture_pages.validate_lectures(chapters)
 
+    def test_body_rejects_a_duplicate_level_one_title(self) -> None:
+        lecture = build_lecture_pages.Lecture(
+            source=Path("duplicate-title.md"),
+            subject=1,
+            subject_title="테스트",
+            part=1,
+            part_title="자유 구성",
+            chapter=1,
+            title="중복 제목",
+            kind="chapter",
+            body="# 중복 제목\n\n본문\n",
+        )
+
+        with self.assertRaisesRegex(ValueError, "metadata title과 중복"):
+            build_lecture_pages.validate_lectures([lecture])
+
     def test_subject_index_uses_the_correct_exam_type(self) -> None:
         def chapter(subject: int) -> build_lecture_pages.Lecture:
             return build_lecture_pages.Lecture(
