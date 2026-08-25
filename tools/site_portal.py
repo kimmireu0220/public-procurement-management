@@ -65,6 +65,20 @@ def _round_cards(rounds: list[int]) -> str:
     )
 
 
+def _subject_cbt_cards() -> str:
+    subjects = (
+        (1, "공공조달과 법제도 이해", 30, 45),
+        (2, "공공조달계획 수립 및 분석", 20, 30),
+        (3, "공공계약관리", 30, 45),
+    )
+    return "".join(
+        f'<a class="choice-card featured" href="{subject}과목/">'
+        f'<span class="card-kicker">과목별 필기 CBT</span><strong>{subject}과목</strong>'
+        f'<span>{html.escape(title)} · {count}문항 · {minutes}분</span></a>'
+        for subject, title, count, minutes in subjects
+    )
+
+
 def _lecture_groups(links: list[LectureLink]) -> str:
     by_subject: dict[int, list[LectureLink]] = defaultdict(list)
     for link in links:
@@ -119,6 +133,11 @@ def render_portal(rounds: list[int], lectures: list[LectureLink] | None = None) 
         if rounds
         else ""
     )
+    subject_cbt_section = (
+        '<section class="section" id="subject-cbt"><div class="section-head">'
+        '<h2>과목별 필기 CBT</h2><p>답안 제출 즉시 점수와 문항별 정답 확인</p></div>'
+        f'<div class="choice-grid">{_subject_cbt_cards()}</div></section>'
+    )
     return f"""<!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -140,8 +159,9 @@ a{{color:inherit}}.hero{{background:linear-gradient(135deg,#102f50,#1763a6);colo
 </style>
 </head>
 <body>
-<header class="hero"><div class="hero-inner"><span class="eyebrow">PUBLIC PROCUREMENT MANAGER</span><h1>공공조달관리사 학습센터</h1><p>공식 자료 기반 자체 강의와 검증된 연습문제를 한곳에서 선택하세요.</p><nav class="quick-nav" aria-label="학습 메뉴">{mock_nav}<a href="#lectures">이론 강의</a></nav></div></header>
+<header class="hero"><div class="hero-inner"><span class="eyebrow">PUBLIC PROCUREMENT MANAGER</span><h1>공공조달관리사 학습센터</h1><p>공식 자료 기반 자체 강의와 검증된 연습문제를 한곳에서 선택하세요.</p><nav class="quick-nav" aria-label="학습 메뉴"><a href="#subject-cbt">과목별 필기 CBT</a>{mock_nav}<a href="#lectures">이론 강의</a></nav></div></header>
 <main class="page">
+{subject_cbt_section}
 {mock_section}
 <section class="section" id="lectures"><div class="section-head"><h2>Chapter 이론 강의</h2><p>출제기준 · 실무 판단 · 답안 훈련</p></div>{_lecture_groups(lecture_items)}</section>
 </main>
