@@ -105,7 +105,7 @@ body { font-family: "Apple SD Gothic Neo", "Malgun Gothic", sans-serif; backgrou
     <h1>3과목 Part4 EXAM 학습</h1>
     <p class="sub">공공계약관리 · 문제은행 exam 전체</p>
     <ul>
-      <li>총 <strong>115문항</strong> · 제한시간 없음 (학습용)</li>
+      <li>총 <strong>115문항</strong></li>
       <li>4지 선다형 — 문항당 하나만 선택</li>
       <li>답안은 자동 저장됩니다 (브라우저)</li>
     </ul>
@@ -116,7 +116,6 @@ body { font-family: "Apple SD Gothic Neo", "Malgun Gothic", sans-serif; backgrou
 <div id="screen-exam">
   <div class="topbar">
     <span class="exam-title">3과목 Part4 EXAM 학습</span>
-    <span class="timer" id="timer">--:--:--</span>
   </div>
   <div class="subbar">
     <span id="subject-label">1과목 공공조달과 법제도 이해</span>
@@ -609,7 +608,6 @@ const EXAM_DURATION_SEC = 999999;
       session.startExam();
       renderNavGrid();
       renderQuestion();
-      startTimer();
     });
 
     document.addEventListener('keydown', handleExamKeydown);
