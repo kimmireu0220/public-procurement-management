@@ -65,7 +65,6 @@ def load_written_questions() -> list[dict]:
         part_text = text[part_match.end():end]
         for section in SECTION_RE.finditer(part_text):
             chapter = int(section.group(1))
-            chapter_title = section.group(2).strip()
             section_title = section.group(3).strip()
             question_type = TYPE_SLUG.get(section_title, "custom")
             body = section.group(4)
