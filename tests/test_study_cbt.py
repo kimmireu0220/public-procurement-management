@@ -14,7 +14,7 @@ import build_study_cbt  # noqa: E402
 
 
 class StudyGuideTest(unittest.TestCase):
-    def test_build_publishes_only_rights_safe_landing(self) -> None:
+    def test_build_publishes_subject_cbt_landing(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
             destination = Path(tmp) / "study"
             build_study_cbt.build(destination)
@@ -27,8 +27,8 @@ class StudyGuideTest(unittest.TestCase):
             self.assertEqual(actual_files, {Path("index.html")})
 
             landing = (destination / "index.html").read_text(encoding="utf-8")
-            self.assertIn('href="../lecture/"', landing)
-            self.assertIn("모든 문제 바로 아래", landing)
+            self.assertIn('href="../1과목/"', landing)
+            self.assertIn("총 1,395문항", landing)
             self.assertNotIn("const QUESTIONS", landing)
             self.assertNotIn("problem_book_final", landing)
             self.assertNotIn("agent_extract", landing)

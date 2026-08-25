@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>1과목 Part5 EXAM 학습</title>
+<style>
+:root {
+  --bg: #e8ecf1;
+  --panel: #fff;
+  --primary: #1a4d8f;
+  --primary-dark: #0f3460;
+  --accent: #2e7dd1;
+  --border: #c5d0de;
+  --text: #1a1a1a;
+  --muted: #5c6b7a;
+  --answered: #2e7dd1;
+  --current: #1a4d8f;
+  --unanswered: #d0d7e2;
+  --warn: #c0392b;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: "Apple SD Gothic Neo", "Malgun Gothic", sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; }
+
+#screen-start { display: flex; align-items: center; justify-content: center; min-height: 100vh; padding: 1.5rem; }
+.start-card { background: var(--panel); max-width: 520px; width: 100%; border-radius: 8px; box-shadow: 0 4px 24px rgba(0,0,0,.12); padding: 2.5rem 2rem; text-align: center; border-top: 4px solid var(--primary); }
+.start-card h1 { font-size: 1.65rem; color: var(--primary-dark); margin-bottom: .5rem; }
+.start-card .sub { color: var(--muted); font-size: 1.05rem; margin-bottom: 1.5rem; }
+.start-card ul { text-align: left; margin: 0 auto 1.75rem; max-width: 340px; font-size: .92rem; line-height: 1.8; color: #333; }
+.start-card .btn-start { background: var(--primary); color: #fff; border: none; padding: .85rem 2.5rem; font-size: 1.05rem; border-radius: 4px; cursor: pointer; font-weight: 600; }
+.start-card .btn-start:hover { background: var(--primary-dark); }
+
+#screen-exam { display: none; flex-direction: column; height: 100vh; }
+.topbar { background: var(--primary-dark); color: #fff; display: flex; align-items: center; justify-content: space-between; padding: 1rem 1.5rem; font-size: 1.1rem; flex-shrink: 0; min-height: 3.75rem; }
+.topbar .exam-title { font-weight: 700; font-size: 1.3rem; }
+.topbar .timer { font-size: 1.65rem; font-weight: 700; font-variant-numeric: tabular-nums; letter-spacing: .05em; }
+.topbar .timer.warn { color: #ffcc00; animation: pulse 1s infinite; }
+@keyframes pulse { 50% { opacity: .7; } }
+.subbar { background: var(--primary); color: #fff; padding: .9rem 1.5rem; font-size: 1.1rem; display: flex; justify-content: space-between; align-items: center; min-height: 3.25rem; }
+.subbar #subject-label { font-size: 1.15rem; font-weight: 600; }
+.subbar #progress-label { font-size: 1.1rem; font-weight: 600; }
+
+.main { display: flex; flex: 1; overflow: hidden; }
+.question-panel { flex: 1; overflow-y: auto; padding: 1.5rem 2rem 2rem; background: var(--panel); }
+.q-header { display: flex; align-items: center; gap: .75rem; margin-bottom: 1.25rem; }
+.q-badge { background: var(--primary); color: #fff; font-weight: 700; font-size: 1.35rem; min-width: 3.25rem; text-align: center; padding: .45rem .7rem; border-radius: 4px; }
+.q-subject { color: var(--muted); font-size: 1rem; font-weight: 600; }
+.q-stem { font-size: 1.2rem; line-height: 1.75; margin-bottom: 1.5rem; font-weight: 600; }
+.q-stem strong { color: var(--primary-dark); }
+
+.choices { display: flex; flex-direction: column; gap: .65rem; }
+.choice { display: flex; align-items: flex-start; gap: .75rem; padding: .85rem 1rem; border: 2px solid var(--border); border-radius: 6px; cursor: pointer; transition: border-color .15s, background .15s; background: #fafbfc; }
+.choice:hover { border-color: var(--accent); background: #f0f6fc; }
+.choice.selected { border-color: var(--primary); background: #e8f0fa; box-shadow: 0 0 0 1px var(--primary); }
+.choice.focused { outline: 2px solid var(--accent); outline-offset: 2px; }
+.choice .num { font-weight: 700; color: var(--primary); min-width: 1.75rem; font-size: 1.15rem; }
+.choice .text { flex: 1; line-height: 1.6; font-size: 1.12rem; }
+.choice input { display: none; }
+
+.nav-panel { width: 280px; background: #f4f6f9; border-left: 1px solid var(--border); display: flex; flex-direction: column; flex-shrink: 0; }
+.nav-title { padding: .85rem 1rem; font-size: 1rem; font-weight: 700; color: var(--primary-dark); border-bottom: 1px solid var(--border); }
+.nav-scroll { overflow-y: auto; flex: 1; padding: .75rem; }
+.nav-section { margin-bottom: .9rem; }
+.nav-section:last-child { margin-bottom: 0; }
+.nav-section-title { font-size: .95rem; font-weight: 700; color: var(--primary-dark); margin-bottom: .45rem; padding-bottom: .3rem; border-bottom: 1px solid var(--border); line-height: 1.4; }
+.nav-section-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; }
+.nav-btn { min-height: 2.35rem; border: 1px solid var(--border); background: var(--unanswered); border-radius: 4px; font-size: .85rem; font-weight: 600; cursor: pointer; color: #444; }
+.nav-btn.answered { background: #b8d4f0; border-color: var(--answered); color: var(--primary-dark); }
+.nav-btn.current { background: var(--current); color: #fff; border-color: var(--current); }
+.nav-btn:hover { filter: brightness(.95); }
+.nav-legend { padding: .5rem .75rem; font-size: .72rem; color: var(--muted); border-top: 1px solid var(--border); display: flex; gap: .75rem; flex-wrap: wrap; }
+.legend-dot { display: inline-block; width: 10px; height: 10px; border-radius: 2px; margin-right: 2px; vertical-align: middle; }
+
+.bottombar { background: var(--panel); border-top: 1px solid var(--border); padding: .65rem 1.25rem; display: flex; justify-content: space-between; align-items: center; flex-shrink: 0; gap: .75rem; }
+.bottombar-left, .bottombar-right { display: flex; align-items: center; gap: .5rem; }
+.bottombar button { padding: .55rem 1.4rem; font-size: .92rem; border-radius: 4px; cursor: pointer; border: 1px solid var(--border); background: #fff; }
+.bottombar button.reset { color: var(--warn); border-color: #e8c4c0; background: #fff8f7; }
+.bottombar button.reset:hover { background: #fdecea; }
+.bottombar button.primary { background: var(--primary); color: #fff; border-color: var(--primary); font-weight: 600; }
+.bottombar button:disabled { opacity: .4; cursor: not-allowed; }
+.progress-text { font-size: 1rem; font-weight: 600; color: var(--text); }
+
+#screen-end { display: none; min-height: 100vh; padding: 2rem; }
+.end-card { max-width: 640px; margin: 0 auto; background: var(--panel); border-radius: 8px; padding: 2rem; box-shadow: 0 4px 20px rgba(0,0,0,.1); }
+.end-card h2 { color: var(--primary-dark); margin-bottom: 1rem; font-size: 1.55rem; }
+.end-card textarea { width: 100%; height: 160px; font-family: monospace; font-size: .85rem; padding: .75rem; border: 1px solid var(--border); border-radius: 4px; margin: 1rem 0; }
+.end-card .hint { font-size: .88rem; color: var(--muted); line-height: 1.6; }
+.end-card button { margin-right: .5rem; margin-top: .5rem; padding: .55rem 1.2rem; border-radius: 4px; cursor: pointer; border: 1px solid var(--border); background: #fff; }
+.end-card button.primary { background: var(--primary); color: #fff; border-color: var(--primary); }
+
+@media (max-width: 768px) {
+  .main { flex-direction: column; }
+  .nav-panel { width: 100%; border-left: none; border-top: 1px solid var(--border); max-height: 200px; }
+  .nav-section-grid { grid-template-columns: repeat(8, 1fr); }
+  .question-panel { padding: 1rem; }
+}
+
+.topbar .timer { display: none; }
+</style>
+</head>
+<body>
+
+<div id="screen-start">
+  <div class="start-card">
+    <h1>1과목 Part5 EXAM 학습</h1>
+    <p class="sub">공공조달과 법제도 이해 · 문제은행 exam 전체</p>
+    <ul>
+      <li>총 <strong>107문항</strong> · 제한시간 없음 (학습용)</li>
+      <li>4지 선다형 — 문항당 하나만 선택</li>
+      <li>답안은 자동 저장됩니다 (브라우저)</li>
+    </ul>
+    <button class="btn-start" id="btn-start">학습 시작</button>
+  </div>
+</div>
+
+<div id="screen-exam">
+  <div class="topbar">
+    <span class="exam-title">1과목 Part5 EXAM 학습</span>
+    <span class="timer" id="timer">--:--:--</span>
+  </div>
+  <div class="subbar">
+    <span id="subject-label">1과목 공공조달과 법제도 이해</span>
+    <span>
+      <span id="progress-label">1 / 107</span>
+    </span>
+  </div>
+  <div class="main">
+    <div class="question-panel" id="question-panel"></div>
+    <aside class="nav-panel">
+      <div class="nav-title">문항 이동</div>
+      <div class="nav-scroll" id="nav-scroll"></div>
+      <div class="nav-legend">
+        <span><span class="legend-dot" style="background:var(--unanswered)"></span>미답</span>
+        <span><span class="legend-dot" style="background:#b8d4f0"></span>답변</span>
+        <span><span class="legend-dot" style="background:var(--current)"></span>현재</span>
+      </div>
+    </aside>
+  </div>
+  <div class="bottombar">
+    <div class="bottombar-left">
+      <button id="btn-prev">◀ 이전</button>
+      <button class="reset" id="btn-reset" type="button">처음부터</button>
+    </div>
+    <span class="progress-text" id="answered-count">답변 0 / 107</span>
+    <div class="bottombar-right">
+      <button id="btn-next">다음 ▶</button>
+      <button class="primary" id="btn-submit">종료</button>
+    </div>
+  </div>
+</div>
+
+<div id="screen-end">
+  <div class="end-card">
+    <h2>학습 종료</h2>
+    <p class="hint">아래 답안 문자열을 복사해 채팅에 붙여넣으면 채점합니다.<br>형식: <code>1③ 2④ 3④ …</code></p>
+    <textarea id="answer-export" readonly></textarea>
+    <button class="primary" id="btn-copy">답안 복사</button>
+    <button id="btn-restart">다시 풀기</button>
+    <p class="hint" style="margin-top:1rem">※ 정답·해설은 채점 후 제공됩니다.</p>
+  </div>
+</div>
+
+<script>
+const QUESTIONS = [{"no": 1, "subject": 1, "subjectName": "Part5 Ch1", "stem": "공공조달 우선구매제도의 기본적인 목적에 대한 설명으로 가장 적절한 것은?", "choices": [{"key": "1", "label": "①", "text": "시장에서 불리한 주체의 조달시장 접근 기회를 확대하기 위함"}, {"key": "2", "label": "②", "text": "공공조달의 경쟁을 원천적으로 제한하기 위함"}, {"key": "3", "label": "③", "text": "특정 기업에 영구적인 보호를 제공하기 위함"}, {"key": "4", "label": "④", "text": "조달 절차를 단순화하기 위함"}], "id": "1:5:1:exam:1"}, {"no": 2, "subject": 1, "subjectName": "Part5 Ch1", "stem": "공공조달 우선구매제도와 공공조달 기본원칙의 관계에 대한 설명으로 옳은 것은?", "choices": [{"key": "1", "label": "①", "text": "경쟁성·효율성과는 무관하다."}, {"key": "2", "label": "②", "text": "기본원칙을 전면적으로 대체한다."}, {"key": "3", "label": "③", "text": "투명성을 저해하므로 예외적으로만 허용된다."}, {"key": "4", "label": "④", "text": "기본원칙과 긴장 관계에 있으나 균형을 전제로 한다."}], "id": "1:5:1:exam:2"}, {"no": 3, "subject": 1, "subjectName": "Part5 Ch1", "stem": "캐나다의 공공조달 우선구매제도의 특징으로 가장 적절한 것은?", "choices": [{"key": "1", "label": "①", "text": "원주민 기업 등 포용성 강화를 중시"}, {"key": "2", "label": "②", "text": "별도배정을 통한 경쟁 제한 중심"}, {"key": "3", "label": "③", "text": "EU 단일시장 원칙을 엄격히 적용"}, {"key": "4", "label": "④", "text": "대기업 보호를 위한 제도"}], "id": "1:5:1:exam:3"}, {"no": 4, "subject": 1, "subjectName": "Part5 Ch1", "stem": "미국에서 우선구매제도가 경쟁 제한이 아니라 경쟁 촉진으로 인식되는 이유로 가장 적절한 것은?", "choices": [{"key": "1", "label": "①", "text": "가격 경쟁을 제거하기 때문에"}, {"key": "2", "label": "②", "text": "경쟁을 완전히 배제하기 때문에"}, {"key": "3", "label": "③", "text": "경쟁을 중단하고 직접 계약하기 때문에"}, {"key": "4", "label": "④", "text": "경쟁 가능한 범위 내에서 시장을 분리하기 때문에"}], "id": "1:5:1:exam:4"}, {"no": 5, "subject": 1, "subjectName": "Part5 Ch1", "stem": "호주의 공공조달 우선구매제도의 주요 정책적 방향은?", "choices": [{"key": "1", "label": "①", "text": "중소기업의 영구적 보호"}, {"key": "2", "label": "②", "text": "산업 경쟁력 강화와 연계"}, {"key": "3", "label": "③", "text": "국제조달시장 개방 최소화"}, {"key": "4", "label": "④", "text": "조달 효율성보다 형평성 우선"}], "id": "1:5:1:exam:5"}, {"no": 6, "subject": 1, "subjectName": "Part5 Ch1", "stem": "EU가 미국식 별도배정(Set-aside) 제도에 상대적으로 부정적인 이유는?", "choices": [{"key": "1", "label": "①", "text": "기술 수준이 낮기 때문"}, {"key": "2", "label": "②", "text": "행정 비용이 높기 때문"}, {"key": "3", "label": "③", "text": "조달 효율성이 낮기 때문"}, {"key": "4", "label": "④", "text": "단일시장·개방경쟁 원칙과 충돌하기 때문"}], "id": "1:5:1:exam:6"}, {"no": 7, "subject": 1, "subjectName": "Part5 Ch1", "stem": "EU가 중소기업 참여 확대를 위해 주로 활용하는 방식은?", "choices": [{"key": "1", "label": "①", "text": "별도배정"}, {"key": "2", "label": "②", "text": "수의계약 확대"}, {"key": "3", "label": "③", "text": "조달 가격 상향 조정"}, {"key": "4", "label": "④", "text": "분할 발주 및 절차 단순화"}], "id": "1:5:1:exam:7"}, {"no": 8, "subject": 1, "subjectName": "Part5 Ch1", "stem": "공공조달 우선구매제도가 '경쟁의 예외'가 아니라 '경쟁 기반 확대 수단'으로 평가되는 이유로 가장 적절한 것은?", "choices": [{"key": "1", "label": "①", "text": "경쟁이 불가능한 시장을 경쟁 가능하게 만들기 때문에"}, {"key": "2", "label": "②", "text": "경쟁을 폐지하고 보호를 강화하기 때문에"}, {"key": "3", "label": "③", "text": "조달 절차를 간소화하기 때문에"}, {"key": "4", "label": "④", "text": "공공조달 비용을 줄이기 때문에"}], "id": "1:5:1:exam:8"}, {"no": 9, "subject": 1, "subjectName": "Part5 Ch1", "stem": "다음 중 국가별 우선구매제도 특징의 연결이 가장 적절한 것은?", "choices": [{"key": "1", "label": "①", "text": "미국 - 간접적 지원 중심"}, {"key": "2", "label": "②", "text": "호주 - 단일시장 원칙 최우선"}, {"key": "3", "label": "③", "text": "캐나다 - 포용성과 접근성 강화"}, {"key": "4", "label": "④", "text": "EU - 별도배정 제도 적극 활용"}], "id": "1:5:1:exam:9"}, {"no": 10, "subject": 1, "subjectName": "Part5 Ch1", "stem": "별도배정 우선구매제도의 운영상 문제로 가장 적절한 것은?", "choices": [{"key": "1", "label": "①", "text": "수요기관의 실질적 이행 부족"}, {"key": "2", "label": "②", "text": "제도 자체의 법적 근거 부족"}, {"key": "3", "label": "③", "text": "공급기업의 기술력 부족"}, {"key": "4", "label": "④", "text": "전자조달시스템 미구축"}], "id": "1:5:1:exam:10"}, {"no": 11, "subject": 1, "subjectName": "Part5 Ch1", "stem": "우선구매제도의 실효성 강화를 위해 가장 먼저 요구되는 것은?", "choices": [{"key": "1", "label": "①", "text": "민간시장 연계"}, {"key": "2", "label": "②", "text": "가격 경쟁 강화"}, {"key": "3", "label": "③", "text": "공급기업 수 확대"}, {"key": "4", "label": "④", "text": "수요기관의 인식 개선"}], "id": "1:5:1:exam:11"}, {"no": 12, "subject": 1, "subjectName": "Part5 Ch1", "stem": "별도배정 우선구매 물량과 관련하여 지적된 문제는?", "choices": [{"key": "1", "label": "①", "text": "법령상 금지"}, {"key": "2", "label": "②", "text": "예산 편성의 불가능성"}, {"key": "3", "label": "③", "text": "조달청 단독 집행 구조"}, {"key": "4", "label": "④", "text": "형식적 배정에 그치는 경우"}], "id": "1:5:1:exam:12"}, {"no": 13, "subject": 1, "subjectName": "Part5 Ch1", "stem": "우선구매 실적 관리와 관련해 요구되는 개선 방향은?", "choices": [{"key": "1", "label": "①", "text": "수의계약 확대"}, {"key": "2", "label": "②", "text": "민간위탁 전환"}, {"key": "3", "label": "③", "text": "사전 계획 폐지"}, {"key": "4", "label": "④", "text": "실적 점검 및 평가 강화"}], "id": "1:5:1:exam:13"}, {"no": 14, "subject": 1, "subjectName": "Part5 Ch1", "stem": "우선구매제도의 성과 확보에 중요한 주체는?", "choices": [{"key": "1", "label": "①", "text": "조달청"}, {"key": "2", "label": "②", "text": "조달기업"}, {"key": "3", "label": "③", "text": "수요기관"}, {"key": "4", "label": "④", "text": "감사기관"}], "id": "1:5:1:exam:14"}, {"no": 15, "subject": 1, "subjectName": "Part5 Ch1", "stem": "우선구매제도가 정책 수단으로서 의미를 갖기 위해 필요한 점은?", "choices": [{"key": "1", "label": "①", "text": "예외적 적용"}, {"key": "2", "label": "②", "text": "가격 중심 조달"}, {"key": "3", "label": "③", "text": "단기 실적 중심 운영"}, {"key": "4", "label": "④", "text": "정책 목표와의 연계 운영"}], "id": "1:5:1:exam:15"}, {"no": 16, "subject": 1, "subjectName": "Part5 Ch1", "stem": "우선구매제도의 운영을 저해하는 요인으로 언급되지 않은 것은?", "choices": [{"key": "1", "label": "①", "text": "제도에 대한 안내 부족"}, {"key": "2", "label": "②", "text": "공급기업의 참여 거부"}, {"key": "3", "label": "③", "text": "수요기관의 소극적 태도"}, {"key": "4", "label": "④", "text": "담당자의 제도에 대한 이해 부족"}], "id": "1:5:1:exam:16"}, {"no": 17, "subject": 1, "subjectName": "Part5 Ch1", "stem": "우선구매 관련 교육·안내를 강화하는 주된 목적은?", "choices": [{"key": "1", "label": "①", "text": "제도 이해도 제고"}, {"key": "2", "label": "②", "text": "예산 절감"}, {"key": "3", "label": "③", "text": "경쟁 제한"}, {"key": "4", "label": "④", "text": "감사 대응"}], "id": "1:5:1:exam:17"}, {"no": 18, "subject": 1, "subjectName": "Part5 Ch1", "stem": "별도배정 우선구매제도의 지속적 개선을 위해 필요한 것은?", "choices": [{"key": "1", "label": "①", "text": "민간 이양"}, {"key": "2", "label": "②", "text": "제도 폐지"}, {"key": "3", "label": "③", "text": "일회성 점검"}, {"key": "4", "label": "④", "text": "운영 결과의 환류"}], "id": "1:5:1:exam:18"}, {"no": 19, "subject": 1, "subjectName": "Part5 Ch2", "stem": "전략적 공공조달 관점에서 중소기업지원 조달의 핵심 목적은?", "choices": [{"key": "1", "label": "①", "text": "중소기업의 공공조달시장 참여 확대"}, {"key": "2", "label": "②", "text": "대기업 중심의 공급 안정성 확보"}, {"key": "3", "label": "③", "text": "국제기업 우대 조달체계 구축"}, {"key": "4", "label": "④", "text": "조달절차의 완전한 표준화"}], "id": "1:5:2:exam:1"}, {"no": 20, "subject": 1, "subjectName": "Part5 Ch2", "stem": "OECD와 EU 회원국이 중소기업 조달 지원을 위해 공통적으로 강조하는 원칙으로 옳지 않은 것은?", "choices": [{"key": "1", "label": "①", "text": "평등한 대우 보장"}, {"key": "2", "label": "②", "text": "개방적 접근성 제공"}, {"key": "3", "label": "③", "text": "효과적인 경쟁 원칙 실행"}, {"key": "4", "label": "④", "text": "특정 기업군에 대한 배타적 보호"}], "id": "1:5:2:exam:2"}, {"no": 21, "subject": 1, "subjectName": "Part5 Ch2", "stem": "중소기업의 조달 참여 확대를 위한 입찰 설계 원칙으로 가장 적절한 것은?", "choices": [{"key": "1", "label": "①", "text": "입찰 규모를 최대화하여 경쟁을 유도한다."}, {"key": "2", "label": "②", "text": "조달 문서를 표준과 무관하게 복잡하게 설계한다."}, {"key": "3", "label": "③", "text": "중소기업 전용 절차를 모든 조달에 일괄 적용한다."}, {"key": "4", "label": "④", "text": "조달 대상물의 가치와 위험에 비례해 절차를 설계한다."}], "id": "1:5:2:exam:3"}, {"no": 22, "subject": 1, "subjectName": "Part5 Ch2", "stem": "중소기업 구조와 관련한 설명으로 옳은 것은?", "choices": [{"key": "1", "label": "①", "text": "매출 규모의 지속적 확대"}, {"key": "2", "label": "②", "text": "1인 기업의 비중이 매우 높음"}, {"key": "3", "label": "③", "text": "고용 창출력이 대기업보다 높음"}, {"key": "4", "label": "④", "text": "2인 이상 기업의 비중이 지속 증가"}], "id": "1:5:2:exam:4"}, {"no": 23, "subject": 1, "subjectName": "Part5 Ch2", "stem": "중소기업 공공구매제도의 주된 목적은?", "choices": [{"key": "1", "label": "①", "text": "대기업 보호"}, {"key": "2", "label": "②", "text": "수의계약 확대"}, {"key": "3", "label": "③", "text": "가격 경쟁 촉진"}, {"key": "4", "label": "④", "text": "중소기업의 판로 확대"}], "id": "1:5:2:exam:5"}, {"no": 24, "subject": 1, "subjectName": "Part5 Ch2", "stem": "중소기업 공공구매제도가 필요한 배경으로 가장 적절한 것은?", "choices": [{"key": "1", "label": "①", "text": "중소기업이 민간시장 접근에 구조적 한계가 있기 때문"}, {"key": "2", "label": "②", "text": "중소기업의 기술력이 대기업보다 우수하기 때문"}, {"key": "3", "label": "③", "text": "공공기관 구매 절차가 단순하기 때문"}, {"key": "4", "label": "④", "text": "조달가격을 상승시키기 위해"}], "id": "1:5:2:exam:6"}, {"no": 25, "subject": 1, "subjectName": "Part5 Ch2", "stem": "중소기업 공공구매제도의 정책적 성격으로 옳은 것은?", "choices": [{"key": "1", "label": "①", "text": "순수한 효율성 중심 제도"}, {"key": "2", "label": "②", "text": "조달비용 최소화 제도"}, {"key": "3", "label": "③", "text": "시장개입적 정책 수단"}, {"key": "4", "label": "④", "text": "조달기관 자율제도"}], "id": "1:5:2:exam:7"}, {"no": 26, "subject": 1, "subjectName": "Part5 Ch2", "stem": "중소기업 공공구매에서 강조되는 정책 방향은?", "choices": [{"key": "1", "label": "①", "text": "최저가 경쟁"}, {"key": "2", "label": "②", "text": "단가 인하 중심"}, {"key": "3", "label": "③", "text": "대기업과의 공동구매"}, {"key": "4", "label": "④", "text": "정책목적형 구매 병행"}], "id": "1:5:2:exam:8"}, {"no": 27, "subject": 1, "subjectName": "Part5 Ch2", "stem": "중소기업 공공구매제도의 정책적 의미로 가장 적절한 것은?", "choices": [{"key": "1", "label": "①", "text": "경쟁 제한 수단"}, {"key": "2", "label": "②", "text": "조달 효율성만을 추구"}, {"key": "3", "label": "③", "text": "시장 기능을 전면 대체"}, {"key": "4", "label": "④", "text": "공공조달을 통한 구조적 불균형 보완"}], "id": "1:5:2:exam:9"}, {"no": 28, "subject": 1, "subjectName": "Part5 Ch2", "stem": "중소기업 구매 비율 관리가 중요한 이유로 가장 적절한 것은?", "choices": [{"key": "1", "label": "①", "text": "법적 의무 이행 여부를 점검하기 위해"}, {"key": "2", "label": "②", "text": "조달기관의 권한을 확대하기 위해"}, {"key": "3", "label": "③", "text": "계약 절차를 단순화하기 위해"}, {"key": "4", "label": "④", "text": "조달기업 수를 감소시키기 위해"}], "id": "1:5:2:exam:10"}, {"no": 29, "subject": 1, "subjectName": "Part5 Ch2", "stem": "중소기업 구매목표비율제도의 핵심 내용은?", "choices": [{"key": "1", "label": "①", "text": "대기업 낙찰 제한"}, {"key": "2", "label": "②", "text": "조합 중심 계약 의무"}, {"key": "3", "label": "③", "text": "중소기업 제품만 구매 의무"}, {"key": "4", "label": "④", "text": "공공기관별 중소기업 제품 구매 목표 설정"}], "id": "1:5:2:exam:11"}, {"no": 30, "subject": 1, "subjectName": "Part5 Ch2", "stem": "중소기업자 간 경쟁제품 지정의 효과로 가장 적절한 것은?", "choices": [{"key": "1", "label": "①", "text": "일반경쟁 전환"}, {"key": "2", "label": "②", "text": "수의계약 확대"}, {"key": "3", "label": "③", "text": "중소기업 간 경쟁 유도"}, {"key": "4", "label": "④", "text": "대기업의 단독 참여 허용"}], "id": "1:5:2:exam:12"}, {"no": 31, "subject": 1, "subjectName": "Part5 Ch2", "stem": "공사용 자재 직접구매제도의 취지로 옳은 것은?", "choices": [{"key": "1", "label": "①", "text": "하도급 간소화"}, {"key": "2", "label": "②", "text": "시공사 원가 절감"}, {"key": "3", "label": "③", "text": "설계 변경 최소화"}, {"key": "4", "label": "④", "text": "중소기업의 자재 판로 확보"}], "id": "1:5:2:exam:13"}, {"no": 32, "subject": 1, "subjectName": "Part5 Ch2", "stem": "직접생산확인을 받기 위한 핵심 요건으로 가장 적절한 것은?", "choices": [{"key": "1", "label": "①", "text": "실제 생산설비 보유"}, {"key": "2", "label": "②", "text": "납품 실적만 확인"}, {"key": "3", "label": "③", "text": "재무제표 제출"}, {"key": "4", "label": "④", "text": "조합 추천"}], "id": "1:5:2:exam:14"}, {"no": 33, "subject": 1, "subjectName": "Part5 Ch2", "stem": "적격조합확인제도의 주된 목적은?", "choices": [{"key": "1", "label": "①", "text": "조합원 수 확대"}, {"key": "2", "label": "②", "text": "대기업 공동 참여"}, {"key": "3", "label": "③", "text": "조합의 해산 유도"}, {"key": "4", "label": "④", "text": "조합의 입찰 참여 허용"}], "id": "1:5:2:exam:15"}, {"no": 34, "subject": 1, "subjectName": "Part5 Ch2", "stem": "공공구매론의 목적은?", "choices": [{"key": "1", "label": "①", "text": "납기 단축"}, {"key": "2", "label": "②", "text": "조달가격 인하"}, {"key": "3", "label": "③", "text": "금융 지원"}, {"key": "4", "label": "④", "text": "계약 변경 완화"}], "id": "1:5:2:exam:16"}, {"no": 35, "subject": 1, "subjectName": "Part5 Ch2", "stem": "기술개발제품 우선구매제도의 핵심 내용은?", "choices": [{"key": "1", "label": "①", "text": "최저가 우선"}, {"key": "2", "label": "②", "text": "외자제품 배제"}, {"key": "3", "label": "③", "text": "조합 추천 필수"}, {"key": "4", "label": "④", "text": "일정 비율 우선 구매"}], "id": "1:5:2:exam:17"}, {"no": 36, "subject": 1, "subjectName": "Part5 Ch2", "stem": "성능인증제품의 조달상 혜택으로 옳은 것은?", "choices": [{"key": "1", "label": "①", "text": "경쟁 배제"}, {"key": "2", "label": "②", "text": "수의계약 의무"}, {"key": "3", "label": "③", "text": "계약 기간 연장"}, {"key": "4", "label": "④", "text": "우선구매 또는 가점"}], "id": "1:5:2:exam:18"}, {"no": 37, "subject": 1, "subjectName": "Part5 Ch2", "stem": "기술개발제품 시범구매제도의 목적은?", "choices": [{"key": "1", "label": "①", "text": "대량 납품"}, {"key": "2", "label": "②", "text": "시장 독점"}, {"key": "3", "label": "③", "text": "가격 담합"}, {"key": "4", "label": "④", "text": "초기 판로 개척"}], "id": "1:5:2:exam:19"}, {"no": 38, "subject": 1, "subjectName": "Part5 Ch2", "stem": "중소기업자 간 경쟁제도에서 대기업 참여는?", "choices": [{"key": "1", "label": "①", "text": "전면 허용"}, {"key": "2", "label": "②", "text": "의무 참여"}, {"key": "3", "label": "③", "text": "원칙적 제한"}, {"key": "4", "label": "④", "text": "조합 승인 시 가능"}], "id": "1:5:2:exam:20"}, {"no": 39, "subject": 1, "subjectName": "Part5 Ch2", "stem": "중소기업자 간 경쟁 예외 사유로 옳은 것은?", "choices": [{"key": "1", "label": "①", "text": "납기 여유"}, {"key": "2", "label": "②", "text": "조합 요청"}, {"key": "3", "label": "③", "text": "가격 상승"}, {"key": "4", "label": "④", "text": "기술·품질 확보 곤란"}], "id": "1:5:2:exam:21"}, {"no": 40, "subject": 1, "subjectName": "Part5 Ch2", "stem": "중소기업 구매목표비율제도의 관리 주체로 적절한 것은?", "choices": [{"key": "1", "label": "①", "text": "조합"}, {"key": "2", "label": "②", "text": "수요기관"}, {"key": "3", "label": "③", "text": "금융기관"}, {"key": "4", "label": "④", "text": "개별 기업"}], "id": "1:5:2:exam:22"}, {"no": 41, "subject": 1, "subjectName": "Part5 Ch2", "stem": "공공조달에서 중소기업 정책의 공통 목적은?", "choices": [{"key": "1", "label": "①", "text": "산업 기반 강화"}, {"key": "2", "label": "②", "text": "경쟁 축소"}, {"key": "3", "label": "③", "text": "비용 절감"}, {"key": "4", "label": "④", "text": "수입 대체"}], "id": "1:5:2:exam:23"}, {"no": 42, "subject": 1, "subjectName": "Part5 Ch2", "stem": "직접생산확인 위반 시 가능한 조치는?", "choices": [{"key": "1", "label": "①", "text": "경고만 부여"}, {"key": "2", "label": "②", "text": "계약 유지"}, {"key": "3", "label": "③", "text": "참여 제한"}, {"key": "4", "label": "④", "text": "가격 인상"}], "id": "1:5:2:exam:24"}, {"no": 43, "subject": 1, "subjectName": "Part5 Ch2", "stem": "조합추천 소액수의계약의 금액 기준은?", "choices": [{"key": "1", "label": "①", "text": "법령으로 정한 소액 기준"}, {"key": "2", "label": "②", "text": "고정 금액 없음"}, {"key": "3", "label": "③", "text": "조합 자율"}, {"key": "4", "label": "④", "text": "기관 자율"}], "id": "1:5:2:exam:25"}, {"no": 44, "subject": 1, "subjectName": "Part5 Ch2", "stem": "기술개발제품 우선구매제도와 가장 관련 깊은 정책 목표는?", "choices": [{"key": "1", "label": "①", "text": "환경 보호"}, {"key": "2", "label": "②", "text": "혁신 촉진"}, {"key": "3", "label": "③", "text": "가격 안정"}, {"key": "4", "label": "④", "text": "수입 억제"}], "id": "1:5:2:exam:26"}, {"no": 45, "subject": 1, "subjectName": "Part5 Ch2", "stem": "성능인증제도의 특징으로 옳은 것은?", "choices": [{"key": "1", "label": "①", "text": "조합 인증"}, {"key": "2", "label": "②", "text": "국가 인증"}, {"key": "3", "label": "③", "text": "수요기관 인증"}, {"key": "4", "label": "④", "text": "민간 자율 인증"}], "id": "1:5:2:exam:27"}, {"no": 46, "subject": 1, "subjectName": "Part5 Ch2", "stem": "기술개발제품 시범구매는 주로 어떤 단계의 제품을 대상으로 하는가?", "choices": [{"key": "1", "label": "①", "text": "양산 완료"}, {"key": "2", "label": "②", "text": "외자 제품"}, {"key": "3", "label": "③", "text": "단종 제품"}, {"key": "4", "label": "④", "text": "상용화 초기"}], "id": "1:5:2:exam:28"}, {"no": 47, "subject": 1, "subjectName": "Part5 Ch2", "stem": "중소기업자 간 경쟁제도 운영의 한계로 옳은 것은?", "choices": [{"key": "1", "label": "①", "text": "수요 부족"}, {"key": "2", "label": "②", "text": "과도한 경쟁"}, {"key": "3", "label": "③", "text": "대기업 독점"}, {"key": "4", "label": "④", "text": "품질 관리 부담"}], "id": "1:5:2:exam:29"}, {"no": 48, "subject": 1, "subjectName": "Part5 Ch2", "stem": "다음 중 중소기업자 간 경쟁제도와 기술개발제품 지원제도의 공통 목적은?", "choices": [{"key": "1", "label": "①", "text": "조달 절차의 단순화"}, {"key": "2", "label": "②", "text": "가격 통제"}, {"key": "3", "label": "③", "text": "중소기업의 경쟁력 강화"}, {"key": "4", "label": "④", "text": "대기업의 참여 확대"}], "id": "1:5:2:exam:30"}, {"no": 49, "subject": 1, "subjectName": "Part5 Ch3", "stem": "환경적 지속가능성의 개념으로 옳은 것은?", "choices": [{"key": "1", "label": "①", "text": "조달 절차를 단축하는 방식"}, {"key": "2", "label": "②", "text": "현재 비용만 최소화하는 조달"}, {"key": "3", "label": "③", "text": "미래 세대의 부담을 고려하지 않는 조달"}, {"key": "4", "label": "④", "text": "현재와 미래의 환경 부담을 함께 고려하는 조달"}], "id": "1:5:3:exam:1"}, {"no": 50, "subject": 1, "subjectName": "Part5 Ch3", "stem": "녹색조달이 전략적 공공조달로 분류되는 이유는?", "choices": [{"key": "1", "label": "①", "text": "가격 경쟁이 없기 때문에"}, {"key": "2", "label": "②", "text": "조달 기간이 길기 때문에"}, {"key": "3", "label": "③", "text": "수의계약이 가능하기 때문에"}, {"key": "4", "label": "④", "text": "환경정책 목표 달성을 지원하기 때문에"}], "id": "1:5:3:exam:2"}, {"no": 51, "subject": 1, "subjectName": "Part5 Ch3", "stem": "녹색제품 우선구매제도의 법적 근거는?", "choices": [{"key": "1", "label": "①", "text": "「국가계약법」"}, {"key": "2", "label": "②", "text": "「조달사업법」"}, {"key": "3", "label": "③", "text": "「환경정책기본법」"}, {"key": "4", "label": "④", "text": "「녹색제품 구매촉진에 관한 법률」"}], "id": "1:5:3:exam:3"}, {"no": 52, "subject": 1, "subjectName": "Part5 Ch3", "stem": "공공조달이 환경정책의 수단으로 활용될 수 있는 이유는?", "choices": [{"key": "1", "label": "①", "text": "공공기관의 구매력이 크기 때문에"}, {"key": "2", "label": "②", "text": "조달 절차가 단순하기 때문에"}, {"key": "3", "label": "③", "text": "민간보다 가격이 낮기 때문에"}, {"key": "4", "label": "④", "text": "조달 기간이 짧기 때문에"}], "id": "1:5:3:exam:4"}, {"no": 53, "subject": 1, "subjectName": "Part5 Ch3", "stem": "녹색제품 우선구매제도의 기본 취지는?", "choices": [{"key": "1", "label": "①", "text": "녹색제품 의무 구매"}, {"key": "2", "label": "②", "text": "대기업 제품 우선 구매"}, {"key": "3", "label": "③", "text": "녹색제품 경쟁계약 배제"}, {"key": "4", "label": "④", "text": "적격심사(계약이행능력심사) 시행"}], "id": "1:5:3:exam:5"}, {"no": 54, "subject": 1, "subjectName": "Part5 Ch3", "stem": "녹색조달 제도의 궁극적 목표는?", "choices": [{"key": "1", "label": "①", "text": "민간시장 배제"}, {"key": "2", "label": "②", "text": "환경 부담 증가"}, {"key": "3", "label": "③", "text": "지속가능한 사회 구현"}, {"key": "4", "label": "④", "text": "조달 절차 단순화"}], "id": "1:5:3:exam:6"}, {"no": 55, "subject": 1, "subjectName": "Part5 Ch3", "stem": "녹색제품 우선구매제도에서 공공기관의 역할로 옳은 것은?", "choices": [{"key": "1", "label": "①", "text": "연간 구매목표 설정 및 실적 관리"}, {"key": "2", "label": "②", "text": "구매 의무 면제"}, {"key": "3", "label": "③", "text": "민간시장 통제"}, {"key": "4", "label": "④", "text": "인증기준 완화"}], "id": "1:5:3:exam:7"}, {"no": 56, "subject": 1, "subjectName": "Part5 Ch3", "stem": "녹색제품의 환경성 판단 기준으로 가장 적절한 것은?", "choices": [{"key": "1", "label": "①", "text": "디자인"}, {"key": "2", "label": "②", "text": "납품 속도"}, {"key": "3", "label": "③", "text": "브랜드 인지도"}, {"key": "4", "label": "④", "text": "생애 전 과정의 환경부하"}], "id": "1:5:3:exam:8"}, {"no": 57, "subject": 1, "subjectName": "Part5 Ch3", "stem": "다음 중 녹색제품으로 인정되기 위한 조건으로 옳은 것은?", "choices": [{"key": "1", "label": "①", "text": "가격 경쟁력"}, {"key": "2", "label": "②", "text": "친환경 이미지"}, {"key": "3", "label": "③", "text": "공급업체 규모"}, {"key": "4", "label": "④", "text": "객관적 인증 또는 기준 충족"}], "id": "1:5:3:exam:9"}, {"no": 58, "subject": 1, "subjectName": "Part5 Ch3", "stem": "녹색제품 범위가 법령과 고시에 의해 관리되는 이유는?", "choices": [{"key": "1", "label": "①", "text": "예산 절감을 위해"}, {"key": "2", "label": "②", "text": "행정 편의성을 위해"}, {"key": "3", "label": "③", "text": "조달 기간 단축을 위해"}, {"key": "4", "label": "④", "text": "객관성과 신뢰성 확보를 위해"}], "id": "1:5:3:exam:10"}, {"no": 59, "subject": 1, "subjectName": "Part5 Ch3", "stem": "생애주기비용(LCC)에 포함되지 않는 것은?", "choices": [{"key": "1", "label": "①", "text": "기업 이윤"}, {"key": "2", "label": "②", "text": "구매비용"}, {"key": "3", "label": "③", "text": "유지·보수비용"}, {"key": "4", "label": "④", "text": "에너지 비용"}], "id": "1:5:3:exam:11"}, {"no": 60, "subject": 1, "subjectName": "Part5 Ch3", "stem": "초기 구매가격이 높은 녹색제품이 선택될 수 있는 이유는?", "choices": [{"key": "1", "label": "①", "text": "장기 운영비 절감 가능성"}, {"key": "2", "label": "②", "text": "수의계약 가능성"}, {"key": "3", "label": "③", "text": "공급업체 요청"}, {"key": "4", "label": "④", "text": "조달청 권고"}], "id": "1:5:3:exam:12"}, {"no": 61, "subject": 1, "subjectName": "Part5 Ch3", "stem": "생애주기비용 관점이 공공조달에 미치는 효과로 옳은 것은?", "choices": [{"key": "1", "label": "①", "text": "재정 효율성 및 환경성 동시 확보"}, {"key": "2", "label": "②", "text": "조달 절차 복잡화"}, {"key": "3", "label": "③", "text": "단기 비용 증가"}, {"key": "4", "label": "④", "text": "경쟁 제한"}], "id": "1:5:3:exam:13"}, {"no": 62, "subject": 1, "subjectName": "Part5 Ch3", "stem": "녹색조달의 핵심 특징으로 옳지 않은 것은?", "choices": [{"key": "1", "label": "①", "text": "환경성 고려"}, {"key": "2", "label": "②", "text": "장기 비용 고려"}, {"key": "3", "label": "③", "text": "단순 최저가 중심"}, {"key": "4", "label": "④", "text": "정책 목표 연계"}], "id": "1:5:3:exam:14"}, {"no": 63, "subject": 1, "subjectName": "Part5 Ch3", "stem": "녹색조달이 민간시장에 미치는 영향으로 옳은 것은?", "choices": [{"key": "1", "label": "①", "text": "환경기술 수요 창출"}, {"key": "2", "label": "②", "text": "경쟁 제한"}, {"key": "3", "label": "③", "text": "가격 담합"}, {"key": "4", "label": "④", "text": "공급 축소"}], "id": "1:5:3:exam:15"}, {"no": 64, "subject": 1, "subjectName": "Part5 Ch3", "stem": "생애주기비용(LCC) 관점이 녹색조달에서 중요한 이유는?", "choices": [{"key": "1", "label": "①", "text": "단기 예산 절감을 위해"}, {"key": "2", "label": "②", "text": "계약 기간을 단축하기 위해"}, {"key": "3", "label": "③", "text": "초기 구매가격만 비교하기 위해"}, {"key": "4", "label": "④", "text": "장기적 환경·재정 부담을 함께 고려하기 위해"}], "id": "1:5:3:exam:16"}, {"no": 65, "subject": 1, "subjectName": "Part5 Ch3", "stem": "녹색조달과 전략적 공공조달의 공통점으로 가장 적절한 것은?", "choices": [{"key": "1", "label": "①", "text": "수의계약 중심"}, {"key": "2", "label": "②", "text": "가격 경쟁 배제"}, {"key": "3", "label": "③", "text": "단기 예산 절감"}, {"key": "4", "label": "④", "text": "정책 목표 달성 수단"}], "id": "1:5:3:exam:17"}, {"no": 66, "subject": 1, "subjectName": "Part5 Ch3", "stem": "녹색조달에서 '우선구매' 개념의 정책적 의미는?", "choices": [{"key": "1", "label": "①", "text": "강제 구매"}, {"key": "2", "label": "②", "text": "가격 통제"}, {"key": "3", "label": "③", "text": "선택권 박탈"}, {"key": "4", "label": "④", "text": "환경친화적 선택 유도"}], "id": "1:5:3:exam:18"}, {"no": 67, "subject": 1, "subjectName": "Part5 Ch3", "stem": "녹색조달에서 가격 대비 가치(VFM) 개념과 가장 부합하는 것은?", "choices": [{"key": "1", "label": "①", "text": "최저가 낙찰"}, {"key": "2", "label": "②", "text": "초기 가격 비교"}, {"key": "3", "label": "③", "text": "장기 총비용 대비 성과"}, {"key": "4", "label": "④", "text": "계약 기간 단축"}], "id": "1:5:3:exam:19"}, {"no": 68, "subject": 1, "subjectName": "Part5 Ch3", "stem": "녹색제품 인증제도의 역할로 가장 적절한 것은?", "choices": [{"key": "1", "label": "①", "text": "조달 절차의 단축"}, {"key": "2", "label": "②", "text": "제품 홍보"}, {"key": "3", "label": "③", "text": "환경성의 객관적 검증"}, {"key": "4", "label": "④", "text": "가격 인하"}], "id": "1:5:3:exam:20"}, {"no": 69, "subject": 1, "subjectName": "Part5 Ch3", "stem": "다음 중 녹색조달의 한계 극복 방안으로 적절한 것은?", "choices": [{"key": "1", "label": "①", "text": "생애주기비용 적용 확대"}, {"key": "2", "label": "②", "text": "최저가 원칙 고수"}, {"key": "3", "label": "③", "text": "단기 예산 중심"}, {"key": "4", "label": "④", "text": "환경 기준 완화"}], "id": "1:5:3:exam:21"}, {"no": 70, "subject": 1, "subjectName": "Part5 Ch4", "stem": "현행 법령상 공공기관의 기술개발제품 권장 구매 목표 비율은 중소기업 물품 구매액의 얼마인가?", "choices": [{"key": "1", "label": "①", "text": "5% 이상"}, {"key": "2", "label": "②", "text": "10% 이상"}, {"key": "3", "label": "③", "text": "15% 이상"}, {"key": "4", "label": "④", "text": "20% 이상"}], "id": "1:5:4:exam:1"}, {"no": 71, "subject": 1, "subjectName": "Part5 Ch4", "stem": "기술개발제품 우선구매제도의 법적 근거가 되는 주요 법률은?", "choices": [{"key": "1", "label": "①", "text": "「국가재정법」"}, {"key": "2", "label": "②", "text": "「지방자치법」"}, {"key": "3", "label": "③", "text": "「독점규제 및 공정거래에 관한 법률」"}, {"key": "4", "label": "④", "text": "「중소기업제품 구매촉진 및 판로지원에 관한 법률」"}], "id": "1:5:4:exam:2"}, {"no": 72, "subject": 1, "subjectName": "Part5 Ch4", "stem": "혁신조달에 대한 설명으로 옳은 것은?", "choices": [{"key": "1", "label": "①", "text": "오직 최저가 낙찰만을 지향한다."}, {"key": "2", "label": "②", "text": "신기술보다는 검증된 구식 기술을 선호한다."}, {"key": "3", "label": "③", "text": "중소기업보다는 대기업 지원에 특화되어 있다."}, {"key": "4", "label": "④", "text": "공공서비스의 질 개선과 산업 혁신을 동시에 추구한다."}], "id": "1:5:4:exam:3"}, {"no": 73, "subject": 1, "subjectName": "Part5 Ch4", "stem": "신제품 인증을 나타내는 약어로 옳은 것은?", "choices": [{"key": "1", "label": "①", "text": "NEP"}, {"key": "2", "label": "②", "text": "NET"}, {"key": "3", "label": "③", "text": "MAS"}, {"key": "4", "label": "④", "text": "EPC"}], "id": "1:5:4:exam:4"}, {"no": 74, "subject": 1, "subjectName": "Part5 Ch4", "stem": "소프트웨어 제품의 품질을 인증하는 제도는?", "choices": [{"key": "1", "label": "①", "text": "성능인증"}, {"key": "2", "label": "②", "text": "GS인증"}, {"key": "3", "label": "③", "text": "녹색인증"}, {"key": "4", "label": "④", "text": "우수조달 공동상표"}], "id": "1:5:4:exam:5"}, {"no": 75, "subject": 1, "subjectName": "Part5 Ch4", "stem": "공공기관 구매책임자가 기술개발제품을 구매할 때 법령상 부여되는 보호는?", "choices": [{"key": "1", "label": "①", "text": "고의 또는 중대한 과실이 입증되지 않은 경우 구매로 생긴 손실에 대한 면책"}, {"key": "2", "label": "②", "text": "구매 시 개인 포상금 지급"}, {"key": "3", "label": "③", "text": "승진 가점 필수 부여"}, {"key": "4", "label": "④", "text": "예산 무제한 증액권"}], "id": "1:5:4:exam:6"}, {"no": 76, "subject": 1, "subjectName": "Part5 Ch4", "stem": "기술개발제품 중 '우수조달물품'을 지정하는 기관은?", "choices": [{"key": "1", "label": "①", "text": "조달청"}, {"key": "2", "label": "②", "text": "재정경제부"}, {"key": "3", "label": "③", "text": "산업통상부"}, {"key": "4", "label": "④", "text": "중소벤처기업부"}], "id": "1:5:4:exam:7"}, {"no": 77, "subject": 1, "subjectName": "Part5 Ch4", "stem": "중소기업 기술개발제품 우선구매의 직접적인 효과가 아닌 것은?", "choices": [{"key": "1", "label": "①", "text": "중소기업의 경영 안정화"}, {"key": "2", "label": "②", "text": "우수한 공공용 물품 확보"}, {"key": "3", "label": "③", "text": "대기업 제품의 공공시장 퇴출"}, {"key": "4", "label": "④", "text": "중소기업의 기술 혁신 의욕 고취"}], "id": "1:5:4:exam:8"}, {"no": 78, "subject": 1, "subjectName": "Part5 Ch4", "stem": "기술개발제품 우선구매제도가 사회적 책임 조달(SRPP)과 연결되는 논리로 가장 적절한 것은?", "choices": [{"key": "1", "label": "①", "text": "환경 보호만이 사회적 책임이기 때문이다."}, {"key": "2", "label": "②", "text": "국가기관의 권위를 높이는 활동이기 때문이다."}, {"key": "3", "label": "③", "text": "중소기업 육성을 통한 고용 창출과 경제 활성화를 꾀하기 때문이다."}, {"key": "4", "label": "④", "text": "최저가 낙찰을 통해 세금을 아끼는 것이 사회적 책임이기 때문이다."}], "id": "1:5:4:exam:9"}, {"no": 79, "subject": 1, "subjectName": "Part5 Ch4", "stem": "혁신조달(Innovation Procurement)이 기존 조달과 차별화되는 지점은?", "choices": [{"key": "1", "label": "①", "text": "규격이 정해진 기성품만 구매한다."}, {"key": "2", "label": "②", "text": "가격 경쟁력이 가장 중요한 지표이다."}, {"key": "3", "label": "③", "text": "신기술보다는 이미 검증된 안정적 기술만 채택한다."}, {"key": "4", "label": "④", "text": "사회적 난제 해결을 위해 기술 개발 자체를 유도하기도 한다."}], "id": "1:5:4:exam:10"}, {"no": 80, "subject": 1, "subjectName": "Part5 Ch4", "stem": "기술개발제품 지정 13종 중 부처 협업을 통해 지정되는 '혁신제품'에 대한 설명으로 틀린 것은?", "choices": [{"key": "1", "label": "①", "text": "우수연구개발 혁신제품이 포함된다."}, {"key": "2", "label": "②", "text": "혁신시제품도 혁신제품의 한 종류이다."}, {"key": "3", "label": "③", "text": "관계 중앙관서와 조달청 등이 유형별로 지정·운영한다."}, {"key": "4", "label": "④", "text": "한 번 지정되면 영구적으로 지위가 유지된다."}], "id": "1:5:4:exam:11"}, {"no": 81, "subject": 1, "subjectName": "Part5 Ch4", "stem": "기술개발제품 우선구매가 공공조달의 '전략적 활용'에 해당하는 이유는?", "choices": [{"key": "1", "label": "①", "text": "단순히 필요한 물품을 조달하는 행위이기 때문이다."}, {"key": "2", "label": "②", "text": "예산을 가장 빨리 소진할 수 있는 방법이기 때문이다."}, {"key": "3", "label": "③", "text": "전 세계 모든 국가가 의무적으로 시행하는 제도이기 때문이다."}, {"key": "4", "label": "④", "text": "조달을 통해 산업 혁신이라는 정책 목표를 달성하려 하기 때문이다."}], "id": "1:5:4:exam:12"}, {"no": 82, "subject": 1, "subjectName": "Part5 Ch4", "stem": "중소기업 기술개발제품 13종 중 조달청장이 지정하며 수의계약 혜택이 주어지는 대표적인 제품은?", "choices": [{"key": "1", "label": "①", "text": "우수조달물품(우수제품)"}, {"key": "2", "label": "②", "text": "해외 직구 제품"}, {"key": "3", "label": "③", "text": "대기업 신제품"}, {"key": "4", "label": "④", "text": "일반규격제품"}], "id": "1:5:4:exam:13"}, {"no": 83, "subject": 1, "subjectName": "Part5 Ch4", "stem": "다음 중 기술개발제품 우선구매 제도의 목적과 거리가 먼 것은?", "choices": [{"key": "1", "label": "①", "text": "중소기업의 기술개발 의욕 고취"}, {"key": "2", "label": "②", "text": "공공기관의 예산 무조건적 삭감"}, {"key": "3", "label": "③", "text": "기술우수제품의 초기 시장 창출"}, {"key": "4", "label": "④", "text": "중소기업의 판로 확보 및 경영 안정"}], "id": "1:5:4:exam:14"}, {"no": 84, "subject": 1, "subjectName": "Part5 Ch4", "stem": "기술개발제품 구매 실적을 관리하고 이행력을 높이기 위해 활용되는 평가 도구는?", "choices": [{"key": "1", "label": "①", "text": "공공기관 경영평가"}, {"key": "2", "label": "②", "text": "소비자 만족도 조사"}, {"key": "3", "label": "③", "text": "전사적 자원관리(ERP)"}, {"key": "4", "label": "④", "text": "국제표준화기구(ISO) 인증"}], "id": "1:5:4:exam:15"}, {"no": 85, "subject": 1, "subjectName": "Part5 Ch4", "stem": "우수제품 지정제도의 전략적 가치로 틀린 것은?", "choices": [{"key": "1", "label": "①", "text": "공공서비스의 질적 향상 도모"}, {"key": "2", "label": "②", "text": "시장 지배적 대기업의 독점권 강화"}, {"key": "3", "label": "③", "text": "중소기업 기술력의 대외적 공신력 확보"}, {"key": "4", "label": "④", "text": "공공기관 담당자의 기술 구매 기피 현상 완화"}], "id": "1:5:4:exam:16"}, {"no": 86, "subject": 1, "subjectName": "Part5 Ch4", "stem": "다음 중 중소기업자 간 경쟁제품과 우수제품 제도의 관계에 대한 설명으로 옳은 것은?", "choices": [{"key": "1", "label": "①", "text": "우수제품은 대기업만 신청 가능하다."}, {"key": "2", "label": "②", "text": "두 제도는 상호 배타적이라 동시 적용이 불가능하다."}, {"key": "3", "label": "③", "text": "중소기업자 간 경쟁제품 지정이 취소되면 우수제품 지위도 자동 상실된다."}, {"key": "4", "label": "④", "text": "우수제품 지정과 중소기업자 간 경쟁제품 지정은 서로 다른 법적 요건과 절차로 운영된다."}], "id": "1:5:4:exam:17"}, {"no": 87, "subject": 1, "subjectName": "Part5 Ch4", "stem": "기술개발제품 우선구매제도가 공공조달의 '전략적 활용' 중 '혁신 촉진'에 해당하는 근거는?", "choices": [{"key": "1", "label": "①", "text": "정부의 구매력을 통해 기업이 위험을 감수하고 신기술을 개발하도록 유인하기 때문이다."}, {"key": "2", "label": "②", "text": "기존 제품을 반복해서 구매하기 때문이다."}, {"key": "3", "label": "③", "text": "조달 절차를 복잡하게 만들기 때문이다."}, {"key": "4", "label": "④", "text": "외산 제품 사용을 금지하기 때문이다."}], "id": "1:5:4:exam:18"}, {"no": 88, "subject": 1, "subjectName": "Part5 Ch5", "stem": "사회적기업 제품 구매 계획과 실적을 종합하여 관리하는 주무부처는?", "choices": [{"key": "1", "label": "①", "text": "조달청"}, {"key": "2", "label": "②", "text": "재정경제부"}, {"key": "3", "label": "③", "text": "고용노동부"}, {"key": "4", "label": "④", "text": "중소벤처기업부"}], "id": "1:5:5:exam:1"}, {"no": 89, "subject": 1, "subjectName": "Part5 Ch5", "stem": "사회적 협동조합에 대한 설명으로 옳은 것은?", "choices": [{"key": "1", "label": "①", "text": "공공기관은 이들의 제품을 구매할 권한이 없다."}, {"key": "2", "label": "②", "text": "일반 기업보다 조달 시장의 진입이 훨씬 어렵다."}, {"key": "3", "label": "③", "text": "수익 배당을 주된 목적으로 하는 영리 법인이다."}, {"key": "4", "label": "④", "text": "지역 주민의 권익 증진 등 공익적 사업을 수행하는 비영리 법인이다."}], "id": "1:5:5:exam:2"}, {"no": 90, "subject": 1, "subjectName": "Part5 Ch5", "stem": "장애인 표준사업장의 지정 목적은 무엇인가?", "choices": [{"key": "1", "label": "①", "text": "장애인의 안정적 일자리 창출 및 경제적 자립"}, {"key": "2", "label": "②", "text": "비장애인 고용 비율 극대화"}, {"key": "3", "label": "③", "text": "장애인의 해외 연수 지원"}, {"key": "4", "label": "④", "text": "수입 물품의 국산화 대체"}], "id": "1:5:5:exam:3"}, {"no": 91, "subject": 1, "subjectName": "Part5 Ch5", "stem": "사회적 책임 조달에서 '사회적 가치'를 평가하는 방식 중 틀린 것은?", "choices": [{"key": "1", "label": "①", "text": "입찰 시 가점 부여"}, {"key": "2", "label": "②", "text": "별도의 할당(Set-aside) 적용"}, {"key": "3", "label": "③", "text": "최저가 낙찰제로만 무조건 결정"}, {"key": "4", "label": "④", "text": "종합평가 시 비계량 지표로 반영"}], "id": "1:5:5:exam:4"}, {"no": 92, "subject": 1, "subjectName": "Part5 Ch5", "stem": "중증장애인생산품 우선구매제도의 이행력을 높이기 위한 장치는?", "choices": [{"key": "1", "label": "①", "text": "공공기관 경영실적 평가에 반영"}, {"key": "2", "label": "②", "text": "담당자의 해외 연수 금지"}, {"key": "3", "label": "③", "text": "모든 계약의 전면 중단"}, {"key": "4", "label": "④", "text": "위반 시 형사 처벌"}], "id": "1:5:5:exam:5"}, {"no": 93, "subject": 1, "subjectName": "Part5 Ch5", "stem": "사회적 책임 조달의 주요 공급자 중 '자활기업'에 대한 설명으로 옳은 것은?", "choices": [{"key": "1", "label": "①", "text": "대기업 퇴직자들이 세운 연구소"}, {"key": "2", "label": "②", "text": "기초생활수급자 등 저소득층이 협력하여 설립한 기업"}, {"key": "3", "label": "③", "text": "외국계 다국적 기업의 한국 지사"}, {"key": "4", "label": "④", "text": "연예인들이 운영하는 기획사"}], "id": "1:5:5:exam:6"}, {"no": 94, "subject": 1, "subjectName": "Part5 Ch5", "stem": "사회적 책임 조달(SRPP)이 '전략적 조달'의 일환으로 평가받는 이유는?", "choices": [{"key": "1", "label": "①", "text": "단순 구매를 넘어 국가의 정책적 목표를 달성하는 수단이기 때문이다."}, {"key": "2", "label": "②", "text": "조달 절차를 매우 복잡하게 만들기 때문이다."}, {"key": "3", "label": "③", "text": "가장 저렴한 물건을 찾는 기술이기 때문이다."}, {"key": "4", "label": "④", "text": "오직 국내 기업만 보호하기 때문이다."}], "id": "1:5:5:exam:7"}, {"no": 95, "subject": 1, "subjectName": "Part5 Ch5", "stem": "사회적 책임 조달 정책 이행 시 공공기관 담당자가 겪는 가장 큰 갈등 요인은?", "choices": [{"key": "1", "label": "①", "text": "구매 편의성과 법적 의무 이행 간의 조화"}, {"key": "2", "label": "②", "text": "예산 증액에 대한 지나친 기대"}, {"key": "3", "label": "③", "text": "업체와의 유착 관계 형성"}, {"key": "4", "label": "④", "text": "외국 조달기관과의 경쟁"}], "id": "1:5:5:exam:8"}, {"no": 96, "subject": 1, "subjectName": "Part5 Ch5", "stem": "미국, 캐나다 등에서 운영하는 '소수자 기업 지원(Set-aside)' 제도와 한국 SRPP의 공통점은?", "choices": [{"key": "1", "label": "①", "text": "모든 수입품의 전면 금지"}, {"key": "2", "label": "②", "text": "낙찰자 사후 관리의 부재"}, {"key": "3", "label": "③", "text": "조달 시장의 완전 경쟁화"}, {"key": "4", "label": "④", "text": "특정 사회적 집단을 위한 시장 분리 및 할당"}], "id": "1:5:5:exam:9"}, {"no": 97, "subject": 1, "subjectName": "Part5 Ch5", "stem": "「사회적기업 육성법」에 따른 '구매 계획 및 실적 제출' 제도의 기대 효과는?", "choices": [{"key": "1", "label": "①", "text": "공공기관의 구매 책임성 및 투명성 제고"}, {"key": "2", "label": "②", "text": "기업들의 실적 조작 유도"}, {"key": "3", "label": "③", "text": "정부의 시장 개입 축소"}, {"key": "4", "label": "④", "text": "행정 서류의 단순화"}], "id": "1:5:5:exam:10"}, {"no": 98, "subject": 1, "subjectName": "Part5 Ch5", "stem": "조달 과정에서 노동권을 보호하기 위한 SRPP의 구체적 사례는?", "choices": [{"key": "1", "label": "①", "text": "비정규직 해고의 자유 보장"}, {"key": "2", "label": "②", "text": "야간 근로의 무조건적인 장려"}, {"key": "3", "label": "③", "text": "최저임금 준수 여부 확인 및 가점 부여"}, {"key": "4", "label": "④", "text": "임금 체불 기업에 대한 입찰 참여 허용"}], "id": "1:5:5:exam:11"}, {"no": 99, "subject": 1, "subjectName": "Part5 Ch5", "stem": "사회적 책임 조달의 주요 목적은 무엇인가?", "choices": [{"key": "1", "label": "①", "text": "비용 절감"}, {"key": "2", "label": "②", "text": "기술혁신 촉진"}, {"key": "3", "label": "③", "text": "국제무역 확대"}, {"key": "4", "label": "④", "text": "사회적 가치 실현"}], "id": "1:5:5:exam:12"}, {"no": 100, "subject": 1, "subjectName": "Part5 Ch5", "stem": "사회적 책임 조달에서 대표적으로 고려되는 요소가 아닌 것은?", "choices": [{"key": "1", "label": "①", "text": "사회적 약자 지원"}, {"key": "2", "label": "②", "text": "환경 지속가능성"}, {"key": "3", "label": "③", "text": "노동권 보호"}, {"key": "4", "label": "④", "text": "환율 안정화"}], "id": "1:5:5:exam:13"}, {"no": 101, "subject": 1, "subjectName": "Part5 Ch5", "stem": "사회적 책임 조달의 효과로 기대되는 결과는?", "choices": [{"key": "1", "label": "①", "text": "경쟁 제한 강화"}, {"key": "2", "label": "②", "text": "대기업 독점 강화"}, {"key": "3", "label": "③", "text": "공공조달 비용 증가"}, {"key": "4", "label": "④", "text": "사회적기업의 시장 진입 확대"}], "id": "1:5:5:exam:14"}, {"no": 102, "subject": 1, "subjectName": "Part5 Ch5", "stem": "사회적 책임 조달 활성화를 위해 필요한 조치는?", "choices": [{"key": "1", "label": "①", "text": "담당자 교육과 인식 개선"}, {"key": "2", "label": "②", "text": "대기업 세제 혜택 강화"}, {"key": "3", "label": "③", "text": "무역자유화 협정 확대"}, {"key": "4", "label": "④", "text": "환율 안정 정책"}], "id": "1:5:5:exam:15"}, {"no": 103, "subject": 1, "subjectName": "Part5 Ch5", "stem": "한국의 중소기업 별도배정(set-aside)이 양허 대상에서 제외됨을 확인할 수 있는 협정은?", "choices": [{"key": "1", "label": "①", "text": "WTO 정부조달협정(GPA)"}, {"key": "2", "label": "②", "text": "OECD 투자협정"}, {"key": "3", "label": "③", "text": "한·미 FTA"}, {"key": "4", "label": "④", "text": "IMF 협정"}], "id": "1:5:5:exam:16"}, {"no": 104, "subject": 1, "subjectName": "Part5 Ch5", "stem": "사회적 책임 조달의 우대 대상으로 보기 어려운 것은?", "choices": [{"key": "1", "label": "①", "text": "여성기업"}, {"key": "2", "label": "②", "text": "사회적기업"}, {"key": "3", "label": "③", "text": "관련 법령 위반으로 입찰참가자격 제한 중인 기업"}, {"key": "4", "label": "④", "text": "장애인 고용기업"}], "id": "1:5:5:exam:17"}, {"no": 105, "subject": 1, "subjectName": "Part5 Ch5", "stem": "사회적 책임 조달의 경쟁성 저하 우려를 완화할 수 있는 방안은?", "choices": [{"key": "1", "label": "①", "text": "대기업에만 입찰 허용"}, {"key": "2", "label": "②", "text": "무작위 추첨 방식 도입"}, {"key": "3", "label": "③", "text": "사회적기업 간 경쟁 유도"}, {"key": "4", "label": "④", "text": "가격 기준만으로 낙찰 결정"}], "id": "1:5:5:exam:18"}, {"no": 106, "subject": 1, "subjectName": "Part5 Ch5", "stem": "사회적 책임 조달의 성과를 객관적으로 평가하기 위해 필요한 것은?", "choices": [{"key": "1", "label": "①", "text": "환율 변동성 분석"}, {"key": "2", "label": "②", "text": "대기업 매출 분석"}, {"key": "3", "label": "③", "text": "국제무역 통계 활용"}, {"key": "4", "label": "④", "text": "정량·정성적 평가 기준 마련"}], "id": "1:5:5:exam:19"}, {"no": 107, "subject": 1, "subjectName": "Part5 Ch5", "stem": "사회적 책임 조달의 지속가능성을 확보하기 위한 핵심 요소는?", "choices": [{"key": "1", "label": "①", "text": "강력한 인증 및 규정 준수 체계"}, {"key": "2", "label": "②", "text": "무역자유화 협정 확대"}, {"key": "3", "label": "③", "text": "대기업 세제 혜택"}, {"key": "4", "label": "④", "text": "환율 안정 정책"}], "id": "1:5:5:exam:20"}];
+const STORAGE_KEY = 'study_1_p5_exam_answers';
+const EXAM_DURATION_SEC = 999999;
+</script>
+<script>
+/* CBT 응시 — 시험 상태·답안·타이머 (비즈니스 로직) */
+(function (global) {
+  const CHOICE_SYM = { 1: '①', 2: '②', 3: '③', 4: '④' };
+  const DURATION_SEC = 120 * 60;
+
+  function subjectLabel(q) {
+    return q.subject + '과목 ' + q.subjectName;
+  }
+
+  function formatTime(sec) {
+    const h = Math.floor(sec / 3600);
+    const m = Math.floor((sec % 3600) / 60);
+    const s = sec % 60;
+    return [h, m, s].map(v => String(v).padStart(2, '0')).join(':').replace(/^00:/, '');
+  }
+
+  function createSession(questions, storageKey, durationSec) {
+    const duration = durationSec || DURATION_SEC;
+    const deadlineStorageKey = storageKey + '_deadline';
+    let current = 0;
+    let answers = {};
+    let timerSec = duration;
+    let timerId = null;
+    let choiceFocus = 0;
+    let examActive = false;
+    let deadlineMs = null;
+
+    function loadAnswers() {
+      try {
+        const s = localStorage.getItem(storageKey);
+        if (s) answers = JSON.parse(s);
+      } catch (e) {}
+    }
+
+    function saveAnswers() {
+      localStorage.setItem(storageKey, JSON.stringify(answers));
+    }
+
+    function clearStoredAnswers() {
+      localStorage.removeItem(storageKey);
+    }
+
+    function clearStoredSession() {
+      localStorage.removeItem(storageKey);
+      localStorage.removeItem(deadlineStorageKey);
+    }
+
+    function loadOrCreateDeadline() {
+      try {
+        const stored = Number(localStorage.getItem(deadlineStorageKey));
+        if (Number.isFinite(stored) && stored > 0) {
+          deadlineMs = stored;
+        } else {
+          deadlineMs = Date.now() + duration * 1000;
+          localStorage.setItem(deadlineStorageKey, String(deadlineMs));
+        }
+      } catch (e) {
+        deadlineMs = Date.now() + duration * 1000;
+      }
+      timerSec = Math.max(0, Math.ceil((deadlineMs - Date.now()) / 1000));
+    }
+
+    function getQuestions() {
+      return questions;
+    }
+
+    function getCurrentIndex() {
+      return current;
+    }
+
+    function getCurrentQuestion() {
+      return questions[current];
+    }
+
+    function getChoiceFocus() {
+      return choiceFocus;
+    }
+
+    function setChoiceFocus(idx) {
+      choiceFocus = idx;
+    }
+
+    function moveChoiceFocus(delta) {
+      const n = getCurrentQuestion().choices.length;
+      choiceFocus = (choiceFocus + delta + n) % n;
+    }
+
+    function syncChoiceFocusFromAnswer() {
+      const q = getCurrentQuestion();
+      const selected = answers[q.no];
+      const selIdx = selected ? q.choices.findIndex(c => c.key === selected) : -1;
+      choiceFocus = selIdx >= 0 ? selIdx : 0;
+    }
+
+    function getAnswer(no) {
+      return answers[no];
+    }
+
+    function getAnsweredCount() {
+      return Object.keys(answers).length;
+    }
+
+    function getUnansweredCount() {
+      return questions.length - getAnsweredCount();
+    }
+
+    function canGoPrev() {
+      return current > 0;
+    }
+
+    function canGoNext() {
+      return current < questions.length - 1;
+    }
+
+    function goPrev() {
+      if (!canGoPrev()) return false;
+      current--;
+      return true;
+    }
+
+    function goNext() {
+      if (!canGoNext()) return false;
+      current++;
+      return true;
+    }
+
+    function goToIndex(index) {
+      if (index < 0 || index >= questions.length) return false;
+      current = index;
+      return true;
+    }
+
+    function selectAnswer(key) {
+      const q = getCurrentQuestion();
+      answers[q.no] = key;
+      saveAnswers();
+      const idx = q.choices.findIndex(c => c.key === key);
+      if (idx >= 0) choiceFocus = idx;
+
+      const advanced = current < questions.length - 1;
+      if (advanced) current++;
+      return { advanced };
+    }
+
+    function selectAnswerByIndex(choiceIndex) {
+      const q = getCurrentQuestion();
+      if (choiceIndex < 0 || choiceIndex >= q.choices.length) return null;
+      return selectAnswer(q.choices[choiceIndex].key);
+    }
+
+    function exportAnswers() {
+      return questions.map(q => {
+        const a = answers[q.no];
+        const sym = CHOICE_SYM[a] || '?';
+        return q.no + sym;
+      }).join(' ');
+    }
+
+    function resetSession() {
+      answers = {};
+      clearStoredAnswers();
+      current = 0;
+      choiceFocus = 0;
+    }
+
+    function resetConfirmMessage() {
+      const n = getAnsweredCount();
+      return n > 0
+        ? '선택한 답안 ' + n + '개를 모두 지우고 1번 문항부터 다시 시작합니다.'
+        : '1번 문항부터 다시 시작합니다.';
+    }
+
+    function finishConfirmMessage() {
+      const left = getUnansweredCount();
+      return '미답 ' + left + '문항이 있습니다. 시험을 종료하시겠습니까?';
+    }
+
+    function startExam() {
+      loadOrCreateDeadline();
+      examActive = true;
+    }
+
+    function stopExam() {
+      examActive = false;
+      if (timerId !== null) {
+        clearInterval(timerId);
+        timerId = null;
+      }
+    }
+
+    function isExamActive() {
+      return examActive;
+    }
+
+    function getTimerSec() {
+      return timerSec;
+    }
+
+    function startTimer(onTick) {
+      if (timerSec <= 0) {
+        stopExam();
+        onTick(0, true);
+        return;
+      }
+      timerId = setInterval(() => {
+        timerSec = Math.max(0, Math.ceil((deadlineMs - Date.now()) / 1000));
+        onTick(timerSec);
+        if (timerSec <= 0) {
+          stopExam();
+          onTick(0, true);
+        }
+      }, 1000);
+    }
+
+    return {
+      CHOICE_SYM,
+      DURATION_SEC: duration,
+      subjectLabel,
+      formatTime,
+      loadAnswers,
+      saveAnswers,
+      clearStoredAnswers,
+      clearStoredSession,
+      getQuestions,
+      getCurrentIndex,
+      getCurrentQuestion,
+      getChoiceFocus,
+      setChoiceFocus,
+      moveChoiceFocus,
+      syncChoiceFocusFromAnswer,
+      getAnswer,
+      getAnsweredCount,
+      getUnansweredCount,
+      canGoPrev,
+      canGoNext,
+      goPrev,
+      goNext,
+      goToIndex,
+      selectAnswer,
+      selectAnswerByIndex,
+      exportAnswers,
+      resetSession,
+      resetConfirmMessage,
+      finishConfirmMessage,
+      startExam,
+      stopExam,
+      isExamActive,
+      getTimerSec,
+      startTimer,
+    };
+  }
+
+  global.CBTExam = { createSession, DURATION_SEC, formatTime };
+})(window);
+
+</script>
+<script>
+/* CBT 응시 — DOM 렌더링·이벤트 (UI 로직) */
+(function (global) {
+  function escapeHtml(s) {
+    return String(s)
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#39;');
+  }
+
+  function formatStem(s) {
+    return escapeHtml(s).replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+  }
+
+  function init(session) {
+    const screenStart = document.getElementById('screen-start');
+    const screenExam = document.getElementById('screen-exam');
+    const screenEnd = document.getElementById('screen-end');
+    const questionPanel = document.getElementById('question-panel');
+    const navScroll = document.getElementById('nav-scroll');
+    const timerEl = document.getElementById('timer');
+    const subjectLabelEl = document.getElementById('subject-label');
+    const progressLabelEl = document.getElementById('progress-label');
+    const answeredCountEl = document.getElementById('answered-count');
+    const btnPrev = document.getElementById('btn-prev');
+    const btnNext = document.getElementById('btn-next');
+    const answerExportEl = document.getElementById('answer-export');
+
+    function updateChoiceFocus() {
+      if (!questionPanel) return;
+      questionPanel.querySelectorAll('.choice').forEach((el, i) => {
+        el.classList.toggle('focused', i === session.getChoiceFocus());
+      });
+      const focused = questionPanel.querySelector('.choice.focused');
+      if (focused) focused.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+    }
+
+    function updateNav() {
+      const questions = session.getQuestions();
+      const current = session.getCurrentIndex();
+      document.querySelectorAll('.nav-btn').forEach(btn => {
+        const i = parseInt(btn.dataset.index, 10);
+        const q = questions[i];
+        btn.classList.remove('current', 'answered');
+        if (i === current) {
+          btn.classList.add('current');
+          btn.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+        } else if (session.getAnswer(q.no)) {
+          btn.classList.add('answered');
+        }
+      });
+    }
+
+    function updateCount() {
+      const total = session.getQuestions().length;
+      answeredCountEl.textContent = '답변 ' + session.getAnsweredCount() + ' / ' + total;
+    }
+
+    function renderNavGrid() {
+      const questions = session.getQuestions();
+      navScroll.innerHTML = '';
+      let lastSubject = null;
+      let sectionGrid = null;
+
+      questions.forEach((q, i) => {
+        if (q.subject !== lastSubject) {
+          lastSubject = q.subject;
+          const section = document.createElement('div');
+          section.className = 'nav-section';
+          const title = document.createElement('div');
+          title.className = 'nav-section-title';
+          title.textContent = q.subject + '과목 ' + q.subjectName;
+          sectionGrid = document.createElement('div');
+          sectionGrid.className = 'nav-section-grid';
+          section.appendChild(title);
+          section.appendChild(sectionGrid);
+          navScroll.appendChild(section);
+        }
+        const btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = 'nav-btn';
+        btn.dataset.index = String(i);
+        btn.textContent = q.no;
+        btn.title = session.subjectLabel(q);
+        btn.addEventListener('click', () => {
+          session.goToIndex(i);
+          renderQuestion();
+        });
+        sectionGrid.appendChild(btn);
+      });
+    }
+
+    function renderQuestion() {
+      const q = session.getCurrentQuestion();
+      const selected = session.getAnswer(q.no);
+      session.syncChoiceFocusFromAnswer();
+
+      let html = '<div class="q-header"><span class="q-badge">' + escapeHtml(q.no) + '</span><span class="q-subject">' + escapeHtml(session.subjectLabel(q)) + '</span></div>';
+      html += '<div class="q-stem">' + formatStem(q.stem) + '</div>';
+      html += '<div class="choices" id="choices">';
+      q.choices.forEach((c, i) => {
+        const sel = selected === c.key ? ' selected' : '';
+        const foc = i === session.getChoiceFocus() ? ' focused' : '';
+        html += '<label class="choice' + sel + foc + '" data-key="' + escapeHtml(c.key) + '" data-idx="' + i + '"><span class="num">' + escapeHtml(c.label) + '</span><span class="text">' + escapeHtml(c.text) + '</span><input type="radio" name="q" value="' + escapeHtml(c.key) + '"' + (sel ? ' checked' : '') + '></label>';
+      });
+      html += '</div>';
+      questionPanel.innerHTML = html;
+
+      questionPanel.querySelectorAll('.choice').forEach(el => {
+        el.addEventListener('click', () => {
+          session.selectAnswer(el.dataset.key);
+          renderQuestion();
+        });
+      });
+
+      subjectLabelEl.textContent = session.subjectLabel(q);
+      progressLabelEl.textContent = (session.getCurrentIndex() + 1) + ' / ' + session.getQuestions().length;
+      btnPrev.disabled = !session.canGoPrev();
+      btnNext.disabled = !session.canGoNext();
+      updateNav();
+      updateCount();
+      updateChoiceFocus();
+    }
+
+    function startTimer() {
+      timerEl.textContent = session.formatTime(session.getTimerSec());
+      session.startTimer((sec, timedOut) => {
+        timerEl.textContent = session.formatTime(sec);
+        if (sec <= 600) timerEl.classList.add('warn');
+        if (timedOut) finishExam(true);
+      });
+    }
+
+    function finishExam(auto) {
+      if (!auto) {
+        const left = session.getUnansweredCount();
+        if (left > 0 && !confirm(session.finishConfirmMessage())) return;
+      }
+      session.stopExam();
+      screenExam.style.display = 'none';
+      screenEnd.style.display = 'block';
+      answerExportEl.value = session.exportAnswers();
+    }
+
+    function handleExamKeydown(e) {
+      if (!session.isExamActive()) return;
+      if (e.target.tagName === 'TEXTAREA' || e.target.tagName === 'INPUT') return;
+
+      const q = session.getCurrentQuestion();
+      const n = q.choices.length;
+
+      if (e.key === 'ArrowDown') {
+        e.preventDefault();
+        session.moveChoiceFocus(1);
+        updateChoiceFocus();
+      } else if (e.key === 'ArrowUp') {
+        e.preventDefault();
+        session.moveChoiceFocus(-1);
+        updateChoiceFocus();
+      } else if (e.key === 'ArrowLeft') {
+        e.preventDefault();
+        if (session.goPrev()) renderQuestion();
+      } else if (e.key === 'ArrowRight') {
+        e.preventDefault();
+        if (session.goNext()) renderQuestion();
+      } else if (e.key >= '1' && e.key <= '4') {
+        const idx = parseInt(e.key, 10) - 1;
+        if (idx < n) {
+          e.preventDefault();
+          session.selectAnswerByIndex(idx);
+          renderQuestion();
+        }
+      } else if (e.key === 'Enter') {
+        e.preventDefault();
+        if (session.goNext()) renderQuestion();
+      }
+    }
+
+    document.getElementById('btn-start').addEventListener('click', () => {
+      session.loadAnswers();
+      screenStart.style.display = 'none';
+      screenExam.style.display = 'flex';
+      session.startExam();
+      renderNavGrid();
+      renderQuestion();
+      startTimer();
+    });
+
+    document.addEventListener('keydown', handleExamKeydown);
+
+    btnPrev.addEventListener('click', () => {
+      if (session.goPrev()) renderQuestion();
+    });
+
+    document.getElementById('btn-reset').addEventListener('click', () => {
+      if (!confirm(session.resetConfirmMessage())) return;
+      session.resetSession();
+      renderNavGrid();
+      renderQuestion();
+    });
+
+    btnNext.addEventListener('click', () => {
+      if (session.goNext()) renderQuestion();
+    });
+
+    document.getElementById('btn-submit').addEventListener('click', () => finishExam(false));
+
+    document.getElementById('btn-copy').addEventListener('click', () => {
+      answerExportEl.select();
+      navigator.clipboard.writeText(answerExportEl.value).catch(() => {});
+    });
+
+    document.getElementById('btn-restart').addEventListener('click', () => {
+      if (confirm('저장된 답안을 지우고 처음부터 다시 시작합니다.')) {
+        session.clearStoredSession();
+        location.reload();
+      }
+    });
+  }
+
+  global.CBTUI = { init };
+})(window);
+
+</script>
+<script>
+CBTUI.init(CBTExam.createSession(QUESTIONS, STORAGE_KEY, EXAM_DURATION_SEC));
+</script>
+<script>window.CBT_ANSWER_KEY=["①","④","①","④","②","④","④","①","③","①","④","④","④","③","④","②","①","④","①","④","④","②","④","①","③","④","④","①","④","③","④","①","④","③","④","④","④","③","④","②","①","③","①","②","②","④","④","③","④","④","④","①","①","③","①","④","④","④","①","①","①","③","①","④","④","④","③","③","①","③","④","④","①","②","①","①","③","③","④","④","④","①","②","①","②","④","①","③","④","①","③","①","②","①","①","④","①","③","④","④","④","①","①","③","③","④","①"];</script>
+<script src="../../assets/subject-cbt-grading.js"></script>
+</body>
+</html>

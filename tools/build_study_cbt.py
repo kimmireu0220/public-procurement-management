@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import argparse
+import re
 import shutil
 import tempfile
 from pathlib import Path
@@ -17,8 +18,8 @@ LANDING_HTML = """<!DOCTYPE html>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="공식 자료를 근거로 자체 작성한 강의별 연습문제 안내">
-<title>강의별 자체 연습문제</title>
+<meta name="description" content="공공조달관리사 1·2·3과목 전체 문제은행 CBT">
+<title>과목별 전체 문제은행 CBT</title>
 <style>
 :root { --bg:#f4f7fb; --paper:#fff; --navy:#102f50; --blue:#1763a6; --line:#dbe4ee; --muted:#647386; }
 * { box-sizing:border-box; }
@@ -36,10 +37,10 @@ a.secondary { border:1px solid var(--line); background:#fff; color:var(--navy); 
 <body>
 <main><section class="card">
   <span>PUBLIC PROCUREMENT MANAGER</span>
-  <h1>강의별 자체 연습문제</h1>
-  <p>민간 문제은행을 사용하던 예전 Part별 CBT 공개는 종료했습니다.</p>
-  <p class="note">새 강의에는 공식 출제기준·조달청 표준교재·현행 공식 원문을 근거로 자체 작성한 객관식·O/X·회상·사례 문제가 있으며, 모든 문제 바로 아래에서 정답과 해설을 확인할 수 있습니다.</p>
-  <div class="actions"><a href="../lecture/">새 강의와 연습문제 보기</a><a class="secondary" href="../">학습센터 홈</a></div>
+  <h1>과목별 전체 문제은행 CBT</h1>
+  <p>1·2·3과목의 전체 문제를 Part별 CBT로 학습합니다.</p>
+  <p class="note">총 1,395문항이며 답안을 제출하면 점수와 문항별 선택답·정답을 바로 확인할 수 있습니다.</p>
+  <div class="actions"><a href="../1과목/">1과목 · 670문항</a><a href="../2과목/">2과목 · 335문항</a><a href="../3과목/">3과목 · 390문항</a><a class="secondary" href="../">학습센터 홈</a></div>
 </section></main>
 </body>
 </html>
@@ -63,6 +64,8 @@ def compare_trees(expected: Path, actual: Path) -> list[str]:
         if actual.exists()
         else set()
     )
+    legacy_cbt = re.compile(r"[123]과목-part\d+-exam/index\.html")
+    actual_files = {path for path in actual_files if not legacy_cbt.fullmatch(path.as_posix())}
     errors = [f"누락 공개 파일: {path}" for path in sorted(expected_files - actual_files)]
     errors.extend(f"불필요 공개 파일: {path}" for path in sorted(actual_files - expected_files))
     for relative in sorted(expected_files & actual_files):
@@ -88,9 +91,8 @@ def main() -> int:
             print("학습 안내 검증 완료: 민간 문제은행 공개물 0개")
             return 0
 
-        if OUTPUT_DIR.exists():
-            shutil.rmtree(OUTPUT_DIR)
-        shutil.copytree(generated, OUTPUT_DIR)
+        OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+        shutil.copy2(generated / "index.html", OUTPUT_DIR / "index.html")
 
     print(f"학습 안내 생성 완료: 자체 강의 연습문제로 연결 → {OUTPUT_DIR}")
     return 0

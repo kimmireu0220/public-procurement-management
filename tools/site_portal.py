@@ -67,15 +67,15 @@ def _round_cards(rounds: list[int]) -> str:
 
 def _subject_cbt_cards() -> str:
     subjects = (
-        (1, "공공조달과 법제도 이해", 30, 45),
-        (2, "공공조달계획 수립 및 분석", 20, 30),
-        (3, "공공계약관리", 30, 45),
+        (1, "공공조달과 법제도 이해", 670, 7),
+        (2, "공공조달계획 수립 및 분석", 335, 4),
+        (3, "공공계약관리", 390, 4),
     )
     return "".join(
         f'<a class="choice-card featured" href="{subject}과목/">'
         f'<span class="card-kicker">과목별 필기 CBT</span><strong>{subject}과목</strong>'
-        f'<span>{html.escape(title)} · {count}문항 · {minutes}분</span></a>'
-        for subject, title, count, minutes in subjects
+        f'<span>{html.escape(title)} · 전체 {count}문항 · {part_count}개 Part</span></a>'
+        for subject, title, count, part_count in subjects
     )
 
 
