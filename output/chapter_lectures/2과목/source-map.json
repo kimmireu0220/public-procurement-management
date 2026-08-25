@@ -113,11 +113,11 @@
         "title": "조달요구 응대 및 제안",
         "textbook_pages": "53-94, 155-198",
         "lessons": [
-          {"id": "P02-C01", "subcriterion": "2-1 조달요구 대처 절차", "fine_criteria": ["2-1-1 경쟁입찰참가자격 등록", "2-1-2 수요기관의 정보요청(규격, 과업 및 예산 등)에 대한 문서 작성 및 제출", "2-1-3 조달관련 입법·행정예고 검색 및 의견제시"], "textbook_pages": "157-172, 181-187; 보완 53-68", "status": "planned"},
-          {"id": "P02-C02", "subcriterion": "2-2 사전규격공개 분석", "fine_criteria": ["2-2-1 과업내용 적정성 검토", "2-2-2 사업예산 적정성 검토", "2-2-3 당해 규격공개 관련 법규 준수 및 부합여부 검토", "2-2-4 개선보완 필요사항에 대한 의견 제시 및 처리"], "textbook_pages": "173-178", "status": "planned"},
-          {"id": "P02-C03", "subcriterion": "2-3 입찰공고문 분석", "fine_criteria": ["2-3-1 공고 내용 중 오류 및 법령 위반 사안으로 정정 필요성 검토", "2-3-2 입찰공고 내용 검토 및 분석", "2-3-3 입찰보증금 제출방법"], "textbook_pages": "179-191; 보완 53-68", "status": "planned"},
-          {"id": "P02-C04", "subcriterion": "2-4 입찰·제안요청 설명", "fine_criteria": ["2-4-1 입찰설명회 참석", "2-4-2 입찰 및 제안준비에 필요한 정보 식별 및 요청"], "textbook_pages": "192-193; 보완 66-68", "status": "planned"},
-          {"id": "P02-C05", "subcriterion": "2-5 입찰서 제출 및 개찰", "fine_criteria": ["2-5-1 입찰서 제출 방법", "2-5-2 무효입찰 사유", "2-5-3 개찰 및 낙찰 절차"], "textbook_pages": "194-198; 보완 57-68, 185-191", "status": "planned"}
+          {"id": "P02-C01", "subcriterion": "2-1 조달요구 대처 절차", "fine_criteria": ["2-1-1 경쟁입찰참가자격 등록", "2-1-2 수요기관의 정보요청(규격, 과업 및 예산 등)에 대한 문서 작성 및 제출", "2-1-3 조달관련 입법·행정예고 검색 및 의견제시"], "textbook_pages": "157-172, 181-187; 보완 53-68", "status": "source_checked", "questions_written": 20, "recall_prompts_written": 5, "inline_answers_written": 25},
+          {"id": "P02-C02", "subcriterion": "2-2 사전규격공개 분석", "fine_criteria": ["2-2-1 과업내용 적정성 검토", "2-2-2 사업예산 적정성 검토", "2-2-3 당해 규격공개 관련 법규 준수 및 부합여부 검토", "2-2-4 개선보완 필요사항에 대한 의견 제시 및 처리"], "textbook_pages": "173-178", "status": "source_checked", "questions_written": 20, "recall_prompts_written": 5, "inline_answers_written": 25},
+          {"id": "P02-C03", "subcriterion": "2-3 입찰공고문 분석", "fine_criteria": ["2-3-1 공고 내용 중 오류 및 법령 위반 사안으로 정정 필요성 검토", "2-3-2 입찰공고 내용 검토 및 분석", "2-3-3 입찰보증금 제출방법"], "textbook_pages": "179-191; 보완 53-68", "status": "source_checked", "questions_written": 20, "recall_prompts_written": 5, "inline_answers_written": 25},
+          {"id": "P02-C04", "subcriterion": "2-4 입찰·제안요청 설명", "fine_criteria": ["2-4-1 입찰설명회 참석", "2-4-2 입찰 및 제안준비에 필요한 정보 식별 및 요청"], "textbook_pages": "192-193; 보완 66-68", "status": "source_checked", "questions_written": 20, "recall_prompts_written": 5, "inline_answers_written": 25},
+          {"id": "P02-C05", "subcriterion": "2-5 입찰서 제출 및 개찰", "fine_criteria": ["2-5-1 입찰서 제출 방법", "2-5-2 무효입찰 사유", "2-5-3 개찰 및 낙찰 절차"], "textbook_pages": "194-198; 보완 57-68, 185-191", "status": "source_checked", "questions_written": 20, "recall_prompts_written": 5, "inline_answers_written": 25}
         ]
       },
       {
@@ -137,13 +137,13 @@
   "production_status": {
     "status": "in_progress",
     "chapters_planned": 14,
-    "chapters_completed": 4,
+    "chapters_completed": 9,
     "major_criteria_mapped": "3/3",
     "subcriteria_mapped": "14/14",
     "fine_criteria_mapped": "43/43",
-    "questions_written": 80,
-    "recall_prompts_written": 20,
-    "inline_answers_written": 100,
+    "questions_written": 180,
+    "recall_prompts_written": 45,
+    "inline_answers_written": 225,
     "answer_placement": "모든 객관식·O/X·회상·사례 문항 바로 아래 정답·해설 배치",
     "separate_answer_sheet": false,
     "final_integrated_qa": "pending_after_subjects_1_and_2_generation"
