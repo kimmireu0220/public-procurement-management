@@ -125,25 +125,25 @@
         "title": "입찰·제안평가 및 계약체결",
         "textbook_pages": "29-33, 53-94, 199-244",
         "lessons": [
-          {"id": "P03-C01", "subcriterion": "3-1 입찰·제안평가 절차", "fine_criteria": ["3-1-1 일반·제한·지명 경쟁입찰 절차", "3-1-2 수의계약 절차"], "textbook_pages": "201-205; 보완 29-33, 53-94", "status": "planned"},
-          {"id": "P03-C02", "subcriterion": "3-2 평가위원회 및 이해충돌", "fine_criteria": ["3-2-1 입찰·낙찰 방법별 평가위원회 구성에 대한 이해", "3-2-2 이해상충 평가위원에 대한 회피", "3-2-3 평가위원 사전접촉 금지 등 공정한 평가를 위한 기준 지침 준수"], "textbook_pages": "206-214; 보완 69-79", "status": "planned"},
-          {"id": "P03-C03", "subcriterion": "3-3 계약의 협상", "fine_criteria": ["3-3-1 기술(규격) 적합자 및 우선협상대상자 이해", "3-3-2 기술협상", "3-3-3 가격협상"], "textbook_pages": "215-223; 보완 236-244", "status": "planned"},
-          {"id": "P03-C04", "subcriterion": "3-4 낙찰자 결정방법", "fine_criteria": ["3-4-1 적격심사 절차 및 낙찰자 결정", "3-4-2 협상계약 절차 및 낙찰자 결정", "3-4-3 희망수량경쟁입찰 절차 및 낙찰자 결정", "3-4-4 종합심사낙찰제(시설공사 등) 절차 및 낙찰", "3-4-5 계약법령상 낙찰요건 부합여부"], "textbook_pages": "224-233, 236-244; 보완 80-94", "status": "planned"},
-          {"id": "P03-C05", "subcriterion": "3-5 입찰결과 분석 및 이의제기", "fine_criteria": ["3-5-1 입찰·낙찰 과정 오류 및 문제점 분석", "3-5-2 분석결과 문제점에 대한 이의제기"], "textbook_pages": "234-235; 보완 191, 243-244", "status": "planned"}
+          {"id": "P03-C01", "subcriterion": "3-1 입찰·제안평가 절차", "fine_criteria": ["3-1-1 일반·제한·지명 경쟁입찰 절차", "3-1-2 수의계약 절차"], "textbook_pages": "201-205; 보완 29-33, 53-94", "status": "source_checked", "questions_written": 20, "recall_prompts_written": 5, "inline_answers_written": 25},
+          {"id": "P03-C02", "subcriterion": "3-2 평가위원회 및 이해충돌", "fine_criteria": ["3-2-1 입찰·낙찰 방법별 평가위원회 구성에 대한 이해", "3-2-2 이해상충 평가위원에 대한 회피", "3-2-3 평가위원 사전접촉 금지 등 공정한 평가를 위한 기준 지침 준수"], "textbook_pages": "206-214; 보완 69-79", "status": "source_checked", "questions_written": 20, "recall_prompts_written": 5, "inline_answers_written": 25},
+          {"id": "P03-C03", "subcriterion": "3-3 계약의 협상", "fine_criteria": ["3-3-1 기술(규격) 적합자 및 우선협상대상자 이해", "3-3-2 기술협상", "3-3-3 가격협상"], "textbook_pages": "215-223; 보완 236-244", "status": "source_checked", "questions_written": 20, "recall_prompts_written": 5, "inline_answers_written": 25},
+          {"id": "P03-C04", "subcriterion": "3-4 낙찰자 결정방법", "fine_criteria": ["3-4-1 적격심사 절차 및 낙찰자 결정", "3-4-2 협상계약 절차 및 낙찰자 결정", "3-4-3 희망수량경쟁입찰 절차 및 낙찰자 결정", "3-4-4 종합심사낙찰제(시설공사 등) 절차 및 낙찰", "3-4-5 계약법령상 낙찰요건 부합여부"], "textbook_pages": "224-233, 236-244; 보완 80-94", "status": "source_checked", "questions_written": 20, "recall_prompts_written": 5, "inline_answers_written": 25},
+          {"id": "P03-C05", "subcriterion": "3-5 입찰결과 분석 및 이의제기", "fine_criteria": ["3-5-1 입찰·낙찰 과정 오류 및 문제점 분석", "3-5-2 분석결과 문제점에 대한 이의제기"], "textbook_pages": "234-235; 보완 191, 243-244", "status": "source_checked", "questions_written": 20, "recall_prompts_written": 5, "inline_answers_written": 25}
         ]
       }
     ]
   },
   "production_status": {
-    "status": "in_progress",
+    "status": "generated_pending_final_integrated_qa",
     "chapters_planned": 14,
-    "chapters_completed": 9,
+    "chapters_completed": 14,
     "major_criteria_mapped": "3/3",
     "subcriteria_mapped": "14/14",
     "fine_criteria_mapped": "43/43",
-    "questions_written": 180,
-    "recall_prompts_written": 45,
-    "inline_answers_written": 225,
+    "questions_written": 280,
+    "recall_prompts_written": 70,
+    "inline_answers_written": 350,
     "answer_placement": "모든 객관식·O/X·회상·사례 문항 바로 아래 정답·해설 배치",
     "separate_answer_sheet": false,
     "final_integrated_qa": "pending_after_subjects_1_and_2_generation"
