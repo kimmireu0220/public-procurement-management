@@ -53,13 +53,15 @@ class LecturePagesTest(unittest.TestCase):
         self.assertIn("원문 &lt;br&gt; 표기", space_break)
 
     def test_answers_are_collapsed_for_recall_practice(self) -> None:
-        rendered = build_lecture_pages.markdown_to_html(
-            "**문제 1.** 설명은?\n\n> **정답·해설:** 핵심 답안"
-        )
+        for label in ("정답·해설", "정답·채점"):
+            with self.subTest(label=label):
+                rendered = build_lecture_pages.markdown_to_html(
+                    f"**문제 1.** 설명은?\n\n> **{label}:** 핵심 답안"
+                )
 
-        self.assertIn('<details class="answer-disclosure">', rendered)
-        self.assertIn("정답·해설 보기", rendered)
-        self.assertIn("핵심 답안", rendered)
+                self.assertIn('<details class="answer-disclosure">', rendered)
+                self.assertIn("정답·해설 보기", rendered)
+                self.assertIn("핵심 답안", rendered)
 
     def test_duplicate_headings_receive_unique_anchors(self) -> None:
         markdown = "## 개념\n본문\n\n## 개념\n다른 본문"

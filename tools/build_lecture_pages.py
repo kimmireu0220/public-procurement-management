@@ -282,7 +282,7 @@ def markdown_to_html(markdown: str) -> str:
             flush_paragraph()
             close_list()
             quote = stripped[2:]
-            answer = re.match(r"^\*\*정답[·ㆍ ]?해설:\*\*\s*(.*)$", quote)
+            answer = re.match(r"^\*\*정답[·ㆍ ]?(?:해설|채점):\*\*\s*(.*)$", quote)
             if answer:
                 result.append(
                     '<details class="answer-disclosure"><summary>정답·해설 보기</summary>'

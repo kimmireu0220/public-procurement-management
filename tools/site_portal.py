@@ -323,7 +323,6 @@ h1 { margin: 0; font-size: clamp(2.15rem, 5vw, 3.35rem); line-height: 1.15; lett
 .review-link { display: flex; justify-content: space-between; gap: 1rem; margin-top: .8rem; padding: .95rem 1.05rem; border-radius: 10px; background: #fff6dc; color: #684700; text-decoration: none; }
 .review-link.overview-link { margin: 0 0 .8rem; background: var(--sky); color: var(--navy-deep); }
 .review-link span { font-size: .84rem; font-weight: 750; }
-.back-to-top { display: inline-flex; min-height: 44px; align-items: center; margin-top: 1rem; color: var(--blue-strong); font-size: .88rem; font-weight: 800; text-decoration: none; }
 .footer { padding: 1.6rem var(--gutter) 2.25rem; color: var(--muted); font-size: .84rem; text-align: center; }
 @media (max-width: 1099px) {
   .four-card-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
@@ -389,7 +388,7 @@ def render_portal(rounds: list[int], lectures: list[LectureLink] | None = None) 
 {subject_cbt_section}
 {wrong_cbt_section}
 {mock_section}
-<section class="section" id="lectures"><div class="section-head"><h2>과목별 이론 강의</h2><p>출제기준 · 실무 판단 · 답안 훈련</p></div>{_lecture_groups(lecture_items)}<a class="back-to-top" href="#main-content">↑ 맨 위로</a></section>
+<section class="section" id="lectures"><div class="section-head"><h2>과목별 이론 강의</h2><p>출제기준 · 실무 판단 · 답안 훈련</p></div>{_lecture_groups(lecture_items)}</section>
 </main>
 <footer class="footer">공식 출제기준 · 조달청 표준교재 · 현행 규정 기반 자체 제작 학습자료</footer>
 <script>
