@@ -9,8 +9,8 @@
     {
       "id": 2,
       "title": "공공조달계획 수립 및 분석",
-      "chapter_count": 0,
-      "published": false
+      "chapter_count": 4,
+      "published": true
     },
     {
       "id": 3,
@@ -25,5 +25,5 @@
       "published": true
     }
   ],
-  "total_chapters": 76
+  "total_chapters": 80
 }
