@@ -262,17 +262,16 @@ def page_html(subject: int, mode: str, count: int) -> str:
             if is_wrong
             else "답안을 클릭하면 즉시 채점되며 오답은 과목별로 누적됩니다."
         )
-    home = "../../" if is_wrong else "../"
     asset = "../../assets" if is_wrong else "../assets"
     mode_label = "오답 재풀이" if is_wrong else f"전체 {count:,}문항"
     return f"""<!DOCTYPE html>
 <html lang="ko"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="description" content="공공조달관리사 {heading}"><title>{heading} · 공공조달관리사</title>
 <link rel="stylesheet" href="{asset}/cumulative-cbt.css"></head><body>
-<header class="topbar"><div><small>{mode_label}</small><h1>{heading}</h1><p>{title} · {note}</p></div><a href="{home}">학습센터 홈</a></header>
+<header class="topbar"><div><small>{mode_label}</small><h1>{heading}</h1><p>{title} · {note}</p></div></header>
 <main id="cbt-app" class="cbt-shell" aria-live="polite"><p class="loading">문제은행을 불러오는 중입니다.</p></main>
 <script>window.CBT_CONFIG={_json({"subject": subject, "mode": mode, "title": title})};</script>
-<script src="{asset}/subject{subject}-bank.js"></script><script src="{asset}/cumulative-cbt.js"></script>
+<script src="{asset}/subject{subject}-bank.js"></script><script src="{asset}/{'cumulative-cbt.js' if subject == 4 else 'objective-cumulative-cbt.js'}"></script>
 </body></html>
 """
 
@@ -296,7 +295,7 @@ def build(destination: Path) -> dict[int, int]:
     (assets / "subject4-bank.js").write_text(
         "window.CBT_BANK=" + _json(questions) + ";\n", encoding="utf-8"
     )
-    for name in ("cumulative-cbt.js", "cumulative-cbt.css"):
+    for name in ("cumulative-cbt.js", "objective-cumulative-cbt.js", "cumulative-cbt.css"):
         shutil.copy2(ASSETS / name, assets / name)
     for subject, count in counts.items():
         subject_dir = destination / f"{subject}과목"
@@ -335,6 +334,7 @@ def main() -> int:
                 *(Path(f"오답/{subject}과목/index.html") for subject in ACTIVE_SUBJECTS),
                 *(Path(f"assets/subject{subject}-bank.js") for subject in ACTIVE_SUBJECTS),
                 Path("assets/cumulative-cbt.js"),
+                Path("assets/objective-cumulative-cbt.js"),
                 Path("assets/cumulative-cbt.css"),
             ]
             errors = [path for path in paths if not (DOCS / path).is_file() or (DOCS / path).read_bytes() != (generated / path).read_bytes()]

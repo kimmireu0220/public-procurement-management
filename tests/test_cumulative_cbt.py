@@ -35,12 +35,31 @@ class CumulativeCbtTest(unittest.TestCase):
         self.assertTrue(all(answers[question["id"]].strip() for question in questions))
 
     def test_client_supports_immediate_grading_and_manual_written_judgement(self) -> None:
-        script = (ROOT / "docs" / "assets" / "cumulative-cbt.js").read_text(encoding="utf-8")
-        self.assertIn("selected === correct", script)
-        self.assertIn('data-judge="correct"', script)
-        self.assertIn('data-judge="wrong"', script)
-        self.assertIn("wrong.delete(question.id)", script)
-        self.assertIn("localStorage.removeItem(wrongKey)", script)
+        objective = (ROOT / "docs" / "assets" / "objective-cumulative-cbt.js").read_text(encoding="utf-8")
+        written = (ROOT / "docs" / "assets" / "cumulative-cbt.js").read_text(encoding="utf-8")
+        self.assertIn("selected === correct", objective)
+        self.assertIn("wrong.delete(question.id)", objective)
+        self.assertIn("updateWrongCount()", objective)
+        self.assertIn("window.setTimeout(() => finishQuestion(true), 350)", objective)
+        self.assertIn("(isCorrect ? '' :", objective)
+        self.assertIn("localStorage.removeItem(wrongKey)", objective)
+        self.assertIn('data-judge="correct"', written)
+        self.assertIn('data-judge="wrong"', written)
+
+    def test_objective_and_written_clients_are_separated(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            destination = Path(tmp) / "docs"
+            build_cumulative_cbt.build(destination)
+            for subject in (1, 2, 3):
+                page = (destination / f"{subject}과목" / "index.html").read_text(encoding="utf-8")
+                self.assertIn("objective-cumulative-cbt.js", page)
+            written_page = (destination / "4과목" / "index.html").read_text(encoding="utf-8")
+            self.assertIn('src="../assets/cumulative-cbt.js"', written_page)
+            self.assertNotIn("objective-cumulative-cbt.js", written_page)
+            for page_path in destination.glob("*과목/index.html"):
+                self.assertNotIn("학습센터 홈", page_path.read_text(encoding="utf-8"))
+            for page_path in (destination / "오답").glob("*과목/index.html"):
+                self.assertNotIn("학습센터 홈", page_path.read_text(encoding="utf-8"))
 
     def test_portal_links_four_full_and_four_wrong_cbts(self) -> None:
         portal = site_portal.render_portal([])
@@ -48,6 +67,15 @@ class CumulativeCbtTest(unittest.TestCase):
             self.assertIn(f'href="{subject}과목/"', portal)
             self.assertIn(f'href="오답/{subject}과목/"', portal)
         self.assertNotIn("None</div>", portal)
+        self.assertNotIn("오답 전체 초기화", portal)
+        self.assertNotIn("reset-wrong-all", portal)
+
+    def test_wrong_reset_is_scoped_to_each_subject_page(self) -> None:
+        for name in ("objective-cumulative-cbt.js", "cumulative-cbt.js"):
+            script = (ROOT / "docs" / "assets" / name).read_text(encoding="utf-8")
+            self.assertIn("${config.subject}과목 오답 초기화", script)
+            self.assertIn("localStorage.removeItem(wrongKey)", script)
+            self.assertNotIn("[1,2,3,4]", script)
 
 
 if __name__ == "__main__":
