@@ -120,7 +120,7 @@ class VerifyQwen3TtsMlxChunksAsrTest(unittest.TestCase):
         groups: list[dict[str, Any]] = []
         for stable_index, indices in enumerate(group_chunk_indices):
             text_hashes = [self.qa.sha256_text(chunks[index - 1]) for index in indices]
-            group = {
+            group: dict[str, Any] = {
                 "stable_index": stable_index,
                 "seed": 1234 + stable_index,
                 "length_bucket": 6,
