@@ -67,15 +67,16 @@ def _round_cards(rounds: list[int]) -> str:
 
 def _subject_cbt_cards() -> str:
     subjects = (
-        (1, "공공조달과 법제도 이해", 670, 7),
-        (2, "공공조달계획 수립 및 분석", 335, 4),
-        (3, "공공계약관리", 390, 4),
+        (1, "공공조달과 법제도 이해", 670, 7, "필기 CBT"),
+        (2, "공공조달계획 수립 및 분석", 335, 4, "필기 CBT"),
+        (3, "공공계약관리", 390, 4, "필기 CBT"),
+        (4, "공공조달 관리실무", 1244, 8, "실기 문제은행"),
     )
     return "".join(
         f'<a class="choice-card featured" href="{subject}과목/">'
-        f'<span class="card-kicker">과목별 필기 CBT</span><strong>{subject}과목</strong>'
-        f'<span>{html.escape(title)} · 전체 {count}문항 · {part_count}개 Part</span></a>'
-        for subject, title, count, part_count in subjects
+        f'<span class="card-kicker">{kind}</span><strong>{subject}과목</strong>'
+        f'<span>{html.escape(title)} · 전체 {count:,}문항 · {part_count}개 Part</span></a>'
+        for subject, title, count, part_count, kind in subjects
     )
 
 
@@ -135,7 +136,7 @@ def render_portal(rounds: list[int], lectures: list[LectureLink] | None = None) 
     )
     subject_cbt_section = (
         '<section class="section" id="subject-cbt"><div class="section-head">'
-        '<h2>과목별 필기 CBT</h2><p>답안 제출 즉시 점수와 문항별 정답 확인</p></div>'
+        '<h2>과목별 문제은행</h2><p>1·2·3과목 필기 CBT · 4과목 실기 답안 연습</p></div>'
         f'<div class="choice-grid">{_subject_cbt_cards()}</div></section>'
     )
     return f"""<!DOCTYPE html>
@@ -159,7 +160,7 @@ a{{color:inherit}}.hero{{background:linear-gradient(135deg,#102f50,#1763a6);colo
 </style>
 </head>
 <body>
-<header class="hero"><div class="hero-inner"><span class="eyebrow">PUBLIC PROCUREMENT MANAGER</span><h1>공공조달관리사 학습센터</h1><p>공식 자료 기반 자체 강의와 검증된 연습문제를 한곳에서 선택하세요.</p><nav class="quick-nav" aria-label="학습 메뉴"><a href="#subject-cbt">과목별 필기 CBT</a>{mock_nav}<a href="#lectures">이론 강의</a></nav></div></header>
+<header class="hero"><div class="hero-inner"><span class="eyebrow">PUBLIC PROCUREMENT MANAGER</span><h1>공공조달관리사 학습센터</h1><p>공식 자료 기반 자체 강의와 검증된 연습문제를 한곳에서 선택하세요.</p><nav class="quick-nav" aria-label="학습 메뉴"><a href="#subject-cbt">과목별 문제은행</a>{mock_nav}<a href="#lectures">이론 강의</a></nav></div></header>
 <main class="page">
 {subject_cbt_section}
 {mock_section}

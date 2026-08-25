@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""민간 문제은행을 공개하지 않고 자체 강의 연습문제로 안내하는 페이지를 생성한다."""
+"""과목별 필기 CBT와 실기 문제은행 안내 페이지를 생성한다."""
 
 from __future__ import annotations
 
@@ -18,7 +18,7 @@ LANDING_HTML = """<!DOCTYPE html>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="공공조달관리사 1·2·3과목 전체 문제은행 CBT">
+<meta name="description" content="공공조달관리사 1·2·3과목 필기 CBT와 4과목 실기 문제은행">
 <title>과목별 전체 문제은행 CBT</title>
 <style>
 :root { --bg:#f4f7fb; --paper:#fff; --navy:#102f50; --blue:#1763a6; --line:#dbe4ee; --muted:#647386; }
@@ -38,9 +38,9 @@ a.secondary { border:1px solid var(--line); background:#fff; color:var(--navy); 
 <main><section class="card">
   <span>PUBLIC PROCUREMENT MANAGER</span>
   <h1>과목별 전체 문제은행 CBT</h1>
-  <p>1·2·3과목의 전체 문제를 Part별 CBT로 학습합니다.</p>
-  <p class="note">총 1,395문항이며 답안을 제출하면 점수와 문항별 선택답·정답을 바로 확인할 수 있습니다.</p>
-  <div class="actions"><a href="../1과목/">1과목 · 670문항</a><a href="../2과목/">2과목 · 335문항</a><a href="../3과목/">3과목 · 390문항</a><a class="secondary" href="../">학습센터 홈</a></div>
+  <p>1·2·3과목 필기 CBT와 4과목 실기형 문제를 Part별로 학습합니다.</p>
+  <p class="note">전체 2,639문항입니다. 필기 CBT는 제출 즉시 자동 채점하며, 4과목은 서술형 답안 작성 연습에 사용합니다.</p>
+  <div class="actions"><a href="../1과목/">1과목 · 670문항</a><a href="../2과목/">2과목 · 335문항</a><a href="../3과목/">3과목 · 390문항</a><a href="../4과목/">4과목 · 1,244문항</a><a class="secondary" href="../">학습센터 홈</a></div>
 </section></main>
 </body>
 </html>
@@ -88,13 +88,13 @@ def main() -> int:
                 for error in errors:
                     print(error)
                 return 1
-            print("학습 안내 검증 완료: 민간 문제은행 공개물 0개")
+            print("학습 안내 검증 완료: 1~4과목 문제은행 연결 정상")
             return 0
 
         OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
         shutil.copy2(generated / "index.html", OUTPUT_DIR / "index.html")
 
-    print(f"학습 안내 생성 완료: 자체 강의 연습문제로 연결 → {OUTPUT_DIR}")
+    print(f"학습 안내 생성 완료: 1~4과목 문제은행 연결 → {OUTPUT_DIR}")
     return 0
 
 

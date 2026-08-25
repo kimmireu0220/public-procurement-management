@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import re
 import sys
 import tempfile
 import unittest
@@ -14,6 +15,17 @@ import build_study_cbt  # noqa: E402
 
 
 class StudyGuideTest(unittest.TestCase):
+    def test_published_cbt_blocks_label_input_double_click(self) -> None:
+        pages = sorted((ROOT / "docs" / "study").glob("*과목-part*-exam/index.html"))
+        self.assertEqual(len(pages), 15)
+        for page in pages:
+            text = page.read_text(encoding="utf-8")
+            self.assertIn("if (event.target.tagName === 'INPUT') return;", text)
+            storage_key = re.search(r"const STORAGE_KEY = '([^']+)';", text)
+            self.assertIsNotNone(storage_key)
+            assert storage_key is not None
+            self.assertTrue(storage_key.group(1).endswith("_answers_v2"))
+
     def test_build_publishes_subject_cbt_landing(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
             destination = Path(tmp) / "study"
@@ -28,7 +40,8 @@ class StudyGuideTest(unittest.TestCase):
 
             landing = (destination / "index.html").read_text(encoding="utf-8")
             self.assertIn('href="../1과목/"', landing)
-            self.assertIn("총 1,395문항", landing)
+            self.assertIn('href="../4과목/"', landing)
+            self.assertIn("전체 2,639문항", landing)
             self.assertNotIn("const QUESTIONS", landing)
             self.assertNotIn("problem_book_final", landing)
             self.assertNotIn("agent_extract", landing)
