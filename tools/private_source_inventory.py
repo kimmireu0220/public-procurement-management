@@ -36,6 +36,13 @@ def _digest(path: Path) -> str:
     return hasher.hexdigest()
 
 
+def _is_lfs_pointer(path: Path) -> bool:
+    try:
+        return path.read_bytes().startswith(b"version https://git-lfs.github.com/spec/v1\n")
+    except OSError:
+        return False
+
+
 def build_payload(source_root: Path = DEFAULT_SOURCE_ROOT) -> dict[str, object]:
     source_root = source_root.resolve()
     images = []
@@ -143,6 +150,7 @@ def verify_inventory(
     local_files = {
         path.relative_to(source_root).as_posix(): path
         for path in source_root.rglob("*.jpg")
+        if not _is_lfs_pointer(path)
     }
     if not local_files:
         return [], False
