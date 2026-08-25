@@ -156,11 +156,11 @@
         "title": "공공조달법률 이해",
         "textbook_pages": "321-410",
         "lessons": [
-          {"id": "P05-C01", "subcriterion": "5-1 공공계약 관련 민법 규정의 이해", "fine_criteria": ["5-1-1 계약의 성립 관련 규정", "5-1-2 계약의 효력 관련 규정", "5-1-3 계약의 해제·해지에 관한 규정", "5-1-4 도급·위임에 관한 규정", "5-1-5 화해에 관한 규정"], "textbook_pages": "347-363", "status": "planned"},
-          {"id": "P05-C02", "subcriterion": "5-2 공공계약(국가 및 지방) 법령의 이해", "fine_criteria": ["5-2-1 추정가격 및 예정가격 결정", "5-2-2 계약의 방법에 관한 규정", "5-2-3 입찰 및 낙찰 절차 규정", "5-2-4 계약의 체결 및 이행 규정", "5-2-5 이의신청과 분쟁조정"], "textbook_pages": "323-346, 396-404", "status": "planned"},
-          {"id": "P05-C03", "subcriterion": "5-3 조달사업법령의 이해", "fine_criteria": ["5-3-1 공공조달의 정책기반", "5-3-2 계약체결의 요청 및 방법", "5-3-3 대금지급 규정", "5-3-4 조달사업의 공정성", "5-3-5 수요기관 및 조달사업의 지원"], "textbook_pages": "364-375", "status": "planned"},
-          {"id": "P05-C04", "subcriterion": "5-4 전자조달법령의 이해", "fine_criteria": ["5-4-1 전자적 공고의 방법 및 시기", "5-4-2 전자적 형태의 입찰서 제출", "5-4-3 전자공개수의계약", "5-4-4 하도급 관리의 전자적 처리", "5-4-5 전자조달시스템 이용·활용 제한"], "textbook_pages": "376-383", "status": "planned"},
-          {"id": "P05-C05", "subcriterion": "5-5 공기업·준정부기관 계약사무규칙", "fine_criteria": ["5-5-1 국제입찰 대상 공공조달계약 범위", "5-5-2 중소기업자간 경쟁제품 구매위탁 의무 예외", "5-5-3 수의계약 규정", "5-5-4 의견 청취 및 심의절차", "5-5-5 이의신청 규정"], "textbook_pages": "384-395", "status": "planned"}
+          {"id": "P05-C01", "subcriterion": "5-1 공공계약 관련 민법 규정의 이해", "fine_criteria": ["5-1-1 계약의 성립 관련 규정", "5-1-2 계약의 효력 관련 규정", "5-1-3 계약의 해제·해지에 관한 규정", "5-1-4 도급·위임에 관한 규정", "5-1-5 화해에 관한 규정"], "textbook_pages": "347-363", "status": "source_checked", "questions_written": 18, "recall_prompts_written": 5, "inline_answers_written": 23},
+          {"id": "P05-C02", "subcriterion": "5-2 공공계약(국가 및 지방) 법령의 이해", "fine_criteria": ["5-2-1 추정가격 및 예정가격 결정", "5-2-2 계약의 방법에 관한 규정", "5-2-3 입찰 및 낙찰 절차 규정", "5-2-4 계약의 체결 및 이행 규정", "5-2-5 이의신청과 분쟁조정"], "textbook_pages": "323-346, 396-404", "status": "source_checked", "questions_written": 18, "recall_prompts_written": 5, "inline_answers_written": 23},
+          {"id": "P05-C03", "subcriterion": "5-3 조달사업법령의 이해", "fine_criteria": ["5-3-1 공공조달의 정책기반", "5-3-2 계약체결의 요청 및 방법", "5-3-3 대금지급 규정", "5-3-4 조달사업의 공정성", "5-3-5 수요기관 및 조달사업의 지원"], "textbook_pages": "364-375", "status": "source_checked", "questions_written": 18, "recall_prompts_written": 5, "inline_answers_written": 23},
+          {"id": "P05-C04", "subcriterion": "5-4 전자조달법령의 이해", "fine_criteria": ["5-4-1 전자적 공고의 방법 및 시기", "5-4-2 전자적 형태의 입찰서 제출", "5-4-3 전자공개수의계약", "5-4-4 하도급 관리의 전자적 처리", "5-4-5 전자조달시스템 이용·활용 제한"], "textbook_pages": "376-383", "status": "source_checked", "questions_written": 18, "recall_prompts_written": 5, "inline_answers_written": 23},
+          {"id": "P05-C05", "subcriterion": "5-5 공기업·준정부기관 계약사무규칙", "fine_criteria": ["5-5-1 국제입찰 대상 공공조달계약 범위", "5-5-2 중소기업자간 경쟁제품 구매위탁 의무 예외", "5-5-3 수의계약 규정", "5-5-4 의견 청취 및 심의절차", "5-5-5 이의신청 규정"], "textbook_pages": "384-395", "status": "source_checked", "questions_written": 18, "recall_prompts_written": 5, "inline_answers_written": 23}
         ]
       },
       {
@@ -177,13 +177,13 @@
   "production_status": {
     "status": "in_progress",
     "chapters_planned": 22,
-    "chapters_completed": 15,
+    "chapters_completed": 20,
     "major_criteria_mapped": "6/6",
     "subcriteria_mapped": "22/22",
     "fine_criteria_mapped": "84/84",
-    "questions_written": 288,
-    "recall_prompts_written": 75,
-    "inline_answers_written": 363,
+    "questions_written": 378,
+    "recall_prompts_written": 100,
+    "inline_answers_written": 478,
     "answer_placement": "모든 객관식·O/X·회상·사례 문항 바로 아래 정답·해설 배치",
     "separate_answer_sheet": false,
     "final_integrated_qa": "pending_after_subjects_1_and_2_generation"
