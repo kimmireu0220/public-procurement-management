@@ -49,6 +49,13 @@ EXCLUDE = re.compile(
 )
 
 
+def lesson_numbers(lesson_id: str) -> tuple[int, int]:
+    match = re.fullmatch(r"PPM4-P(\d+)-L(\d+)", lesson_id)
+    if match is None:
+        raise ValueError(f"invalid lesson id: {lesson_id}")
+    return int(match.group(1)), int(match.group(2))
+
+
 def split_document(text: str) -> tuple[str, str]:
     marker = "\n---\n"
     pos = text.find(marker, 4)
@@ -98,10 +105,13 @@ def concise_frame(frame: str, fine: list[str]) -> list[str]:
     return enriched
 
 
+def strip_criterion_code(item: str) -> str:
+    return re.sub(r"^\d+-\d+-\d+\s+", "", item)
+
+
 def rewrite_chapter(lesson: dict) -> None:
     lesson_id = lesson["id"]
-    part = int(re.search(r"P(\d+)", lesson_id).group(1))
-    chapter = int(re.search(r"L(\d+)", lesson_id).group(1))
+    part, chapter = lesson_numbers(lesson_id)
     path = BASE / f"part{part:02d}" / f"chapter{chapter:02d}.md"
     front, old_body = split_document(path.read_text(encoding="utf-8"))
     chunks = sections(old_body)
@@ -134,7 +144,7 @@ def rewrite_chapter(lesson: dict) -> None:
     if extra:
         scoring += f"\n- 순서·근거·후속조치가 연결된 답안 구성: {extra}점"
 
-    recall = "\n".join(f"- [ ] {re.sub(r'^\d+-\d+-\d+\s+', '', item)}" for item in fine)
+    recall = "\n".join(f"- [ ] {strip_criterion_code(item)}" for item in fine)
     title = lesson["title"]
     body = f"""
 > **2026 제1회 합격용 개편본.** 공식 출제기준을 주축으로 조달청 표준교재와 기준일 현재 공식 원문을 대조한 자체 강의입니다. 실무 서식 작성보다 필답형의 핵심어·판단순서·부분점수 재현을 우선합니다.
@@ -223,8 +233,7 @@ def make_coverage(data: dict) -> None:
     lessons = data["lessons"]
     rows = []
     for idx, lesson in enumerate(lessons):
-        part = int(re.search(r"P(\d+)", lesson["id"]).group(1))
-        chapter = int(re.search(r"L(\d+)", lesson["id"]).group(1))
+        part, chapter = lesson_numbers(lesson["id"])
         primary = f"[{part}-{chapter} {lesson['title']}](part{part:02d}/chapter{chapter:02d}.md)"
         if idx + 1 < len(lessons) and lessons[idx + 1]["id"].split("-L")[0] == lesson["id"].split("-L")[0]:
             support_lesson = lessons[idx + 1]
@@ -232,8 +241,7 @@ def make_coverage(data: dict) -> None:
             support_lesson = lessons[idx - 1]
         else:
             support_lesson = lesson
-        sp = int(re.search(r"P(\d+)", support_lesson["id"]).group(1))
-        sc = int(re.search(r"L(\d+)", support_lesson["id"]).group(1))
+        sp, sc = lesson_numbers(support_lesson["id"])
         support = f"{sp}-{sc} {support_lesson['title']}"
         for item in lesson["fine_criteria"]:
             code, name = item.split(" ", 1)
@@ -252,8 +260,7 @@ def make_overview(data: dict) -> None:
     rows = []
     detail_rows = []
     for lesson in data["lessons"]:
-        part = int(re.search(r"P(\d+)", lesson["id"]).group(1))
-        chapter = int(re.search(r"L(\d+)", lesson["id"]).group(1))
+        part, chapter = lesson_numbers(lesson["id"])
         grade, priority, minutes = IMPORTANCE[part]
         link = f"part{part:02d}/chapter{chapter:02d}.md"
         rows.append(

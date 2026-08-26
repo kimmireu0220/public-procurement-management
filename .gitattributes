@@ -1,5 +1,0 @@
-output/qwen3_tts_audio/4과목_*_Qwen3-TTS_Sohee.mp3 filter=lfs diff=lfs merge=lfs -text
-sources/민간_박문각_수험서_jpg/**/*.jpg filter=lfs diff=lfs merge=lfs -text
-sources/**/*.pdf filter=lfs diff=lfs merge=lfs -text
-# 국가법령정보센터 원문은 수집 바이트와 SHA-256을 그대로 보존
-sources/현행_법령_근거/snapshots/*.html binary
