@@ -55,20 +55,21 @@
   },
   "integrated_qa": {
     "status": "passed",
-    "completed_at": "2026-08-24",
+    "completed_at": "2026-08-26",
     "chapters_checked": 25,
     "fine_criteria_checked": 91,
     "strict_criteria_mapping": "91/91",
-    "questions_checked": 253,
+    "questions_checked": 25,
     "review_questions_checked": 53,
-    "inline_answers_checked": 306,
+    "inline_answers_checked": 78,
     "legal_sources_manifest_count": 33,
     "automated_tests": {
-      "repository_unittests": "35/35 passed",
-      "lecture_page_tests": "7/7 passed",
+      "repository_unittests": "47/47 passed",
+      "lecture_page_tests": "12/12 passed",
       "lecture_build_check": "passed",
+      "subject4_exam_course_validation": "8/8 major, 25/25 chapters, 91/91 fine criteria, 25/25 scoring totals passed",
       "private_source_inventory": "1300/1300 verified",
-      "legal_source_snapshots": "33/33 verified"
+      "legal_source_snapshots": "34/34 verified"
     },
     "private_similarity_check": {
       "comparison_files": 27,
@@ -183,7 +184,7 @@
         "private_similarity_check": {
           "purpose": "완성된 자체 문항과 강의 서술의 비복제 확인",
           "files_checked": 27,
-          "questions_checked": 10,
+          "questions_checked": 1,
           "exact_question_matches": 0,
           "normalized_long_phrase_matches": 0,
           "exact_authored_long_line_matches": 0
