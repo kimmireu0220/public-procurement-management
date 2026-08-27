@@ -83,7 +83,6 @@ html.nav-collapsed .sidebar-title,html.nav-collapsed .toc-toggle-label{display:n
   .article{padding:1.25rem}
   .article-outline nav{grid-template-columns:1fr}
   .table-wrap{position:relative;margin-inline:0}
-  .table-wrap::after{content:"← 좌우로 스크롤 →";position:sticky;left:.6rem;display:block;width:max-content;margin:.3rem .6rem .55rem;padding:.12rem .45rem;border-radius:999px;background:#edf4fa;color:var(--muted);font-size:.72rem}
   .chapter-link{align-items:flex-start;flex-direction:column;gap:.18rem;padding:.72rem 0}
   .chapter-link span:last-child{font-size:.78rem}
   .article-nav{grid-template-columns:1fr}
