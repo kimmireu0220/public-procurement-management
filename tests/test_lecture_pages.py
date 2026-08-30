@@ -63,6 +63,117 @@ class LecturePagesTest(unittest.TestCase):
                 self.assertIn("정답·해설 보기", rendered)
                 self.assertIn("핵심 답안", rendered)
 
+    def test_multi_paragraph_answer_blocks_are_collapsed(self) -> None:
+        markdown = """**사례 1.** 먼저 답을 쓰시오.
+
+:::answer 모범답안·채점 보기
+### 모범답안
+
+1. 결론을 쓴다.
+2. 사실을 적용한다.
+
+### 채점
+
+- 결론: 2점
+- 적용: 8점
+:::
+
+## 다음 학습
+"""
+        rendered = build_lecture_pages.markdown_to_html(markdown)
+        outline = build_lecture_pages.article_outline(markdown)
+
+        self.assertIn(
+            '<details class="answer-disclosure answer-block">', rendered
+        )
+        self.assertIn("<summary>모범답안·채점 보기</summary>", rendered)
+        self.assertIn("<h3", rendered)
+        self.assertIn("결론을 쓴다.", rendered)
+        self.assertIn("다음 학습", outline)
+        self.assertNotIn("모범답안", outline)
+        self.assertNotIn("채점", outline)
+
+    def test_answer_markers_inside_fenced_code_do_not_close_the_block(self) -> None:
+        markdown = """:::answer 답안 보기
+```text
+:::
+```
+### 답안 내부 제목
+:::
+
+## 다음 학습
+"""
+        rendered = build_lecture_pages.markdown_to_html(markdown)
+        outline = build_lecture_pages.article_outline(markdown)
+
+        self.assertIn("<code>:::</code>", rendered)
+        self.assertIn("답안 내부 제목", rendered)
+        self.assertIn('id="다음-학습"', rendered)
+        self.assertNotIn('id="답안-내부-제목"', rendered)
+        self.assertNotIn("답안 내부 제목", outline)
+        self.assertIn("다음 학습", outline)
+
+    def test_answer_content_does_not_duplicate_heading_or_checkbox_ids(self) -> None:
+        markdown = """:::answer 답안 보기
+### 중복 제목
+- [ ] 같은 체크
+:::
+
+## 중복 제목
+- [ ] 같은 체크
+"""
+        rendered = build_lecture_pages.markdown_to_html(markdown)
+        heading_ids = re.findall(r'<h[2-6] id="([^"]+)"', rendered)
+        check_ids = re.findall(r'data-study-check="([^"]+)"', rendered)
+
+        self.assertEqual(heading_ids, ["중복-제목"])
+        self.assertEqual(len(check_ids), 2)
+        self.assertEqual(len(set(check_ids)), 2)
+
+    def test_unclosed_answer_block_is_rejected(self) -> None:
+        with self.assertRaisesRegex(ValueError, "종료선"):
+            build_lecture_pages.markdown_to_html(
+                ":::answer 모범답안 보기\n끝나지 않은 답안"
+            )
+
+    def test_orphan_and_nested_answer_markers_are_rejected(self) -> None:
+        with self.assertRaisesRegex(ValueError, "대응하는"):
+            build_lecture_pages.markdown_to_html("본문\n:::\n")
+        with self.assertRaisesRegex(ValueError, "중첩"):
+            build_lecture_pages.markdown_to_html(
+                ":::answer 바깥\n:::answer 안쪽\n:::\n:::\n"
+            )
+
+    def test_checklists_render_as_persistent_controls(self) -> None:
+        rendered = build_lecture_pages.markdown_to_html(
+            "- [ ] 첫 복습\n- [x] 완료한 복습"
+        )
+
+        self.assertEqual(rendered.count('type="checkbox"'), 2)
+        self.assertEqual(rendered.count("data-study-check="), 2)
+        self.assertIn(" checked", rendered)
+        self.assertNotIn("□", rendered)
+        self.assertIn("lectureStudyChecks", build_lecture_pages.STUDY_PROGRESS_SCRIPT)
+
+    def test_progress_summary_uses_source_defaults_and_stable_page_key(self) -> None:
+        lecture = build_lecture_pages.Lecture(
+            source=Path("chapter.md"),
+            subject=1,
+            subject_title="테스트",
+            part=1,
+            part_title="Part",
+            chapter=1,
+            title="진행률",
+            kind="chapter",
+            body="- [ ] 첫 복습\n- [x] 완료한 복습\n",
+        )
+
+        rendered = build_lecture_pages.render_lecture(lecture, [lecture])
+
+        self.assertIn('aria-live="polite">1 / 2</strong>', rendered)
+        self.assertIn("endsWith('/index.html')", build_lecture_pages.STUDY_PROGRESS_SCRIPT)
+        self.assertIn("!Array.isArray(v)", build_lecture_pages.STUDY_PROGRESS_SCRIPT)
+
     def test_header_omits_decorative_training_tagline(self) -> None:
         rendered = build_lecture_pages.page_shell("강의", "<main></main>", "")
 
@@ -99,8 +210,14 @@ class LecturePagesTest(unittest.TestCase):
         for subject in ("1과목", "2과목", "3과목", "4과목"):
             for source in sorted((build_lecture_pages.SOURCE_DIR / subject).rglob("*.md")):
                 markdown = source.read_text(encoding="utf-8")
+                visible_markdown = re.sub(
+                    r"^:::answer(?: .+)?\n.*?^:::\s*$",
+                    "",
+                    markdown,
+                    flags=re.MULTILINE | re.DOTALL,
+                )
                 self.assertIsNone(
-                    separate_answer_heading.search(markdown),
+                    separate_answer_heading.search(visible_markdown),
                     f"분리 정답 섹션이 남아 있습니다: {source}",
                 )
                 lines = markdown.splitlines()
@@ -121,11 +238,18 @@ class LecturePagesTest(unittest.TestCase):
                         if position + 1 < len(question_indexes)
                         else len(lines)
                     )
+                    answer_lines = lines[question_index + 1 : block_end]
+                    inline_answer = any(
+                        answer_pattern.match(line) for line in answer_lines
+                    )
+                    answer_block = any(
+                        line.startswith(":::answer") for line in answer_lines
+                    ) and any(
+                        re.match(r"^\*\*(?:모범답안|정답|채점요소)", line)
+                        for line in answer_lines
+                    )
                     self.assertTrue(
-                        any(
-                            answer_pattern.match(line)
-                            for line in lines[question_index + 1 : block_end]
-                        ),
+                        inline_answer or answer_block,
                         f"문제 바로 뒤 블록에 정답이 없습니다: {source}:{question_index + 1}",
                     )
 

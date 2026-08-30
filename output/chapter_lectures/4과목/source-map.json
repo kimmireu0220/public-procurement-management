@@ -49,27 +49,78 @@
   },
   "current_law_source": {
     "manifest": "sources/현행_법령_근거/manifest.json",
-    "retrieved_at": "2026-08-24",
-    "lesson_legal_cutoff": "2026-08-24",
-    "policy": "숫자·기한·비율·법적 효과는 교재 서술보다 적용시점의 공식 원문을 우선하고, 교재와 다르면 둘을 구분해 설명"
+    "retrieved_at": "2026-08-25",
+    "lesson_legal_cutoff": "2026-08-25",
+    "policy": "숫자·기한·비율·법적 효과는 교재 서술보다 적용시점의 공식 원문을 우선하고, 교재와 다르면 둘을 구분해 설명",
+    "frozen_evidence_profile": {
+      "article_text_snapshots": 12,
+      "metadata_shell_snapshots": 22,
+      "total_snapshots": 34,
+      "limitation": "메타데이터 셸 22건은 제목·버전·식별자·해시 무결성만 재현하며 조문 본문의 로컬 검증 근거로 간주하지 않음; 별표 파일 본문도 별도 확보 전에는 재현 검증 완료로 표시하지 않음"
+    },
+    "live_supplement_checked_at": "2026-08-30",
+    "live_supplement": [
+      {
+        "id": "estimated_price_criteria_20260825",
+        "title": "(계약예규) 예정가격작성기준",
+        "version": "재정경제부예규 제171호",
+        "effective_date": "2026-08-25",
+        "official_url": "https://www.law.go.kr/LSW/admRulLsInfoP.do?admRulSeq=2100000284228",
+        "course_impact": "기타용역 인건비 기준단가 보정 변경을 확인했으며 강의의 제조원가 이윤율·학습용 계산에는 직접 영향 없음"
+      },
+      {
+        "id": "goods_purchase_general_conditions_20260825",
+        "title": "(계약예규) 물품구매(제조)계약일반조건",
+        "version": "재정경제부계약예규 제170호",
+        "effective_date": "2026-08-25",
+        "official_url": "https://www.law.go.kr/LSW/admRulLsInfoP.do?admRulSeq=2100000284264",
+        "course_impact": "분할납품 완료·검사합격 부분의 대가청구 명시를 4-4에 반영"
+      },
+      {
+        "id": "government_contract_execution_20260825",
+        "title": "(계약예규) 정부 입찰·계약 집행기준",
+        "version": "재정경제부예규 제172호",
+        "effective_date": "2026-08-25",
+        "official_url": "https://www.law.go.kr/LSW/admRulLsInfoP.do?admRulSeq=2100000284266",
+        "course_impact": "분할납품 검사·대금청구 방해 금지 신설을 4-4에 반영; 선금 구간·정산 사례의 핵심값 변경 없음"
+      }
+    ]
   },
   "integrated_qa": {
     "status": "passed",
-    "completed_at": "2026-08-26",
-    "chapters_checked": 25,
-    "fine_criteria_checked": 91,
-    "strict_criteria_mapping": "91/91",
-    "questions_checked": 25,
-    "review_questions_checked": 53,
-    "inline_answers_checked": 78,
-    "legal_sources_manifest_count": 33,
+    "completed_at": "2026-08-30",
+    "evaluation_conclusion": "공식 범위를 빠짐없이 추적하면서 무자료 서술·사례 적용·계산·산출물 작성·간격반복을 강제하므로 4과목 시험 대비에 실질적으로 유용함. 다만 자체 채점은 공식 합격 예측값이 아니며 시험 직전 현행 원문 재확인이 필요함",
+    "scope": {
+      "major_criteria": "8/8",
+      "chapters": "25/25",
+      "fine_criteria": "91/91",
+      "official_criteria_digest_locked": true
+    },
+    "retrieval_feedback_design": {
+      "unique_chapter_cases": "25/25",
+      "single_fact_variants": "25/25",
+      "hidden_chapter_answer_blocks": "25/25",
+      "hidden_integrated_review_answers": "8/8",
+      "direct_work_product_tasks_in_contract_parts": "7/7",
+      "spaced_retrieval": "25/25 chapters include D+1, D+3 and D+7",
+      "training_gate": "8/10; 6-7 is correction range, not completion",
+      "numeric_warning_callouts": "125 repeated callouts reduced to 25, exactly one per chapter"
+    },
     "automated_tests": {
-      "repository_unittests": "47/47 passed",
-      "lecture_page_tests": "12/12 passed",
-      "lecture_build_check": "passed",
-      "subject4_exam_course_validation": "8/8 major, 25/25 chapters, 91/91 fine criteria, 25/25 scoring totals passed",
-      "private_source_inventory": "1300/1300 verified",
-      "legal_source_snapshots": "34/34 verified"
+      "repository_unittests": "61/61 passed on staged commit snapshot",
+      "subject4_course_tests": "6/6 passed",
+      "lecture_page_tests": "19/19 passed",
+      "legal_source_tests": "4/4 passed",
+      "lecture_build_check": "90 lecture records built; full generated tree matched",
+      "static_checks": "ruff, mypy, compileall and git diff --check passed",
+      "legal_source_snapshots": "34/34 manifest and SHA-256 integrity; article text 12/34; metadata shell 22/34"
+    },
+    "browser_qa": {
+      "answer_disclosure": "collapsed by default and opens/closes on demand",
+      "progress_persistence": "checkbox state survived reload and was restored to unchecked after the test",
+      "duplicate_dom_ids": 0,
+      "mobile_width": "390px without horizontal overflow",
+      "touch_targets": "answer summary 50px; checkbox label at least 56px on checked pages"
     },
     "private_similarity_check": {
       "comparison_files": 27,
@@ -80,9 +131,19 @@
       "connected_document_body_matches": 0
     },
     "high_risk_corrections_verified": [
+      "1-2 세부품명 존재와 개별 품목정보·물품식별번호 발급을 구분",
       "3-1 이윤율 상한·예외와 소프트웨어개발 분류",
       "3-2 협상계약 가격평가 70% 하한·구간식·30% 평점",
-      "5-2 MAS 공고·차기공고·계약기간 원칙과 3년 미만 예외"
+      "4-1 계약보증 10% 일반원칙과 5% 기간특례의 조건부 적용",
+      "4-3 첫 물가변동 조정의 기준일·90일·3% 요건과 계산",
+      "4-4 분할납품 검사·대가청구와 기납부분 보증금 귀속 제외",
+      "5-2 MAS 공고·차기공고·계약기간 원칙과 3년 미만 예외",
+      "7-2 국가·지방 이의신청 기한과 기산점 구분",
+      "7-3 우선구매 비율의 적용대상·분모 구분"
+    ],
+    "known_limitations": [
+      "현행 법령 동결본 34종 중 22종은 조문 본문이 없는 메타데이터 셸이므로 해시 무결성을 조문 내용 검증으로 표현하지 않음",
+      "사례·변형·채점표는 공식 기출이나 공식 채점기준이 아니라 출제기준에 맞춘 자체 작성 학습도구임"
     ]
   },
   "part_source_strategy": {

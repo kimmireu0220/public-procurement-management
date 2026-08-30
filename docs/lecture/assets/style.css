@@ -49,13 +49,20 @@ body{font-size:17px;word-break:keep-all;overflow-wrap:break-word;-webkit-font-sm
 .answer-disclosure summary{min-height:48px;display:flex;align-items:center;padding:.7rem 1rem;color:var(--blue);font-weight:850;cursor:pointer}
 .answer-disclosure summary::before{content:"＋";margin-right:.45rem;font-weight:500}
 .answer-disclosure[open] summary::before{content:"−"}
-.answer-disclosure div{padding:.85rem 1rem 1rem;border-top:1px solid #dce9f4;color:#27394b;line-height:1.7}
+.answer-disclosure>div{padding:.85rem 1rem 1rem;border-top:1px solid #dce9f4;color:#27394b;line-height:1.7}
+.answer-block .answer-content>h3:first-child{margin-top:.2rem}
+.answer-block .answer-content>*:last-child{margin-bottom:.1rem}
+.study-progress{max-width:var(--prose);display:flex;align-items:center;gap:.65rem;margin:0 0 1rem;padding:.75rem 1rem;border:1px solid #c8dced;border-radius:10px;background:#f5faff;color:#344657}
+.study-progress strong{margin-left:auto;color:var(--blue);font-variant-numeric:tabular-nums}
+.study-progress small{color:var(--muted)}
 .table-wrap{max-width:100%;border:1px solid var(--line);border-radius:10px;overscroll-behavior-inline:contain}
 .table-wrap table{min-width:36rem;border:0}
 .table-wrap th:first-child,.table-wrap td:first-child{border-left:0}
 .table-wrap th:last-child,.table-wrap td:last-child{border-right:0}
-.check-item{display:flex;align-items:flex-start;gap:.45rem;margin-left:-1.1rem}
-.check-item>span:first-child{flex:none;color:var(--blue);font-size:1.05rem}
+.check-item{margin-left:-1.1rem}
+.check-item>label{min-height:44px;display:flex;align-items:flex-start;gap:.55rem;cursor:pointer}
+.check-item input{flex:none;width:1.05rem;height:1.05rem;margin-top:.32rem;accent-color:var(--blue)}
+.check-item input:focus-visible{outline:3px solid var(--focus);outline-offset:3px}
 .chapter-link{min-height:50px;align-items:center;padding:.7rem .2rem}
 .chapter-link span:first-child{font-weight:650}
 .nav-link{display:flex;min-height:64px;align-items:center;font-weight:700}
@@ -94,6 +101,8 @@ html.nav-collapsed .sidebar-title,html.nav-collapsed .toc-toggle-label{display:n
   .article h1{font-size:1.8rem}
   .article h2{font-size:1.32rem}
   .breadcrumb{font-size:.78rem}
+  .study-progress{align-items:flex-start;flex-wrap:wrap}
+  .study-progress strong{margin-left:0}
 }
 @media(prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}

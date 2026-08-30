@@ -13,12 +13,24 @@ TOOLS = ROOT / "tools"
 if str(TOOLS) not in sys.path:
     sys.path.insert(0, str(TOOLS))
 
-from verify_legal_sources import DEFAULT_MANIFEST, verify_manifest  # noqa: E402
+from verify_legal_sources import (  # noqa: E402
+    DEFAULT_MANIFEST,
+    snapshot_evidence_profile,
+    verify_manifest,
+)
 
 
 class LegalSourceManifestTests(unittest.TestCase):
     def test_repository_bundle_is_valid(self) -> None:
         self.assertEqual(verify_manifest(), [])
+
+    def test_repository_reports_article_text_and_metadata_shells_separately(self) -> None:
+        profile = snapshot_evidence_profile()
+
+        self.assertEqual(len(profile["article_text"]), 12)
+        self.assertEqual(len(profile["metadata_shell"]), 22)
+        self.assertIn("state_contract_decree", profile["metadata_shell"])
+        self.assertIn("negotiated_contract_criteria", profile["article_text"])
 
     def test_hash_tampering_and_unlisted_snapshot_are_reported(self) -> None:
         original = json.loads(DEFAULT_MANIFEST.read_text(encoding="utf-8"))

@@ -25,6 +25,7 @@ REQUIRED_ENTRY_FIELDS = {
     "sha256",
 }
 SHA256_RE = re.compile(r"[0-9a-f]{64}\Z")
+ARTICLE_BODY_RE = re.compile(r'class=["\'][^"\']*\bpty1(?:_|\s|["\'])')
 
 
 def _effective_marker(value: str) -> str:
@@ -42,6 +43,27 @@ def _load_json(path: Path, errors: list[str]) -> dict[str, Any] | None:
         errors.append("manifest 최상위 값은 객체여야 합니다.")
         return None
     return payload
+
+
+def snapshot_evidence_profile(
+    manifest_path: Path = DEFAULT_MANIFEST,
+) -> dict[str, list[str]]:
+    """Classify snapshots by whether frozen article text is present.
+
+    A law.go.kr outer page can contain the title, version and identifiers while
+    loading the actual provisions later with JavaScript.  Hash verification is
+    still useful for those files, but it must not be reported as local article-
+    text verification.
+    """
+
+    payload = json.loads(manifest_path.read_text(encoding="utf-8"))
+    base_dir = manifest_path.parent
+    profile: dict[str, list[str]] = {"article_text": [], "metadata_shell": []}
+    for entry in payload["sources"]:
+        html = (base_dir / entry["snapshot"]).read_text(encoding="utf-8")
+        bucket = "article_text" if ARTICLE_BODY_RE.search(html) else "metadata_shell"
+        profile[bucket].append(entry["id"])
+    return profile
 
 
 def verify_manifest(manifest_path: Path = DEFAULT_MANIFEST) -> list[str]:
@@ -197,10 +219,18 @@ def main() -> int:
             print(f"- {error}")
         return 1
     payload = json.loads(args.manifest.read_text(encoding="utf-8"))
+    evidence = snapshot_evidence_profile(args.manifest)
     print(
         "현행 법령 근거 검증 통과: "
-        f"{len(payload['sources'])}종, 수집일 {payload['retrieved_at']}"
+        f"{len(payload['sources'])}종, 수집일 {payload['retrieved_at']}; "
+        f"조문 본문 포함 {len(evidence['article_text'])}종, "
+        f"메타데이터·무결성만 확인 {len(evidence['metadata_shell'])}종"
     )
+    if evidence["metadata_shell"]:
+        print(
+            "주의: 메타데이터 셸은 조문 내용의 로컬 재현 근거가 아닙니다: "
+            + ", ".join(evidence["metadata_shell"])
+        )
     return 0
 
 

@@ -168,8 +168,23 @@ def heading_records(markdown: str) -> list[tuple[int, str, str]]:
     """Return unique, stable heading anchors in document order."""
     records: list[tuple[int, str, str]] = []
     counts: dict[str, int] = {}
+    in_answer = False
+    in_code = False
     for line in markdown.splitlines():
-        match = re.match(r"^(#{2,6})\s+(.+)$", line.strip())
+        stripped = line.strip()
+        if stripped.startswith("```"):
+            in_code = not in_code
+            continue
+        if in_code:
+            continue
+        if re.fullmatch(r":::answer(?:\s+.+)?", stripped):
+            in_answer = True
+            continue
+        if in_answer:
+            if stripped == ":::":
+                in_answer = False
+            continue
+        match = re.match(r"^(#{2,6})\s+(.+)$", stripped)
         if not match:
             continue
         level = min(len(match.group(1)), 4)
@@ -196,7 +211,12 @@ def article_outline(markdown: str) -> str:
     )
 
 
-def markdown_to_html(markdown: str) -> str:
+def markdown_to_html(
+    markdown: str,
+    *,
+    _heading_ids: bool = True,
+    _checkbox_counts: dict[str, int] | None = None,
+) -> str:
     lines = markdown.splitlines()
     result: list[str] = []
     paragraph: list[tuple[str, bool]] = []
@@ -204,6 +224,7 @@ def markdown_to_html(markdown: str) -> str:
     in_code = False
     code_lines: list[str] = []
     headings = iter(heading_records(markdown))
+    checkbox_counts = _checkbox_counts if _checkbox_counts is not None else {}
     index = 0
 
     def flush_paragraph() -> None:
@@ -244,6 +265,38 @@ def markdown_to_html(markdown: str) -> str:
             index += 1
             continue
 
+        answer_block = re.fullmatch(r":::answer(?:\s+(.+))?", stripped)
+        if answer_block:
+            flush_paragraph()
+            close_list()
+            closing = None
+            answer_in_code = False
+            for candidate in range(index + 1, len(lines)):
+                candidate_line = lines[candidate].strip()
+                if candidate_line.startswith("```"):
+                    answer_in_code = not answer_in_code
+                    continue
+                if answer_in_code:
+                    continue
+                if re.fullmatch(r":::answer(?:\s+.+)?", candidate_line):
+                    raise ValueError(":::answer 블록은 중첩할 수 없습니다.")
+                if candidate_line == ":::":
+                    closing = candidate
+                    break
+            if closing is None:
+                raise ValueError(":::answer 블록의 종료선 :::가 없습니다.")
+            label = answer_block.group(1) or "모범답안·채점 보기"
+            answer_body = "\n".join(lines[index + 1 : closing]).strip()
+            result.append(
+                '<details class="answer-disclosure answer-block">'
+                f"<summary>{inline_markup(label)}</summary>"
+                f'<div class="answer-content">{markdown_to_html(answer_body, _heading_ids=False, _checkbox_counts=checkbox_counts)}</div></details>'
+            )
+            index = closing + 1
+            continue
+        if stripped == ":::":
+            raise ValueError("대응하는 :::answer가 없는 종료선 :::가 있습니다.")
+
         if stripped.startswith("|") and index + 1 < len(lines) and is_table_separator(lines[index + 1]):
             flush_paragraph()
             close_list()
@@ -271,7 +324,8 @@ def markdown_to_html(markdown: str) -> str:
             flush_paragraph()
             close_list()
             level, title, anchor = next(headings)
-            result.append(f"<h{level} id=\"{html.escape(anchor)}\">{inline_markup(title)}</h{level}>")
+            heading_id = f' id="{html.escape(anchor)}"' if _heading_ids else ""
+            result.append(f"<h{level}{heading_id}>{inline_markup(title)}</h{level}>")
             index += 1
             continue
 
@@ -308,10 +362,15 @@ def markdown_to_html(markdown: str) -> str:
                 result.append(f"<{desired}>")
                 list_kind = desired
             if checkbox:
-                mark = "☑" if checkbox.group(1).lower() == "x" else "□"
+                label = checkbox.group(2)
+                base_id = hashlib.sha256(label.encode("utf-8")).hexdigest()[:12]
+                checkbox_counts[base_id] = checkbox_counts.get(base_id, 0) + 1
+                check_id = f"{base_id}-{checkbox_counts[base_id]}"
+                checked = " checked" if checkbox.group(1).lower() == "x" else ""
                 result.append(
-                    f'<li class="check-item"><span aria-hidden="true">{mark}</span>'
-                    f'<span>{inline_markup(checkbox.group(2))}</span></li>'
+                    '<li class="check-item"><label>'
+                    f'<input type="checkbox" data-study-check="{check_id}"{checked}>'
+                    f'<span>{inline_markup(label)}</span></label></li>'
                 )
             else:
                 list_match = ordered if ordered is not None else bullet
@@ -397,13 +456,20 @@ body{font-size:17px;word-break:keep-all;overflow-wrap:break-word;-webkit-font-sm
 .answer-disclosure summary{min-height:48px;display:flex;align-items:center;padding:.7rem 1rem;color:var(--blue);font-weight:850;cursor:pointer}
 .answer-disclosure summary::before{content:"＋";margin-right:.45rem;font-weight:500}
 .answer-disclosure[open] summary::before{content:"−"}
-.answer-disclosure div{padding:.85rem 1rem 1rem;border-top:1px solid #dce9f4;color:#27394b;line-height:1.7}
+.answer-disclosure>div{padding:.85rem 1rem 1rem;border-top:1px solid #dce9f4;color:#27394b;line-height:1.7}
+.answer-block .answer-content>h3:first-child{margin-top:.2rem}
+.answer-block .answer-content>*:last-child{margin-bottom:.1rem}
+.study-progress{max-width:var(--prose);display:flex;align-items:center;gap:.65rem;margin:0 0 1rem;padding:.75rem 1rem;border:1px solid #c8dced;border-radius:10px;background:#f5faff;color:#344657}
+.study-progress strong{margin-left:auto;color:var(--blue);font-variant-numeric:tabular-nums}
+.study-progress small{color:var(--muted)}
 .table-wrap{max-width:100%;border:1px solid var(--line);border-radius:10px;overscroll-behavior-inline:contain}
 .table-wrap table{min-width:36rem;border:0}
 .table-wrap th:first-child,.table-wrap td:first-child{border-left:0}
 .table-wrap th:last-child,.table-wrap td:last-child{border-right:0}
-.check-item{display:flex;align-items:flex-start;gap:.45rem;margin-left:-1.1rem}
-.check-item>span:first-child{flex:none;color:var(--blue);font-size:1.05rem}
+.check-item{margin-left:-1.1rem}
+.check-item>label{min-height:44px;display:flex;align-items:flex-start;gap:.55rem;cursor:pointer}
+.check-item input{flex:none;width:1.05rem;height:1.05rem;margin-top:.32rem;accent-color:var(--blue)}
+.check-item input:focus-visible{outline:3px solid var(--focus);outline-offset:3px}
 .chapter-link{min-height:50px;align-items:center;padding:.7rem .2rem}
 .chapter-link span:first-child{font-weight:650}
 .nav-link{display:flex;min-height:64px;align-items:center;font-weight:700}
@@ -442,6 +508,8 @@ html.nav-collapsed .sidebar-title,html.nav-collapsed .toc-toggle-label{display:n
   .article h1{font-size:1.8rem}
   .article h2{font-size:1.32rem}
   .breadcrumb{font-size:.78rem}
+  .study-progress{align-items:flex-start;flex-wrap:wrap}
+  .study-progress strong{margin-left:0}
 }
 @media(prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
@@ -479,6 +547,20 @@ TOC_TOGGLE_SCRIPT = (
     "sync();if(!r.classList.contains('nav-collapsed'))requestAnimationFrame(reveal)})();" % TOC_STORAGE_KEY
 )
 
+STUDY_PROGRESS_SCRIPT = (
+    "(function(){var b=Array.from(document.querySelectorAll('[data-study-check]'));if(!b.length)return;"
+    "var p=location.pathname;if(p.endsWith('/index.html'))p=p.slice(0,-10);if(!p.endsWith('/'))p+='/';"
+    "var k='lectureStudyChecks:'+p,s={};"
+    "try{var v=JSON.parse(localStorage.getItem(k)||'{}');"
+    "if(v&&typeof v==='object'&&!Array.isArray(v))s=v}catch(e){}"
+    "function sync(){var n=b.filter(function(x){return x.checked}).length;"
+    "var o=document.getElementById('study-progress-count');if(o)o.textContent=n+' / '+b.length}"
+    "b.forEach(function(x){var i=x.getAttribute('data-study-check');"
+    "if(Object.prototype.hasOwnProperty.call(s,i))x.checked=s[i]===1;"
+    "x.addEventListener('change',function(){s[i]=x.checked?1:0;"
+    "try{localStorage.setItem(k,JSON.stringify(s))}catch(e){}sync()})});sync()})();"
+)
+
 
 def page_shell(title: str, body: str, asset_prefix: str) -> str:
     return f"""<!doctype html>
@@ -491,7 +573,7 @@ def page_shell(title: str, body: str, asset_prefix: str) -> str:
 <body><a class="skip-link" href="#main-content">본문으로 바로가기</a>
 <header class="site-header"><div class="header-inner"><a class="brand" href="{asset_prefix}">공공조달관리사 Chapter 강의</a><div class="header-actions"><a class="hub-link" href="{asset_prefix}../">학습센터</a></div></div></header>
 {body}<footer class="footer">공식 출제기준·조달청 표준교재·현행 규정 기반 자체 제작 학습자료</footer>
-<script>{TOC_TOGGLE_SCRIPT}</script></body></html>
+<script>{TOC_TOGGLE_SCRIPT}</script><script>{STUDY_PROGRESS_SCRIPT}</script></body></html>
 """
 
 
@@ -634,11 +716,26 @@ def render_lecture(lecture: Lecture, subject_lectures: list[Lecture]) -> str:
         chapter_label = f"Part {lecture.part} · Chapter {lecture.chapter}"
     article = markdown_to_html(lecture.body)
     outline = article_outline(lecture.body)
+    check_count = article.count('<input type="checkbox" data-study-check="')
+    checked_count = len(
+        re.findall(
+            r'<input type="checkbox" data-study-check="[^"]+" checked>',
+            article,
+        )
+    )
+    progress = ""
+    if check_count:
+        progress = (
+            '<div class="study-progress" aria-label="이 강의 복습 진행">'
+            '<span>복습 체크</span>'
+            f'<strong id="study-progress-count" aria-live="polite">{checked_count} / {check_count}</strong>'
+            "<small>이 기기에 자동 저장</small></div>"
+        )
     body = f"""<main class="page" id="main-content" tabindex="-1"><div class="subject-layout">{sidebar_html(subject_lectures, lecture, subject_prefix)}
 <article class="article">
 <nav class="breadcrumb" aria-label="현재 위치"><a href="{root_prefix}">전체 과목</a> › <a href="{subject_prefix}">{lecture.subject}과목</a> › <span aria-current="page">{html.escape(chapter_label)}</span></nav>
 <span class="eyebrow">{html.escape(chapter_label)}</span><h1>{html.escape(lecture.title)}</h1><p class="subtitle">{html.escape(lecture.subject_title)} · {html.escape(lecture.part_title)}</p>
-{outline}{article}<nav class="article-nav" aria-label="강의 순서">{nav_link(previous, 'prev')}{nav_link(following, 'next')}</nav><a class="back-to-top" href="#main-content">↑ 맨 위로</a></article></div></main>"""
+{progress}{outline}{article}<nav class="article-nav" aria-label="강의 순서">{nav_link(previous, 'prev')}{nav_link(following, 'next')}</nav><a class="back-to-top" href="#main-content">↑ 맨 위로</a></article></div></main>"""
     return page_shell(lecture.title, body, root_prefix)
 
 
