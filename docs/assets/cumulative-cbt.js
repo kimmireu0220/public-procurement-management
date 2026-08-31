@@ -92,7 +92,7 @@
       `<h2 class="stem" id="question-stem" tabindex="-1">${escapeHtml(question.stem)}</h2><div class="answer-form">`+
       `<textarea id="written-answer" aria-label="답안 입력" placeholder="답안을 입력하세요."></textarea><div class="answer-actions"><button type="button" class="primary" data-action="reveal">모범답안 확인</button></div></div>`+
       `<section id="model-answer" class="model-answer hidden" aria-labelledby="model-answer-title"><p><strong id="model-answer-title" tabindex="-1">모범답안:</strong> ${escapeHtml(question.answer)}</p>`+
-      `<div class="judge-actions" role="group" aria-label="내 답안 판정"><button type="button" data-judge="correct">맞혔어요</button><button type="button" data-judge="wrong">틀렸어요</button></div></section></article>`;
+      `<div class="judge-actions" role="group" aria-label="내 답안 판정"><button type="button" data-judge="correct" aria-label="맞혔어요">O</button><button type="button" data-judge="wrong" aria-label="틀렸어요">X</button></div></section></article>`;
   }
   function bind(question) {
     app.querySelector('[data-action="prev"]')?.addEventListener('click', () => move(-1));

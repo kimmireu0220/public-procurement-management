@@ -47,6 +47,8 @@ class CumulativeCbtTest(unittest.TestCase):
         self.assertIn("safeRemove(wrongKey)", objective)
         self.assertIn('data-judge="correct"', written)
         self.assertIn('data-judge="wrong"', written)
+        self.assertIn('aria-label="맞혔어요">O</button>', written)
+        self.assertIn('aria-label="틀렸어요">X</button>', written)
 
     def test_written_answer_enter_reveals_and_shift_enter_adds_a_line(self) -> None:
         written = (ROOT / "docs" / "assets" / "cumulative-cbt.js").read_text(encoding="utf-8")
