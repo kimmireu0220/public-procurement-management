@@ -117,6 +117,7 @@
     const revealAnswer = () => {
       const answer = app.querySelector('#written-answer');
       app.querySelector('#model-answer').classList.remove('hidden');
+      app.querySelector('.answer-actions').classList.add('hidden');
       answer.readOnly = true;
       app.querySelector('[data-judge="correct"]').focus({preventScroll:true});
     };

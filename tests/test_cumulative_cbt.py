@@ -57,6 +57,7 @@ class CumulativeCbtTest(unittest.TestCase):
         self.assertNotIn("if (!answer.value.trim())", written)
         self.assertIn("event.preventDefault()", written)
         self.assertIn("revealAnswer()", written)
+        self.assertIn("app.querySelector('.answer-actions').classList.add('hidden')", written)
         self.assertNotIn("핵심어와 판단 근거를 적은 뒤", written)
 
     def test_model_answer_is_inline_without_manual_judgement_prompt(self) -> None:
