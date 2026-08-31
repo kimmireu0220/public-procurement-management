@@ -116,7 +116,6 @@
     });
     const revealAnswer = () => {
       const answer = app.querySelector('#written-answer');
-      if (!answer.value.trim()) { answer.focus(); return; }
       app.querySelector('#model-answer').classList.remove('hidden');
       answer.readOnly = true;
       app.querySelector('[data-judge="correct"]').focus({preventScroll:true});

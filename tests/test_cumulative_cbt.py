@@ -54,6 +54,7 @@ class CumulativeCbtTest(unittest.TestCase):
         self.assertIn("event.key !== 'Enter' || event.shiftKey", written)
         self.assertNotIn("event.isComposing", written)
         self.assertNotIn("event.keyCode === 229", written)
+        self.assertNotIn("if (!answer.value.trim())", written)
         self.assertIn("event.preventDefault()", written)
         self.assertIn("revealAnswer()", written)
         self.assertNotIn("핵심어와 판단 근거를 적은 뒤", written)
