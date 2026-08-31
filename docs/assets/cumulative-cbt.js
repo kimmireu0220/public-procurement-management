@@ -166,6 +166,7 @@
     const question = list[index];
     app.innerHTML = config.subject === 4 ? written(question, list) : objective(question, list);
     bind(question);
+    app.querySelector('#written-answer')?.focus({preventScroll:true});
   }
   render();
 })();

@@ -77,6 +77,7 @@ class CumulativeCbtTest(unittest.TestCase):
         self.assertIn("judgeButtons.indexOf(document.activeElement)", written)
         self.assertIn("judgeButtons[(current + direction + judgeButtons.length) % judgeButtons.length].focus()", written)
         self.assertIn("button.addEventListener('click'", written)
+        self.assertIn("app.querySelector('#written-answer')?.focus({preventScroll:true})", written)
 
     def test_objective_and_written_clients_are_separated(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
