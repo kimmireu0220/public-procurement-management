@@ -70,6 +70,7 @@ class CumulativeCbtTest(unittest.TestCase):
         self.assertIn('aria-label="답안 입력"', written)
         self.assertNotIn("border-left: 5px solid var(--blue)", styles)
         self.assertIn("min-height: 120px", styles)
+        self.assertIn("font-size: 1.1rem", styles)
 
     def test_written_judgement_supports_arrow_navigation_and_enter_activation(self) -> None:
         written = (ROOT / "docs" / "assets" / "cumulative-cbt.js").read_text(encoding="utf-8")
