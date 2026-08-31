@@ -72,13 +72,13 @@
   }
   function toolbar(list) {
     const current = index + 1;
+    const digits = Math.max(2, String(list.length).length);
     const reset = config.mode === 'wrong' ? `<button type="button" class="danger" data-action="reset">${config.subject}과목 오답 초기화</button>` : '';
     return `<nav class="toolbar" aria-label="문항 이동"><div class="progress-block"><div class="progress-copy">`+
-      `<strong>${current.toLocaleString('ko-KR')} / ${list.length.toLocaleString('ko-KR')}</strong>`+
+      `<strong><input class="progress-jump" type="number" inputmode="numeric" min="1" max="${list.length}" value="${current}" style="--question-digits:${digits}" aria-label="이동할 문항"> / ${list.length.toLocaleString('ko-KR')}</strong>`+
       `<span class="wrong-summary">누적 오답 <b data-wrong-count>${readWrong().size.toLocaleString('ko-KR')}</b>개</span></div>`+
       `<progress class="question-progress" value="${current}" max="${list.length}" aria-label="전체 문항 진행률"></progress></div>`+
       `<div class="toolbar-controls"><button type="button" data-action="prev" ${index === 0 ? 'disabled' : ''}>← 이전</button>`+
-      `<label class="jump-label"><span>문항</span><input class="jump" type="number" inputmode="numeric" min="1" max="${list.length}" value="${current}" aria-label="이동할 문항"></label>`+
       `<button type="button" data-action="next" ${index >= list.length - 1 ? 'disabled' : ''}>다음 →</button>${reset}</div></nav>`;
   }
   function objective(question, list) {
@@ -89,31 +89,54 @@
   }
   function written(question, list) {
     return toolbar(list) + `<article class="question-card"><div class="meta"><span>${escapeHtml(displayGroup(question.group))}</span><span>${question.no}번</span></div>`+
-      `<h2 class="stem" id="question-stem" tabindex="-1">${escapeHtml(question.stem)}</h2><div class="answer-form"><label for="written-answer"><strong>내 답안</strong></label>`+
-      `<p class="answer-help" id="answer-help">핵심어와 판단 근거를 적은 뒤 모범답안과 비교하세요.</p>`+
-      `<textarea id="written-answer" aria-describedby="answer-help" placeholder="답안을 입력하세요."></textarea><div class="answer-actions"><button type="button" class="primary" data-action="reveal">모범답안 확인</button></div></div>`+
-      `<section id="model-answer" class="model-answer hidden" aria-labelledby="model-answer-title"><h3 id="model-answer-title" tabindex="-1">모범답안</h3><p>${escapeHtml(question.answer)}</p>`+
-      `<p class="judge-help">내 답안이 핵심 내용을 충족했는지 직접 판정하세요.</p><div class="judge-actions" role="group" aria-label="내 답안 판정"><button type="button" data-judge="correct">맞혔어요</button><button type="button" data-judge="wrong">틀렸어요</button></div></section></article>`;
+      `<h2 class="stem" id="question-stem" tabindex="-1">${escapeHtml(question.stem)}</h2><div class="answer-form">`+
+      `<textarea id="written-answer" aria-label="답안 입력" placeholder="답안을 입력하세요."></textarea><div class="answer-actions"><button type="button" class="primary" data-action="reveal">모범답안 확인</button></div></div>`+
+      `<section id="model-answer" class="model-answer hidden" aria-labelledby="model-answer-title"><p><strong id="model-answer-title" tabindex="-1">모범답안:</strong> ${escapeHtml(question.answer)}</p>`+
+      `<div class="judge-actions" role="group" aria-label="내 답안 판정"><button type="button" data-judge="correct">맞혔어요</button><button type="button" data-judge="wrong">틀렸어요</button></div></section></article>`;
   }
   function bind(question) {
     app.querySelector('[data-action="prev"]')?.addEventListener('click', () => move(-1));
     app.querySelector('[data-action="next"]')?.addEventListener('click', () => move(1));
-    app.querySelector('.jump')?.addEventListener('change', event => {
-      const value = Number.parseInt(event.target.value, 10);
-      index = Number.isFinite(value) ? value - 1 : index; saveIndex(questions().length); render();
+    const jump = app.querySelector('.progress-jump');
+    const jumpToQuestion = () => {
+      const value = Number.parseInt(jump.value, 10);
+      index = Number.isFinite(value) ? value - 1 : index;
+      saveIndex(questions().length);
+      render();
+    };
+    jump?.addEventListener('change', jumpToQuestion);
+    jump?.addEventListener('keydown', event => {
+      if (event.key !== 'Enter') return;
+      event.preventDefault();
+      jumpToQuestion();
     });
     app.querySelector('[data-action="reset"]')?.addEventListener('click', () => {
       if (!confirm(`${config.subject}과목 오답을 모두 삭제할까요?`)) return;
       safeRemove(wrongKey); index = 0; render();
     });
-    app.querySelector('[data-action="reveal"]')?.addEventListener('click', () => {
+    const revealAnswer = () => {
       const answer = app.querySelector('#written-answer');
       if (!answer.value.trim()) { answer.focus(); return; }
       app.querySelector('#model-answer').classList.remove('hidden');
       answer.readOnly = true;
-      app.querySelector('#model-answer-title').focus({preventScroll:true});
+      app.querySelector('[data-judge="correct"]').focus({preventScroll:true});
+    };
+    app.querySelector('[data-action="reveal"]')?.addEventListener('click', revealAnswer);
+    app.querySelector('#written-answer')?.addEventListener('keydown', event => {
+      if (event.key !== 'Enter' || event.shiftKey) return;
+      event.preventDefault();
+      revealAnswer();
     });
-    app.querySelectorAll('[data-judge]').forEach(button => button.addEventListener('click', () => {
+    const judgeButtons = [...app.querySelectorAll('[data-judge]')];
+    app.querySelector('.judge-actions')?.addEventListener('keydown', event => {
+      if (event.key !== 'ArrowLeft' && event.key !== 'ArrowRight') return;
+      const current = judgeButtons.indexOf(document.activeElement);
+      if (current < 0) return;
+      event.preventDefault();
+      const direction = event.key === 'ArrowRight' ? 1 : -1;
+      judgeButtons[(current + direction + judgeButtons.length) % judgeButtons.length].focus();
+    });
+    judgeButtons.forEach(button => button.addEventListener('click', () => {
       if (locked || app.querySelector('#model-answer').classList.contains('hidden')) return;
       const isCorrect = button.dataset.judge === 'correct';
       locked = true; mark(question, isCorrect); finishQuestion(isCorrect);

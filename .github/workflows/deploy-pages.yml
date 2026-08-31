@@ -1,4 +1,4 @@
-name: Deploy CBT (GitHub Pages)
+name: Deploy Learning Site (GitHub Pages)
 
 on:
   push:
@@ -28,16 +28,15 @@ jobs:
           python -m compileall -q tools tests
           ruff check tools tests
           mypy tools tests
-      - name: Test CBT tools
+      - name: Test learning tools
         run: python -m unittest discover -s tests -v
-      - name: Check generated content and legal sources
+      - name: Check generated content and sources
         run: |
           python tools/build_study_cbt.py --check
+          python tools/build_cumulative_cbt.py --check
           python tools/build_lecture_pages.py --check
           python tools/private_source_inventory.py
           python tools/verify_legal_sources.py
-      - name: Validate mock exams
-        run: python tools/validate_mock_exam.py
 
   deploy:
     if: github.event_name != 'pull_request'

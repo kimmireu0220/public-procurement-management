@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build and verify metadata for local-only private source images."""
+"""Build and verify metadata for tracked source images."""
 
 from __future__ import annotations
 
@@ -58,7 +58,6 @@ def build_payload(source_root: Path = DEFAULT_SOURCE_ROOT) -> dict[str, object]:
         raise SourceInventoryError(f"인벤토리를 만들 JPG가 없습니다: {source_root}")
     return {
         "schema_version": 1,
-        "visibility": "local-only",
         "root": "sources/민간_박문각_수험서_jpg",
         "images": images,
     }

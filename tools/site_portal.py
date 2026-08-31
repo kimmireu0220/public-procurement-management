@@ -3,13 +3,11 @@
 from __future__ import annotations
 
 import html
-import json
 from collections import defaultdict
 from dataclasses import dataclass
 from pathlib import Path
 
 from build_lecture_pages import load_lectures
-from cbt.profiles import FULL_MOCK
 
 ROOT = Path(__file__).resolve().parents[1]
 DOCS = ROOT / "docs"
@@ -42,27 +40,6 @@ def lecture_links() -> list[LectureLink]:
         )
         for item in load_lectures()
     ]
-
-
-def published_rounds() -> list[int]:
-    meta_path = DOCS / "cbt-meta.json"
-    if not meta_path.is_file():
-        return []
-    meta = json.loads(meta_path.read_text(encoding="utf-8"))
-    rounds = meta.get("rounds", [])
-    return sorted(int(item["round"]) for item in rounds if isinstance(item, dict) and "round" in item)
-
-
-def _round_cards(rounds: list[int]) -> str:
-    latest = max(rounds)
-    minutes = FULL_MOCK.duration_sec // 60
-    return "".join(
-        f'<a class="choice-card featured" href="mock/{round_no}회차/">'
-        f'<span class="card-kicker">통합 모의고사</span><strong>{round_no}회차</strong>'
-        f'<span>{FULL_MOCK.question_count}문항 · {minutes}분</span>'
-        f'{"<em>최신</em>" if round_no == latest else ""}</a>'
-        for round_no in rounds
-    )
 
 
 def _subject_cbt_cards() -> str:
@@ -351,16 +328,8 @@ h1 { margin: 0; font-size: clamp(2.15rem, 5vw, 3.35rem); line-height: 1.15; lett
 """.strip()
 
 
-def render_portal(rounds: list[int], lectures: list[LectureLink] | None = None) -> str:
+def render_portal(lectures: list[LectureLink] | None = None) -> str:
     lecture_items = lecture_links() if lectures is None else lectures
-    mock_nav = '<a href="#full-mock">통합 모의고사</a>' if rounds else ""
-    mock_section = (
-        f'<section class="section" id="full-mock"><div class="section-head"><h2>통합 필기 모의고사</h2>'
-        f'<p>실전과 같은 {FULL_MOCK.question_count}문항 · {FULL_MOCK.duration_sec // 60}분</p></div>'
-        f'<div class="choice-grid">{_round_cards(rounds)}</div></section>'
-        if rounds
-        else ""
-    )
     subject_cbt_section = (
         '<section class="section" id="subject-cbt"><div class="section-head">'
         '<h2>과목별 문제은행</h2><p>1·2·3과목 즉시 채점 CBT · 4과목 실기 답안 연습</p></div>'
@@ -376,18 +345,17 @@ def render_portal(rounds: list[int], lectures: list[LectureLink] | None = None) 
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="공공조달관리사 모의고사와 공식 자료 기반 자체 강의를 한곳에서 학습하세요.">
+<meta name="description" content="공공조달관리사 문제은행과 공식 자료 기반 자체 강의를 한곳에서 학습하세요.">
 <meta name="theme-color" content="#123b66">
 <title>공공조달관리사 학습센터</title>
 <style>{PORTAL_STYLE}</style>
 </head>
 <body>
 <a class="skip-link" href="#main-content">본문으로 바로가기</a>
-<header class="hero"><div class="hero-inner"><span class="eyebrow">PUBLIC PROCUREMENT MANAGER</span><h1>공공조달관리사 학습센터</h1><p>공식 자료 기반 자체 강의와 검증된 연습문제를 한곳에서 선택하세요.</p><nav class="quick-nav" aria-label="학습 메뉴"><a href="#subject-cbt">과목별 문제은행</a><a href="#wrong-cbt">누적 오답 CBT</a>{mock_nav}<a href="#lectures">이론 강의</a></nav></div></header>
+<header class="hero"><div class="hero-inner"><span class="eyebrow">PUBLIC PROCUREMENT MANAGER</span><h1>공공조달관리사 학습센터</h1><p>공식 자료 기반 자체 강의와 검증된 연습문제를 한곳에서 선택하세요.</p><nav class="quick-nav" aria-label="학습 메뉴"><a href="#subject-cbt">과목별 문제은행</a><a href="#wrong-cbt">누적 오답 CBT</a><a href="#lectures">이론 강의</a></nav></div></header>
 <main class="page" id="main-content">
 {subject_cbt_section}
 {wrong_cbt_section}
-{mock_section}
 <section class="section" id="lectures"><div class="section-head"><h2>과목별 이론 강의</h2><p>출제기준 · 실무 판단 · 답안 훈련</p></div>{_lecture_groups(lecture_items)}</section>
 </main>
 <footer class="footer">공식 출제기준 · 조달청 표준교재 · 현행 규정 기반 자체 제작 학습자료</footer>
@@ -412,8 +380,7 @@ def render_portal(rounds: list[int], lectures: list[LectureLink] | None = None) 
 """
 
 
-def write_portal(rounds: list[int] | None = None) -> Path:
-    selected_rounds = published_rounds() if rounds is None else rounds
+def write_portal() -> Path:
     destination = DOCS / "index.html"
-    destination.write_text(render_portal(selected_rounds), encoding="utf-8")
+    destination.write_text(render_portal(), encoding="utf-8")
     return destination

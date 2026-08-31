@@ -89,16 +89,16 @@
   }
   function toolbar(list) {
     const current = index + 1;
+    const digits = Math.max(2, String(list.length).length);
     const wrong = readWrong().size.toLocaleString('ko-KR');
     const reset = config.mode === 'wrong'
       ? `<button type="button" class="danger" data-action="reset">${config.subject}과목 오답 초기화</button>`
       : '';
     return `<nav class="toolbar" aria-label="문항 이동"><div class="progress-block"><div class="progress-copy">`+
-      `<strong>${current.toLocaleString('ko-KR')} / ${list.length.toLocaleString('ko-KR')}</strong>`+
+      `<strong><input class="progress-jump" type="number" inputmode="numeric" min="1" max="${list.length}" value="${current}" style="--question-digits:${digits}" aria-label="이동할 문항"> / ${list.length.toLocaleString('ko-KR')}</strong>`+
       `<span class="wrong-summary">누적 오답 <b data-wrong-count>${wrong}</b>개</span></div>`+
       `<progress class="question-progress" value="${current}" max="${list.length}" aria-label="전체 문항 진행률"></progress></div>`+
       `<div class="toolbar-controls"><button type="button" data-action="prev" ${index === 0 ? 'disabled' : ''}>← 이전</button>`+
-      `<label class="jump-label"><span>문항</span><input class="jump" type="number" inputmode="numeric" min="1" max="${list.length}" value="${current}" aria-label="이동할 문항"></label>`+
       `<button type="button" data-action="next" ${index >= list.length - 1 ? 'disabled' : ''}>다음 →</button>${reset}</div></nav>`;
   }
   function questionHtml(question, list) {
@@ -111,12 +111,19 @@
   function bind(question) {
     app.querySelector('[data-action="prev"]')?.addEventListener('click', () => move(-1));
     app.querySelector('[data-action="next"]')?.addEventListener('click', () => move(1));
-    app.querySelector('.jump')?.addEventListener('change', event => {
-      const value = Number.parseInt(event.target.value, 10);
+    const jump = app.querySelector('.progress-jump');
+    const jumpToQuestion = () => {
+      const value = Number.parseInt(jump.value, 10);
       index = Number.isFinite(value) ? value - 1 : index;
       saveIndex(questions().length);
       render();
       focusQuestion();
+    };
+    jump?.addEventListener('change', jumpToQuestion);
+    jump?.addEventListener('keydown', event => {
+      if (event.key !== 'Enter') return;
+      event.preventDefault();
+      jumpToQuestion();
     });
     app.querySelector('[data-action="reset"]')?.addEventListener('click', () => {
       if (!confirm(`${config.subject}과목 오답을 모두 삭제할까요?`)) return;

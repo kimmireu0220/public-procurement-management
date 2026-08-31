@@ -9,8 +9,8 @@ import shutil
 import tempfile
 from pathlib import Path
 
-from cbt.profiles import DOCS
-
+ROOT = Path(__file__).resolve().parents[1]
+DOCS = ROOT / "docs"
 OUTPUT_DIR = DOCS / "study"
 
 LANDING_HTML = """<!DOCTYPE html>
@@ -96,7 +96,7 @@ def main() -> int:
                 for error in errors:
                     print(error)
                 return 1
-            print("학습 안내 검증 완료: 1~4과목 문제은행 연결 정상")
+            print("학습 안내 페이지 검증 완료")
             return 0
 
         OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
