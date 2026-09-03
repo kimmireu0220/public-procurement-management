@@ -58,7 +58,8 @@ class CumulativeCbtTest(unittest.TestCase):
         self.assertNotIn("event.keyCode === 229", written)
         self.assertNotIn("if (!answer.value.trim())", written)
         self.assertIn("event.preventDefault()", written)
-        self.assertIn("revealAnswer()", written)
+        self.assertIn("revealAnswer({focusJudge:false})", written)
+        self.assertIn("'#model-answer-title'", written)
         self.assertIn("app.querySelector('.answer-actions').classList.add('hidden')", written)
         self.assertNotIn("핵심어와 판단 근거를 적은 뒤", written)
 
@@ -77,7 +78,7 @@ class CumulativeCbtTest(unittest.TestCase):
     def test_written_judgement_supports_arrow_navigation_and_enter_activation(self) -> None:
         written = (ROOT / "docs" / "assets" / "cumulative-cbt.js").read_text(encoding="utf-8")
 
-        self.assertIn("app.querySelector('[data-judge=\"correct\"]').focus", written)
+        self.assertIn("focusJudge ? '[data-judge=\"correct\"]' : '#model-answer-title'", written)
         self.assertIn("event.key !== 'ArrowLeft' && event.key !== 'ArrowRight'", written)
         self.assertIn("judgeButtons.indexOf(document.activeElement)", written)
         self.assertIn("judgeButtons[(current + direction + judgeButtons.length) % judgeButtons.length].focus()", written)

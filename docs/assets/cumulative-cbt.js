@@ -114,18 +114,18 @@
       if (!confirm(`${config.subject}과목 오답을 모두 삭제할까요?`)) return;
       safeRemove(wrongKey); index = 0; render();
     });
-    const revealAnswer = () => {
+    const revealAnswer = ({focusJudge = true} = {}) => {
       const answer = app.querySelector('#written-answer');
       app.querySelector('#model-answer').classList.remove('hidden');
       app.querySelector('.answer-actions').classList.add('hidden');
       answer.readOnly = true;
-      app.querySelector('[data-judge="correct"]').focus({preventScroll:true});
+      app.querySelector(focusJudge ? '[data-judge="correct"]' : '#model-answer-title').focus({preventScroll:true});
     };
-    app.querySelector('[data-action="reveal"]')?.addEventListener('click', revealAnswer);
+    app.querySelector('[data-action="reveal"]')?.addEventListener('click', () => revealAnswer());
     app.querySelector('#written-answer')?.addEventListener('keydown', event => {
       if (event.key !== 'Enter' || event.shiftKey) return;
       event.preventDefault();
-      revealAnswer();
+      revealAnswer({focusJudge:false});
     });
     const judgeButtons = [...app.querySelectorAll('[data-judge]')];
     app.querySelector('.judge-actions')?.addEventListener('keydown', event => {
