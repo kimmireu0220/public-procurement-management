@@ -138,6 +138,10 @@
       const correct = String(question.answer);
       const isCorrect = selected === correct;
       mark(question, isCorrect);
+      if (isCorrect && (config.mode === 'wrong' || index < bank.length - 1)) {
+        finishQuestion(true);
+        return;
+      }
       app.querySelectorAll('[data-choice]').forEach(choice => {
         choice.disabled = true;
         if (choice.dataset.choice === correct) choice.classList.add('correct');
@@ -169,7 +173,7 @@
     bind(question);
   }
   document.addEventListener('keydown', event => {
-    if (event.defaultPrevented || event.metaKey || event.ctrlKey || event.altKey) return;
+    if (event.defaultPrevented || event.repeat || event.metaKey || event.ctrlKey || event.altKey) return;
     if (event.target.matches('input, textarea')) return;
     if (!locked && /^[1-4]$/.test(event.key)) {
       const choice = app.querySelector(`[data-choice="${event.key}"]`);
