@@ -147,15 +147,11 @@
         if (choice.dataset.choice === correct) choice.classList.add('correct');
       });
       if (!isCorrect) button.classList.add('wrong');
-      const removed = isCorrect && config.mode === 'wrong';
-      const message = removed
-        ? '정답입니다. 오답 목록에서 제거했습니다.'
-        : isCorrect ? '정답입니다.' : `오답입니다. 정답은 ${symbols[correct]}입니다.`;
       const feedback = app.querySelector('#feedback');
-      feedback.innerHTML = `<p class="feedback ${isCorrect ? 'ok' : 'bad'}">${message}</p>`+
-        `<div class="nav-actions"><button type="button" class="primary" data-action="continue">다음 문제 →</button></div>`;
-      feedback.focus({preventScroll:true});
-      feedback.querySelector('[data-action="continue"]').addEventListener('click', () => finishQuestion(isCorrect));
+      feedback.innerHTML = `<div class="nav-actions"><button type="button" class="primary" data-action="continue">다음 문제 →</button></div>`;
+      const continueButton = feedback.querySelector('[data-action="continue"]');
+      continueButton.focus({preventScroll:true});
+      continueButton.addEventListener('click', () => finishQuestion(isCorrect));
     }));
   }
   function render() {

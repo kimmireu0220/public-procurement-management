@@ -43,6 +43,8 @@ class CumulativeCbtTest(unittest.TestCase):
         self.assertNotIn("window.setTimeout", objective)
         self.assertIn('role="status"', objective)
         self.assertIn('data-action="continue"', objective)
+        self.assertNotIn("오답입니다. 정답은", objective)
+        self.assertNotIn("정답입니다.", objective)
         self.assertIn("focusQuestion()", objective)
         self.assertIn("safeRemove(wrongKey)", objective)
         self.assertIn('data-judge="correct"', written)
