@@ -32,6 +32,21 @@ SUBJECTS = {
 }
 ACTIVE_SUBJECTS = (1, 2, 3, 4)
 SYMBOL_TO_KEY = {"①": "1", "②": "2", "③": "3", "④": "4"}
+OBJECTIVE_CORRECTIONS = {
+    "1:6:2:exam:1": {
+        "stem": (
+            "다음 보기 중 국가계약 등 공공계약에 일반적으로 적용되는 성격을 "
+            "모두 고른 것은? ㉠ 전형계약, ㉡ 비전형계약, ㉢ 쌍무계약, "
+            "㉣ 편무계약, ㉤ 유상계약, ㉥ 무상계약, ㉦ 낙성계약, ㉧ 요물계약"
+        ),
+        "choices": [
+            {"key": "1", "label": "①", "text": "㉠, ㉣, ㉥, ㉧"},
+            {"key": "2", "label": "②", "text": "㉠, ㉢, ㉤, ㉦"},
+            {"key": "3", "label": "③", "text": "㉡, ㉢, ㉤, ㉦"},
+            {"key": "4", "label": "④", "text": "㉠, ㉢, ㉥, ㉧"},
+        ],
+    }
+}
 QUESTION_RE = re.compile(r"const QUESTIONS = (\[.*?\]);\nconst STORAGE_KEY", re.DOTALL)
 ANSWER_RE = re.compile(r"window\.CBT_ANSWER_KEY=(\[.*?\]);")
 PART_RE = re.compile(r"^(\d+)과목-part(\d+)-exam$")
@@ -243,6 +258,7 @@ def load_objective_questions(subject: int) -> list[dict]:
             raise ValueError(f"문제·정답 수 불일치: {path}")
         for question, symbol in zip(questions, answers):
             item = dict(question)
+            item.update(OBJECTIVE_CORRECTIONS.get(item["id"], {}))
             item["no"] = len(combined) + 1
             item["part"] = part
             item["group"] = item.get("subjectName", f"Part {part}")

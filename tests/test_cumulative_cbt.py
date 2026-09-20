@@ -34,6 +34,20 @@ class CumulativeCbtTest(unittest.TestCase):
         self.assertEqual(len(answers), 1244)
         self.assertTrue(all(answers[question["id"]].strip() for question in questions))
 
+    def test_corrected_public_contract_question_has_prompt_and_four_clean_choices(self) -> None:
+        questions = build_cumulative_cbt.load_objective_questions(1)
+        question = next(item for item in questions if item["id"] == "1:6:2:exam:1")
+
+        self.assertIn("㉠ 전형계약", question["stem"])
+        self.assertIn("㉤ 유상계약", question["stem"])
+        self.assertEqual([choice["text"] for choice in question["choices"]], [
+            "㉠, ㉣, ㉥, ㉧",
+            "㉠, ㉢, ㉤, ㉦",
+            "㉡, ㉢, ㉤, ㉦",
+            "㉠, ㉢, ㉥, ㉧",
+        ])
+        self.assertEqual(question["answer"], "2")
+
     def test_client_supports_immediate_grading_and_manual_written_judgement(self) -> None:
         objective = (ROOT / "docs" / "assets" / "objective-cumulative-cbt.js").read_text(encoding="utf-8")
         written = (ROOT / "docs" / "assets" / "cumulative-cbt.js").read_text(encoding="utf-8")
