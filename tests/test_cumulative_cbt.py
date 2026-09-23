@@ -130,6 +130,12 @@ class CumulativeCbtTest(unittest.TestCase):
             self.assertIn("jump?.addEventListener('change', jumpToQuestion)", script)
             self.assertIn("event.key !== 'Enter'", script)
 
+    def test_objective_cbt_accepts_direct_question_links(self) -> None:
+        script = (ROOT / "docs" / "assets" / "objective-cumulative-cbt.js").read_text(encoding="utf-8")
+
+        self.assertIn("new URLSearchParams(window.location.search).get('q')", script)
+        self.assertIn("requested >= 1 && requested <= bank.length", script)
+
     def test_portal_links_four_full_and_four_wrong_cbts(self) -> None:
         portal = site_portal.render_portal()
         for subject in range(1, 5):
@@ -153,6 +159,7 @@ class CumulativeCbtTest(unittest.TestCase):
                     ROOT / "docs" / "학습_숫자암기" / filename,
                 ),
             )
+            self.assertIn(f'href="../../{subject}과목/?q=', published.read_text(encoding="utf-8"))
 
     def test_published_portal_matches_renderer(self) -> None:
         published = (ROOT / "docs" / "index.html").read_text(encoding="utf-8")

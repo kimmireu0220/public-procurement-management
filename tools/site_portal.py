@@ -99,6 +99,19 @@ def render_number_memory_guide(subject: int, subject_title: str, source: Path) -
     body_markdown = "\n".join(re.sub(r"^> ?", "", line) for line in lines[1:]).strip()
     body_markdown = re.sub(r"\[([^\]]+)\]\((?!https?://)[^)]+\)", r"\1", body_markdown)
     article = markdown_to_html(body_markdown)
+
+    def link_problem_cell(match: re.Match[str]) -> str:
+        linked = re.sub(
+            r"\d+",
+            lambda number: (
+                f'<a href="../../{subject}과목/?q={number.group(0)}">'
+                f'{number.group(0)}번 문제</a>'
+            ),
+            match.group(1),
+        )
+        return f"<td>{linked}</td>{match.group(2)}"
+
+    article = re.sub(r"<td>([^<]*\d[^<]*)</td>(\s*</tr>)", link_problem_cell, article)
     outline = article_outline(body_markdown)
     body = (
         '<main class="page" id="main-content" tabindex="-1"><article class="article">'

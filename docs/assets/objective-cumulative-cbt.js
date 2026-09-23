@@ -22,6 +22,10 @@
     catch (_) {}
   }
   function readIndex() {
+    if (config.mode !== 'wrong') {
+      const requested = Number.parseInt(new URLSearchParams(window.location.search).get('q'), 10);
+      if (Number.isFinite(requested) && requested >= 1 && requested <= bank.length) return requested - 1;
+    }
     const value = Number.parseInt(safeGet(progressKey, '0'), 10);
     return Number.isFinite(value) && value >= 0 ? value : 0;
   }
