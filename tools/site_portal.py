@@ -3,14 +3,20 @@
 from __future__ import annotations
 
 import html
+import re
 from collections import defaultdict
 from dataclasses import dataclass
 from pathlib import Path
 
-from build_lecture_pages import load_lectures
+from build_lecture_pages import article_outline, load_lectures, markdown_to_html, page_shell
 
 ROOT = Path(__file__).resolve().parents[1]
 DOCS = ROOT / "docs"
+NUMBER_MEMORY_GUIDES = (
+    (1, "공공조달의 이해", "1과목_공공조달의_이해.md"),
+    (2, "공공조달 계획·분석", "2과목_공공조달_계획분석.md"),
+    (3, "공공계약관리", "3과목_공공계약관리.md"),
+)
 
 @dataclass(frozen=True)
 class LectureLink:
@@ -72,6 +78,40 @@ def _wrong_cbt_cards() -> str:
         f'<span class="card-meta"><b class="wrong-count" aria-live="polite">0</b>문항 저장됨</span></a>'
         for subject, title in subjects
     )
+
+
+def _number_memory_cards() -> str:
+    return "".join(
+        f'<a class="choice-card" href="학습_숫자암기/{subject}과목/">'
+        f'<span class="card-kicker">빈출 숫자 요약</span><strong>{subject}과목 숫자 암기표</strong>'
+        f'<span class="card-description">{html.escape(title)}</span>'
+        f'<span class="card-meta">기한·비율·금액·구간 모음</span></a>'
+        for subject, title, _filename in NUMBER_MEMORY_GUIDES
+    )
+
+
+def render_number_memory_guide(subject: int, subject_title: str, source: Path) -> str:
+    raw = source.read_text(encoding="utf-8")
+    lines = raw.splitlines()
+    if not lines or not lines[0].startswith("# "):
+        raise ValueError(f"숫자 암기표의 1단계 제목이 없습니다: {source}")
+    title = lines[0][2:].strip()
+    body_markdown = "\n".join(re.sub(r"^> ?", "", line) for line in lines[1:]).strip()
+    body_markdown = re.sub(r"\[([^\]]+)\]\((?!https?://)[^)]+\)", r"\1", body_markdown)
+    article = markdown_to_html(body_markdown)
+    outline = article_outline(body_markdown)
+    body = (
+        '<main class="page" id="main-content" tabindex="-1"><article class="article">'
+        '<nav class="breadcrumb" aria-label="현재 위치"><a href="../../">학습센터</a> › '
+        f'<span aria-current="page">{subject}과목 숫자 암기표</span></nav>'
+        '<span class="eyebrow">NUMBER MEMORY</span>'
+        f'<h1>{html.escape(title)}</h1><p class="subtitle">{html.escape(subject_title)} · 기한·비율·금액·구간 집중 복습</p>'
+        f'{outline}{article}<nav class="article-nav" aria-label="관련 학습">'
+        f'<a class="nav-link prev" href="../../{subject}과목/">← {subject}과목 CBT</a>'
+        f'<a class="nav-link next" href="../../lecture/{subject}/">{subject}과목 강의 →</a>'
+        '</nav><a class="back-to-top" href="#main-content">↑ 맨 위로</a></article></main>'
+    )
+    return page_shell(f"{subject}과목 숫자 암기표", body, "../../lecture/")
 
 
 def _lecture_groups(links: list[LectureLink]) -> str:
@@ -340,6 +380,11 @@ def render_portal(lectures: list[LectureLink] | None = None) -> str:
         '<div><h2>누적 오답 CBT</h2><p>틀린 문제만 모아 다시 풀고, 정답을 맞히면 자동 제거 · 현재 브라우저에 저장</p></div></div>'
         f'<div class="choice-grid four-card-grid">{_wrong_cbt_cards()}</div></section>'
     )
+    number_memory_section = (
+        '<section class="section" id="number-memory"><div class="section-head">'
+        '<h2>숫자 암기표</h2><p>1·2·3과목 문제의 기한·비율·금액·구간 집중 복습</p></div>'
+        f'<div class="choice-grid">{_number_memory_cards()}</div></section>'
+    )
     return f"""<!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -352,10 +397,11 @@ def render_portal(lectures: list[LectureLink] | None = None) -> str:
 </head>
 <body>
 <a class="skip-link" href="#main-content">본문으로 바로가기</a>
-<header class="hero"><div class="hero-inner"><span class="eyebrow">PUBLIC PROCUREMENT MANAGER</span><h1>공공조달관리사 학습센터</h1><p>공식 자료 기반 자체 강의와 검증된 연습문제를 한곳에서 선택하세요.</p><nav class="quick-nav" aria-label="학습 메뉴"><a href="#subject-cbt">과목별 문제은행</a><a href="#wrong-cbt">누적 오답 CBT</a><a href="#lectures">이론 강의</a></nav></div></header>
+<header class="hero"><div class="hero-inner"><span class="eyebrow">PUBLIC PROCUREMENT MANAGER</span><h1>공공조달관리사 학습센터</h1><p>공식 자료 기반 자체 강의와 검증된 연습문제를 한곳에서 선택하세요.</p><nav class="quick-nav" aria-label="학습 메뉴"><a href="#subject-cbt">과목별 문제은행</a><a href="#wrong-cbt">누적 오답 CBT</a><a href="#number-memory">숫자 암기표</a><a href="#lectures">이론 강의</a></nav></div></header>
 <main class="page" id="main-content">
 {subject_cbt_section}
 {wrong_cbt_section}
+{number_memory_section}
 <section class="section" id="lectures"><div class="section-head"><h2>과목별 이론 강의</h2><p>출제기준 · 실무 판단 · 답안 훈련</p></div>{_lecture_groups(lecture_items)}</section>
 </main>
 <footer class="footer">공식 출제기준 · 조달청 표준교재 · 현행 규정 기반 자체 제작 학습자료</footer>
@@ -383,4 +429,12 @@ def render_portal(lectures: list[LectureLink] | None = None) -> str:
 def write_portal() -> Path:
     destination = DOCS / "index.html"
     destination.write_text(render_portal(), encoding="utf-8")
+    for subject, subject_title, filename in NUMBER_MEMORY_GUIDES:
+        source = DOCS / "학습_숫자암기" / filename
+        guide_destination = DOCS / "학습_숫자암기" / f"{subject}과목" / "index.html"
+        guide_destination.parent.mkdir(parents=True, exist_ok=True)
+        guide_destination.write_text(
+            render_number_memory_guide(subject, subject_title, source),
+            encoding="utf-8",
+        )
     return destination

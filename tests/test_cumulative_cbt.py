@@ -139,6 +139,21 @@ class CumulativeCbtTest(unittest.TestCase):
         self.assertNotIn("오답 전체 초기화", portal)
         self.assertNotIn("reset-wrong-all", portal)
 
+    def test_portal_links_three_number_memory_guides(self) -> None:
+        portal = site_portal.render_portal()
+        for subject, title, filename in site_portal.NUMBER_MEMORY_GUIDES:
+            self.assertIn(f'href="학습_숫자암기/{subject}과목/"', portal)
+            self.assertTrue((ROOT / "docs" / "학습_숫자암기" / filename).is_file())
+            published = ROOT / "docs" / "학습_숫자암기" / f"{subject}과목" / "index.html"
+            self.assertEqual(
+                published.read_text(encoding="utf-8"),
+                site_portal.render_number_memory_guide(
+                    subject,
+                    title,
+                    ROOT / "docs" / "학습_숫자암기" / filename,
+                ),
+            )
+
     def test_published_portal_matches_renderer(self) -> None:
         published = (ROOT / "docs" / "index.html").read_text(encoding="utf-8")
 
