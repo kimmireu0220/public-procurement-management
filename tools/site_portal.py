@@ -3,20 +3,15 @@
 from __future__ import annotations
 
 import html
-import re
 from collections import defaultdict
 from dataclasses import dataclass
 from pathlib import Path
 
-from build_lecture_pages import article_outline, load_lectures, markdown_to_html, page_shell
+from build_lecture_pages import load_lectures
+from number_memory import NUMBER_MEMORY_GUIDES, write_number_memory_guides
 
 ROOT = Path(__file__).resolve().parents[1]
 DOCS = ROOT / "docs"
-NUMBER_MEMORY_GUIDES = (
-    (1, "공공조달의 이해", "1과목_공공조달의_이해.md"),
-    (2, "공공조달 계획·분석", "2과목_공공조달_계획분석.md"),
-    (3, "공공계약관리", "3과목_공공계약관리.md"),
-)
 
 @dataclass(frozen=True)
 class LectureLink:
@@ -90,41 +85,6 @@ def _number_memory_cards() -> str:
     )
 
 
-def render_number_memory_guide(subject: int, subject_title: str, source: Path) -> str:
-    raw = source.read_text(encoding="utf-8")
-    lines = raw.splitlines()
-    if not lines or not lines[0].startswith("# "):
-        raise ValueError(f"숫자 암기표의 1단계 제목이 없습니다: {source}")
-    title = lines[0][2:].strip()
-    body_markdown = "\n".join(re.sub(r"^> ?", "", line) for line in lines[1:]).strip()
-    body_markdown = re.sub(r"\[([^\]]+)\]\((?!https?://)[^)]+\)", r"\1", body_markdown)
-    article = markdown_to_html(body_markdown)
-
-    def link_problem_cell(match: re.Match[str]) -> str:
-        linked = re.sub(
-            r"\d+",
-            lambda number: (
-                f'<a href="../../{subject}과목/?q={number.group(0)}">'
-                f'{number.group(0)}번 문제</a>'
-            ),
-            match.group(1),
-        )
-        return f"<td>{linked}</td>{match.group(2)}"
-
-    article = re.sub(r"<td>([^<]*\d[^<]*)</td>(\s*</tr>)", link_problem_cell, article)
-    outline = article_outline(body_markdown)
-    body = (
-        '<main class="page" id="main-content" tabindex="-1"><article class="article">'
-        '<nav class="breadcrumb" aria-label="현재 위치"><a href="../../">학습센터</a> › '
-        f'<span aria-current="page">{subject}과목 숫자 암기표</span></nav>'
-        '<span class="eyebrow">NUMBER MEMORY</span>'
-        f'<h1>{html.escape(title)}</h1><p class="subtitle">{html.escape(subject_title)} · 기한·비율·금액·구간 집중 복습</p>'
-        f'{outline}{article}<nav class="article-nav" aria-label="관련 학습">'
-        f'<a class="nav-link prev" href="../../{subject}과목/">← {subject}과목 CBT</a>'
-        f'<a class="nav-link next" href="../../lecture/{subject}/">{subject}과목 강의 →</a>'
-        '</nav><a class="back-to-top" href="#main-content">↑ 맨 위로</a></article></main>'
-    )
-    return page_shell(f"{subject}과목 숫자 암기표", body, "../../lecture/")
 
 
 def _lecture_groups(links: list[LectureLink]) -> str:
@@ -442,12 +402,5 @@ def render_portal(lectures: list[LectureLink] | None = None) -> str:
 def write_portal() -> Path:
     destination = DOCS / "index.html"
     destination.write_text(render_portal(), encoding="utf-8")
-    for subject, subject_title, filename in NUMBER_MEMORY_GUIDES:
-        source = DOCS / "학습_숫자암기" / filename
-        guide_destination = DOCS / "학습_숫자암기" / f"{subject}과목" / "index.html"
-        guide_destination.parent.mkdir(parents=True, exist_ok=True)
-        guide_destination.write_text(
-            render_number_memory_guide(subject, subject_title, source),
-            encoding="utf-8",
-        )
+    write_number_memory_guides(DOCS)
     return destination

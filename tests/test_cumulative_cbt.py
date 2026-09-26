@@ -11,6 +11,7 @@ if str(TOOLS) not in sys.path:
     sys.path.insert(0, str(TOOLS))
 
 import build_cumulative_cbt  # noqa: E402
+import number_memory  # noqa: E402
 import site_portal  # noqa: E402
 
 
@@ -153,7 +154,7 @@ class CumulativeCbtTest(unittest.TestCase):
             published = ROOT / "docs" / "학습_숫자암기" / f"{subject}과목" / "index.html"
             self.assertEqual(
                 published.read_text(encoding="utf-8"),
-                site_portal.render_number_memory_guide(
+                number_memory.render_number_memory_guide(
                     subject,
                     title,
                     ROOT / "docs" / "학습_숫자암기" / filename,

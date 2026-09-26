@@ -10,6 +10,7 @@ import json
 import re
 import shutil
 import tempfile
+from collections.abc import Callable
 from dataclasses import dataclass
 from pathlib import Path
 
@@ -214,6 +215,7 @@ def article_outline(markdown: str) -> str:
 def markdown_to_html(
     markdown: str,
     *,
+    table_cell_renderer: Callable[[str, str], str] | None = None,
     _heading_ids: bool = True,
     _checkbox_counts: dict[str, int] | None = None,
 ) -> str:
@@ -314,7 +316,10 @@ def markdown_to_html(
             result.append("</tr></thead><tbody>")
             for row in rows:
                 result.append("<tr>")
-                result.extend(f"<td>{inline_markup(cell)}</td>" for cell in row)
+                for column, cell in enumerate(row):
+                    header = headers[column] if column < len(headers) else ""
+                    rendered = table_cell_renderer(header, cell) if table_cell_renderer else inline_markup(cell)
+                    result.append(f"<td>{rendered}</td>")
                 result.append("</tr>")
             result.append("</tbody></table></div>")
             continue
