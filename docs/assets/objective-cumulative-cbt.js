@@ -118,7 +118,7 @@
     const feedback = app.querySelector('#feedback');
     function showUngradedActions() {
       const saved = readWrong().has(question.id);
-      feedback.innerHTML = `<p>정답 미등록</p><div class="nav-actions"><button type="button" data-action="review">${saved ? '오답에서 제거' : '오답에 저장'}</button><button type="button" class="primary" data-action="continue">다음 문제 →</button></div>`;
+      feedback.innerHTML = `<p>${escapeHtml(question.source?.answerConflict || '정답 미등록')}</p><div class="nav-actions"><button type="button" data-action="review">${saved ? '오답에서 제거' : '오답에 저장'}</button><button type="button" class="primary" data-action="continue">다음 문제 →</button></div>`;
       feedback.querySelector('[data-action="review"]').addEventListener('click', () => {
         const wrong = readWrong();
         if (saved) wrong.delete(question.id);

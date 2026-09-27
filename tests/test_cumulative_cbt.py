@@ -24,10 +24,19 @@ class CumulativeCbtTest(unittest.TestCase):
     def test_verified_two_column_choice_order_matches_answer_keys(self) -> None:
         subject1 = json.loads((ROOT / "output/new_question_bank/subject1.json").read_text(encoding="utf-8"))
         subject2 = json.loads((ROOT / "output/new_question_bank/subject2.json").read_text(encoding="utf-8"))
-        for questions, number, expected in ((subject1, 37, "소액구매"), (subject1, 72, "품명신설 요청"), (subject2, 9, "우선순위 설정")):
+        for questions, number, expected in ((subject1, 37, "소액구매"), (subject2, 9, "우선순위 설정")):
             question = questions[number - 1]
             selected = next(choice for choice in question["choices"] if choice["key"] == question["answer"])
             self.assertEqual(selected["text"], expected)
+
+    def test_conflicting_printed_answer_does_not_reorder_original_choices(self) -> None:
+        questions = json.loads((ROOT / "output/new_question_bank/subject1.json").read_text(encoding="utf-8"))
+        question = questions[71]
+        self.assertEqual(question["source"]["answerPrintedNumber"], 22)
+        self.assertEqual([choice["text"] for choice in question["choices"]], ["품명신설 요청", "계약체결", "대금지급", "납품검사"])
+        self.assertIsNone(question["answer"])
+        self.assertEqual(question["source"]["printedAnswer"], "2")
+        self.assertTrue(question["source"]["answerConflict"])
 
     def test_photo_banks_have_stable_identifiers_and_source_mapping(self) -> None:
         for path in (ROOT / "output" / "new_question_bank").glob("*.json"):
@@ -42,6 +51,15 @@ class CumulativeCbtTest(unittest.TestCase):
                     self.assertTrue(question["source"]["answerVerifiedAt"])
                 self.assertTrue(question["source"]["photo"].endswith(".jpg"))
                 self.assertTrue(question["source"]["permission"])
+
+    def test_verified_photo_questions_are_not_duplicated_by_rephotographing(self) -> None:
+        for path in (ROOT / "output" / "new_question_bank").glob("subject*.json"):
+            questions = json.loads(path.read_text(encoding="utf-8"))
+            identities = [
+                (question["group"], int(question["source"].get("verifiedPrintedNumber", question["source"].get("answerPrintedNumber", question["source"]["printedNumberOcr"]))))
+                for question in questions
+            ]
+            self.assertEqual(len(identities), len(set(identities)), path.name)
 
     @unittest.skipUnless(shutil.which("node"), "Node.js is required for client runtime test")
     def test_objective_client_unknown_answer_runtime(self) -> None:
