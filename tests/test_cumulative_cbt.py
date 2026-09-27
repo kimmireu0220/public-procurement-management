@@ -55,6 +55,21 @@ class CumulativeCbtTest(unittest.TestCase):
             self.assertTrue(questions)
             self.assertTrue(all(q["answer"] in {choice["key"] for choice in q["choices"]} for q in questions))
 
+    def test_mock1_rephotographed_questions_are_complete_and_gradable(self) -> None:
+        questions = json.loads((ROOT / "output/new_question_bank/mock1.json").read_text(encoding="utf-8"))
+        self.assertEqual([q["source"]["answerPrintedNumber"] for q in questions], list(range(1, 81)))
+        expected = (
+            "2223413122" "2233141413" "3333342234" "4223211213"
+            "4221421422" "3222442122" "4143344132" "3232423144"
+        )
+        self.assertEqual("".join(q["answer"] for q in questions), expected)
+        self.assertTrue(all(len(q["choices"]) == 4 and all(c["text"] for c in q["choices"]) for q in questions))
+        self.assertTrue(all(q["source"]["retryPhoto"].endswith(".jpeg") for q in questions))
+        self.assertEqual(questions[1]["id"], "mock1:7494b9412efe28fe")
+        self.assertIn("50%", questions[24]["choices"][2]["text"])
+        self.assertIn("82", questions[52]["choices"][1]["text"])
+        self.assertIn("준공검사", questions[61]["choices"][0]["text"])
+
     def test_mock2_rephotographed_available_questions_are_complete(self) -> None:
         questions = json.loads((ROOT / "output/new_question_bank/mock2.json").read_text(encoding="utf-8"))
         printed = {
@@ -130,7 +145,7 @@ class CumulativeCbtTest(unittest.TestCase):
                         self.assertTrue(resolution["verifiedAt"])
                         self.assertTrue(resolution["sources"])
                         self.assertTrue(all(item.get("url") or item.get("path") for item in resolution["sources"]))
-                self.assertTrue(question["source"]["photo"].endswith(".jpg"))
+                self.assertTrue(question["source"]["photo"].endswith((".jpg", ".jpeg")))
                 self.assertTrue(question["source"]["permission"])
 
     def test_verified_photo_questions_are_not_duplicated_by_rephotographing(self) -> None:

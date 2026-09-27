@@ -304,6 +304,11 @@ def page_html(subject: int, mode: str, count: int, *, collection: str = "", exam
         config.update({"storageNamespace": collection, "allUrl": counterpart if is_wrong else "./", "emptyMessage": "문제 등록을 준비 중입니다."})
     if exam is not None:
         title = f"모의고사 {exam}회"
+        note = (
+            "정답을 맞히면 오답 목록에서 즉시 제거됩니다."
+            if is_wrong
+            else "답안을 클릭하면 즉시 채점되며 오답은 회차별로 누적됩니다."
+        )
         heading = title + (" 오답" if is_wrong else "")
         page_dir = f"new-bank/모의고사/{exam}회" + ("/오답" if is_wrong else "")
         other_dir = f"new-bank/모의고사/{exam}회" + ("" if is_wrong else "/오답")
@@ -380,6 +385,11 @@ def build(destination: Path) -> dict[int, int]:
     for exam in (1, 2):
         source = ROOT / "output" / "new_question_bank" / f"mock{exam}.json"
         exam_questions = json.loads(source.read_text(encoding="utf-8"))
+        if any(
+            question.get("answer") not in {choice["key"] for choice in question["choices"]}
+            for question in exam_questions
+        ):
+            raise ValueError(f"{exam}회 모의고사 공개 문제에는 자동 채점 가능한 정답이 필요합니다")
         (assets / f"new-bank-mock{exam}-bank.js").write_text("window.CBT_BANK=" + _json(exam_questions) + ";\n", encoding="utf-8")
         for mode in ("all", "wrong"):
             target = destination / "new-bank" / "모의고사" / f"{exam}회"
