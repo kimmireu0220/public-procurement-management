@@ -42,18 +42,18 @@ class CumulativeCbtTest(unittest.TestCase):
             self.assertEqual(sorted(numbers), list(range(1, total + 1)))
             self.assertTrue(all(q["answer"] in ("1", "2", "3", "4") for q in chapter_questions))
 
-    def test_subject1_pending_answers_have_evidence_or_explicit_issue(self) -> None:
+    def test_subject1_verified_answers_have_evidence(self) -> None:
         questions = json.loads((ROOT / "output/new_question_bank/subject1.json").read_text(encoding="utf-8"))
-        self.assertEqual([q["no"] for q in questions if q["answer"] is None], [227, 256, 281, 355, 356])
-        for number, answer in ((176, "1"), (181, "3"), (221, "2"), (237, "2"), (263, "3"), (285, "1"), (289, "3"), (357, "1")):
+        for number, answer in ((176, "1"), (181, "3"), (221, "2"), (236, "2"), (261, "3"), (282, "1"), (286, "3"), (352, "1")):
             question = questions[number - 1]
             self.assertEqual(question["answer"], answer)
             self.assertEqual(question["source"]["answerResolution"]["answer"], answer)
-        for number in (227, 256, 281, 355, 356):
-            source = questions[number - 1]["source"]
-            self.assertTrue(source["answerConflict"])
-            self.assertTrue(source["answerReview"]["sources"])
-            self.assertTrue(source["answerReview"]["verifiedAt"])
+
+    def test_published_photo_subjects_are_all_automatically_gradable(self) -> None:
+        for subject in (1, 2, 3):
+            questions = json.loads((ROOT / f"output/new_question_bank/subject{subject}.json").read_text(encoding="utf-8"))
+            self.assertTrue(questions)
+            self.assertTrue(all(q["answer"] in {choice["key"] for choice in q["choices"]} for q in questions))
 
     def test_mock2_rephotographed_available_questions_are_complete(self) -> None:
         questions = json.loads((ROOT / "output/new_question_bank/mock2.json").read_text(encoding="utf-8"))

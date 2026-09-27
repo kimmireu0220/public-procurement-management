@@ -362,6 +362,11 @@ def build(destination: Path) -> dict[int, int]:
     for subject in ACTIVE_SUBJECTS:
         source = ROOT / "output" / "new_question_bank" / f"subject{subject}.json"
         new_questions = json.loads(source.read_text(encoding="utf-8"))
+        if subject in (1, 2, 3) and any(
+            question.get("answer") not in {choice["key"] for choice in question["choices"]}
+            for question in new_questions
+        ):
+            raise ValueError(f"{subject}과목 공개 문제에는 자동 채점 가능한 정답이 필요합니다")
         (assets / f"new-bank-subject{subject}-bank.js").write_text(
             "window.CBT_BANK=" + _json(new_questions) + ";\n", encoding="utf-8"
         )
