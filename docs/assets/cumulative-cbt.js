@@ -3,8 +3,9 @@
   const config = window.CBT_CONFIG;
   const bank = Array.isArray(window.CBT_BANK) ? window.CBT_BANK : [];
   const app = document.getElementById('cbt-app');
-  const wrongKey = `ppm_cbt_wrong_subject_${config.subject}_v1`;
-  const progressKey = `ppm_cbt_progress_subject_${config.subject}_${config.mode}_v1`;
+  const storagePrefix = config.storageNamespace ? `ppm_cbt_${config.storageNamespace}` : 'ppm_cbt';
+  const wrongKey = `${storagePrefix}_wrong_subject_${config.subject}_v1`;
+  const progressKey = `${storagePrefix}_progress_subject_${config.subject}_${config.mode}_v1`;
   const symbols = {1:'①',2:'②',3:'③',4:'④'};
   let index = readIndex();
   let locked = false;
@@ -159,8 +160,10 @@
     locked = false; const list = questions(); saveIndex(list.length);
     if (!list.length) {
       app.innerHTML = config.mode === 'wrong'
-        ? `<section class="empty-card" role="status"><h2>누적된 오답이 없습니다.</h2><p>전체 CBT에서 틀린 문항이 여기에 자동으로 모입니다.</p><a href="../../${config.subject}과목/">${config.subject}과목 전체 CBT로 이동</a></section>`
-        : `<section class="empty-card" role="alert"><h2>문제은행을 불러오지 못했습니다.</h2><p>페이지를 새로고침한 뒤 다시 시도해 주세요.</p></section>`;
+        ? `<section class="empty-card" role="status"><h2>누적된 오답이 없습니다.</h2><p>전체 CBT에서 틀린 문항이 여기에 자동으로 모입니다.</p><a href="${escapeHtml(config.allUrl || `../../${config.subject}과목/`)}">${config.subject}과목 전체 CBT로 이동</a></section>`
+        : config.emptyMessage
+          ? `<section class="empty-card" role="status"><h2>${escapeHtml(config.emptyMessage)}</h2></section>`
+          : `<section class="empty-card" role="alert"><h2>문제은행을 불러오지 못했습니다.</h2><p>페이지를 새로고침한 뒤 다시 시도해 주세요.</p></section>`;
       return;
     }
     const question = list[index];

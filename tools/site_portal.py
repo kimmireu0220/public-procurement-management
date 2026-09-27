@@ -85,6 +85,18 @@ def _number_memory_cards() -> str:
     )
 
 
+def _new_bank_cards(*, wrong: bool = False) -> str:
+    return "".join(
+        f'<a class="choice-card{" wrong-card" if wrong else ""}" '
+        f'href="new-bank/{"오답/" if wrong else ""}{subject}과목/"'
+        + (f' data-wrong-subject="{subject}" data-storage-namespace="new-bank"' if wrong else "")
+        + f'><span class="card-kicker">새 문제은행</span><strong>{subject}과목{" 오답" if wrong else ""}</strong>'
+        + ( '<span class="card-meta"><b class="wrong-count" aria-live="polite">0</b>문항 저장됨</span>' if wrong else '<span class="card-meta">문제 등록 준비 중</span>')
+        + '</a>'
+        for subject in range(1, 5)
+    )
+
+
 
 
 def _lecture_groups(links: list[LectureLink]) -> str:
@@ -374,6 +386,8 @@ def render_portal(lectures: list[LectureLink] | None = None) -> str:
 <main class="page" id="main-content">
 {subject_cbt_section}
 {wrong_cbt_section}
+<section class="section" id="new-bank"><div class="section-head"><h2>새 문제은행</h2></div><div class="choice-grid four-card-grid">{_new_bank_cards()}</div></section>
+<section class="section" id="new-bank-wrong"><div class="section-head"><h2>새 문제은행 오답</h2></div><div class="choice-grid four-card-grid">{_new_bank_cards(wrong=True)}</div></section>
 {number_memory_section}
 <section class="section" id="lectures"><div class="section-head"><h2>과목별 이론 강의</h2><p>출제기준 · 실무 판단 · 답안 훈련</p></div>{_lecture_groups(lecture_items)}</section>
 </main>
@@ -383,8 +397,9 @@ def render_portal(lectures: list[LectureLink] | None = None) -> str:
   function updateWrongCounts(){{
     document.querySelectorAll('[data-wrong-subject]').forEach(function(card){{
       var subject = card.dataset.wrongSubject;
+      var prefix = card.dataset.storageNamespace ? 'ppm_cbt_' + card.dataset.storageNamespace : 'ppm_cbt';
       var count = 0;
-      try {{ var items = JSON.parse(localStorage.getItem('ppm_cbt_wrong_subject_' + subject + '_v1') || '[]'); count = Array.isArray(items) ? items.length : 0; }} catch (error) {{}}
+      try {{ var items = JSON.parse(localStorage.getItem(prefix + '_wrong_subject_' + subject + '_v1') || '[]'); count = Array.isArray(items) ? items.length : 0; }} catch (error) {{}}
       card.querySelector('.wrong-count').textContent = count.toLocaleString('ko-KR');
     }});
   }}

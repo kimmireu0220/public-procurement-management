@@ -1,6 +1,8 @@
 from __future__ import annotations
 
 import sys
+import json
+import re
 import tempfile
 import unittest
 from pathlib import Path
@@ -16,6 +18,32 @@ import site_portal  # noqa: E402
 
 
 class CumulativeCbtTest(unittest.TestCase):
+    def test_new_bank_has_independent_subject_and_wrong_pages(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            destination = Path(tmp) / "docs"
+            build_cumulative_cbt.build(destination)
+            portal = site_portal.render_portal()
+            for subject in range(1, 5):
+                bank = destination / "assets" / f"new-bank-subject{subject}-bank.js"
+                self.assertEqual(bank.read_text(encoding="utf-8"), "window.CBT_BANK=[];\n")
+                for mode in ("all", "wrong"):
+                    directory = destination / "new-bank"
+                    if mode == "wrong":
+                        directory /= "오답"
+                    directory /= f"{subject}과목"
+                    page = (directory / "index.html").read_text(encoding="utf-8")
+                    match = re.search(r"window.CBT_CONFIG=(.*?);</script>", page)
+                    self.assertIsNotNone(match)
+                    config = json.loads(match.group(1))  # type: ignore[union-attr]
+                    self.assertEqual(config["storageNamespace"], "new-bank")
+                    self.assertEqual(config["mode"], mode)
+                    self.assertEqual(config["subject"], subject)
+                    self.assertTrue((directory / config["allUrl"] / "index.html").is_file())
+                    self.assertIn(f'href="{directory.relative_to(destination)}/"', portal)
+                    for url in re.findall(r'(?:src|href)="([^"#]+)"', page):
+                        target = url.split("?", 1)[0]
+                        self.assertTrue((directory / target).exists(), target)
+
     def test_builds_all_subject_and_wrong_answer_pages(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
             destination = Path(tmp) / "docs"

@@ -1,0 +1,1 @@
+window.CBT_BANK=[];

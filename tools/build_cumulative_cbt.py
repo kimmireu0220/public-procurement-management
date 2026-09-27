@@ -6,6 +6,7 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import posixpath
 import re
 import shutil
 import tempfile
@@ -267,10 +268,12 @@ def load_objective_questions(subject: int) -> list[dict]:
     return combined
 
 
-def page_html(subject: int, mode: str, count: int) -> str:
+def page_html(subject: int, mode: str, count: int, *, collection: str = "") -> str:
     title = SUBJECTS[subject][0]
     is_wrong = mode == "wrong"
     heading = f"{subject}과목 오답 CBT" if is_wrong else f"{subject}과목 전체 CBT"
+    if collection:
+        heading = f"새 문제은행 · {heading}"
     if subject == 4:
         note = (
             "모범답안을 확인해 직접 정답 판정하면 오답 목록에서 제거됩니다."
@@ -287,6 +290,16 @@ def page_html(subject: int, mode: str, count: int) -> str:
     home = "../../" if is_wrong else "../"
     counterpart = f"../../{subject}과목/" if is_wrong else f"../오답/{subject}과목/"
     counterpart_label = "전체 CBT" if is_wrong else "오답 CBT"
+    bank_name = f"subject{subject}-bank.js"
+    config = {"subject": subject, "mode": mode, "title": title}
+    if collection:
+        page_dir = f"{collection}/오답/{subject}과목" if is_wrong else f"{collection}/{subject}과목"
+        other_dir = f"{collection}/{subject}과목" if is_wrong else f"{collection}/오답/{subject}과목"
+        asset = posixpath.relpath("assets", page_dir)
+        home = posixpath.relpath(".", page_dir) + "/"
+        counterpart = posixpath.relpath(other_dir, page_dir) + "/"
+        bank_name = f"{collection}-subject{subject}-bank.js"
+        config.update({"storageNamespace": collection, "allUrl": counterpart if is_wrong else "./", "emptyMessage": "문제 등록을 준비 중입니다."})
     mode_label = "오답 재풀이" if is_wrong else f"전체 {count:,}문항"
     client = "cumulative-cbt.js" if subject == 4 else "objective-cumulative-cbt.js"
     style_version = _asset_version("cumulative-cbt.css")
@@ -300,8 +313,8 @@ def page_html(subject: int, mode: str, count: int) -> str:
 <header class="topbar"><div class="topbar-inner"><div><small>{mode_label}</small><h1>{heading}</h1><p>{title} · {note}</p></div><nav class="page-nav" aria-label="CBT 메뉴"><a href="{home}">← 학습센터</a><a href="{counterpart}">{counterpart_label}</a></nav></div></header>
 <main id="cbt-app" class="cbt-shell"><p class="loading" role="status">문제은행을 불러오는 중입니다.</p></main>
 <noscript><p class="empty-card">문제를 풀려면 브라우저에서 JavaScript를 켜 주세요.</p></noscript>
-<script>window.CBT_CONFIG={_json({"subject": subject, "mode": mode, "title": title})};</script>
-<script src="{asset}/subject{subject}-bank.js"></script><script src="{asset}/{client}?v={client_version}"></script>
+<script>window.CBT_CONFIG={_json(config)};</script>
+<script src="{asset}/{bank_name}"></script><script src="{asset}/{client}?v={client_version}"></script>
 </body></html>
 """
 
@@ -334,10 +347,24 @@ def build(destination: Path) -> dict[int, int]:
         wrong_dir.mkdir(parents=True, exist_ok=True)
         (subject_dir / "index.html").write_text(page_html(subject, "all", count), encoding="utf-8")
         (wrong_dir / "index.html").write_text(page_html(subject, "wrong", count), encoding="utf-8")
+    for subject in ACTIVE_SUBJECTS:
+        source = ROOT / "output" / "new_question_bank" / f"subject{subject}.json"
+        new_questions = json.loads(source.read_text(encoding="utf-8"))
+        (assets / f"new-bank-subject{subject}-bank.js").write_text(
+            "window.CBT_BANK=" + _json(new_questions) + ";\n", encoding="utf-8"
+        )
+        for mode in ("all", "wrong"):
+            relative = Path("new-bank") / ("오답" if mode == "wrong" else "") / f"{subject}과목"
+            target = destination / relative
+            target.mkdir(parents=True, exist_ok=True)
+            (target / "index.html").write_text(
+                page_html(subject, mode, len(new_questions), collection="new-bank"), encoding="utf-8"
+            )
     return counts
 
 
 def sync_to_docs(generated: Path) -> None:
+    shutil.copytree(generated / "new-bank", DOCS / "new-bank", dirs_exist_ok=True)
     for relative in (Path("assets"), Path("오답")):
         target = DOCS / relative
         if target.exists() and relative.name == "오답":
@@ -360,6 +387,8 @@ def main() -> int:
         counts = build(generated)
         if args.check:
             paths = [
+                *(path.relative_to(generated) for path in (generated / "new-bank").rglob("*.html")),
+                *(Path(f"assets/new-bank-subject{subject}-bank.js") for subject in ACTIVE_SUBJECTS),
                 *(Path(f"{subject}과목/index.html") for subject in ACTIVE_SUBJECTS),
                 *(Path(f"오답/{subject}과목/index.html") for subject in ACTIVE_SUBJECTS),
                 *(Path(f"assets/subject{subject}-bank.js") for subject in ACTIVE_SUBJECTS),
