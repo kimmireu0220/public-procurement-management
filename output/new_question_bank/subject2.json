@@ -26,7 +26,7 @@
         "text": "기초자치단체 홈페이지 '공지사항'"
       }
     ],
-    "answer": null,
+    "answer": "2",
     "source": {
       "photo": "page_0001.jpg",
       "column": 1,
@@ -34,7 +34,10 @@
       "subject": 2,
       "collectedAt": "2026-09-27",
       "permission": "사용자가 공개 재게시 허락이 있음을 확인",
-      "transcription": "사진 OCR; 정답 미확인"
+      "transcription": "사진 OCR; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0018.jpg",
+      "answerPrintedNumber": 2,
+      "answerVerifiedAt": "2026-09-27"
     }
   },
   {
@@ -64,7 +67,7 @@
         "text": "입찰공고 검색"
       }
     ],
-    "answer": null,
+    "answer": "3",
     "source": {
       "photo": "page_0001.jpg",
       "column": 2,
@@ -72,7 +75,10 @@
       "subject": 2,
       "collectedAt": "2026-09-27",
       "permission": "사용자가 공개 재게시 허락이 있음을 확인",
-      "transcription": "사진 OCR; 정답 미확인"
+      "transcription": "사진 OCR; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0018.jpg",
+      "answerPrintedNumber": 4,
+      "answerVerifiedAt": "2026-09-27"
     }
   },
   {
@@ -102,7 +108,7 @@
         "text": "예산금액은 공개하지 않는다."
       }
     ],
-    "answer": null,
+    "answer": "3",
     "source": {
       "photo": "page_0001.jpg",
       "column": 3,
@@ -110,7 +116,10 @@
       "subject": 2,
       "collectedAt": "2026-09-27",
       "permission": "사용자가 공개 재게시 허락이 있음을 확인",
-      "transcription": "사진 OCR; 정답 미확인"
+      "transcription": "사진 OCR; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0018.jpg",
+      "answerPrintedNumber": 8,
+      "answerVerifiedAt": "2026-09-27"
     }
   },
   {
@@ -140,7 +149,7 @@
         "text": "이해관계자의 의견 반영"
       }
     ],
-    "answer": null,
+    "answer": "3",
     "source": {
       "photo": "page_0001.jpg",
       "column": 4,
@@ -148,7 +157,10 @@
       "subject": 2,
       "collectedAt": "2026-09-27",
       "permission": "사용자가 공개 재게시 허락이 있음을 확인",
-      "transcription": "사진 OCR; 정답 미확인"
+      "transcription": "사진 OCR; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0018.jpg",
+      "answerPrintedNumber": 12,
+      "answerVerifiedAt": "2026-09-27"
     }
   },
   {
@@ -178,7 +190,7 @@
         "text": "담당자 연락처 확인"
       }
     ],
-    "answer": null,
+    "answer": "2",
     "source": {
       "photo": "page_0001.jpg",
       "column": 4,
@@ -186,7 +198,10 @@
       "subject": 2,
       "collectedAt": "2026-09-27",
       "permission": "사용자가 공개 재게시 허락이 있음을 확인",
-      "transcription": "사진 OCR; 정답 미확인"
+      "transcription": "사진 OCR; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0018.jpg",
+      "answerPrintedNumber": 13,
+      "answerVerifiedAt": "2026-09-27"
     }
   },
   {
@@ -216,7 +231,7 @@
         "text": "발주기관의 요구 수준"
       }
     ],
-    "answer": null,
+    "answer": "3",
     "source": {
       "photo": "page_0001.jpg",
       "column": 4,
@@ -224,7 +239,10 @@
       "subject": 2,
       "collectedAt": "2026-09-27",
       "permission": "사용자가 공개 재게시 허락이 있음을 확인",
-      "transcription": "사진 OCR; 정답 미확인"
+      "transcription": "사진 OCR; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0018.jpg",
+      "answerPrintedNumber": 14,
+      "answerVerifiedAt": "2026-09-27"
     }
   },
   {
@@ -254,7 +272,7 @@
         "text": "계약을 성공적으로 이행하기 위해 반드시 필요한 실질적 수단이다."
       }
     ],
-    "answer": null,
+    "answer": "3",
     "source": {
       "photo": "page_0002.jpg",
       "column": 2,
@@ -262,7 +280,10 @@
       "subject": 2,
       "collectedAt": "2026-09-27",
       "permission": "사용자가 공개 재게시 허락이 있음을 확인",
-      "transcription": "사진 OCR; 정답 미확인"
+      "transcription": "사진 OCR; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0018.jpg",
+      "answerPrintedNumber": 20,
+      "answerVerifiedAt": "2026-09-27"
     }
   },
   {
@@ -292,7 +313,7 @@
         "text": "발주기관 담당자와 연락을 원활히 하는 것"
       }
     ],
-    "answer": null,
+    "answer": "3",
     "source": {
       "photo": "page_0002.jpg",
       "column": 4,
@@ -300,7 +321,10 @@
       "subject": 2,
       "collectedAt": "2026-09-27",
       "permission": "사용자가 공개 재게시 허락이 있음을 확인",
-      "transcription": "사진 OCR; 정답 미확인"
+      "transcription": "사진 OCR; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0018.jpg",
+      "answerPrintedNumber": 24,
+      "answerVerifiedAt": "2026-09-27"
     }
   },
   {
@@ -320,17 +344,17 @@
         "text": "대체 공급원 확보"
       },
       {
-        "key": "3",
-        "label": "③",
-        "text": "계약 방식 검토"
+      "key": "3",
+      "label": "③",
+      "text": "우선순위 설정"
       },
       {
-        "key": "4",
-        "label": "④",
-        "text": "우선순위 설정"
+      "key": "4",
+      "label": "④",
+      "text": "계약 방식 검토"
       }
     ],
-    "answer": null,
+    "answer": "3",
     "source": {
       "photo": "page_0002.jpg",
       "column": 4,
@@ -338,7 +362,10 @@
       "subject": 2,
       "collectedAt": "2026-09-27",
       "permission": "사용자가 공개 재게시 허락이 있음을 확인",
-      "transcription": "사진 OCR; 정답 미확인"
+      "transcription": "사진 OCR; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0018.jpg",
+      "answerPrintedNumber": 27,
+      "answerVerifiedAt": "2026-09-27"
     }
   },
   {
@@ -368,7 +395,7 @@
         "text": "설계공모"
       }
     ],
-    "answer": null,
+    "answer": "3",
     "source": {
       "photo": "page_0003.jpg",
       "column": 1,
@@ -376,7 +403,10 @@
       "subject": 2,
       "collectedAt": "2026-09-27",
       "permission": "사용자가 공개 재게시 허락이 있음을 확인",
-      "transcription": "사진 OCR; 정답 미확인"
+      "transcription": "사진 OCR; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0018.jpg",
+      "answerPrintedNumber": 28,
+      "answerVerifiedAt": "2026-09-27"
     }
   },
   {
@@ -406,7 +436,7 @@
         "text": "최종 검토 및 완료"
       }
     ],
-    "answer": null,
+    "answer": "1",
     "source": {
       "photo": "page_0004.jpg",
       "column": 2,
@@ -414,7 +444,10 @@
       "subject": 2,
       "collectedAt": "2026-09-27",
       "permission": "사용자가 공개 재게시 허락이 있음을 확인",
-      "transcription": "사진 OCR; 정답 미확인"
+      "transcription": "사진 OCR; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0018.jpg",
+      "answerPrintedNumber": 4,
+      "answerVerifiedAt": "2026-09-27"
     }
   },
   {
@@ -444,7 +477,7 @@
         "text": "계약보증금 감액"
       }
     ],
-    "answer": null,
+    "answer": "2",
     "source": {
       "photo": "page_0004.jpg",
       "column": 3,
@@ -452,7 +485,10 @@
       "subject": 2,
       "collectedAt": "2026-09-27",
       "permission": "사용자가 공개 재게시 허락이 있음을 확인",
-      "transcription": "사진 OCR; 정답 미확인"
+      "transcription": "사진 OCR; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0019.jpg",
+      "answerPrintedNumber": 9,
+      "answerVerifiedAt": "2026-09-27"
     }
   },
   {
@@ -482,7 +518,7 @@
         "text": "계약체결 이후에만 문제될 수 있다."
       }
     ],
-    "answer": null,
+    "answer": "2",
     "source": {
       "photo": "page_0004.jpg",
       "column": 4,
@@ -490,7 +526,10 @@
       "subject": 2,
       "collectedAt": "2026-09-27",
       "permission": "사용자가 공개 재게시 허락이 있음을 확인",
-      "transcription": "사진 OCR; 정답 미확인"
+      "transcription": "사진 OCR; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0019.jpg",
+      "answerPrintedNumber": 12,
+      "answerVerifiedAt": "2026-09-27"
     }
   },
   {
@@ -520,7 +559,7 @@
         "text": "계약보증금 감액"
       }
     ],
-    "answer": null,
+    "answer": "2",
     "source": {
       "photo": "page_0004.jpg",
       "column": 4,
@@ -528,7 +567,10 @@
       "subject": 2,
       "collectedAt": "2026-09-27",
       "permission": "사용자가 공개 재게시 허락이 있음을 확인",
-      "transcription": "사진 OCR; 정답 미확인"
+      "transcription": "사진 OCR; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0019.jpg",
+      "answerPrintedNumber": 13,
+      "answerVerifiedAt": "2026-09-27"
     }
   },
   {
@@ -558,7 +600,7 @@
         "text": "계약금액 증액"
       }
     ],
-    "answer": null,
+    "answer": "4",
     "source": {
       "photo": "page_0004.jpg",
       "column": 4,
@@ -566,7 +608,10 @@
       "subject": 2,
       "collectedAt": "2026-09-27",
       "permission": "사용자가 공개 재게시 허락이 있음을 확인",
-      "transcription": "사진 OCR; 정답 미확인"
+      "transcription": "사진 OCR; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0019.jpg",
+      "answerPrintedNumber": 15,
+      "answerVerifiedAt": "2026-09-27"
     }
   },
   {
@@ -596,7 +641,7 @@
         "text": "원가 구조와 이익 확보 가능성 분석"
       }
     ],
-    "answer": null,
+    "answer": "2",
     "source": {
       "photo": "page_0005.jpg",
       "column": 1,
@@ -604,7 +649,10 @@
       "subject": 2,
       "collectedAt": "2026-09-27",
       "permission": "사용자가 공개 재게시 허락이 있음을 확인",
-      "transcription": "사진 OCR; 정답 미확인"
+      "transcription": "사진 OCR; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0019.jpg",
+      "answerPrintedNumber": 16,
+      "answerVerifiedAt": "2026-09-27"
     }
   },
   {
@@ -634,7 +682,7 @@
         "text": "신규 진입자의 위협 수준 평가"
       }
     ],
-    "answer": null,
+    "answer": "3",
     "source": {
       "photo": "page_0005.jpg",
       "column": 1,
@@ -642,7 +690,10 @@
       "subject": 2,
       "collectedAt": "2026-09-27",
       "permission": "사용자가 공개 재게시 허락이 있음을 확인",
-      "transcription": "사진 OCR; 정답 미확인"
+      "transcription": "사진 OCR; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0019.jpg",
+      "answerPrintedNumber": 18,
+      "answerVerifiedAt": "2026-09-27"
     }
   },
   {
@@ -672,7 +723,7 @@
         "text": "신규 진입자의 위협 증가"
       }
     ],
-    "answer": null,
+    "answer": "3",
     "source": {
       "photo": "page_0005.jpg",
       "column": 1,
@@ -680,7 +731,10 @@
       "subject": 2,
       "collectedAt": "2026-09-27",
       "permission": "사용자가 공개 재게시 허락이 있음을 확인",
-      "transcription": "사진 OCR; 정답 미확인"
+      "transcription": "사진 OCR; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0019.jpg",
+      "answerPrintedNumber": 19,
+      "answerVerifiedAt": "2026-09-27"
     }
   },
   {
@@ -710,7 +764,7 @@
         "text": "경쟁자 간 시장점유율 비교"
       }
     ],
-    "answer": null,
+    "answer": "2",
     "source": {
       "photo": "page_0005.jpg",
       "column": 2,
@@ -718,7 +772,10 @@
       "subject": 2,
       "collectedAt": "2026-09-27",
       "permission": "사용자가 공개 재게시 허락이 있음을 확인",
-      "transcription": "사진 OCR; 정답 미확인"
+      "transcription": "사진 OCR; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0019.jpg",
+      "answerPrintedNumber": 21,
+      "answerVerifiedAt": "2026-09-27"
     }
   },
   {
@@ -748,7 +805,7 @@
         "text": "대체재의 위협을 줄이기 위해 제품 차별화를 포기한다."
       }
     ],
-    "answer": null,
+    "answer": "3",
     "source": {
       "photo": "page_0005.jpg",
       "column": 2,
@@ -756,7 +813,10 @@
       "subject": 2,
       "collectedAt": "2026-09-27",
       "permission": "사용자가 공개 재게시 허락이 있음을 확인",
-      "transcription": "사진 OCR; 정답 미확인"
+      "transcription": "사진 OCR; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0019.jpg",
+      "answerPrintedNumber": 22,
+      "answerVerifiedAt": "2026-09-27"
     }
   },
   {
@@ -786,7 +846,7 @@
         "text": "입찰참가자격 제한 여부를 판단한다."
       }
     ],
-    "answer": null,
+    "answer": "2",
     "source": {
       "photo": "page_0005.jpg",
       "column": 3,
@@ -794,7 +854,10 @@
       "subject": 2,
       "collectedAt": "2026-09-27",
       "permission": "사용자가 공개 재게시 허락이 있음을 확인",
-      "transcription": "사진 OCR; 정답 미확인"
+      "transcription": "사진 OCR; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0019.jpg",
+      "answerPrintedNumber": 24,
+      "answerVerifiedAt": "2026-09-27"
     }
   },
   {
@@ -824,7 +887,7 @@
         "text": "낙찰 후 계약체결 시점에 갱신한다."
       }
     ],
-    "answer": null,
+    "answer": "3",
     "source": {
       "photo": "page_0005.jpg",
       "column": 3,
@@ -832,7 +895,10 @@
       "subject": 2,
       "collectedAt": "2026-09-27",
       "permission": "사용자가 공개 재게시 허락이 있음을 확인",
-      "transcription": "사진 OCR; 정답 미확인"
+      "transcription": "사진 OCR; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0019.jpg",
+      "answerPrintedNumber": 25,
+      "answerVerifiedAt": "2026-09-27"
     }
   },
   {
@@ -862,7 +928,7 @@
         "text": "계약보증금 납부 여부"
       }
     ],
-    "answer": null,
+    "answer": "1",
     "source": {
       "photo": "page_0005.jpg",
       "column": 4,
@@ -870,7 +936,10 @@
       "subject": 2,
       "collectedAt": "2026-09-27",
       "permission": "사용자가 공개 재게시 허락이 있음을 확인",
-      "transcription": "사진 OCR; 정답 미확인"
+      "transcription": "사진 OCR; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0019.jpg",
+      "answerPrintedNumber": 27,
+      "answerVerifiedAt": "2026-09-27"
     }
   },
   {
@@ -900,7 +969,7 @@
         "text": "계약보증금 감액"
       }
     ],
-    "answer": null,
+    "answer": "2",
     "source": {
       "photo": "page_0005.jpg",
       "column": 4,
@@ -908,7 +977,10 @@
       "subject": 2,
       "collectedAt": "2026-09-27",
       "permission": "사용자가 공개 재게시 허락이 있음을 확인",
-      "transcription": "사진 OCR; 정답 미확인"
+      "transcription": "사진 OCR; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0019.jpg",
+      "answerPrintedNumber": 29,
+      "answerVerifiedAt": "2026-09-27"
     }
   },
   {
@@ -938,7 +1010,7 @@
         "text": "입찰가격이 가장 낮은 업체를 별도의 협상 없이 자동으 로 낙찰자로 결정한다."
       }
     ],
-    "answer": null,
+    "answer": "2",
     "source": {
       "photo": "page_0007.jpg",
       "column": 3,
@@ -946,7 +1018,10 @@
       "subject": 2,
       "collectedAt": "2026-09-27",
       "permission": "사용자가 공개 재게시 허락이 있음을 확인",
-      "transcription": "사진 OCR; 정답 미확인"
+      "transcription": "사진 OCR; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0020.jpg",
+      "answerPrintedNumber": 13,
+      "answerVerifiedAt": "2026-09-27"
     }
   },
   {
@@ -976,7 +1051,7 @@
         "text": "유효 경쟁 촉진"
       }
     ],
-    "answer": null,
+    "answer": "2",
     "source": {
       "photo": "page_0007.jpg",
       "column": 4,
@@ -984,7 +1059,10 @@
       "subject": 2,
       "collectedAt": "2026-09-27",
       "permission": "사용자가 공개 재게시 허락이 있음을 확인",
-      "transcription": "사진 OCR; 정답 미확인"
+      "transcription": "사진 OCR; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0020.jpg",
+      "answerPrintedNumber": 14,
+      "answerVerifiedAt": "2026-09-27"
     }
   },
   {
@@ -1014,7 +1092,7 @@
         "text": "연대책임의 부담"
       }
     ],
-    "answer": null,
+    "answer": "4",
     "source": {
       "photo": "page_0007.jpg",
       "column": 4,
@@ -1022,7 +1100,10 @@
       "subject": 2,
       "collectedAt": "2026-09-27",
       "permission": "사용자가 공개 재게시 허락이 있음을 확인",
-      "transcription": "사진 OCR; 정답 미확인"
+      "transcription": "사진 OCR; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0020.jpg",
+      "answerPrintedNumber": 15,
+      "answerVerifiedAt": "2026-09-27"
     }
   },
   {
@@ -1052,7 +1133,7 @@
         "text": "계약조건을 단순히 검토하는 것"
       }
     ],
-    "answer": null,
+    "answer": "2",
     "source": {
       "photo": "page_0007.jpg",
       "column": 4,
@@ -1060,7 +1141,10 @@
       "subject": 2,
       "collectedAt": "2026-09-27",
       "permission": "사용자가 공개 재게시 허락이 있음을 확인",
-      "transcription": "사진 OCR; 정답 미확인"
+      "transcription": "사진 OCR; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0020.jpg",
+      "answerPrintedNumber": 16,
+      "answerVerifiedAt": "2026-09-27"
     }
   },
   {
@@ -1090,7 +1174,7 @@
         "text": "계약 불이행과 분쟁 발생"
       }
     ],
-    "answer": null,
+    "answer": "1",
     "source": {
       "photo": "page_0008.jpg",
       "column": 1,
@@ -1098,7 +1182,10 @@
       "subject": 2,
       "collectedAt": "2026-09-27",
       "permission": "사용자가 공개 재게시 허락이 있음을 확인",
-      "transcription": "사진 OCR; 정답 미확인"
+      "transcription": "사진 OCR; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0020.jpg",
+      "answerPrintedNumber": 18,
+      "answerVerifiedAt": "2026-09-27"
     }
   },
   {
@@ -1128,7 +1215,7 @@
         "text": "다수 공급자 확보 및 분할 발주"
       }
     ],
-    "answer": null,
+    "answer": "4",
     "source": {
       "photo": "page_0008.jpg",
       "column": 1,
@@ -1136,7 +1223,10 @@
       "subject": 2,
       "collectedAt": "2026-09-27",
       "permission": "사용자가 공개 재게시 허락이 있음을 확인",
-      "transcription": "사진 OCR; 정답 미확인"
+      "transcription": "사진 OCR; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0020.jpg",
+      "answerPrintedNumber": 19,
+      "answerVerifiedAt": "2026-09-27"
     }
   },
   {
@@ -1166,7 +1256,7 @@
         "text": "시장의 매력도와 경쟁 강도를 분석하는 것"
       }
     ],
-    "answer": null,
+    "answer": "2",
     "source": {
       "photo": "page_0008.jpg",
       "column": 1,
@@ -1174,7 +1264,10 @@
       "subject": 2,
       "collectedAt": "2026-09-27",
       "permission": "사용자가 공개 재게시 허락이 있음을 확인",
-      "transcription": "사진 OCR; 정답 미확인"
+      "transcription": "사진 OCR; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0020.jpg",
+      "answerPrintedNumber": 21,
+      "answerVerifiedAt": "2026-09-27"
     }
   },
   {
@@ -1204,7 +1297,7 @@
         "text": "공급자 선호 매트릭스 기준으로 '개발(Develop)' 영역에 해당하므로 향후 성장 가능성을 강조한다."
       }
     ],
-    "answer": null,
+    "answer": "3",
     "source": {
       "photo": "page_0008.jpg",
       "column": 2,
@@ -1212,7 +1305,10 @@
       "subject": 2,
       "collectedAt": "2026-09-27",
       "permission": "사용자가 공개 재게시 허락이 있음을 확인",
-      "transcription": "사진 OCR; 정답 미확인"
+      "transcription": "사진 OCR; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0020.jpg",
+      "answerPrintedNumber": 24,
+      "answerVerifiedAt": "2026-09-27"
     }
   },
   {
@@ -1242,7 +1338,7 @@
         "text": "협업승인서"
       }
     ],
-    "answer": null,
+    "answer": "2",
     "source": {
       "photo": "page_0009.jpg",
       "column": 2,
@@ -1250,7 +1346,10 @@
       "subject": 2,
       "collectedAt": "2026-09-27",
       "permission": "사용자가 공개 재게시 허락이 있음을 확인",
-      "transcription": "사진 OCR; 정답 미확인"
+      "transcription": "사진 OCR; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0020.jpg",
+      "answerPrintedNumber": 6,
+      "answerVerifiedAt": "2026-09-27"
     }
   },
   {
@@ -1280,7 +1379,7 @@
         "text": "협업승인서만 제출하면 된다."
       }
     ],
-    "answer": null,
+    "answer": "2",
     "source": {
       "photo": "page_0009.jpg",
       "column": 3,
@@ -1288,7 +1387,10 @@
       "subject": 2,
       "collectedAt": "2026-09-27",
       "permission": "사용자가 공개 재게시 허락이 있음을 확인",
-      "transcription": "사진 OCR; 정답 미확인"
+      "transcription": "사진 OCR; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0020.jpg",
+      "answerPrintedNumber": 8,
+      "answerVerifiedAt": "2026-09-27"
     }
   },
   {
@@ -1318,7 +1420,7 @@
         "text": "최종 낙찰자 선정"
       }
     ],
-    "answer": null,
+    "answer": "4",
     "source": {
       "photo": "page_0009.jpg",
       "column": 3,
@@ -1326,7 +1428,10 @@
       "subject": 2,
       "collectedAt": "2026-09-27",
       "permission": "사용자가 공개 재게시 허락이 있음을 확인",
-      "transcription": "사진 OCR; 정답 미확인"
+      "transcription": "사진 OCR; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0021.jpg",
+      "answerPrintedNumber": 9,
+      "answerVerifiedAt": "2026-09-27"
     }
   },
   {
@@ -1356,7 +1461,7 @@
         "text": "제안서"
       }
     ],
-    "answer": null,
+    "answer": "2",
     "source": {
       "photo": "page_0009.jpg",
       "column": 4,
@@ -1364,7 +1469,10 @@
       "subject": 2,
       "collectedAt": "2026-09-27",
       "permission": "사용자가 공개 재게시 허락이 있음을 확인",
-      "transcription": "사진 OCR; 정답 미확인"
+      "transcription": "사진 OCR; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0021.jpg",
+      "answerPrintedNumber": 10,
+      "answerVerifiedAt": "2026-09-27"
     }
   },
   {
@@ -1394,7 +1502,7 @@
         "text": "최저가 입찰가격 산출"
       }
     ],
-    "answer": null,
+    "answer": "4",
     "source": {
       "photo": "page_0009.jpg",
       "column": 4,
@@ -1402,7 +1510,10 @@
       "subject": 2,
       "collectedAt": "2026-09-27",
       "permission": "사용자가 공개 재게시 허락이 있음을 확인",
-      "transcription": "사진 OCR; 정답 미확인"
+      "transcription": "사진 OCR; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0021.jpg",
+      "answerPrintedNumber": 11,
+      "answerVerifiedAt": "2026-09-27"
     }
   },
   {
@@ -1432,7 +1543,7 @@
         "text": "낙찰하한율 계산 근거"
       }
     ],
-    "answer": null,
+    "answer": "4",
     "source": {
       "photo": "page_0009.jpg",
       "column": 4,
@@ -1440,7 +1551,10 @@
       "subject": 2,
       "collectedAt": "2026-09-27",
       "permission": "사용자가 공개 재게시 허락이 있음을 확인",
-      "transcription": "사진 OCR; 정답 미확인"
+      "transcription": "사진 OCR; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0021.jpg",
+      "answerPrintedNumber": 13,
+      "answerVerifiedAt": "2026-09-27"
     }
   },
   {
@@ -1470,7 +1584,7 @@
         "text": "공급업체의 홍보 기회를 제공하기 위함"
       }
     ],
-    "answer": null,
+    "answer": "3",
     "source": {
       "photo": "page_0010.jpg",
       "column": 2,
@@ -1478,7 +1592,10 @@
       "subject": 2,
       "collectedAt": "2026-09-27",
       "permission": "사용자가 공개 재게시 허락이 있음을 확인",
-      "transcription": "사진 OCR; 정답 미확인"
+      "transcription": "사진 OCR; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0021.jpg",
+      "answerPrintedNumber": 19,
+      "answerVerifiedAt": "2026-09-27"
     }
   },
   {
@@ -1508,7 +1625,7 @@
         "text": "경쟁업체 배제"
       }
     ],
-    "answer": null,
+    "answer": "2",
     "source": {
       "photo": "page_0010.jpg",
       "column": 3,
@@ -1516,7 +1633,10 @@
       "subject": 2,
       "collectedAt": "2026-09-27",
       "permission": "사용자가 공개 재게시 허락이 있음을 확인",
-      "transcription": "사진 OCR; 정답 미확인"
+      "transcription": "사진 OCR; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0021.jpg",
+      "answerPrintedNumber": 23,
+      "answerVerifiedAt": "2026-09-27"
     }
   },
   {
@@ -1546,7 +1666,7 @@
         "text": "공공성 • 정책 목적 부합"
       }
     ],
-    "answer": null,
+    "answer": "3",
     "source": {
       "photo": "page_0010.jpg",
       "column": 3,
@@ -1554,7 +1674,10 @@
       "subject": 2,
       "collectedAt": "2026-09-27",
       "permission": "사용자가 공개 재게시 허락이 있음을 확인",
-      "transcription": "사진 OCR; 정답 미확인"
+      "transcription": "사진 OCR; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0021.jpg",
+      "answerPrintedNumber": 24,
+      "answerVerifiedAt": "2026-09-27"
     }
   },
   {
@@ -1584,7 +1707,7 @@
         "text": "낙찰하한율 계산식만 기재"
       }
     ],
-    "answer": null,
+    "answer": "1",
     "source": {
       "photo": "page_0010.jpg",
       "column": 3,
@@ -1592,7 +1715,10 @@
       "subject": 2,
       "collectedAt": "2026-09-27",
       "permission": "사용자가 공개 재게시 허락이 있음을 확인",
-      "transcription": "사진 OCR; 정답 미확인"
+      "transcription": "사진 OCR; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0021.jpg",
+      "answerPrintedNumber": 25,
+      "answerVerifiedAt": "2026-09-27"
     }
   },
   {
@@ -1622,7 +1748,7 @@
         "text": "낙찰자 선정 시 가점 부여"
       }
     ],
-    "answer": null,
+    "answer": "4",
     "source": {
       "photo": "page_0010.jpg",
       "column": 4,
@@ -1630,7 +1756,10 @@
       "subject": 2,
       "collectedAt": "2026-09-27",
       "permission": "사용자가 공개 재게시 허락이 있음을 확인",
-      "transcription": "사진 OCR; 정답 미확인"
+      "transcription": "사진 OCR; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0021.jpg",
+      "answerPrintedNumber": 26,
+      "answerVerifiedAt": "2026-09-27"
     }
   },
   {
@@ -1660,7 +1789,7 @@
         "text": "평가 - 계약- 사후관리- 전략 반영"
       }
     ],
-    "answer": null,
+    "answer": "2",
     "source": {
       "photo": "page_0010.jpg",
       "column": 4,
@@ -1668,7 +1797,10 @@
       "subject": 2,
       "collectedAt": "2026-09-27",
       "permission": "사용자가 공개 재게시 허락이 있음을 확인",
-      "transcription": "사진 OCR; 정답 미확인"
+      "transcription": "사진 OCR; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0021.jpg",
+      "answerPrintedNumber": 27,
+      "answerVerifiedAt": "2026-09-27"
     }
   },
   {
@@ -1698,7 +1830,7 @@
         "text": "계약상 권리 행사"
       }
     ],
-    "answer": null,
+    "answer": "3",
     "source": {
       "photo": "page_0010.jpg",
       "column": 4,
@@ -1706,7 +1838,10 @@
       "subject": 2,
       "collectedAt": "2026-09-27",
       "permission": "사용자가 공개 재게시 허락이 있음을 확인",
-      "transcription": "사진 OCR; 정답 미확인"
+      "transcription": "사진 OCR; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0021.jpg",
+      "answerPrintedNumber": 28,
+      "answerVerifiedAt": "2026-09-27"
     }
   },
   {
@@ -1736,7 +1871,7 @@
         "text": "수행 일정의 타당성"
       }
     ],
-    "answer": null,
+    "answer": "3",
     "source": {
       "photo": "page_0011.jpg",
       "column": 2,
@@ -1744,7 +1879,10 @@
       "subject": 2,
       "collectedAt": "2026-09-27",
       "permission": "사용자가 공개 재게시 허락이 있음을 확인",
-      "transcription": "사진 OCR; 정답 미확인"
+      "transcription": "사진 OCR; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0021.jpg",
+      "answerPrintedNumber": 4,
+      "answerVerifiedAt": "2026-09-27"
     }
   },
   {
@@ -1774,7 +1912,7 @@
         "text": "의견 제시업체 가점 부여"
       }
     ],
-    "answer": null,
+    "answer": "4",
     "source": {
       "photo": "page_0011.jpg",
       "column": 3,
@@ -1782,7 +1920,10 @@
       "subject": 2,
       "collectedAt": "2026-09-27",
       "permission": "사용자가 공개 재게시 허락이 있음을 확인",
-      "transcription": "사진 OCR; 정답 미확인"
+      "transcription": "사진 OCR; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0021.jpg",
+      "answerPrintedNumber": 7,
+      "answerVerifiedAt": "2026-09-27"
     }
   },
   {
@@ -1812,7 +1953,7 @@
         "text": "법정 계상비율 준수 여부"
       }
     ],
-    "answer": null,
+    "answer": "3",
     "source": {
       "photo": "page_0011.jpg",
       "column": 4,
@@ -1820,7 +1961,10 @@
       "subject": 2,
       "collectedAt": "2026-09-27",
       "permission": "사용자가 공개 재게시 허락이 있음을 확인",
-      "transcription": "사진 OCR; 정답 미확인"
+      "transcription": "사진 OCR; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0021.jpg",
+      "answerPrintedNumber": 12,
+      "answerVerifiedAt": "2026-09-27"
     }
   },
   {
@@ -1850,7 +1994,7 @@
         "text": "법규 완전 준수"
       }
     ],
-    "answer": null,
+    "answer": "3",
     "source": {
       "photo": "page_0012.jpg",
       "column": 2,
@@ -1858,7 +2002,10 @@
       "subject": 2,
       "collectedAt": "2026-09-27",
       "permission": "사용자가 공개 재게시 허락이 있음을 확인",
-      "transcription": "사진 OCR; 정답 미확인"
+      "transcription": "사진 OCR; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0021.jpg",
+      "answerPrintedNumber": 21,
+      "answerVerifiedAt": "2026-09-27"
     }
   },
   {
@@ -1888,7 +2035,7 @@
         "text": "공고문과 별개로 법정 기준을 적용하여 낙찰자를 선정한다."
       }
     ],
-    "answer": null,
+    "answer": "2",
     "source": {
       "photo": "page_0013.jpg",
       "column": 3,
@@ -1896,7 +2043,10 @@
       "subject": 2,
       "collectedAt": "2026-09-27",
       "permission": "사용자가 공개 재게시 허락이 있음을 확인",
-      "transcription": "사진 OCR; 정답 미확인"
+      "transcription": "사진 OCR; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0022.jpg",
+      "answerPrintedNumber": 2,
+      "answerVerifiedAt": "2026-09-27"
     }
   },
   {
@@ -1926,7 +2076,7 @@
         "text": "직접생산 여부"
       }
     ],
-    "answer": null,
+    "answer": "3",
     "source": {
       "photo": "page_0013.jpg",
       "column": 4,
@@ -1934,7 +2084,10 @@
       "subject": 2,
       "collectedAt": "2026-09-27",
       "permission": "사용자가 공개 재게시 허락이 있음을 확인",
-      "transcription": "사진 OCR; 정답 미확인"
+      "transcription": "사진 OCR; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0022.jpg",
+      "answerPrintedNumber": 4,
+      "answerVerifiedAt": "2026-09-27"
     }
   },
   {
@@ -1964,7 +2117,7 @@
         "text": "낙찰자 선정 가능성"
       }
     ],
-    "answer": null,
+    "answer": "4",
     "source": {
       "photo": "page_0014.jpg",
       "column": 3,
@@ -1972,7 +2125,10 @@
       "subject": 2,
       "collectedAt": "2026-09-27",
       "permission": "사용자가 공개 재게시 허락이 있음을 확인",
-      "transcription": "사진 OCR; 정답 미확인"
+      "transcription": "사진 OCR; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0022.jpg",
+      "answerPrintedNumber": 18,
+      "answerVerifiedAt": "2026-09-27"
     }
   },
   {
@@ -2002,7 +2158,7 @@
         "text": "계약금액 증액"
       }
     ],
-    "answer": null,
+    "answer": "4",
     "source": {
       "photo": "page_0014.jpg",
       "column": 4,
@@ -2010,7 +2166,10 @@
       "subject": 2,
       "collectedAt": "2026-09-27",
       "permission": "사용자가 공개 재게시 허락이 있음을 확인",
-      "transcription": "사진 OCR; 정답 미확인"
+      "transcription": "사진 OCR; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0022.jpg",
+      "answerPrintedNumber": 20,
+      "answerVerifiedAt": "2026-09-27"
     }
   },
   {
@@ -2040,7 +2199,7 @@
         "text": "다른 입찰참가자 전원의 동의 여부에 따라 입찰 유 •무 효를 판단한다."
       }
     ],
-    "answer": null,
+    "answer": "3",
     "source": {
       "photo": "page_0014.jpg",
       "column": 4,
@@ -2048,7 +2207,10 @@
       "subject": 2,
       "collectedAt": "2026-09-27",
       "permission": "사용자가 공개 재게시 허락이 있음을 확인",
-      "transcription": "사진 OCR; 정답 미확인"
+      "transcription": "사진 OCR; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0022.jpg",
+      "answerPrintedNumber": 21,
+      "answerVerifiedAt": "2026-09-27"
     }
   },
   {
@@ -2078,7 +2240,7 @@
         "text": "대외 신인도 향상"
       }
     ],
-    "answer": null,
+    "answer": "4",
     "source": {
       "photo": "page_0016.jpg",
       "column": 1,
@@ -2086,7 +2248,10 @@
       "subject": 2,
       "collectedAt": "2026-09-27",
       "permission": "사용자가 공개 재게시 허락이 있음을 확인",
-      "transcription": "사진 OCR; 정답 미확인"
+      "transcription": "사진 OCR; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0022.jpg",
+      "answerPrintedNumber": 4,
+      "answerVerifiedAt": "2026-09-27"
     }
   },
   {
@@ -2116,7 +2281,7 @@
         "text": "입찰을 포기한다."
       }
     ],
-    "answer": null,
+    "answer": "1",
     "source": {
       "photo": "page_0016.jpg",
       "column": 2,
@@ -2124,7 +2289,10 @@
       "subject": 2,
       "collectedAt": "2026-09-27",
       "permission": "사용자가 공개 재게시 허락이 있음을 확인",
-      "transcription": "사진 OCR; 정답 미확인"
+      "transcription": "사진 OCR; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0022.jpg",
+      "answerPrintedNumber": 5,
+      "answerVerifiedAt": "2026-09-27"
     }
   },
   {
@@ -2154,7 +2322,7 @@
         "text": "예산을 현실적으로 조정한다."
       }
     ],
-    "answer": null,
+    "answer": "4",
     "source": {
       "photo": "page_0016.jpg",
       "column": 2,
@@ -2162,7 +2330,10 @@
       "subject": 2,
       "collectedAt": "2026-09-27",
       "permission": "사용자가 공개 재게시 허락이 있음을 확인",
-      "transcription": "사진 OCR; 정답 미확인"
+      "transcription": "사진 OCR; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0022.jpg",
+      "answerPrintedNumber": 7,
+      "answerVerifiedAt": "2026-09-27"
     }
   },
   {
@@ -2192,7 +2363,7 @@
         "text": "최종 낙찰자의 계약보증금 확정 금액"
       }
     ],
-    "answer": null,
+    "answer": "4",
     "source": {
       "photo": "page_0016.jpg",
       "column": 4,
@@ -2200,7 +2371,10 @@
       "subject": 2,
       "collectedAt": "2026-09-27",
       "permission": "사용자가 공개 재게시 허락이 있음을 확인",
-      "transcription": "사진 OCR; 정답 미확인"
+      "transcription": "사진 OCR; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0022.jpg",
+      "answerPrintedNumber": 12,
+      "answerVerifiedAt": "2026-09-27"
     }
   },
   {
@@ -2230,7 +2404,7 @@
         "text": "인증서를 무시한다."
       }
     ],
-    "answer": null,
+    "answer": "2",
     "source": {
       "photo": "page_0016.jpg",
       "column": 4,
@@ -2238,7 +2412,10 @@
       "subject": 2,
       "collectedAt": "2026-09-27",
       "permission": "사용자가 공개 재게시 허락이 있음을 확인",
-      "transcription": "사진 OCR; 정답 미확인"
+      "transcription": "사진 OCR; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0022.jpg",
+      "answerPrintedNumber": 15,
+      "answerVerifiedAt": "2026-09-27"
     }
   },
   {
@@ -2268,7 +2445,7 @@
         "text": "공식 질의응답 게시판 활용"
       }
     ],
-    "answer": null,
+    "answer": "3",
     "source": {
       "photo": "page_0017.jpg",
       "column": 1,
@@ -2276,7 +2453,10 @@
       "subject": 2,
       "collectedAt": "2026-09-27",
       "permission": "사용자가 공개 재게시 허락이 있음을 확인",
-      "transcription": "사진 OCR; 정답 미확인"
+      "transcription": "사진 OCR; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0023.jpg",
+      "answerPrintedNumber": 18,
+      "answerVerifiedAt": "2026-09-27"
     }
   },
   {
@@ -2306,7 +2486,7 @@
         "text": "평가 감점 대상"
       }
     ],
-    "answer": null,
+    "answer": "2",
     "source": {
       "photo": "page_0018.jpg",
       "column": 4,
@@ -2314,7 +2494,10 @@
       "subject": 2,
       "collectedAt": "2026-09-27",
       "permission": "사용자가 공개 재게시 허락이 있음을 확인",
-      "transcription": "사진 OCR; 정답 미확인"
+      "transcription": "사진 OCR; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0023.jpg",
+      "answerPrintedNumber": 12,
+      "answerVerifiedAt": "2026-09-27"
     }
   },
   {
@@ -2344,7 +2527,7 @@
         "text": "평균값을 적용한다."
       }
     ],
-    "answer": null,
+    "answer": "3",
     "source": {
       "photo": "page_0018.jpg",
       "column": 4,
@@ -2352,7 +2535,10 @@
       "subject": 2,
       "collectedAt": "2026-09-27",
       "permission": "사용자가 공개 재게시 허락이 있음을 확인",
-      "transcription": "사진 OCR; 정답 미확인"
+      "transcription": "사진 OCR; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0023.jpg",
+      "answerPrintedNumber": 15,
+      "answerVerifiedAt": "2026-09-27"
     }
   },
   {
@@ -2382,7 +2568,7 @@
         "text": "모든 입찰자의 입찰보증금 반환"
       }
     ],
-    "answer": null,
+    "answer": "2",
     "source": {
       "photo": "page_0019.jpg",
       "column": 1,
@@ -2390,7 +2576,10 @@
       "subject": 2,
       "collectedAt": "2026-09-27",
       "permission": "사용자가 공개 재게시 허락이 있음을 확인",
-      "transcription": "사진 OCR; 정답 미확인"
+      "transcription": "사진 OCR; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0023.jpg",
+      "answerPrintedNumber": 19,
+      "answerVerifiedAt": "2026-09-27"
     }
   },
   {
@@ -2420,7 +2609,7 @@
         "text": "동가 입찰자 대상 재입찰제"
       }
     ],
-    "answer": null,
+    "answer": "4",
     "source": {
       "photo": "page_0019.jpg",
       "column": 2,
@@ -2428,7 +2617,10 @@
       "subject": 2,
       "collectedAt": "2026-09-27",
       "permission": "사용자가 공개 재게시 허락이 있음을 확인",
-      "transcription": "사진 OCR; 정답 미확인"
+      "transcription": "사진 OCR; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0023.jpg",
+      "answerPrintedNumber": 21,
+      "answerVerifiedAt": "2026-09-27"
     }
   },
   {
@@ -2458,7 +2650,7 @@
         "text": "업체 관계자를 평가위원에 포함한다."
       }
     ],
-    "answer": null,
+    "answer": "1",
     "source": {
       "photo": "page_0021.jpg",
       "column": 2,
@@ -2466,7 +2658,10 @@
       "subject": 2,
       "collectedAt": "2026-09-27",
       "permission": "사용자가 공개 재게시 허락이 있음을 확인",
-      "transcription": "사진 OCR; 정답 미확인"
+      "transcription": "사진 OCR; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0024.jpg",
+      "answerPrintedNumber": 5,
+      "answerVerifiedAt": "2026-09-27"
     }
   },
   {
@@ -2496,7 +2691,7 @@
         "text": "독립성"
       }
     ],
-    "answer": null,
+    "answer": "3",
     "source": {
       "photo": "page_0021.jpg",
       "column": 2,
@@ -2504,7 +2699,10 @@
       "subject": 2,
       "collectedAt": "2026-09-27",
       "permission": "사용자가 공개 재게시 허락이 있음을 확인",
-      "transcription": "사진 OCR; 정답 미확인"
+      "transcription": "사진 OCR; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0024.jpg",
+      "answerPrintedNumber": 6,
+      "answerVerifiedAt": "2026-09-27"
     }
   },
   {
@@ -2534,7 +2732,7 @@
         "text": "법적으로 무효이다."
       }
     ],
-    "answer": null,
+    "answer": "3",
     "source": {
       "photo": "page_0021.jpg",
       "column": 2,
@@ -2542,7 +2740,10 @@
       "subject": 2,
       "collectedAt": "2026-09-27",
       "permission": "사용자가 공개 재게시 허락이 있음을 확인",
-      "transcription": "사진 OCR; 정답 미확인"
+      "transcription": "사진 OCR; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0024.jpg",
+      "answerPrintedNumber": 8,
+      "answerVerifiedAt": "2026-09-27"
     }
   },
   {
@@ -2572,7 +2773,7 @@
         "text": "평가위원이 동일 업종의 다른 업체와 경쟁 관계에 있는 경우"
       }
     ],
-    "answer": null,
+    "answer": "4",
     "source": {
       "photo": "page_0021.jpg",
       "column": 3,
@@ -2580,7 +2781,10 @@
       "subject": 2,
       "collectedAt": "2026-09-27",
       "permission": "사용자가 공개 재게시 허락이 있음을 확인",
-      "transcription": "사진 OCR; 정답 미확인"
+      "transcription": "사진 OCR; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0024.jpg",
+      "answerPrintedNumber": 9,
+      "answerVerifiedAt": "2026-09-27"
     }
   },
   {
@@ -2610,7 +2814,7 @@
         "text": "특정 업체 낙찰 배제"
       }
     ],
-    "answer": null,
+    "answer": "4",
     "source": {
       "photo": "page_0021.jpg",
       "column": 4,
@@ -2618,7 +2822,10 @@
       "subject": 2,
       "collectedAt": "2026-09-27",
       "permission": "사용자가 공개 재게시 허락이 있음을 확인",
-      "transcription": "사진 OCR; 정답 미확인"
+      "transcription": "사진 OCR; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0024.jpg",
+      "answerPrintedNumber": 13,
+      "answerVerifiedAt": "2026-09-27"
     }
   },
   {
@@ -2648,7 +2855,7 @@
         "text": "해당 업체를 낙찰자에서 배제한다."
       }
     ],
-    "answer": null,
+    "answer": "1",
     "source": {
       "photo": "page_0021.jpg",
       "column": 4,
@@ -2656,7 +2863,10 @@
       "subject": 2,
       "collectedAt": "2026-09-27",
       "permission": "사용자가 공개 재게시 허락이 있음을 확인",
-      "transcription": "사진 OCR; 정답 미확인"
+      "transcription": "사진 OCR; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0024.jpg",
+      "answerPrintedNumber": 14,
+      "answerVerifiedAt": "2026-09-27"
     }
   },
   {
@@ -2686,7 +2896,7 @@
         "text": "개인정보보호 차원에서 필요해서"
       }
     ],
-    "answer": null,
+    "answer": "1",
     "source": {
       "photo": "page_0022.jpg",
       "column": 1,
@@ -2694,7 +2904,10 @@
       "subject": 2,
       "collectedAt": "2026-09-27",
       "permission": "사용자가 공개 재게시 허락이 있음을 확인",
-      "transcription": "사진 OCR; 정답 미확인"
+      "transcription": "사진 OCR; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0024.jpg",
+      "answerPrintedNumber": 18,
+      "answerVerifiedAt": "2026-09-27"
     }
   },
   {
@@ -2724,7 +2937,7 @@
         "text": "평가위원과 사적으로 만나는 행위"
       }
     ],
-    "answer": null,
+    "answer": "3",
     "source": {
       "photo": "page_0022.jpg",
       "column": 2,
@@ -2732,7 +2945,10 @@
       "subject": 2,
       "collectedAt": "2026-09-27",
       "permission": "사용자가 공개 재게시 허락이 있음을 확인",
-      "transcription": "사진 OCR; 정답 미확인"
+      "transcription": "사진 OCR; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0024.jpg",
+      "answerPrintedNumber": 23,
+      "answerVerifiedAt": "2026-09-27"
     }
   },
   {
@@ -2762,7 +2978,7 @@
         "text": "개찰 이후에만 적용된다."
       }
     ],
-    "answer": null,
+    "answer": "2",
     "source": {
       "photo": "page_0022.jpg",
       "column": 2,
@@ -2770,7 +2986,10 @@
       "subject": 2,
       "collectedAt": "2026-09-27",
       "permission": "사용자가 공개 재게시 허락이 있음을 확인",
-      "transcription": "사진 OCR; 정답 미확인"
+      "transcription": "사진 OCR; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0024.jpg",
+      "answerPrintedNumber": 24,
+      "answerVerifiedAt": "2026-09-27"
     }
   },
   {
@@ -2800,7 +3019,7 @@
         "text": "기술 수준 확보"
       }
     ],
-    "answer": null,
+    "answer": "3",
     "source": {
       "photo": "page_0023.jpg",
       "column": 4,
@@ -2808,7 +3027,10 @@
       "subject": 2,
       "collectedAt": "2026-09-27",
       "permission": "사용자가 공개 재게시 허락이 있음을 확인",
-      "transcription": "사진 OCR; 정답 미확인"
+      "transcription": "사진 OCR; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0025.jpg",
+      "answerPrintedNumber": 7,
+      "answerVerifiedAt": "2026-09-27"
     }
   },
   {
@@ -2838,7 +3060,7 @@
         "text": "입찰조건 변경 절차"
       }
     ],
-    "answer": null,
+    "answer": "3",
     "source": {
       "photo": "page_0024.jpg",
       "column": 1,
@@ -2846,7 +3068,10 @@
       "subject": 2,
       "collectedAt": "2026-09-27",
       "permission": "사용자가 공개 재게시 허락이 있음을 확인",
-      "transcription": "사진 OCR; 정답 미확인"
+      "transcription": "사진 OCR; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0025.jpg",
+      "answerPrintedNumber": 8,
+      "answerVerifiedAt": "2026-09-27"
     }
   },
   {
@@ -2876,7 +3101,7 @@
         "text": "입찰이 자동으로 무효처리된다."
       }
     ],
-    "answer": null,
+    "answer": "1",
     "source": {
       "photo": "page_0024.jpg",
       "column": 2,
@@ -2884,7 +3109,10 @@
       "subject": 2,
       "collectedAt": "2026-09-27",
       "permission": "사용자가 공개 재게시 허락이 있음을 확인",
-      "transcription": "사진 OCR; 정답 미확인"
+      "transcription": "사진 OCR; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0025.jpg",
+      "answerPrintedNumber": 13,
+      "answerVerifiedAt": "2026-09-27"
     }
   },
   {
@@ -2914,7 +3142,7 @@
         "text": "계약보증금액 합의 결과"
       }
     ],
-    "answer": null,
+    "answer": "1",
     "source": {
       "photo": "page_0024.jpg",
       "column": 2,
@@ -2922,7 +3150,10 @@
       "subject": 2,
       "collectedAt": "2026-09-27",
       "permission": "사용자가 공개 재게시 허락이 있음을 확인",
-      "transcription": "사진 OCR; 정답 미확인"
+      "transcription": "사진 OCR; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0025.jpg",
+      "answerPrintedNumber": 14,
+      "answerVerifiedAt": "2026-09-27"
     }
   },
   {
@@ -2952,7 +3183,7 @@
         "text": "계약이행 가능성 확보"
       }
     ],
-    "answer": null,
+    "answer": "3",
     "source": {
       "photo": "page_0024.jpg",
       "column": 2,
@@ -2960,7 +3191,10 @@
       "subject": 2,
       "collectedAt": "2026-09-27",
       "permission": "사용자가 공개 재게시 허락이 있음을 확인",
-      "transcription": "사진 OCR; 정답 미확인"
+      "transcription": "사진 OCR; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0025.jpg",
+      "answerPrintedNumber": 15,
+      "answerVerifiedAt": "2026-09-27"
     }
   },
   {
@@ -2990,7 +3224,7 @@
         "text": "H업체의 요구를 그대로 수용한다."
       }
     ],
-    "answer": null,
+    "answer": "1",
     "source": {
       "photo": "page_0024.jpg",
       "column": 4,
@@ -2998,7 +3232,10 @@
       "subject": 2,
       "collectedAt": "2026-09-27",
       "permission": "사용자가 공개 재게시 허락이 있음을 확인",
-      "transcription": "사진 OCR; 정답 미확인"
+      "transcription": "사진 OCR; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0025.jpg",
+      "answerPrintedNumber": 24,
+      "answerVerifiedAt": "2026-09-27"
     }
   },
   {
@@ -3028,7 +3265,7 @@
         "text": "투명성 강화"
       }
     ],
-    "answer": null,
+    "answer": "4",
     "source": {
       "photo": "page_0027.jpg",
       "column": 4,
@@ -3036,7 +3273,10 @@
       "subject": 2,
       "collectedAt": "2026-09-27",
       "permission": "사용자가 공개 재게시 허락이 있음을 확인",
-      "transcription": "사진 OCR; 정답 미확인"
+      "transcription": "사진 OCR; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0025.jpg",
+      "answerPrintedNumber": 6,
+      "answerVerifiedAt": "2026-09-27"
     }
   },
   {
@@ -3066,7 +3306,7 @@
         "text": "10일"
       }
     ],
-    "answer": null,
+    "answer": "4",
     "source": {
       "photo": "page_0028.jpg",
       "column": 1,
@@ -3074,7 +3314,10 @@
       "subject": 2,
       "collectedAt": "2026-09-27",
       "permission": "사용자가 공개 재게시 허락이 있음을 확인",
-      "transcription": "사진 OCR; 정답 미확인"
+      "transcription": "사진 OCR; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0025.jpg",
+      "answerPrintedNumber": 11,
+      "answerVerifiedAt": "2026-09-27"
     }
   },
   {
@@ -3104,7 +3347,7 @@
         "text": "입찰은 무효 처리된다."
       }
     ],
-    "answer": null,
+    "answer": "1",
     "source": {
       "photo": "page_0028.jpg",
       "column": 2,
@@ -3112,7 +3355,10 @@
       "subject": 2,
       "collectedAt": "2026-09-27",
       "permission": "사용자가 공개 재게시 허락이 있음을 확인",
-      "transcription": "사진 OCR; 정답 미확인"
+      "transcription": "사진 OCR; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0025.jpg",
+      "answerPrintedNumber": 13,
+      "answerVerifiedAt": "2026-09-27"
     }
   },
   {
@@ -3142,7 +3388,7 @@
         "text": "I업체 스스로 1순위자의 포기를 얻어내면 전체 물량을 낙찰받는다."
       }
     ],
-    "answer": null,
+    "answer": "2",
     "source": {
       "photo": "page_0028.jpg",
       "column": 4,
@@ -3150,7 +3396,10 @@
       "subject": 2,
       "collectedAt": "2026-09-27",
       "permission": "사용자가 공개 재게시 허락이 있음을 확인",
-      "transcription": "사진 OCR; 정답 미확인"
+      "transcription": "사진 OCR; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0025.jpg",
+      "answerPrintedNumber": 19,
+      "answerVerifiedAt": "2026-09-27"
     }
   },
   {
@@ -3180,7 +3429,7 @@
         "text": "가격점수만으로 낙찰자 확정"
       }
     ],
-    "answer": null,
+    "answer": "4",
     "source": {
       "photo": "page_0029.jpg",
       "column": 4,
@@ -3188,7 +3437,10 @@
       "subject": 2,
       "collectedAt": "2026-09-27",
       "permission": "사용자가 공개 재게시 허락이 있음을 확인",
-      "transcription": "사진 OCR; 정답 미확인"
+      "transcription": "사진 OCR; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0026.jpg",
+      "answerPrintedNumber": 35,
+      "answerVerifiedAt": "2026-09-27"
     }
   },
   {
@@ -3218,7 +3470,7 @@
         "text": "자격 없는 자의 입찰은 무효 사유에 해당한다."
       }
     ],
-    "answer": null,
+    "answer": "2",
     "source": {
       "photo": "page_0029.jpg",
       "column": 4,
@@ -3226,7 +3478,10 @@
       "subject": 2,
       "collectedAt": "2026-09-27",
       "permission": "사용자가 공개 재게시 허락이 있음을 확인",
-      "transcription": "사진 OCR; 정답 미확인"
+      "transcription": "사진 OCR; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0026.jpg",
+      "answerPrintedNumber": 38,
+      "answerVerifiedAt": "2026-09-27"
     }
   }
 ]

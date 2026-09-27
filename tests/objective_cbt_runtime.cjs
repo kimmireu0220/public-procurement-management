@@ -67,4 +67,8 @@ app = run('all', [{...question, answer: '1'}], 'graded');
 app.querySelector('[data-choice="2"]').click();
 assert.deepEqual(JSON.parse(storage.get('ppm_cbt_graded_wrong_subject_1_v1')), [question.id]);
 assert.equal(app.querySelector('[data-choice="1"]').classes.has('correct'), true);
+app = run('wrong', [{...question, answer: '1'}], 'graded');
+app.querySelector('[data-choice="1"]').click();
+assert.deepEqual(JSON.parse(storage.get('ppm_cbt_graded_wrong_subject_1_v1')), []);
+assert.match(app.innerHTML, /누적된 오답이 없습니다/);
 console.log('Unknown-answer selection, manual wrong bank, storage isolation and grading: OK');

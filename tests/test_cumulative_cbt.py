@@ -28,7 +28,10 @@ class CumulativeCbtTest(unittest.TestCase):
             self.assertEqual([q["no"] for q in questions], list(range(1, len(questions) + 1)), path.name)
             for question in questions:
                 self.assertEqual([choice["key"] for choice in question["choices"]], ["1", "2", "3", "4"])
-                self.assertIsNone(question["answer"])
+                self.assertIn(question["answer"], (None, "1", "2", "3", "4"))
+                if question["answer"] is not None:
+                    self.assertTrue(question["source"]["answerPhoto"])
+                    self.assertTrue(question["source"]["answerVerifiedAt"])
                 self.assertTrue(question["source"]["photo"].endswith(".jpg"))
                 self.assertTrue(question["source"]["permission"])
 

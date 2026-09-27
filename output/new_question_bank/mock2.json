@@ -26,7 +26,7 @@
         "text": "공공조달 공급자는 국가기관만을 의미한다."
       }
     ],
-    "answer": null,
+    "answer": "2",
     "source": {
       "photo": "page_0062.jpg",
       "column": 2,
@@ -34,7 +34,11 @@
       "subject": 0,
       "collectedAt": "2026-09-27",
       "permission": "사용자가 공개 재게시 허락이 있음을 확인",
-      "transcription": "사진 OCR; 정답 미확인"
+      "transcription": "사진 OCR; 인쇄 정답표 원본 대조",
+      "answerPhoto": "page_0044.jpg",
+      "answerPrintedNumber": 2,
+      "answerVerifiedAt": "2026-09-27",
+      "answerBasis": "제2회 CBT 모의고사 인쇄 정답표"
     }
   },
   {
@@ -64,7 +68,7 @@
         "text": "긴급 상황에서만 허용된다."
       }
     ],
-    "answer": null,
+    "answer": "2",
     "source": {
       "photo": "page_0062.jpg",
       "column": 3,
@@ -72,7 +76,11 @@
       "subject": 0,
       "collectedAt": "2026-09-27",
       "permission": "사용자가 공개 재게시 허락이 있음을 확인",
-      "transcription": "사진 OCR; 정답 미확인"
+      "transcription": "사진 OCR; 인쇄 정답표 원본 대조",
+      "answerPhoto": "page_0044.jpg",
+      "answerPrintedNumber": 5,
+      "answerVerifiedAt": "2026-09-27",
+      "answerBasis": "제2회 CBT 모의고사 인쇄 정답표"
     }
   },
   {
@@ -102,7 +110,7 @@
         "text": "도급과 위임 모두 결과 완성 여부와 관계없이 대가를 지급한다."
       }
     ],
-    "answer": null,
+    "answer": "3",
     "source": {
       "photo": "page_0064.jpg",
       "column": 1,
@@ -110,7 +118,11 @@
       "subject": 0,
       "collectedAt": "2026-09-27",
       "permission": "사용자가 공개 재게시 허락이 있음을 확인",
-      "transcription": "사진 OCR; 정답 미확인"
+      "transcription": "사진 OCR; 인쇄 정답표 원본 대조",
+      "answerPhoto": "page_0044.jpg",
+      "answerPrintedNumber": 21,
+      "answerVerifiedAt": "2026-09-27",
+      "answerBasis": "제2회 CBT 모의고사 인쇄 정답표"
     }
   },
   {
@@ -140,7 +152,7 @@
         "text": "각 절차는 상호 독립적으로 진행될 수 있다."
       }
     ],
-    "answer": null,
+    "answer": "4",
     "source": {
       "photo": "page_0064.jpg",
       "column": 2,
@@ -148,7 +160,11 @@
       "subject": 0,
       "collectedAt": "2026-09-27",
       "permission": "사용자가 공개 재게시 허락이 있음을 확인",
-      "transcription": "사진 OCR; 정답 미확인"
+      "transcription": "사진 OCR; 인쇄 정답표 원본 대조",
+      "answerPhoto": "page_0044.jpg",
+      "answerPrintedNumber": 24,
+      "answerVerifiedAt": "2026-09-27",
+      "answerBasis": "제2회 CBT 모의고사 인쇄 정답표"
     }
   },
   {
@@ -178,7 +194,7 @@
         "text": "견적서를 허위로 제출한 경우 반드시 부정당 업자 제재 처분 대상이 된다."
       }
     ],
-    "answer": null,
+    "answer": "2",
     "source": {
       "photo": "page_0064.jpg",
       "column": 3,
@@ -186,7 +202,11 @@
       "subject": 0,
       "collectedAt": "2026-09-27",
       "permission": "사용자가 공개 재게시 허락이 있음을 확인",
-      "transcription": "사진 OCR; 정답 미확인"
+      "transcription": "사진 OCR; 인쇄 정답표 원본 대조",
+      "answerPhoto": "page_0044.jpg",
+      "answerPrintedNumber": 28,
+      "answerVerifiedAt": "2026-09-27",
+      "answerBasis": "제2회 CBT 모의고사 인쇄 정답표"
     }
   },
   {
@@ -216,7 +236,7 @@
         "text": "일반 공급계획은 대체 공급원 확보 중심, 비 상 공급계획은 납기 단축 중심이다."
       }
     ],
-    "answer": null,
+    "answer": "1",
     "source": {
       "photo": "page_0064.jpg",
       "column": 4,
@@ -224,7 +244,11 @@
       "subject": 0,
       "collectedAt": "2026-09-27",
       "permission": "사용자가 공개 재게시 허락이 있음을 확인",
-      "transcription": "사진 OCR; 정답 미확인"
+      "transcription": "사진 OCR; 인쇄 정답표 원본 대조",
+      "answerPhoto": "page_0044.jpg",
+      "answerPrintedNumber": 32,
+      "answerVerifiedAt": "2026-09-27",
+      "answerBasis": "제2회 CBT 모의고사 인쇄 정답표"
     }
   },
   {
@@ -254,7 +278,7 @@
         "text": "공급업체의 신뢰성과 안정성을 평가하기 위해"
       }
     ],
-    "answer": null,
+    "answer": "4",
     "source": {
       "photo": "page_0065.jpg",
       "column": 1,
@@ -262,7 +286,11 @@
       "subject": 0,
       "collectedAt": "2026-09-27",
       "permission": "사용자가 공개 재게시 허락이 있음을 확인",
-      "transcription": "사진 OCR; 정답 미확인"
+      "transcription": "사진 OCR; 인쇄 정답표 원본 대조",
+      "answerPhoto": "page_0044.jpg",
+      "answerPrintedNumber": 34,
+      "answerVerifiedAt": "2026-09-27",
+      "answerBasis": "제2회 CBT 모의고사 인쇄 정답표"
     }
   },
   {
@@ -292,7 +320,7 @@
         "text": "사업 범위에 맞추어 직접비와 간접비를 구분 하여 산정하는 경우"
       }
     ],
-    "answer": null,
+    "answer": "2",
     "source": {
       "photo": "page_0065.jpg",
       "column": 2,
@@ -300,7 +328,11 @@
       "subject": 0,
       "collectedAt": "2026-09-27",
       "permission": "사용자가 공개 재게시 허락이 있음을 확인",
-      "transcription": "사진 OCR; 정답 미확인"
+      "transcription": "사진 OCR; 인쇄 정답표 원본 대조",
+      "answerPhoto": "page_0044.jpg",
+      "answerPrintedNumber": 38,
+      "answerVerifiedAt": "2026-09-27",
+      "answerBasis": "제2회 CBT 모의고사 인쇄 정답표"
     }
   },
   {
@@ -330,7 +362,7 @@
         "text": "계약상대자가 손해배상 지급을 거부할 경우, 발주기관이 계약상대자에게 지급해야 할 다 른 미지급 대금이 있다면 법적 검토를 거쳐 상계 처리할 수 있다."
       }
     ],
-    "answer": null,
+    "answer": "2",
     "source": {
       "photo": "page_0066.jpg",
       "column": 4,
@@ -338,7 +370,11 @@
       "subject": 0,
       "collectedAt": "2026-09-27",
       "permission": "사용자가 공개 재게시 허락이 있음을 확인",
-      "transcription": "사진 OCR; 정답 미확인"
+      "transcription": "사진 OCR; 인쇄 정답표 원본 대조",
+      "answerPhoto": "page_0044.jpg",
+      "answerPrintedNumber": 55,
+      "answerVerifiedAt": "2026-09-27",
+      "answerBasis": "제2회 CBT 모의고사 인쇄 정답표"
     }
   },
   {
@@ -368,7 +404,7 @@
         "text": "성과관리의 결과는 내부 보안 자료이므로 향 후 다른 입찰 및 다수공급자계약(MAS) 연장 심사 등에 가 • 감점으로 연동할 수 없다."
       }
     ],
-    "answer": null,
+    "answer": "3",
     "source": {
       "photo": "page_0067.jpg",
       "column": 1,
@@ -376,7 +412,11 @@
       "subject": 0,
       "collectedAt": "2026-09-27",
       "permission": "사용자가 공개 재게시 허락이 있음을 확인",
-      "transcription": "사진 OCR; 정답 미확인"
+      "transcription": "사진 OCR; 인쇄 정답표 원본 대조",
+      "answerPhoto": "page_0044.jpg",
+      "answerPrintedNumber": 57,
+      "answerVerifiedAt": "2026-09-27",
+      "answerBasis": "제2회 CBT 모의고사 인쇄 정답표"
     }
   },
   {
@@ -406,7 +446,7 @@
         "text": "30일 이내"
       }
     ],
-    "answer": null,
+    "answer": "3",
     "source": {
       "photo": "page_0067.jpg",
       "column": 2,
@@ -414,7 +454,11 @@
       "subject": 0,
       "collectedAt": "2026-09-27",
       "permission": "사용자가 공개 재게시 허락이 있음을 확인",
-      "transcription": "사진 OCR; 정답 미확인"
+      "transcription": "사진 OCR; 인쇄 정답표 원본 대조",
+      "answerPhoto": "page_0044.jpg",
+      "answerPrintedNumber": 59,
+      "answerVerifiedAt": "2026-09-27",
+      "answerBasis": "제2회 CBT 모의고사 인쇄 정답표"
     }
   },
   {
@@ -444,7 +488,7 @@
         "text": "경미한 오기가 있는 경우에도 무조건 기존 공 고를 취소하고 새로이 재공고해야 한다."
       }
     ],
-    "answer": null,
+    "answer": "3",
     "source": {
       "photo": "page_0067.jpg",
       "column": 3,
@@ -452,7 +496,11 @@
       "subject": 0,
       "collectedAt": "2026-09-27",
       "permission": "사용자가 공개 재게시 허락이 있음을 확인",
-      "transcription": "사진 OCR; 정답 미확인"
+      "transcription": "사진 OCR; 인쇄 정답표 원본 대조",
+      "answerPhoto": "page_0044.jpg",
+      "answerPrintedNumber": 62,
+      "answerVerifiedAt": "2026-09-27",
+      "answerBasis": "제2회 CBT 모의고사 인쇄 정답표"
     }
   },
   {
@@ -482,7 +530,7 @@
         "text": "소액수의 견적 제출 공고의 안내 기간은 국가 의 예산 낭비를 막기 위해 어떠한 경우에도 무조건 최소 15일 이상으로 고정해야 한다."
       }
     ],
-    "answer": null,
+    "answer": "2",
     "source": {
       "photo": "page_0067.jpg",
       "column": 4,
@@ -490,7 +538,11 @@
       "subject": 0,
       "collectedAt": "2026-09-27",
       "permission": "사용자가 공개 재게시 허락이 있음을 확인",
-      "transcription": "사진 OCR; 정답 미확인"
+      "transcription": "사진 OCR; 인쇄 정답표 원본 대조",
+      "answerPhoto": "page_0044.jpg",
+      "answerPrintedNumber": 64,
+      "answerVerifiedAt": "2026-09-27",
+      "answerBasis": "제2회 CBT 모의고사 인쇄 정답표"
     }
   }
 ]

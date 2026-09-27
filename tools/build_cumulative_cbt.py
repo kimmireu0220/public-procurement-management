@@ -287,7 +287,7 @@ def page_html(subject: int, mode: str, count: int, *, collection: str = "", exam
             else "답안을 클릭하면 즉시 채점되며 오답은 과목별로 누적됩니다."
         )
     if collection:
-        note = "정답 미등록 문항은 답을 선택하고 오답에 직접 저장할 수 있습니다."
+        note = "정답 등록 문항은 즉시 채점되며, 미등록 문항은 오답을 직접 저장할 수 있습니다."
     asset = "../../assets" if is_wrong else "../assets"
     home = "../../" if is_wrong else "../"
     counterpart = f"../../{subject}과목/" if is_wrong else f"../오답/{subject}과목/"
