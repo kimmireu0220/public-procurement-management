@@ -21,6 +21,14 @@ import import_photo_questions  # noqa: E402
 
 
 class CumulativeCbtTest(unittest.TestCase):
+    def test_verified_two_column_choice_order_matches_answer_keys(self) -> None:
+        subject1 = json.loads((ROOT / "output/new_question_bank/subject1.json").read_text(encoding="utf-8"))
+        subject2 = json.loads((ROOT / "output/new_question_bank/subject2.json").read_text(encoding="utf-8"))
+        for questions, number, expected in ((subject1, 37, "소액구매"), (subject1, 72, "품명신설 요청"), (subject2, 9, "우선순위 설정")):
+            question = questions[number - 1]
+            selected = next(choice for choice in question["choices"] if choice["key"] == question["answer"])
+            self.assertEqual(selected["text"], expected)
+
     def test_photo_banks_have_stable_identifiers_and_source_mapping(self) -> None:
         for path in (ROOT / "output" / "new_question_bank").glob("*.json"):
             questions = json.loads(path.read_text(encoding="utf-8"))
