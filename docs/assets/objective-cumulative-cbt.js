@@ -7,6 +7,7 @@
   const wrongKey = `${storagePrefix}_wrong_subject_${config.subject}_v1`;
   const progressKey = `${storagePrefix}_progress_subject_${config.subject}_${config.mode}_v1`;
   const symbols = {1:'①',2:'②',3:'③',4:'④'};
+  const subjectLabel = config.exam ? config.title : `${config.subject}과목`;
   let index = readIndex();
   let locked = false;
 
@@ -97,7 +98,7 @@
     const digits = Math.max(2, String(list.length).length);
     const wrong = readWrong().size.toLocaleString('ko-KR');
     const reset = config.mode === 'wrong'
-      ? `<button type="button" class="danger" data-action="reset">${config.subject}과목 오답 초기화</button>`
+      ? `<button type="button" class="danger" data-action="reset">${escapeHtml(subjectLabel)} 오답 초기화</button>`
       : '';
     return `<nav class="toolbar" aria-label="문항 이동"><div class="progress-block"><div class="progress-copy">`+
       `<strong><input class="progress-jump" type="number" inputmode="numeric" min="1" max="${list.length}" value="${current}" style="--question-digits:${digits}" aria-label="이동할 문항"> / ${list.length.toLocaleString('ko-KR')}</strong>`+
@@ -114,6 +115,23 @@
       `<p class="keyboard-hint">숫자 키 1–4로 답안 선택 · ← → 문항 이동</p></article>`;
   }
   function bind(question) {
+    const feedback = app.querySelector('#feedback');
+    function showUngradedActions() {
+      const saved = readWrong().has(question.id);
+      feedback.innerHTML = `<p>정답 미등록</p><div class="nav-actions"><button type="button" data-action="review">${saved ? '오답에서 제거' : '오답에 저장'}</button><button type="button" class="primary" data-action="continue">다음 문제 →</button></div>`;
+      feedback.querySelector('[data-action="review"]').addEventListener('click', () => {
+        const wrong = readWrong();
+        if (saved) wrong.delete(question.id);
+        else wrong.add(question.id);
+        writeWrong(wrong);
+        updateWrongCount();
+        if (config.mode === 'wrong' && saved) finishQuestion(true);
+        else showUngradedActions();
+      });
+      feedback.querySelector('[data-action="continue"]').addEventListener('click', () => finishQuestion(false));
+    }
+    const hasAnswer = question.choices.some(choice => String(choice.key) === String(question.answer));
+    if (!hasAnswer) showUngradedActions();
     app.querySelector('[data-action="prev"]')?.addEventListener('click', () => move(-1));
     app.querySelector('[data-action="next"]')?.addEventListener('click', () => move(1));
     const jump = app.querySelector('.progress-jump');
@@ -131,12 +149,19 @@
       jumpToQuestion();
     });
     app.querySelector('[data-action="reset"]')?.addEventListener('click', () => {
-      if (!confirm(`${config.subject}과목 오답을 모두 삭제할까요?`)) return;
+      if (!confirm(`${subjectLabel} 오답을 모두 삭제할까요?`)) return;
       safeRemove(wrongKey);
       index = 0;
       render();
     });
     app.querySelectorAll('[data-choice]').forEach(button => button.addEventListener('click', () => {
+      if (!hasAnswer) {
+        app.querySelectorAll('[data-choice]').forEach(choice => {
+          choice.classList.toggle('selected', choice === button);
+          choice.setAttribute('aria-pressed', String(choice === button));
+        });
+        return;
+      }
       if (locked) return;
       locked = true;
       const selected = String(button.dataset.choice);
@@ -165,7 +190,7 @@
     saveIndex(list.length);
     if (!list.length) {
       app.innerHTML = config.mode === 'wrong'
-        ? `<section class="empty-card" role="status"><h2>누적된 오답이 없습니다.</h2><p>전체 CBT에서 틀린 문항이 여기에 자동으로 모입니다.</p><a href="${escapeHtml(config.allUrl || `../../${config.subject}과목/`)}">${config.subject}과목 전체 CBT로 이동</a></section>`
+        ? `<section class="empty-card" role="status"><h2>누적된 오답이 없습니다.</h2><p>문제를 풀면서 저장한 오답이 여기에 모입니다.</p><a href="${escapeHtml(config.allUrl || `../../${config.subject}과목/`)}">${escapeHtml(subjectLabel)} 전체 CBT로 이동</a></section>`
         : config.emptyMessage
           ? `<section class="empty-card" role="status"><h2>${escapeHtml(config.emptyMessage)}</h2></section>`
           : `<section class="empty-card" role="alert"><h2>문제은행을 불러오지 못했습니다.</h2><p>페이지를 새로고침한 뒤 다시 시도해 주세요.</p></section>`;

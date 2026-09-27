@@ -213,3 +213,4 @@ button.danger { border-color: #dfaaa5; color: var(--bad); }
   html { scroll-behavior: auto; }
   *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; }
 }
+.choice.selected { outline: 3px solid var(--blue); outline-offset: -3px; }

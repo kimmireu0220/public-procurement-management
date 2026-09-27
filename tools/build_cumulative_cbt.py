@@ -268,7 +268,7 @@ def load_objective_questions(subject: int) -> list[dict]:
     return combined
 
 
-def page_html(subject: int, mode: str, count: int, *, collection: str = "") -> str:
+def page_html(subject: int, mode: str, count: int, *, collection: str = "", exam: int | None = None) -> str:
     title = SUBJECTS[subject][0]
     is_wrong = mode == "wrong"
     heading = f"{subject}과목 오답 CBT" if is_wrong else f"{subject}과목 전체 CBT"
@@ -286,6 +286,8 @@ def page_html(subject: int, mode: str, count: int, *, collection: str = "") -> s
             if is_wrong
             else "답안을 클릭하면 즉시 채점되며 오답은 과목별로 누적됩니다."
         )
+    if collection:
+        note = "정답 미등록 문항은 답을 선택하고 오답에 직접 저장할 수 있습니다."
     asset = "../../assets" if is_wrong else "../assets"
     home = "../../" if is_wrong else "../"
     counterpart = f"../../{subject}과목/" if is_wrong else f"../오답/{subject}과목/"
@@ -300,6 +302,16 @@ def page_html(subject: int, mode: str, count: int, *, collection: str = "") -> s
         counterpart = posixpath.relpath(other_dir, page_dir) + "/"
         bank_name = f"{collection}-subject{subject}-bank.js"
         config.update({"storageNamespace": collection, "allUrl": counterpart if is_wrong else "./", "emptyMessage": "문제 등록을 준비 중입니다."})
+    if exam is not None:
+        title = f"모의고사 {exam}회"
+        heading = title + (" 오답" if is_wrong else "")
+        page_dir = f"new-bank/모의고사/{exam}회" + ("/오답" if is_wrong else "")
+        other_dir = f"new-bank/모의고사/{exam}회" + ("" if is_wrong else "/오답")
+        asset = posixpath.relpath("assets", page_dir)
+        home = posixpath.relpath(".", page_dir) + "/"
+        counterpart = posixpath.relpath(other_dir, page_dir) + "/"
+        bank_name = f"new-bank-mock{exam}-bank.js"
+        config.update({"subject": exam, "exam": exam, "title": title, "storageNamespace": f"mock{exam}", "allUrl": counterpart if is_wrong else "./"})
     mode_label = "오답 재풀이" if is_wrong else f"전체 {count:,}문항"
     client = "cumulative-cbt.js" if subject == 4 else "objective-cumulative-cbt.js"
     style_version = _asset_version("cumulative-cbt.css")
@@ -360,6 +372,16 @@ def build(destination: Path) -> dict[int, int]:
             (target / "index.html").write_text(
                 page_html(subject, mode, len(new_questions), collection="new-bank"), encoding="utf-8"
             )
+    for exam in (1, 2):
+        source = ROOT / "output" / "new_question_bank" / f"mock{exam}.json"
+        exam_questions = json.loads(source.read_text(encoding="utf-8"))
+        (assets / f"new-bank-mock{exam}-bank.js").write_text("window.CBT_BANK=" + _json(exam_questions) + ";\n", encoding="utf-8")
+        for mode in ("all", "wrong"):
+            target = destination / "new-bank" / "모의고사" / f"{exam}회"
+            if mode == "wrong":
+                target /= "오답"
+            target.mkdir(parents=True, exist_ok=True)
+            (target / "index.html").write_text(page_html(1, mode, len(exam_questions), collection="new-bank", exam=exam), encoding="utf-8")
     return counts
 
 
@@ -387,6 +409,7 @@ def main() -> int:
         counts = build(generated)
         if args.check:
             paths = [
+                *(Path(f"assets/new-bank-mock{exam}-bank.js") for exam in (1, 2)),
                 *(path.relative_to(generated) for path in (generated / "new-bank").rglob("*.html")),
                 *(Path(f"assets/new-bank-subject{subject}-bank.js") for subject in ACTIVE_SUBJECTS),
                 *(Path(f"{subject}과목/index.html") for subject in ACTIVE_SUBJECTS),

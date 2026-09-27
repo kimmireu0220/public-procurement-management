@@ -4,6 +4,8 @@ import sys
 import json
 import re
 import tempfile
+import shutil
+import subprocess
 import unittest
 from pathlib import Path
 
@@ -15,9 +17,57 @@ if str(TOOLS) not in sys.path:
 import build_cumulative_cbt  # noqa: E402
 import number_memory  # noqa: E402
 import site_portal  # noqa: E402
+import import_photo_questions  # noqa: E402
 
 
 class CumulativeCbtTest(unittest.TestCase):
+    def test_photo_banks_have_stable_identifiers_and_source_mapping(self) -> None:
+        for path in (ROOT / "output" / "new_question_bank").glob("*.json"):
+            questions = json.loads(path.read_text(encoding="utf-8"))
+            self.assertEqual(len({q["id"] for q in questions}), len(questions), path.name)
+            self.assertEqual([q["no"] for q in questions], list(range(1, len(questions) + 1)), path.name)
+            for question in questions:
+                self.assertEqual([choice["key"] for choice in question["choices"]], ["1", "2", "3", "4"])
+                self.assertIsNone(question["answer"])
+                self.assertTrue(question["source"]["photo"].endswith(".jpg"))
+                self.assertTrue(question["source"]["permission"])
+
+    @unittest.skipUnless(shutil.which("node"), "Node.js is required for client runtime test")
+    def test_objective_client_unknown_answer_runtime(self) -> None:
+        subprocess.run(["node", "tests/objective_cbt_runtime.cjs"], cwd=ROOT, check=True, capture_output=True, text=True)
+
+    def test_photo_import_requires_complete_boundary_and_keeps_unknown_answer(self) -> None:
+        draft = {"photo": "page_0001.jpg", "column": 1, "printed_no_ocr": "03", "group": "단원", "raw_question_text": "문제는?\n① 하나\n② 둘\n③ 셋\n④ 넷"}
+        questions, rejected = import_photo_questions.extract_questions([draft, draft], "book1", 1)
+        self.assertEqual(len(questions), 1)
+        self.assertEqual(rejected, [])
+        self.assertIsNone(questions[0]["answer"])
+        self.assertEqual(questions[0]["source"]["printedNumberOcr"], "03")
+        broken = dict(draft, raw_question_text="문제는?\n① 하나\n② 둘\n③ 셋")
+        self.assertEqual(len(import_photo_questions.extract_questions([broken], "book1", 1)[1]), 1)
+        two_column = dict(draft, raw_question_text="문제는?\n① 하나\n③ 셋\n② 둘\n④ 넷")
+        reordered = import_photo_questions.extract_questions([two_column], "book1", 1)[0][0]
+        self.assertEqual([choice["text"] for choice in reordered["choices"]], ["하나", "둘", "셋", "넷"])
+        duplicate_label = dict(draft, raw_question_text="문제는?\n① 하나\n② 둘\n③ 셋\n① 넷")
+        self.assertEqual(len(import_photo_questions.extract_questions([duplicate_label], "book1", 1)[1]), 1)
+
+    def test_mock_exams_keep_independent_storage_and_resolve_links(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            destination = Path(tmp) / "docs"
+            build_cumulative_cbt.build(destination)
+            for exam in (1, 2):
+                for mode in ("all", "wrong"):
+                    directory = destination / "new-bank" / "모의고사" / f"{exam}회"
+                    if mode == "wrong":
+                        directory /= "오답"
+                    page = (directory / "index.html").read_text(encoding="utf-8")
+                    match = re.search(r"window.CBT_CONFIG=(.*?);</script>", page)
+                    config = json.loads(match.group(1))  # type: ignore[union-attr]
+                    self.assertEqual(config["storageNamespace"], f"mock{exam}")
+                    self.assertEqual(config["exam"], exam)
+                    for url in re.findall(r'(?:src|href)="([^"#]+)"', page):
+                        self.assertTrue((directory / url.split("?", 1)[0]).exists(), url)
+
     def test_new_bank_has_independent_subject_and_wrong_pages(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
             destination = Path(tmp) / "docs"
@@ -25,7 +75,8 @@ class CumulativeCbtTest(unittest.TestCase):
             portal = site_portal.render_portal()
             for subject in range(1, 5):
                 bank = destination / "assets" / f"new-bank-subject{subject}-bank.js"
-                self.assertEqual(bank.read_text(encoding="utf-8"), "window.CBT_BANK=[];\n")
+                source = json.loads((ROOT / "output" / "new_question_bank" / f"subject{subject}.json").read_text(encoding="utf-8"))
+                self.assertEqual(json.loads(bank.read_text(encoding="utf-8").removeprefix("window.CBT_BANK=").rstrip(";\n")), source)
                 for mode in ("all", "wrong"):
                     directory = destination / "new-bank"
                     if mode == "wrong":
@@ -198,7 +249,8 @@ class CumulativeCbtTest(unittest.TestCase):
     def test_wrong_reset_is_scoped_to_each_subject_page(self) -> None:
         for name in ("objective-cumulative-cbt.js", "cumulative-cbt.js"):
             script = (ROOT / "docs" / "assets" / name).read_text(encoding="utf-8")
-            self.assertIn("${config.subject}과목 오답 초기화", script)
+            label = "${escapeHtml(subjectLabel)}" if name == "objective-cumulative-cbt.js" else "${config.subject}과목"
+            self.assertIn(f"{label} 오답 초기화", script)
             self.assertIn("safeRemove(wrongKey)", script)
             self.assertNotIn("[1,2,3,4]", script)
 
