@@ -3177,7 +3177,7 @@
         "text": "납품검사"
       }
     ],
-    "answer": null,
+    "answer": "1",
     "source": {
       "photo": "page_0022.jpg",
       "column": 2,
@@ -3185,7 +3185,7 @@
       "subject": 1,
       "collectedAt": "2026-09-27",
       "permission": "사용자가 공개 재게시 허락이 있음을 확인",
-      "transcription": "재촬영 원본문항·선택지 및 정답표·해설 대조; 교재 정답 불일치로 자동 채점 보류",
+      "transcription": "재촬영 원본문항·선택지 및 정답표·해설 대조; 공식 법령·조달청 자료 검증으로 교재 정답표 오류 정정",
       "answerPhoto": "page_0007.jpg",
       "answerPrintedNumber": 22,
       "answerVerifiedAt": "2026-09-27",
@@ -3195,7 +3195,33 @@
       "verifiedPrintedNumber": 22,
       "printedNumberVerifiedAt": "2026-09-27",
       "printedAnswer": "2",
-      "answerConflict": "본문 보기① 품명신설 요청과 해설이 일치하지만 정답표는② 계약체결로 표시되어 자동 채점 보류"
+      "answerConflict": "교재 정답표는② 계약체결이지만 본문 보기① 품명신설 요청과 해설이 일치함. 공식 근거 대조 후 채점 정답을①로 정정함.",
+      "answerResolution": {
+        "answer": "1",
+        "nature": "교재 정답표와 구별되는 근거 검증 정정",
+        "reason": "목록에 없는 신규 물품은 계약체결·대금지급·납품검사보다 목록화 요청을 먼저 진행해야 한다. 이 문항의 보기와 교재 해설에 따르면① 품명신설 요청이 적절하고② 계약체결은 정답표 오기로 판단한다. 실제 등록 업무에서는 기존 품명·세부품명 유무에 따라 품명신설과 품목등록을 구분한다.",
+        "verifiedAt": "2026-09-27",
+        "sources": [
+          {
+            "title": "물품목록정보의 관리 및 이용에 관한 법률 제9조(목록화의 요청)",
+            "url": "https://law.go.kr/lsLinkCommonInfo.do?chrClsCd=010202&lsJoLnkSeq=1031680115",
+            "effectiveDate": "2026-01-02",
+            "basis": "목록화되지 않은 물품 또는 새로 취득하려는 물품의 목록화에 필요한 자료를 조달청장에게 제출하여 목록화를 요청하도록 규정한다.",
+            "accessedAt": "2026-09-27"
+          },
+          {
+            "title": "조달청 목록정보시스템 개편 보도자료",
+            "url": "https://www.pps.go.kr/kor/bbs/view.do?bbsSn=2509190007&key=00634",
+            "basis": "품명신설 요청 시 상위분류, 요청 품명 기본정보, 유사품명과의 차이를 입력하는 목록화 절차를 안내한다.",
+            "accessedAt": "2026-09-27"
+          },
+          {
+            "title": "조달청 표준교재 저장 추출본 — 제3장 전자조달시스템",
+            "path": "output/standard_textbook/1과목_공공조달의 이해/ch03_제3장_전자조달시스템.md",
+            "basis": "목록번호와 세부품명번호를 계약 이전에 확보하고, 품명등록과 품목등록을 구분한다. 사진 교재 정답 해설도 먼저 품명신설 요청 후 목록화 절차를 진행하도록 설명한다."
+          }
+        ]
+      }
     }
   },
   {

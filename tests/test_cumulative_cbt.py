@@ -34,9 +34,13 @@ class CumulativeCbtTest(unittest.TestCase):
         question = questions[71]
         self.assertEqual(question["source"]["answerPrintedNumber"], 22)
         self.assertEqual([choice["text"] for choice in question["choices"]], ["품명신설 요청", "계약체결", "대금지급", "납품검사"])
-        self.assertIsNone(question["answer"])
+        self.assertEqual(question["answer"], "1")
         self.assertEqual(question["source"]["printedAnswer"], "2")
         self.assertTrue(question["source"]["answerConflict"])
+        resolution = question["source"]["answerResolution"]
+        self.assertEqual(resolution["answer"], question["answer"])
+        self.assertTrue(resolution["verifiedAt"])
+        self.assertTrue(any("law.go.kr" in source.get("url", "") for source in resolution["sources"]))
 
     def test_photo_banks_have_stable_identifiers_and_source_mapping(self) -> None:
         for path in (ROOT / "output" / "new_question_bank").glob("*.json"):
