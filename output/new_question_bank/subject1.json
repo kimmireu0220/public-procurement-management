@@ -7564,7 +7564,7 @@
         "text": "국제무역기구와의 조달 협상을 전담한다."
       }
     ],
-    "answer": null,
+    "answer": "1",
     "source": {
       "photo": "page_0052.jpg",
       "retryPhoto": "page_0052.jpg",
@@ -7577,7 +7577,20 @@
       "subject": 1,
       "collectedAt": "2026-09-27",
       "permission": "사용자가 공개 재게시 허락이 있음을 확인",
-      "transcription": "재촬영 사진 OCR; 원본문항·선택지 대조 완료; 정답 미확인"
+      "transcription": "원본문항·네 선택지 대조 완료; 표준교재·공식 근거로 정답 판단",
+      "answerBasis": "표준교재·공식 근거 대조 판단 (인쇄 정답표 전사 아님)",
+      "answerResolution": {
+        "answer": "1",
+        "nature": "표준교재·공식 근거 대조 판단",
+        "reason": "공급자는 납품·계약 이행으로 서비스 품질을 뒷받침한다. 정책·법령 수립, 기관 예산권한, 국제협상은 일반 역할이 아니다.",
+        "verifiedAt": "2026-09-27",
+        "sources": [
+          {
+            "path": "output/standard_textbook/1과목_공공조달의 이해/ch01_제1장_공공조달개요.md",
+            "title": "조달청 표준교재 핵심 정리"
+          }
+        ]
+      }
     }
   },
   {
@@ -7699,7 +7712,7 @@
         "text": "정치권과의 원활한 소통 창구"
       }
     ],
-    "answer": null,
+    "answer": "1",
     "source": {
       "photo": "page_0052.jpg",
       "retryPhoto": "page_0052.jpg",
@@ -7712,7 +7725,20 @@
       "subject": 1,
       "collectedAt": "2026-09-27",
       "permission": "사용자가 공개 재게시 허락이 있음을 확인",
-      "transcription": "재촬영 사진 OCR; 원본문항·선택지 대조 완료; 정답 미확인"
+      "transcription": "원본문항·네 선택지 대조 완료; 표준교재·공식 근거로 정답 판단",
+      "answerBasis": "표준교재·공식 근거 대조 판단 (인쇄 정답표 전사 아님)",
+      "answerResolution": {
+        "answer": "1",
+        "nature": "표준교재·공식 근거 대조 판단",
+        "reason": "공사기업은 관련 법령상 면허·자격·등록요건을 충족해야 한다.",
+        "verifiedAt": "2026-09-27",
+        "sources": [
+          {
+            "path": "output/standard_textbook/1과목_공공조달의 이해/ch01_제1장_공공조달개요.md",
+            "title": "조달청 표준교재 핵심 정리"
+          }
+        ]
+      }
     }
   },
   {
@@ -7742,7 +7768,7 @@
         "text": "전 직원 대상 재교육 실시"
       }
     ],
-    "answer": null,
+    "answer": "2",
     "source": {
       "photo": "page_0052.jpg",
       "retryPhoto": "page_0052.jpg",
@@ -7755,7 +7781,20 @@
       "subject": 1,
       "collectedAt": "2026-09-27",
       "permission": "사용자가 공개 재게시 허락이 있음을 확인",
-      "transcription": "재촬영 사진 OCR; 원본문항·선택지 대조 완료; 정답 미확인"
+      "transcription": "원본문항·네 선택지 대조 완료; 표준교재·공식 근거로 정답 판단",
+      "answerBasis": "표준교재·공식 근거 대조 판단 (인쇄 정답표 전사 아님)",
+      "answerResolution": {
+        "answer": "2",
+        "nature": "표준교재·공식 근거 대조 판단",
+        "reason": "대표적인 부정당업자 제재는 입찰참가자격 제한이다.",
+        "verifiedAt": "2026-09-27",
+        "sources": [
+          {
+            "path": "output/standard_textbook/1과목_공공조달의 이해/ch06_제6장_법률이해.md",
+            "title": "조달청 표준교재 핵심 정리"
+          }
+        ]
+      }
     }
   },
   {
@@ -7785,7 +7824,7 @@
         "text": "계약부서"
       }
     ],
-    "answer": null,
+    "answer": "3",
     "source": {
       "photo": "page_0053.jpg",
       "retryPhoto": "page_0053.jpg",
@@ -7798,7 +7837,20 @@
       "subject": 1,
       "collectedAt": "2026-09-27",
       "permission": "사용자가 공개 재게시 허락이 있음을 확인",
-      "transcription": "재촬영 사진 OCR; 원본문항·선택지 대조 완료; 정답 미확인"
+      "transcription": "원본문항·네 선택지 대조 완료; 표준교재·공식 근거로 정답 판단",
+      "answerBasis": "표준교재·공식 근거 대조 판단 (인쇄 정답표 전사 아님)",
+      "answerResolution": {
+        "answer": "3",
+        "nature": "표준교재·공식 근거 대조 판단",
+        "reason": "감사원은 외부 감독 주체이며 사업·계약부서와 계약심의위원회는 내부 주체다.",
+        "verifiedAt": "2026-09-27",
+        "sources": [
+          {
+            "path": "output/standard_textbook/1과목_공공조달의 이해/ch01_제1장_공공조달개요.md",
+            "title": "조달청 표준교재 핵심 정리"
+          }
+        ]
+      }
     }
   },
   {
@@ -7828,7 +7880,7 @@
         "text": "광의적 관점에서는 계약당사자만 포함된다."
       }
     ],
-    "answer": null,
+    "answer": "3",
     "source": {
       "photo": "page_0053.jpg",
       "retryPhoto": "page_0053.jpg",
@@ -7841,7 +7893,20 @@
       "subject": 1,
       "collectedAt": "2026-09-27",
       "permission": "사용자가 공개 재게시 허락이 있음을 확인",
-      "transcription": "재촬영 사진 OCR; 원본문항·선택지 대조 완료; 정답 미확인"
+      "transcription": "원본문항·네 선택지 대조 완료; 표준교재·공식 근거로 정답 판단",
+      "answerBasis": "표준교재·공식 근거 대조 판단 (인쇄 정답표 전사 아님)",
+      "answerResolution": {
+        "answer": "3",
+        "nature": "표준교재·공식 근거 대조 판단",
+        "reason": "협의의 직접 이해관계자는 수요기관과 조달기업이다.",
+        "verifiedAt": "2026-09-27",
+        "sources": [
+          {
+            "path": "output/standard_textbook/1과목_공공조달의 이해/ch01_제1장_공공조달개요.md",
+            "title": "조달청 표준교재 핵심 정리"
+          }
+        ]
+      }
     }
   },
   {
@@ -9021,7 +9086,7 @@
         "text": "국민 참여 배제"
       }
     ],
-    "answer": null,
+    "answer": "2",
     "source": {
       "photo": "page_0060.jpg",
       "retryPhoto": "page_0060.jpg",
@@ -9034,7 +9099,20 @@
       "subject": 1,
       "collectedAt": "2026-09-27",
       "permission": "사용자가 공개 재게시 허락이 있음을 확인",
-      "transcription": "재촬영 사진 OCR; 원본문항·선택지 대조 완료; 정답 미확인"
+      "transcription": "원본문항·네 선택지 대조 완료; 표준교재·공식 근거로 정답 판단",
+      "answerBasis": "표준교재·공식 근거 대조 판단 (인쇄 정답표 전사 아님)",
+      "answerResolution": {
+        "answer": "2",
+        "nature": "표준교재·공식 근거 대조 판단",
+        "reason": "책임성은 의사결정·결과·성과에 대한 성실한 책임 이행이다.",
+        "verifiedAt": "2026-09-27",
+        "sources": [
+          {
+            "path": "output/standard_textbook/1과목_공공조달의 이해/ch02_제2장_원칙및방법.md",
+            "title": "조달청 표준교재 핵심 정리"
+          }
+        ]
+      }
     }
   },
   {
@@ -9386,7 +9464,7 @@
         "text": "공급자와 직접 계약하는 방식"
       }
     ],
-    "answer": null,
+    "answer": "2",
     "source": {
       "photo": "page_0063.jpg",
       "retryPhoto": "page_0063.jpg",
@@ -9399,7 +9477,20 @@
       "subject": 1,
       "collectedAt": "2026-09-27",
       "permission": "사용자가 공개 재게시 허락이 있음을 확인",
-      "transcription": "재촬영 사진 OCR; 원본문항·선택지 대조 완료; 정답 미확인"
+      "transcription": "원본문항·네 선택지 대조 완료; 표준교재·공식 근거로 정답 판단",
+      "answerBasis": "표준교재·공식 근거 대조 판단 (인쇄 정답표 전사 아님)",
+      "answerResolution": {
+        "answer": "2",
+        "nature": "표준교재·공식 근거 대조 판단",
+        "reason": "제한경쟁은 일정 참가자격을 충족한 업체 간 경쟁이다.",
+        "verifiedAt": "2026-09-27",
+        "sources": [
+          {
+            "path": "output/standard_textbook/1과목_공공조달의 이해/ch02_제2장_원칙및방법.md",
+            "title": "조달청 표준교재 핵심 정리"
+          }
+        ]
+      }
     }
   },
   {
@@ -9521,7 +9612,7 @@
         "text": "공급자를 직접 지정한다."
       }
     ],
-    "answer": null,
+    "answer": "2",
     "source": {
       "photo": "page_0065.jpg",
       "retryPhoto": "page_0065.jpg",
@@ -9534,7 +9625,20 @@
       "subject": 1,
       "collectedAt": "2026-09-27",
       "permission": "사용자가 공개 재게시 허락이 있음을 확인",
-      "transcription": "재촬영 사진 OCR; 원본문항·선택지 대조 완료; 정답 미확인"
+      "transcription": "원본문항·네 선택지 대조 완료; 표준교재·공식 근거로 정답 판단",
+      "answerBasis": "표준교재·공식 근거 대조 판단 (인쇄 정답표 전사 아님)",
+      "answerResolution": {
+        "answer": "2",
+        "nature": "표준교재·공식 근거 대조 판단",
+        "reason": "제한·지명경쟁은 적격요건을 충족한 업체가 참여한다.",
+        "verifiedAt": "2026-09-27",
+        "sources": [
+          {
+            "path": "output/standard_textbook/1과목_공공조달의 이해/ch02_제2장_원칙및방법.md",
+            "title": "조달청 표준교재 핵심 정리"
+          }
+        ]
+      }
     }
   },
   {
@@ -9564,7 +9668,7 @@
         "text": "경쟁성 약화와 참여 제한"
       }
     ],
-    "answer": null,
+    "answer": "4",
     "source": {
       "photo": "page_0065.jpg",
       "retryPhoto": "page_0065.jpg",
@@ -9577,7 +9681,20 @@
       "subject": 1,
       "collectedAt": "2026-09-27",
       "permission": "사용자가 공개 재게시 허락이 있음을 확인",
-      "transcription": "재촬영 사진 OCR; 원본문항·선택지 대조 완료; 정답 미확인"
+      "transcription": "원본문항·네 선택지 대조 완료; 표준교재·공식 근거로 정답 판단",
+      "answerBasis": "표준교재·공식 근거 대조 판단 (인쇄 정답표 전사 아님)",
+      "answerResolution": {
+        "answer": "4",
+        "nature": "표준교재·공식 근거 대조 판단",
+        "reason": "과도한 기술요건은 실질적 경쟁과 참여를 제한한다.",
+        "verifiedAt": "2026-09-27",
+        "sources": [
+          {
+            "path": "output/standard_textbook/1과목_공공조달의 이해/ch02_제2장_원칙및방법.md",
+            "title": "조달청 표준교재 핵심 정리"
+          }
+        ]
+      }
     }
   },
   {
@@ -9607,7 +9724,7 @@
         "text": "지명경쟁"
       }
     ],
-    "answer": null,
+    "answer": "2",
     "source": {
       "photo": "page_0065.jpg",
       "retryPhoto": "page_0065.jpg",
@@ -9620,7 +9737,20 @@
       "subject": 1,
       "collectedAt": "2026-09-27",
       "permission": "사용자가 공개 재게시 허락이 있음을 확인",
-      "transcription": "재촬영 사진 OCR; 원본문항·선택지 대조 완료; 정답 미확인"
+      "transcription": "원본문항·네 선택지 대조 완료; 표준교재·공식 근거로 정답 판단",
+      "answerBasis": "표준교재·공식 근거 대조 판단 (인쇄 정답표 전사 아님)",
+      "answerResolution": {
+        "answer": "2",
+        "nature": "표준교재·공식 근거 대조 판단",
+        "reason": "적격심사는 낙찰자 결정 방식이며 일반·제한·지명경쟁은 계약체결 방법이다.",
+        "verifiedAt": "2026-09-27",
+        "sources": [
+          {
+            "path": "output/standard_textbook/1과목_공공조달의 이해/ch02_제2장_원칙및방법.md",
+            "title": "조달청 표준교재 핵심 정리"
+          }
+        ]
+      }
     }
   },
   {
@@ -9834,7 +9964,7 @@
         "text": "특정 기업 보호"
       }
     ],
-    "answer": null,
+    "answer": "2",
     "source": {
       "photo": "page_0066.jpg",
       "retryPhoto": "page_0066.jpg",
@@ -9847,7 +9977,20 @@
       "subject": 1,
       "collectedAt": "2026-09-27",
       "permission": "사용자가 공개 재게시 허락이 있음을 확인",
-      "transcription": "재촬영 사진 OCR; 원본문항·선택지 대조 완료; 정답 미확인"
+      "transcription": "원본문항·네 선택지 대조 완료; 표준교재·공식 근거로 정답 판단",
+      "answerBasis": "표준교재·공식 근거 대조 판단 (인쇄 정답표 전사 아님)",
+      "answerResolution": {
+        "answer": "2",
+        "nature": "표준교재·공식 근거 대조 판단",
+        "reason": "소액구매는 절차 간소화로 거래비용을 줄인다.",
+        "verifiedAt": "2026-09-27",
+        "sources": [
+          {
+            "path": "output/standard_textbook/1과목_공공조달의 이해/ch02_제2장_원칙및방법.md",
+            "title": "조달청 표준교재 핵심 정리"
+          }
+        ]
+      }
     }
   },
   {
@@ -9890,7 +10033,19 @@
       "subject": 1,
       "collectedAt": "2026-09-27",
       "permission": "사용자가 공개 재게시 허락이 있음을 확인",
-      "transcription": "재촬영 사진 OCR; 원본문항·선택지 대조 완료; 정답 미확인"
+      "transcription": "재촬영 사진 OCR; 원본문항·선택지 대조 완료; 정답 미확인",
+      "answerConflict": "교재 시점의 의도된 답은 ①이나 현행 UN 저가구매와 미국 FAR 기준은 개정됐다. 기준연도 없는 원문을 현행 정답으로 확정하지 않는다. UN 5천달러·미국 국내 1만달러를 현행으로 암기하지 말 것.",
+      "answerReview": {
+        "nature": "원문 정답 불확정 사유 확인",
+        "reason": "교재 시점의 의도된 답은 ①이나 현행 UN 저가구매와 미국 FAR 기준은 개정됐다. 기준연도 없는 원문을 현행 정답으로 확정하지 않는다. UN 5천달러·미국 국내 1만달러를 현행으로 암기하지 말 것.",
+        "verifiedAt": "2026-09-27",
+        "sources": [
+          {
+            "path": "output/standard_textbook/1과목_공공조달의 이해/ch02_제2장_원칙및방법.md",
+            "title": "조달청 표준교재 핵심 정리"
+          }
+        ]
+      }
     }
   },
   {
@@ -9920,7 +10075,7 @@
         "text": "계약담당자의 전문성 부족"
       }
     ],
-    "answer": null,
+    "answer": "2",
     "source": {
       "photo": "page_0066.jpg",
       "retryPhoto": "page_0066.jpg",
@@ -9933,7 +10088,20 @@
       "subject": 1,
       "collectedAt": "2026-09-27",
       "permission": "사용자가 공개 재게시 허락이 있음을 확인",
-      "transcription": "재촬영 사진 OCR; 원본문항·선택지 대조 완료; 정답 미확인"
+      "transcription": "원본문항·네 선택지 대조 완료; 표준교재·공식 근거로 정답 판단",
+      "answerBasis": "표준교재·공식 근거 대조 판단 (인쇄 정답표 전사 아님)",
+      "answerResolution": {
+        "answer": "2",
+        "nature": "표준교재·공식 근거 대조 판단",
+        "reason": "동일 수요의 인위적 분할은 규제 회피와 투명성 저하를 초래할 수 있다.",
+        "verifiedAt": "2026-09-27",
+        "sources": [
+          {
+            "path": "output/standard_textbook/1과목_공공조달의 이해/ch02_제2장_원칙및방법.md",
+            "title": "조달청 표준교재 핵심 정리"
+          }
+        ]
+      }
     }
   },
   {
@@ -9963,7 +10131,7 @@
         "text": "조달 전 과정을 전자적으로 처리하는 시스템"
       }
     ],
-    "answer": null,
+    "answer": "4",
     "source": {
       "photo": "page_0068.jpg",
       "retryPhoto": "page_0068.jpg",
@@ -9976,7 +10144,20 @@
       "subject": 1,
       "collectedAt": "2026-09-27",
       "permission": "사용자가 공개 재게시 허락이 있음을 확인",
-      "transcription": "재촬영 사진 OCR; 원본문항·선택지 대조 완료; 정답 미확인"
+      "transcription": "원본문항·네 선택지 대조 완료; 표준교재·공식 근거로 정답 판단",
+      "answerBasis": "표준교재·공식 근거 대조 판단 (인쇄 정답표 전사 아님)",
+      "answerResolution": {
+        "answer": "4",
+        "nature": "표준교재·공식 근거 대조 판단",
+        "reason": "전자조달은 소싱·구매·지불 등 전 과정의 전자적 처리 체계다.",
+        "verifiedAt": "2026-09-27",
+        "sources": [
+          {
+            "path": "output/standard_textbook/1과목_공공조달의 이해/ch03_제3장_전자조달시스템.md",
+            "title": "조달청 표준교재 핵심 정리"
+          }
+        ]
+      }
     }
   },
   {
@@ -10006,7 +10187,7 @@
         "text": "계약 집행 과정의 효율성을 단축시킨다."
       }
     ],
-    "answer": null,
+    "answer": "2",
     "source": {
       "photo": "page_0068.jpg",
       "retryPhoto": "page_0068.jpg",
@@ -10019,7 +10200,20 @@
       "subject": 1,
       "collectedAt": "2026-09-27",
       "permission": "사용자가 공개 재게시 허락이 있음을 확인",
-      "transcription": "재촬영 사진 OCR; 원본문항·선택지 대조 완료; 정답 미확인"
+      "transcription": "원본문항·네 선택지 대조 완료; 표준교재·공식 근거로 정답 판단",
+      "answerBasis": "표준교재·공식 근거 대조 판단 (인쇄 정답표 전사 아님)",
+      "answerResolution": {
+        "answer": "2",
+        "nature": "표준교재·공식 근거 대조 판단",
+        "reason": "가시성은 조달 과정과 지출 흐름을 파악·공개하고 관리하는 것이다.",
+        "verifiedAt": "2026-09-27",
+        "sources": [
+          {
+            "path": "output/standard_textbook/1과목_공공조달의 이해/ch03_제3장_전자조달시스템.md",
+            "title": "조달청 표준교재 핵심 정리"
+          }
+        ]
+      }
     }
   },
   {
@@ -10049,7 +10243,7 @@
         "text": "비용 절감 효과"
       }
     ],
-    "answer": null,
+    "answer": "1",
     "source": {
       "photo": "page_0069.jpg",
       "retryPhoto": "page_0069.jpg",
@@ -10062,7 +10256,20 @@
       "subject": 1,
       "collectedAt": "2026-09-27",
       "permission": "사용자가 공개 재게시 허락이 있음을 확인",
-      "transcription": "재촬영 사진 OCR; 원본문항·선택지 대조 완료; 정답 미확인"
+      "transcription": "원본문항·네 선택지 대조 완료; 표준교재·공식 근거로 정답 판단",
+      "answerBasis": "표준교재·공식 근거 대조 판단 (인쇄 정답표 전사 아님)",
+      "answerResolution": {
+        "answer": "1",
+        "nature": "표준교재·공식 근거 대조 판단",
+        "reason": "기록·공개·추적 가능성은 투명성과 청렴성을 강화한다.",
+        "verifiedAt": "2026-09-27",
+        "sources": [
+          {
+            "path": "output/standard_textbook/1과목_공공조달의 이해/ch03_제3장_전자조달시스템.md",
+            "title": "조달청 표준교재 핵심 정리"
+          }
+        ]
+      }
     }
   },
   {
@@ -10138,7 +10345,7 @@
         "text": "제한경쟁과 기술평가 중심 입찰"
       }
     ],
-    "answer": null,
+    "answer": "4",
     "source": {
       "photo": "page_0070.jpg",
       "retryPhoto": "page_0070.jpg",
@@ -10151,7 +10358,20 @@
       "subject": 1,
       "collectedAt": "2026-09-27",
       "permission": "사용자가 공개 재게시 허락이 있음을 확인",
-      "transcription": "재촬영 사진 OCR; 원본문항·선택지 대조 완료; 정답 미확인"
+      "transcription": "원본문항·네 선택지 대조 완료; 표준교재·공식 근거로 정답 판단",
+      "answerBasis": "표준교재·공식 근거 대조 판단 (인쇄 정답표 전사 아님)",
+      "answerResolution": {
+        "answer": "4",
+        "nature": "표준교재·공식 근거 대조 판단",
+        "reason": "기술 복잡성·공급위험이 높은 조달은 적격업체의 기술 평가를 중시한다.",
+        "verifiedAt": "2026-09-27",
+        "sources": [
+          {
+            "path": "output/standard_textbook/1과목_공공조달의 이해/ch03_제3장_전자조달시스템.md",
+            "title": "조달청 표준교재 핵심 정리"
+          }
+        ]
+      }
     }
   },
   {
@@ -10181,7 +10401,7 @@
         "text": "단기적 비용 절감"
       }
     ],
-    "answer": null,
+    "answer": "1",
     "source": {
       "photo": "page_0070.jpg",
       "retryPhoto": "page_0070.jpg",
@@ -10194,7 +10414,20 @@
       "subject": 1,
       "collectedAt": "2026-09-27",
       "permission": "사용자가 공개 재게시 허락이 있음을 확인",
-      "transcription": "재촬영 사진 OCR; 원본문항·선택지 대조 완료; 정답 미확인"
+      "transcription": "원본문항·네 선택지 대조 완료; 표준교재·공식 근거로 정답 판단",
+      "answerBasis": "표준교재·공식 근거 대조 판단 (인쇄 정답표 전사 아님)",
+      "answerResolution": {
+        "answer": "1",
+        "nature": "표준교재·공식 근거 대조 판단",
+        "reason": "고지출·고위험인 전략적 조달은 안정적 공급과 협력 관계를 중시한다.",
+        "verifiedAt": "2026-09-27",
+        "sources": [
+          {
+            "path": "output/standard_textbook/1과목_공공조달의 이해/ch03_제3장_전자조달시스템.md",
+            "title": "조달청 표준교재 핵심 정리"
+          }
+        ]
+      }
     }
   },
   {
@@ -10224,7 +10457,7 @@
         "text": "장기적 협력 관계 필요"
       }
     ],
-    "answer": null,
+    "answer": "3",
     "source": {
       "photo": "page_0070.jpg",
       "retryPhoto": "page_0070.jpg",
@@ -10237,7 +10470,20 @@
       "subject": 1,
       "collectedAt": "2026-09-27",
       "permission": "사용자가 공개 재게시 허락이 있음을 확인",
-      "transcription": "재촬영 사진 OCR; 원본문항·선택지 대조 완료; 정답 미확인"
+      "transcription": "원본문항·네 선택지 대조 완료; 표준교재·공식 근거로 정답 판단",
+      "answerBasis": "표준교재·공식 근거 대조 판단 (인쇄 정답표 전사 아님)",
+      "answerResolution": {
+        "answer": "3",
+        "nature": "표준교재·공식 근거 대조 판단",
+        "reason": "표준품 대량구매와 가격경매는 저위험·고지출의 레버리지 유형이다.",
+        "verifiedAt": "2026-09-27",
+        "sources": [
+          {
+            "path": "output/standard_textbook/1과목_공공조달의 이해/ch03_제3장_전자조달시스템.md",
+            "title": "조달청 표준교재 핵심 정리"
+          }
+        ]
+      }
     }
   },
   {
@@ -10267,7 +10513,7 @@
         "text": "완전 통합된 플랫폼 운영"
       }
     ],
-    "answer": null,
+    "answer": "3",
     "source": {
       "photo": "page_0071.jpg",
       "retryPhoto": "page_0071.jpg",
@@ -10280,7 +10526,20 @@
       "subject": 1,
       "collectedAt": "2026-09-27",
       "permission": "사용자가 공개 재게시 허락이 있음을 확인",
-      "transcription": "재촬영 사진 OCR; 원본문항·선택지 대조 완료; 정답 미확인"
+      "transcription": "원본문항·네 선택지 대조 완료; 표준교재·공식 근거로 정답 판단",
+      "answerBasis": "표준교재·공식 근거 대조 판단 (인쇄 정답표 전사 아님)",
+      "answerResolution": {
+        "answer": "3",
+        "nature": "표준교재·공식 근거 대조 판단",
+        "reason": "발전 제3단계는 이메일·웹 등 인터넷 도구의 활용이다.",
+        "verifiedAt": "2026-09-27",
+        "sources": [
+          {
+            "path": "output/standard_textbook/1과목_공공조달의 이해/ch03_제3장_전자조달시스템.md",
+            "title": "조달청 표준교재 핵심 정리"
+          }
+        ]
+      }
     }
   },
   {
@@ -10310,7 +10569,7 @@
         "text": "계약 기간 단축"
       }
     ],
-    "answer": null,
+    "answer": "2",
     "source": {
       "photo": "page_0071.jpg",
       "retryPhoto": "page_0071.jpg",
@@ -10323,7 +10582,27 @@
       "subject": 1,
       "collectedAt": "2026-09-27",
       "permission": "사용자가 공개 재게시 허락이 있음을 확인",
-      "transcription": "재촬영 사진 OCR; 원본문항·선택지 대조 완료; 정답 미확인"
+      "transcription": "원본문항·네 선택지 대조 완료; 표준교재·공식 근거로 정답 판단",
+      "answerBasis": "표준교재·공식 근거 대조 판단 (인쇄 정답표 전사 아님)",
+      "answerResolution": {
+        "answer": "2",
+        "nature": "표준교재·공식 근거 대조 판단",
+        "reason": "표준교재 152쪽은 파일관리의 보안·안정성과 업무흐름 관리의 전자적 승인 문서 전달을 설명한다.",
+        "verifiedAt": "2026-09-27",
+        "sources": [
+          {
+            "path": "output/standard_textbook/1과목_공공조달의 이해/ch03_제3장_전자조달시스템.md",
+            "title": "조달청 표준교재 핵심 정리"
+          },
+          {
+            "path": "sources/공식_조달청_표준교재_pdf/1과목_공공조달의 이해/교재.pdf",
+            "pages": [
+              152
+            ],
+            "title": "조달청 표준교재 1권"
+          }
+        ]
+      }
     }
   },
   {
@@ -10353,7 +10632,7 @@
         "text": "전자카탈로그"
       }
     ],
-    "answer": null,
+    "answer": "3",
     "source": {
       "photo": "page_0071.jpg",
       "retryPhoto": "page_0071.jpg",
@@ -10366,7 +10645,20 @@
       "subject": 1,
       "collectedAt": "2026-09-27",
       "permission": "사용자가 공개 재게시 허락이 있음을 확인",
-      "transcription": "재촬영 사진 OCR; 원본문항·선택지 대조 완료; 정답 미확인"
+      "transcription": "원본문항·네 선택지 대조 완료; 표준교재·공식 근거로 정답 판단",
+      "answerBasis": "표준교재·공식 근거 대조 판단 (인쇄 정답표 전사 아님)",
+      "answerResolution": {
+        "answer": "3",
+        "nature": "표준교재·공식 근거 대조 판단",
+        "reason": "사례의 접수 수단은 전자메일이므로 이메일 도구의 보안 한계다.",
+        "verifiedAt": "2026-09-27",
+        "sources": [
+          {
+            "path": "output/standard_textbook/1과목_공공조달의 이해/ch03_제3장_전자조달시스템.md",
+            "title": "조달청 표준교재 핵심 정리"
+          }
+        ]
+      }
     }
   },
   {
@@ -10580,7 +10872,7 @@
         "text": "계약 절차의 폐쇄성 강화"
       }
     ],
-    "answer": null,
+    "answer": "3",
     "source": {
       "photo": "page_0073.jpg",
       "retryPhoto": "page_0073.jpg",
@@ -10593,7 +10885,20 @@
       "subject": 1,
       "collectedAt": "2026-09-27",
       "permission": "사용자가 공개 재게시 허락이 있음을 확인",
-      "transcription": "재촬영 사진 OCR; 원본문항·선택지 대조 완료; 정답 미확인"
+      "transcription": "원본문항·네 선택지 대조 완료; 표준교재·공식 근거로 정답 판단",
+      "answerBasis": "표준교재·공식 근거 대조 판단 (인쇄 정답표 전사 아님)",
+      "answerResolution": {
+        "answer": "3",
+        "nature": "표준교재·공식 근거 대조 판단",
+        "reason": "정보접근성 향상은 신규·중소 공급자의 참여와 경쟁 확대를 지원한다.",
+        "verifiedAt": "2026-09-27",
+        "sources": [
+          {
+            "path": "output/standard_textbook/1과목_공공조달의 이해/ch03_제3장_전자조달시스템.md",
+            "title": "조달청 표준교재 핵심 정리"
+          }
+        ]
+      }
     }
   },
   {
@@ -10715,7 +11020,7 @@
         "text": "신규 제품의 시험 구매 확대"
       }
     ],
-    "answer": null,
+    "answer": "2",
     "source": {
       "photo": "page_0075.jpg",
       "retryPhoto": "page_0075.jpg",
@@ -10728,7 +11033,20 @@
       "subject": 1,
       "collectedAt": "2026-09-27",
       "permission": "사용자가 공개 재게시 허락이 있음을 확인",
-      "transcription": "재촬영 사진 OCR; 원본문항·선택지 대조 완료; 정답 미확인"
+      "transcription": "원본문항·네 선택지 대조 완료; 표준교재·공식 근거로 정답 판단",
+      "answerBasis": "표준교재·공식 근거 대조 판단 (인쇄 정답표 전사 아님)",
+      "answerResolution": {
+        "answer": "2",
+        "nature": "표준교재·공식 근거 대조 판단",
+        "reason": "MAS는 반복적·상용적 수요의 효율적 조달과 선택권을 지원한다.",
+        "verifiedAt": "2026-09-27",
+        "sources": [
+          {
+            "path": "output/standard_textbook/1과목_공공조달의 이해/ch03_제3장_전자조달시스템.md",
+            "title": "조달청 표준교재 핵심 정리"
+          }
+        ]
+      }
     }
   },
   {
@@ -10758,7 +11076,7 @@
         "text": "불특정 다수 기관이 반복적으로 구매하는 물품의 행정 효율성을 극대화하기 위해 운영된다."
       }
     ],
-    "answer": null,
+    "answer": "3",
     "source": {
       "photo": "page_0075.jpg",
       "retryPhoto": "page_0075.jpg",
@@ -10771,7 +11089,20 @@
       "subject": 1,
       "collectedAt": "2026-09-27",
       "permission": "사용자가 공개 재게시 허락이 있음을 확인",
-      "transcription": "재촬영 사진 OCR; 원본문항·선택지 대조 완료; 정답 미확인"
+      "transcription": "원본문항·네 선택지 대조 완료; 표준교재·공식 근거로 정답 판단",
+      "answerBasis": "표준교재·공식 근거 대조 판단 (인쇄 정답표 전사 아님)",
+      "answerResolution": {
+        "answer": "3",
+        "nature": "표준교재·공식 근거 대조 판단",
+        "reason": "종합쇼핑몰은 기존 단가·제3자단가·MAS 계약에 따른 납품요구 구조로 매번 신규 총액계약을 체결하지 않는다.",
+        "verifiedAt": "2026-09-27",
+        "sources": [
+          {
+            "path": "output/standard_textbook/1과목_공공조달의 이해/ch03_제3장_전자조달시스템.md",
+            "title": "조달청 표준교재 핵심 정리"
+          }
+        ]
+      }
     }
   },
   {
@@ -10985,7 +11316,7 @@
         "text": "신용카드 결제는 불가능하며 오직 오프라인 대면 현금 전달만 가능하다."
       }
     ],
-    "answer": null,
+    "answer": "1",
     "source": {
       "photo": "page_0078.jpg",
       "retryPhoto": "page_0078.jpg",
@@ -10998,7 +11329,20 @@
       "subject": 1,
       "collectedAt": "2026-09-27",
       "permission": "사용자가 공개 재게시 허락이 있음을 확인",
-      "transcription": "재촬영 사진 OCR; 원본문항·선택지 대조 완료; 정답 미확인"
+      "transcription": "원본문항·네 선택지 대조 완료; 표준교재·공식 근거로 정답 판단",
+      "answerBasis": "표준교재·공식 근거 대조 판단 (인쇄 정답표 전사 아님)",
+      "answerResolution": {
+        "answer": "1",
+        "nature": "표준교재·공식 근거 대조 판단",
+        "reason": "벤처나라 가격은 적정성 검토를 거친다. 실시간 경매·영구 동결·현금만 가능하다는 설명은 틀리다.",
+        "verifiedAt": "2026-09-27",
+        "sources": [
+          {
+            "path": "output/standard_textbook/1과목_공공조달의 이해/ch03_제3장_전자조달시스템.md",
+            "title": "조달청 표준교재 핵심 정리"
+          }
+        ]
+      }
     }
   },
   {
@@ -11074,7 +11418,7 @@
         "text": "대기업 참여 제한 예외 규정이 적용되는 대형 SW 개발 사업이 주를 이룬다."
       }
     ],
-    "answer": null,
+    "answer": "2",
     "source": {
       "photo": "page_0079.jpg",
       "retryPhoto": "page_0079.jpg",
@@ -11087,7 +11431,20 @@
       "subject": 1,
       "collectedAt": "2026-09-27",
       "permission": "사용자가 공개 재게시 허락이 있음을 확인",
-      "transcription": "재촬영 사진 OCR; 원본문항·선택지 대조 완료; 정답 미확인"
+      "transcription": "원본문항·네 선택지 대조 완료; 표준교재·공식 근거로 정답 판단",
+      "answerBasis": "표준교재·공식 근거 대조 판단 (인쇄 정답표 전사 아님)",
+      "answerResolution": {
+        "answer": "2",
+        "nature": "표준교재·공식 근거 대조 판단",
+        "reason": "이음장터는 소액 서비스 거래를 지원한다. 실제 계약은 기관·기업요건·금액·견적수별 법령을 별도로 충족해야 한다.",
+        "verifiedAt": "2026-09-27",
+        "sources": [
+          {
+            "path": "output/standard_textbook/1과목_공공조달의 이해/ch03_제3장_전자조달시스템.md",
+            "title": "조달청 표준교재 핵심 정리"
+          }
+        ]
+      }
     }
   },
   {
@@ -11176,7 +11533,19 @@
       "subject": 1,
       "collectedAt": "2026-09-27",
       "permission": "사용자가 공개 재게시 허락이 있음을 확인",
-      "transcription": "재촬영 사진 OCR; 원본문항·선택지 대조 완료; 정답 미확인"
+      "transcription": "재촬영 사진 OCR; 원본문항·선택지 대조 완료; 정답 미확인",
+      "answerConflict": "규모만으로 이음장터 대기업 공급자 등록을 일률적으로 금지한다는 공식 근거를 확인하지 못해 ③을 추정 정답으로 채점하지 않는다.",
+      "answerReview": {
+        "nature": "원문 정답 불확정 사유 확인",
+        "reason": "규모만으로 이음장터 대기업 공급자 등록을 일률적으로 금지한다는 공식 근거를 확인하지 못해 ③을 추정 정답으로 채점하지 않는다.",
+        "verifiedAt": "2026-09-27",
+        "sources": [
+          {
+            "path": "output/standard_textbook/1과목_공공조달의 이해/ch03_제3장_전자조달시스템.md",
+            "title": "조달청 표준교재 핵심 정리"
+          }
+        ]
+      }
     }
   },
   {
@@ -11298,7 +11667,7 @@
         "text": "5개 플랫폼의 입점 요건 단가 구성 방식 규격 규제는 완전히 동일하므로 행정 편의를 위해 한 번에 무작위 중 복 등록을 처리해야 한다."
       }
     ],
-    "answer": null,
+    "answer": "4",
     "source": {
       "photo": "page_0080.jpg",
       "retryPhoto": "page_0080.jpg",
@@ -11311,7 +11680,20 @@
       "subject": 1,
       "collectedAt": "2026-09-27",
       "permission": "사용자가 공개 재게시 허락이 있음을 확인",
-      "transcription": "재촬영 사진 OCR; 원본문항·선택지 대조 완료; 정답 미확인"
+      "transcription": "원본문항·네 선택지 대조 완료; 표준교재·공식 근거로 정답 판단",
+      "answerBasis": "표준교재·공식 근거 대조 판단 (인쇄 정답표 전사 아님)",
+      "answerResolution": {
+        "answer": "4",
+        "nature": "표준교재·공식 근거 대조 판단",
+        "reason": "5개 플랫폼은 대상·계약구조·요건이 달라 동일 조건으로 무작위 중복 등록할 수 없다.",
+        "verifiedAt": "2026-09-27",
+        "sources": [
+          {
+            "path": "output/standard_textbook/1과목_공공조달의 이해/ch03_제3장_전자조달시스템.md",
+            "title": "조달청 표준교재 핵심 정리"
+          }
+        ]
+      }
     }
   },
   {
@@ -11341,7 +11723,7 @@
         "text": "조달 절차의 일관성 및 투명성 강화"
       }
     ],
-    "answer": null,
+    "answer": "4",
     "source": {
       "photo": "page_0082.jpg",
       "retryPhoto": "page_0082.jpg",
@@ -11354,7 +11736,20 @@
       "subject": 1,
       "collectedAt": "2026-09-27",
       "permission": "사용자가 공개 재게시 허락이 있음을 확인",
-      "transcription": "재촬영 사진 OCR; 원본문항·선택지 대조 완료; 정답 미확인"
+      "transcription": "원본문항·네 선택지 대조 완료; 표준교재·공식 근거로 정답 판단",
+      "answerBasis": "표준교재·공식 근거 대조 판단 (인쇄 정답표 전사 아님)",
+      "answerResolution": {
+        "answer": "4",
+        "nature": "표준교재·공식 근거 대조 판단",
+        "reason": "목록법은 분류 통일과 목록정보의 체계적 이용을 규율한다. 일반 물품관리 근거인 물품관리법(1962)과 구별하면 ④가 가장 적절하다.",
+        "verifiedAt": "2026-09-27",
+        "sources": [
+          {
+            "path": "output/standard_textbook/1과목_공공조달의 이해/ch03_제3장_전자조달시스템.md",
+            "title": "조달청 표준교재 핵심 정리"
+          }
+        ]
+      }
     }
   },
   {
@@ -11384,7 +11779,7 @@
         "text": "품명은 복잡하게 기술해야 한다."
       }
     ],
-    "answer": null,
+    "answer": "2",
     "source": {
       "photo": "page_0083.jpg",
       "retryPhoto": "page_0083.jpg",
@@ -11397,7 +11792,20 @@
       "subject": 1,
       "collectedAt": "2026-09-27",
       "permission": "사용자가 공개 재게시 허락이 있음을 확인",
-      "transcription": "재촬영 사진 OCR; 원본문항·선택지 대조 완료; 정답 미확인"
+      "transcription": "원본문항·네 선택지 대조 완료; 표준교재·공식 근거로 정답 판단",
+      "answerBasis": "표준교재·공식 근거 대조 판단 (인쇄 정답표 전사 아님)",
+      "answerResolution": {
+        "answer": "2",
+        "nature": "표준교재·공식 근거 대조 판단",
+        "reason": "포괄성은 기존·신규 품목 모두를 분류체계에 수용하는 원칙이다.",
+        "verifiedAt": "2026-09-27",
+        "sources": [
+          {
+            "path": "output/standard_textbook/1과목_공공조달의 이해/ch03_제3장_전자조달시스템.md",
+            "title": "조달청 표준교재 핵심 정리"
+          }
+        ]
+      }
     }
   },
   {
@@ -11473,7 +11881,7 @@
         "text": "5단계: 대 · 중 · 소 · 세 · 세부"
       }
     ],
-    "answer": null,
+    "answer": "3",
     "source": {
       "photo": "page_0084.jpg",
       "retryPhoto": "page_0084.jpg",
@@ -11486,7 +11894,20 @@
       "subject": 1,
       "collectedAt": "2026-09-27",
       "permission": "사용자가 공개 재게시 허락이 있음을 확인",
-      "transcription": "재촬영 사진 OCR; 원본문항·선택지 대조 완료; 정답 미확인"
+      "transcription": "원본문항·네 선택지 대조 완료; 표준교재·공식 근거로 정답 판단",
+      "answerBasis": "표준교재·공식 근거 대조 판단 (인쇄 정답표 전사 아님)",
+      "answerResolution": {
+        "answer": "3",
+        "nature": "표준교재·공식 근거 대조 판단",
+        "reason": "UNSPSC 기본 구조는 대·중·소·세 4단계이며 국내 세부품명 추가와 구별한다.",
+        "verifiedAt": "2026-09-27",
+        "sources": [
+          {
+            "path": "output/standard_textbook/1과목_공공조달의 이해/ch03_제3장_전자조달시스템.md",
+            "title": "조달청 표준교재 핵심 정리"
+          }
+        ]
+      }
     }
   },
   {
@@ -11700,7 +12121,7 @@
         "text": "중소기업 지원과 함께 품질 및 이행능력 확보를 고려해 야 한다."
       }
     ],
-    "answer": null,
+    "answer": "4",
     "source": {
       "photo": "page_0088.jpg",
       "retryPhoto": "page_0088.jpg",
@@ -11713,7 +12134,20 @@
       "subject": 1,
       "collectedAt": "2026-09-27",
       "permission": "사용자가 공개 재게시 허락이 있음을 확인",
-      "transcription": "재촬영 사진 OCR; 원본문항·선택지 대조 완료; 정답 미확인"
+      "transcription": "원본문항·네 선택지 대조 완료; 표준교재·공식 근거로 정답 판단",
+      "answerBasis": "표준교재·공식 근거 대조 판단 (인쇄 정답표 전사 아님)",
+      "answerResolution": {
+        "answer": "4",
+        "nature": "표준교재·공식 근거 대조 판단",
+        "reason": "중소기업 지원은 품질·이행능력 확보와 병행해야 한다.",
+        "verifiedAt": "2026-09-27",
+        "sources": [
+          {
+            "path": "output/standard_textbook/1과목_공공조달의 이해/ch05_제5장_전략적조달활용.md",
+            "title": "조달청 표준교재 핵심 정리"
+          }
+        ]
+      }
     }
   },
   {
@@ -11881,7 +12315,7 @@
         "text": "발주기관은 공사만 관리하고, 납품업체가 자재 구매를 결정한다."
       }
     ],
-    "answer": null,
+    "answer": "3",
     "source": {
       "photo": "page_0090.jpg",
       "retryPhoto": "page_0090.jpg",
@@ -11894,7 +12328,20 @@
       "subject": 1,
       "collectedAt": "2026-09-27",
       "permission": "사용자가 공개 재게시 허락이 있음을 확인",
-      "transcription": "재촬영 사진 OCR; 원본문항·선택지 대조 완료; 정답 미확인"
+      "transcription": "원본문항·네 선택지 대조 완료; 표준교재·공식 근거로 정답 판단",
+      "answerBasis": "표준교재·공식 근거 대조 판단 (인쇄 정답표 전사 아님)",
+      "answerResolution": {
+        "answer": "3",
+        "nature": "표준교재·공식 근거 대조 판단",
+        "reason": "발주기관은 자재를 직접 구매·지급하고 시공업체는 공사를 수행한다.",
+        "verifiedAt": "2026-09-27",
+        "sources": [
+          {
+            "path": "output/standard_textbook/1과목_공공조달의 이해/ch05_제5장_전략적조달활용.md",
+            "title": "조달청 표준교재 핵심 정리"
+          }
+        ]
+      }
     }
   },
   {
@@ -11924,7 +12371,7 @@
         "text": "품질 고려 배제"
       }
     ],
-    "answer": null,
+    "answer": "1",
     "source": {
       "photo": "page_0090.jpg",
       "retryPhoto": "page_0090.jpg",
@@ -11937,7 +12384,20 @@
       "subject": 1,
       "collectedAt": "2026-09-27",
       "permission": "사용자가 공개 재게시 허락이 있음을 확인",
-      "transcription": "재촬영 사진 OCR; 원본문항·선택지 대조 완료; 정답 미확인"
+      "transcription": "원본문항·네 선택지 대조 완료; 표준교재·공식 근거로 정답 판단",
+      "answerBasis": "표준교재·공식 근거 대조 판단 (인쇄 정답표 전사 아님)",
+      "answerResolution": {
+        "answer": "1",
+        "nature": "표준교재·공식 근거 대조 판단",
+        "reason": "직접구매는 하청 종속을 방지하고 중소기업의 자재시장 참여를 지원한다.",
+        "verifiedAt": "2026-09-27",
+        "sources": [
+          {
+            "path": "output/standard_textbook/1과목_공공조달의 이해/ch05_제5장_전략적조달활용.md",
+            "title": "조달청 표준교재 핵심 정리"
+          }
+        ]
+      }
     }
   },
   {
@@ -11967,7 +12427,7 @@
         "text": "공공조달은 친환경 제품보다 최저가 제품 구매를 우선해 야 한다."
       }
     ],
-    "answer": null,
+    "answer": "3",
     "source": {
       "photo": "page_0092.jpg",
       "retryPhoto": "page_0092.jpg",
@@ -11980,7 +12440,20 @@
       "subject": 1,
       "collectedAt": "2026-09-27",
       "permission": "사용자가 공개 재게시 허락이 있음을 확인",
-      "transcription": "재촬영 사진 OCR; 원본문항·선택지 대조 완료; 정답 미확인"
+      "transcription": "원본문항·네 선택지 대조 완료; 표준교재·공식 근거로 정답 판단",
+      "answerBasis": "표준교재·공식 근거 대조 판단 (인쇄 정답표 전사 아님)",
+      "answerResolution": {
+        "answer": "3",
+        "nature": "표준교재·공식 근거 대조 판단",
+        "reason": "공공부문의 구매력은 환경적 지속가능성을 실현하는 전략적 수단이다.",
+        "verifiedAt": "2026-09-27",
+        "sources": [
+          {
+            "path": "output/standard_textbook/1과목_공공조달의 이해/ch04_제4장_전략적공공조달.md",
+            "title": "조달청 표준교재 핵심 정리"
+          }
+        ]
+      }
     }
   },
   {
@@ -12102,7 +12575,7 @@
         "text": "공공기관의 구매권한 폐지"
       }
     ],
-    "answer": null,
+    "answer": "2",
     "source": {
       "photo": "page_0092.jpg",
       "retryPhoto": "page_0092.jpg",
@@ -12115,7 +12588,20 @@
       "subject": 1,
       "collectedAt": "2026-09-27",
       "permission": "사용자가 공개 재게시 허락이 있음을 확인",
-      "transcription": "재촬영 사진 OCR; 원본문항·선택지 대조 완료; 정답 미확인"
+      "transcription": "원본문항·네 선택지 대조 완료; 표준교재·공식 근거로 정답 판단",
+      "answerBasis": "표준교재·공식 근거 대조 판단 (인쇄 정답표 전사 아님)",
+      "answerResolution": {
+        "answer": "2",
+        "nature": "표준교재·공식 근거 대조 판단",
+        "reason": "공급품목 범위와 구매 수요·활용의 제약은 녹색구매의 한계다. 법적 근거 부재나 구매권한 폐지는 사실이 아니다.",
+        "verifiedAt": "2026-09-27",
+        "sources": [
+          {
+            "path": "output/standard_textbook/1과목_공공조달의 이해/ch05_제5장_전략적조달활용.md",
+            "title": "조달청 표준교재 핵심 정리"
+          }
+        ]
+      }
     }
   },
   {
@@ -12237,7 +12723,7 @@
         "text": "계약법 위반이다."
       }
     ],
-    "answer": null,
+    "answer": "2",
     "source": {
       "photo": "page_0094.jpg",
       "retryPhoto": "page_0094.jpg",
@@ -12250,7 +12736,20 @@
       "subject": 1,
       "collectedAt": "2026-09-27",
       "permission": "사용자가 공개 재게시 허락이 있음을 확인",
-      "transcription": "재촬영 사진 OCR; 원본문항·선택지 대조 완료; 정답 미확인"
+      "transcription": "원본문항·네 선택지 대조 완료; 표준교재·공식 근거로 정답 판단",
+      "answerBasis": "표준교재·공식 근거 대조 판단 (인쇄 정답표 전사 아님)",
+      "answerResolution": {
+        "answer": "2",
+        "nature": "표준교재·공식 근거 대조 판단",
+        "reason": "구입가격 외 운영·유지관리 등을 합산한 전체 비용으로 경제성을 평가한다.",
+        "verifiedAt": "2026-09-27",
+        "sources": [
+          {
+            "path": "output/standard_textbook/1과목_공공조달의 이해/ch05_제5장_전략적조달활용.md",
+            "title": "조달청 표준교재 핵심 정리"
+          }
+        ]
+      }
     }
   },
   {
@@ -12293,7 +12792,19 @@
       "subject": 1,
       "collectedAt": "2026-09-27",
       "permission": "사용자가 공개 재게시 허락이 있음을 확인",
-      "transcription": "재촬영 사진 OCR; 원본문항·선택지 대조 완료; 정답 미확인"
+      "transcription": "재촬영 사진 OCR; 원본문항·선택지 대조 완료; 정답 미확인",
+      "answerConflict": "취득·운영·유지보수는 생애주기비용에 포함되지만 부가가치세를 항상 제외한다는 일반원칙은 없다. 공제·환급과 평가조건에 따라 취득비용에 포함될 수 있어 단일 답을 확정하지 않는다.",
+      "answerReview": {
+        "nature": "원문 정답 불확정 사유 확인",
+        "reason": "취득·운영·유지보수는 생애주기비용에 포함되지만 부가가치세를 항상 제외한다는 일반원칙은 없다. 공제·환급과 평가조건에 따라 취득비용에 포함될 수 있어 단일 답을 확정하지 않는다.",
+        "verifiedAt": "2026-09-27",
+        "sources": [
+          {
+            "path": "output/standard_textbook/1과목_공공조달의 이해/ch05_제5장_전략적조달활용.md",
+            "title": "조달청 표준교재 핵심 정리"
+          }
+        ]
+      }
     }
   },
   {
@@ -12415,7 +12926,7 @@
         "text": "모든 중소기업 제품을 자동으로 우수제품으로 지정하는 제도이다."
       }
     ],
-    "answer": null,
+    "answer": "2",
     "source": {
       "photo": "page_0095.jpg",
       "retryPhoto": "page_0095.jpg",
@@ -12428,7 +12939,24 @@
       "subject": 1,
       "collectedAt": "2026-09-27",
       "permission": "사용자가 공개 재게시 허락이 있음을 확인",
-      "transcription": "재촬영 사진 OCR; 원본문항·선택지 대조 완료; 정답 미확인"
+      "transcription": "원본문항·네 선택지 대조 완료; 표준교재·공식 근거로 정답 판단",
+      "answerBasis": "표준교재·공식 근거 대조 판단 (인쇄 정답표 전사 아님)",
+      "answerResolution": {
+        "answer": "2",
+        "nature": "표준교재·공식 근거 대조 판단",
+        "reason": "기술·품질이 우수한 중소기업 및 요건을 갖춘 일부 중견기업 제품을 조달청이 심사·지정한다.",
+        "verifiedAt": "2026-09-27",
+        "sources": [
+          {
+            "path": "output/standard_textbook/1과목_공공조달의 이해/ch05_제5장_전략적조달활용.md",
+            "title": "조달청 표준교재 핵심 정리"
+          },
+          {
+            "url": "https://pps.go.kr/kor/content.do?key=00297",
+            "title": "조달청 우수제품 지정제도 안내"
+          }
+        ]
+      }
     }
   },
   {
@@ -12458,7 +12986,7 @@
         "text": "중국 CCC, 러시아 GOST"
       }
     ],
-    "answer": null,
+    "answer": "1",
     "source": {
       "photo": "page_0095.jpg",
       "retryPhoto": "page_0095.jpg",
@@ -12471,7 +12999,29 @@
       "subject": 1,
       "collectedAt": "2026-09-27",
       "permission": "사용자가 공개 재게시 허락이 있음을 확인",
-      "transcription": "재촬영 사진 OCR; 원본문항·선택지 대조 완료; 정답 미확인"
+      "transcription": "원본문항·네 선택지 대조 완료; 표준교재·공식 근거로 정답 판단",
+      "answerBasis": "표준교재·공식 근거 대조 판단 (인쇄 정답표 전사 아님)",
+      "answerResolution": {
+        "answer": "1",
+        "nature": "표준교재·공식 근거 대조 판단",
+        "reason": "표준교재 303~304·316쪽은 OECD 혁신조달 사례로 BCIP·SBRI와 EGSP를 함께 설명한다.",
+        "verifiedAt": "2026-09-27",
+        "sources": [
+          {
+            "path": "output/standard_textbook/1과목_공공조달의 이해/ch05_제5장_전략적조달활용.md",
+            "title": "조달청 표준교재 핵심 정리"
+          },
+          {
+            "path": "sources/공식_조달청_표준교재_pdf/1과목_공공조달의 이해/교재.pdf",
+            "pages": [
+              303,
+              304,
+              316
+            ],
+            "title": "조달청 표준교재 1권"
+          }
+        ]
+      }
     }
   },
   {
@@ -12501,7 +13051,7 @@
         "text": "시장 독점 강화 및 경쟁 제한"
       }
     ],
-    "answer": null,
+    "answer": "4",
     "source": {
       "photo": "page_0095.jpg",
       "retryPhoto": "page_0095.jpg",
@@ -12514,7 +13064,20 @@
       "subject": 1,
       "collectedAt": "2026-09-27",
       "permission": "사용자가 공개 재게시 허락이 있음을 확인",
-      "transcription": "재촬영 사진 OCR; 원본문항·선택지 대조 완료; 정답 미확인"
+      "transcription": "원본문항·네 선택지 대조 완료; 표준교재·공식 근거로 정답 판단",
+      "answerBasis": "표준교재·공식 근거 대조 판단 (인쇄 정답표 전사 아님)",
+      "answerResolution": {
+        "answer": "4",
+        "nature": "표준교재·공식 근거 대조 판단",
+        "reason": "판로·기술개발·서비스 품질 향상이 정책 효과이며 시장 독점 강화는 목적이 아니다.",
+        "verifiedAt": "2026-09-27",
+        "sources": [
+          {
+            "path": "output/standard_textbook/1과목_공공조달의 이해/ch05_제5장_전략적조달활용.md",
+            "title": "조달청 표준교재 핵심 정리"
+          }
+        ]
+      }
     }
   },
   {
@@ -12636,7 +13199,7 @@
         "text": "해외 직구"
       }
     ],
-    "answer": null,
+    "answer": "3",
     "source": {
       "photo": "page_0099.jpg",
       "retryPhoto": "page_0099.jpg",
@@ -12649,7 +13212,20 @@
       "subject": 1,
       "collectedAt": "2026-09-27",
       "permission": "사용자가 공개 재게시 허락이 있음을 확인",
-      "transcription": "재촬영 사진 OCR; 원본문항·선택지 대조 완료; 정답 미확인"
+      "transcription": "원본문항·네 선택지 대조 완료; 표준교재·공식 근거로 정답 판단",
+      "answerBasis": "표준교재·공식 근거 대조 판단 (인쇄 정답표 전사 아님)",
+      "answerResolution": {
+        "answer": "3",
+        "nature": "표준교재·공식 근거 대조 판단",
+        "reason": "장애인기업 물품 8천만원은 교재 기준 5천만원 초과~1억원으로 2인 이상 견적이 원칙이며 별도 1인 견적 예외는 사례에 없다.",
+        "verifiedAt": "2026-09-27",
+        "sources": [
+          {
+            "path": "output/standard_textbook/1과목_공공조달의 이해/ch05_제5장_전략적조달활용.md",
+            "title": "조달청 표준교재 핵심 정리"
+          }
+        ]
+      }
     }
   },
   {
@@ -12679,7 +13255,7 @@
         "text": "장애인기업 우선구매제도는 장애인 고용 확대와 사회적 포용을 위한 제도이지만 공공조달 절차상 어떠한 우대 조치도 인정되지 않는다."
       }
     ],
-    "answer": null,
+    "answer": "4",
     "source": {
       "photo": "page_0099.jpg",
       "retryPhoto": "page_0099.jpg",
@@ -12692,7 +13268,20 @@
       "subject": 1,
       "collectedAt": "2026-09-27",
       "permission": "사용자가 공개 재게시 허락이 있음을 확인",
-      "transcription": "재촬영 사진 OCR; 원본문항·선택지 대조 완료; 정답 미확인"
+      "transcription": "원본문항·네 선택지 대조 완료; 표준교재·공식 근거로 정답 판단",
+      "answerBasis": "표준교재·공식 근거 대조 판단 (인쇄 정답표 전사 아님)",
+      "answerResolution": {
+        "answer": "4",
+        "nature": "표준교재·공식 근거 대조 판단",
+        "reason": "구매목표·수의계약·심사 가점 등 우대가 있으므로 우대가 전혀 없다는 ④가 틀리다.",
+        "verifiedAt": "2026-09-27",
+        "sources": [
+          {
+            "path": "output/standard_textbook/1과목_공공조달의 이해/ch05_제5장_전략적조달활용.md",
+            "title": "조달청 표준교재 핵심 정리"
+          }
+        ]
+      }
     }
   },
   {
@@ -12722,7 +13311,7 @@
         "text": "장애인기업 제품 구매 계획의 수립 및 실적 통보는 각 공 공기관의 자율 사항이므로 제출 의무를 위반하더라도 제 도적 제재는 전혀 없다."
       }
     ],
-    "answer": null,
+    "answer": "4",
     "source": {
       "photo": "page_0099.jpg",
       "retryPhoto": "page_0099.jpg",
@@ -12735,7 +13324,20 @@
       "subject": 1,
       "collectedAt": "2026-09-27",
       "permission": "사용자가 공개 재게시 허락이 있음을 확인",
-      "transcription": "재촬영 사진 OCR; 원본문항·선택지 대조 완료; 정답 미확인"
+      "transcription": "원본문항·네 선택지 대조 완료; 표준교재·공식 근거로 정답 판단",
+      "answerBasis": "표준교재·공식 근거 대조 판단 (인쇄 정답표 전사 아님)",
+      "answerResolution": {
+        "answer": "4",
+        "nature": "표준교재·공식 근거 대조 판단",
+        "reason": "구매계획·실적 제출은 법정 제도이므로 전적으로 자율이라는 ④가 틀리다.",
+        "verifiedAt": "2026-09-27",
+        "sources": [
+          {
+            "path": "output/standard_textbook/1과목_공공조달의 이해/ch05_제5장_전략적조달활용.md",
+            "title": "조달청 표준교재 핵심 정리"
+          }
+        ]
+      }
     }
   },
   {
@@ -13840,7 +14442,7 @@
         "text": "비효율적 예산 집행 사례이다."
       }
     ],
-    "answer": null,
+    "answer": "2",
     "source": {
       "photo": "page_0019.jpg",
       "batch": "subject1-additional-20260927",
@@ -13854,7 +14456,20 @@
       "subject": 1,
       "collectedAt": "2026-09-27",
       "permission": "사용자가 공개 재게시 허락이 있음을 확인",
-      "transcription": "사진 OCR; 원본문항·네 선택지 대조 완료"
+      "transcription": "원본문항·네 선택지 대조 완료; 표준교재·공식 근거로 정답 판단",
+      "answerBasis": "표준교재·공식 근거 대조 판단 (인쇄 정답표 전사 아님)",
+      "answerResolution": {
+        "answer": "2",
+        "nature": "표준교재·공식 근거 대조 판단",
+        "reason": "산업 육성 등 정책 효과와 경제성·비용 대비 가치의 균형을 고려한다.",
+        "verifiedAt": "2026-09-27",
+        "sources": [
+          {
+            "path": "output/standard_textbook/1과목_공공조달의 이해/ch04_제4장_전략적공공조달.md",
+            "title": "조달청 표준교재 핵심 정리"
+          }
+        ]
+      }
     }
   },
   {
@@ -15858,7 +16473,23 @@
       "subject": 1,
       "collectedAt": "2026-09-27",
       "permission": "사용자가 공개 재게시 허락이 있음을 확인",
-      "transcription": "원본문항·네 선택지 직접 대조 완료; 원본 정답표 대응 미확인으로 자동 채점 보류"
+      "transcription": "원본문항·네 선택지 직접 대조 완료; 원본 정답표 대응 미확인으로 자동 채점 보류",
+      "answerConflict": "표준교재 454쪽 표17은 브로커 개입 환수액을 계약금액의 10%로 제시한다. 모든 선택지의 '기본산정금액 +'는 해당 산식에 없어 ①을 임의로 채점하지 않는다.",
+      "answerReview": {
+        "nature": "원문 정답 불확정 사유 확인",
+        "reason": "표준교재 454쪽 표17은 브로커 개입 환수액을 계약금액의 10%로 제시한다. 모든 선택지의 '기본산정금액 +'는 해당 산식에 없어 ①을 임의로 채점하지 않는다.",
+        "verifiedAt": "2026-09-27",
+        "sources": [
+          {
+            "path": "sources/공식_조달청_표준교재_pdf/1과목_공공조달의 이해/교재.pdf",
+            "pages": [
+              453,
+              454
+            ],
+            "title": "조달청 표준교재 1권 표16·17"
+          }
+        ]
+      }
     }
   },
   {
@@ -15902,7 +16533,23 @@
       "subject": 1,
       "collectedAt": "2026-09-27",
       "permission": "사용자가 공개 재게시 허락이 있음을 확인",
-      "transcription": "원본문항·네 선택지 직접 대조 완료; 원본 정답표 대응 미확인으로 자동 채점 보류"
+      "transcription": "원본문항·네 선택지 직접 대조 완료; 원본 정답표 대응 미확인으로 자동 채점 보류",
+      "answerConflict": "표준교재 454쪽 표17은 기타 질서 훼손 환수액을 계약금액×평균영업이익률과 계약금액×10% 중 높은 금액으로 제시한다. 모든 선택지의 '기본산정금액 +'는 해당 산식에 없어 ③을 임의로 채점하지 않는다.",
+      "answerReview": {
+        "nature": "원문 정답 불확정 사유 확인",
+        "reason": "표준교재 454쪽 표17은 기타 질서 훼손 환수액을 계약금액×평균영업이익률과 계약금액×10% 중 높은 금액으로 제시한다. 모든 선택지의 '기본산정금액 +'는 해당 산식에 없어 ③을 임의로 채점하지 않는다.",
+        "verifiedAt": "2026-09-27",
+        "sources": [
+          {
+            "path": "sources/공식_조달청_표준교재_pdf/1과목_공공조달의 이해/교재.pdf",
+            "pages": [
+              453,
+              454
+            ],
+            "title": "조달청 표준교재 1권 표16·17"
+          }
+        ]
+      }
     }
   },
   {
@@ -15911,12 +16558,28 @@
     "group": "Part 4 · Chapter 4",
     "stem": "다음 중 중증장애인생산품 우선구매제도의 운영 특징은?",
     "choices": [
-      {"key": "1", "label": "①", "text": "공공기관 경영평가 지표에 반영"},
-      {"key": "2", "label": "②", "text": "모든 계약은 경쟁입찰만 허용"},
-      {"key": "3", "label": "③", "text": "해외 기업 제품도 포함"},
-      {"key": "4", "label": "④", "text": "납품 지연 시 자동 면책"}
+      {
+        "key": "1",
+        "label": "①",
+        "text": "공공기관 경영평가 지표에 반영"
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "모든 계약은 경쟁입찰만 허용"
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "해외 기업 제품도 포함"
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "납품 지연 시 자동 면책"
+      }
     ],
-    "answer": null,
+    "answer": "1",
     "source": {
       "photo": "page_0001.jpg",
       "batch": "subject1-additional-20260927",
@@ -15930,7 +16593,24 @@
       "subject": 1,
       "collectedAt": "2026-09-27",
       "permission": "사용자가 공개 재게시 허락이 있음을 확인",
-      "transcription": "원본문항·네 선택지 직접 대조 완료; 원본 정답표 대응 미확인으로 자동 채점 보류"
+      "transcription": "원본문항·네 선택지 대조 완료; 표준교재·공식 근거로 정답 판단",
+      "answerBasis": "표준교재·공식 근거 대조 판단 (인쇄 정답표 전사 아님)",
+      "answerResolution": {
+        "answer": "1",
+        "nature": "표준교재·공식 근거 대조 판단",
+        "reason": "우선구매 실적은 기관 평가에 반영되며 수의계약도 허용된다.",
+        "verifiedAt": "2026-09-27",
+        "sources": [
+          {
+            "path": "output/standard_textbook/1과목_공공조달의 이해/ch05_제5장_전략적조달활용.md",
+            "title": "조달청 표준교재 핵심 정리"
+          },
+          {
+            "url": "https://www.evaluation.go.kr/upload2/atch/eval/20230307140032267.pdf",
+            "title": "보건복지부 2022년 자체평가 결과보고서"
+          }
+        ]
+      }
     }
   }
 ]

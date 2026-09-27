@@ -21,6 +21,40 @@ import import_photo_questions  # noqa: E402
 
 
 class CumulativeCbtTest(unittest.TestCase):
+    def test_subject3_restored_choice_order_matches_printed_answers(self) -> None:
+        questions = json.loads((ROOT / "output/new_question_bank/subject3.json").read_text(encoding="utf-8"))
+        chapter = {int(q["source"].get("verifiedPrintedNumber", q["source"]["answerPrintedNumber"])): q
+                   for q in questions if q["group"] == "Part 4 · Chapter 2"}
+        for number, answer, text in ((19, "2", "지역참여비율"), (23, "3", "자재 및 인력"),
+                                     (26, "4", "80.495%"), (27, "2", "접근성")):
+            question = chapter[number]
+            self.assertEqual(question["answer"], answer)
+            self.assertIn(text, question["choices"][int(answer) - 1]["text"])
+            self.assertTrue(question["source"]["answerPhoto"])
+
+    def test_subject2_manually_recovered_chapters_are_complete(self) -> None:
+        questions = json.loads((ROOT / "output/new_question_bank/subject2.json").read_text(encoding="utf-8"))
+        totals = {(1, 1): 31, (1, 2): 30, (1, 4): 24, (2, 1): 28, (2, 2): 27, (2, 3): 21,
+                  (2, 4): 20, (2, 5): 26, (3, 1): 16, (3, 2): 25, (3, 3): 26, (3, 4): 38, (3, 5): 18}
+        for (part, chapter), total in totals.items():
+            chapter_questions = [q for q in questions if q["group"] == f"Part {part} · Chapter {chapter}"]
+            numbers = [int(q["source"].get("verifiedPrintedNumber", q["source"]["answerPrintedNumber"])) for q in chapter_questions]
+            self.assertEqual(sorted(numbers), list(range(1, total + 1)))
+            self.assertTrue(all(q["answer"] in ("1", "2", "3", "4") for q in chapter_questions))
+
+    def test_subject1_pending_answers_have_evidence_or_explicit_issue(self) -> None:
+        questions = json.loads((ROOT / "output/new_question_bank/subject1.json").read_text(encoding="utf-8"))
+        self.assertEqual([q["no"] for q in questions if q["answer"] is None], [227, 256, 281, 355, 356])
+        for number, answer in ((176, "1"), (181, "3"), (221, "2"), (237, "2"), (263, "3"), (285, "1"), (289, "3"), (357, "1")):
+            question = questions[number - 1]
+            self.assertEqual(question["answer"], answer)
+            self.assertEqual(question["source"]["answerResolution"]["answer"], answer)
+        for number in (227, 256, 281, 355, 356):
+            source = questions[number - 1]["source"]
+            self.assertTrue(source["answerConflict"])
+            self.assertTrue(source["answerReview"]["sources"])
+            self.assertTrue(source["answerReview"]["verifiedAt"])
+
     def test_mock2_rephotographed_available_questions_are_complete(self) -> None:
         questions = json.loads((ROOT / "output/new_question_bank/mock2.json").read_text(encoding="utf-8"))
         printed = {

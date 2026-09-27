@@ -8028,5 +8028,6485 @@
       "answerPrintedNumber": 28,
       "answerVerifiedAt": "2026-09-27"
     }
+  },
+  {
+    "no": 187,
+    "id": "new-subject2:retry20260927-p11-q01",
+    "group": "Part 1 · Chapter 4",
+    "stem": "다음 중 공공조달 동향 모니터링을 통한 수요예측의 핵심 개념으로 가장 적절한 것은?",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "현재 조달 데이터만 분석하여 즉각적인 발주를 결정하는 과정"
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "과거 및 현재 데이터를 분석해 미래 수요를 예측하고 조달계획의 타당성을 확보하는 과정"
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "공급업체의 원가구조를 검토해 낙찰 가능성을 판단하는 과정"
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "정책 방향과 무관하게 단순히 발주 빈도를 기록하는 과정"
+      }
+    ],
+    "answer": "2",
+    "source": {
+      "photo": "page_0011.jpg",
+      "column": null,
+      "printedNumberOcr": "1",
+      "verifiedPrintedNumber": 1,
+      "subject": 2,
+      "batch": "subject2-retry-20260927",
+      "folder": "기본폴더",
+      "bookPage": 210,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR 및 원본 수동 검수; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0020.jpg",
+      "answerPrintedNumber": 1,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 188,
+    "id": "new-subject2:retry20260927-p11-q02",
+    "group": "Part 1 · Chapter 4",
+    "stem": "수요예측의 목적 중 예산 낭비 방지와 가장 직접적으로 연결되는 설명은?",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "동일한 목적을 최소 비용 또는 최적 비용으로 달성하는 것"
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "발주 빈도를 줄여 공급업체의 부담을 완화하는 것"
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "발주 시기를 조정해 납품 지연을 예방하는 것"
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "공급업체의 경쟁 강도를 낮추는 것"
+      }
+    ],
+    "answer": "1",
+    "source": {
+      "photo": "page_0011.jpg",
+      "column": null,
+      "printedNumberOcr": "2",
+      "verifiedPrintedNumber": 2,
+      "subject": 2,
+      "batch": "subject2-retry-20260927",
+      "folder": "기본폴더",
+      "bookPage": 210,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR 및 원본 수동 검수; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0020.jpg",
+      "answerPrintedNumber": 2,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 189,
+    "id": "new-subject2:retry20260927-p11-q03",
+    "group": "Part 1 · Chapter 4",
+    "stem": "다음 중 수요 변화 추이 분석에서 반드시 고려해야 할 요소는?",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "특정 품목·용역·공사의 발주 빈도와 규모"
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "공급업체의 원가구조와 이윤율"
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "계약조건의 법적 준수 여부"
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "납품 일정에 따른 추가 비용"
+      }
+    ],
+    "answer": "1",
+    "source": {
+      "photo": "page_0011.jpg",
+      "column": null,
+      "printedNumberOcr": "3",
+      "verifiedPrintedNumber": 3,
+      "subject": 2,
+      "batch": "subject2-retry-20260927",
+      "folder": "기본폴더",
+      "bookPage": 210,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR 및 원본 수동 검수; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0020.jpg",
+      "answerPrintedNumber": 3,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 190,
+    "id": "new-subject2:retry20260927-p11-q04",
+    "group": "Part 1 · Chapter 4",
+    "stem": "다음 중 외부 환경 변화 분석에 해당하지 않는 것은?",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "정부의 예산 편성과 정책 우선순위"
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "경기 변동과 환율, 원자재 가격"
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "공급업체의 내부 원가구조"
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "조달제도 개정과 법령 개정"
+      }
+    ],
+    "answer": "3",
+    "source": {
+      "photo": "page_0011.jpg",
+      "column": null,
+      "printedNumberOcr": "4",
+      "verifiedPrintedNumber": 4,
+      "subject": 2,
+      "batch": "subject2-retry-20260927",
+      "folder": "기본폴더",
+      "bookPage": 210,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR 및 원본 수동 검수; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0020.jpg",
+      "answerPrintedNumber": 4,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 191,
+    "id": "new-subject2:retry20260927-p11-q05",
+    "group": "Part 1 · Chapter 4",
+    "stem": "다음 중 기관 내부 수요 분석의 핵심 요소로 가장 적절한 것은?",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "사업계획과 예산 규모, 중장기 투자 계획"
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "정책 방향과 법령 개정"
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "낙찰률과 경쟁 강도"
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "입찰혼잡도와 시스템 오류"
+      }
+    ],
+    "answer": "1",
+    "source": {
+      "photo": "page_0011.jpg",
+      "column": null,
+      "printedNumberOcr": "5",
+      "verifiedPrintedNumber": 5,
+      "subject": 2,
+      "batch": "subject2-retry-20260927",
+      "folder": "기본폴더",
+      "bookPage": 210,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR 및 원본 수동 검수; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0020.jpg",
+      "answerPrintedNumber": 5,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 192,
+    "id": "new-subject2:retry20260927-p11-q06",
+    "group": "Part 1 · Chapter 4",
+    "stem": "다음 중 발주계획 정보 수집의 주요 효과로 가장 적절한 것은?",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "공급업체의 원가구조를 검토할 수 있다."
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "부적격 입찰에 따른 법적 분쟁을 예방할 수 있다."
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "낙찰률을 높이기 위해 경쟁 강도를 낮출 수 있다."
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "정책 방향을 조정할 수 있다."
+      }
+    ],
+    "answer": "2",
+    "source": {
+      "photo": "page_0011.jpg",
+      "column": null,
+      "printedNumberOcr": "6",
+      "verifiedPrintedNumber": 6,
+      "subject": 2,
+      "batch": "subject2-retry-20260927",
+      "folder": "기본폴더",
+      "bookPage": 210,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR 및 원본 수동 검수; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0020.jpg",
+      "answerPrintedNumber": 6,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 193,
+    "id": "new-subject2:retry20260927-p11-q07",
+    "group": "Part 1 · Chapter 4",
+    "stem": "다음 중 조달데이터허브 활용의 핵심 목적은?",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "공급업체의 원가구조를 검토하기 위함"
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "중앙조달과 자체조달의 수요 건수, 금액, 집중 시기를 확인하고 중장기 패턴을 분석하기 위함"
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "낙찰률을 높이기 위해 경쟁 강도를 낮추기 위함"
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "정책 방향을 조정하기 위함"
+      }
+    ],
+    "answer": "2",
+    "source": {
+      "photo": "page_0011.jpg",
+      "column": null,
+      "printedNumberOcr": "7",
+      "verifiedPrintedNumber": 7,
+      "subject": 2,
+      "batch": "subject2-retry-20260927",
+      "folder": "기본폴더",
+      "bookPage": 210,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR 및 원본 수동 검수; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0020.jpg",
+      "answerPrintedNumber": 7,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 194,
+    "id": "new-subject2:retry20260927-p11-q08",
+    "group": "Part 1 · Chapter 4",
+    "stem": "다음 중 물품 제조 방식의 장점으로 가장 적절한 것은?",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "거래실례가격을 기준으로 안정적 가격 산정이 가능하다."
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "맞춤형 공급과 특수 규격 충족이 용이하다."
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "차별화가 어려워 가격 경쟁이 심화된다."
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "인건비와 기술료 부담이 크다."
+      }
+    ],
+    "answer": "2",
+    "source": {
+      "photo": "page_0011.jpg",
+      "column": null,
+      "printedNumberOcr": "8",
+      "verifiedPrintedNumber": 8,
+      "subject": 2,
+      "batch": "subject2-retry-20260927",
+      "folder": "기본폴더",
+      "bookPage": 210,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR 및 원본 수동 검수; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0020.jpg",
+      "answerPrintedNumber": 8,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 195,
+    "id": "new-subject2:retry20260927-p12-q09",
+    "group": "Part 1 · Chapter 4",
+    "stem": "다음 중 용역 공급 방식의 장점으로 가장 적절한 것은?",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "인건비와 기술료 부담이 크다."
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "일정 관리 실패 시 계약 불이행 위험이 있다."
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "전문 인력 투입으로 맞춤형 서비스를 제공할 수 있다."
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "재료비, 노무비, 경비 변동성이 크다."
+      }
+    ],
+    "answer": "3",
+    "source": {
+      "photo": "page_0012.jpg",
+      "column": null,
+      "printedNumberOcr": "9",
+      "verifiedPrintedNumber": 9,
+      "subject": 2,
+      "batch": "subject2-retry-20260927",
+      "folder": "기본폴더",
+      "bookPage": 211,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR 및 원본 수동 검수; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0020.jpg",
+      "answerPrintedNumber": 9,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 196,
+    "id": "new-subject2:retry20260927-p12-q10",
+    "group": "Part 1 · Chapter 4",
+    "stem": "다음 중 경쟁입찰의 장점으로 가장 적절한 것은?",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "신속성 확보"
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "기술·품질 중심 평가"
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "경쟁성 확보와 가격 절감"
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "공정성 논란 발생 가능"
+      }
+    ],
+    "answer": "3",
+    "source": {
+      "photo": "page_0012.jpg",
+      "column": null,
+      "printedNumberOcr": "10",
+      "verifiedPrintedNumber": 10,
+      "subject": 2,
+      "batch": "subject2-retry-20260927",
+      "folder": "기본폴더",
+      "bookPage": 211,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR 및 원본 수동 검수; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0020.jpg",
+      "answerPrintedNumber": 10,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 197,
+    "id": "new-subject2:retry20260927-p12-q11",
+    "group": "Part 1 · Chapter 4",
+    "stem": "다음 중 수의계약의 단점으로 가장 적절한 것은?",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "긴급 대응 가능"
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "공정성 논란 발생 가능"
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "다양한 선택 가능"
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "관리 복잡성 증가"
+      }
+    ],
+    "answer": "2",
+    "source": {
+      "photo": "page_0012.jpg",
+      "column": null,
+      "printedNumberOcr": "11",
+      "verifiedPrintedNumber": 11,
+      "subject": 2,
+      "batch": "subject2-retry-20260927",
+      "folder": "기본폴더",
+      "bookPage": 211,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR 및 원본 수동 검수; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0020.jpg",
+      "answerPrintedNumber": 11,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 198,
+    "id": "new-subject2:retry20260927-p12-q12",
+    "group": "Part 1 · Chapter 4",
+    "stem": "다음 중 다수공급자계약(MAS)의 단점으로 가장 적절한 것은?",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "경쟁 유지 가능"
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "다양한 선택 가능"
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "관리 복잡성 증가"
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "신속 구매 가능"
+      }
+    ],
+    "answer": "3",
+    "source": {
+      "photo": "page_0012.jpg",
+      "column": null,
+      "printedNumberOcr": "12",
+      "verifiedPrintedNumber": 12,
+      "subject": 2,
+      "batch": "subject2-retry-20260927",
+      "folder": "기본폴더",
+      "bookPage": 211,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR 및 원본 수동 검수; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0020.jpg",
+      "answerPrintedNumber": 12,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 199,
+    "id": "new-subject2:retry20260927-p12-q17",
+    "group": "Part 1 · Chapter 4",
+    "stem": "다음 중 가격(비용) 위험에 해당하는 사례는?",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "공급자 파산으로 납품 지연 발생"
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "환율 변동으로 수입 원부자재 가격 상승"
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "불량품 납품으로 규격 미달 발생"
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "신규 진입자 증가로 경쟁 강도 심화"
+      }
+    ],
+    "answer": "2",
+    "source": {
+      "photo": "page_0012.jpg",
+      "column": null,
+      "printedNumberOcr": "17",
+      "verifiedPrintedNumber": 17,
+      "subject": 2,
+      "batch": "subject2-retry-20260927",
+      "folder": "기본폴더",
+      "bookPage": 211,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR 및 원본 수동 검수; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0020.jpg",
+      "answerPrintedNumber": 17,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 200,
+    "id": "new-subject2:retry20260927-p13-q20",
+    "group": "Part 1 · Chapter 4",
+    "stem": "다음 사례에 해당하는 위험 유형으로 가장 적절한 것은? A업체는 계약 불이행으로 분쟁이 발생했고, 계약금액 조정 시 일반관리비와 이윤율에서 손실을 보전해야 했다.",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "공급 위험"
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "계약 위험"
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "품질 위험"
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "시장 위험"
+      }
+    ],
+    "answer": "2",
+    "source": {
+      "photo": "page_0013.jpg",
+      "column": null,
+      "printedNumberOcr": "20",
+      "verifiedPrintedNumber": 20,
+      "subject": 2,
+      "batch": "subject2-retry-20260927",
+      "folder": "기본폴더",
+      "bookPage": null,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR 및 원본 수동 검수; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0020.jpg",
+      "answerPrintedNumber": 20,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 201,
+    "id": "new-subject2:retry20260927-p13-q22",
+    "group": "Part 1 · Chapter 4",
+    "stem": "다음 중 Porter의 5가지 경쟁세력 모델에서 대체재의 위협이 높을 경우 나타날 수 있는 결과는?",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "공급망 안정성 강화"
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "기존 제품 수요 감소"
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "계약조건 충족 용이"
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "납품 일정 단축"
+      }
+    ],
+    "answer": "2",
+    "source": {
+      "photo": "page_0013.jpg",
+      "column": null,
+      "printedNumberOcr": "22",
+      "verifiedPrintedNumber": 22,
+      "subject": 2,
+      "batch": "subject2-retry-20260927",
+      "folder": "기본폴더",
+      "bookPage": null,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR 및 원본 수동 검수; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0020.jpg",
+      "answerPrintedNumber": 22,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 202,
+    "id": "new-subject2:retry20260927-p13-q23",
+    "group": "Part 1 · Chapter 4",
+    "stem": "공급자가 수요기관을 ‘악용(Exploit)’ 영역으로 분류했을 때 나타날 수 있는 행동은?",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "최고의 서비스를 제공한다."
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "향후 성장 가능성을 보고 적극적으로 대응한다."
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "가격을 올리거나 서비스 수준을 낮춘다."
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "대응이 늦거나 거래를 아예 외면한다."
+      }
+    ],
+    "answer": "3",
+    "source": {
+      "photo": "page_0013.jpg",
+      "column": null,
+      "printedNumberOcr": "23",
+      "verifiedPrintedNumber": 23,
+      "subject": 2,
+      "batch": "subject2-retry-20260927",
+      "folder": "기본폴더",
+      "bookPage": null,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR 및 원본 수동 검수; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0020.jpg",
+      "answerPrintedNumber": 23,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 203,
+    "id": "new-subject2:retry20260927-p14-q01",
+    "group": "Part 2 · Chapter 1",
+    "stem": "다음 중 입찰참가자격 등록 절차에서 가장 먼저 수행해야 하는 것은?",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "개인회원 가입"
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "사업자용 인증서 발급"
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "온라인 서류 제출"
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "대표자정보 입력"
+      }
+    ],
+    "answer": "2",
+    "source": {
+      "photo": "page_0014.jpg",
+      "column": null,
+      "printedNumberOcr": "1",
+      "verifiedPrintedNumber": 1,
+      "subject": 2,
+      "batch": "subject2-retry-20260927",
+      "folder": "기본폴더",
+      "bookPage": null,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR 및 원본 수동 검수; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0020.jpg",
+      "answerPrintedNumber": 1,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 204,
+    "id": "new-subject2:retry20260927-p14-q02",
+    "group": "Part 2 · Chapter 1",
+    "stem": "다음 사례에서 반드시 제출해야 하는 서류는? A업체는 제조물품 등록을 신청하면서 공장을 임대해 사용하고 있다.",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "공장등록증 원본만 제출하면 된다."
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "공장관련서류, 임대차계약서, 4대보험 가입자명부를 함께 제출해야 한다."
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "건축물대장만 제출하면 된다."
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "대표자 인감증명서만 제출하면 된다."
+      }
+    ],
+    "answer": "2",
+    "source": {
+      "photo": "page_0014.jpg",
+      "column": null,
+      "printedNumberOcr": "2",
+      "verifiedPrintedNumber": 2,
+      "subject": 2,
+      "batch": "subject2-retry-20260927",
+      "folder": "기본폴더",
+      "bookPage": null,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR 및 원본 수동 검수; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0020.jpg",
+      "answerPrintedNumber": 2,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 205,
+    "id": "new-subject2:retry20260927-p14-q03",
+    "group": "Part 2 · Chapter 1",
+    "stem": "다음 중 공급물품 등록업체와 제조물품 등록업체의 차이를 가장 정확히 설명한 것은?",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "제조물품 등록업체는 직접 생산시설을 갖추고 공장정보를 입력해야 한다."
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "공급물품 등록업체는 공장정보를 반드시 입력해야 한다."
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "두 업체 모두 공장정보 입력이 필요하다."
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "두 업체 모두 단순 공급만 가능하다."
+      }
+    ],
+    "answer": "1",
+    "source": {
+      "photo": "page_0014.jpg",
+      "column": null,
+      "printedNumberOcr": "3",
+      "verifiedPrintedNumber": 3,
+      "subject": 2,
+      "batch": "subject2-retry-20260927",
+      "folder": "기본폴더",
+      "bookPage": null,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR 및 원본 수동 검수; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0020.jpg",
+      "answerPrintedNumber": 3,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 206,
+    "id": "new-subject2:retry20260927-p14-q04",
+    "group": "Part 2 · Chapter 1",
+    "stem": "B업체는 대표자가 2명인 법인이다. 입찰참가자격 등록 시 대표자정보 입력 방법으로 가장 적절한 것은?",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "대표자 모두를 대표대표자로 지정한다."
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "대표자 구분 입력은 선택 사항이다."
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "외국인 대표자는 등록할 수 없다."
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "공동대표 또는 각자대표 구분을 입력하고 반드시 1명은 대표대표자로 지정한다."
+      }
+    ],
+    "answer": "4",
+    "source": {
+      "photo": "page_0014.jpg",
+      "column": null,
+      "printedNumberOcr": "4",
+      "verifiedPrintedNumber": 4,
+      "subject": 2,
+      "batch": "subject2-retry-20260927",
+      "folder": "기본폴더",
+      "bookPage": null,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR 및 원본 수동 검수; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0020.jpg",
+      "answerPrintedNumber": 4,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 207,
+    "id": "new-subject2:retry20260927-p14-q05",
+    "group": "Part 2 · Chapter 1",
+    "stem": "다음 중 온라인 제출서류와 관련된 설명으로 옳지 않은 것은?",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "제조물품 신청업체는 공장정보 관련 서류와 4대보험 관련 서류를 제출해야 한다."
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "일반건설업체로 신청하려는 업체는 업종 등록증과 등록수첩을 제출해야 한다."
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "제출서류는 반드시 원본만 제출해야 하며, 스캔본은 인정되지 않는다."
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "제출서류는 온라인 제출 또는 조달청 방문·우편 제출이 가능하다."
+      }
+    ],
+    "answer": "3",
+    "source": {
+      "photo": "page_0014.jpg",
+      "column": null,
+      "printedNumberOcr": "5",
+      "verifiedPrintedNumber": 5,
+      "subject": 2,
+      "batch": "subject2-retry-20260927",
+      "folder": "기본폴더",
+      "bookPage": null,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR 및 원본 수동 검수; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0020.jpg",
+      "answerPrintedNumber": 5,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 208,
+    "id": "new-subject2:retry20260927-p15-q07",
+    "group": "Part 2 · Chapter 1",
+    "stem": "다음 중 승인 및 반려 절차에 대한 설명으로 옳지 않은 것은?",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "조달청 담당자가 행정정보 공동이용을 통해 서류를 확인한다."
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "이상이 없으면 승인 처리된다."
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "제출서류를 20일 이내 제출하지 않으면 자동 반려된다."
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "승인 후 사용인감 등록은 불가능하다."
+      }
+    ],
+    "answer": "4",
+    "source": {
+      "photo": "page_0015.jpg",
+      "column": null,
+      "printedNumberOcr": "7",
+      "verifiedPrintedNumber": 7,
+      "subject": 2,
+      "batch": "subject2-retry-20260927",
+      "folder": "기본폴더",
+      "bookPage": 221,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR 및 원본 수동 검수; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0020.jpg",
+      "answerPrintedNumber": 7,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 209,
+    "id": "new-subject2:retry20260927-p15-q12",
+    "group": "Part 2 · Chapter 1",
+    "stem": "다음 사례에서 문서 작성의 적정성으로 가장 적절한 것은? F업체는 입찰참가의향서를 제출하면서 회사의 연혁, 주요 사업, 인증 현황, 공급 경험을 포함하였으나 가격정보는 기재하지 않았다.",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "가격정보는 반드시 포함해야 하므로 부적절하다."
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "EOI는 가격정보가 아니라 참여 의향과 기본 역량을 중심으로 작성하므로 적절하다."
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "ESG 활동과 혁신 사례도 반드시 포함해야 하므로 부적절하다."
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "단순히 회사 홍보자료만 제출해도 되므로 적절하다."
+      }
+    ],
+    "answer": "2",
+    "source": {
+      "photo": "page_0015.jpg",
+      "column": null,
+      "printedNumberOcr": "12",
+      "verifiedPrintedNumber": 12,
+      "subject": 2,
+      "batch": "subject2-retry-20260927",
+      "folder": "기본폴더",
+      "bookPage": 221,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR 및 원본 수동 검수; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0021.jpg",
+      "answerPrintedNumber": 12,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 210,
+    "id": "new-subject2:retry20260927-p16-q14",
+    "group": "Part 2 · Chapter 1",
+    "stem": "다음 사례에서 발생할 수 있는 문제로 가장 적절한 것은? G업체는 RFI 응답문서를 작성하면서 회사 홍보자료를 대량 첨부해 핵심 정보가 불명확해졌다.",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "수요기관이 업체의 역량을 더 높게 평가한다."
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "수요기관이 핵심 정보를 파악하기 어려워 평가에서 불리하다."
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "수요기관이 자동으로 낙찰자로 선정한다."
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "수요기관이 가격 정보를 대신 산출한다."
+      }
+    ],
+    "answer": "2",
+    "source": {
+      "photo": "page_0016.jpg",
+      "column": null,
+      "printedNumberOcr": "14",
+      "verifiedPrintedNumber": 14,
+      "subject": 2,
+      "batch": "subject2-retry-20260927",
+      "folder": "기본폴더",
+      "bookPage": null,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR 및 원본 수동 검수; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0021.jpg",
+      "answerPrintedNumber": 14,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 211,
+    "id": "new-subject2:retry20260927-p16-q15",
+    "group": "Part 2 · Chapter 1",
+    "stem": "다음 중 제안요청서(RFP) 응답문서 작성 시 고려해야 할 사항으로 가장 적절하지 않은 것은?",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "제안요청서의 평가기준을 면밀히 검토한다."
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "제안서 작성팀을 구성하고 역할을 분담한다."
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "가격 제안서만 단독으로 작성하여 제출한다."
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "제출 마감일을 준수하고 내부 마감일을 설정한다."
+      }
+    ],
+    "answer": "3",
+    "source": {
+      "photo": "page_0016.jpg",
+      "column": null,
+      "printedNumberOcr": "15",
+      "verifiedPrintedNumber": 15,
+      "subject": 2,
+      "batch": "subject2-retry-20260927",
+      "folder": "기본폴더",
+      "bookPage": null,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR 및 원본 수동 검수; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0021.jpg",
+      "answerPrintedNumber": 15,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 212,
+    "id": "new-subject2:retry20260927-p16-q16",
+    "group": "Part 2 · Chapter 1",
+    "stem": "다음 사례에서 예상되는 결과로 가장 적절한 것은? H업체는 RFQ 응답문서를 작성하면서 회사 개요, 과업 범위, 가격정보, 배송 요구사항을 포함했으나 품질보증 정보는 누락하였다.",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "품질보증은 필수 항목이 아니므로 영향이 없다."
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "품질보증 누락은 신뢰성 저하로 평가에서 불리하게 작용할 수 있다."
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "품질보증은 가격 산정에 포함되므로 자동으로 계산된다."
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "품질보증은 RFI 단계에서만 필요하다."
+      }
+    ],
+    "answer": "2",
+    "source": {
+      "photo": "page_0016.jpg",
+      "column": null,
+      "printedNumberOcr": "16",
+      "verifiedPrintedNumber": 16,
+      "subject": 2,
+      "batch": "subject2-retry-20260927",
+      "folder": "기본폴더",
+      "bookPage": null,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR 및 원본 수동 검수; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0021.jpg",
+      "answerPrintedNumber": 16,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 213,
+    "id": "new-subject2:retry20260927-p16-q17",
+    "group": "Part 2 · Chapter 1",
+    "stem": "다음 중 정보요청 문서의 목적과 응답 문서가 올바르게 연결되지 않은 것은?",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "RFI - 정보제공서"
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "EOI - 입찰참가의향서"
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "RFQ - 견적서"
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "ITB - 제안서"
+      }
+    ],
+    "answer": "4",
+    "source": {
+      "photo": "page_0016.jpg",
+      "column": null,
+      "printedNumberOcr": "17",
+      "verifiedPrintedNumber": 17,
+      "subject": 2,
+      "batch": "subject2-retry-20260927",
+      "folder": "기본폴더",
+      "bookPage": null,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR 및 원본 수동 검수; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0021.jpg",
+      "answerPrintedNumber": 17,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 214,
+    "id": "new-subject2:retry20260927-p16-q18",
+    "group": "Part 2 · Chapter 1",
+    "stem": "다음 사례에서 업체가 제출해야 할 문서는? I기관은 대규모 건설사업을 준비하며 업체들에게 최소한의 기술·품질 요건을 충족하는지 확인한 후 최저가 업체를 선정하려 한다.",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "정보제공서"
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "입찰참가의향서"
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "입찰서"
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "제안서"
+      }
+    ],
+    "answer": "3",
+    "source": {
+      "photo": "page_0016.jpg",
+      "column": null,
+      "printedNumberOcr": "18",
+      "verifiedPrintedNumber": 18,
+      "subject": 2,
+      "batch": "subject2-retry-20260927",
+      "folder": "기본폴더",
+      "bookPage": null,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR 및 원본 수동 검수; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0021.jpg",
+      "answerPrintedNumber": 18,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 215,
+    "id": "new-subject2:retry20260927-p16-q21",
+    "group": "Part 2 · Chapter 1",
+    "stem": "다음 중 조달 관련 행정예고 검색 시 활용할 수 있는 경로로 가장 적절하지 않은 것은?",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "조달청 홈페이지"
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "국가법령정보센터"
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "행정예고 사이트"
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "공급업체 내부 ERP 시스템"
+      }
+    ],
+    "answer": "4",
+    "source": {
+      "photo": "page_0016.jpg",
+      "column": null,
+      "printedNumberOcr": "21",
+      "verifiedPrintedNumber": 21,
+      "subject": 2,
+      "batch": "subject2-retry-20260927",
+      "folder": "기본폴더",
+      "bookPage": null,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR 및 원본 수동 검수; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0021.jpg",
+      "answerPrintedNumber": 21,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 216,
+    "id": "new-subject2:retry20260927-p17-q22",
+    "group": "Part 2 · Chapter 1",
+    "stem": "K업체는 낙찰하한율 조정 예고에 대해 \"품질 확보를 위해 낙찰률 상향 필요\"라는 의견을 제출하였다. 이 의견서의 수용 가능성을 높이는 방법으로 가장 적절한 것은?",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "단순히 상향 필요라고만 기재한다."
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "국제 기준과 비교 자료를 첨부한다."
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "제출기한을 넘겨 제출한다."
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "가격경쟁 심화 사례만 언급한다."
+      }
+    ],
+    "answer": "2",
+    "source": {
+      "photo": "page_0017.jpg",
+      "column": null,
+      "printedNumberOcr": "22",
+      "verifiedPrintedNumber": 22,
+      "subject": 2,
+      "batch": "subject2-retry-20260927",
+      "folder": "기본폴더",
+      "bookPage": 223,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR 및 원본 수동 검수; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0021.jpg",
+      "answerPrintedNumber": 22,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 217,
+    "id": "new-subject2:retry20260927-p19-q01",
+    "group": "Part 2 · Chapter 2",
+    "stem": "다음 중 과업내용 적정성 검토의 주된 목적은?",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "사업 목적과 과업 범위의 현실성·명확성 확보"
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "낙찰자 최종 선정"
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "계약체결 후 분쟁 해결"
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "공급업체 홍보 기회 제공"
+      }
+    ],
+    "answer": "1",
+    "source": {
+      "photo": "page_0019.jpg",
+      "column": null,
+      "printedNumberOcr": "1",
+      "verifiedPrintedNumber": 1,
+      "subject": 2,
+      "batch": "subject2-retry-20260927",
+      "folder": "기본폴더",
+      "bookPage": 228,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR 및 원본 수동 검수; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0021.jpg",
+      "answerPrintedNumber": 1,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 218,
+    "id": "new-subject2:retry20260927-p19-q02",
+    "group": "Part 2 · Chapter 2",
+    "stem": "다음 사례에서 검토해야 하는 핵심 포인트는? A기관은 사전규격공개에서 \"6개월 내 SW 개발 완료\"를 요구하였다. B업체는 인력·자원 투입을 고려할 때 해당 일정이 현실적으로 불가능하다고 판단하였다.",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "과업 범위의 명확성"
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "수행 일정의 타당성"
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "법규·제도와의 부합성"
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "시장 경쟁성 확보 여부"
+      }
+    ],
+    "answer": "2",
+    "source": {
+      "photo": "page_0019.jpg",
+      "column": null,
+      "printedNumberOcr": "2",
+      "verifiedPrintedNumber": 2,
+      "subject": 2,
+      "batch": "subject2-retry-20260927",
+      "folder": "기본폴더",
+      "bookPage": 228,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR 및 원본 수동 검수; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0021.jpg",
+      "answerPrintedNumber": 2,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 219,
+    "id": "new-subject2:retry20260927-p19-q03",
+    "group": "Part 2 · Chapter 2",
+    "stem": "다음 중 과업내용 적정성 검토 요소로 가장 적절하지 않은 것은?",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "기술적 요구사항의 현실성"
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "법규·제도와의 부합성"
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "낙찰하한율 산정 근거"
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "시장 경쟁성 확보 여부"
+      }
+    ],
+    "answer": "3",
+    "source": {
+      "photo": "page_0019.jpg",
+      "column": null,
+      "printedNumberOcr": "3",
+      "verifiedPrintedNumber": 3,
+      "subject": 2,
+      "batch": "subject2-retry-20260927",
+      "folder": "기본폴더",
+      "bookPage": 228,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR 및 원본 수동 검수; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0021.jpg",
+      "answerPrintedNumber": 3,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 220,
+    "id": "new-subject2:retry20260927-p19-q05",
+    "group": "Part 2 · Chapter 2",
+    "stem": "다음 중 과업내용의 적정성 검토 시점에 불필요한 과업이 포함된 경우 가장 적절한 대응은?",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "수요기관은 그대로 입찰공고를 진행한다."
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "조달업체는 의견서를 통해 개선·보완 필요사항을 제시한다."
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "낙찰자는 과업내용을 변경한 후 계약을 체결한다."
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "계약상대자는 계약체결 후 설계변경을 추진한다."
+      }
+    ],
+    "answer": "2",
+    "source": {
+      "photo": "page_0019.jpg",
+      "column": null,
+      "printedNumberOcr": "5",
+      "verifiedPrintedNumber": 5,
+      "subject": 2,
+      "batch": "subject2-retry-20260927",
+      "folder": "기본폴더",
+      "bookPage": 228,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR 및 원본 수동 검수; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0021.jpg",
+      "answerPrintedNumber": 5,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 221,
+    "id": "new-subject2:retry20260927-p19-q06",
+    "group": "Part 2 · Chapter 2",
+    "stem": "다음 사례에서 검토해야 하는 핵심 포인트는? C업체는 사전 규격공개에서 \"ISO9001 인증 필수\"라는 요구를 확인하였다. 관련 법령이나 발주지침상 해당 인증을 요구할 근거가 없는데도 참가자격으로 제한하고 있었다.",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "과업 범위의 명확성"
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "법규·제도와의 부합성"
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "수행 일정의 타당성"
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "기술적 요구사항의 현실성"
+      }
+    ],
+    "answer": "2",
+    "source": {
+      "photo": "page_0019.jpg",
+      "column": null,
+      "printedNumberOcr": "6",
+      "verifiedPrintedNumber": 6,
+      "subject": 2,
+      "batch": "subject2-retry-20260927",
+      "folder": "기본폴더",
+      "bookPage": 228,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR 및 원본 수동 검수; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0021.jpg",
+      "answerPrintedNumber": 6,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 222,
+    "id": "new-subject2:retry20260927-p20-q08",
+    "group": "Part 2 · Chapter 2",
+    "stem": "다음 사례에서 수요기관이 취해야 할 가장 적절한 조치는? D기관은 사전규격공개에서 \"과업 범위가 지나치게 광범위하다\"는 의견을 여러 업체로부터 받았다.",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "과업 범위를 명확히 재조정한다."
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "의견을 무시하고 그대로 진행한다."
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "사업을 취소하고 원점에서 재검토한다."
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "계약체결 후 설계변경을 추진한다."
+      }
+    ],
+    "answer": "1",
+    "source": {
+      "photo": "page_0020.jpg",
+      "column": null,
+      "printedNumberOcr": "8",
+      "verifiedPrintedNumber": 8,
+      "subject": 2,
+      "batch": "subject2-retry-20260927",
+      "folder": "기본폴더",
+      "bookPage": 229,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR 및 원본 수동 검수; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0021.jpg",
+      "answerPrintedNumber": 8,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 223,
+    "id": "new-subject2:retry20260927-p20-q09",
+    "group": "Part 2 · Chapter 2",
+    "stem": "다음 중 사업예산 적정성 검토의 핵심 목적은?",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "조달업체의 최대 이윤 확보"
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "예산의 현실성과 합리성 확보"
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "계약체결 후 분쟁 해결"
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "조달업체 홍보 기회 제공"
+      }
+    ],
+    "answer": "2",
+    "source": {
+      "photo": "page_0020.jpg",
+      "column": null,
+      "printedNumberOcr": "9",
+      "verifiedPrintedNumber": 9,
+      "subject": 2,
+      "batch": "subject2-retry-20260927",
+      "folder": "기본폴더",
+      "bookPage": 229,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR 및 원본 수동 검수; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0021.jpg",
+      "answerPrintedNumber": 9,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 224,
+    "id": "new-subject2:retry20260927-p20-q10",
+    "group": "Part 2 · Chapter 2",
+    "stem": "다음 사례에서 검토해야 하는 핵심 포인트는? E기관은 사전규격공개에서 대규모 SW 개발 사업의 총사업비를 5억원으로 제시하였다. B업체는 인력과 자원 투입 규모를 고려할 때 예산이 부족하다고 판단하였다.",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "과업 범위와 예산의 일치성"
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "법정 계상비율 준수 여부"
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "비용 구조의 투명성"
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "공정 경쟁성 확보 여부"
+      }
+    ],
+    "answer": "1",
+    "source": {
+      "photo": "page_0020.jpg",
+      "column": null,
+      "printedNumberOcr": "10",
+      "verifiedPrintedNumber": 10,
+      "subject": 2,
+      "batch": "subject2-retry-20260927",
+      "folder": "기본폴더",
+      "bookPage": 229,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR 및 원본 수동 검수; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0021.jpg",
+      "answerPrintedNumber": 10,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 225,
+    "id": "new-subject2:retry20260927-p20-q11",
+    "group": "Part 2 · Chapter 2",
+    "stem": "다음 중 사업예산 적정성 검토 요소로 가장 적절하지 않은 것은?",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "시장가격 수준 반영 여부"
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "법정 계상비율 준수 여부"
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "낙찰하한율 산정 근거"
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "비용 구조의 투명성"
+      }
+    ],
+    "answer": "3",
+    "source": {
+      "photo": "page_0020.jpg",
+      "column": null,
+      "printedNumberOcr": "11",
+      "verifiedPrintedNumber": 11,
+      "subject": 2,
+      "batch": "subject2-retry-20260927",
+      "folder": "기본폴더",
+      "bookPage": 229,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR 및 원본 수동 검수; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0021.jpg",
+      "answerPrintedNumber": 11,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 226,
+    "id": "new-subject2:retry20260927-p20-q13",
+    "group": "Part 2 · Chapter 2",
+    "stem": "사업예산 적정성 검토 결과, 불합리한 비용 구조가 발견된 경우 가장 적절한 대응은?",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "그대로 입찰공고에 반영한다."
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "의견서를 통해 개선·보완 필요사항을 제시한다."
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "낙찰자를 변경한다."
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "계약을 해지한다."
+      }
+    ],
+    "answer": "2",
+    "source": {
+      "photo": "page_0020.jpg",
+      "column": null,
+      "printedNumberOcr": "13",
+      "verifiedPrintedNumber": 13,
+      "subject": 2,
+      "batch": "subject2-retry-20260927",
+      "folder": "기본폴더",
+      "bookPage": 229,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR 및 원본 수동 검수; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0021.jpg",
+      "answerPrintedNumber": 13,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 227,
+    "id": "new-subject2:retry20260927-p20-q14",
+    "group": "Part 2 · Chapter 2",
+    "stem": "다음 중 사업예산 적정성 검토의 효과로 가장 적절하지 않은 것은?",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "법적 분쟁 예방"
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "예산 효율성 확보"
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "공정 경쟁 촉진"
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "특정 업체의 수익성 보장"
+      }
+    ],
+    "answer": "4",
+    "source": {
+      "photo": "page_0020.jpg",
+      "column": null,
+      "printedNumberOcr": "14",
+      "verifiedPrintedNumber": 14,
+      "subject": 2,
+      "batch": "subject2-retry-20260927",
+      "folder": "기본폴더",
+      "bookPage": 229,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR 및 원본 수동 검수; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0021.jpg",
+      "answerPrintedNumber": 14,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 228,
+    "id": "new-subject2:retry20260927-p21-q15",
+    "group": "Part 2 · Chapter 2",
+    "stem": "다음 사례에 대한 설명으로 가장 적절한 것은? G기관은 사전규격공개에서 특정 제품의 모델명을 명시하여 규격을 작성하였다.",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "기술 명확화 조치"
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "공정 경쟁 촉진"
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "특정업체 편향 가능성"
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "예산 효율성 확보"
+      }
+    ],
+    "answer": "3",
+    "source": {
+      "photo": "page_0021.jpg",
+      "column": null,
+      "printedNumberOcr": "15",
+      "verifiedPrintedNumber": 15,
+      "subject": 2,
+      "batch": "subject2-retry-20260927",
+      "folder": "기본폴더",
+      "bookPage": null,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR 및 원본 수동 검수; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0021.jpg",
+      "answerPrintedNumber": 15,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 229,
+    "id": "new-subject2:retry20260927-p21-q18",
+    "group": "Part 2 · Chapter 2",
+    "stem": "다음 중 규격공개 검토 시 가장 핵심적으로 확인해야 할 사항은?",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "내부 선호도"
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "법령 및 지침 부합 여부"
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "계약금액 수준"
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "납기 기간"
+      }
+    ],
+    "answer": "2",
+    "source": {
+      "photo": "page_0021.jpg",
+      "column": null,
+      "printedNumberOcr": "18",
+      "verifiedPrintedNumber": 18,
+      "subject": 2,
+      "batch": "subject2-retry-20260927",
+      "folder": "기본폴더",
+      "bookPage": null,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR 및 원본 수동 검수; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0021.jpg",
+      "answerPrintedNumber": 18,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 230,
+    "id": "new-subject2:retry20260927-p21-q19",
+    "group": "Part 2 · Chapter 2",
+    "stem": "다음 사례에 대한 설명으로 가장 적절한 것은? J기관은 규격을 공개하였으나, 의견제출 기간이 매우 짧아 업체들이 실질적으로 의견을 제출하기 어려웠다.",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "절차 준수 완료"
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "형식적 공개에 불과"
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "경쟁성 강화"
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "책임성 확보"
+      }
+    ],
+    "answer": "2",
+    "source": {
+      "photo": "page_0021.jpg",
+      "column": null,
+      "printedNumberOcr": "19",
+      "verifiedPrintedNumber": 19,
+      "subject": 2,
+      "batch": "subject2-retry-20260927",
+      "folder": "기본폴더",
+      "bookPage": null,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR 및 원본 수동 검수; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0021.jpg",
+      "answerPrintedNumber": 19,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 231,
+    "id": "new-subject2:retry20260927-p21-q20",
+    "group": "Part 2 · Chapter 2",
+    "stem": "다음 사례에서 발생할 수 있는 결과로 가장 적절한 것은? K기관은 시장에서 실제 공급이 불가능한 규격을 설정하였다.",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "경쟁 확대"
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "입찰 성립"
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "유찰 가능성 증가"
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "계약금액 감소"
+      }
+    ],
+    "answer": "3",
+    "source": {
+      "photo": "page_0021.jpg",
+      "column": null,
+      "printedNumberOcr": "20",
+      "verifiedPrintedNumber": 20,
+      "subject": 2,
+      "batch": "subject2-retry-20260927",
+      "folder": "기본폴더",
+      "bookPage": null,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR 및 원본 수동 검수; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0021.jpg",
+      "answerPrintedNumber": 20,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 232,
+    "id": "new-subject2:retry20260927-p22-q22",
+    "group": "Part 2 · Chapter 2",
+    "stem": "다음 중 사전규격공개 분석 시 개선·보완 의견 제시의 핵심 목적은?",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "입찰참가자격 일부 면제"
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "규격의 적법성·공정성·실효성 강화"
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "계약체결 후 분쟁 해결"
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "공급업체 홍보 기회 제공"
+      }
+    ],
+    "answer": "2",
+    "source": {
+      "photo": "page_0022.jpg",
+      "column": null,
+      "printedNumberOcr": "22",
+      "verifiedPrintedNumber": 22,
+      "subject": 2,
+      "batch": "subject2-retry-20260927",
+      "folder": "기본폴더",
+      "bookPage": 231,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR 및 원본 수동 검수; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0021.jpg",
+      "answerPrintedNumber": 22,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 233,
+    "id": "new-subject2:retry20260927-p22-q24",
+    "group": "Part 2 · Chapter 2",
+    "stem": "다음 중 개선·보완 의견 제시 절차에 포함되지 않는 것은?",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "문제점 확인"
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "의견서 작성"
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "의견 제시 가능 여부 사전 질의"
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "수요기관 검토"
+      }
+    ],
+    "answer": "3",
+    "source": {
+      "photo": "page_0022.jpg",
+      "column": null,
+      "printedNumberOcr": "24",
+      "verifiedPrintedNumber": 24,
+      "subject": 2,
+      "batch": "subject2-retry-20260927",
+      "folder": "기본폴더",
+      "bookPage": 231,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR 및 원본 수동 검수; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0022.jpg",
+      "answerPrintedNumber": 24,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 234,
+    "id": "new-subject2:retry20260927-p22-q25",
+    "group": "Part 2 · Chapter 2",
+    "stem": "다음 사례에서 의견서에 가장 강조해야 할 내용은? N업체는 사전규격공개에서 법규 위반 가능성이 있는 규격을 발견하였다.",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "회사의 시공능력평가액"
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "법적 근거와 위반 가능성"
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "단순 반대 의견"
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "관련 법률 주무부처의 의견"
+      }
+    ],
+    "answer": "2",
+    "source": {
+      "photo": "page_0022.jpg",
+      "column": null,
+      "printedNumberOcr": "25",
+      "verifiedPrintedNumber": 25,
+      "subject": 2,
+      "batch": "subject2-retry-20260927",
+      "folder": "기본폴더",
+      "bookPage": 231,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR 및 원본 수동 검수; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0022.jpg",
+      "answerPrintedNumber": 25,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 235,
+    "id": "new-subject2:retry20260927-p22-q26",
+    "group": "Part 2 · Chapter 2",
+    "stem": "다음 중 개선·보완 의견 제시의 효과로 가장 적절하지 않은 것은?",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "규격의 적법성 강화"
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "예산 효율성 확보"
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "공정 경쟁 촉진"
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "신인도 가점 부여"
+      }
+    ],
+    "answer": "4",
+    "source": {
+      "photo": "page_0022.jpg",
+      "column": null,
+      "printedNumberOcr": "26",
+      "verifiedPrintedNumber": 26,
+      "subject": 2,
+      "batch": "subject2-retry-20260927",
+      "folder": "기본폴더",
+      "bookPage": 231,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR 및 원본 수동 검수; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0022.jpg",
+      "answerPrintedNumber": 26,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 236,
+    "id": "new-subject2:retry20260927-p24-q01",
+    "group": "Part 2 · Chapter 3",
+    "stem": "다음 중 입찰공고문 오류 및 법령 위반 검토의 핵심 목적은?",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "입찰공고문 자동 생성"
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "공고문의 적법성과 공정성 확보"
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "계약체결 후 분쟁 해결"
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "공급업체 홍보 기회 제공"
+      }
+    ],
+    "answer": "2",
+    "source": {
+      "photo": "page_0024.jpg",
+      "column": null,
+      "printedNumberOcr": "1",
+      "verifiedPrintedNumber": 1,
+      "subject": 2,
+      "batch": "subject2-retry-20260927",
+      "folder": "기본폴더",
+      "bookPage": 237,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR 및 원본 수동 검수; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0022.jpg",
+      "answerPrintedNumber": 1,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 237,
+    "id": "new-subject2:retry20260927-p24-q03",
+    "group": "Part 2 · Chapter 3",
+    "stem": "다음 중 입찰공고문 오류 검토 항목으로 가장 적절하지 않은 것은?",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "사업명과 과업 범위"
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "예산과 일정"
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "제출서류와 기한"
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "자사 투찰가격"
+      }
+    ],
+    "answer": "4",
+    "source": {
+      "photo": "page_0024.jpg",
+      "column": null,
+      "printedNumberOcr": "3",
+      "verifiedPrintedNumber": 3,
+      "subject": 2,
+      "batch": "subject2-retry-20260927",
+      "folder": "기본폴더",
+      "bookPage": 237,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR 및 원본 수동 검수; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0022.jpg",
+      "answerPrintedNumber": 3,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 238,
+    "id": "new-subject2:retry20260927-p25-q07",
+    "group": "Part 2 · Chapter 3",
+    "stem": "다음 사례에서 D기관이 취해야 할 가장 적절한 조치는? D기관은 다수 업체로부터 \"공고문에 불필요한 자격 제한이 있다\"는 의견을 받았다.",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "자격 제한 내용을 검토하여 완화하거나 삭제한다."
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "의견을 무시하고 당초 공고 내용대로 강행한다."
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "자격을 갖추지 못한 참가자에게는 입찰보증금을 2배로 받는다."
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "당초 공고 내용대로 진행하되 개찰을 하지 않는다."
+      }
+    ],
+    "answer": "1",
+    "source": {
+      "photo": "page_0025.jpg",
+      "column": null,
+      "printedNumberOcr": "7",
+      "verifiedPrintedNumber": 7,
+      "subject": 2,
+      "batch": "subject2-retry-20260927",
+      "folder": "기본폴더",
+      "bookPage": 238,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR 및 원본 수동 검수; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0022.jpg",
+      "answerPrintedNumber": 7,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 239,
+    "id": "new-subject2:retry20260927-p25-q08",
+    "group": "Part 2 · Chapter 3",
+    "stem": "다음 중 입찰공고 내용 검토의 주된 목적은?",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "경쟁업체의 입찰 참여 배제"
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "공고문 조건의 적합성·공정성 판단"
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "계약체결 후 분쟁 해결"
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "공급업체 홍보 기회 제공"
+      }
+    ],
+    "answer": "2",
+    "source": {
+      "photo": "page_0025.jpg",
+      "column": null,
+      "printedNumberOcr": "8",
+      "verifiedPrintedNumber": 8,
+      "subject": 2,
+      "batch": "subject2-retry-20260927",
+      "folder": "기본폴더",
+      "bookPage": 238,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR 및 원본 수동 검수; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0022.jpg",
+      "answerPrintedNumber": 8,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 240,
+    "id": "new-subject2:retry20260927-p25-q09",
+    "group": "Part 2 · Chapter 3",
+    "stem": "국가를 당사자로 하는 계약에 관한 법령상 입찰공고 명시사항으로 규정하고 있지 않은 것은?",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "계약의 중간보고일"
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "계약하고자 하는 조건을 공시하는 장소"
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "입찰 관련 비리의 신고에 관한 사항"
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "입찰보증금의 국고귀속에 관한 사항"
+      }
+    ],
+    "answer": "1",
+    "source": {
+      "photo": "page_0025.jpg",
+      "column": null,
+      "printedNumberOcr": "9",
+      "verifiedPrintedNumber": 9,
+      "subject": 2,
+      "batch": "subject2-retry-20260927",
+      "folder": "기본폴더",
+      "bookPage": 238,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR 및 원본 수동 검수; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0022.jpg",
+      "answerPrintedNumber": 9,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 241,
+    "id": "new-subject2:retry20260927-p25-q10",
+    "group": "Part 2 · Chapter 3",
+    "stem": "다음 사례에서 검토해야 하는 핵심 포인트는? E기관은 입찰공고문에서 ‘참가자격: 최근 3년간 동일 사업 실적 5건 이상’을 요구하였다. B업체는 4건의 실적만 보유하고 있다.",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "과업 범위 검토"
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "참가자격 요건 검토"
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "예산 검토"
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "제출서류 검토"
+      }
+    ],
+    "answer": "2",
+    "source": {
+      "photo": "page_0025.jpg",
+      "column": null,
+      "printedNumberOcr": "10",
+      "verifiedPrintedNumber": 10,
+      "subject": 2,
+      "batch": "subject2-retry-20260927",
+      "folder": "기본폴더",
+      "bookPage": 238,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR 및 원본 수동 검수; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0022.jpg",
+      "answerPrintedNumber": 10,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 242,
+    "id": "new-subject2:retry20260927-p25-q11",
+    "group": "Part 2 · Chapter 3",
+    "stem": "다음 중 입찰공고 내용 검토 항목으로 가장 적절하지 않은 것은?",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "참가자격 요건"
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "과업 범위 및 기술 요구사항"
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "낙찰자 선정 결과"
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "제출 서류 및 기한"
+      }
+    ],
+    "answer": "3",
+    "source": {
+      "photo": "page_0025.jpg",
+      "column": null,
+      "printedNumberOcr": "11",
+      "verifiedPrintedNumber": 11,
+      "subject": 2,
+      "batch": "subject2-retry-20260927",
+      "folder": "기본폴더",
+      "bookPage": 238,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR 및 원본 수동 검수; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0022.jpg",
+      "answerPrintedNumber": 11,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 243,
+    "id": "new-subject2:retry20260927-p25-q12",
+    "group": "Part 2 · Chapter 3",
+    "stem": "다음 사례에서 검토해야 하는 핵심 포인트는? F기관은 공고문에 \"ISO 인증 필수\"를 요구했으나 해당 사업은 단순 납품 사업으로 관련 인증을 필수로 요구할 필요성이 명확하지 않았다.",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "참가자격 요건 강화"
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "과업 범위 확대 여부"
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "공정성·투명성 확보 여부"
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "예산 증액 가능 여부"
+      }
+    ],
+    "answer": "3",
+    "source": {
+      "photo": "page_0025.jpg",
+      "column": null,
+      "printedNumberOcr": "12",
+      "verifiedPrintedNumber": 12,
+      "subject": 2,
+      "batch": "subject2-retry-20260927",
+      "folder": "기본폴더",
+      "bookPage": 238,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR 및 원본 수동 검수; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0022.jpg",
+      "answerPrintedNumber": 12,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 244,
+    "id": "new-subject2:retry20260927-p25-q14",
+    "group": "Part 2 · Chapter 3",
+    "stem": "다음 사례에서 검토해야 하는 핵심 포인트는? G기관은 공고문에 ‘예산 10억원, 낙찰 방식: 최저가’를 명시하였다. 그러나 과업은 고도의 전문성이 요구되는 연구용역이었다.",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "참가자격 요건"
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "과업 범위 검토"
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "낙찰 방식 검토"
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "제출 서류 검토"
+      }
+    ],
+    "answer": "3",
+    "source": {
+      "photo": "page_0025.jpg",
+      "column": null,
+      "printedNumberOcr": "14",
+      "verifiedPrintedNumber": 14,
+      "subject": 2,
+      "batch": "subject2-retry-20260927",
+      "folder": "기본폴더",
+      "bookPage": 238,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR 및 원본 수동 검수; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0022.jpg",
+      "answerPrintedNumber": 14,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 245,
+    "id": "new-subject2:retry20260927-p26-q15",
+    "group": "Part 2 · Chapter 3",
+    "stem": "다음 중 입찰공고 내용 검토의 효과로 가장 적절하지 않은 것은?",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "참여 여부 판단"
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "입찰 전략 수립"
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "공정 경쟁 촉진"
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "계약 불이행 책임 전가"
+      }
+    ],
+    "answer": "4",
+    "source": {
+      "photo": "page_0026.jpg",
+      "column": null,
+      "printedNumberOcr": "15",
+      "verifiedPrintedNumber": 15,
+      "subject": 2,
+      "batch": "subject2-retry-20260927",
+      "folder": "기본폴더",
+      "bookPage": null,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR 및 원본 수동 검수; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0022.jpg",
+      "answerPrintedNumber": 15,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 246,
+    "id": "new-subject2:retry20260927-p26-q16",
+    "group": "Part 2 · Chapter 3",
+    "stem": "다음 중 입찰보증금 제도의 본질적 목적은?",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "입찰자가 계약체결 의무를 성실히 이행하도록 담보하는 것"
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "입찰자의 계약이행 의무를 담보하는 것"
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "입찰자의 재무건전성을 확인하는 것"
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "입찰자의 신용상태를 확인하는 것"
+      }
+    ],
+    "answer": "1",
+    "source": {
+      "photo": "page_0026.jpg",
+      "column": null,
+      "printedNumberOcr": "16",
+      "verifiedPrintedNumber": 16,
+      "subject": 2,
+      "batch": "subject2-retry-20260927",
+      "folder": "기본폴더",
+      "bookPage": null,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR 및 원본 수동 검수; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0022.jpg",
+      "answerPrintedNumber": 16,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 247,
+    "id": "new-subject2:retry20260927-p26-q17",
+    "group": "Part 2 · Chapter 3",
+    "stem": "다음 중 입찰보증금 제출방법에 해당하지 않는 것은?",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "현금 납부"
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "보증서 제출"
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "보증금 면제(지급각서 제출)"
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "주거래은행의 예금잔액증명서 제출"
+      }
+    ],
+    "answer": "4",
+    "source": {
+      "photo": "page_0026.jpg",
+      "column": null,
+      "printedNumberOcr": "17",
+      "verifiedPrintedNumber": 17,
+      "subject": 2,
+      "batch": "subject2-retry-20260927",
+      "folder": "기본폴더",
+      "bookPage": null,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR 및 원본 수동 검수; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0022.jpg",
+      "answerPrintedNumber": 17,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 248,
+    "id": "new-subject2:retry20260927-p26-q19",
+    "group": "Part 2 · Chapter 3",
+    "stem": "다음 사례에서 발생할 수 있는 결과로 가장 적절한 것은? H업체는 입찰보증금을 현금으로 납부했으나, 제출기한을 넘겨 입찰 마감 이후에 납부하였다.",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "정상적으로 인정된다."
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "낙찰자로 자동 선정된다."
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "입찰 무효 처리될 수 있다."
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "계약체결 후 보증금이 반환된다."
+      }
+    ],
+    "answer": "3",
+    "source": {
+      "photo": "page_0026.jpg",
+      "column": null,
+      "printedNumberOcr": "19",
+      "verifiedPrintedNumber": 19,
+      "subject": 2,
+      "batch": "subject2-retry-20260927",
+      "folder": "기본폴더",
+      "bookPage": null,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR 및 원본 수동 검수; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0022.jpg",
+      "answerPrintedNumber": 19,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 249,
+    "id": "new-subject2:retry20260927-p28-q01",
+    "group": "Part 2 · Chapter 4",
+    "stem": "다음 중 입찰설명회의 가장 핵심적인 목적은?",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "발주기관의 책임 회피"
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "사업 목적과 과업 범위에 대한 정보 공유"
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "계약체결 후 계약 내용 변경 불허"
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "입찰참가 예상 업체 수 파악"
+      }
+    ],
+    "answer": "2",
+    "source": {
+      "photo": "page_0028.jpg",
+      "column": null,
+      "printedNumberOcr": "1",
+      "verifiedPrintedNumber": 1,
+      "subject": 2,
+      "batch": "subject2-retry-20260927",
+      "folder": "기본폴더",
+      "bookPage": 242,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR 및 원본 수동 검수; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0022.jpg",
+      "answerPrintedNumber": 1,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 250,
+    "id": "new-subject2:retry20260927-p28-q02",
+    "group": "Part 2 · Chapter 4",
+    "stem": "다음 사례에서 A업체가 취해야 할 가장 적절한 조치는? A업체는 입찰설명회에서 \"제출서류 목록 중 일부가 불필요하다\"는 답변을 받았다.",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "불필요한 서류는 제외하고 그대로 제출한다."
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "설명회 답변을 근거로 개선 의견을 공식 제출한다."
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "다른 참여업체와 협의하여 공동으로 불필요한 서류는 제외하고 제출한다."
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "개찰 결과 낙찰자로 선정되면 제출한다는 조건으로 나머지 서류만 제출한다."
+      }
+    ],
+    "answer": "2",
+    "source": {
+      "photo": "page_0028.jpg",
+      "column": null,
+      "printedNumberOcr": "2",
+      "verifiedPrintedNumber": 2,
+      "subject": 2,
+      "batch": "subject2-retry-20260927",
+      "folder": "기본폴더",
+      "bookPage": 242,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR 및 원본 수동 검수; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0022.jpg",
+      "answerPrintedNumber": 2,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 251,
+    "id": "new-subject2:retry20260927-p29-q08",
+    "group": "Part 2 · Chapter 4",
+    "stem": "다음 중 입찰설명회에서 얻은 정보를 활용하는 방법으로 가장 적절한 것은?",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "당해 입찰 전략에 반영한다."
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "입찰 불참을 고려한다."
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "차기 입찰 건의 참여 전략에 반영한다."
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "대부분 불필요한 정보로서 활용 가치가 없다."
+      }
+    ],
+    "answer": "1",
+    "source": {
+      "photo": "page_0029.jpg",
+      "column": null,
+      "printedNumberOcr": "8",
+      "verifiedPrintedNumber": 8,
+      "subject": 2,
+      "batch": "subject2-retry-20260927",
+      "folder": "기본폴더",
+      "bookPage": 243,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR 및 원본 수동 검수; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0022.jpg",
+      "answerPrintedNumber": 8,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 252,
+    "id": "new-subject2:retry20260927-p29-q10",
+    "group": "Part 2 · Chapter 4",
+    "stem": "다음 중 입찰·제안 준비에서 정보 식별·요청 절차가 없을 때 가장 먼저 발생할 수 있는 위험은?",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "낙찰하한율 산정 오류"
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "정보 비대칭으로 인한 불공정 경쟁"
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "계약체결 후 하자보수 비용 증가"
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "공급업체 홍보 효과 감소"
+      }
+    ],
+    "answer": "2",
+    "source": {
+      "photo": "page_0029.jpg",
+      "column": null,
+      "printedNumberOcr": "10",
+      "verifiedPrintedNumber": 10,
+      "subject": 2,
+      "batch": "subject2-retry-20260927",
+      "folder": "기본폴더",
+      "bookPage": 243,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR 및 원본 수동 검수; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0022.jpg",
+      "answerPrintedNumber": 10,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 253,
+    "id": "new-subject2:retry20260927-p29-q11",
+    "group": "Part 2 · Chapter 4",
+    "stem": "다음 사례에서 E업체가 취해야 할 조치로 가장 적절한 것은? E업체는 공고문에서 \"기술점수 60%\"라는 정보만 확인했으나, 세부 항목별 배점 구조가 제시되어 있지 않았다.",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "자체적으로 배점 구조를 추정한다."
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "수요기관에 공식 질의서를 제출한다."
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "경쟁업체에 문의한다."
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "과거의 입찰 참여 사례만 참고한다."
+      }
+    ],
+    "answer": "2",
+    "source": {
+      "photo": "page_0029.jpg",
+      "column": null,
+      "printedNumberOcr": "11",
+      "verifiedPrintedNumber": 11,
+      "subject": 2,
+      "batch": "subject2-retry-20260927",
+      "folder": "기본폴더",
+      "bookPage": 243,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR 및 원본 수동 검수; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0022.jpg",
+      "answerPrintedNumber": 11,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 254,
+    "id": "new-subject2:retry20260927-p29-q13",
+    "group": "Part 2 · Chapter 4",
+    "stem": "다음 사례에서 F업체가 취해야 할 가장 적절한 조치는? F업체는 입찰설명회에서 \"예산 총액은 20억원\"이라는 답변을 받았지만, 인건비·장비비 등 세부 산출 근거가 제시되지 않았다.",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "예산 총액만 반영해 제안서를 작성한다."
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "세부 산출 근거를 공식 질의한다."
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "경쟁업체의 예산안을 참고한다."
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "예산을 임의로 축소한다."
+      }
+    ],
+    "answer": "2",
+    "source": {
+      "photo": "page_0029.jpg",
+      "column": null,
+      "printedNumberOcr": "13",
+      "verifiedPrintedNumber": 13,
+      "subject": 2,
+      "batch": "subject2-retry-20260927",
+      "folder": "기본폴더",
+      "bookPage": 243,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR 및 원본 수동 검수; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0022.jpg",
+      "answerPrintedNumber": 13,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 255,
+    "id": "new-subject2:retry20260927-p29-q14",
+    "group": "Part 2 · Chapter 4",
+    "stem": "다음 중 정보 요청 절차에서 ‘수요기관 답변’ 단계의 가장 중요한 특징은?",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "모든 업체에 동일하게 공유된다."
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "특정 업체에만 제공된다."
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "낙찰자에게만 제공된다."
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "문의하는 업체에게만 개별적으로 제공된다."
+      }
+    ],
+    "answer": "1",
+    "source": {
+      "photo": "page_0029.jpg",
+      "column": null,
+      "printedNumberOcr": "14",
+      "verifiedPrintedNumber": 14,
+      "subject": 2,
+      "batch": "subject2-retry-20260927",
+      "folder": "기본폴더",
+      "bookPage": 243,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR 및 원본 수동 검수; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0022.jpg",
+      "answerPrintedNumber": 14,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 256,
+    "id": "new-subject2:retry20260927-p30-q16",
+    "group": "Part 2 · Chapter 4",
+    "stem": "다음 중 정보 식별·요청의 효과로 가장 적절한 것은?",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "제안서 경쟁력 강화"
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "제안서 발표 능력 향상"
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "계약금액 증액 가능성 증가"
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "계약이행 과정의 분쟁조정 용이"
+      }
+    ],
+    "answer": "1",
+    "source": {
+      "photo": "page_0030.jpg",
+      "column": null,
+      "printedNumberOcr": "16",
+      "verifiedPrintedNumber": 16,
+      "subject": 2,
+      "batch": "subject2-retry-20260927",
+      "folder": "기본폴더",
+      "bookPage": null,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR 및 원본 수동 검수; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0023.jpg",
+      "answerPrintedNumber": 16,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 257,
+    "id": "new-subject2:retry20260927-p30-q19",
+    "group": "Part 2 · Chapter 4",
+    "stem": "다음 중 정보 식별의 목적과 가장 거리가 먼 것은?",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "경쟁력 있는 제안 작성"
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "리스크 감소"
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "특정 업체 보호"
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "정보 비대칭 해소"
+      }
+    ],
+    "answer": "3",
+    "source": {
+      "photo": "page_0030.jpg",
+      "column": null,
+      "printedNumberOcr": "19",
+      "verifiedPrintedNumber": 19,
+      "subject": 2,
+      "batch": "subject2-retry-20260927",
+      "folder": "기본폴더",
+      "bookPage": null,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR 및 원본 수동 검수; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0023.jpg",
+      "answerPrintedNumber": 19,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 258,
+    "id": "new-subject2:retry20260927-p30-q20",
+    "group": "Part 2 · Chapter 4",
+    "stem": "다음 중 입찰·제안준비에서 정보 식별 및 요청 과정의 올바른 순서는?",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "요청 → 분석 → 식별 → 반영"
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "식별 → 요청 → 확인 → 반영"
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "분석 → 계약 → 요청 → 반영"
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "입찰 → 요청 → 평가 → 반영"
+      }
+    ],
+    "answer": "2",
+    "source": {
+      "photo": "page_0030.jpg",
+      "column": null,
+      "printedNumberOcr": "20",
+      "verifiedPrintedNumber": 20,
+      "subject": 2,
+      "batch": "subject2-retry-20260927",
+      "folder": "기본폴더",
+      "bookPage": null,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR 및 원본 수동 검수; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0023.jpg",
+      "answerPrintedNumber": 20,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 259,
+    "id": "new-subject2:retry20260927-p32-q01",
+    "group": "Part 2 · Chapter 5",
+    "stem": "다음 중 입찰서 제출 방법의 원칙으로 가장 적절한 것은?",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "서면 제출"
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "전자입찰"
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "구두 제출"
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "이메일 제출"
+      }
+    ],
+    "answer": "2",
+    "source": {
+      "photo": "page_0032.jpg",
+      "column": null,
+      "printedNumberOcr": "1",
+      "verifiedPrintedNumber": 1,
+      "subject": 2,
+      "batch": "subject2-retry-20260927",
+      "folder": "기본폴더",
+      "bookPage": null,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR 및 원본 수동 검수; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0023.jpg",
+      "answerPrintedNumber": 1,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 260,
+    "id": "new-subject2:retry20260927-p32-q02",
+    "group": "Part 2 · Chapter 5",
+    "stem": "다음 사례에서 발생할 수 있는 결과로 가장 적절한 것은? A업체는 입찰 마감 5분 전에 전자입찰을 시도했으나, 인증서 오류로 제출이 완료되지 않았다.",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "정상 접수된다."
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "입찰이 무효처리될 수 있다."
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "인증서 오류 입증자료를 첨부하여 제출하면 추가 접수할 수 있다."
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "제출 기한이 자동 연장된다."
+      }
+    ],
+    "answer": "2",
+    "source": {
+      "photo": "page_0032.jpg",
+      "column": null,
+      "printedNumberOcr": "2",
+      "verifiedPrintedNumber": 2,
+      "subject": 2,
+      "batch": "subject2-retry-20260927",
+      "folder": "기본폴더",
+      "bookPage": null,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR 및 원본 수동 검수; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0023.jpg",
+      "answerPrintedNumber": 2,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 261,
+    "id": "new-subject2:retry20260927-p32-q04",
+    "group": "Part 2 · Chapter 5",
+    "stem": "다음 사례에서 B업체의 가장 적절한 조치는? B업체는 입찰서를 제출한 후 입찰금액 입력 오류를 발견하였다.",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "그대로 유지한다."
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "제출한 입찰서를 임의로 수정한다."
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "취소 신청 후 재입찰 시 참여 가능하다."
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "담당자에게 구두로 정정을 요청한다."
+      }
+    ],
+    "answer": "3",
+    "source": {
+      "photo": "page_0032.jpg",
+      "column": null,
+      "printedNumberOcr": "4",
+      "verifiedPrintedNumber": 4,
+      "subject": 2,
+      "batch": "subject2-retry-20260927",
+      "folder": "기본폴더",
+      "bookPage": null,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR 및 원본 수동 검수; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0023.jpg",
+      "answerPrintedNumber": 4,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 262,
+    "id": "new-subject2:retry20260927-p32-q05",
+    "group": "Part 2 · Chapter 5",
+    "stem": "국가종합전자조달시스템을 통한 입찰 시 예외적으로 서면 제출이 허용되는 경우로 가장 적절한 것은?",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "지정정보처리장치(전자입찰시스템)의 장애로 입찰이 곤란한 경우"
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "다수의 조달업체가 공동으로 서면 제출을 요구하는 경우"
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "지역제한 경쟁입찰 방식으로 진행되는 경우"
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "상호가 변경되었으나 입찰참가자격 등록증상의 변경 등록을 하지 않은 경우"
+      }
+    ],
+    "answer": "1",
+    "source": {
+      "photo": "page_0032.jpg",
+      "column": null,
+      "printedNumberOcr": "5",
+      "verifiedPrintedNumber": 5,
+      "subject": 2,
+      "batch": "subject2-retry-20260927",
+      "folder": "기본폴더",
+      "bookPage": null,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR 및 원본 수동 검수; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0023.jpg",
+      "answerPrintedNumber": 5,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 263,
+    "id": "new-subject2:retry20260927-p32-q07",
+    "group": "Part 2 · Chapter 5",
+    "stem": "다음 사례에서 발생할 수 있는 위험으로 가장 적절한 것은? C업체는 전자입찰을 완료했으나, 제출 후 접수번호를 확인하지 않았다.",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "제출 사실을 입증하기 어렵다."
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "낙찰자 선정 시 불이익이 있을 수 있다."
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "신인도 평가 시 감점될 수 있다."
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "입찰서를 다시 제출해야 한다."
+      }
+    ],
+    "answer": "1",
+    "source": {
+      "photo": "page_0032.jpg",
+      "column": null,
+      "printedNumberOcr": "7",
+      "verifiedPrintedNumber": 7,
+      "subject": 2,
+      "batch": "subject2-retry-20260927",
+      "folder": "기본폴더",
+      "bookPage": null,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR 및 원본 수동 검수; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0023.jpg",
+      "answerPrintedNumber": 7,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 264,
+    "id": "new-subject2:retry20260927-p33-q08",
+    "group": "Part 2 · Chapter 5",
+    "stem": "다음 중 입찰서 제출 방법의 효과로 가장 적절한 것은?",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "참여 의사 공식화"
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "참여 누적 수에 따른 신인도 가점 증가"
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "낙찰자 선정 가능성 증가"
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "업체 홍보 효과 확대"
+      }
+    ],
+    "answer": "1",
+    "source": {
+      "photo": "page_0033.jpg",
+      "column": null,
+      "printedNumberOcr": "8",
+      "verifiedPrintedNumber": 8,
+      "subject": 2,
+      "batch": "subject2-retry-20260927",
+      "folder": "기본폴더",
+      "bookPage": 251,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR 및 원본 수동 검수; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0023.jpg",
+      "answerPrintedNumber": 8,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 265,
+    "id": "new-subject2:retry20260927-p33-q09",
+    "group": "Part 2 · Chapter 5",
+    "stem": "다음 중 「국가계약법 시행규칙」 제44조에서 규정한 무효입찰 사유에 해당하지 않는 것은?",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "입찰참가자격 제한기간 중 대표자를 통한 입찰"
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "입찰보증금 미납 상태에서 제출한 입찰"
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "동일인이 동일사항에 2통 이상의 입찰서를 제출한 경우"
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "대리권이 있는 자가 한 입찰"
+      }
+    ],
+    "answer": "4",
+    "source": {
+      "photo": "page_0033.jpg",
+      "column": null,
+      "printedNumberOcr": "9",
+      "verifiedPrintedNumber": 9,
+      "subject": 2,
+      "batch": "subject2-retry-20260927",
+      "folder": "기본폴더",
+      "bookPage": 251,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR 및 원본 수동 검수; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0023.jpg",
+      "answerPrintedNumber": 9,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 266,
+    "id": "new-subject2:retry20260927-p33-q10",
+    "group": "Part 2 · Chapter 5",
+    "stem": "다음 사례에서 발생할 수 있는 결과로 가장 적절한 것은? D업체는 입찰서와 산출내역서를 함께 제출해야 하는 입찰에서 두 문서의 금액을 서로 다르게 기재하였다.",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "낮은 금액 기준으로 인정된다."
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "입찰이 무효처리된다."
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "반려 처리되면 조정 후 다시 제출한다."
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "낙찰자로 선정되면 조정한 후 계약을 체결한다."
+      }
+    ],
+    "answer": "2",
+    "source": {
+      "photo": "page_0033.jpg",
+      "column": null,
+      "printedNumberOcr": "10",
+      "verifiedPrintedNumber": 10,
+      "subject": 2,
+      "batch": "subject2-retry-20260927",
+      "folder": "기본폴더",
+      "bookPage": 251,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR 및 원본 수동 검수; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0023.jpg",
+      "answerPrintedNumber": 10,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 267,
+    "id": "new-subject2:retry20260927-p33-q11",
+    "group": "Part 2 · Chapter 5",
+    "stem": "다음 중 「물품구매(제조)입찰유의서」에서 규정한 무효입찰 사유로 가장 적절한 것은?",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "대리권 없는 자가 대리하여 제출한 입찰"
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "제출기한 내 정상적으로 제출된 입찰"
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "전자서명 완료 후 제출된 입찰"
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "접수번호 확인을 마친 입찰"
+      }
+    ],
+    "answer": "1",
+    "source": {
+      "photo": "page_0033.jpg",
+      "column": null,
+      "printedNumberOcr": "11",
+      "verifiedPrintedNumber": 11,
+      "subject": 2,
+      "batch": "subject2-retry-20260927",
+      "folder": "기본폴더",
+      "bookPage": 251,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR 및 원본 수동 검수; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0023.jpg",
+      "answerPrintedNumber": 11,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 268,
+    "id": "new-subject2:retry20260927-p33-q13",
+    "group": "Part 2 · Chapter 5",
+    "stem": "다음 사례에 대한 판단으로 가장 적절한 것은? F업체는 다른 업체와 입찰가격을 사전에 협의하여 입찰에 참여하였다.",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "유효"
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "감점"
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "무효"
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "계약 후 제재"
+      }
+    ],
+    "answer": "3",
+    "source": {
+      "photo": "page_0033.jpg",
+      "column": null,
+      "printedNumberOcr": "13",
+      "verifiedPrintedNumber": 13,
+      "subject": 2,
+      "batch": "subject2-retry-20260927",
+      "folder": "기본폴더",
+      "bookPage": 251,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR 및 원본 수동 검수; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0023.jpg",
+      "answerPrintedNumber": 13,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 269,
+    "id": "new-subject2:retry20260927-p33-q14",
+    "group": "Part 2 · Chapter 5",
+    "stem": "다음 사례에서 발생할 수 있는 결과로 가장 적절한 것은? G업체는 동일 입찰에서 A공동수급체와 B공동수급체 모두에 참여하였다.",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "둘 다 유효하다."
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "하나만 인정된다."
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "감점 후 평가한다."
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "모두 무효처리된다."
+      }
+    ],
+    "answer": "4",
+    "source": {
+      "photo": "page_0033.jpg",
+      "column": null,
+      "printedNumberOcr": "14",
+      "verifiedPrintedNumber": 14,
+      "subject": 2,
+      "batch": "subject2-retry-20260927",
+      "folder": "기본폴더",
+      "bookPage": 251,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR 및 원본 수동 검수; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0023.jpg",
+      "answerPrintedNumber": 14,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 270,
+    "id": "new-subject2:retry20260927-p34-q16",
+    "group": "Part 2 · Chapter 5",
+    "stem": "다음 사례에서 발생할 수 있는 결과로 가장 적절한 것은? I업체는 개찰 현장에서 입찰서 금액에 착오가 있음을 이유로 입찰 취소 의사를 표시했고, 계약담당공무원이 이를 인정하였다.",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "정상 접수된다."
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "해당 입찰은 무효로 처리된다."
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "같은 입찰에 다시 참여할 수 있다."
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "다음 입찰에서 참가가 제한된다."
+      }
+    ],
+    "answer": "2",
+    "source": {
+      "photo": "page_0034.jpg",
+      "column": null,
+      "printedNumberOcr": "16",
+      "verifiedPrintedNumber": 16,
+      "subject": 2,
+      "batch": "subject2-retry-20260927",
+      "folder": "기본폴더",
+      "bookPage": 252,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR 및 원본 수동 검수; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0023.jpg",
+      "answerPrintedNumber": 16,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 271,
+    "id": "new-subject2:retry20260927-p34-q20",
+    "group": "Part 2 · Chapter 5",
+    "stem": "다음 사례에서 발생할 수 있는 결과로 가장 적절한 것은? J업체는 산출내역서 제출이 요구되는 입찰에 참여하였으나, 개찰 단계에서 산출내역서를 제출하지 않은 사실이 확인되었다.",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "정상 개찰된다."
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "무효입찰로 제외된다."
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "계약체결 전에 제출하면 된다."
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "계약체결 후 착공신고서 제출 시 함께 제출하면 된다."
+      }
+    ],
+    "answer": "2",
+    "source": {
+      "photo": "page_0034.jpg",
+      "column": null,
+      "printedNumberOcr": "20",
+      "verifiedPrintedNumber": 20,
+      "subject": 2,
+      "batch": "subject2-retry-20260927",
+      "folder": "기본폴더",
+      "bookPage": 252,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR 및 원본 수동 검수; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0023.jpg",
+      "answerPrintedNumber": 20,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 272,
+    "id": "new-subject2:retry20260927-p34-q22",
+    "group": "Part 2 · Chapter 5",
+    "stem": "다음 사례에서 발생할 수 있는 결과로 가장 적절한 것은? K업체는 예정가격의 85%로 입찰하였으나, 해당 입찰의 낙찰하한율이 90%이었다.",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "낙찰자 선정에 유리하다."
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "낙찰자 선정 대상에서 제외된다."
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "1순위 적격심사 대상자가 된다."
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "낙찰하한율 직상자의 차순위 적격심사 대상이 된다."
+      }
+    ],
+    "answer": "2",
+    "source": {
+      "photo": "page_0034.jpg",
+      "column": null,
+      "printedNumberOcr": "22",
+      "verifiedPrintedNumber": 22,
+      "subject": 2,
+      "batch": "subject2-retry-20260927",
+      "folder": "기본폴더",
+      "bookPage": 252,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR 및 원본 수동 검수; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0023.jpg",
+      "answerPrintedNumber": 22,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 273,
+    "id": "new-subject2:retry20260927-p35-q24",
+    "group": "Part 2 · Chapter 5",
+    "stem": "다음 중 협상에 의한 계약 절차의 특징으로 가장 적절한 것은?",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "기술·가격 종합평가 후 협상을 진행한다."
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "최저가 입찰자는 자동 탈락한다."
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "입찰보증금은 일반 입찰방식의 2배를 납부한다."
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "우선협상대상자와의 협상이 결렬되면 차순위자와의 협상 없이 재공고 입찰을 실시한다."
+      }
+    ],
+    "answer": "1",
+    "source": {
+      "photo": "page_0035.jpg",
+      "column": null,
+      "printedNumberOcr": "24",
+      "verifiedPrintedNumber": 24,
+      "subject": 2,
+      "batch": "subject2-retry-20260927",
+      "folder": "기본폴더",
+      "bookPage": 253,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR 및 원본 수동 검수; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0023.jpg",
+      "answerPrintedNumber": 24,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 274,
+    "id": "new-subject2:retry20260927-p35-q25",
+    "group": "Part 2 · Chapter 5",
+    "stem": "다음 사례에서 발생할 수 있는 결과로 가장 적절한 것은? M업체는 개찰 후 낙찰자로 선정되었으나, 정당한 사유 없이 계약체결을 거부하였다.",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "낙찰자 지위가 그대로 유지된다."
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "차기 입찰 건의 계약 우선권을 부여받는다."
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "계약보증금을 수요기관이 대납하거나 면제한다."
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "입찰보증금 국고귀속 및 입찰참가자격이 제한된다."
+      }
+    ],
+    "answer": "4",
+    "source": {
+      "photo": "page_0035.jpg",
+      "column": null,
+      "printedNumberOcr": "25",
+      "verifiedPrintedNumber": 25,
+      "subject": 2,
+      "batch": "subject2-retry-20260927",
+      "folder": "기본폴더",
+      "bookPage": 253,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR 및 원본 수동 검수; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0023.jpg",
+      "answerPrintedNumber": 25,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 275,
+    "id": "new-subject2:retry20260927-p35-q26",
+    "group": "Part 2 · Chapter 5",
+    "stem": "다음 중 개찰 결과 공개의 효과로 가장 적절한 것은?",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "입찰 절차의 투명성 강화"
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "입찰 일정 단축"
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "낙찰하한율 상향 조정"
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "입찰보증금 반환"
+      }
+    ],
+    "answer": "1",
+    "source": {
+      "photo": "page_0035.jpg",
+      "column": null,
+      "printedNumberOcr": "26",
+      "verifiedPrintedNumber": 26,
+      "subject": 2,
+      "batch": "subject2-retry-20260927",
+      "folder": "기본폴더",
+      "bookPage": 253,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR 및 원본 수동 검수; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0023.jpg",
+      "answerPrintedNumber": 26,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 276,
+    "id": "new-subject2:retry20260927-p37-q01",
+    "group": "Part 3 · Chapter 1",
+    "stem": "다음 중 일반경쟁입찰의 가장 큰 장점은?",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "특정 업체만 참여할 수 있다."
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "시장 개방성과 경쟁성을 높일 수 있다."
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "발주기관이 업체를 신속하게 지명할 수 있다."
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "기술 인증을 보유한 업체만 참여할 수 있다."
+      }
+    ],
+    "answer": "2",
+    "source": {
+      "photo": "page_0037.jpg",
+      "column": null,
+      "printedNumberOcr": "1",
+      "verifiedPrintedNumber": 1,
+      "subject": 2,
+      "batch": "subject2-retry-20260927",
+      "folder": "기본폴더",
+      "bookPage": 260,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR 및 원본 수동 검수; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0023.jpg",
+      "answerPrintedNumber": 1,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 277,
+    "id": "new-subject2:retry20260927-p37-q03",
+    "group": "Part 3 · Chapter 1",
+    "stem": "다음 중 지명경쟁입찰의 장점으로 가장 적절한 것은?",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "경쟁성 극대화"
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "신속성과 안정성 확보"
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "가격 중심 낙찰"
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "모든 업체 참여 가능"
+      }
+    ],
+    "answer": "2",
+    "source": {
+      "photo": "page_0037.jpg",
+      "column": null,
+      "printedNumberOcr": "3",
+      "verifiedPrintedNumber": 3,
+      "subject": 2,
+      "batch": "subject2-retry-20260927",
+      "folder": "기본폴더",
+      "bookPage": 260,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR 및 원본 수동 검수; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0023.jpg",
+      "answerPrintedNumber": 3,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 278,
+    "id": "new-subject2:retry20260927-p37-q04",
+    "group": "Part 3 · Chapter 1",
+    "stem": "다음 사례에 적용된 입찰방식은?\n\nB기관은 긴급 복구 공사를 위해 신용과 실적이 확인된 여러 업체를 지명한 뒤, 지명된 업체 간 경쟁입찰을 실시하였다.",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "일반경쟁입찰"
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "제한경쟁입찰"
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "지명경쟁입찰"
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "수의계약"
+      }
+    ],
+    "answer": "3",
+    "source": {
+      "photo": "page_0037.jpg",
+      "column": null,
+      "printedNumberOcr": "4",
+      "verifiedPrintedNumber": 4,
+      "subject": 2,
+      "batch": "subject2-retry-20260927",
+      "folder": "기본폴더",
+      "bookPage": 260,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR 및 원본 수동 검수; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0023.jpg",
+      "answerPrintedNumber": 4,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 279,
+    "id": "new-subject2:retry20260927-p37-q07",
+    "group": "Part 3 · Chapter 1",
+    "stem": "다음 중 지명경쟁입찰의 단점으로 가장 적절한 것은?",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "입찰 절차가 복잡해지고 행정비용이 증가할 수 있다."
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "경쟁 대상이 제한되어 공정경쟁이 저해될 우려가 있다."
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "기술평가 중심으로 운영되어 가격경쟁이 약화된다."
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "입찰공고 기간이 길어 사업 지연 가능성이 높다."
+      }
+    ],
+    "answer": "2",
+    "source": {
+      "photo": "page_0037.jpg",
+      "column": null,
+      "printedNumberOcr": "7",
+      "verifiedPrintedNumber": 7,
+      "subject": 2,
+      "batch": "subject2-retry-20260927",
+      "folder": "기본폴더",
+      "bookPage": 260,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR 및 원본 수동 검수; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0023.jpg",
+      "answerPrintedNumber": 7,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 280,
+    "id": "new-subject2:retry20260927-p38-q09",
+    "group": "Part 3 · Chapter 1",
+    "stem": "다음 중 수의계약의 가장 핵심적인 특징은?",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "경쟁입찰을 거쳐야 한다."
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "특정 업체와 직접 계약한다."
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "모든 업체가 참여 가능하다."
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "기술점수 기준 충족이 필요하다."
+      }
+    ],
+    "answer": "2",
+    "source": {
+      "photo": "page_0038.jpg",
+      "column": null,
+      "printedNumberOcr": "9",
+      "verifiedPrintedNumber": 9,
+      "subject": 2,
+      "batch": "subject2-retry-20260927",
+      "folder": "기본폴더",
+      "bookPage": 261,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR 및 원본 수동 검수; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0023.jpg",
+      "answerPrintedNumber": 9,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 281,
+    "id": "new-subject2:retry20260927-p38-q10",
+    "group": "Part 3 · Chapter 1",
+    "stem": "다음 사례에서 적용 가능한 계약 방식은?\n\nE기관은 태풍 피해 복구를 위해 신속히 계약을 체결해야 했다.",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "일반경쟁입찰"
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "제한경쟁입찰"
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "지명경쟁입찰"
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "수의계약"
+      }
+    ],
+    "answer": "4",
+    "source": {
+      "photo": "page_0038.jpg",
+      "column": null,
+      "printedNumberOcr": "10",
+      "verifiedPrintedNumber": 10,
+      "subject": 2,
+      "batch": "subject2-retry-20260927",
+      "folder": "기본폴더",
+      "bookPage": 261,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR 및 원본 수동 검수; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0023.jpg",
+      "answerPrintedNumber": 10,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 282,
+    "id": "new-subject2:retry20260927-p38-q11",
+    "group": "Part 3 · Chapter 1",
+    "stem": "다음 중 수의계약 허용 사유에 해당하지 않는 것은?",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "소액계약"
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "긴급계약"
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "독점적 기술 보유 업체와의 계약"
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "모든 업체의 자유로운 참여 보장"
+      }
+    ],
+    "answer": "4",
+    "source": {
+      "photo": "page_0038.jpg",
+      "column": null,
+      "printedNumberOcr": "11",
+      "verifiedPrintedNumber": 11,
+      "subject": 2,
+      "batch": "subject2-retry-20260927",
+      "folder": "기본폴더",
+      "bookPage": 261,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR 및 원본 수동 검수; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0024.jpg",
+      "answerPrintedNumber": 11,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 283,
+    "id": "new-subject2:retry20260927-p38-q12",
+    "group": "Part 3 · Chapter 1",
+    "stem": "다음 사례에서 적용 가능한 계약 방식은?\n\nF기관은 4천만원 규모의 물품 구매계약을 추진하고 있다.",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "일반경쟁입찰"
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "제한경쟁입찰"
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "수의계약"
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "협상에 의한 계약"
+      }
+    ],
+    "answer": "3",
+    "source": {
+      "photo": "page_0038.jpg",
+      "column": null,
+      "printedNumberOcr": "12",
+      "verifiedPrintedNumber": 12,
+      "subject": 2,
+      "batch": "subject2-retry-20260927",
+      "folder": "기본폴더",
+      "bookPage": 261,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR 및 원본 수동 검수; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0024.jpg",
+      "answerPrintedNumber": 12,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 284,
+    "id": "new-subject2:retry20260927-p38-q13",
+    "group": "Part 3 · Chapter 1",
+    "stem": "수의계약의 장점과 단점으로 옳은 것은?",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "장점: 신속성 확보 / 단점: 투명성 강화"
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "장점: 신속성 확보 / 단점: 경쟁성 부족"
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "장점: 경쟁성 강화 / 단점: 절차 복잡·지연"
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "장점: 투명성 강화 / 단점: 특수 상황 대응 부족"
+      }
+    ],
+    "answer": "2",
+    "source": {
+      "photo": "page_0038.jpg",
+      "column": null,
+      "printedNumberOcr": "13",
+      "verifiedPrintedNumber": 13,
+      "subject": 2,
+      "batch": "subject2-retry-20260927",
+      "folder": "기본폴더",
+      "bookPage": 261,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR 및 원본 수동 검수; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0024.jpg",
+      "answerPrintedNumber": 13,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 285,
+    "id": "new-subject2:retry20260927-p38-q14",
+    "group": "Part 3 · Chapter 1",
+    "stem": "다음 사례에서 적용 가능한 계약 방식은?\n\n• G기관은 특정 특허 기술을 보유한 업체와 계약을 체결하였다.\n• H기관은 법령상 요건을 충족한 장애인 관련 단체 또는 사회적 배려 대상 기업과 직접 계약을 체결하였다.",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "일반경쟁입찰"
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "제한경쟁입찰"
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "수의계약"
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "지명경쟁입찰"
+      }
+    ],
+    "answer": "3",
+    "source": {
+      "photo": "page_0038.jpg",
+      "column": null,
+      "printedNumberOcr": "14",
+      "verifiedPrintedNumber": 14,
+      "subject": 2,
+      "batch": "subject2-retry-20260927",
+      "folder": "기본폴더",
+      "bookPage": 261,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR 및 원본 수동 검수; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0024.jpg",
+      "answerPrintedNumber": 14,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 286,
+    "id": "new-subject2:retry20260927-p38-q15",
+    "group": "Part 3 · Chapter 1",
+    "stem": "다음 중 수의계약 절차에 포함되지 않는 것은?",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "수의계약 사유 확인"
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "업체 선정"
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "견적서 제출"
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "개찰 및 공개"
+      }
+    ],
+    "answer": "4",
+    "source": {
+      "photo": "page_0038.jpg",
+      "column": null,
+      "printedNumberOcr": "15",
+      "verifiedPrintedNumber": 15,
+      "subject": 2,
+      "batch": "subject2-retry-20260927",
+      "folder": "기본폴더",
+      "bookPage": 261,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR 및 원본 수동 검수; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0024.jpg",
+      "answerPrintedNumber": 15,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 287,
+    "id": "new-subject2:retry20260927-p38-q16",
+    "group": "Part 3 · Chapter 1",
+    "stem": "다음 사례에서 발생할 수 있는 문제로 가장 적절한 것은?\n\nI기관은 수의계약을 체결하면서 수의계약 사유를 기록·공개하지 않았다.",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "감사·심사에서 지적"
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "경쟁 제한의 합리화"
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "신속한 의사결정"
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "계약조건 무시"
+      }
+    ],
+    "answer": "1",
+    "source": {
+      "photo": "page_0038.jpg",
+      "column": null,
+      "printedNumberOcr": "16",
+      "verifiedPrintedNumber": 16,
+      "subject": 2,
+      "batch": "subject2-retry-20260927",
+      "folder": "기본폴더",
+      "bookPage": 261,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR 및 원본 수동 검수; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0024.jpg",
+      "answerPrintedNumber": 16,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 288,
+    "id": "new-subject2:retry20260927-p40-q01",
+    "group": "Part 3 · Chapter 2",
+    "stem": "다음 중 평가위원회 구성 필요성이 가장 낮은 경우는?",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "협상에 의한 계약"
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "종합평가낙찰제"
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "경쟁적 대화"
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "최저가 낙찰제"
+      }
+    ],
+    "answer": "4",
+    "source": {
+      "photo": "page_0040.jpg",
+      "column": null,
+      "printedNumberOcr": "1",
+      "verifiedPrintedNumber": 1,
+      "subject": 2,
+      "batch": "subject2-retry-20260927",
+      "folder": "기본폴더",
+      "bookPage": 266,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR 및 원본 수동 검수; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0024.jpg",
+      "answerPrintedNumber": 1,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 289,
+    "id": "new-subject2:retry20260927-p40-q03",
+    "group": "Part 3 · Chapter 2",
+    "stem": "다음 중 평가위원회의 역할이 가장 중요한 경우는?",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "단순 물품 구매"
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "최저가 입찰"
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "협상에 의한 계약"
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "소액 수의계약"
+      }
+    ],
+    "answer": "3",
+    "source": {
+      "photo": "page_0040.jpg",
+      "column": null,
+      "printedNumberOcr": "3",
+      "verifiedPrintedNumber": 3,
+      "subject": 2,
+      "batch": "subject2-retry-20260927",
+      "folder": "기본폴더",
+      "bookPage": 266,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR 및 원본 수동 검수; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0024.jpg",
+      "answerPrintedNumber": 3,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 290,
+    "id": "new-subject2:retry20260927-p40-q04",
+    "group": "Part 3 · Chapter 2",
+    "stem": "다음 중 평가위원회 구성 원칙으로 가장 부적절한 것은?",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "전문성 확보"
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "내부위원 중심 구성"
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "공정성 확보"
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "독립성 유지"
+      }
+    ],
+    "answer": "2",
+    "source": {
+      "photo": "page_0040.jpg",
+      "column": null,
+      "printedNumberOcr": "4",
+      "verifiedPrintedNumber": 4,
+      "subject": 2,
+      "batch": "subject2-retry-20260927",
+      "folder": "기본폴더",
+      "bookPage": 266,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR 및 원본 수동 검수; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0024.jpg",
+      "answerPrintedNumber": 4,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 291,
+    "id": "new-subject2:retry20260927-p40-q07",
+    "group": "Part 3 · Chapter 2",
+    "stem": "다음 중 평가위원회의 영향력이 가장 크게 작용하는 구조는?",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "가격 단독 평가"
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "정량평가 중심 구조"
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "정성평가 중심 구조"
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "자동 평가 시스템"
+      }
+    ],
+    "answer": "3",
+    "source": {
+      "photo": "page_0040.jpg",
+      "column": null,
+      "printedNumberOcr": "7",
+      "verifiedPrintedNumber": 7,
+      "subject": 2,
+      "batch": "subject2-retry-20260927",
+      "folder": "기본폴더",
+      "bookPage": 266,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR 및 원본 수동 검수; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0024.jpg",
+      "answerPrintedNumber": 7,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 292,
+    "id": "new-subject2:retry20260927-p41-q11",
+    "group": "Part 3 · Chapter 2",
+    "stem": "다음 중 이해상충 회피 절차에 포함되지 않는 것은?",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "사전 확인"
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "자진 회피"
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "기관 배제"
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "해당 업체 입찰참가자격 제한"
+      }
+    ],
+    "answer": "4",
+    "source": {
+      "photo": "page_0041.jpg",
+      "column": null,
+      "printedNumberOcr": "11",
+      "verifiedPrintedNumber": 11,
+      "subject": 2,
+      "batch": "subject2-retry-20260927",
+      "folder": "기본폴더",
+      "bookPage": 267,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR 및 원본 수동 검수; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0024.jpg",
+      "answerPrintedNumber": 11,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 293,
+    "id": "new-subject2:retry20260927-p41-q15",
+    "group": "Part 3 · Chapter 2",
+    "stem": "다음 중 이해상충 판단 기준으로 가장 적절한 것은?",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "실제 편향이 발생했는지 여부"
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "평가 대상업체의 정보를 보유했는지 여부"
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "외형상 공정성 훼손 가능성이 있는지 여부"
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "평가 결과에 실제 영향이 있었는지 여부"
+      }
+    ],
+    "answer": "3",
+    "source": {
+      "photo": "page_0041.jpg",
+      "column": null,
+      "printedNumberOcr": "15",
+      "verifiedPrintedNumber": 15,
+      "subject": 2,
+      "batch": "subject2-retry-20260927",
+      "folder": "기본폴더",
+      "bookPage": 267,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR 및 원본 수동 검수; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0024.jpg",
+      "answerPrintedNumber": 15,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 294,
+    "id": "new-subject2:retry20260927-p41-q16",
+    "group": "Part 3 · Chapter 2",
+    "stem": "다음 중 입찰자가 특정 평가위원의 공정성에 문제를 제기하여 배제를 요청한 경우에 해당하는 제도는?",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "제척"
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "기피"
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "회피"
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "선정"
+      }
+    ],
+    "answer": "2",
+    "source": {
+      "photo": "page_0041.jpg",
+      "column": null,
+      "printedNumberOcr": "16",
+      "verifiedPrintedNumber": 16,
+      "subject": 2,
+      "batch": "subject2-retry-20260927",
+      "folder": "기본폴더",
+      "bookPage": 267,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR 및 원본 수동 검수; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0024.jpg",
+      "answerPrintedNumber": 16,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 295,
+    "id": "new-subject2:retry20260927-p41-q17",
+    "group": "Part 3 · Chapter 2",
+    "stem": "다음 중 이해상충 관리 체계에 대한 설명으로 가장 적절한 것은?",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "실제 편향이 발생한 경우에만 적용한다."
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "입찰자 요청이 있어야만 적용한다."
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "사전 예방 중심으로 운영한다."
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "평가가 끝난 뒤에만 검토한다."
+      }
+    ],
+    "answer": "3",
+    "source": {
+      "photo": "page_0041.jpg",
+      "column": null,
+      "printedNumberOcr": "17",
+      "verifiedPrintedNumber": 17,
+      "subject": 2,
+      "batch": "subject2-retry-20260927",
+      "folder": "기본폴더",
+      "bookPage": 267,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR 및 원본 수동 검수; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0024.jpg",
+      "answerPrintedNumber": 17,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 296,
+    "id": "new-subject2:retry20260927-p42-q20",
+    "group": "Part 3 · Chapter 2",
+    "stem": "다음 중 사전접촉 금지 위반 시 업체에 부과될 수 있는 제재로 가장 적절한 것은?",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "일정 기간 입찰참가자격 제한"
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "입찰참가자격 영구 박탈"
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "계약금액 10% 감액"
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "차기에 한해 입찰참가 제한"
+      }
+    ],
+    "answer": "1",
+    "source": {
+      "photo": "page_0042.jpg",
+      "column": null,
+      "printedNumberOcr": "20",
+      "verifiedPrintedNumber": 20,
+      "subject": 2,
+      "batch": "subject2-retry-20260927",
+      "folder": "기본폴더",
+      "bookPage": 268,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR 및 원본 수동 검수; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0024.jpg",
+      "answerPrintedNumber": 20,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 297,
+    "id": "new-subject2:retry20260927-p42-q21",
+    "group": "Part 3 · Chapter 2",
+    "stem": "다음 중 평가위원의 독립성을 보장하기 위한 조치로 가장 적절한 것은?",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "외부 압력이나 지시를 거부한다."
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "업체와의 사전 접촉을 허용한다."
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "평가위원 명단을 사전에 공개한다."
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "개인별 평가 점수를 실명으로 공개한다."
+      }
+    ],
+    "answer": "1",
+    "source": {
+      "photo": "page_0042.jpg",
+      "column": null,
+      "printedNumberOcr": "21",
+      "verifiedPrintedNumber": 21,
+      "subject": 2,
+      "batch": "subject2-retry-20260927",
+      "folder": "기본폴더",
+      "bookPage": 268,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR 및 원본 수동 검수; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0024.jpg",
+      "answerPrintedNumber": 21,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 298,
+    "id": "new-subject2:retry20260927-p42-q22",
+    "group": "Part 3 · Chapter 2",
+    "stem": "다음 중 평가위원 사전접촉 금지 제도의 효과로 가장 적절한 것은?",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "평가 신뢰성 제고"
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "참여업체의 경쟁력 향상"
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "평가위원의 전문성 강화"
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "참여업체와 평가위원 간 정보 공유"
+      }
+    ],
+    "answer": "1",
+    "source": {
+      "photo": "page_0042.jpg",
+      "column": null,
+      "printedNumberOcr": "22",
+      "verifiedPrintedNumber": 22,
+      "subject": 2,
+      "batch": "subject2-retry-20260927",
+      "folder": "기본폴더",
+      "bookPage": 268,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR 및 원본 수동 검수; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0024.jpg",
+      "answerPrintedNumber": 22,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 299,
+    "id": "new-subject2:retry20260927-p42-q25",
+    "group": "Part 3 · Chapter 2",
+    "stem": "다음 중 사전접촉 금지 제도의 운영 원칙으로 가장 적절한 것은?",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "접촉 발생 후 사후 조치 중심으로 운영한다."
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "접촉 시도 자체는 문제되지 않는다."
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "사전 차단 중심으로 운영한다."
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "평가가 끝난 뒤에만 검증한다."
+      }
+    ],
+    "answer": "3",
+    "source": {
+      "photo": "page_0042.jpg",
+      "column": null,
+      "printedNumberOcr": "25",
+      "verifiedPrintedNumber": 25,
+      "subject": 2,
+      "batch": "subject2-retry-20260927",
+      "folder": "기본폴더",
+      "bookPage": 268,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR 및 원본 수동 검수; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0024.jpg",
+      "answerPrintedNumber": 25,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 300,
+    "id": "new-subject2:retry20260927-p45-q01",
+    "group": "Part 3 · Chapter 3",
+    "stem": "다음 중 기술(규격) 적합자로 인정받기 위한 최소 조건은?",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "가격까지 포함한 종합평가 결과"
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "공고문에 명시된 기술·규격 요건 충족"
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "발주기관 주관의 현장설명회 참석"
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "사회적 가치 점수 확보"
+      }
+    ],
+    "answer": "2",
+    "source": {
+      "photo": "page_0045.jpg",
+      "column": null,
+      "printedNumberOcr": "1",
+      "verifiedPrintedNumber": 1,
+      "subject": 2,
+      "batch": "subject2-retry-20260927",
+      "folder": "기본폴더",
+      "bookPage": 273,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR 및 원본 수동 검수; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0024.jpg",
+      "answerPrintedNumber": 1,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 301,
+    "id": "new-subject2:retry20260927-p45-q03",
+    "group": "Part 3 · Chapter 3",
+    "stem": "다음 사례에서 발생할 수 있는 결과로 가장 적절한 것은?\n\nA업체는 기술·가격 종합평가에서 1위를 했으나 협상이 결렬되었다.",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "A업체가 낙찰자로 확정된다."
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "차순위 업체가 협상 기회를 가진다."
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "차순위 업체와의 협상이 결렬되면 A업체가 우선적으로 협상대상자 지위를 회복한다."
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "입찰이 무효처리된다."
+      }
+    ],
+    "answer": "2",
+    "source": {
+      "photo": "page_0045.jpg",
+      "column": null,
+      "printedNumberOcr": "3",
+      "verifiedPrintedNumber": 3,
+      "subject": 2,
+      "batch": "subject2-retry-20260927",
+      "folder": "기본폴더",
+      "bookPage": 273,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR 및 원본 수동 검수; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0024.jpg",
+      "answerPrintedNumber": 3,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 302,
+    "id": "new-subject2:retry20260927-p45-q04",
+    "group": "Part 3 · Chapter 3",
+    "stem": "다음 사례에서 B업체의 지위로 가장 적절한 것은?\n\nB업체는 기술 적합자로 인정되었으나 가격점수가 낮아 종합평가에서 3위를 하였다.",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "협상 참여가 불가하다."
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "협상대상자 후보군에 포함될 수 있다."
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "우선협상대상자로 지정된다."
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "낙찰자로 자동 확정된다."
+      }
+    ],
+    "answer": "2",
+    "source": {
+      "photo": "page_0045.jpg",
+      "column": null,
+      "printedNumberOcr": "4",
+      "verifiedPrintedNumber": 4,
+      "subject": 2,
+      "batch": "subject2-retry-20260927",
+      "folder": "기본폴더",
+      "bookPage": 273,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR 및 원본 수동 검수; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0024.jpg",
+      "answerPrintedNumber": 4,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 303,
+    "id": "new-subject2:retry20260927-p45-q06",
+    "group": "Part 3 · Chapter 3",
+    "stem": "다음 중 우선협상대상자에 대한 설명으로 옳지 않은 것은?",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "최종 낙찰대상자가 아니다."
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "협상 실패 시 차순위자와 협상을 진행한다."
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "기술평가만으로 결정된다."
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "종합평가 결과로 선정된다."
+      }
+    ],
+    "answer": "3",
+    "source": {
+      "photo": "page_0045.jpg",
+      "column": null,
+      "printedNumberOcr": "6",
+      "verifiedPrintedNumber": 6,
+      "subject": 2,
+      "batch": "subject2-retry-20260927",
+      "folder": "기본폴더",
+      "bookPage": 273,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR 및 원본 수동 검수; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0025.jpg",
+      "answerPrintedNumber": 6,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 304,
+    "id": "new-subject2:retry20260927-p47-q11",
+    "group": "Part 3 · Chapter 3",
+    "stem": "다음 중 기술협상 절차의 순서로 가장 적절한 것은?",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "사전 검토 → 협상 회의 → 대체안 제시 → 합의 도출 → 계약 반영"
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "협상 회의 → 사전 검토 → 합의 도출 → 계약 반영 → 대체안 제시"
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "사전 검토 → 대체안 제시 → 계약 반영 → 협상 회의 → 합의 도출"
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "계약 반영 → 합의 도출 → 사전 검토 → 협상 회의 → 대체안 제시"
+      }
+    ],
+    "answer": "1",
+    "source": {
+      "photo": "page_0047.jpg",
+      "column": null,
+      "printedNumberOcr": "11",
+      "verifiedPrintedNumber": 11,
+      "subject": 2,
+      "batch": "subject2-retry-20260927",
+      "folder": "기본폴더",
+      "bookPage": 274,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR 및 원본 수동 검수; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0025.jpg",
+      "answerPrintedNumber": 11,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 305,
+    "id": "new-subject2:retry20260927-p51-q01",
+    "group": "Part 3 · Chapter 4",
+    "stem": "다음 중 적격심사제의 본질적·직접적 장점으로 가장 적절한 것은?",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "덤핑 방지 및 계약이행능력 확보"
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "가격경쟁 촉진"
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "입찰절차 간소화"
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "계약기간 단축"
+      }
+    ],
+    "answer": "1",
+    "source": {
+      "photo": "page_0051.jpg",
+      "column": null,
+      "printedNumberOcr": "1",
+      "verifiedPrintedNumber": 1,
+      "subject": 2,
+      "batch": "subject2-retry-20260927",
+      "folder": "기본폴더",
+      "bookPage": null,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR 및 원본 수동 검수; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0025.jpg",
+      "answerPrintedNumber": 1,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 306,
+    "id": "new-subject2:retry20260927-p51-q02",
+    "group": "Part 3 · Chapter 4",
+    "stem": "다음 사례에서 발생할 수 있는 결과로 가장 적절한 것은?\n\nA업체는 최저가 입찰자로 결정되었으나, 그 입찰가격이 낙찰하한율에 미달하였다.",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "A업체가 낙찰자로 확정된다."
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "낙찰하한율 직상자가 기준 점수에 미달되면 A업체가 차순위 심사 대상이 된다."
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "A업체는 적격심사 대상에서 제외된다."
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "입찰이 무효처리된다."
+      }
+    ],
+    "answer": "3",
+    "source": {
+      "photo": "page_0051.jpg",
+      "column": null,
+      "printedNumberOcr": "2",
+      "verifiedPrintedNumber": 2,
+      "subject": 2,
+      "batch": "subject2-retry-20260927",
+      "folder": "기본폴더",
+      "bookPage": null,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR 및 원본 수동 검수; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0025.jpg",
+      "answerPrintedNumber": 2,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 307,
+    "id": "new-subject2:retry20260927-p51-q05",
+    "group": "Part 3 · Chapter 4",
+    "stem": "다음 중 적격심사 절차의 순서로 가장 올바른 것은?",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "입찰공고 → 입찰서 제출 → 낙찰하한율 직상자 선정 → 적격심사 → 낙찰자 결정"
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "입찰서 제출 → 적격심사 → 최저가 선정 → 입찰공고 → 낙찰자 결정"
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "적격심사 → 낙찰하한율 직상자 선정 → 입찰서 제출 → 입찰공고 → 낙찰자 결정"
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "입찰공고 → 최저가 선정 → 낙찰자 결정 → 적격심사"
+      }
+    ],
+    "answer": "1",
+    "source": {
+      "photo": "page_0051.jpg",
+      "column": null,
+      "printedNumberOcr": "5",
+      "verifiedPrintedNumber": 5,
+      "subject": 2,
+      "batch": "subject2-retry-20260927",
+      "folder": "기본폴더",
+      "bookPage": null,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR 및 원본 수동 검수; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0025.jpg",
+      "answerPrintedNumber": 5,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 308,
+    "id": "new-subject2:retry20260927-p51-q07",
+    "group": "Part 3 · Chapter 4",
+    "stem": "다음 중 적격심사제에 대한 설명으로 옳지 않은 것은?",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "모든 입찰자를 동시에 심사한다."
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "1순위자부터 심사한다."
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "탈락 시 차순위자로 이동한다."
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "순차적으로 진행된다."
+      }
+    ],
+    "answer": "1",
+    "source": {
+      "photo": "page_0051.jpg",
+      "column": null,
+      "printedNumberOcr": "7",
+      "verifiedPrintedNumber": 7,
+      "subject": 2,
+      "batch": "subject2-retry-20260927",
+      "folder": "기본폴더",
+      "bookPage": null,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR 및 원본 수동 검수; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0025.jpg",
+      "answerPrintedNumber": 7,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 309,
+    "id": "new-subject2:retry20260927-p52-q08",
+    "group": "Part 3 · Chapter 4",
+    "stem": "다음 사례에 대한 판단으로 가장 적절한 것은?\n\nC기관은 1순위자와 2순위자를 동시에 적격심사하여 더 높은 점수를 받은 업체를 낙찰자로 선정하였다.",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "효율적인 방식이다."
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "조건부로 적절하다."
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "절차를 위반하였다."
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "문제가 없다."
+      }
+    ],
+    "answer": "3",
+    "source": {
+      "photo": "page_0052.jpg",
+      "column": null,
+      "printedNumberOcr": "8",
+      "verifiedPrintedNumber": 8,
+      "subject": 2,
+      "batch": "subject2-retry-20260927",
+      "folder": "기본폴더",
+      "bookPage": 288,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR 및 원본 수동 검수; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0025.jpg",
+      "answerPrintedNumber": 8,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 310,
+    "id": "new-subject2:retry20260927-p52-q09",
+    "group": "Part 3 · Chapter 4",
+    "stem": "다음 중 협상계약 절차에서 낙찰자가 최종적으로 확정되는 시점은 언제인가?",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "종합평가 결과 확정 시"
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "우선협상대상자 선정 시"
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "기술협상 종료 시"
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "기술협상과 가격협상이 완료되어 계약체결이 가능한 상태가 된 시점"
+      }
+    ],
+    "answer": "4",
+    "source": {
+      "photo": "page_0052.jpg",
+      "column": null,
+      "printedNumberOcr": "9",
+      "verifiedPrintedNumber": 9,
+      "subject": 2,
+      "batch": "subject2-retry-20260927",
+      "folder": "기본폴더",
+      "bookPage": 288,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR 및 원본 수동 검수; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0025.jpg",
+      "answerPrintedNumber": 9,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 311,
+    "id": "new-subject2:retry20260927-p52-q10",
+    "group": "Part 3 · Chapter 4",
+    "stem": "다음 사례에 대한 결과로 가장 적절한 것은?\n\nD업체는 종합평가에서 1위를 하였으나, 협상 과정에서 발주기관의 요구 조건을 수용하지 않았다.",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "낙찰자로 확정된다."
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "협상이 결렬되고, 차순위 업체로 협상 기회가 이동한다."
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "계약조건을 변경한 후 확정된다."
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "입찰이 무효처리된다."
+      }
+    ],
+    "answer": "2",
+    "source": {
+      "photo": "page_0052.jpg",
+      "column": null,
+      "printedNumberOcr": "10",
+      "verifiedPrintedNumber": 10,
+      "subject": 2,
+      "batch": "subject2-retry-20260927",
+      "folder": "기본폴더",
+      "bookPage": 288,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR 및 원본 수동 검수; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0025.jpg",
+      "answerPrintedNumber": 10,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 312,
+    "id": "new-subject2:retry20260927-p52-q12",
+    "group": "Part 3 · Chapter 4",
+    "stem": "다음 중 협상계약 절차의 순서로 가장 적절한 것은?",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "제안서 제출 → 기술평가 → 가격평가 → 종합평가 → 우선협상대상자 선정 → 협상 → 낙찰자 결정"
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "제안서 제출 → 가격평가 → 기술평가 → 종합평가 → 우선협상대상자 선정 → 협상 → 낙찰자 결정"
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "기술평가 → 가격평가 → 제안서 제출 → 종합평가 → 우선협상대상자 선정 → 협상 → 낙찰자 결정"
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "제안서 제출 → 협상 → 종합평가 → 낙찰자 결정"
+      }
+    ],
+    "answer": "1",
+    "source": {
+      "photo": "page_0052.jpg",
+      "column": null,
+      "printedNumberOcr": "12",
+      "verifiedPrintedNumber": 12,
+      "subject": 2,
+      "batch": "subject2-retry-20260927",
+      "folder": "기본폴더",
+      "bookPage": 288,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR 및 원본 수동 검수; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0025.jpg",
+      "answerPrintedNumber": 12,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 313,
+    "id": "new-subject2:retry20260927-p52-q14",
+    "group": "Part 3 · Chapter 4",
+    "stem": "다음 중 협상계약 제도의 장점으로 가장 적절한 것은?",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "단순 최저가 경쟁을 방지할 수 있다."
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "기술 적합성 검증이 불필요하다."
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "가격협상을 제외한다."
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "최저가 업체가 자동 낙찰된다."
+      }
+    ],
+    "answer": "1",
+    "source": {
+      "photo": "page_0052.jpg",
+      "column": null,
+      "printedNumberOcr": "14",
+      "verifiedPrintedNumber": 14,
+      "subject": 2,
+      "batch": "subject2-retry-20260927",
+      "folder": "기본폴더",
+      "bookPage": 288,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR 및 원본 수동 검수; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0025.jpg",
+      "answerPrintedNumber": 14,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 314,
+    "id": "new-subject2:retry20260927-p52-q15",
+    "group": "Part 3 · Chapter 4",
+    "stem": "다음 사례에서 발생할 수 있는 결과로 가장 적절한 것은?\n\nG업체는 협상 과정에서 발주기관의 요구 조건을 모두 수용했으나, 가격협상에서 합의에 이르지 못하였다.",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "협상이 결렬되고, 차순위 업체로 협상 기회가 이동한다."
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "낙찰자로 확정된다."
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "계약조건이 자동으로 변경된다."
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "입찰이 무효처리된다."
+      }
+    ],
+    "answer": "1",
+    "source": {
+      "photo": "page_0052.jpg",
+      "column": null,
+      "printedNumberOcr": "15",
+      "verifiedPrintedNumber": 15,
+      "subject": 2,
+      "batch": "subject2-retry-20260927",
+      "folder": "기본폴더",
+      "bookPage": 288,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR 및 원본 수동 검수; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0025.jpg",
+      "answerPrintedNumber": 15,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 315,
+    "id": "new-subject2:retry20260927-p53-q16",
+    "group": "Part 3 · Chapter 4",
+    "stem": "다음 중 협상계약과 적격심사의 차이로 가장 적절한 것은?",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "협상계약은 가격을 중심으로 낙찰자를 결정한다."
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "적격심사는 협상 절차를 포함한다."
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "협상계약은 협상 성립 후 낙찰자를 확정한다."
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "적격심사는 종합평가 방식이다."
+      }
+    ],
+    "answer": "3",
+    "source": {
+      "photo": "page_0053.jpg",
+      "column": null,
+      "printedNumberOcr": "16",
+      "verifiedPrintedNumber": 16,
+      "subject": 2,
+      "batch": "subject2-retry-20260927",
+      "folder": "기본폴더",
+      "bookPage": 289,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR 및 원본 수동 검수; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0025.jpg",
+      "answerPrintedNumber": 16,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 316,
+    "id": "new-subject2:retry20260927-p53-q18",
+    "group": "Part 3 · Chapter 4",
+    "stem": "다음 사례에서 가장 적절한 조치는?\n\n희망수량경쟁입찰에서 H업체는 단가가 가장 낮지만, 제시한 희망수량이 전체 필요량의 절반에 불과하였다.",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "H업체가 전체 필요량에 대한 낙찰자가 된다."
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "H업체에 절반을 배정하고, 잔여 수량은 차순위자 순으로 배정한다."
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "H업체와 절반의 수량에 대해 계약을 체결하고, 잔여 수량은 재공고하여 낙찰자를 선정한다."
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "예정가격 내 최저가 입찰자가 전체 필요량을 제시할 때까지 재입찰을 실시한다."
+      }
+    ],
+    "answer": "2",
+    "source": {
+      "photo": "page_0053.jpg",
+      "column": null,
+      "printedNumberOcr": "18",
+      "verifiedPrintedNumber": 18,
+      "subject": 2,
+      "batch": "subject2-retry-20260927",
+      "folder": "기본폴더",
+      "bookPage": 289,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR 및 원본 수동 검수; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0025.jpg",
+      "answerPrintedNumber": 18,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 317,
+    "id": "new-subject2:retry20260927-p53-q20",
+    "group": "Part 3 · Chapter 4",
+    "stem": "다음 사례에서 예상되는 결과로 가장 적절한 것은?\n\nJ업체는 예정가격 내 최저 단가 입찰자이지만, 공급희망수량 150개를 제시하였다. 전체 수요량은 100개이다.",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "J업체에 100개를 배정한다."
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "J업체에 150개를 배정한다."
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "J업체의 입찰을 무효처리한다."
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "재공고입찰에 부쳐 낙찰자를 선정한다."
+      }
+    ],
+    "answer": "1",
+    "source": {
+      "photo": "page_0053.jpg",
+      "column": null,
+      "printedNumberOcr": "20",
+      "verifiedPrintedNumber": 20,
+      "subject": 2,
+      "batch": "subject2-retry-20260927",
+      "folder": "기본폴더",
+      "bookPage": 289,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR 및 원본 수동 검수; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0026.jpg",
+      "answerPrintedNumber": 20,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 318,
+    "id": "new-subject2:retry20260927-p53-q21",
+    "group": "Part 3 · Chapter 4",
+    "stem": "다음 중 희망수량경쟁입찰의 본질로 가장 적절한 것은?",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "기술평가 중심 낙찰"
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "협상을 통한 계약 결정"
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "단가와 수량을 기준으로 복수 낙찰"
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "최저가 단일 낙찰"
+      }
+    ],
+    "answer": "3",
+    "source": {
+      "photo": "page_0053.jpg",
+      "column": null,
+      "printedNumberOcr": "21",
+      "verifiedPrintedNumber": 21,
+      "subject": 2,
+      "batch": "subject2-retry-20260927",
+      "folder": "기본폴더",
+      "bookPage": 289,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR 및 원본 수동 검수; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0026.jpg",
+      "answerPrintedNumber": 21,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 319,
+    "id": "new-subject2:retry20260927-p54-q23",
+    "group": "Part 3 · Chapter 4",
+    "stem": "다음 사례의 낙찰 구조로 가장 적절한 것은?\n\n총 수요량은 100개이고, 예정가격 범위 내에서 K업체는 40개, L업체는 30개, M업체는 50개를 제시하였다. 이때 단가는 K → L → M 순으로 낮다.",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "K업체만 낙찰된다."
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "K업체와 L업체만 낙찰된다."
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "K업체와 L업체는 각 희망수량 전량, M업체는 일부 수량 30개를 낙찰받는다."
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "M업체는 낙찰 대상에서 제외된다."
+      }
+    ],
+    "answer": "3",
+    "source": {
+      "photo": "page_0054.jpg",
+      "column": null,
+      "printedNumberOcr": "23",
+      "verifiedPrintedNumber": 23,
+      "subject": 2,
+      "batch": "subject2-retry-20260927",
+      "folder": "기본폴더",
+      "bookPage": 290,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR 및 원본 수동 검수; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0026.jpg",
+      "answerPrintedNumber": 23,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 320,
+    "id": "new-subject2:retry20260927-p54-q24",
+    "group": "Part 3 · Chapter 4",
+    "stem": "적격심사와 희망수량경쟁입찰의 차이로 가장 적절한 것은?",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "모두 복수 낙찰 방식이다."
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "희망수량경쟁입찰은 단일 낙찰 방식이다."
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "적격심사는 순차심사, 희망수량경쟁입찰은 누적수량 방식이다."
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "둘 다 협상 절차를 포함한다."
+      }
+    ],
+    "answer": "3",
+    "source": {
+      "photo": "page_0054.jpg",
+      "column": null,
+      "printedNumberOcr": "24",
+      "verifiedPrintedNumber": 24,
+      "subject": 2,
+      "batch": "subject2-retry-20260927",
+      "folder": "기본폴더",
+      "bookPage": 290,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR 및 원본 수동 검수; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0026.jpg",
+      "answerPrintedNumber": 24,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 321,
+    "id": "new-subject2:retry20260927-p54-q25",
+    "group": "Part 3 · Chapter 4",
+    "stem": "다음 중 종합심사낙찰제의 가장 핵심적인 목적은?",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "최저가 입찰자를 낙찰자로 확정"
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "공사수행능력과 사회적 책임 등을 종합적으로 평가"
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "낙찰자로 추후 입찰에서 입찰참여이력 가점 부여"
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "종합심사 점수 최고점자가 2인 이상이면 무작위 추첨으로 낙찰자 결정"
+      }
+    ],
+    "answer": "2",
+    "source": {
+      "photo": "page_0054.jpg",
+      "column": null,
+      "printedNumberOcr": "25",
+      "verifiedPrintedNumber": 25,
+      "subject": 2,
+      "batch": "subject2-retry-20260927",
+      "folder": "기본폴더",
+      "bookPage": 290,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR 및 원본 수동 검수; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0026.jpg",
+      "answerPrintedNumber": 25,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 322,
+    "id": "new-subject2:retry20260927-p54-q27",
+    "group": "Part 3 · Chapter 4",
+    "stem": "다음 중 종합심사낙찰제 절차의 순서로 가장 올바른 것은?",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "PQ심사 → 현장설명 → 입찰서 제출 → 종합심사 → 낙찰자 결정"
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "입찰서 제출 → 현장설명 → PQ심사 → 종합심사 → 낙찰자 결정"
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "입찰서 제출 → PQ심사 → 현장설명 → 종합심사 → 낙찰자 결정"
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "PQ심사 → 입찰서 제출 → 현장설명 → 종합심사 → 낙찰자 결정"
+      }
+    ],
+    "answer": "1",
+    "source": {
+      "photo": "page_0054.jpg",
+      "column": null,
+      "printedNumberOcr": "27",
+      "verifiedPrintedNumber": 27,
+      "subject": 2,
+      "batch": "subject2-retry-20260927",
+      "folder": "기본폴더",
+      "bookPage": 290,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR 및 원본 수동 검수; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0026.jpg",
+      "answerPrintedNumber": 27,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 323,
+    "id": "new-subject2:retry20260927-p54-q28",
+    "group": "Part 3 · Chapter 4",
+    "stem": "다음 사례에서 가장 먼저 적용할 수 있는 동점자 처리 기준은?\n\nO업체와 P업체의 종합심사 점수가 동점이었다.",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "공사수행능력점수가 높은 자를 낙찰자로 결정한다."
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "무작위 추첨으로 낙찰자를 결정한다."
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "입찰금액이 균형가격과 괴리가 큰 업체를 낙찰자로 결정한다."
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "두 업체만을 대상으로 재입찰을 실시한다."
+      }
+    ],
+    "answer": "1",
+    "source": {
+      "photo": "page_0054.jpg",
+      "column": null,
+      "printedNumberOcr": "28",
+      "verifiedPrintedNumber": 28,
+      "subject": 2,
+      "batch": "subject2-retry-20260927",
+      "folder": "기본폴더",
+      "bookPage": 290,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR 및 원본 수동 검수; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0026.jpg",
+      "answerPrintedNumber": 28,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 324,
+    "id": "new-subject2:retry20260927-p54-q29",
+    "group": "Part 3 · Chapter 4",
+    "stem": "종합심사낙찰제와 적격심사의 차이로 가장 적절한 것은?",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "둘 다 최저가 중심으로 낙찰자를 결정한다."
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "둘 다 협상 절차를 포함한다."
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "종합심사는 점수 경쟁 방식이고, 적격심사는 기준 통과 방식이다."
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "적격심사는 종합평가 점수가 가장 높은 자를 낙찰자로 선정한다."
+      }
+    ],
+    "answer": "3",
+    "source": {
+      "photo": "page_0054.jpg",
+      "column": null,
+      "printedNumberOcr": "29",
+      "verifiedPrintedNumber": 29,
+      "subject": 2,
+      "batch": "subject2-retry-20260927",
+      "folder": "기본폴더",
+      "bookPage": 290,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR 및 원본 수동 검수; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0026.jpg",
+      "answerPrintedNumber": 29,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 325,
+    "id": "new-subject2:retry20260927-p54-q30",
+    "group": "Part 3 · Chapter 4",
+    "stem": "다음 중 종합심사낙찰제에서 발생할 수 없는 상황은?",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "입찰가격만을 기준으로 최저가 업체를 낙찰자로 선정"
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "별도의 협상 절차 없이 종합심사 점수만으로 낙찰자 결정"
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "계약신뢰도 점수를 반영하여 평가"
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "사회적 책임 점수를 반영하여 평가"
+      }
+    ],
+    "answer": "1",
+    "source": {
+      "photo": "page_0054.jpg",
+      "column": null,
+      "printedNumberOcr": "30",
+      "verifiedPrintedNumber": 30,
+      "subject": 2,
+      "batch": "subject2-retry-20260927",
+      "folder": "기본폴더",
+      "bookPage": 290,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR 및 원본 수동 검수; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0026.jpg",
+      "answerPrintedNumber": 30,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 326,
+    "id": "new-subject2:retry20260927-p55-q31",
+    "group": "Part 3 · Chapter 4",
+    "stem": "다음 중 계약법령상 낙찰요건으로 가장 핵심적인 것은?",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "최저가 입찰 여부"
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "계약이행능력 및 법령 준수 여부"
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "입찰보증금 반환 여부"
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "사회적 가치 점수 확보 여부"
+      }
+    ],
+    "answer": "2",
+    "source": {
+      "photo": "page_0055.jpg",
+      "column": null,
+      "printedNumberOcr": "31",
+      "verifiedPrintedNumber": 31,
+      "subject": 2,
+      "batch": "subject2-retry-20260927",
+      "folder": "기본폴더",
+      "bookPage": null,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR 및 원본 수동 검수; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0026.jpg",
+      "answerPrintedNumber": 31,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 327,
+    "id": "new-subject2:retry20260927-p55-q32",
+    "group": "Part 3 · Chapter 4",
+    "stem": "다음 사례에서 발생할 수 있는 결과로 가장 적절한 것은?\n\nQ업체는 종합평가에서 1위를 하였으나, 제출한 서류가 허위로 판명되었다.",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "낙찰자로 확정된다."
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "낙찰 심사에서 감점을 받는다."
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "계약조건 변경 후 확정된다."
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "입찰이 무효처리된다."
+      }
+    ],
+    "answer": "4",
+    "source": {
+      "photo": "page_0055.jpg",
+      "column": null,
+      "printedNumberOcr": "32",
+      "verifiedPrintedNumber": 32,
+      "subject": 2,
+      "batch": "subject2-retry-20260927",
+      "folder": "기본폴더",
+      "bookPage": null,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR 및 원본 수동 검수; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0026.jpg",
+      "answerPrintedNumber": 32,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 328,
+    "id": "new-subject2:retry20260927-p55-q33",
+    "group": "Part 3 · Chapter 4",
+    "stem": "낙찰요건 검증에서 반드시 기록·관리해야 하는 항목으로 옳은 것은?",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "입찰참가자격 검증 결과"
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "사회적 가치 점수"
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "입찰보증금 반환 내역"
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "최저가 입찰 금액"
+      }
+    ],
+    "answer": "1",
+    "source": {
+      "photo": "page_0055.jpg",
+      "column": null,
+      "printedNumberOcr": "33",
+      "verifiedPrintedNumber": 33,
+      "subject": 2,
+      "batch": "subject2-retry-20260927",
+      "folder": "기본폴더",
+      "bookPage": null,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR 및 원본 수동 검수; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0026.jpg",
+      "answerPrintedNumber": 33,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 329,
+    "id": "new-subject2:retry20260927-p55-q34",
+    "group": "Part 3 · Chapter 4",
+    "stem": "다음 사례에서 발생할 수 있는 결과로 가장 적절한 것은?\n\nR업체는 낙찰자로 확정되었으나, 하도급 관리 의무를 위반한 사실이 확인되었다.",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "낙찰자 확정은 그대로 유지된다."
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "낙찰 취소 및 차순위 업체로 기회가 이동한다."
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "계약조건을 변경한다."
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "계약보증금을 2배 납부하고 계약을 체결한다."
+      }
+    ],
+    "answer": "2",
+    "source": {
+      "photo": "page_0055.jpg",
+      "column": null,
+      "printedNumberOcr": "34",
+      "verifiedPrintedNumber": 34,
+      "subject": 2,
+      "batch": "subject2-retry-20260927",
+      "folder": "기본폴더",
+      "bookPage": null,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR 및 원본 수동 검수; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0026.jpg",
+      "answerPrintedNumber": 34,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 330,
+    "id": "new-subject2:retry20260927-p55-q37",
+    "group": "Part 3 · Chapter 4",
+    "stem": "다음 중 공동수급체 구성원 일부가 입찰무효 사유에 해당하는 경우 가장 적절한 것은?",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "전체 무효"
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "해당 구성원만 무효"
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "재입찰 실시"
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "계약체결"
+      }
+    ],
+    "answer": "2",
+    "source": {
+      "photo": "page_0055.jpg",
+      "column": null,
+      "printedNumberOcr": "37",
+      "verifiedPrintedNumber": 37,
+      "subject": 2,
+      "batch": "subject2-retry-20260927",
+      "folder": "기본폴더",
+      "bookPage": null,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR 및 원본 수동 검수; 사용자 제공 정답 및 해설 원본 대조",
+      "answerPhoto": "page_0026.jpg",
+      "answerPrintedNumber": 37,
+      "answerVerifiedAt": "2026-09-27"
+    }
   }
 ]
