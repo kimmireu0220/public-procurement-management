@@ -12757,5 +12757,3126 @@
       "answerPrintedNumber": 8,
       "answerVerifiedAt": "2026-09-27"
     }
+  },
+  {
+    "no": 293,
+    "id": "new-subject1:2f4e12563490580b",
+    "group": "Part 4 · Chapter 4",
+    "stem": "다음 중 여성기업 우선구매제도의 의무구매 기준으로 옳은 것은?",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "물품 · 용역 3%, 공사 5%"
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "물품 · 용역 5%, 공사 3%"
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "물품 · 용역 10%, 공사 5%"
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "물품 · 용역 1%, 공사 1%"
+      }
+    ],
+    "answer": "2",
+    "source": {
+      "photo": "page_0001.jpg",
+      "batch": "subject1-additional-20260927",
+      "folder": "기본 폴더 (1)",
+      "column": 1,
+      "printedNumberOcr": "16",
+      "printedNumber": 16,
+      "verifiedPrintedNumber": 16,
+      "printedNumberVerifiedAt": "2026-09-27",
+      "bookPage": 106,
+      "subject": 1,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR; 원본문항·네 선택지 및 원본 정답표·해설 대조 완료",
+      "answerPhoto": "page_0010.jpg",
+      "answerBatch": "subject1-answer-20260927",
+      "answerFolder": "기본 폴더",
+      "answerPrintedNumber": 16,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 294,
+    "id": "new-subject1:33ec6120510d162a",
+    "group": "Part 4 · Chapter 4",
+    "stem": "다음 중 여성기업 우선구매제도에 대한 설명으로 가장 적절한 것은?",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "여성이 근무하는 모든 기업의 제품을 우선 구매하는 제도이다."
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "여성기업확인서를 발급받은 기업의 제품 • 용역 등을 일정 비율 이상 구매하도록 하는 제도이다."
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "여성기업 제품에 대해서만 수의계약을 허용하는 제도이다."
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "여성기업의 민간시장 진출만을 지원하기 위한 제도이다."
+      }
+    ],
+    "answer": "2",
+    "source": {
+      "photo": "page_0001.jpg",
+      "batch": "subject1-additional-20260927",
+      "folder": "기본 폴더 (1)",
+      "column": 2,
+      "printedNumberOcr": "18",
+      "printedNumber": 18,
+      "verifiedPrintedNumber": 18,
+      "printedNumberVerifiedAt": "2026-09-27",
+      "bookPage": 106,
+      "subject": 1,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR; 원본문항·네 선택지 및 원본 정답표·해설 대조 완료",
+      "answerPhoto": "page_0010.jpg",
+      "answerBatch": "subject1-answer-20260927",
+      "answerFolder": "기본 폴더",
+      "answerPrintedNumber": 18,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 295,
+    "id": "new-subject1:33298ee502c3395e",
+    "group": "Part 4 · Chapter 4",
+    "stem": "다음 중 공공조달의 사회적 가치와 가장 관련 깊은 것은?",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "가격경쟁 완화"
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "단순 행정 편의성"
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "사회적 포용과 지속가능성 강화"
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "대기업 시장 점유율 확대"
+      }
+    ],
+    "answer": "3",
+    "source": {
+      "photo": "page_0003.jpg",
+      "batch": "subject1-additional-20260927",
+      "folder": "기본 폴더 (1)",
+      "column": 2,
+      "printedNumberOcr": "30",
+      "printedNumber": 30,
+      "verifiedPrintedNumber": 30,
+      "printedNumberVerifiedAt": "2026-09-27",
+      "bookPage": 108,
+      "subject": 1,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR; 원본문항·네 선택지 및 원본 정답표·해설 대조 완료",
+      "answerPhoto": "page_0010.jpg",
+      "answerBatch": "subject1-answer-20260927",
+      "answerFolder": "기본 폴더",
+      "answerPrintedNumber": 30,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 296,
+    "id": "new-subject1:082fe3839743420b",
+    "group": "Part 5 · Chapter 1",
+    "stem": "B기업은 입찰에 참가했으나 낙찰되지 않았다. 이때 입찰 참가의 법적 성격으로 가장 적절한 것은?",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "승낙"
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "청약"
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "계약체결"
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "청약의 유인"
+      }
+    ],
+    "answer": "2",
+    "source": {
+      "photo": "page_0004.jpg",
+      "batch": "subject1-additional-20260927",
+      "folder": "기본 폴더 (1)",
+      "column": 1,
+      "printedNumberOcr": "3",
+      "printedNumber": 3,
+      "verifiedPrintedNumber": 3,
+      "printedNumberVerifiedAt": "2026-09-27",
+      "bookPage": 114,
+      "subject": 1,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR; 원본문항·네 선택지 및 원본 정답표·해설 대조 완료",
+      "answerPhoto": "page_0011.jpg",
+      "answerBatch": "subject1-answer-20260927",
+      "answerFolder": "기본 폴더",
+      "answerPrintedNumber": 3,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 297,
+    "id": "new-subject1:0b8f3e938e8f1fe3",
+    "group": "Part 5 · Chapter 1",
+    "stem": "다음 중 동일한 내용의 청약이 양 당사자에게 교차 도달한 경우 성립하는 계약은?",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "예약계약"
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "교차청약 계약"
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "요물계약"
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "무상계약"
+      }
+    ],
+    "answer": "2",
+    "source": {
+      "photo": "page_0004.jpg",
+      "batch": "subject1-additional-20260927",
+      "folder": "기본 폴더 (1)",
+      "column": 1,
+      "printedNumberOcr": "4",
+      "printedNumber": 4,
+      "verifiedPrintedNumber": 4,
+      "printedNumberVerifiedAt": "2026-09-27",
+      "bookPage": 114,
+      "subject": 1,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR; 원본문항·네 선택지 및 원본 정답표·해설 대조 완료",
+      "answerPhoto": "page_0011.jpg",
+      "answerBatch": "subject1-answer-20260927",
+      "answerFolder": "기본 폴더",
+      "answerPrintedNumber": 4,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 298,
+    "id": "new-subject1:2181c48f75e01506",
+    "group": "Part 5 · Chapter 1",
+    "stem": "다음 중 계약 성립의 본질적 요소는?",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "청약과 승낙"
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "계약금 지급"
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "물건 인도"
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "법원 인가"
+      }
+    ],
+    "answer": "1",
+    "source": {
+      "photo": "page_0004.jpg",
+      "batch": "subject1-additional-20260927",
+      "folder": "기본 폴더 (1)",
+      "column": 2,
+      "printedNumberOcr": "10",
+      "printedNumber": 10,
+      "verifiedPrintedNumber": 10,
+      "printedNumberVerifiedAt": "2026-09-27",
+      "bookPage": 114,
+      "subject": 1,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR; 원본문항·네 선택지 및 원본 정답표·해설 대조 완료",
+      "answerPhoto": "page_0011.jpg",
+      "answerBatch": "subject1-answer-20260927",
+      "answerFolder": "기본 폴더",
+      "answerPrintedNumber": 10,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 299,
+    "id": "new-subject1:ffc0a9749be74d83",
+    "group": "Part 5 · Chapter 1",
+    "stem": "C기업은 D기관과 계약을 체결한 후 납품을 지체했다. D기관이 손해배상을 청구할 수 있는 근거로 가장 적절한 것은?",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "계약은 권리 • 의무를 발생시키지 않는다."
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "계약은 구속력이 없어 강제집행이 불가하다."
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "계약이 성립하면 권리, 의무와 구속력이 발생한다."
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "계약은 성립 후 언제든지 무효화된다."
+      }
+    ],
+    "answer": "3",
+    "source": {
+      "photo": "page_0005.jpg",
+      "batch": "subject1-additional-20260927",
+      "folder": "기본 폴더 (1)",
+      "column": 1,
+      "printedNumberOcr": "13",
+      "printedNumber": 13,
+      "verifiedPrintedNumber": 13,
+      "printedNumberVerifiedAt": "2026-09-27",
+      "bookPage": 115,
+      "subject": 1,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR; 원본문항·네 선택지 및 원본 정답표·해설 대조 완료",
+      "answerPhoto": "page_0011.jpg",
+      "answerBatch": "subject1-answer-20260927",
+      "answerFolder": "기본 폴더",
+      "answerPrintedNumber": 13,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 300,
+    "id": "new-subject1:ac3546f195453014",
+    "group": "Part 5 · Chapter 1",
+    "stem": "공공계약에서 지체상금이 계약보증금 상당액에 달한 경우 발주기관이 취할 수 있는 조치로 옳은 것은?",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "계약 유지"
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "계약 연장"
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "계약 철회"
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "계약 해제 또는 해지"
+      }
+    ],
+    "answer": "4",
+    "source": {
+      "photo": "page_0006.jpg",
+      "batch": "subject1-additional-20260927",
+      "folder": "기본 폴더 (1)",
+      "column": 2,
+      "printedNumberOcr": "28",
+      "printedNumber": 28,
+      "verifiedPrintedNumber": 28,
+      "printedNumberVerifiedAt": "2026-09-27",
+      "bookPage": 116,
+      "subject": 1,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR; 원본문항·네 선택지 및 원본 정답표·해설 대조 완료",
+      "answerPhoto": "page_0011.jpg",
+      "answerBatch": "subject1-answer-20260927",
+      "answerFolder": "기본 폴더",
+      "answerPrintedNumber": 28,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 301,
+    "id": "new-subject1:556684c7e98c23e5",
+    "group": "Part 5 · Chapter 1",
+    "stem": "N기관은 장기간 계속되는 용역계약에서 상대방과의 신뢰가 깨졌다고 판단하여 계약을 종료하였다. 이 경우 법적 성격은?",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "계약 해제"
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "계약 해지"
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "계약 철회"
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "계약 무효 선언"
+      }
+    ],
+    "answer": "2",
+    "source": {
+      "photo": "page_0007.jpg",
+      "batch": "subject1-additional-20260927",
+      "folder": "기본 폴더 (1)",
+      "column": 1,
+      "printedNumberOcr": "31",
+      "printedNumber": 31,
+      "verifiedPrintedNumber": 31,
+      "printedNumberVerifiedAt": "2026-09-27",
+      "bookPage": 117,
+      "subject": 1,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR; 원본문항·네 선택지 및 원본 정답표·해설 대조 완료",
+      "answerPhoto": "page_0011.jpg",
+      "answerBatch": "subject1-answer-20260927",
+      "answerFolder": "기본 폴더",
+      "answerPrintedNumber": 31,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 302,
+    "id": "new-subject1:feecdec4a721b295",
+    "group": "Part 5 · Chapter 1",
+    "stem": "다음 중 도급계약과 위임계약의 차이로 옳은 것은?",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "도급은 사무 처리 중심, 위임은 결과 중심이다."
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "도급은 결과 중심, 위임은 사무 처리 중심이다."
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "둘 다 결과 중심이다."
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "둘 다 사무 처리 중심이다."
+      }
+    ],
+    "answer": "2",
+    "source": {
+      "photo": "page_0007.jpg",
+      "batch": "subject1-additional-20260927",
+      "folder": "기본 폴더 (1)",
+      "column": 2,
+      "printedNumberOcr": "33",
+      "printedNumber": 33,
+      "verifiedPrintedNumber": 33,
+      "printedNumberVerifiedAt": "2026-09-27",
+      "bookPage": 117,
+      "subject": 1,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR; 원본문항·네 선택지 및 원본 정답표·해설 대조 완료",
+      "answerPhoto": "page_0011.jpg",
+      "answerBatch": "subject1-answer-20260927",
+      "answerFolder": "기본 폴더",
+      "answerPrintedNumber": 33,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 303,
+    "id": "new-subject1:7dc173790649554e",
+    "group": "Part 5 · Chapter 1",
+    "stem": "Q기관은 IT 업체와 시스템 개발 계약을 체결하고, 개발 완료 후 대가를 지급하기로 하였다. 이 계약의 법적 성격은?",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "위임계약"
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "도급계약"
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "매매계약"
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "임대차계약"
+      }
+    ],
+    "answer": "2",
+    "source": {
+      "photo": "page_0007.jpg",
+      "batch": "subject1-additional-20260927",
+      "folder": "기본 폴더 (1)",
+      "column": 2,
+      "printedNumberOcr": "35",
+      "printedNumber": 35,
+      "verifiedPrintedNumber": 35,
+      "printedNumberVerifiedAt": "2026-09-27",
+      "bookPage": 117,
+      "subject": 1,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR; 원본문항·네 선택지 및 원본 정답표·해설 대조 완료",
+      "answerPhoto": "page_0011.jpg",
+      "answerBatch": "subject1-answer-20260927",
+      "answerFolder": "기본 폴더",
+      "answerPrintedNumber": 35,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 304,
+    "id": "new-subject1:0ed882657c741c1a",
+    "group": "Part 5 · Chapter 1",
+    "stem": "다음 중 위임계약의 특징으로 옳은 것은?",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "반드시 유상이어야 한다."
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "무상도 가능하다."
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "결과 완성이 목적이다."
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "계약 해제는 불가하다."
+      }
+    ],
+    "answer": "2",
+    "source": {
+      "photo": "page_0007.jpg",
+      "batch": "subject1-additional-20260927",
+      "folder": "기본 폴더 (1)",
+      "column": 2,
+      "printedNumberOcr": "36",
+      "printedNumber": 36,
+      "verifiedPrintedNumber": 36,
+      "printedNumberVerifiedAt": "2026-09-27",
+      "bookPage": 117,
+      "subject": 1,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR; 원본문항·네 선택지 및 원본 정답표·해설 대조 완료",
+      "answerPhoto": "page_0011.jpg",
+      "answerBatch": "subject1-answer-20260927",
+      "answerFolder": "기본 폴더",
+      "answerPrintedNumber": 36,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 305,
+    "id": "new-subject1:bb6c86ce2729f3f3",
+    "group": "Part 5 · Chapter 1",
+    "stem": "다음 중 화해계약의 목적은?",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "권리 • 의무 발생"
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "분쟁 종결"
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "계약 해제"
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "계약 무효 선언"
+      }
+    ],
+    "answer": "2",
+    "source": {
+      "photo": "page_0008.jpg",
+      "batch": "subject1-additional-20260927",
+      "folder": "기본 폴더 (1)",
+      "column": 2,
+      "printedNumberOcr": "43",
+      "printedNumber": 43,
+      "verifiedPrintedNumber": 43,
+      "printedNumberVerifiedAt": "2026-09-27",
+      "bookPage": 118,
+      "subject": 1,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR; 원본문항·네 선택지 및 원본 정답표·해설 대조 완료",
+      "answerPhoto": "page_0011.jpg",
+      "answerBatch": "subject1-answer-20260927",
+      "answerFolder": "기본 폴더",
+      "answerPrintedNumber": 43,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 306,
+    "id": "new-subject1:029b329a3d322632",
+    "group": "Part 5 · Chapter 2",
+    "stem": "다음 사례에 대한 설명으로 가장 옳은 것은? B기관은 공사계약의 추정가격을 산정하면서 관급자재 비용을 제외하였다.",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "적법하다."
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "위법하다."
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "무효이다."
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "재산정이 필요하다."
+      }
+    ],
+    "answer": "1",
+    "source": {
+      "photo": "page_0011.jpg",
+      "batch": "subject1-additional-20260927",
+      "folder": "기본 폴더 (1)",
+      "column": 2,
+      "printedNumberOcr": "5",
+      "printedNumber": 5,
+      "verifiedPrintedNumber": 5,
+      "printedNumberVerifiedAt": "2026-09-27",
+      "bookPage": 126,
+      "subject": 1,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR; 원본문항·네 선택지 및 원본 정답표·해설 대조 완료",
+      "answerPhoto": "page_0012.jpg",
+      "answerBatch": "subject1-answer-20260927",
+      "answerFolder": "기본 폴더",
+      "answerPrintedNumber": 5,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 307,
+    "id": "new-subject1:d96aec0acfa394b1",
+    "group": "Part 5 · Chapter 2",
+    "stem": "다음 중 예정가격 산정 기준으로 옳지 않은 것은?",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "거래실례가격"
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "원가계산"
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "표준시장단가"
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "낙찰금액"
+      }
+    ],
+    "answer": "4",
+    "source": {
+      "photo": "page_0011.jpg",
+      "batch": "subject1-additional-20260927",
+      "folder": "기본 폴더 (1)",
+      "column": 2,
+      "printedNumberOcr": "6",
+      "printedNumber": 6,
+      "verifiedPrintedNumber": 6,
+      "printedNumberVerifiedAt": "2026-09-27",
+      "bookPage": 126,
+      "subject": 1,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR; 원본문항·네 선택지 및 원본 정답표·해설 대조 완료",
+      "answerPhoto": "page_0012.jpg",
+      "answerBatch": "subject1-answer-20260927",
+      "answerFolder": "기본 폴더",
+      "answerPrintedNumber": 6,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 308,
+    "id": "new-subject1:1c3a426d94680e1a",
+    "group": "Part 5 · Chapter 2",
+    "stem": "다음 중 천재지변으로 긴급히 물품을 구매해야 하는 경우 허용되는 계약 방법은?",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "일반경쟁"
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "제한경쟁"
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "지명경쟁"
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "수의계약"
+      }
+    ],
+    "answer": "4",
+    "source": {
+      "photo": "page_0012.jpg",
+      "batch": "subject1-additional-20260927",
+      "folder": "기본 폴더 (1)",
+      "column": 2,
+      "printedNumberOcr": "14",
+      "printedNumber": 14,
+      "verifiedPrintedNumber": 14,
+      "printedNumberVerifiedAt": "2026-09-27",
+      "bookPage": 127,
+      "subject": 1,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR; 원본문항·네 선택지 및 원본 정답표·해설 대조 완료",
+      "answerPhoto": "page_0012.jpg",
+      "answerBatch": "subject1-answer-20260927",
+      "answerFolder": "기본 폴더",
+      "answerPrintedNumber": 14,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 309,
+    "id": "new-subject1:65e01af049fd5b38",
+    "group": "Part 5 · Chapter 2",
+    "stem": "다음 중 일부 비목의 가격을 계약이행 후 원가 검토를 통해 정산하기로 하는 계약 방법은?",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "확정계약"
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "개산계약"
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "사후원가검토조건부계약"
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "총액계약"
+      }
+    ],
+    "answer": "3",
+    "source": {
+      "photo": "page_0013.jpg",
+      "batch": "subject1-additional-20260927",
+      "folder": "기본 폴더 (1)",
+      "column": 2,
+      "printedNumberOcr": "20",
+      "printedNumber": 20,
+      "verifiedPrintedNumber": 20,
+      "printedNumberVerifiedAt": "2026-09-27",
+      "bookPage": 128,
+      "subject": 1,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR; 원본문항·네 선택지 및 원본 정답표·해설 대조 완료",
+      "answerPhoto": "page_0012.jpg",
+      "answerBatch": "subject1-answer-20260927",
+      "answerFolder": "기본 폴더",
+      "answerPrintedNumber": 20,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 310,
+    "id": "new-subject1:2347540dc2740eea",
+    "group": "Part 5 · Chapter 2",
+    "stem": "다음 중 계약목적물의 세부내용을 미리 정하기 어려워 입찰 대상자들과 기술적 대화를 통해 내용을 확정한 후 제안서를 제출받아 평가하는 방식은?",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "협상에 의한 계약"
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "경쟁적 대화에 의한 계약"
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "종합심사낙찰제"
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "적격심사"
+      }
+    ],
+    "answer": "2",
+    "source": {
+      "photo": "page_0014.jpg",
+      "batch": "subject1-additional-20260927",
+      "folder": "기본 폴더 (1)",
+      "column": 1,
+      "printedNumberOcr": "26",
+      "printedNumber": 26,
+      "verifiedPrintedNumber": 26,
+      "printedNumberVerifiedAt": "2026-09-27",
+      "bookPage": 129,
+      "subject": 1,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR; 원본문항·네 선택지 및 원본 정답표·해설 대조 완료",
+      "answerPhoto": "page_0012.jpg",
+      "answerBatch": "subject1-answer-20260927",
+      "answerFolder": "기본 폴더",
+      "answerPrintedNumber": 26,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 311,
+    "id": "new-subject1:cb865d90e2e33096",
+    "group": "Part 5 · Chapter 2",
+    "stem": "다음 사례의 낙찰자 선정 방식으로 가장 적절한 것은? L기관은 동일 물품 1,000개를 구매하면서 입찰자들이 단가와 희망수량을 동시에 제출하도록 하였다.",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "최저가 낙찰제"
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "희망수량경쟁입찰"
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "종합심사낙찰제"
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "적격심사"
+      }
+    ],
+    "answer": "2",
+    "source": {
+      "photo": "page_0014.jpg",
+      "batch": "subject1-additional-20260927",
+      "folder": "기본 폴더 (1)",
+      "column": 1,
+      "printedNumberOcr": "27",
+      "printedNumber": 27,
+      "verifiedPrintedNumber": 27,
+      "printedNumberVerifiedAt": "2026-09-27",
+      "bookPage": 129,
+      "subject": 1,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR; 원본문항·네 선택지 및 원본 정답표·해설 대조 완료",
+      "answerPhoto": "page_0012.jpg",
+      "answerBatch": "subject1-answer-20260927",
+      "answerFolder": "기본 폴더",
+      "answerPrintedNumber": 27,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 312,
+    "id": "new-subject1:680cfafef1026497",
+    "group": "Part 5 · Chapter 2",
+    "stem": "다음 사례에 대한 설명으로 옳은 것은? M기관은 동일 물품 1,000개를 구매하기 위해 희망수량경쟁입찰을 실시하였다. 예정가격은 단가 10,000원이며, 입찰 결과는 다음과 같다. A: 9,500원 / 400개, B: 9,700원 / 500개, C: 9,800원 / 300개, D: 10,200원 / 600개.",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "A, B, C 모두 일부라도 낙찰된다."
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "A와 D만 낙찰된다."
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "A, B, C 중 일부는 예정가격 초과 여부와 관계없이 낙찰 가능하다."
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "B는 낙찰되지만 C는 낙찰되지 않는다."
+      }
+    ],
+    "answer": "1",
+    "source": {
+      "photo": "page_0014.jpg",
+      "batch": "subject1-additional-20260927",
+      "folder": "기본 폴더 (1)",
+      "column": 2,
+      "printedNumberOcr": "29",
+      "printedNumber": 29,
+      "verifiedPrintedNumber": 29,
+      "printedNumberVerifiedAt": "2026-09-27",
+      "bookPage": 129,
+      "subject": 1,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR; 원본문항·네 선택지 및 원본 정답표·해설 대조 완료",
+      "answerPhoto": "page_0012.jpg",
+      "answerBatch": "subject1-answer-20260927",
+      "answerFolder": "기본 폴더",
+      "answerPrintedNumber": 29,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 313,
+    "id": "new-subject1:0fc50ad02bbd56e5",
+    "group": "Part 5 · Chapter 2",
+    "stem": "다음 사례에 대한 설명으로 가장 적절한 것은? S기관은 계약금액 1억원의 공사계약을 체결하면서 계약보증금을 현금 대신 공제조합 보증서로 납부받았다.",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "적법하다."
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "위법하다."
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "계약은 무효가 된다."
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "계약 해제 사유가 된다."
+      }
+    ],
+    "answer": "1",
+    "source": {
+      "photo": "page_0015.jpg",
+      "batch": "subject1-additional-20260927",
+      "folder": "기본 폴더 (1)",
+      "column": 2,
+      "printedNumberOcr": "39",
+      "printedNumber": 39,
+      "verifiedPrintedNumber": 39,
+      "printedNumberVerifiedAt": "2026-09-27",
+      "bookPage": 130,
+      "subject": 1,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR; 원본문항·네 선택지 및 원본 정답표·해설 대조 완료",
+      "answerPhoto": "page_0012.jpg",
+      "answerBatch": "subject1-answer-20260927",
+      "answerFolder": "기본 폴더",
+      "answerPrintedNumber": 39,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 314,
+    "id": "new-subject1:891841e118090587",
+    "group": "Part 5 · Chapter 3",
+    "stem": "다음 사례에서 공공조달의 정책기반 측면에서 평가한 것으로 가장 적절한 것은? A기관은 특정 혁신제품을 구매하면서 초기 비용이 높음에도 불구하고 장기적인 산업 육성 효과를 고려하였다.",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "계약법 위반 사례이다."
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "정책목표와 경제성 간 균형을 고려한 사례이다."
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "공정성을 침해한 사례이다."
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "비효율적 예산 집행 사례이다."
+      }
+    ],
+    "answer": null,
+    "source": {
+      "photo": "page_0019.jpg",
+      "batch": "subject1-additional-20260927",
+      "folder": "기본 폴더 (1)",
+      "column": 1,
+      "printedNumberOcr": "1",
+      "printedNumber": 1,
+      "verifiedPrintedNumber": 1,
+      "printedNumberVerifiedAt": "2026-09-27",
+      "bookPage": 137,
+      "subject": 1,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR; 원본문항·네 선택지 대조 완료"
+    }
+  },
+  {
+    "no": 315,
+    "id": "new-subject1:1d8e4d56e4d6dc32",
+    "group": "Part 5 · Chapter 3",
+    "stem": "다음 사례 중 정책기반 조달과 가장 거리가 먼 것은?",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "중소기업 제품 우선구매"
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "친환경 제품 구매"
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "입찰절차 생략을 통한 신속 계약"
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "혁신제품 구매"
+      }
+    ],
+    "answer": "3",
+    "source": {
+      "photo": "page_0019.jpg",
+      "batch": "subject1-additional-20260927",
+      "folder": "기본 폴더 (1)",
+      "column": 2,
+      "printedNumberOcr": "5",
+      "printedNumber": 5,
+      "verifiedPrintedNumber": 5,
+      "printedNumberVerifiedAt": "2026-09-27",
+      "bookPage": 137,
+      "subject": 1,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR; 원본문항·네 선택지 및 원본 정답표·해설 대조 완료",
+      "answerPhoto": "page_0013.jpg",
+      "answerBatch": "subject1-answer-20260927",
+      "answerFolder": "기본 폴더",
+      "answerPrintedNumber": 5,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 316,
+    "id": "new-subject1:211c5c6fc7503cf6",
+    "group": "Part 5 · Chapter 3",
+    "stem": "다음 사례와 가장 관련 있는 법적 근거는? B기관은 입찰 과정에서 환경 · 인권 · 노동 등 사회적 책임 요소를 반영하였다.",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "「국가계약법」"
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "「지방계약법」"
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "「조달사업법」"
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "「민법」"
+      }
+    ],
+    "answer": "3",
+    "source": {
+      "photo": "page_0019.jpg",
+      "batch": "subject1-additional-20260927",
+      "folder": "기본 폴더 (1)",
+      "column": 2,
+      "printedNumberOcr": "6",
+      "printedNumber": 6,
+      "verifiedPrintedNumber": 6,
+      "printedNumberVerifiedAt": "2026-09-27",
+      "bookPage": 137,
+      "subject": 1,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR; 원본문항·네 선택지 및 원본 정답표·해설 대조 완료",
+      "answerPhoto": "page_0013.jpg",
+      "answerBatch": "subject1-answer-20260927",
+      "answerFolder": "기본 폴더",
+      "answerPrintedNumber": 6,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 317,
+    "id": "new-subject1:21379b8f4ae617b5",
+    "group": "Part 5 · Chapter 3",
+    "stem": "다음 중 조달통계 작성 의무가 있는 기관은?",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "조달청만"
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "국가기관만"
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "조달기업만"
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "국가기관 •지자체 •공공기관 모두"
+      }
+    ],
+    "answer": "4",
+    "source": {
+      "photo": "page_0019.jpg",
+      "batch": "subject1-additional-20260927",
+      "folder": "기본 폴더 (1)",
+      "column": 2,
+      "printedNumberOcr": "7",
+      "printedNumber": 7,
+      "verifiedPrintedNumber": 7,
+      "printedNumberVerifiedAt": "2026-09-27",
+      "bookPage": 137,
+      "subject": 1,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR; 원본문항·네 선택지 및 원본 정답표·해설 대조 완료",
+      "answerPhoto": "page_0013.jpg",
+      "answerBatch": "subject1-answer-20260927",
+      "answerFolder": "기본 폴더",
+      "answerPrintedNumber": 7,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 318,
+    "id": "new-subject1:0a611abd163316c4",
+    "group": "Part 5 · Chapter 3",
+    "stem": "I기관은 특정 기술의 특수성을 고려해 직접 공사계약을 체결하려 한다. 이때 적법하게 진행하기 위해 필요한 절차로 가장 적절한 것은?",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "조달청장과 사전 협의"
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "계약보증금 납부"
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "수의계약 승인"
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "「지방계약법」 적용"
+      }
+    ],
+    "answer": "1",
+    "source": {
+      "photo": "page_0018.jpg",
+      "batch": "subject1-additional-20260927",
+      "folder": "기본 폴더 (1)",
+      "column": 2,
+      "printedNumberOcr": "13",
+      "printedNumber": 13,
+      "verifiedPrintedNumber": 13,
+      "printedNumberVerifiedAt": "2026-09-27",
+      "bookPage": 138,
+      "subject": 1,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR; 원본문항·네 선택지 및 원본 정답표·해설 대조 완료",
+      "answerPhoto": "page_0013.jpg",
+      "answerBatch": "subject1-answer-20260927",
+      "answerFolder": "기본 폴더",
+      "answerPrintedNumber": 13,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 319,
+    "id": "new-subject1:f0aa49d38d16064e",
+    "group": "Part 5 · Chapter 3",
+    "stem": "다음 사례에 대한 설명으로 가장 적절한 것은? O기관은 조달수수료 감면을 요청하면서 감경률을 30%로 요구하였다.",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "가능하다."
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "불가능하다."
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "조건부로 가능하다."
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "조달청장 승인이 필요하다."
+      }
+    ],
+    "answer": "2",
+    "source": {
+      "photo": "page_0020.jpg",
+      "batch": "subject1-additional-20260927",
+      "folder": "기본 폴더 (1)",
+      "column": 2,
+      "printedNumberOcr": "22",
+      "printedNumber": 22,
+      "verifiedPrintedNumber": 22,
+      "printedNumberVerifiedAt": "2026-09-27",
+      "bookPage": 139,
+      "subject": 1,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR; 원본문항·네 선택지 및 원본 정답표·해설 대조 완료",
+      "answerPhoto": "page_0013.jpg",
+      "answerBatch": "subject1-answer-20260927",
+      "answerFolder": "기본 폴더",
+      "answerPrintedNumber": 22,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 320,
+    "id": "new-subject1:cc0f079ef94ec874",
+    "group": "Part 5 · Chapter 3",
+    "stem": "X기업은 불공정 조달행위를 최초로 신고했으나, 해당 불공정 행위의 당사자였다. 이 경우 포상금 지급 여부로 가장 적절한 것은?",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "지급된다."
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "지급되지 않는다."
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "조건부로 지급된다."
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "조달청장 승인만 있으면 지급된다."
+      }
+    ],
+    "answer": "2",
+    "source": {
+      "photo": "page_0022.jpg",
+      "batch": "subject1-additional-20260927",
+      "folder": "기본 폴더 (1)",
+      "column": 1,
+      "printedNumberOcr": "31",
+      "printedNumber": 31,
+      "verifiedPrintedNumber": 31,
+      "printedNumberVerifiedAt": "2026-09-27",
+      "bookPage": 141,
+      "subject": 1,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR; 원본문항·네 선택지 및 원본 정답표·해설 대조 완료",
+      "answerPhoto": "page_0013.jpg",
+      "answerBatch": "subject1-answer-20260927",
+      "answerFolder": "기본 폴더",
+      "answerPrintedNumber": 31,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 321,
+    "id": "new-subject1:36a0143c33b6a16d",
+    "group": "Part 5 · Chapter 3",
+    "stem": "다음 중 불공정 조달행위의 특징으로 옳지 않은 것은?",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "경쟁을 왜곡한다."
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "공정성을 침해한다."
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "시장 신뢰를 저해한다."
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "불공정 행위는 일부 상황에서 허용될 수 있다."
+      }
+    ],
+    "answer": "4",
+    "source": {
+      "photo": "page_0022.jpg",
+      "batch": "subject1-additional-20260927",
+      "folder": "기본 폴더 (1)",
+      "column": 1,
+      "printedNumberOcr": "34",
+      "printedNumber": 34,
+      "verifiedPrintedNumber": 34,
+      "printedNumberVerifiedAt": "2026-09-27",
+      "bookPage": 141,
+      "subject": 1,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR; 원본문항·네 선택지 및 원본 정답표·해설 대조 완료",
+      "answerPhoto": "page_0013.jpg",
+      "answerBatch": "subject1-answer-20260927",
+      "answerFolder": "기본 폴더",
+      "answerPrintedNumber": 34,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 322,
+    "id": "new-subject1:1035494edf39e662",
+    "group": "Part 5 · Chapter 3",
+    "stem": "O기업은 우수조달물품으로 지정되어 공공조달시장에서 판로를 확대하였다. 이 제도의 목적으로 가장 적절한 것은?",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "계약 신속화"
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "품질 향상"
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "가격 인하"
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "낙찰자 보호"
+      }
+    ],
+    "answer": "2",
+    "source": {
+      "photo": "page_0023.jpg",
+      "batch": "subject1-additional-20260927",
+      "folder": "기본 폴더 (1)",
+      "column": 1,
+      "printedNumberOcr": "39",
+      "printedNumber": 39,
+      "verifiedPrintedNumber": 39,
+      "printedNumberVerifiedAt": "2026-09-27",
+      "bookPage": 142,
+      "subject": 1,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR; 원본문항·네 선택지 및 원본 정답표·해설 대조 완료",
+      "answerPhoto": "page_0013.jpg",
+      "answerBatch": "subject1-answer-20260927",
+      "answerFolder": "기본 폴더",
+      "answerPrintedNumber": 39,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 323,
+    "id": "new-subject1:b34a1df2fd64e334",
+    "group": "Part 5 · Chapter 4",
+    "stem": "다음 중 입찰공고 정정에 관한 설명으로 옳지 않은 것은?",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "공고내용에 오류가 있는 경우 정정공고를 해야 한다."
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "정정공고 시 남은 공고기간에 관계없이 최소 5일만 추가 하면 된다."
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "정정공고 시 기존 공고기간에 추가하여 공고기간을 연장 해야 한다."
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "법령 위반사항이 있는 경우에도 정정공고 대상이 된다."
+      }
+    ],
+    "answer": "2",
+    "source": {
+      "photo": "page_0027.jpg",
+      "batch": "subject1-additional-20260927",
+      "folder": "기본 폴더 (1)",
+      "column": 1,
+      "printedNumberOcr": "10",
+      "printedNumber": 10,
+      "verifiedPrintedNumber": 10,
+      "printedNumberVerifiedAt": "2026-09-27",
+      "bookPage": 148,
+      "subject": 1,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR; 원본문항·네 선택지 및 원본 정답표·해설 대조 완료",
+      "answerPhoto": "page_0014.jpg",
+      "answerBatch": "subject1-answer-20260927",
+      "answerFolder": "기본 폴더",
+      "answerPrintedNumber": 10,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 324,
+    "id": "new-subject1:e3aa1635f208f339",
+    "group": "Part 5 · Chapter 4",
+    "stem": "다음 사례에 대한 설명으로 가장 적절한 것은? J업체는 전자입찰서를 제출한 후 입찰금액 입력 오류를 발견하여 취소를 신청하였고, 해당 입찰은 무효 처리되었다. 이후 동일 입찰에 다시 참여하려 하였다.",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "취소 후 동일 입찰에 재참여할 수 있다."
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "취소된 입찰은 자동으로 수정되어 유효 처리된다."
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "해당 입찰에는 재참여할 수 없으나 재입찰 시에는 참여 가능하다."
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "취소는 인정되지 않으므로 최초 입찰이 유효하다."
+      }
+    ],
+    "answer": "3",
+    "source": {
+      "photo": "page_0027.jpg",
+      "batch": "subject1-additional-20260927",
+      "folder": "기본 폴더 (1)",
+      "column": 2,
+      "printedNumberOcr": "11",
+      "printedNumber": 11,
+      "verifiedPrintedNumber": 11,
+      "printedNumberVerifiedAt": "2026-09-27",
+      "bookPage": 148,
+      "subject": 1,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR; 원본문항·네 선택지 및 원본 정답표·해설 대조 완료",
+      "answerPhoto": "page_0014.jpg",
+      "answerBatch": "subject1-answer-20260927",
+      "answerFolder": "기본 폴더",
+      "answerPrintedNumber": 11,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 325,
+    "id": "new-subject1:4bae263f6b014b4c",
+    "group": "Part 5 · Chapter 4",
+    "stem": "다음 사례에 대한 설명으로 가장 적절한 것은? K업체는 전자입찰서를 제출하면서 부속서류 파일에 암호를 설정하였고, 해당 파일은 시스템에서 판독되지 않았다.",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "입찰서는 유효하나 부속서류만 보완 제출 가능하다"
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "부속서류는 제출된 것으로 인정된다."
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "해당 부속서류는 제출되지 않은 것으로 간주된다."
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "전자입찰 전체가 자동 무효 처리된다."
+      }
+    ],
+    "answer": "3",
+    "source": {
+      "photo": "page_0027.jpg",
+      "batch": "subject1-additional-20260927",
+      "folder": "기본 폴더 (1)",
+      "column": 2,
+      "printedNumberOcr": "13",
+      "printedNumber": 13,
+      "verifiedPrintedNumber": 13,
+      "printedNumberVerifiedAt": "2026-09-27",
+      "bookPage": 148,
+      "subject": 1,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR; 원본문항·네 선택지 및 원본 정답표·해설 대조 완료",
+      "answerPhoto": "page_0014.jpg",
+      "answerBatch": "subject1-answer-20260927",
+      "answerFolder": "기본 폴더",
+      "answerPrintedNumber": 13,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 326,
+    "id": "new-subject1:9db16521210be603",
+    "group": "Part 5 · Chapter 4",
+    "stem": "L기업은 동일한 컴퓨터에서 두 개의 전자입찰서를 제출한 이후 한 입찰서에 오류가 있어 취소를 신청하였다. 이 경우 처리로 가장 적절한 것은?",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "두 입찰서 모두 유효하다."
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "오류 입찰서만 무효 처리된다."
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "두 입찰서 모두 무효 처리된다."
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "취소 신청 후 재입찰 참여가 가능하다."
+      }
+    ],
+    "answer": "3",
+    "source": {
+      "photo": "page_0028.jpg",
+      "batch": "subject1-additional-20260927",
+      "folder": "기본 폴더 (1)",
+      "column": 1,
+      "printedNumberOcr": "14",
+      "printedNumber": 14,
+      "verifiedPrintedNumber": 14,
+      "printedNumberVerifiedAt": "2026-09-27",
+      "bookPage": 149,
+      "subject": 1,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR; 원본문항·네 선택지 및 원본 정답표·해설 대조 완료",
+      "answerPhoto": "page_0014.jpg",
+      "answerBatch": "subject1-answer-20260927",
+      "answerFolder": "기본 폴더",
+      "answerPrintedNumber": 14,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 327,
+    "id": "new-subject1:c316fd0b33ff02ff",
+    "group": "Part 5 · Chapter 4",
+    "stem": "M기관은 전자조달시스템을 활용하지 않고 수기계약을 진행하였다. 입찰서는 어떻게 제출해야 하는가?",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "전자입찰서로 제출한다."
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "문서 형태로 작성 • 제출한다."
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "이메일로 제출한다."
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "구두로 제출한다."
+      }
+    ],
+    "answer": "2",
+    "source": {
+      "photo": "page_0028.jpg",
+      "batch": "subject1-additional-20260927",
+      "folder": "기본 폴더 (1)",
+      "column": 1,
+      "printedNumberOcr": "15",
+      "printedNumber": 15,
+      "verifiedPrintedNumber": 15,
+      "printedNumberVerifiedAt": "2026-09-27",
+      "bookPage": 149,
+      "subject": 1,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR; 원본문항·네 선택지 및 원본 정답표·해설 대조 완료",
+      "answerPhoto": "page_0014.jpg",
+      "answerBatch": "subject1-answer-20260927",
+      "answerFolder": "기본 폴더",
+      "answerPrintedNumber": 15,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 328,
+    "id": "new-subject1:ce1198a5dc0c8da7",
+    "group": "Part 5 · Chapter 4",
+    "stem": "다음 사례에 대한 설명으로 가장 적절한 것은? O기관은 수의계약 안내공고문에 '입찰'이라는 용어를 사용하였다.",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "적절하다."
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "부적절하다."
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "조건부 가능하다."
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "무효이다."
+      }
+    ],
+    "answer": "2",
+    "source": {
+      "photo": "page_0028.jpg",
+      "batch": "subject1-additional-20260927",
+      "folder": "기본 폴더 (1)",
+      "column": 2,
+      "printedNumberOcr": "17",
+      "printedNumber": 17,
+      "verifiedPrintedNumber": 17,
+      "printedNumberVerifiedAt": "2026-09-27",
+      "bookPage": 149,
+      "subject": 1,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR; 원본문항·네 선택지 및 원본 정답표·해설 대조 완료",
+      "answerPhoto": "page_0014.jpg",
+      "answerBatch": "subject1-answer-20260927",
+      "answerFolder": "기본 폴더",
+      "answerPrintedNumber": 17,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 329,
+    "id": "new-subject1:18d724f44bc7378a",
+    "group": "Part 5 · Chapter 4",
+    "stem": "S기관은 기타공공기관으로서 예산 규모가 200억원이었다. 하도급 관리 전자적 처리 의무에 대해 올바른 것은?",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "의무 적용 대상이다."
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "의무 제외 대상이다."
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "조건부 적용 대상이다."
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "무효이다."
+      }
+    ],
+    "answer": "2",
+    "source": {
+      "photo": "page_0029.jpg",
+      "batch": "subject1-additional-20260927",
+      "folder": "기본 폴더 (1)",
+      "column": 1,
+      "printedNumberOcr": "24",
+      "printedNumber": 24,
+      "verifiedPrintedNumber": 24,
+      "printedNumberVerifiedAt": "2026-09-27",
+      "bookPage": 150,
+      "subject": 1,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR; 원본문항·네 선택지 및 원본 정답표·해설 대조 완료",
+      "answerPhoto": "page_0014.jpg",
+      "answerBatch": "subject1-answer-20260927",
+      "answerFolder": "기본 폴더",
+      "answerPrintedNumber": 24,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 330,
+    "id": "new-subject1:f8890e7f40955e8a",
+    "group": "Part 5 · Chapter 4",
+    "stem": "다음 중 전자적 하도급 관리 시스템 운영 방식으로 가장 적절하지 않은 것은?",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "하수급인의 대금 청구를 전자적으로 처리한다."
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "수요기관이 지급 과정을 확인할 수 있도록 한다."
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "계약체결자가 법령상 승낙 절차를 전자적으로 처리한다."
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "하수급인이 대금지급 요청 시 자동 승인 및 지급이 이루어지도록 한다."
+      }
+    ],
+    "answer": "4",
+    "source": {
+      "photo": "page_0029.jpg",
+      "batch": "subject1-additional-20260927",
+      "folder": "기본 폴더 (1)",
+      "column": 2,
+      "printedNumberOcr": "25",
+      "printedNumber": 25,
+      "verifiedPrintedNumber": 25,
+      "printedNumberVerifiedAt": "2026-09-27",
+      "bookPage": 150,
+      "subject": 1,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR; 원본문항·네 선택지 및 원본 정답표·해설 대조 완료",
+      "answerPhoto": "page_0014.jpg",
+      "answerBatch": "subject1-answer-20260927",
+      "answerFolder": "기본 폴더",
+      "answerPrintedNumber": 25,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 331,
+    "id": "new-subject1:b84d2431347ed8a4",
+    "group": "Part 5 · Chapter 5",
+    "stem": "다음 중 공기업 • 준정부기관 계약 및 국제입찰 제도에 관한 설명으로 옳지 않은 것은?",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "공기업 •준정부기관은 국가계약법령과 「공기업 • 준정부기관 계약사무규칙」을 적용받으며, 국제입찰 대상 규모는 국가와 달리 적용된다."
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "국제입찰은 해외 정부조달시장 진출 기회 확대라는 장점이 있으나, 국내시장 경쟁 심화라는 단점도 있다."
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "국제입찰은 양허 대상 조달사업에만 적용되며, 계약 목적과 성격을 고려해 양허 대상 규모가 아니면 국제입찰을 할 수는 없다."
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "국제입찰 적용 예외에는 중소기업제품 구매, 농수산물 구매, 국가안보 목적 수행, 국제기구 절차에 따른 조달 등이 포함된다."
+      }
+    ],
+    "answer": "3",
+    "source": {
+      "photo": "page_0032.jpg",
+      "batch": "subject1-additional-20260927",
+      "folder": "기본 폴더 (1)",
+      "column": 2,
+      "printedNumberOcr": "4",
+      "printedNumber": 4,
+      "verifiedPrintedNumber": 4,
+      "printedNumberVerifiedAt": "2026-09-27",
+      "bookPage": 156,
+      "subject": 1,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR; 원본문항·네 선택지 및 원본 정답표·해설 대조 완료",
+      "answerPhoto": "page_0015.jpg",
+      "answerBatch": "subject1-answer-20260927",
+      "answerFolder": "기본 폴더",
+      "answerPrintedNumber": 4,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 332,
+    "id": "new-subject1:f344c96770433691",
+    "group": "Part 5 · Chapter 5",
+    "stem": "다음 중 공기업 • 준정부기관이 계약상대자(공급자)로서 수의계약을 체결할 수 있는 경우가 아닌 것은?",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "국가와 계약을 체결하는 경우"
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "지방자치단체와 계약을 체결하는 경우"
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "일반 민간기업과 계약을 체결하는 경우"
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "자회사와 계약을 체결하는 경우"
+      }
+    ],
+    "answer": "3",
+    "source": {
+      "photo": "page_0034.jpg",
+      "batch": "subject1-additional-20260927",
+      "folder": "기본 폴더 (1)",
+      "column": 1,
+      "printedNumberOcr": "14",
+      "printedNumber": 14,
+      "verifiedPrintedNumber": 14,
+      "printedNumberVerifiedAt": "2026-09-27",
+      "bookPage": 158,
+      "subject": 1,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR; 원본문항·네 선택지 및 원본 정답표·해설 대조 완료",
+      "answerPhoto": "page_0015.jpg",
+      "answerBatch": "subject1-answer-20260927",
+      "answerFolder": "기본 폴더",
+      "answerPrintedNumber": 14,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 333,
+    "id": "new-subject1:e487582f1f849d3a",
+    "group": "Part 5 · Chapter 5",
+    "stem": "다음 중 수의계약 전환이 가능한 경우로 가장 적절한 것은?",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "최초 입찰에서 낙찰자가 있는 경우"
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "재공고입찰에서 입찰자가 없는 경우"
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "입찰자가 다수 존재하는 경우"
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "예정가격 미달 입찰자가 있는 경우"
+      }
+    ],
+    "answer": "2",
+    "source": {
+      "photo": "page_0034.jpg",
+      "batch": "subject1-additional-20260927",
+      "folder": "기본 폴더 (1)",
+      "column": 1,
+      "printedNumberOcr": "17",
+      "printedNumber": 17,
+      "verifiedPrintedNumber": 17,
+      "printedNumberVerifiedAt": "2026-09-27",
+      "bookPage": 158,
+      "subject": 1,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR; 원본문항·네 선택지 및 원본 정답표·해설 대조 완료",
+      "answerPhoto": "page_0015.jpg",
+      "answerBatch": "subject1-answer-20260927",
+      "answerFolder": "기본 폴더",
+      "answerPrintedNumber": 17,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 334,
+    "id": "new-subject1:06e25b72fbb3b450",
+    "group": "Part 5 · Chapter 5",
+    "stem": "다음 사례에서 L기업이 주장할 수 있는 절차상 문제로 가장 적절한 것은? L기업은 부정당업자 제재처분 관련 의견진술 통지를 받았다. 통지서에는 처분 사유와 일시는 적혀 있었으나 장소가 누락되어 있었다.",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "의견진술 기회 자체가 박탈되었다."
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "통지 요건 불충족으로 절차상 하자가 발생할 수 있다."
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "대리인 참여가 제한된다."
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "이해관계인 의견 청취가 누락된다."
+      }
+    ],
+    "answer": "2",
+    "source": {
+      "photo": "page_0035.jpg",
+      "batch": "subject1-additional-20260927",
+      "folder": "기본 폴더 (1)",
+      "column": 1,
+      "printedNumberOcr": "22",
+      "printedNumber": 22,
+      "verifiedPrintedNumber": 22,
+      "printedNumberVerifiedAt": "2026-09-27",
+      "bookPage": 159,
+      "subject": 1,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR; 원본문항·네 선택지 및 원본 정답표·해설 대조 완료",
+      "answerPhoto": "page_0015.jpg",
+      "answerBatch": "subject1-answer-20260927",
+      "answerFolder": "기본 폴더",
+      "answerPrintedNumber": 22,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 335,
+    "id": "new-subject1:6ad83439bbe902ae",
+    "group": "Part 5 · Chapter 5",
+    "stem": "다음 사례에서 Q기업이 주장할 수 있는 가장 타당한 근거는? Q기업은 대리인을 통해 의견을 진술했는데, 기관은 이 를 인정하지 않고 본인만 출석해야 한다고 하였다.",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "대리인도 의견진술 가능 대상이다."
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "이해관계인의 의견 청취가 필요하다."
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "통지 요건이 충족되지 않았다."
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "확인 절차가 이행되지 않았다."
+      }
+    ],
+    "answer": "1",
+    "source": {
+      "photo": "page_0035.jpg",
+      "batch": "subject1-additional-20260927",
+      "folder": "기본 폴더 (1)",
+      "column": 2,
+      "printedNumberOcr": "27",
+      "printedNumber": 27,
+      "verifiedPrintedNumber": 27,
+      "printedNumberVerifiedAt": "2026-09-27",
+      "bookPage": 159,
+      "subject": 1,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR; 원본문항·네 선택지 및 원본 정답표·해설 대조 완료",
+      "answerPhoto": "page_0015.jpg",
+      "answerBatch": "subject1-answer-20260927",
+      "answerFolder": "기본 폴더",
+      "answerPrintedNumber": 27,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 336,
+    "id": "new-subject1:77b5565bd009dff5",
+    "group": "Part 5 · Chapter 5",
+    "stem": "V기업은 준정부기관과의 계약에서 지체상금 산입 범위 관련 불이익을 받았고, 원인행위 발생일로부터 19일 후에 이의신청을 하였다. 이 경우 결과로 가장 적절한 것은?",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "기한 내 신청으로 인정된다."
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "기한 초과로 인정되지 않는다."
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "조건부로 인정된다."
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "재심 청구가 가능하다."
+      }
+    ],
+    "answer": "1",
+    "source": {
+      "photo": "page_0036.jpg",
+      "batch": "subject1-additional-20260927",
+      "folder": "기본 폴더 (1)",
+      "column": 2,
+      "printedNumberOcr": "32",
+      "printedNumber": 32,
+      "verifiedPrintedNumber": 32,
+      "printedNumberVerifiedAt": "2026-09-27",
+      "bookPage": 160,
+      "subject": 1,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR; 원본문항·네 선택지 및 원본 정답표·해설 대조 완료",
+      "answerPhoto": "page_0015.jpg",
+      "answerBatch": "subject1-answer-20260927",
+      "answerFolder": "기본 폴더",
+      "answerPrintedNumber": 32,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 337,
+    "id": "new-subject1:c2c715487475933a",
+    "group": "Part 5 · Chapter 5",
+    "stem": "다음 사례의 결과로 가장 적절한 것은? W기업은 공기업과의 계약 건에 대해 이의신청을 하였으나 기관장의 회신 결과에 불복하여, 회신 통지를 받은 날부터 25일 후에 국가계약분쟁조정위원회에 재심을 청구하였다.",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "기한 내 청구이다."
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "기관 재량이다."
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "조건부로 인정된다."
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "기한을 초과한 청구이다."
+      }
+    ],
+    "answer": "4",
+    "source": {
+      "photo": "page_0036.jpg",
+      "batch": "subject1-additional-20260927",
+      "folder": "기본 폴더 (1)",
+      "column": 2,
+      "printedNumberOcr": "33",
+      "printedNumber": 33,
+      "verifiedPrintedNumber": 33,
+      "printedNumberVerifiedAt": "2026-09-27",
+      "bookPage": 160,
+      "subject": 1,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR; 원본문항·네 선택지 및 원본 정답표·해설 대조 완료",
+      "answerPhoto": "page_0015.jpg",
+      "answerBatch": "subject1-answer-20260927",
+      "answerFolder": "기본 폴더",
+      "answerPrintedNumber": 33,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 338,
+    "id": "new-subject1:17e0ab5dc505b68b",
+    "group": "Part 5 · Chapter 5",
+    "stem": "X기업은 준정부기관과의 개산계약 정산과 관련하여 불이익을 받았다. 이 경우 이의신청 가능 여부로 가장 적절한 것은?",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "가능하다."
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "불가능하다."
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "조건부 가능하다."
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "재심 청구만 가능하다."
+      }
+    ],
+    "answer": "1",
+    "source": {
+      "photo": "page_0036.jpg",
+      "batch": "subject1-additional-20260927",
+      "folder": "기본 폴더 (1)",
+      "column": 2,
+      "printedNumberOcr": "34",
+      "printedNumber": 34,
+      "verifiedPrintedNumber": 34,
+      "printedNumberVerifiedAt": "2026-09-27",
+      "bookPage": 160,
+      "subject": 1,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR; 원본문항·네 선택지 및 원본 정답표·해설 대조 완료",
+      "answerPhoto": "page_0015.jpg",
+      "answerBatch": "subject1-answer-20260927",
+      "answerFolder": "기본 폴더",
+      "answerPrintedNumber": 34,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 339,
+    "id": "new-subject1:6a06e45bbd02424a",
+    "group": "Part 6 · Chapter 1",
+    "stem": "다음 중 국가계약분쟁조정 신청 대상 계약규모 기준으로 옳은 것은?",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "종합공사 3억원 이상, 전문공사 8천만원 이상"
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "종합공사 4억원 이상, 전문공사 1억원 이상"
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "종합공사 5억원 이상, 전문공사 2억원 이상"
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "종합공사 2억원 이상, 전문공사 5천만원 이상"
+      }
+    ],
+    "answer": "2",
+    "source": {
+      "photo": "page_0038.jpg",
+      "batch": "subject1-additional-20260927",
+      "folder": "기본 폴더 (1)",
+      "column": 1,
+      "printedNumberOcr": "4",
+      "printedNumber": 4,
+      "verifiedPrintedNumber": 4,
+      "printedNumberVerifiedAt": "2026-09-27",
+      "bookPage": 166,
+      "subject": 1,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR; 원본문항·네 선택지 및 원본 정답표·해설 대조 완료",
+      "answerPhoto": "page_0016.jpg",
+      "answerBatch": "subject1-answer-20260927",
+      "answerFolder": "기본 폴더",
+      "answerPrintedNumber": 4,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 340,
+    "id": "new-subject1:3c08428e6d45cd6c",
+    "group": "Part 6 · Chapter 1",
+    "stem": "다음 중 중재제도에 대한 설명으로 옳은 것은?",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "중재판정은 참고 의견에 불과하다."
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "중재판정은 법원의 확정판결과 동일한 효력을 가진다."
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "중재판정은 행정기관 내부 결정으로만 효력이 있다."
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "중재판정은 조정안과 동일한 효력을 가진다."
+      }
+    ],
+    "answer": "2",
+    "source": {
+      "photo": "page_0038.jpg",
+      "batch": "subject1-additional-20260927",
+      "folder": "기본 폴더 (1)",
+      "column": 2,
+      "printedNumberOcr": "7",
+      "printedNumber": 7,
+      "verifiedPrintedNumber": 7,
+      "printedNumberVerifiedAt": "2026-09-27",
+      "bookPage": 166,
+      "subject": 1,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR; 원본문항·네 선택지 및 원본 정답표·해설 대조 완료",
+      "answerPhoto": "page_0016.jpg",
+      "answerBatch": "subject1-answer-20260927",
+      "answerFolder": "기본 폴더",
+      "answerPrintedNumber": 7,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 341,
+    "id": "new-subject1:2e55d02e30250370",
+    "group": "Part 6 · Chapter 1",
+    "stem": "다음 중 중재판정 취소소송이 가능한 경우로 옳지 않은 것은?",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "중재합의 당시 당사자가 무능력자였던 경우"
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "중재판정이 합의 범위를 벗어난 경우"
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "중재판정부 구성이나 절차가 법에 위반된 경우"
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "단순히 당사자가 판정 결과에 불만족하는 경우"
+      }
+    ],
+    "answer": "4",
+    "source": {
+      "photo": "page_0039.jpg",
+      "batch": "subject1-additional-20260927",
+      "folder": "기본 폴더 (1)",
+      "column": 1,
+      "printedNumberOcr": "9",
+      "printedNumber": 9,
+      "verifiedPrintedNumber": 9,
+      "printedNumberVerifiedAt": "2026-09-27",
+      "bookPage": 167,
+      "subject": 1,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR; 원본문항·네 선택지 및 원본 정답표·해설 대조 완료",
+      "answerPhoto": "page_0016.jpg",
+      "answerBatch": "subject1-answer-20260927",
+      "answerFolder": "기본 폴더",
+      "answerPrintedNumber": 9,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 342,
+    "id": "new-subject1:2e9c74bdf623040f",
+    "group": "Part 6 · Chapter 1",
+    "stem": "다음 중 협상에 따른 계약 방법을 적용하는 입찰에서 수의계약 체결 조건은?",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "입찰자가 없는 경우 제안서 평가 없이 체결 가능하다."
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "2회 이상 입찰 후 낙찰자가 없는 경우 제안서 평가를 통해 적합해야 수의계약이 가능하다."
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "입찰자가 없는 경우 자동으로 수의계약이 가능하다."
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "기관장이 필요하다고 판단하면 수의계약이 가능하다."
+      }
+    ],
+    "answer": "2",
+    "source": {
+      "photo": "page_0040.jpg",
+      "batch": "subject1-additional-20260927",
+      "folder": "기본 폴더 (1)",
+      "column": 1,
+      "printedNumberOcr": "18",
+      "printedNumber": 18,
+      "verifiedPrintedNumber": 18,
+      "printedNumberVerifiedAt": "2026-09-27",
+      "bookPage": 168,
+      "subject": 1,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR; 원본문항·네 선택지 및 원본 정답표·해설 대조 완료",
+      "answerPhoto": "page_0016.jpg",
+      "answerBatch": "subject1-answer-20260927",
+      "answerFolder": "기본 폴더",
+      "answerPrintedNumber": 18,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 343,
+    "id": "new-subject1:b284f85c524438d5",
+    "group": "Part 6 · Chapter 1",
+    "stem": "다음 중 계약보증금 귀속과 관련된 법적 해석의 공통된 결론은?",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "계약상대자의 재무상태가 중요하다."
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "계약 해제 요건 충족 여부가 귀속 여부를 결정한다."
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "계약기간 중 부도 발생만으로 귀속된다."
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "발주기관의 재량으로 귀속된다."
+      }
+    ],
+    "answer": "2",
+    "source": {
+      "photo": "page_0040.jpg",
+      "batch": "subject1-additional-20260927",
+      "folder": "기본 폴더 (1)",
+      "column": 2,
+      "printedNumberOcr": "23",
+      "printedNumber": 23,
+      "verifiedPrintedNumber": 23,
+      "printedNumberVerifiedAt": "2026-09-27",
+      "bookPage": 168,
+      "subject": 1,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR; 원본문항·네 선택지 및 원본 정답표·해설 대조 완료",
+      "answerPhoto": "page_0016.jpg",
+      "answerBatch": "subject1-answer-20260927",
+      "answerFolder": "기본 폴더",
+      "answerPrintedNumber": 23,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 344,
+    "id": "new-subject1:248edb3542e6fac6",
+    "group": "Part 6 · Chapter 1",
+    "stem": "계약상대자가 일부 공사를 이행했으나, 지체상금이 계약보증금 상당액에 달한 경우, 지체상금 산정의 적정 기준은?",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "기성부분의 금액을 제외한 나머지 계약금액 기준"
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "전체 계약금액 기준"
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "계약상대자가 실제 납부한 금액 기준"
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "발주기관의 재량에 따른 판단 기준"
+      }
+    ],
+    "answer": "2",
+    "source": {
+      "photo": "page_0040.jpg",
+      "batch": "subject1-additional-20260927",
+      "folder": "기본 폴더 (1)",
+      "column": 2,
+      "printedNumberOcr": "24",
+      "printedNumber": 24,
+      "verifiedPrintedNumber": 24,
+      "printedNumberVerifiedAt": "2026-09-27",
+      "bookPage": 168,
+      "subject": 1,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR; 원본문항·네 선택지 및 원본 정답표·해설 대조 완료",
+      "answerPhoto": "page_0016.jpg",
+      "answerBatch": "subject1-answer-20260927",
+      "answerFolder": "기본 폴더",
+      "answerPrintedNumber": 24,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 345,
+    "id": "new-subject1:6861f753f93d3cfe",
+    "group": "Part 6 · Chapter 1",
+    "stem": "부정당업자 제재 처분의 효력은 언제부터 발생하는가?",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "사유 발생 시점부터 자동으로 발생한다."
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "처분이 확정된 시점부터 발생한다."
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "입찰공고 시점부터 발생한다."
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "계약체결 시점부터 발생한다."
+      }
+    ],
+    "answer": "2",
+    "source": {
+      "photo": "page_0041.jpg",
+      "batch": "subject1-additional-20260927",
+      "folder": "기본 폴더 (1)",
+      "column": 2,
+      "printedNumberOcr": "32",
+      "printedNumber": 32,
+      "verifiedPrintedNumber": 32,
+      "printedNumberVerifiedAt": "2026-09-27",
+      "bookPage": 169,
+      "subject": 1,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR; 원본문항·네 선택지 및 원본 정답표·해설 대조 완료",
+      "answerPhoto": "page_0016.jpg",
+      "answerBatch": "subject1-answer-20260927",
+      "answerFolder": "기본 폴더",
+      "answerPrintedNumber": 32,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 346,
+    "id": "new-subject1:373b292523b9b58c",
+    "group": "Part 6 · Chapter 1",
+    "stem": "다음 중 허위서류 제출과 관련해 제출자의 고의성 여부가 제재 판단에 미치는 영향은?",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "고의성이 없으면 제재 불가하다."
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "발주기관이 판단해야 한다."
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "허위 인식 여부가 중요한 판단 기준이 된다."
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "허위 인식 여부와 무관하게 제재 가능하다."
+      }
+    ],
+    "answer": "4",
+    "source": {
+      "photo": "page_0042.jpg",
+      "batch": "subject1-additional-20260927",
+      "folder": "기본 폴더 (1)",
+      "column": 1,
+      "printedNumberOcr": "35",
+      "printedNumber": 35,
+      "verifiedPrintedNumber": 35,
+      "printedNumberVerifiedAt": "2026-09-27",
+      "bookPage": 170,
+      "subject": 1,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR; 원본문항·네 선택지 및 원본 정답표·해설 대조 완료",
+      "answerPhoto": "page_0016.jpg",
+      "answerBatch": "subject1-answer-20260927",
+      "answerFolder": "기본 폴더",
+      "answerPrintedNumber": 35,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 347,
+    "id": "new-subject1:f854996cf8898889",
+    "group": "Part 6 · Chapter 1",
+    "stem": "다음 중 부정당업자 제재 사유로 규정된 행위 중 허위서류 제출과 동일하게 취급되는 것은?",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "입찰서 제출 지연"
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "계약금액 일부 납부"
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "입찰 • 계약 관련 서류 위 • 변조"
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "납품 지연"
+      }
+    ],
+    "answer": "3",
+    "source": {
+      "photo": "page_0042.jpg",
+      "batch": "subject1-additional-20260927",
+      "folder": "기본 폴더 (1)",
+      "column": 2,
+      "printedNumberOcr": "36",
+      "printedNumber": 36,
+      "verifiedPrintedNumber": 36,
+      "printedNumberVerifiedAt": "2026-09-27",
+      "bookPage": 170,
+      "subject": 1,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR; 원본문항·네 선택지 및 원본 정답표·해설 대조 완료",
+      "answerPhoto": "page_0016.jpg",
+      "answerBatch": "subject1-answer-20260927",
+      "answerFolder": "기본 폴더",
+      "answerPrintedNumber": 36,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 348,
+    "id": "new-subject1:0b4eced4c6b1d5de",
+    "group": "Part 6 · Chapter 2",
+    "stem": "다음 중 계약상대자의 책임 있는 사유로 계약 해제 • 해지 시 발주기관의 기성 부분 처리로 가장 적절한 것은?",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "기성 부분 대가를 지급하지 않는다."
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "검사하여 인수한 기성 부분에 상당하는 대가를 지급한다."
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "선금 잔액을 상환하지 않는다."
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "계약 전체를 무효로 보아 정산하지 않는다."
+      }
+    ],
+    "answer": "2",
+    "source": {
+      "photo": "page_0044.jpg",
+      "batch": "subject1-additional-20260927",
+      "folder": "기본 폴더 (1)",
+      "column": 2,
+      "printedNumberOcr": "5",
+      "printedNumber": 5,
+      "verifiedPrintedNumber": 5,
+      "printedNumberVerifiedAt": "2026-09-27",
+      "bookPage": 177,
+      "subject": 1,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR; 원본문항·네 선택지 및 원본 정답표·해설 대조 완료",
+      "answerPhoto": "page_0017.jpg",
+      "answerBatch": "subject1-answer-20260927",
+      "answerFolder": "기본 폴더",
+      "answerPrintedNumber": 5,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 349,
+    "id": "new-subject1:29d8302945567146",
+    "group": "Part 6 · Chapter 2",
+    "stem": "다음 중 발주기관의 사정변경에 따른 계약 해제 • 해지 시 계약상대자의 선금 상환 방식으로 가장 적절한 것은?",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "미정산 잔액만 상환한다."
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "미정산 잔액에 약정이자를 가산해 상환한다."
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "미정산 잔액에 지체상금을 가산해 상환한다."
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "선금 상환 의무가 없다."
+      }
+    ],
+    "answer": "1",
+    "source": {
+      "photo": "page_0044.jpg",
+      "batch": "subject1-additional-20260927",
+      "folder": "기본 폴더 (1)",
+      "column": 2,
+      "printedNumberOcr": "7",
+      "printedNumber": 7,
+      "verifiedPrintedNumber": 7,
+      "printedNumberVerifiedAt": "2026-09-27",
+      "bookPage": 177,
+      "subject": 1,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR; 원본문항·네 선택지 및 원본 정답표·해설 대조 완료",
+      "answerPhoto": "page_0017.jpg",
+      "answerBatch": "subject1-answer-20260927",
+      "answerFolder": "기본 폴더",
+      "answerPrintedNumber": 7,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 350,
+    "id": "new-subject1:d111e0ca4442c1f3",
+    "group": "Part 6 · Chapter 2",
+    "stem": "다음 중 부정당업자 제재 처분 시 전자조달시스템에 게재해야 하는 정보가 아닌 것은?",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "업체명 • 주소 • 대표자 성명"
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "입찰참가자격 제한기간"
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "입찰참가자격 제한사유"
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "신용평가등급"
+      }
+    ],
+    "answer": "4",
+    "source": {
+      "photo": "page_0045.jpg",
+      "batch": "subject1-additional-20260927",
+      "folder": "기본 폴더 (1)",
+      "column": 2,
+      "printedNumberOcr": "12",
+      "printedNumber": 12,
+      "verifiedPrintedNumber": 12,
+      "printedNumberVerifiedAt": "2026-09-27",
+      "bookPage": 178,
+      "subject": 1,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR; 원본문항·네 선택지 및 원본 정답표·해설 대조 완료",
+      "answerPhoto": "page_0017.jpg",
+      "answerBatch": "subject1-answer-20260927",
+      "answerFolder": "기본 폴더",
+      "answerPrintedNumber": 12,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 351,
+    "id": "new-subject1:6a93d255685cbf12",
+    "group": "Part 6 · Chapter 2",
+    "stem": "다음 중 과징금 납부 기한은 원칙적으로 며칠 이내인가?",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "30일"
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "60일"
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "90일"
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "120일"
+      }
+    ],
+    "answer": "2",
+    "source": {
+      "photo": "page_0045.jpg",
+      "batch": "subject1-additional-20260927",
+      "folder": "기본 폴더 (1)",
+      "column": 2,
+      "printedNumberOcr": "14",
+      "printedNumber": 14,
+      "verifiedPrintedNumber": 14,
+      "printedNumberVerifiedAt": "2026-09-27",
+      "bookPage": 178,
+      "subject": 1,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR; 원본문항·네 선택지 및 원본 정답표·해설 대조 완료",
+      "answerPhoto": "page_0017.jpg",
+      "answerBatch": "subject1-answer-20260927",
+      "answerFolder": "기본 폴더",
+      "answerPrintedNumber": 14,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 352,
+    "id": "new-subject1:115c1809205f4f85",
+    "group": "Part 6 · Chapter 2",
+    "stem": "불공정 조달행위 조사 결과 위반 사실이 확인된 경우 취할 수 있는 조치로 보기 어려운 것은?",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "시정 요구"
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "계약조건에 따른 처분"
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "부정당업자 제재 처분"
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "납품기일 자동 단축"
+      }
+    ],
+    "answer": "4",
+    "source": {
+      "photo": "page_0047.jpg",
+      "batch": "subject1-additional-20260927",
+      "folder": "기본 폴더 (1)",
+      "column": 1,
+      "printedNumberOcr": "25",
+      "printedNumber": 25,
+      "verifiedPrintedNumber": 25,
+      "printedNumberVerifiedAt": "2026-09-27",
+      "bookPage": 180,
+      "subject": 1,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR; 원본문항·네 선택지 및 원본 정답표·해설 대조 완료",
+      "answerPhoto": "page_0017.jpg",
+      "answerBatch": "subject1-answer-20260927",
+      "answerFolder": "기본 폴더",
+      "answerPrintedNumber": 25,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 353,
+    "id": "new-subject1:8fcdbd28096c0483",
+    "group": "Part 6 · Chapter 2",
+    "stem": "다음 중 부당이득금 환수와 계약보증금 환수의 차이에 대한 설명으로 옳은 것은?",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "부당이득금 환수는 미이행 부분만을 대상으로 한다."
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "단가계약의 계약보증금 환수는 전체 납품금액을 기준으로 한다."
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "부당이득금 환수는 기납품분을 포함한 전체 납품금액을 기준으로 산정한다."
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "계약보증금 환수는 평균 영업이익률을 곱해 산정한다."
+      }
+    ],
+    "answer": "3",
+    "source": {
+      "photo": "page_0047.jpg",
+      "batch": "subject1-additional-20260927",
+      "folder": "기본 폴더 (1)",
+      "column": 2,
+      "printedNumberOcr": "30",
+      "printedNumber": 30,
+      "verifiedPrintedNumber": 30,
+      "printedNumberVerifiedAt": "2026-09-27",
+      "bookPage": 180,
+      "subject": 1,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR; 원본문항·네 선택지 및 원본 정답표·해설 대조 완료",
+      "answerPhoto": "page_0017.jpg",
+      "answerBatch": "subject1-answer-20260927",
+      "answerFolder": "기본 폴더",
+      "answerPrintedNumber": 30,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 354,
+    "id": "new-subject1:dde29f2528e6a49a",
+    "group": "Part 6 · Chapter 2",
+    "stem": "다음 부당이득금 산정 기준에 대한 설명 중 괄호 안에 들어갈 말로 옳게 짝지어진 것은? 직접생산기준 위반 시: 물품대금 × (ㄱ). 원산지를 거짓으로 표시한 경우: 물품대금 × (ㄴ). 계약규격과 상이한 제품을 납품한 경우: (ㄷ).",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "(ㄱ) 15% / (ㄴ) 10% / (ㄷ) 해당 물품대금 전체"
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "(ㄱ) 10% / (ㄴ) 15% / (ㄷ) 해당 물품대금과 실제 거래금액과의 차액"
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "(ㄱ) 15% / (ㄴ) 15% / (ㄷ) 해당 물품대금 전체"
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "(ㄱ) 10% / (ㄴ) 10% / (ㄷ) 해당 물품대금과 실제 거래금액과의 차액"
+      }
+    ],
+    "answer": "3",
+    "source": {
+      "photo": "page_0048.jpg",
+      "batch": "subject1-additional-20260927",
+      "folder": "기본 폴더 (1)",
+      "column": 1,
+      "printedNumberOcr": "32",
+      "printedNumber": 32,
+      "verifiedPrintedNumber": 32,
+      "printedNumberVerifiedAt": "2026-09-27",
+      "bookPage": 181,
+      "subject": 1,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "사진 OCR; 원본문항·네 선택지 및 원본 정답표·해설 대조 완료",
+      "answerPhoto": "page_0017.jpg",
+      "answerBatch": "subject1-answer-20260927",
+      "answerFolder": "기본 폴더",
+      "answerPrintedNumber": 32,
+      "answerVerifiedAt": "2026-09-27"
+    }
+  },
+  {
+    "no": 355,
+    "id": "new-subject1:a1f8071850d91d64",
+    "group": "Part 6 · Chapter 2",
+    "stem": "다음 중 브로커의 불공정 행위 개입 시 부당이득금 산정 기준으로 가장 적절한 것은?",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "기본산정금액 + (계약금액 × 10%)"
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "기본산정금액 + (계약금액 × 15%)"
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "기본산정금액 + (계약금액 × 평균영업이익률)"
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "기본산정금액 + (계약금액 − 실제 거래금액)"
+      }
+    ],
+    "answer": null,
+    "source": {
+      "photo": "page_0048.jpg",
+      "batch": "subject1-additional-20260927",
+      "folder": "기본 폴더 (1)",
+      "column": 1,
+      "printedNumberOcr": "33",
+      "printedNumber": 33,
+      "verifiedPrintedNumber": 33,
+      "printedNumberVerifiedAt": "2026-09-27",
+      "bookPage": 181,
+      "subject": 1,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "원본문항·네 선택지 직접 대조 완료; 원본 정답표 대응 미확인으로 자동 채점 보류"
+    }
+  },
+  {
+    "no": 356,
+    "id": "new-subject1:d85a0fa85e06eccf",
+    "group": "Part 6 · Chapter 2",
+    "stem": "다음 중 기타 공정한 조달질서 훼손 행위의 부당이득금 산정 기준으로 가장 적절한 것은?",
+    "choices": [
+      {
+        "key": "1",
+        "label": "①",
+        "text": "기본산정금액 + (계약금액 × 평균영업이익률)"
+      },
+      {
+        "key": "2",
+        "label": "②",
+        "text": "기본산정금액 + (계약금액 × 10%)"
+      },
+      {
+        "key": "3",
+        "label": "③",
+        "text": "기본산정금액 + (계약금액 × 평균영업이익률 또는 10% 중 더 높은 금액)"
+      },
+      {
+        "key": "4",
+        "label": "④",
+        "text": "기본산정금액 + (계약금액 − 실제 거래금액)"
+      }
+    ],
+    "answer": null,
+    "source": {
+      "photo": "page_0048.jpg",
+      "batch": "subject1-additional-20260927",
+      "folder": "기본 폴더 (1)",
+      "column": 1,
+      "printedNumberOcr": "34",
+      "printedNumber": 34,
+      "verifiedPrintedNumber": 34,
+      "printedNumberVerifiedAt": "2026-09-27",
+      "bookPage": 181,
+      "subject": 1,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "원본문항·네 선택지 직접 대조 완료; 원본 정답표 대응 미확인으로 자동 채점 보류"
+    }
   }
 ]
