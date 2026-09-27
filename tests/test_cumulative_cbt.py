@@ -21,6 +21,19 @@ import import_photo_questions  # noqa: E402
 
 
 class CumulativeCbtTest(unittest.TestCase):
+    def test_mock2_rephotographed_available_questions_are_complete(self) -> None:
+        questions = json.loads((ROOT / "output/new_question_bank/mock2.json").read_text(encoding="utf-8"))
+        printed = {
+            int(question["source"].get("verifiedPrintedNumber", question["source"].get("answerPrintedNumber", question["source"]["printedNumberOcr"]))): question
+            for question in questions
+        }
+        self.assertEqual(sorted(printed), [2, *range(4, 81)])
+        for number, answer in ((4, "4"), (6, "1"), (77, "4"), (78, "2"), (79, "4"), (80, "4")):
+            self.assertEqual(printed[number]["answer"], answer)
+        self.assertTrue(printed[48]["choices"][1]["text"].startswith("가격평가"))
+        self.assertTrue(printed[70]["choices"][2]["text"].startswith("용역"))
+        self.assertTrue(printed[78]["choices"][2]["text"].endswith("있다."))
+
     def test_rephotographed_subject2_first_chapters_are_complete(self) -> None:
         questions = json.loads((ROOT / "output/new_question_bank/subject2.json").read_text(encoding="utf-8"))
         for chapter, total in ((1, 31), (2, 30)):
@@ -87,7 +100,7 @@ class CumulativeCbtTest(unittest.TestCase):
                 self.assertTrue(question["source"]["permission"])
 
     def test_verified_photo_questions_are_not_duplicated_by_rephotographing(self) -> None:
-        for path in (ROOT / "output" / "new_question_bank").glob("subject*.json"):
+        for path in (ROOT / "output" / "new_question_bank").glob("*.json"):
             questions = json.loads(path.read_text(encoding="utf-8"))
             identities = [
                 (question["group"], int(question["source"].get("verifiedPrintedNumber", question["source"].get("answerPrintedNumber", question["source"]["printedNumberOcr"]))))
