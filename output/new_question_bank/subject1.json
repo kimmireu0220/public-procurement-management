@@ -15878,5 +15878,33 @@
       "permission": "사용자가 공개 재게시 허락이 있음을 확인",
       "transcription": "원본문항·네 선택지 직접 대조 완료; 원본 정답표 대응 미확인으로 자동 채점 보류"
     }
+  },
+  {
+    "no": 357,
+    "id": "new-subject1:additional-20260927-p4c4q15",
+    "group": "Part 4 · Chapter 4",
+    "stem": "다음 중 중증장애인생산품 우선구매제도의 운영 특징은?",
+    "choices": [
+      {"key": "1", "label": "①", "text": "공공기관 경영평가 지표에 반영"},
+      {"key": "2", "label": "②", "text": "모든 계약은 경쟁입찰만 허용"},
+      {"key": "3", "label": "③", "text": "해외 기업 제품도 포함"},
+      {"key": "4", "label": "④", "text": "납품 지연 시 자동 면책"}
+    ],
+    "answer": null,
+    "source": {
+      "photo": "page_0001.jpg",
+      "batch": "subject1-additional-20260927",
+      "folder": "기본 폴더 (1)",
+      "column": 1,
+      "printedNumberOcr": "15",
+      "printedNumber": 15,
+      "verifiedPrintedNumber": 15,
+      "printedNumberVerifiedAt": "2026-09-27",
+      "bookPage": 106,
+      "subject": 1,
+      "collectedAt": "2026-09-27",
+      "permission": "사용자가 공개 재게시 허락이 있음을 확인",
+      "transcription": "원본문항·네 선택지 직접 대조 완료; 원본 정답표 대응 미확인으로 자동 채점 보류"
+    }
   }
 ]
