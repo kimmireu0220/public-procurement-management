@@ -21,6 +21,27 @@ import import_photo_questions  # noqa: E402
 
 
 class CumulativeCbtTest(unittest.TestCase):
+    def test_rephotographed_subject2_first_chapters_are_complete(self) -> None:
+        questions = json.loads((ROOT / "output/new_question_bank/subject2.json").read_text(encoding="utf-8"))
+        for chapter, total in ((1, 31), (2, 30)):
+            numbers = [
+                int(question["source"].get("verifiedPrintedNumber", question["source"].get("answerPrintedNumber", question["source"]["printedNumberOcr"])))
+                for question in questions if question["group"] == f"Part 1 · Chapter {chapter}"
+            ]
+            self.assertEqual(sorted(numbers), list(range(1, total + 1)))
+
+    def test_rephotographed_subject2_final_chapter_is_complete(self) -> None:
+        questions = json.loads((ROOT / "output/new_question_bank/subject2.json").read_text(encoding="utf-8"))
+        chapter = {
+            int(question["source"].get("verifiedPrintedNumber", question["source"].get("answerPrintedNumber", question["source"]["printedNumberOcr"]))): question
+            for question in questions if question["group"] == "Part 3 · Chapter 5"
+        }
+        self.assertEqual(sorted(chapter), list(range(1, 19)))
+        self.assertEqual(chapter[17]["answer"], "2")
+        self.assertEqual(chapter[17]["choices"][1]["text"], "구체적 문제 제시")
+        self.assertEqual(chapter[18]["answer"], "3")
+        self.assertIn("단순 의견", chapter[18]["choices"][2]["text"])
+
     def test_verified_two_column_choice_order_matches_answer_keys(self) -> None:
         subject1 = json.loads((ROOT / "output/new_question_bank/subject1.json").read_text(encoding="utf-8"))
         subject2 = json.loads((ROOT / "output/new_question_bank/subject2.json").read_text(encoding="utf-8"))
@@ -51,8 +72,17 @@ class CumulativeCbtTest(unittest.TestCase):
                 self.assertEqual([choice["key"] for choice in question["choices"]], ["1", "2", "3", "4"])
                 self.assertIn(question["answer"], (None, "1", "2", "3", "4"))
                 if question["answer"] is not None:
-                    self.assertTrue(question["source"]["answerPhoto"])
-                    self.assertTrue(question["source"]["answerVerifiedAt"])
+                    source = question["source"]
+                    if source.get("answerPhoto"):
+                        self.assertTrue(source["answerVerifiedAt"])
+                    else:
+                        resolution = source["answerResolution"]
+                        self.assertEqual(resolution["answer"], question["answer"])
+                        self.assertTrue(resolution["nature"])
+                        self.assertTrue(resolution["reason"])
+                        self.assertTrue(resolution["verifiedAt"])
+                        self.assertTrue(resolution["sources"])
+                        self.assertTrue(all(item.get("url") or item.get("path") for item in resolution["sources"]))
                 self.assertTrue(question["source"]["photo"].endswith(".jpg"))
                 self.assertTrue(question["source"]["permission"])
 
